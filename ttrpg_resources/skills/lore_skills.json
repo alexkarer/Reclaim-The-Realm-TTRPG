@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Culture",
+        "shortDescription": "Knowledge about Civilizations, History, Important Figures and Traditions.",
+        "fullDescrption": "Knowledge about Civilizations, History, Important Figures and Traditions.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Geography",
+        "shortDescription": "Knowledge about Specific Locations and the World of the Material World.",
+        "fullDescrption": "Knowledge about Specific Locations and the World of the Material World.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Magic",
+        "shortDescription": "Knowledge about Magic, Spells, Magical Items and magical creations.",
+        "fullDescrption": "Knowledge about Magic, Spells, Magical Items and magical creations.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Nature",
+        "shortDescription": "Knowledge about Beasts, Monsters, Plants and certain exotic creatures.",
+        "fullDescrption": "Knowledge about Beasts, Monsters, Plants and certain exotic creatures.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Supernatural",
+        "shortDescription": "Knowledge about creatures, secrets sects, cults and other groups related to the cosmic and elemental planes as well as the planes themselves.",
+        "fullDescrption": "Knowledge about creatures, secrets sects, cults and other groups related to the cosmic and elemental planes as well as the planes themselves.",
+        "hasPassiveComponent": false
+    }
+]

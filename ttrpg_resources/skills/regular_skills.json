@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Animal Handling",
+        "shortDescription": "Represents your ability to interact with low intelligence creatures.",
+        "fullDescrption": "Represents your ability to interact with low intelligence creatures.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Athletics",
+        "shortDescription": " Represents your ability to climb, swim, jump and other forms of physical movement.",
+        "fullDescrption": "Represents your ability to climb, swim, jump and other forms of physical movement.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Deception",
+        "shortDescription": "Represents your ability to deceive, twist the truth, act as someone else and confuse others with your words and actions.",
+        "fullDescrption": "Represents your ability to deceive, twist the truth, act as someone else and confuse others with your words and actions.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Investigation",
+        "shortDescription": "The ability to discern details, find hidden meanings, search for secret entrances/treasure, reach conclusions, figure out illusions.",
+        "fullDescrption": "Investigation is used to discern details, find hidden meanings, search for hidden treasure or secret rooms, reach conclusions based on clues or figure out illusions.",
+        "hasPassiveComponent": true
+    },
+    {
+        "name": "Intimidation",
+        "shortDescription": "Your ability to frighten others and make them act on your will.",
+        "fullDescrption": "Your ability to frighten others and make them act on your will.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Medicine",
+        "shortDescription": "Understanding of Medicine, the Anatomy of most living beings and knowledge of herbs, minerals and other substances with healing properties.",
+        "fullDescrption": "Understanding of medical practices, the Anatomy of most living beings and knowledge of herbs, minerals and other substances with healing properties.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Persuasion",
+        "shortDescription": "Your ability to sway others for your cause or convince them to aid you in your endeavours or barter with them. ",
+        "fullDescrption": "Your ability to sway others for your cause or convince them to aid you in your endeavours or barter with them.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Awareness",
+        "shortDescription": "Represents your ability to notice threats, spot objects far away and making out details in a distance.",
+        "fullDescrption": "Represents your ability to notice threats, spot objects far away and making out details in a distance, Awareness is assumed to take no more than a few seconds.",
+        "hasPassiveComponent": true
+    },
+    {
+        "name": "Stealth",
+        "shortDescription": "Your ability to effectively hide or move silently.",
+        "fullDescrption": "Your ability to effectively hide or move silently.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Survival",
+        "shortDescription": "Your ability to navigate the Wilderness, scavenge for food as well as your general sense of direction.",
+        "fullDescrption": "Your ability to navigate the Wilderness, scavenge for food as well as your general sense of direction.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Thievery",
+        "shortDescription": "Thievery is used where fast and precise motions are required. It also allows you to lock pick locks and disarm traps with Thieves Tools.",
+        "fullDescrption": "Thievery is used where fast and precise motions are required. It also allows you to lock pick locks and disarm traps with Thieves Tools.",
+        "hasPassiveComponent": false
+    }
+]

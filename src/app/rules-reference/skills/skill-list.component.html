@@ -1,0 +1,12 @@
+<h4 ngbScrollSpyFragment="regular-skills">Regular Skills</h4>
+@for (regularSkill of regularSkills; track $index) {
+    <app-skill [skill]="regularSkill"></app-skill>
+}
+<h4 ngbScrollSpyFragment="lore-skills">Lore Skills</h4>
+@for (loreSkill of loreSkills; track $index) {
+    <app-skill [skill]="loreSkill"></app-skill>
+}
+<h4 ngbScrollSpyFragment="tool-skills">Tool Skills</h4>
+@for (toolSkill of toolSkills; track $index) {
+    <app-skill [skill]="toolSkill"></app-skill>
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Smith Tools",
+        "shortDescription": "Contains tools used for forging or shaping metal objects and Equipment. Can be used for crafting most weapon's or Armour.",
+        "fullDescrption": "Contains tools used for forging or shaping metal objects and Equipment. Can be used for crafting most weapon's or Armour.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Alchemy Kit",
+        "shortDescription": "Consists of vials, basic reagents and catalysts that can be used to brew potions or create acids or poisons.",
+        "fullDescrption": "Consists of vials, basic reagents and catalysts that can be used to brew potions or create acids or poisons.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Jeweller's Tools",
+        "shortDescription": "Small, high quality tools for creating rings, necklaces and other forms of Jeweller as well as manipulating and analysing gems and crystals.",
+        "fullDescrption": "Small, high quality tools for creating rings, necklaces and other forms of Jeweller as well as manipulating and analysing gems and crystals.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Tailor's Set",
+        "shortDescription": "Equipment for sowing cloth as well as work with leather to create various items of clothing including boots, cloak, hats and others.",
+        "fullDescrption": "Equipment for sowing cloth as well as work with leather to create various items of clothing including boots, cloak, hats and others.",
+        "hasPassiveComponent": false
+    },
+    {
+        "name": "Carpenter's Tools",
+        "shortDescription": "Hammer, nails, saw and other tools used for creating objects mostly made out of wood like furniture, shields or certain weapons like spears, bows, crossbows, or arrows/bolts.",
+        "fullDescrption": "Hammer, nails, saw and other tools used for creating objects mostly made out of wood like furniture, shields or certain weapons like spears, bows, crossbows, or arrows/bolts.",
+        "hasPassiveComponent": false
+    }
+]
