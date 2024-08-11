@@ -1,3 +1,17 @@
 [
-    
+    {
+        "name": "PlaceHolder",
+        "requirements": {
+            "requiredLevels": [
+                { "amount": 1, "levelType": "" }
+            ],
+            "requiredAttributes": [
+                { "amount": 1, "attribute": "" }
+            ],
+            "requiredPerks": [ "" ],
+            "otherRequirements": [ "" ]
+        },
+        "repeatable": false,
+        "description": ""
+    }
 ]

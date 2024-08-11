@@ -1,0 +1,38 @@
+<div class="ms-2">
+    <h4 class = "mb-3" ngbScrollSpyFragment="crafting-perks">Crafting Perks</h4>
+    <div class="ms-2">
+        @for (perk of craftingPerks; track $index) {
+            <app-perk [perk]="perk"></app-perk>
+        }
+    </div>
+    <h4 class = "my-3" ngbScrollSpyFragment="defensive-perks">Defensive Perks</h4>
+    <div class="ms-2">
+        @for (perk of defensivePerks; track $index) {
+            <app-perk [perk]="perk"></app-perk>
+        }
+    </div>
+    <h4 class = "my-3" ngbScrollSpyFragment="martial-perks">Martial Perks</h4>
+    <div class="ms-2">
+        @for (perk of martialPerks; track $index) {
+            <app-perk [perk]="perk"></app-perk>
+        }
+    </div>
+    <h4 class = "my-3" ngbScrollSpyFragment="skill-perks">Skill Perks</h4>
+    <div class="ms-2">
+        @for (perk of skillPerks; track $index) {
+            <app-perk [perk]="perk"></app-perk>
+        }
+    </div>
+    <h4 class = "my-3" ngbScrollSpyFragment="spellcasting-perks">Spellcasting Perks</h4>
+    <div class="ms-2">
+        @for (perk of spellcastingPerks; track $index) {
+            <app-perk [perk]="perk"></app-perk>
+        }
+    </div>
+    <h4 class = "my-3" ngbScrollSpyFragment="other-perks">Other Perks</h4>
+    <div class="ms-2">
+        @for (perk of otherPerks; track $index) {
+            <app-perk [perk]="perk"></app-perk>
+        }
+    </div>
+</div>
