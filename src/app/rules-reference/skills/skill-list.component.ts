@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import { SkillComponent } from './skill/skill.component';
 import { regularSkills, loreSkills, toolSkills, Skill } from '../../../../ttrpg_resources/skills/skill';
+import { halveArray } from '../utils/array-utils';
 
 @Component({
   selector: 'app-skill-list',
@@ -12,7 +13,12 @@ import { regularSkills, loreSkills, toolSkills, Skill } from '../../../../ttrpg_
 })
 export class SkillListComponent {
   
-  public regularSkills: Skill[] = regularSkills;
-  public loreSkills: Skill[] = loreSkills;
-  public toolSkills: Skill[] = toolSkills;
+  public regularSkillsLeft: Skill[] = halveArray(regularSkills)[0];
+  public regularSkillsRight: Skill[] = halveArray(regularSkills)[1];
+
+  public loreSkillsLeft: Skill[] = halveArray(loreSkills)[0];
+  public loreSkillsRight: Skill[] = halveArray(loreSkills)[1];
+
+  public toolSkillsLeft: Skill[] = halveArray(toolSkills)[0];
+  public toolSkillsRight: Skill[] = halveArray(toolSkills)[1];
 }

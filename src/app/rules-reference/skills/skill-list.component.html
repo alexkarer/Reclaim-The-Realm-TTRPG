@@ -1,20 +1,47 @@
 <div class="ms-2">
     <h4 class = "mb-3" ngbScrollSpyFragment="regular-skills">Regular Skills</h4>
     <div class="ms-2">
-        @for (skill of regularSkills; track $index) {
-            <app-skill [skill]="skill"></app-skill>
-        }
+        <div class="row">
+            <div class="col-6">
+                @for (skill of regularSkillsLeft; track $index) {
+                    <app-skill [skill]="skill"></app-skill>
+                }
+            </div>
+            <div class="col-6">
+                @for (skill of regularSkillsRight; track $index) {
+                    <app-skill [skill]="skill"></app-skill>
+                }
+            </div>
+        </div>
     </div>
     <h4 class = "my-3" ngbScrollSpyFragment="lore-skills">Lore Skills</h4>
     <div class="ms-2">
-        @for (skill of loreSkills; track $index) {
-            <app-skill [skill]="skill"></app-skill>
-        }
+        <div class="row">
+            <div class="col-6">
+                @for (skill of loreSkillsLeft; track $index) {
+                    <app-skill [skill]="skill"></app-skill>
+                }
+            </div>
+            <div class="col-6">
+                @for (skill of loreSkillsRight; track $index) {
+                    <app-skill [skill]="skill"></app-skill>
+                }
+            </div>
+        </div>
     </div>
     <h4 class = "my-3" ngbScrollSpyFragment="tool-skills">Tool Skills</h4>
     <div class="ms-2">
-        @for (skill of toolSkills; track $index) {
-            <app-skill [skill]="skill"></app-skill>
-        }
+        <div class="row">
+            <div class="col-6">
+                @for (skill of toolSkillsLeft; track $index) {
+                    <app-skill [skill]="skill"></app-skill>
+                }
+            </div>
+            <div class="col-6">
+                @for (skill of toolSkillsRight; track $index) {
+                    <app-skill [skill]="skill"></app-skill>
+                }
+            </div>
+        </div>
     </div>
 </div>

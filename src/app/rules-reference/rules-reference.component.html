@@ -4,24 +4,24 @@
 			<nav class="nav nav-pills flex-column">
 				<a role="button" class="nav-link" ngbScrollSpyItem="skills">Skills</a>
 				<nav class="nav nav-pills flex-column">
-					<a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="regular-skills" parent="skills">Regular Skills</a>
-					<a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="lore-skills" parent="skills">Lore Skills</a>
-                    <a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="tool-skills" parent="skills">Tool Skills</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="regular-skills" parent="skills">Regular Skills</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="lore-skills" parent="skills">Lore Skills</a>
+                    <a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="tool-skills" parent="skills">Tool Skills</a>
 				</nav>
 				<a role="button" class="nav-link" ngbScrollSpyItem="perks">Perks</a>
                 <nav class="nav nav-pills flex-column">
-					<a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="crafting-perks" parent="perks">Crafting Perks</a>
-					<a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="defensive-perks" parent="perks">Defensive Perks</a>
-                    <a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="martial-perks" parent="perks">Martial Perks</a>
-                    <a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="skill-perks" parent="perks">Skill Perks</a>
-                    <a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="spellcasting-perks" parent="perks">Spellcasting Perks</a>
-                    <a role="button" class="nav-link ms-3 my-1" ngbScrollSpyItem="other-perks" parent="perks">Other Perks</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="crafting-perks" parent="perks">Crafting Perks</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="defensive-perks" parent="perks">Defensive Perks</a>
+                    <a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="martial-perks" parent="perks">Martial Perks</a>
+                    <a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="skill-perks" parent="perks">Skill Perks</a>
+                    <a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="spellcasting-perks" parent="perks">Spellcasting Perks</a>
+                    <a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="other-perks" parent="perks">Other Perks</a>
 				</nav>
 			</nav>
 		</nav>
 	</div>
 	<div class="col-10">
-		<div ngbScrollSpy #spy="ngbScrollSpy" class="bg-body-tertiary p-3 rounded-2 mb-3 rules-body">
+		<div ngbScrollSpy #spy="ngbScrollSpy" class="p-3 rounded-2 mb-3 rules-body">
             <h3 ngbScrollSpyFragment="skills">Skills</h3>
                 <app-skill-list></app-skill-list>
             <h3 ngbScrollSpyFragment="perks">Perks</h3>

@@ -1,0 +1,1 @@
+AURA leader type maneuvers: hit roll bonus aura, defensive bonus aura, etc.
