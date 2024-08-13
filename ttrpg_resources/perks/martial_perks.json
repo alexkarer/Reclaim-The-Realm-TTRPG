@@ -5,7 +5,7 @@
             "requiredLevels": [],
             "requiredAttributes": [],
             "requiredPerks": [],
-            "otherRequirements": [ "Martial Level Progression of 1, Rank 1 Weapon Proficiency" ]
+            "otherRequirements": [ "Martial Level Progression of 0, Rank 1 Weapon Proficiency" ]
         },
         "repeatable": false,
         "description": "You learn 2 Basic Martial Maneuvers of one type of your choice."

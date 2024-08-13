@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import { craftingPerks, Perk, defensivePerks, martialPerks, otherPerks, skillPerks, spellcastingPerks } from '../../../../ttrpg_resources/perks/perk';
 import { PerkComponent } from "./perk/perk.component";
-import { halveArray } from '../utils/array-utils';
+import { halveArray } from '../../shared/utils/array-utils';
 
 @Component({
   selector: 'app-perk-list',

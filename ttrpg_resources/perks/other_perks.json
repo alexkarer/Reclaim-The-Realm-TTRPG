@@ -1,17 +1,24 @@
 [
     {
-        "name": "PlaceHolder",
+        "name": "Versatile",
         "requirements": {
-            "requiredLevels": [
-                { "amount": 1, "levelType": "" }
-            ],
-            "requiredAttributes": [
-                { "amount": 1, "attribute": "" }
-            ],
-            "requiredPerks": [ "" ],
-            "otherRequirements": [ "" ]
+            "requiredLevels": [ ],
+            "requiredAttributes": [ ],
+            "requiredPerks": [ ],
+            "otherRequirements": []
         },
         "repeatable": false,
-        "description": ""
+        "description": "You can learn know one additional Class Technique, Combat Maneuver and Spell in Addition to the ones you already know. Once you reach [LEVEL] 7, you can learn an additional one for each."
+    },
+    {
+        "name": "Natural",
+        "requirements": {
+            "requiredLevels": [ ],
+            "requiredAttributes": [ ],
+            "requiredPerks": [ ],
+            "otherRequirements": []
+        },
+        "repeatable": true,
+        "description": "Choose one [ATTRIBUTE] : for this [ATTRIBUTE] the requirements for Milestone Benefits are reduced by 3. This Perk can’t be applied to the same [ATTRIBUTE] twice."
     }
 ]

@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { Perk } from '../../../../../ttrpg_resources/perks/perk';
-import { requirementsToPrettyString } from '../../utils/to-pretty-string';
+import { requirementsToPrettyString } from '../../../shared/utils/to-pretty-string';
+import { TextTransformerPipe } from "../../../shared/text-transformer/text-transformer";
 
 @Component({
   selector: 'app-perk',
   standalone: true,
-  imports: [],
+  imports: [TextTransformerPipe],
   templateUrl: './perk.component.html',
   styleUrl: './perk.component.scss'
 })
