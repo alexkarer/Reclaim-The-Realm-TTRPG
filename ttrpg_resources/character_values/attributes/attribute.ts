@@ -1,8 +1,4 @@
-export type AttributeInfo = {
-    name: String;
-    attribute: Attribute
-};
+import attributesJson from './attributes.json'
 
-export enum Attribute {
-    STR, AGI, CON, INT, SPI, PER, CHA
-};
+export const attributes: Attribute[] = attributesJson;
+export type Attribute = typeof attributesJson[0];
