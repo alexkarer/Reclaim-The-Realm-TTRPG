@@ -2,8 +2,8 @@
     {
         "name": "Strength",
         "keyword": "[STR]",
-        "shortdescription": "The [STR] [ATTRIBUTE]  represents the physical strength of a character, for example it affects your damage with melee and thrown weapons as well as bows",
-        "fulldescription": "This represents your physical Strength. In game, it additionally reflects your ability to wield melee weapons and damage with bows and thrown weapons, as well as your carrying capacity and jumping distance.",
+        "shortdescription": "Strength represents the physical strength of a character, for example it affects your damage with melee and thrown weapons as well as bows",
+        "fulldescription": "[STR] represents your physical Strength. In game, it additionally reflects your ability to wield melee weapons and damage with bows and thrown weapons, as well as your carrying capacity and jumping distance.",
         "milestoneBenefits": {
             "minus1OrLower": "While wearing armour, the Manoeuvre penalty is increased by 1.",
             "4orHigher": "While wearing armour, the Manoeuvre penalty is decreased by 1, additionally any [MARTIAL MELEE ATTACK] that uses [STR] for damage deals an extra 1d6 physical damage",
@@ -14,7 +14,7 @@
     {
         "name": "Agility",
         "keyword": "[AGI]",
-        "shortdescription": "The [AGI] [ATTRIBUTE] represents how agile, dexterous and fast the character is, for example it represents accuracy with ranged weapons and the ability to dodge incoming attacks",
+        "shortdescription": "Agility represents how agile, dexterous and fast the character is, for example it represents accuracy with ranged weapons and the ability to dodge incoming attacks",
         "fulldescription": "[AGI] represents additionally the Agility of a character as well as their reflexes as well as their finesse. It specifically reflects your accuracy with a Meele Attacks, as well as your ability to dodge attacks and other threats.",
         "milestoneBenefits": {
             "minus1OrLower": "-1 [MP]",
@@ -26,8 +26,8 @@
     {
         "name": "Constitution",
         "keyword": "[CON]",
-        "shortdescription": "The [CON] [ATTRIBUTE] represents our bodily health as well as your endurance and the ability to resist poisons.",
-        "fulldescription": "[CON] represents your bodily health as well as your endurance and the ability to resist poisons or other harmful effects targeting your body.$NAdditionally, each point in [CON] increases your natural lifespan by 10 years as well as delays the point upon which age where your body degrades by the same amount. Conversely, if your [CON] value is negative, that amount decreases your lifespan.",
+        "shortdescription": "Constitution represents our bodily health as well as your endurance and the ability to resist poisons.",
+        "fulldescription": "[CON] represents your bodily health as well as your endurance and the ability to resist poisons or other harmful effects targeting your body.<br>Additionally, each point in [CON] increases your [HP] for each [LEVEL] you have, furthermore each point increases your natural lifespan by 10 years. Conversely, if your [CON] value is negative, that amount decreases your [HP] and lifespan.",
         "milestoneBenefits": {
             "minus1OrLower": "You become vulnurable to poison damage.",
             "4orHigher": "When you recover your [HP] during a [SHORT REST] by using your [STAMINA] you can now roll an additional d6.",
@@ -38,8 +38,8 @@
     {
         "name": "Intelligence",
         "keyword": "[INT]",
-        "shortdescription": "The [INT] [ATTRIBUTE] represents your Intelligence and ability to reason about problems, recall information, prediction, and imagination of 3D environments, for example it represents how many techniques you can know at the same time.",
-        "fulldescription": "The [INT] [ATTRIBUTE] represents your Intelligence and ability to reason about problems, recall information, prediction, and imagination of 3D environments, for example it represents how many techniques you can know at the same time",
+        "shortdescription": "Intelligence represents your Intelligence and ability to reason about problems, recall information, prediction, and imagination of 3D environments, for example it represents how many techniques you can know at the same time.",
+        "fulldescription": "The [INT] Attribute represents your Intelligence and ability to reason about problems, recall information, prediction, and imagination of 3D environments, for example it represents how many techniques you can know at the same time",
         "milestoneBenefits": {
             "minus1OrLower": "The maximum rank for a [LORE SKILL] and [TOOL SKILL] are halved (rounded down).",
             "4orHigher": "You get 1 extra [SKILL POINTS] per [LEVEL].",
@@ -50,8 +50,8 @@
     {
         "name": "Spirit",
         "keyword": "[SPI]",
-        "shortdescription": "The [SPI] [ATTRIBUTE] represents how strong your connection to the elemental planes and the Aether is as well your mental fortitude and spiritual health, it most importantly affects your ability to use spells and other supernatural techniques.",
-        "fulldescription": "The [SPI] [ATTRIBUTE] represents how strong your connection to the elemental planes and the Aether is as well your mental fortitude and spiritual health, it most importantly affects your ability to use spells and other supernatural techniques.",
+        "shortdescription": "Spirit represents how strong your connection to the elemental planes and the Aether is as well your mental fortitude and spiritual health, it most importantly affects your ability to use spells and other supernatural techniques.",
+        "fulldescription": "The [SPI] Attribute represents how strong your connection to the elemental planes and the Aether is as well your mental fortitude and spiritual health, it most importantly affects your ability to use spells and other supernatural techniques.",
         "milestoneBenefits": {
             "minus1OrLower": "You have can’t manifest in the aether in any way and after death your soul will not be able to retain itself after death which makes resurrection impossible.",
             "4orHigher": "You can summon lesser aether entities.",
@@ -62,8 +62,8 @@
     {
         "name": "Perception",
         "keyword": "[PER]",
-        "shortdescription": "The [PER] [ATTRIBUTE represents your physical senses and the ability to perceive details and weak spots.",
-        "fulldescription": "The [PER] [ATTRIBUTE] represents your physical senses and the ability to perceive details and weak spots or even unnatural senses.",
+        "shortdescription": "Perception represents your physical senses and the ability to perceive details and weak spots.",
+        "fulldescription": "The [PER] Attribute represents your physical senses and the ability to perceive details and weak spots or even unnatural senses.",
         "milestoneBenefits": {
             "minus1OrLower": "The Range of any [RANGED ATTACK] is reduced by 3 m (minimum of 3 m)",
             "4orHigher": "You gain blindsight (3m) if you already blindsight, it increases by 1.5m.",
@@ -74,8 +74,8 @@
     {
         "name": "Charisma",
         "keyword": "[CHA]",
-        "shortdescription": "The [CHA] [ATTRIBUTE] represents how likeable you are and your ability to sway others for your cause.",
-        "fulldescription": "The [CHA] [ATTRIBUTE] represents how likeable you are and your ability to sway others for your cause.",
+        "shortdescription": "Charisma represents how likeable you are and your ability to sway others for your cause.",
+        "fulldescription": "The [CHA] Attribute represents how likeable you are and your ability to sway others for your cause.",
         "milestoneBenefits": {
             "minus1OrLower": "",
             "4orHigher": "",

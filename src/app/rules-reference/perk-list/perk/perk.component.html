@@ -1,5 +1,5 @@
 <div class="p-1 border bg-body-tertiary mb-3">
     <p class="fw-bold mb-0">{{ perk?.name }}</p>
     <p class="fst-italic mb-0 text-light-emphasis">Requirements: {{ perkRequirements }}; Repeatable: {{ perk?.repeatable ? 'Yes' : 'No'}}</p>
-    <p class="mb-0 lh-sm" [innerHTML]="perk?.description | textTransform"></p>
+    <app-dynamic-content [content]="perk?.description | keywordProcessor"></app-dynamic-content>
 </div>

@@ -19,6 +19,6 @@
             "otherRequirements": []
         },
         "repeatable": true,
-        "description": "Choose one [ATTRIBUTE] : for this [ATTRIBUTE] the requirements for Milestone Benefits are reduced by 3. This Perk can’t be applied to the same [ATTRIBUTE] twice."
+        "description": "Choose one Attribute: for this Attribute the requirements for Milestone Benefits are reduced by 3. This Perk can’t be applied to the same Attribute twice."
     }
 ]

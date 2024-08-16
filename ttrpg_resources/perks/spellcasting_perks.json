@@ -79,7 +79,7 @@
             "otherRequirements": [ "can learn elemental Spells" ]
         },
         "repeatable": false,
-        "description": "You can learn one additional Elemental Spell. Furthermore when you are in a certain Terrain you have an easier time of casting these spells and you can treat your [SPI] Attribute 1 higher for the purpeses of casting this spell.$N$BSElemental Terrain$BE $LS$IS$BSFire:$BE Grassland, Desert, Vulcano$IE $IS$BSEarth:$BE Hill, Mountain, Underground$IE $IS$BSWater:$BE Ocean, Lakes, Coasts, Underwater, Arctic$IE $IS$BSAir:$BE Forest, in the Air, High Mountain Peaks $IE $LE"
+        "description": "You can learn one additional Elemental Spell. Furthermore when you are in a certain Terrain you have an easier time of casting these spells and you can treat your [SPI] Attribute 1 higher for the purpeses of casting this spell.<br><span class=\"fw-bold\">Elemental Terrain</span> <span><ul><li><span class=\"fw-bold\">Fire:</span> Grassland, Desert, Vulcano</li> <li><span class=\"fw-bold\">Earth:</span> Hill, Mountain, Underground</li> <li><span class=\"fw-bold\">Water:</span> Ocean, Lakes, Coasts, Underwater, Arctic</li> <li><span class=\"fw-bold\">Air:</span> Forest, in the Air, High Mountain Peaks </li> </ul></span>"
     },
     {
         "name": "Pyrmonacer",
@@ -92,7 +92,7 @@
             "otherRequirements": [ "Hydromancer Perk not selected" ]
         },
         "repeatable": false,
-        "description": "When you cast a Pyromancy spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.$N Additionally at will without any [ARCANA] Cost you can summon a flame for 1 [AP] on a body part that stays there until you extinguish it. This flame can be up to the size of your fist and is hot but doesn’t hurt you. While this flame is burning it can shine a bright light up to 6m and a dim light up to 12m. When you hit someone with an unarmored attack while the flame is present it also deals 1 extra fire damage."
+        "description": "When you cast a Pyromancy spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.<br> Additionally at will without any [ARCANA] Cost you can summon a flame for 1 [AP] on a body part that stays there until you extinguish it. This flame can be up to the size of your fist and is hot but doesn’t hurt you. While this flame is burning it can shine a bright light up to 6m and a dim light up to 12m. When you hit someone with an unarmored attack while the flame is present it also deals 1 extra fire damage."
     },
     {
         "name": "Master Pyrmonacer",
@@ -105,7 +105,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with Pyromancy spells.$NAdditionally TODO"
+        "description": "You gain an additional +1 to any [SPELL TEST] made with Pyromancy spells.<br>Additionally TODO"
     },
     {
         "name": "Hydromancer",
@@ -118,7 +118,7 @@
             "otherRequirements": [ "Pyrmonacer Perk not selected" ]
         },
         "repeatable": false,
-        "description": "When you cast a Hydromancy spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.$NAdditionally at will without any [ARCANA] Cost you can change the temperature of water from freezing to boiling at a rate of 1 liter per [AP] spent. You also gain the custom movement Swim(1.5m) and you can use your [SPI] instead of [STR] for Swim Tests."
+        "description": "When you cast a Hydromancy spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.<br>Additionally at will without any [ARCANA] Cost you can change the temperature of water from freezing to boiling at a rate of 1 liter per [AP] spent. You also gain the custom movement Swim(1.5m) and you can use your [SPI] instead of [STR] for Swim Tests."
     },
     {
         "name": "Master Hydromancer",
@@ -131,7 +131,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with Hydromancy spells.$NAdditionally TODO"
+        "description": "You gain an additional +1 to any [SPELL TEST] made with Hydromancy spells.<br>Additionally TODO"
     },
     {
         "name": "Aeromancer",
@@ -144,7 +144,7 @@
             "otherRequirements": [ "Geomancer Perk not selected" ]
         },
         "repeatable": false,
-        "description": "When you cast an Aeromancer spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.$NAdditionally for calculating Jump Distance and for any [ATTRIBUTE TEST] related to jumping you can use your [SPI] instead of your [STR] . Additionally when your reaction for Graceful Landing to reduce Fall Damage you can use your Spirit instead of your Agility."
+        "description": "When you cast an Aeromancer spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.<br>Additionally for calculating Jump Distance and for any [ATTRIBUTE TEST] related to jumping you can use your [SPI] instead of your [STR] . Additionally when your reaction for Graceful Landing to reduce Fall Damage you can use your Spirit instead of your Agility."
     },
     {
         "name": "Master Aeromancer",
@@ -157,7 +157,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with Aeromancy spells.$NAdditionally TODO"
+        "description": "You gain an additional +1 to any [SPELL TEST] made with Aeromancy spells.<br>Additionally TODO"
     },
     {
         "name": "Geomancer",
@@ -170,7 +170,7 @@
             "otherRequirements": [ "Aeromancer Perk not selected" ]
         },
         "repeatable": false,
-        "description": "When you cast a Geomancer spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.$NAdditionally while you are standing on rocky or earthen Terrain you gain tremorsense (6m), if you already have tremorsense it increases by 3m. Further when you make an [ATTRIBUTE TEST] to climb up rock or earth you can use your [SPI] instead of your [STR] ."
+        "description": "When you cast a Geomancer spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.<br>Additionally while you are standing on rocky or earthen Terrain you gain tremorsense (6m), if you already have tremorsense it increases by 3m. Further when you make an [ATTRIBUTE TEST] to climb up rock or earth you can use your [SPI] instead of your [STR] ."
     },
     {
         "name": "Master Geomancer",
@@ -183,7 +183,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with Geomancy spells.$NAdditionally TODO"
+        "description": "You gain an additional +1 to any [SPELL TEST] made with Geomancy spells.<br>Additionally TODO"
     },
     {
         "name": "Cosmic Touched",
@@ -196,7 +196,7 @@
             "otherRequirements": [ "can learn Cosmic Spells" ]
         },
         "repeatable": false,
-        "description": "During the day if you cast a light or restoration spell you can treat your [SPI] Attribute 1 higher for the purposes of casting this spell or alternatively during night necromancy and shadow spells are improved.$NAdditionally you can cast divination spells during your sleep (GM’s determines if that particular spell makes sense) while doing that you can treat your Spirit Attribute 1 higher for the purposes of casting that spell."
+        "description": "During the day if you cast a light or restoration spell you can treat your [SPI] Attribute 1 higher for the purposes of casting this spell or alternatively during night necromancy and shadow spells are improved.<br>Additionally you can cast divination spells during your sleep (GM’s determines if that particular spell makes sense) while doing that you can treat your Spirit Attribute 1 higher for the purposes of casting that spell."
     },
     {
         "name": "White mage",
@@ -209,7 +209,7 @@
             "otherRequirements": [ "good alignment" ]
         },
         "repeatable": false,
-        "description": "When you cast a light or restoration spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.$NAdditionally TODO"
+        "description": "When you cast a light or restoration spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.<br>Additionally TODO"
     },
     {
         "name": "Saint",
@@ -222,7 +222,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with light or restoration spells.$NAdditionally TODO"
+        "description": "You gain an additional +1 to any [SPELL TEST] made with light or restoration spells.<br>Additionally TODO"
     },
     {
         "name": "Dark apostle",
@@ -235,7 +235,7 @@
             "otherRequirements": [ "evil alignment" ]
         },
         "repeatable": false,
-        "description": "When you cast a shadow or necromancy spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.$NAdditionally ... TODO"
+        "description": "When you cast a shadow or necromancy spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.<br>Additionally ... TODO"
     },
     {
         "name": "Dark Lord",
@@ -248,7 +248,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with shadow or necromancy spells.$NAdditionally TODO"
+        "description": "You gain an additional +1 to any [SPELL TEST] made with shadow or necromancy spells.<br>Additionally TODO"
     },
     {
         "name": "Manipulator",
@@ -274,7 +274,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When you cast a Conjuration spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.$NAdditionally TODO"
+        "description": "When you cast a Conjuration spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.<br>Additionally TODO"
     },
     {
         "name": "Master Conjurer",
@@ -287,7 +287,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with Conjuration spells.$NAdditionally TODO"
+        "description": "You gain an additional +1 to any [SPELL TEST] made with Conjuration spells.<br>Additionally TODO"
     },
     {
         "name": "Transmuter",
@@ -300,7 +300,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When you cast a Transmutation spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.$NAdditionally TODO"
+        "description": "When you cast a Transmutation spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.<br>Additionally TODO"
     },
     {
         "name": "Master Transmuter",
@@ -313,7 +313,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with Transmutation spells.$NAdditionally TODO"
+        "description": "You gain an additional +1 to any [SPELL TEST] made with Transmutation spells.<br>Additionally TODO"
     },
     {
         "name": "Teleporter",
@@ -326,7 +326,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When you cast a Teleportation spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.$NAdditionally TODO"
+        "description": "When you cast a Teleportation spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.<br>Additionally TODO"
     },
     {
         "name": "Veilwalker",
@@ -339,7 +339,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with Teleportation spells.$NAdditionally TODO"
+        "description": "You gain an additional +1 to any [SPELL TEST] made with Teleportation spells.<br>Additionally TODO"
     },
     {
         "name": "Psychic",
@@ -378,7 +378,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with Telekinesis spells.$NAdditionally TODO"
+        "description": "You gain an additional +1 to any [SPELL TEST] made with Telekinesis spells.<br>Additionally TODO"
     },
     {
         "name": "Telepath",
@@ -391,7 +391,7 @@
             "otherRequirements": [ "" ]
         },
         "repeatable": false,
-        "description": "When you cast a Telepathy spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.$NAdditionally you can telepethically communicate with your mind to a single creature within [SPI] ∗ 10 meters. You can project words, thoughts, ideas and images to that creature and it can reply with basic words."
+        "description": "When you cast a Telepathy spell, you can gain a +1 bonus to any [SPELL TEST] made with that spell.<br>Additionally you can telepethically communicate with your mind to a single creature within [SPI] ∗ 10 meters. You can project words, thoughts, ideas and images to that creature and it can reply with basic words."
     },
     {
         "name": "Master Telepath",
@@ -404,6 +404,6 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "You gain an additional +1 to any [SPELL TEST] made with Telepathy spells.$NAdditionally you are aware of all living creatures within [SPI] ∗ 3 meters, those creatures can’t hide from you unless stated otherwise and don’t gain the benefit of being unseen against you."
+        "description": "You gain an additional +1 to any [SPELL TEST] made with Telepathy spells.<br>Additionally you are aware of all living creatures within [SPI] ∗ 3 meters, those creatures can’t hide from you unless stated otherwise and don’t gain the benefit of being unseen against you."
     }
 ]

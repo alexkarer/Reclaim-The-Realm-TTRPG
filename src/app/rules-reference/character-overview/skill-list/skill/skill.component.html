@@ -1,4 +1,4 @@
 <div class = "p-1 border bg-body-tertiary mb-2">
     <p class="fw-bold mb-0">{{ skill?.name }}</p>
-    <p class="mb-0 lh-sm">{{ skill?.fullDescrption }}</p>
+    <app-dynamic-content [content]="skill?.fullDescrption | keywordProcessor"></app-dynamic-content>
 </div>

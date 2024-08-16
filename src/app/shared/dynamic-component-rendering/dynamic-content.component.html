@@ -1,0 +1,14 @@
+<ng-container>
+    @for (contentPart of content; track $index) {
+        @if (contentPart.type === 'text') {
+            <span class="lh-sm" [innerHTML]="contentPart.text"></span>
+        }
+        @if (contentPart.type === 'keyword') {
+            <app-keyword 
+                [keyword]="contentPart.component?.keyword" 
+                [link]="contentPart.component?.link"
+                [toolTip]="contentPart.component?.toolTipText"
+            ></app-keyword>
+        }
+    }
+</ng-container>

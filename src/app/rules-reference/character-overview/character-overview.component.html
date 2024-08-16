@@ -1,6 +1,13 @@
 <div class="ms-2">
     <h3 ngbScrollSpyFragment="attributes">Attributes</h3>
+    <p class="lh-sm" [innerHTML]="attributeDescription"></p>
+    <div class="mb-3">
+        <h4 ngbScrollSpyFragment="attribute-test">Attribute Test</h4>
+        <app-dynamic-content [content]="attributeTestDescription | keywordProcessor"></app-dynamic-content>
+    </div>
+
     <app-attributes-list/>
+
     <h3 ngbScrollSpyFragment="core-values">Core Values</h3>
     <h3 ngbScrollSpyFragment="skills">Skills</h3>
     <app-skill-list></app-skill-list>
