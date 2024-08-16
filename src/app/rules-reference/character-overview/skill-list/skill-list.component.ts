@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
+import { regularSkills, loreSkills, toolSkills, Skill } from '../../../../../ttrpg_resources/skills/skill';
+import { halveArray } from '../../../shared/utils/array-utils';
 import { SkillComponent } from './skill/skill.component';
-import { regularSkills, loreSkills, toolSkills, Skill } from '../../../../ttrpg_resources/skills/skill';
-import { halveArray } from '../../shared/utils/array-utils';
 
 @Component({
   selector: 'app-skill-list',

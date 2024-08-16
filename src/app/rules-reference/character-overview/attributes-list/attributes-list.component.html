@@ -1,0 +1,6 @@
+<div class="ms-2">
+    <h4 class = "mb-3" ngbScrollSpyFragment="attribute-test">Attribute Test</h4>
+    @for (attribute of attributes; track $index) {
+        <app-attribute [attribute]="attribute"></app-attribute>
+    }
+</div>

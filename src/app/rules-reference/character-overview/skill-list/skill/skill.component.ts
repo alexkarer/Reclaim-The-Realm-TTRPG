@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Skill } from '../../../../../ttrpg_resources/skills/skill';
+import { Skill } from '../../../../../../ttrpg_resources/skills/skill';
 
 @Component({
   selector: 'app-skill',

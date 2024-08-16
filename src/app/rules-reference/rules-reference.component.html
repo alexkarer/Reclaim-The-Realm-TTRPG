@@ -1,31 +1,100 @@
 <div class="row">
 	<div class="col-2">
-		<nav [ngbScrollSpyMenu]="spy" class="h-100 flex-column align-items-stretch pe-4 border-end">
+		<nav [ngbScrollSpyMenu]="spy" class="flex-column align-items-stretch pe-4 border-end navbar-nav-scroll">
 			<nav class="nav nav-pills flex-column">
-				<a role="button" class="nav-link" ngbScrollSpyItem="skills">Skills</a>
+				<a role="button" class="nav-link" ngbScrollSpyItem="reclaim-the-realm">Reclaim The Realm</a>
 				<nav class="nav nav-pills flex-column">
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="regular-skills" parent="skills">Regular Skills</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="lore-skills" parent="skills">Lore Skills</a>
-                    <a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="tool-skills" parent="skills">Tool Skills</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="introduction" parent="reclaim-the-realm">Introduction</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="core-gameplay" parent="reclaim-the-realm">Core Gameplay</a>
+					<nav class="nav nav-pills flex-column">
+						<a role="button" class="nav-link ms-5 my-0" ngbScrollSpyItem="d20-test" parent="core-gameplay">D20 Test</a>
+						<a role="button" class="nav-link ms-5 my-0" ngbScrollSpyItem="lore-skills" parent="keywords">Keywords</a>
+					</nav>
 				</nav>
+		
+				<a role="button" class="nav-link" ngbScrollSpyItem="character-overview">Character Overview</a>
+				<nav class="nav nav-pills flex-column">
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="attributes" parent="character-overview">Attributes</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="core-values" parent="character-overview">Core Values</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="skills" parent="character-overview">Skills</a>
+					<nav class="nav nav-pills flex-column">
+						<a role="button" class="nav-link ms-5 my-0" ngbScrollSpyItem="regular-skills" parent="skills">Regular Skills</a>
+						<a role="button" class="nav-link ms-5 my-0" ngbScrollSpyItem="lore-skills" parent="skills">Lore Skills</a>
+						<a role="button" class="nav-link ms-5 my-0" ngbScrollSpyItem="tool-skills" parent="skills">Tool Skills</a>
+					</nav>
+					<a role="button" class="nav-link" ngbScrollSpyItem="progression" parent="character-overview">Progression</a>
+				</nav>
+		
+				<a role="button" class="nav-link" ngbScrollSpyItem="classes">Classes</a>
+				<nav class="nav nav-pills flex-column">
+				</nav>
+		
+				<a role="button" class="nav-link" ngbScrollSpyItem="martial-maneuvers">Martial Maneuvers</a>
+				<nav class="nav nav-pills flex-column">
+				</nav>
+		
+				<a role="button" class="nav-link" ngbScrollSpyItem="spells">Spells</a>
+				<nav class="nav nav-pills flex-column">
+				</nav>
+		
+				<a role="button" class="nav-link" ngbScrollSpyItem="hybrid-abilities">Hybrid Abilities</a>
+				<nav class="nav nav-pills flex-column">
+				</nav>
+		
 				<a role="button" class="nav-link" ngbScrollSpyItem="perks">Perks</a>
-                <nav class="nav nav-pills flex-column">
+				<nav class="nav nav-pills flex-column">
 					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="crafting-perks" parent="perks">Crafting Perks</a>
 					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="defensive-perks" parent="perks">Defensive Perks</a>
-                    <a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="martial-perks" parent="perks">Martial Perks</a>
-                    <a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="skill-perks" parent="perks">Skill Perks</a>
-                    <a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="spellcasting-perks" parent="perks">Spellcasting Perks</a>
-                    <a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="other-perks" parent="perks">Other Perks</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="martial-perks" parent="perks">Martial Perks</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="skill-perks" parent="perks">Skill Perks</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="spellcasting-perks" parent="perks">Spellcasting Perks</a>
+					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="other-perks" parent="perks">Other Perks</a>
+				</nav>
+		
+				<a role="button" class="nav-link" ngbScrollSpyItem="equipment">Equipment</a>
+				<nav class="nav nav-pills flex-column">
+				</nav>
+		
+				<a role="button" class="nav-link" ngbScrollSpyItem="adventuring">Adventuring</a>
+				<nav class="nav nav-pills flex-column">
+				</nav>
+		
+				<a role="button" class="nav-link" ngbScrollSpyItem="combat">Combat</a>
+				<nav class="nav nav-pills flex-column">
+				</nav>
+		
+				<a role="button" class="nav-link" ngbScrollSpyItem="toolbox">Toolbox</a>
+				<nav class="nav nav-pills flex-column">
 				</nav>
 			</nav>
-		</nav>
+		</nav>		
 	</div>
 	<div class="col-10">
 		<div ngbScrollSpy #spy="ngbScrollSpy" class="p-3 rounded-2 mb-3 rules-body">
-            <h3 ngbScrollSpyFragment="skills">Skills</h3>
-                <app-skill-list></app-skill-list>
-            <h3 ngbScrollSpyFragment="perks">Perks</h3>
-                <app-perk-list></app-perk-list>
+			<h1 ngbScrollSpyFragment="reclaim-the-realm">Reclaim The Realm</h1>
+			<app-rules-overview/>
+
+			<h2 ngbScrollSpyFragment="character-overview">Character Overview</h2>
+			<app-character-overview/>
+
+			<h2 ngbScrollSpyFragment="classes">Classes</h2>
+
+			<h2 ngbScrollSpyFragment="martial-maneuvers">Martial Maneuvers</h2>
+
+			<h2 ngbScrollSpyFragment="spells">Spells</h2>
+
+			<h2 ngbScrollSpyFragment="hybrid-abilities">Hybrid Abilities</h2>
+			
+            <h2 ngbScrollSpyFragment="perks">Perks</h2>
+			<app-perk-list/>
+
+			<h2 ngbScrollSpyFragment="equipment">Equipment</h2>
+
+			<h2 ngbScrollSpyFragment="adventuring">Adventuring</h2>
+
+			<h2 ngbScrollSpyFragment="combat">Combat</h2>
+
+			<h2 ngbScrollSpyFragment="toolbox">Toolbox</h2>
 		</div>
 	</div>
 </div>
