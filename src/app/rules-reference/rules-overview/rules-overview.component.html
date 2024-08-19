@@ -1,6 +1,10 @@
 <div class="ms-2">
     <h3 ngbScrollSpyFragment="introduction">Introduction</h3>
-    <h3 ngbScrollSpyFragment="core-gameplay">Core Gameplay</h3>
-    <h4 ngbScrollSpyFragment="d20-test">D20 Test</h4>
-    <h4 ngbScrollSpyFragment="keywords">Keywords</h4>
+    <app-dynamic-content [content]="introductionText | keywordProcessor"></app-dynamic-content>
+
+    <h3 class="pt-3" ngbScrollSpyFragment="core-gameplay">Core Gameplay</h3>
+    <app-core-gameplay></app-core-gameplay>
+
+    <h3 class="pt-3" ngbScrollSpyFragment="keywords pt-3">Keywords</h3>
+    <app-dynamic-content [content]="keywordsText | keywordProcessor"></app-dynamic-content>
 </div>

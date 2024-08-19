@@ -6,9 +6,9 @@
         "fulldescription": "[STR] represents your physical Strength. In game, it additionally reflects your ability to wield melee weapons and damage with bows and thrown weapons, as well as your carrying capacity and jumping distance.",
         "milestoneBenefits": {
             "minus1OrLower": "While wearing armour, the Manoeuvre penalty is increased by 1.",
-            "4orHigher": "While wearing armour, the Manoeuvre penalty is decreased by 1, additionally any [MARTIAL MELEE ATTACK] that uses [STR] for damage deals an extra 1d6 physical damage",
-            "7orHigher": "While wearing armour the Manoeuvre penalty is decreased by 2, additionally any [MARTIAL MELEE ATTACK] that uses [STR] for damage deals an extra 1d6 physical damage",
-            "10orHigher": "While wearing armour, the Manoeuvre penalty is decreased by 2 and the Movement penalty is decreased by 1, additionally any [MARTIAL MELEE ATTACK] that uses [STR] for damage deals an extra 1d6 physical damage."
+            "4orHigher": "While wearing armour, the Manoeuvre penalty is decreased by 1, additionally any [MELEE MARTIAL ATTACK] that uses [STR] for damage deals an extra 1d6 physical damage",
+            "7orHigher": "While wearing armour the Manoeuvre penalty is decreased by 2, additionally any [MELEE MARTIAL ATTACK] that uses [STR] for damage deals an extra 1d6 physical damage",
+            "10orHigher": "While wearing armour, the Manoeuvre penalty is decreased by 2 and the Movement penalty is decreased by 1, additionally any [MELEE MARTIAL ATTACK] that uses [STR] for damage deals an extra 1d6 physical damage."
         }
     },
     {

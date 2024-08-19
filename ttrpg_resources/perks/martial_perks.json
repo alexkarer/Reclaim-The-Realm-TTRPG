@@ -75,7 +75,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When you make a [MARTIAL MELEE ATTACK] with a light or versatile weapon, instead of adding your [STR] you can add half your [AGI] (rounded down) to the damage roll."
+        "description": "When you make a [MELEE MARTIAL ATTACK] with a light or versatile weapon, instead of adding your [STR] you can add half your [AGI] (rounded down) to the damage roll."
     },
     {
         "name": "Superior Weapon Finesse",
@@ -88,7 +88,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When you make a [MARTIAL MELEE ATTACK] with a light or versatile weapon, instead of adding your [STR] you can add your [AGI] to the damage roll."
+        "description": "When you make a [MELEE MARTIAL ATTACK] with a light or versatile weapon, instead of adding your [STR] you can add your [AGI] to the damage roll."
     },
     {
         "name": "Lightning Attacks",
@@ -103,7 +103,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "After you make a [MARTIAL MELEE ATTACK] or [MARTIAL RANGED ATTACK] that is not a Lighting Attack, the next [MARTIAL MELEE ATTACK] or [MARTIAL RANGED ATTACK] can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP])."
+        "description": "After you make a [MELEE MARTIAL ATTACK] or [MARTIAL RANGED ATTACK] that is not a Lighting Attack, the next [MELEE MARTIAL ATTACK] or [MARTIAL RANGED ATTACK] can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP])."
     },
     {
         "name": "Graze",
@@ -116,7 +116,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When missing a [MARTIAL MELEE ATTACK], you can still deal physical damage to the target equal to your [STR]."
+        "description": "When missing a [MELEE MARTIAL ATTACK], you can still deal physical damage to the target equal to your [STR]."
     },
     {
         "name": "Momentum",
@@ -131,7 +131,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When wielding a melee weapon that has the heavy property. You deal extra damage for each meter moved (rounded down, max 20) with the next [MARTIAL MELEE ATTACK] made with that weapon after moving, as long as you moved directly towards your opponent."
+        "description": "When wielding a melee weapon that has the heavy property. You deal extra damage for each meter moved (rounded down, max 20) with the next [MELEE MARTIAL ATTACK] made with that weapon after moving, as long as you moved directly towards your opponent."
     },
     {
         "name": "Point blank shot",
@@ -240,7 +240,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "For your [MARTIAL MELEE ATTACK] and [MARTIAL RANGED ATTACK] the required unmodified roll required for a critical hit is reduced by 1."
+        "description": "For your [MELEE MARTIAL ATTACK] and [MARTIAL RANGED ATTACK] the required unmodified roll required for a critical hit is reduced by 1."
     },
     {
         "name": "Superior Critical",
@@ -253,7 +253,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When you score a critical hit with a [MARTIAL MELEE ATTACK] and [MARTIAL RANGED ATTACK] , you can roll the damage dice 1 additional time."
+        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [MARTIAL RANGED ATTACK] , you can roll the damage dice 1 additional time."
     },
     {
         "name": "Devastating Critical",
@@ -266,7 +266,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When you score a critical hit with a [MARTIAL MELEE ATTACK] and [MARTIAL RANGED ATTACK], you can grant your target one of the following status effects of your choice for 1 round: [BLINDED], [SILENCED], [BLEEDING 2d6 + [MARTIAL LEVEL]], [DAZED], [CRIPPLED]"
+        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [MARTIAL RANGED ATTACK], you can grant your target one of the following status effects of your choice for 1 round: [BLINDED], [SILENCED], [BLEEDING 2d6 + [MARTIAL LEVEL]], [DAZED], [CRIPPLED]"
     },
     {
         "name": "Quick-footed",

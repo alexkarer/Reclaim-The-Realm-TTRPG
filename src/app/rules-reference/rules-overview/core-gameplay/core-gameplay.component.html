@@ -1,0 +1,17 @@
+<app-dynamic-content [content]="coreGameplayIntroduction | keywordProcessor"></app-dynamic-content>
+<div class="ms-2">
+    <h4 class="pt-3" ngbScrollSpyFragment="d20-test">D20 Test</h4>
+    <app-dynamic-content [content]="d20Test | keywordProcessor"></app-dynamic-content>
+
+    <h4 class="pt-3" ngbScrollSpyFragment="difficulty-threshold">Difficulty Threshold</h4>
+    <app-dynamic-content [content]="difficulty_threshold | keywordProcessor"></app-dynamic-content>
+
+    <h4 class="pt-3" ngbScrollSpyFragment="advantage-disadvantage">Advantage and Disadvantage</h4>
+    <app-dynamic-content [content]="advantageDisadvantage | keywordProcessor"></app-dynamic-content>
+
+    <h4 class="pt-3" ngbScrollSpyFragment="degree-of-success-failure">Degree of Success/Failure</h4>
+    <app-dynamic-content [content]="degreesOfSuccessFailure | keywordProcessor"></app-dynamic-content>
+
+    <h4 class="pt-3" ngbScrollSpyFragment="structured-vs-unstructured-time">Structured vs Unstructured Time</h4>
+    <app-dynamic-content [content]="structured_unstructured_time | keywordProcessor"></app-dynamic-content>
+</div>
