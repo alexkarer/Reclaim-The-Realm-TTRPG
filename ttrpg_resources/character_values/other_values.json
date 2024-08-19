@@ -1,0 +1,48 @@
+{
+    "specialMovementDescription": "There are various types of special movement that allows you to move around more efficiently in certain circumstances. Special movement is accompanied by a number of meters in parentheses (X) that designates how many meters can be moved when spending 1 [MP].<ul><li><span class=\"fw-bold\">Swim (X): </span>Creatures with swim speed can easily navigate bodies of Water. Creatures with swim speed reduce the difficulty of Tests to navigate Water by 10.</li> <li><span class=\"fw-bold\">Climb (X): </span>Creatures with climb speed can easily scale vertical surfaces. Additionally creatures with Climb speed reduce the difficulty on climb Tests by 10.</li> <li><span class=\"fw-bold\">Burrow (X): </span>Creatures with Burrow speed can traverse through earth, sand or similar terrain.</li> <li><span class=\"fw-bold\">Fly (X): </span>Creatures with Fly speed are able to soar through the air, They need to at least spend 1 [MP] each turn to move in a direction or to hover in the air to prevent falling down. If they are falling they can stop their falling by spending 4 [MP] . Additionally if a flying creature is knocked prone they immediatly drop 5 meters and only stay prone if they hit the ground.</li> <li><span class=\"fw-bold\">Hover (X): </span>Creatures with Hover speed can also fly through the air but are a lot more flexible and don’t have to spend [MP] to stay in the air and are not affected by being knocked prone.</li></ul>",
+    "sizeDescription": "Most humanoids are medium [SIZE] , however certain species have different ones and certain effects might change your [SIZE] . Changing your [SIZE] affects some of your physical characteristics",
+    "sizeValues": [
+        {
+            "name": "Tiny",
+            "strengthBonus": -4,
+            "dodgeBonus": 6,
+            "otherSizeModifications": "4 Tiny creatures can fit in 1 square"
+        },
+        {
+            "name": "Small",
+            "strengthBonus": -2,
+            "dodgeBonus": 3,
+            "otherSizeModifications": "2 Small creatures can fit in 1 square"
+        },
+        {
+            "name": "Medium",
+            "strengthBonus": 0,
+            "dodgeBonus": 6,
+            "otherSizeModifications": "A Medium creatures can fit in 1 square"
+        },
+        {
+            "name": "Large",
+            "strengthBonus": 2,
+            "dodgeBonus": -3,
+            "otherSizeModifications": "A Large creature takes up 2-4 squares."
+        },
+        {
+            "name": "Huge",
+            "strengthBonus": 4,
+            "dodgeBonus": -6,
+            "otherSizeModifications": "base reach now 3m 1 [MP] moves 3m, A Huge creature takes up 5-9 squares."
+        },
+        {
+            "name": "Gargantuan",
+            "strengthBonus": 6,
+            "dodgeBonus": -9,
+            "otherSizeModifications": "base reach now 3m, 1 [MP] moves 3m, A Gargantuan creature takes up 10-25 squares."
+        },
+        {
+            "name": "Titanic",
+            "strengthBonus": 8,
+            "dodgeBonus": -12,
+            "otherSizeModifications": "base reach now 4.5m, 1 [MP] moves 4.5m, A Titanic creature takes up more than 25 squares."
+        }
+    ]
+}

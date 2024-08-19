@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { DynamicContentComponent } from "../../../shared/dynamic-component-rendering/dynamic-content.component";
 import { KeywordProcessorPipe } from "../../../shared/text-transformer/text-transformer";
-import { NgbScrollSpyItem } from '@ng-bootstrap/ng-bootstrap';
+import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import coreGameplayJson from '../../../../../ttrpg_resources/rules_overview/core_gameplay.json';
 
 @Component({
   selector: 'app-core-gameplay',
   standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyItem],
+  imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
   templateUrl: './core-gameplay.component.html',
   styleUrl: './core-gameplay.component.scss'
 })

@@ -1,0 +1,8 @@
+{
+    "levelDescription": "Your characters current [LEVEL], it increases as your character spends time adventuring and earns [XP] as described in Level Progression. As your [LEVEL] increases it additionally improves several other values such as [HP], [STAMINA] and your Martial/Spell [LEVEL].",
+    "martialLevelDescription": "Your Characters [MARTIAL LEVEL] is calculated by multiplying the Martial Level Progression of your Class with your [LEVEL] and rounding down.",
+    "spellLevelDescription": "Your Characters [SPELL LEVEL] is calculated by multiplying the Spell Level Progression of your Class with your [LEVEL] and rounding down.",
+    "xpDescription": "Experience Points. Experience is accumulated during play by adventuring, defeating Monsters, solving Quests, good role-play and other achievements the Game Master deems worthwile. A certain [XP] Total is required to get to a higher [LEVEL] , when getting to a higher level the current [XP] is not reset, instead you keep your total and have to achieve",
+    "apDescription": "Action Points. Actions in combat that are not exclusively movement related such as attacking, casting spells or activating magic items require [AP] when used. The more [AP] a character has available, the more they can do during their turn. A Character starts with 3 [AP] and gains more as they [LEVEL] up.",
+    "mpDescription": "Movement points. It is a measurement to determine how much someone can move during Combat, one Movement Point is equal to 1.5m (1 Square). Characters earn more [MP] from various abilities or by increasing their [AGI]."
+}

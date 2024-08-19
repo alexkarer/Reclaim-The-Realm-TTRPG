@@ -57,22 +57,22 @@ function processAttributeKeywords(text: string): ContentPart[] {
                 break;
             // ********************** MECHANICS **********************
             case 'D20 TEST':
-                parts.push(generateGenericKeyword('[D20 TEST]', 'TODO', 'd20-test'));
+                parts.push(generateGenericKeyword('[D20 TEST]', 'On a d20 Test you roll a d20 dice and most of a time add a number to the result which decreases or increases the result which is made against some Difficulty Threshold [DT] that has to be exceeded.', 'd20-test'));
                 break;
             case 'DT':
-                parts.push(generateGenericKeyword('[DT]', 'TODO', 'dt'));
+                parts.push(generateGenericKeyword('[DT]', 'The difficulty of any [D20 TEST] is measured by the Difficulty Threshld ([DT]). The [DT] should be exlusivly based upon the difficulty of the action the actor attempts.', 'dt'));
                 break;
             case 'ADVANTAGE':
-                parts.push(generateGenericKeyword('[ADVANTAGE]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[ADVANTAGE]', 'When you make a [D20 TEST] you roll the d20 twice and take the better result.', 'adv-disadv'));
                 break;
             case 'DISADVANTAGE':
-                parts.push(generateGenericKeyword('[DISADVANTAGE]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[DISADVANTAGE]', 'When you make a [D20 TEST] you roll the d20 twice and take the worse result.', 'adv-disadv'));
                 break;
             case 'ATTRIBUTE TEST':
-                parts.push(generateGenericKeyword('[ATTRIBUTE TEST]', 'TODO', 'attribute-test'));
+                parts.push(generateGenericKeyword('[ATTRIBUTE TEST]', 'An [ATTRIBUTE TEST] is a [D20 TEST] to determine if you can succeed in a certain activity related to a specific [ATTRIBUTE]. Simply roll a d20 and add the related [ATTRIBUTE].', 'attribute-test'));
                 break;
             case 'SKILL TEST':
-                parts.push(generateGenericKeyword('[SKILL TEST]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[SKILL TEST]', 'A Skill Test is an [ATTRIBUTE TEST] where also ranks of a [SKILL] can be added to the bonus.', ''));
                 break;
             case 'ATTACK':
                 parts.push(generateGenericKeyword('[ATTACK]', 'TODO', ''));
@@ -105,68 +105,59 @@ function processAttributeKeywords(text: string): ContentPart[] {
                 parts.push(generateGenericKeyword('[CONCENTRATION TEST]', 'TODO', ''));
                 break;
             case 'SAVE':
-                parts.push(generateGenericKeyword('[SAVE]', 'TODO', ''));
-                break;
-            case 'HARDNESS SAVE':
-                parts.push(generateGenericKeyword('[HARDNESS SAVE]', 'TODO', ''));
-                break;
-            case 'DODGE SAVE':
-                parts.push(generateGenericKeyword('[DODGE SAVE]', 'TODO', ''));
-                break;
-            case 'TOUGHNESS SAVE':
-                parts.push(generateGenericKeyword('[TOUGHNESS SAVE]', 'TODO', ''));
-                break;
-            case 'WILLPOWER SAVE':
-                parts.push(generateGenericKeyword('[WILLPOWER SAVE]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[SAVE]', 'TODO', 'save'));
                 break;
             // ********************** CHARACTER VALUES **********************
             case 'LEVEL':
-                parts.push(generateGenericKeyword('[LEVEL]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[LEVEL]', 'Your characters current [LEVEL], it increases as your character spends time adventuring and earns [XP]. When your [LEVEL] increases your characters statistics also improve in several ways.', 'level'));
                 break;
             case 'MARTIAL LEVEL':
-                parts.push(generateGenericKeyword('[MARTIAL LEVEL]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[MARTIAL LEVEL]', 'Your Characters[MARTIAL LEVEL] is calculated by multiplying the Martial Level Progression of your Class with your [LEVEL] and rounding down.', 'martial-level'));
                 break;
             case 'SPELL LEVEL':
-                parts.push(generateGenericKeyword('[SPELL LEVEL]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[SPELL LEVEL]', 'Your Characters [SPELLCASTING LEVEL] is calculated by multiplying the Spellcasting Level Progression of your Class with your [LEVEL] and rounding down.', 'spell-level'));
                 break;
             case 'HP':
-                parts.push(generateGenericKeyword('[HP]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[HP]', 'Health Points. Represents how much damage you can take before going unconcious.', 'hp'));
                 break;
             case 'THP':
-                parts.push(generateGenericKeyword('[THP]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[THP]', 'Temporary health points. They are a buffer against damage, a pool of hit points that protect you from injury.', 'thp'));
                 break;
             case 'STAMINA':
-                parts.push(generateGenericKeyword('[STAMINA]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[STAMINA]', '[STAMINA] is your energy reserve with which you can replenish your Resources like HP and Aether and is used up when performing physically demanding tasks.', 'stamina'));
                 break;
             case 'ARCANA':
-                parts.push(generateGenericKeyword('[ARCANA]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[ARCANA]', 'Your [ARCANA] represents an energy reserve you expend when drawing power from the elemental planes and the aether to cast spells.', 'arcana'));
                 break;
             case 'HARDNESS':
-                parts.push(generateGenericKeyword('[HARDNESS]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[HARDNESS]', 'A representation of the characters resistance against being forcefully moved or crushed against their will. Increases with your [STR]', 'hardness'));
                 break;
             case 'DODGE':
-                parts.push(generateGenericKeyword('[DODGE]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[DODGE]', 'A representation of how good the character is at evading danger. Increases with your [AGI]', 'dodge'));
                 break;
             case 'TOUGHNESS':
-                parts.push(generateGenericKeyword('[TOUGHNESS]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[TOUGHNESS]', 'A representation of the characters bodily health and ability to resist internal injuries, poisons and concussions. Increases with your [CON]', 'toughness'));
                 break;
             case 'WILLPOWER':
-                parts.push(generateGenericKeyword('[WILLPOWER]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[WILLPOWER]', ' A representation of how well the character can resist being mind-controlled, feeling fear or resisting other mind affecting effects. Increases with your [SPI]', 'willpower'));
+                break;
+            case 'DR':
+                parts.push(generateGenericKeyword('[DR]', 'Damage Resistance provides flat damage reduction against incoming damage', 'dr'));
                 break;
             case 'AP':
-                parts.push(generateGenericKeyword('[AP]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[AP]', 'Action Points. Actions in combat that are not exclusively movement related such as attacking, casting spells or activating magic items require [AP] when used. The more [AP] a character has available, the more they can do during their turn.', 'ap'));
                 break;
             case 'MP':
-                parts.push(generateGenericKeyword('[MP]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[MP]', 'Movement points. It is a measurement to determine how much someone can move during Combat, one Movement Point is equal to 1.5m (1 Square).', 'mp'));
                 break;
             case 'REACTION':
-                parts.push(generateGenericKeyword('[REACTION]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[REACTION]', 'Once during a combat round you can use a [REACTION] which you gain at the start of the battle unless stated otherwise. At the start of each of your turns you regain your [REACTION] but you can only have one.', ''));
                 break;
             case 'SIZE':
-                parts.push(generateGenericKeyword('[SIZE]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[SIZE]', 'Most humanoids are medium [SIZE], however certain species have different ones and certain effects might change your [SIZE]. Changing your [SIZE] affects your [STR] and [DODGE].', 'size'));
                 break;
             case 'XP':
-                parts.push(generateGenericKeyword('[XP]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[XP]', 'Experience Points. Experience is accumulated during play by adventuring, defeating Monsters, solving Quests, good role-play and other achievements the Game Master deems worth-wile.', 'xp'));
                 break;
             // ********************** SKILLS **********************
             case 'ANIMAL HANDLING':

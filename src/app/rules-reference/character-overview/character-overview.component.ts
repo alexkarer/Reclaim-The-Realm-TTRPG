@@ -5,11 +5,12 @@ import { NgbScrollSpyFragment, NgbTooltipModule } from '@ng-bootstrap/ng-bootstr
 import attributeTexts from '../../../../ttrpg_resources/character_values/attributes/attribute-texts.json';
 import { KeywordProcessorPipe } from "../../shared/text-transformer/text-transformer";
 import { DynamicContentComponent } from "../../shared/dynamic-component-rendering/dynamic-content.component";
+import { ImportantCharacteristicsComponent } from "./important-characteristics/important-characteristics.component";
 
 @Component({
   selector: 'app-character-overview',
   standalone: true,
-  imports: [SkillListComponent, AttributesListComponent, NgbScrollSpyFragment, NgbTooltipModule, KeywordProcessorPipe, DynamicContentComponent],
+  imports: [SkillListComponent, AttributesListComponent, NgbScrollSpyFragment, NgbTooltipModule, KeywordProcessorPipe, DynamicContentComponent, ImportantCharacteristicsComponent],
   templateUrl: './character-overview.component.html',
   styleUrl: './character-overview.component.scss'
 })
