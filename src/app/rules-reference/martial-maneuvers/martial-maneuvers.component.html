@@ -1,1 +1,33 @@
-<p>martial-maneuvers works!</p>
+<div class="ms-2">
+    <app-dynamic-content [content]="martialManeuversDescription | keywordProcessor"></app-dynamic-content>
+    <h3 class = "mb-1 mt-3">Performing Matial Maneuvers</h3>
+    <div class="ms-2">
+        <app-dynamic-content [content]="performingMartialManeuversDescription | keywordProcessor"></app-dynamic-content>
+
+        <h4 class = "mb-0 mt-3">Martial Test</h4>
+        <p class="header-subscript">Keyword: [MARTIAL TEST]</p>
+        <app-dynamic-content [content]="martialTestDescription | keywordProcessor"></app-dynamic-content>
+
+        <h4 class = "mb-2 mt-3">Pushing Martial Maneuvers</h4>
+        <app-dynamic-content [content]="pushingMartialManeuversDescription | keywordProcessor"></app-dynamic-content>
+
+        <h4 class = "mb-2 mt-3">Martial Maneuver Types</h4>
+        <app-dynamic-content [content]="martialManeuverTypesDescription | keywordProcessor"></app-dynamic-content>
+        <div class="row">
+            <div class="col-6">
+                @for (type of martialManeuverTypesLeft; track $index) {
+                    <h5 class = "mb-1 mt-2">{{ type.type }}</h5>
+                    <app-dynamic-content [content]="type.description| keywordProcessor"></app-dynamic-content>
+                }
+            </div>
+            <div class="col-6">
+                @for (type of martialManeuverTypesRight; track $index) {
+                    <h5 class = "mb-1 mt-2">{{ type.type }}</h5>
+                    <app-dynamic-content [content]="type.description| keywordProcessor"></app-dynamic-content>
+                }
+            </div>
+        </div>
+    </div>
+    <h3 class = "mb-1 mt-3">Basic Martial Maneuvers</h3>
+    <app-martial-maneuver-list [title]="'Agile Maneuvers'" [martialManeuvers]="basicAgileManeuvers"></app-martial-maneuver-list>
+</div>

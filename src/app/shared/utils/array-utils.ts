@@ -13,7 +13,10 @@ export function takeEveryNthElement<Type>(arr: Type[], n: number, startElement =
     return newArr;
 }
 
-export function halveArray<Type>(arr: Type[]): [Type[], Type[]] {
-    const half = Math.floor(arr.length / 2) + 1;
+export function halveArray<Type>(arr: Type[] | undefined): [Type[], Type[]] {
+    if (arr == undefined) {
+        return [[], []];
+    } 
+    const half = Math.ceil(arr.length / 2);
     return [arr.slice(0, half), arr.slice(half, arr.length)];
 }

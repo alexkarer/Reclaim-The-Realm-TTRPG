@@ -1,0 +1,33 @@
+{
+    "martialManeuversDescription": "Martial maneuvers are extraordinary martial feats that characters can perform which depending on the characters prowess can reach superhuman levels.",
+    "performingMartialManeuversDescription": "Anyone that has a Martial Level Progression that is not 0 can perfrom Martial Maneuvers. A character knows a number of Martial Maneuvers equal to: 2 + half [INT] (rounded down)+ [MARTIAL LEVEL]. After a long rest they can switch out one Manuever they know for a different one.<br>Most Martial Abilities have a requirement you must meet before you are able to use that maneuver, most of these requirements depend on the type of weapon you are using or your character must have the required [MARTIAL LEVEL].",
+    "martialTestDescription": "Certain abilities require you to make a [MARTIAL TEST] that associated with an Attribute and a defensive characteristic that is targeted. A [MARTIAL TEST] is a [D20 TEST] where you roll a d20 and add the Attribute as well as your [MARTIAL LEVEL] the result than has to match or exceed the defensive characteristic targeted.",
+    "pushingMartialManeuversDescription": "Certain Martial Mananeuvers have the Ability to Push that maneuver to perform more powerful versions at a higher cost. This is an alternative way of using that maneuver which usually comes at the cost of [STAMINA] or more [AP] but in turn yields a greater effect.",
+    "martialManeuverTypesDescription": "There are different types of Martial Maneuvers that focuses on different aspects of Martial Arts or fighting in general. In order to learn a maneuver you need to be able to learn maneuvers of it’s type.",
+    "martialManeuverTypes": [
+        {
+            "type": "Agile",
+            "description": "Agile Maneuvers are maneuvers where a character can show of their supernatural speed and agility. These maneuvers usually require a character to have a higher [AGI] Attribute."
+        },
+        {
+            "type": "Brawl",
+            "description": "Brawl Maneuvers are maneuvers where characters get in close combat with other people and are just relying on their body to perform techniques."
+        },
+        {
+            "type": "Leader",
+            "description": "Leader manuevers leverage the characters ability to command and empower alies or decieve enemies with their words and expressions. These maneuvers leverage the characters [CHA] Attribute."
+        },
+        {
+            "type": "Fortitude",
+            "description": "Fortitude Maneuvers rely on the characters physical body to shrug of injuries or push themselves beyond their usual limits."
+        },
+        {
+            "type": "Tactical",
+            "description": "Tactical Maneuvers represents the characters knowledge, expierience and awarness of battlefield situations and how to best resolve them and gain advantages."
+        },
+        {
+            "type": "Weapon",
+            "description": "Weapon Maneuvers are different ways characters can use their weapon for more effect and deadlier results."
+        }
+    ]
+}

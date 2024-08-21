@@ -1,0 +1,48 @@
+{
+    "basicManeuversDescription": "Basic Maneuvers are maneuvers which anyone can learn as long as they have Martial Level Progression greater than 0.",
+    "agileManuevers": [
+        {
+            "name": "Wall Jump",
+            "tags": [ "Martial Maneuver (Agile)", "Movement" ],
+            "requirements": {
+                "requiredLevels": [],
+                "requiredAttributes": [
+                    { "amount": 3, "attribute": "AGI" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ "3 ranks in the Athletics Skill" ]
+            },
+            "cost": "3 [MP] or 1 reaction",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you end a Jump Move at a flat surface you can chain the Jump and Jump again but only half the distance of your regular Jump distance. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. If the wall is slippy or there are other conditions that might hinder you, the GM might require you to perform a [AGI] Athletics [SKILL TEST].",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "When you push this maneuver your pushing distance is not halved."
+            }
+        },
+        {
+            "name": "",
+            "tags": [],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 1, "attribute": "" }
+                ],
+                "requiredPerks": [ "" ],
+                "otherRequirements": [ "" ]
+            },
+            "range": "",
+            "target": "",
+            "duration": "",
+            "description": "",
+            "maneuverPush": {
+                "pushingExtraCost": "",
+                "pushingDescription": ""
+            }
+        }
+    ]
+}

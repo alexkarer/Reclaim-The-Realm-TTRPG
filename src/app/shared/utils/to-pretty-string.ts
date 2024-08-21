@@ -1,33 +1,46 @@
+import { Pipe, PipeTransform } from '@angular/core';
 import { AttributeRequirement, LevelRequirement, Requirements } from '../../../../ttrpg_resources/globals/AbilityRequirements';
 
-export function requirementsToPrettyString(requirements: Requirements) : string {
-    let requirementsPrettyString = "";
-    if (requirements?.requiredLevels?.length !== 0) {
-        requirementsPrettyString = levelsToPrettyString(requirements.requiredLevels);
-    }
-    if (requirements?.requiredAttributes?.length !== 0) {
-        if (requirementsPrettyString !== "") {
-            requirementsPrettyString = requirementsPrettyString + ', ';
+@Pipe({
+    name: 'requirementsPrettier',
+    standalone: true,
+})
+export class RequirementsPrettierPipe implements PipeTransform {
+    transform(requirements: Requirements | undefined): string {
+        if (!requirements) {
+            return 'Requirements: -';
         }
-        requirementsPrettyString = attributesToPrettyString(requirements.requiredAttributes);
-    }
-    if (requirements?.requiredPerks?.length !== 0) {
-        if (requirementsPrettyString !== "") {
-            requirementsPrettyString = requirementsPrettyString + ', Perk:';
+        let requirementsPrettyString = '';
+        if (requirements?.requiredLevels?.length !== 0) {
+            requirementsPrettyString = levelsToPrettyString(requirements.requiredLevels);
         }
-        requirements.requiredPerks.forEach(requiredPerk => {
-            requirementsPrettyString =  + ' ' + requirementsPrettyString + requiredPerk;
-        })
-    }
-    if (requirements?.otherRequirements?.length !== 0) {
-        if (requirementsPrettyString !== "") {
-            requirementsPrettyString = requirementsPrettyString + ', ';
+        if (requirements?.requiredAttributes?.length !== 0) {
+            if (requirementsPrettyString !== '') {
+                requirementsPrettyString = requirementsPrettyString + ', ';
+            }
+            requirementsPrettyString = attributesToPrettyString(requirements.requiredAttributes);
         }
-        requirements.otherRequirements.forEach(req => {
-            requirementsPrettyString = requirementsPrettyString + req;
-        })
+        if (requirements?.requiredPerks?.length !== 0) {
+            if (requirementsPrettyString !== '') {
+                requirementsPrettyString = requirementsPrettyString + ', Perk:';
+            }
+            requirements.requiredPerks.forEach(requiredPerk => {
+                requirementsPrettyString =  + ' ' + requirementsPrettyString + requiredPerk;
+            })
+        }
+        if (requirements?.otherRequirements?.length !== 0) {
+            if (requirementsPrettyString !== '') {
+                requirementsPrettyString = requirementsPrettyString + ', ';
+            }
+            requirements.otherRequirements.forEach(req => {
+                requirementsPrettyString = requirementsPrettyString + req;
+            })
+        }
+        if (requirementsPrettyString === '') {
+            requirementsPrettyString = '-';
+        }
+        return 'Requirements: ' + requirementsPrettyString;
     }
-    return requirementsPrettyString;
 }
 
 function levelsToPrettyString(levelRequirements: LevelRequirement[]) : string {

@@ -1,0 +1,15 @@
+<div class="p-1 border bg-body-tertiary mb-3">
+    <h5 class = "mb-1">{{ ability?.name }}</h5>
+    <p class="fst-italic my-0 text-body-secondary">Tags: {{ ability?.tags?.join('; ') }}</p>
+    <p class="fst-italic my-0 text-body-secondary">{{ ability?.requirements | requirementsPrettier }}</p>
+    <p class="description my-0"><span class="fw-bold">Cost:</span> {{ ability?.cost }}</p>
+    <p class="description my-0"><span class="fw-bold">Range:</span> {{ ability?.range }}</p>
+    <p class="description my-0"><span class="fw-bold">Target(s):</span> {{ ability?.target }}</p>
+    <p class="description my-0"><span class="fw-bold">Duration:</span> {{ ability?.duration }}</p>
+    <!-- TODO: make keywords for duration, range and targets-->
+    <app-dynamic-content [content]="ability?.description | keywordProcessor"></app-dynamic-content>
+    @if (isMartialManeuver()) {
+        <p class="description mt-2 mb-0"><span class="fw-bold">Pushing extra cost:</span></p>
+        <app-dynamic-content [content]="'test' | keywordProcessor"></app-dynamic-content>
+    }
+</div>

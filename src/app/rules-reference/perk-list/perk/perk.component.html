@@ -1,5 +1,5 @@
 <div class="p-1 border bg-body-tertiary mb-3">
     <p class="fw-bold mb-0">{{ perk?.name }}</p>
-    <p class="header-subscript">Requirements: {{ perkRequirements }}; Repeatable: {{ perk?.repeatable ? 'Yes' : 'No'}}</p>
+    <p class="header-subscript">{{ perk?.requirements| requirementsPrettier }}; Repeatable: {{ perk?.repeatable ? 'Yes' : 'No'}}</p>
     <app-dynamic-content [content]="perk?.description | keywordProcessor"></app-dynamic-content>
 </div>
