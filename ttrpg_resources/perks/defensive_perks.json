@@ -49,7 +49,7 @@
             "otherRequirements": []
         },
         "repeatable": false,
-        "description": "Gain a +2 bonus to [TOUGHNESS] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [BLINDED], [DAZED], [DEAFENED], [SILENCED], [POISONED], [BLEEDING X], [POISON X]"
+        "description": "Gain a +2 bonus to [TOUGHNESS] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [BLINDED], [DAZED], [DEAFENED], [SILENCED], [POISONED], [BLEEDING], [POISON]"
     },
     {
         "name": "Mind of Steel",

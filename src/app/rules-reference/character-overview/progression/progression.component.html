@@ -1,0 +1,29 @@
+<div class="ms-2">
+    <app-dynamic-content [content]="progressionDescription | keywordProcessor"></app-dynamic-content>
+    <div class="row pt-4">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <table class="table table-striped table-bordered" style="text-align: center">
+                <thead>
+                    <tr>
+                        <th scope="col">[LEVEL]</th>
+                        <th scope="col">[XP]</th>
+                        <th scope="col">[AP]</th>
+                        <th scope="col">Attribute Limit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (level of levelRequirements; track $index) {
+                        <tr>
+                            <td>{{ level.level }}</td>
+                            <td>{{ level.xp }}</td>
+                            <td>{{ level.ap }}</td>
+                            <td>{{ level.attributeLimit }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>

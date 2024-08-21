@@ -1,5 +1,14 @@
 <div>
-    @for (attribute of attributes; track $index) {
-        <app-attribute [attribute]="attribute"></app-attribute>
-    }
+    <div class="row">
+        <div class="col-6">
+            @for (attribute of attributesLeft; track $index) {
+                <app-attribute [attribute]="attribute"></app-attribute>
+            }
+        </div>
+        <div class="col-6">
+            @for (attribute of attributesRight; track $index) {
+                <app-attribute [attribute]="attribute"></app-attribute>
+            }
+        </div>
+    </div>
 </div>

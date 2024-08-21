@@ -12,9 +12,9 @@
         "hasPassiveComponent": false
     },
     {
-        "name": "Magic",
-        "shortDescription": "Knowledge about Magic, Spells, Magical Items and magical creations.",
-        "fullDescrption": "Knowledge about Magic, Spells, Magical Items and magical creations.",
+        "name": "Elements",
+        "shortDescription": "Knowledge about the Elements, Elemental Planes, Elementals and how the Influence the Material World",
+        "fullDescrption": "Knowledge about the Elements, Elemental Planes, Elementals and how the Influence the Material World.",
         "hasPassiveComponent": false
     },
     {
@@ -25,8 +25,8 @@
     },
     {
         "name": "Supernatural",
-        "shortDescription": "Knowledge about creatures, secrets sects, cults and other groups related to the cosmic and elemental planes as well as the planes themselves.",
-        "fullDescrption": "Knowledge about creatures, secrets sects, cults and other groups related to the cosmic and elemental planes as well as the planes themselves.",
+        "shortDescription": "Knowledge about creatures, secrets sects, cults and other groups related to the cosmic planes as well as the planes themselves.",
+        "fullDescrption": "Knowledge about creatures, secrets sects, cults and other groups related to the cosmic planes as well as the planes themselves.",
         "hasPassiveComponent": false
     }
 ]

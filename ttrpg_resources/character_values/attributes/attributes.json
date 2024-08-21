@@ -30,9 +30,9 @@
         "fulldescription": "[CON] represents your bodily health as well as your endurance and the ability to resist poisons or other harmful effects targeting your body.<br>Additionally, each point in [CON] increases your [HP] for each [LEVEL] you have, furthermore each point increases your natural lifespan by 10 years. Conversely, if your [CON] value is negative, that amount decreases your [HP] and lifespan.",
         "milestoneBenefits": {
             "minus1OrLower": "You become vulnurable to poison damage.",
-            "4orHigher": "When you recover your [HP] during a [SHORT REST] by using your [STAMINA] you can now roll an additional d6.",
-            "7orHigher": "When you recover your [HP] during a [SHORT REST] by using your [STAMINA] you can roll an additional d6 and you automatically recover one additional point of exhaustion after a [LONG REST].",
-            "10orHigher": "When you recover your [HP] during a [SHORT REST] you can roll 2 additional d6, additionally if you have to make a [TOUGHNESS SAVE] when on deaths door or unconcious against you can make these saves with [ADVANTAGE]."
+            "4orHigher": "When you recover your [HP] during a short rest by using your [STAMINA] you can now roll an additional d6.",
+            "7orHigher": "When you recover your [HP] during a short rest by using your [STAMINA] you can roll an additional d6 and you automatically recover one additional point of exhaustion after a long rest.",
+            "10orHigher": "When you recover your [HP] during a short rest you can roll 2 additional d6, additionally if you have to make a [TOUGHNESS] [SAVE] when on deaths door or unconcious against you can make these saves with [ADVANTAGE]."
         }
     },
     {
@@ -41,10 +41,10 @@
         "shortdescription": "Intelligence represents your Intelligence and ability to reason about problems, recall information, prediction, and imagination of 3D environments, for example it represents how many techniques you can know at the same time.",
         "fulldescription": "The [INT] Attribute represents your Intelligence and ability to reason about problems, recall information, prediction, and imagination of 3D environments, for example it represents how many techniques you can know at the same time",
         "milestoneBenefits": {
-            "minus1OrLower": "The maximum rank for a [LORE SKILL] and [TOOL SKILL] are halved (rounded down).",
-            "4orHigher": "You get 1 extra [SKILL POINTS] per [LEVEL].",
-            "7orHigher": "You get 2 extra [SKILL POINTS] per [LEVEL], and the maximum rank of any [SKILL] is increased by 1.",
-            "10orHigher": "You get 2 extra [SKILL POINTS] per [LEVEL] , and the maximum rank of any [SKILL] is increased by 2."
+            "minus1OrLower": "The maximum rank for a Lore Skill and Tool Skill are halved (rounded down).",
+            "4orHigher": "You get 1 extra Skill Point per [LEVEL].",
+            "7orHigher": "You get 2 extra Skill Points per [LEVEL], and the maximum rank of Skills is increased by 1.",
+            "10orHigher": "You get 2 extra Skill Points per [LEVEL] , and the maximum rank of Skills is increased by 2."
         }
     },
     {

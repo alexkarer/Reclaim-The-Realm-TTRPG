@@ -1,0 +1,77 @@
+{
+    "progressionDescription": "Besides more [HP] , Class Features and Proficiency Bonuses. Gaining a higher level also grants you access to more perks, increases your [AP] and allows you to have higher Attribute values. In this table below, you can see the general bonuses received as well as the [XP] required to hit that level.<br>You gain the following benefits every time you [LEVEL] up.<ul><li>You gain 1 Attribute Point</li><li>You can select one Perk</li></ul>Additionally, every 30 000 [XP] after [LEVEL] 12, you gain an additional Attribute Point and can choose a new Perk. However, your [LEVEL] does not increase.",
+    "levelRequirementsAndBonuses": [
+        {
+            "level": 1,
+            "xp": 0,
+            "ap": 3,
+            "attributeLimit": 3
+        },
+        {
+            "level": 2,
+            "xp": 100,
+            "ap": 3,
+            "attributeLimit": 3
+        },
+        {
+            "level": 3,
+            "xp": 400,
+            "ap": 3,
+            "attributeLimit": 4
+        },
+        {
+            "level": 4,
+            "xp": 1300,
+            "ap": 4,
+            "attributeLimit": 4
+        },
+        {
+            "level": 5,
+            "xp": 3100,
+            "ap": 4,
+            "attributeLimit": 5
+        },
+        {
+            "level": 6,
+            "xp": 6500,
+            "ap": 4,
+            "attributeLimit": 5
+        },
+        {
+            "level": 7,
+            "xp": 14000,
+            "ap": 4,
+            "attributeLimit": 6
+        },
+        {
+            "level": 8,
+            "xp": 30000,
+            "ap": 5,
+            "attributeLimit": 6
+        },
+        {
+            "level": 9,
+            "xp": 50000,
+            "ap": 5,
+            "attributeLimit": 7
+        },
+        {
+            "level": 10,
+            "xp": 80000,
+            "ap": 5,
+            "attributeLimit": 7
+        },
+        {
+            "level": 11,
+            "xp": 130000,
+            "ap": 5,
+            "attributeLimit": 8
+        },
+        {
+            "level": 12,
+            "xp": 200000,
+            "ap": 6,
+            "attributeLimit": 8
+        }
+    ]
+}

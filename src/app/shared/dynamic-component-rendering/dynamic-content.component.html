@@ -1,7 +1,7 @@
 <ng-container>
     @for (contentPart of content; track $index) {
         @if (contentPart.type === 'text') {
-            <span class="lh-sm" [innerHTML]="contentPart.text"></span>
+            <span class="description" [innerHTML]="contentPart.text"></span>
         }
         @if (contentPart.type === 'keyword') {
             <app-keyword 

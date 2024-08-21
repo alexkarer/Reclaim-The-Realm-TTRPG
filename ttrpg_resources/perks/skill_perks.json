@@ -10,7 +10,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": true,
-        "description": "You gain 8 [SKILL POINTS], each time you choose this Perk again the [INT] requirement is 2 higher."
+        "description": "You gain 8 Skill Points, each time you choose this Perk again the [INT] requirement is 2 higher."
     },
     {
         "name": "Expert",
@@ -31,7 +31,7 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "5 Ranks in ANIMAL HANDLING]" ]
+            "otherRequirements": [ "5 Ranks in the Animal Handling Skill" ]
         },
         "repeatable": false,
         "description": "TODO ... prob something with mounted combat"
@@ -42,10 +42,10 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "5 Ranks in [ATHLETICS]" ]
+            "otherRequirements": [ "5 Ranks in the Athletics Skill" ]
         },
         "repeatable": false,
-        "description": "Your long jump distance increases by 0.5m for every Rank in [ATHLETICS] you have, and your high jump distance by half of that. Additionally you gain the climb(1.5m) and swim(1.5m) speeds."
+        "description": "Your long jump distance increases by 0.5m for every Rank in the Athletics Skill you have, and your high jump distance by half of that. Additionally you gain the climb(1.5m) and swim(1.5m) speeds."
     },
     {
         "name": "Con Artist",
@@ -53,7 +53,7 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "5 Ranks in [DECEPTION]" ]
+            "otherRequirements": [ "5 Ranks in the Deception Skill" ]
         },
         "repeatable": false,
         "description": "Poisons, Magic or other Supernatural means can’t compell you to diverge important secrets/ information you want to withhold."
@@ -64,7 +64,7 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "5 Ranks in [INVESTIGATION]" ]
+            "otherRequirements": [ "5 Ranks in the Investigation Skill" ]
         },
         "repeatable": false,
         "description": "You have advantage on any [D20 TEST] to resist or decipher illusions."
@@ -75,10 +75,10 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "5 Ranks in [INTIMIDATION]" ]
+            "otherRequirements": [ "5 Ranks in the Intimidation Skill" ]
         },
         "repeatable": false,
-        "description": "For 1 [AP] you can target a creature within 9m (6 squares). Make a [CHA] [INTIMIDATION] [SKILL TEST] against the targets [WILLPOWER] on a success that target is [FRIGHTENED] until the end of your next turn. If the creature is a lower [LEVEL] than you, you have [ADVANTAGE] on the [SKILL TEST], if the [SKILL TEST] fails the target it is immune to this ability for 1 hour."
+        "description": "For 1 [AP] you can target a creature within 9m (6 squares). Make a [CHA] Intimidation [SKILL TEST] against the targets [WILLPOWER] on a success that target is [FRIGHTENED] until the end of your next turn. If the creature is a lower [LEVEL] than you, you have [ADVANTAGE] on the [SKILL TEST], if the [SKILL TEST] fails the target it is immune to this ability for 1 hour."
     },
     {
         "name": "Doctor",
@@ -86,10 +86,10 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "5 Ranks in [MEDICINE]" ]
+            "otherRequirements": [ "5 Ranks in the Medicine Skill" ]
         },
         "repeatable": false,
-        "description": "You have [ADVANTAGE] on any [MEDICINE] [SKILL TEST] when using a medi-kit. Additionally when you perform a long rest creatures in your party heal additional [HP] equal to your Ranks in [MEDICINE] ."
+        "description": "You have [ADVANTAGE] on any Medicine [SKILL TEST] when using a medi-kit. Additionally when you perform a long rest creatures in your party heal additional [HP] equal to your Ranks in the Medicine Skill."
     },
     {
         "name": "Diplomat",
@@ -97,7 +97,7 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "5 Ranks in [PERSUASION]" ]
+            "otherRequirements": [ "5 Ranks in the Persuasion Skill" ]
         },
         "repeatable": false,
         "description": "TODO"
@@ -108,7 +108,7 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "5 Ranks in [AWARENESS" ]
+            "otherRequirements": [ "5 Ranks in the Awareness Skill" ]
         },
         "repeatable": false,
         "description": "TODO"
@@ -119,7 +119,7 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "5 Ranks in [STEALTH]" ]
+            "otherRequirements": [ "5 Ranks in the Stealth Skill" ]
         },
         "repeatable": false,
         "description": "If you are targeted by an [RANGED ATTACK] from further than 6m away your [DODGE] is 5 higher. Additionally you are not slowed down while hidden."
@@ -130,7 +130,7 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "5 Ranks in [SURVIVAL]" ]
+            "otherRequirements": [ "5 Ranks in the Survival Skill" ]
         },
         "repeatable": false,
         "description": "Your party ignores 1 Travel speed penalty of Terrains and the first time you have to spend [STAMINA] because of travel you don’t need to spend [STAMINA]."
@@ -141,9 +141,9 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "Ranks in [THIEVERY]" ]
+            "otherRequirements": [ "Ranks in the Thievery Skill" ]
         },
         "repeatable": false,
-        "description": "Picking Locks or disarming traps costs now 1 [AP] less (min 1 [AP]) and you can now also disarm magical traps by making an [INT] [THIEVERY] [SKILL TEST]."
+        "description": "Picking Locks or disarming traps costs now 1 [AP] less (min 1 [AP]) and you can now also disarm magical traps by making an [INT] Thievery [SKILL TEST]."
     }
 ]

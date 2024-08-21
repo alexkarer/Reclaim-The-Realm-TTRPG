@@ -1,6 +1,6 @@
 <div class="ms-2">
     <h3 ngbScrollSpyFragment="attributes">Attributes</h3>
-    <p class="lh-sm" [innerHTML]="attributeDescription"></p>
+    <p class="description" [innerHTML]="attributeDescription"></p>
     <div class="mb-3">
         <h4 ngbScrollSpyFragment="attribute-test">Attribute Test</h4>
         <app-dynamic-content [content]="attributeTestDescription | keywordProcessor"></app-dynamic-content>
@@ -14,4 +14,5 @@
     <app-skill-list></app-skill-list>
 
     <h3 ngbScrollSpyFragment="progression">Progression</h3>
+    <app-progression></app-progression>
 </div>

@@ -103,7 +103,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "After you make a [MELEE MARTIAL ATTACK] or [MARTIAL RANGED ATTACK] that is not a Lighting Attack, the next [MELEE MARTIAL ATTACK] or [MARTIAL RANGED ATTACK] can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP])."
+        "description": "After you make a [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] that is not a Lighting Attack, the next [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP])."
     },
     {
         "name": "Graze",
@@ -144,7 +144,7 @@
             "otherRequirements": [ "Rank 2 Weapon Proficiency" ]
         },
         "repeatable": false,
-        "description": "When making a [MARTIAL RANGED ATTACK], when that target is within half range of the first range, you gain a +1 bonus to [ATTACK] and damage rolls. This bonus increases to +2 when you reach [LEVEL] 7."
+        "description": "When making a [RANGED MARTIAL ATTACK], when that target is within half range of the first range, you gain a +1 bonus to [ATTACK] and damage rolls. This bonus increases to +2 when you reach [LEVEL] 7."
     },
     {
         "name": "Rapid Reload",
@@ -188,7 +188,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "Any [MARTIAL RANGED ATTACK] you make ignores cover bonuses."
+        "description": "Any [RANGED MARTIAL ATTACK] you make ignores cover bonuses."
     },
     {
         "name": "Flexible Dual Wielder",
@@ -227,7 +227,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When performing a Dual-wield attack it is now a single 2 [AP] Ability for the first 2 [ATTACKS]."
+        "description": "When performing a Dual-wield attack it is now a single 2 [AP] Ability where you make an [ATTACK] 2 times that can then also benefit from the Expert Dual Wielder Perk."
     },
     {
         "name": "Improved Critical",
@@ -240,7 +240,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "For your [MELEE MARTIAL ATTACK] and [MARTIAL RANGED ATTACK] the required unmodified roll required for a critical hit is reduced by 1."
+        "description": "For your [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK] the required unmodified roll required for a critical hit is reduced by 1."
     },
     {
         "name": "Superior Critical",
@@ -253,7 +253,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [MARTIAL RANGED ATTACK] , you can roll the damage dice 1 additional time."
+        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK] , you can roll the damage dice 1 additional time."
     },
     {
         "name": "Devastating Critical",
@@ -266,7 +266,7 @@
             "otherRequirements": [ ]
         },
         "repeatable": false,
-        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [MARTIAL RANGED ATTACK], you can grant your target one of the following status effects of your choice for 1 round: [BLINDED], [SILENCED], [BLEEDING 2d6 + [MARTIAL LEVEL]], [DAZED], [CRIPPLED]"
+        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK], you can grant your target one of the following status effects of your choice for 1 round: [BLINDED], [SILENCED], [BLEEDING] equal to  2d6 + [MARTIAL LEVEL], [DAZED], [CRIPPLED]"
     },
     {
         "name": "Quick-footed",

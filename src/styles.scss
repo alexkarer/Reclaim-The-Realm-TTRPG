@@ -2,3 +2,29 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+h1 {
+    @extend .text-body-emphasis;
+}
+
+h2 {
+    @extend .text-body-emphasis;
+}
+
+h3 {
+    @extend .text-body-emphasis;
+}
+
+h4 {
+    @extend .text-body-emphasis;
+}
+
+.description {
+    @extend .lh-sm;
+}
+
+.header-subscript {
+    @extend .fst-italic;
+    @extend .mb-1;
+    @extend .text-body-secondary;
+}

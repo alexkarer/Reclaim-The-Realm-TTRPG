@@ -10,12 +10,12 @@ export class KeywordProcessorPipe implements PipeTransform {
         if (!text) {
             return [];
         }
-        let processedText = processAttributeKeywords(text);
+        let processedText = processKeywords(text);
         return processedText;
     }
 }
 
-function processAttributeKeywords(text: string): ContentPart[] {
+function processKeywords(text: string): ContentPart[] {
     if (text.indexOf('[') === -1) {
         return [{type: 'text', text: text}];
     }
@@ -69,10 +69,10 @@ function processAttributeKeywords(text: string): ContentPart[] {
                 parts.push(generateGenericKeyword('[DISADVANTAGE]', 'When you make a [D20 TEST] you roll the d20 twice and take the worse result.', 'adv-disadv'));
                 break;
             case 'ATTRIBUTE TEST':
-                parts.push(generateGenericKeyword('[ATTRIBUTE TEST]', 'An [ATTRIBUTE TEST] is a [D20 TEST] to determine if you can succeed in a certain activity related to a specific [ATTRIBUTE]. Simply roll a d20 and add the related [ATTRIBUTE].', 'attribute-test'));
+                parts.push(generateGenericKeyword('[ATTRIBUTE TEST]', 'An [ATTRIBUTE TEST] is a [D20 TEST] to determine if you can succeed in a certain activity related to a specific Attribute. Simply roll a d20 and add the related Attribute.', 'attribute-test'));
                 break;
             case 'SKILL TEST':
-                parts.push(generateGenericKeyword('[SKILL TEST]', 'A Skill Test is an [ATTRIBUTE TEST] where also ranks of a [SKILL] can be added to the bonus.', ''));
+                parts.push(generateGenericKeyword('[SKILL TEST]', 'A Skill Test is an [ATTRIBUTE TEST] where also ranks of a Skill can be added to the bonus.', ''));
                 break;
             case 'ATTACK':
                 parts.push(generateGenericKeyword('[ATTACK]', 'TODO', ''));
@@ -90,7 +90,7 @@ function processAttributeKeywords(text: string): ContentPart[] {
                 parts.push(generateGenericKeyword('[MARTIAL MEELE ATTACK]', 'TODO', ''));
                 break;
             case 'RANGED MARTIAL ATTACK':
-                parts.push(generateGenericKeyword('[MARTIAL RANGED ATTACK]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[RANGED MARTIAL ATTACK]', 'TODO', ''));
                 break;
             case 'SPELL TEST':
                 parts.push(generateGenericKeyword('[SPELL TEST]', 'TODO', ''));
@@ -158,70 +158,6 @@ function processAttributeKeywords(text: string): ContentPart[] {
                 break;
             case 'XP':
                 parts.push(generateGenericKeyword('[XP]', 'Experience Points. Experience is accumulated during play by adventuring, defeating Monsters, solving Quests, good role-play and other achievements the Game Master deems worth-wile.', 'xp'));
-                break;
-            // ********************** SKILLS **********************
-            case 'ANIMAL HANDLING':
-                parts.push(generateGenericKeyword('[ANIMAL HANDLING]', 'TODO', ''));
-                break;
-            case 'ATHLETICS':
-                parts.push(generateGenericKeyword('[ATHLETICS]', 'TODO', ''));
-                break;
-            case 'DECEPTION':
-                parts.push(generateGenericKeyword('[DECEPTION]', 'TODO', ''));
-                break;
-            case 'INVESTIGATION':
-                parts.push(generateGenericKeyword('[INVESTIGATION]', 'TODO', ''));
-                break;
-            case 'INTIMIDATION':
-                parts.push(generateGenericKeyword('[INTIMIDATION]', 'TODO', ''));
-                break;
-            case 'MEDICINE':
-                parts.push(generateGenericKeyword('[MEDICINE]', 'TODO', ''));
-                break;
-            case 'PERSUASION':
-                parts.push(generateGenericKeyword('[PERSUASION]', 'TODO', ''));
-                break;
-            case 'AWARENESS':
-                parts.push(generateGenericKeyword('[AWARENESS]', 'TODO', ''));
-                break;
-            case 'STEALTH':
-                parts.push(generateGenericKeyword('[STEALTH]', 'TODO', ''));
-                break;
-            case 'SURVIVAL':
-                parts.push(generateGenericKeyword('[SURVIVAL]', 'TODO', ''));
-                break;
-            case 'THIEVERY':
-                parts.push(generateGenericKeyword('[THIEVERY]', 'TODO', ''));
-                break;
-            case 'CULTURE':
-                parts.push(generateGenericKeyword('[CULTURE]', 'TODO', ''));
-                break;
-            case 'GEOGRAPHY':
-                parts.push(generateGenericKeyword('[GEOGRAPHY]', 'TODO', ''));
-                break;
-            case 'MAGIC':
-                parts.push(generateGenericKeyword('[MAGIC]', 'TODO', ''));
-                break;
-            case 'NATURE':
-                parts.push(generateGenericKeyword('[NATURE]', 'TODO', ''));
-                break;
-            case 'SUPERNATURAL':
-                parts.push(generateGenericKeyword('[SUPERNATURAL]', 'TODO', ''));
-                break;
-            case "SMITH'S TOOLS":
-                parts.push(generateGenericKeyword("[SMITH'S TOOLS]", 'TODO', ''));
-                break;
-            case 'ALCHEMY KIT':
-                parts.push(generateGenericKeyword('[ALCHEMY KIT]', 'TODO', ''));
-                break;
-            case "JEWELLER'S TOOLS":
-                parts.push(generateGenericKeyword("[JEWELLER'S TOOLS]", 'TODO', ''));
-                break;
-            case "TAILOR'S SET":
-                parts.push(generateGenericKeyword("[TAILOR'S SET]", 'TODO', ''));
-                break;
-            case "CARPENTER'S TOOLS":
-                parts.push(generateGenericKeyword("[CARPENTER'S TOOLS]", 'TODO', ''));
                 break;
             // ********************** STATUS EFFECTS **********************
             // TIER I Harmful Status Effects
