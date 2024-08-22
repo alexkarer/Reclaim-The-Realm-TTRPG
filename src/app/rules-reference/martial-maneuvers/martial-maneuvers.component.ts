@@ -3,7 +3,7 @@ import { DynamicContentComponent } from '../../shared/dynamic-component-renderin
 import { KeywordProcessorPipe } from "../../shared/text-transformer/text-transformer";
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import { halveArray } from '../../shared/utils/array-utils';
-import { basicAgileManeuvers } from '../../../../ttrpg_resources/martial_maneuvers/martial-maneuvers';
+import { advancedManeuvers, basicManeuvers, masterManeuvers, transcendentManeuvers } from '../../../../ttrpg_resources/martial_maneuvers/martial-maneuvers';
 import { MartialManeuverListComponent } from "./martial-maneuver-list/martial-maneuver-list.component";
 
 import martialManeuversJson from '../../../../ttrpg_resources/martial_maneuvers/martial_maneuvers_overview.json';
@@ -27,5 +27,8 @@ export class MartialManeuversComponent {
   public readonly martialManeuverTypesLeft = halveArray(martialManeuversJson.martialManeuverTypes)[0];
   public readonly martialManeuverTypesRight = halveArray(martialManeuversJson.martialManeuverTypes)[1];
 
-  public readonly basicAgileManeuvers = basicAgileManeuvers;
+  public readonly basicManeuvers = basicManeuvers;
+  public readonly advancedManeuvers = advancedManeuvers;
+  public readonly masterManeuvers = masterManeuvers;
+  public readonly transcendentManeuvers = transcendentManeuvers;
 }

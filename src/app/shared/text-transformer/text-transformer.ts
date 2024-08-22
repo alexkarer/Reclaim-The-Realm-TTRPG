@@ -107,6 +107,9 @@ function processKeywords(text: string): ContentPart[] {
             case 'SAVE':
                 parts.push(generateGenericKeyword('[SAVE]', 'TODO', 'save'));
                 break;
+            case 'OPPORTUNITY ATTACK':
+                parts.push(generateGenericKeyword('[OPPORTUNITY ATTACK]', 'TODO', ''));
+                break;
             // ********************** CHARACTER VALUES **********************
             case 'LEVEL':
                 parts.push(generateGenericKeyword('[LEVEL]', 'Your characters current [LEVEL], it increases as your character spends time adventuring and earns [XP]. When your [LEVEL] increases your characters statistics also improve in several ways.', 'level'));

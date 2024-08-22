@@ -19,7 +19,7 @@
         "milestoneBenefits": {
             "minus1OrLower": "-1 [MP]",
             "4orHigher": "+2 [MP]",
-            "7orHigher": "+2 [MP] and opportunity attacks against you have [DISADVANTAGE].",
+            "7orHigher": "+2 [MP] and any [OPPORTUNITY ATTACK] against you has [DISADVANTAGE].",
             "10orHigher": "+2 [MP] and you can use one additional [REACTION] per combat round and regain all at the start of the battle and your turn."
         }
     },

@@ -1,0 +1,152 @@
+{
+    "agileManuevers": [
+        {
+            "name": "",
+            "tags": [  ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 3, "attribute": "" }
+                ],
+                "requiredPerks": [ "" ],
+                "otherRequirements": [ "" ]
+            },
+            "cost": "",
+            "range": "",
+            "target": "",
+            "duration": "",
+            "description": "",
+            "maneuverPush": {
+                "pushingExtraCost": "",
+                "pushingDescription": ""
+            }
+        }
+    ],
+    "brawlManeuvers": [
+        {
+            "name": "",
+            "tags": [  ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 3, "attribute": "" }
+                ],
+                "requiredPerks": [ "" ],
+                "otherRequirements": [ "" ]
+            },
+            "cost": "",
+            "range": "",
+            "target": "",
+            "duration": "",
+            "description": "",
+            "maneuverPush": {
+                "pushingExtraCost": "",
+                "pushingDescription": ""
+            }
+        }
+    ],
+    "leaderManeuvers": [
+        {
+            "name": "",
+            "tags": [  ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 1, "attribute": "" }
+                ],
+                "requiredPerks": [ "" ],
+                "otherRequirements": [ "" ]
+            },
+            "cost": "",
+            "range": "",
+            "target": "",
+            "duration": "",
+            "description": "",
+            "maneuverPush": {
+                "pushingExtraCost": "",
+                "pushingDescription": ""
+            }
+        }
+    ],
+    "fortitudeManeuvers": [
+        {
+            "name": "",
+            "tags": [  ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 1, "attribute": "" }
+                ],
+                "requiredPerks": [ "" ],
+                "otherRequirements": [ "" ]
+            },
+            "cost": "",
+            "range": "",
+            "target": "",
+            "duration": "",
+            "description": "",
+            "maneuverPush": {
+                "pushingExtraCost": "",
+                "pushingDescription": ""
+            }
+        }
+    ],
+    "tacticalManeuvers": [
+        {
+            "name": "",
+            "tags": [  ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 1, "attribute": "" }
+                ],
+                "requiredPerks": [ "" ],
+                "otherRequirements": [ "" ]
+            },
+            "cost": "",
+            "range": "",
+            "target": "",
+            "duration": "",
+            "description": "",
+            "maneuverPush": {
+                "pushingExtraCost": "",
+                "pushingDescription": ""
+            }
+        }
+    ],
+    "weaponManeuvers": [
+        {
+            "name": "",
+            "tags": [  ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 1, "attribute": "" }
+                ],
+                "requiredPerks": [ "" ],
+                "otherRequirements": [ "" ]
+            },
+            "cost": "",
+            "range": "",
+            "target": "",
+            "duration": "",
+            "description": "",
+            "maneuverPush": {
+                "pushingExtraCost": "",
+                "pushingDescription": ""
+            }
+        }
+    ]
+}

@@ -28,6 +28,15 @@
             </div>
         </div>
     </div>
-    <h3 class = "mb-1 mt-3">Basic Martial Maneuvers</h3>
-    <app-martial-maneuver-list [title]="'Agile Maneuvers'" [martialManeuvers]="basicAgileManeuvers"></app-martial-maneuver-list>
+    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="basic-martial-maneuvers">Basic Martial Maneuvers</h3>
+    <app-martial-maneuver-list [martialManeuvers]="basicManeuvers"></app-martial-maneuver-list>
+
+    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="advanced-martial-maneuvers">Advanced Martial Maneuvers</h3>
+    <app-martial-maneuver-list [martialManeuvers]="advancedManeuvers"></app-martial-maneuver-list>
+
+    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="master-martial-maneuvers">Master Martial Maneuvers</h3>
+    <app-martial-maneuver-list [martialManeuvers]="masterManeuvers"></app-martial-maneuver-list>
+
+    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="transcendent-martial-maneuvers">Transcendent Martial Maneuvers</h3>
+    <app-martial-maneuver-list [martialManeuvers]="transcendentManeuvers"></app-martial-maneuver-list>
 </div>

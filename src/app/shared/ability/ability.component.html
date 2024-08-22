@@ -8,8 +8,8 @@
     <p class="description my-0"><span class="fw-bold">Duration:</span> {{ ability?.duration }}</p>
     <!-- TODO: make keywords for duration, range and targets-->
     <app-dynamic-content [content]="ability?.description | keywordProcessor"></app-dynamic-content>
-    @if (isMartialManeuver()) {
-        <p class="description mt-2 mb-0"><span class="fw-bold">Pushing extra cost:</span></p>
-        <app-dynamic-content [content]="'test' | keywordProcessor"></app-dynamic-content>
+    @if (isMartialManeuverAndHasPush()) {
+        <p class="description mt-2 mb-0"><span class="fw-bold">Pushing extra cost:</span> {{ getPushingExtraCost() }}</p>
+        <app-dynamic-content [content]="getPushingDescription() | keywordProcessor"></app-dynamic-content>
     }
 </div>

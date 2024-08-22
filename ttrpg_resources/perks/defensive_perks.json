@@ -10,7 +10,7 @@
             "otherRequirements": []
         },
         "repeatable": false,
-        "description": "You gain one extra [MP] and you gain a +4 bonus to your [DODGE] against opportunity attacks. Additionally escaping a grapple or standing up from prone requires 2 [MP] less."
+        "description": "You gain one extra [MP] and you gain a +4 bonus to your [DODGE] against any [OPPORTUNITY ATTACK]. Additionally escaping a grapple or standing up from prone requires 2 [MP] less."
     },
     {
         "name": "Immovable",

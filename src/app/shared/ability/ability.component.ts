@@ -16,7 +16,21 @@ export class AbilityComponent {
 
   @Input() public ability?: Ability;
 
-  public isMartialManeuver(): boolean {
-    return this.ability instanceof MartialManeuver;
+  public isMartialManeuverAndHasPush(): boolean {
+    if (this.ability instanceof MartialManeuver) {
+      return this.ability.maneuverPush ? true : false
+    } else {
+      return false;
+    }
+  }
+
+  public getPushingExtraCost(): string {
+    let martialManeuver = this.ability as MartialManeuver;
+    return martialManeuver.maneuverPush?.pushingExtraCost ?? '';
+  }
+
+  public getPushingDescription(): string {
+    let martialManeuver = this.ability as MartialManeuver;
+    return martialManeuver.maneuverPush?.pushingDescription ?? '';
   }
 }

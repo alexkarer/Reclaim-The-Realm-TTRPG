@@ -1,18 +1,19 @@
 {
-    "basicManeuversDescription": "Basic Maneuvers are maneuvers which anyone can learn as long as they have Martial Level Progression greater than 0.",
     "agileManuevers": [
         {
             "name": "Wall Jump",
-            "tags": [ "Martial Maneuver (Agile)", "Movement" ],
+            "tags": [ "Martial Maneuver (Basic, Agile)", "Movement" ],
             "requirements": {
-                "requiredLevels": [],
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
                 "requiredAttributes": [
                     { "amount": 3, "attribute": "AGI" }
                 ],
                 "requiredPerks": [ ],
                 "otherRequirements": [ "3 ranks in the Athletics Skill" ]
             },
-            "cost": "3 [MP] or 1 reaction",
+            "cost": "3 [MP] or 1 [REACTION]",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -23,25 +24,420 @@
             }
         },
         {
-            "name": "",
-            "tags": [],
+            "name": "Pass Through",
+            "tags": [ "Martial Maneuver (Basic, Agile)", "Movement" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
-                    { "amount": 1, "attribute": "" }
+                    { "amount": 3, "attribute": "[AGI]" }
                 ],
-                "requiredPerks": [ "" ],
-                "otherRequirements": [ "" ]
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
             },
-            "range": "",
-            "target": "",
-            "duration": "",
-            "description": "",
+            "cost": "4 [MP]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You can walk through a space an enemy unit occupies. To use this maneuver you have to stand next to the enemy you want to walk through, then enter their space and afterwards enter a free space next to the enemy, all this movement is already included in the maneuver cost and you don’t have to spend extra [MP] . Doing this however provokes an [OPPORTUNITY ATTACK] from the enemy regardless if you end your turn still inside their reach. Alternatively instead of entering a free space after entering into the enemies space you can choose to use this maneuver again.",
             "maneuverPush": {
-                "pushingExtraCost": "",
-                "pushingDescription": ""
+                "pushingExtraCost": "4 [MP]",
+                "pushingDescription": "You now don’t provoke an [OPPORTUNITY ATTACK] from the target but leaving their reach still provokes it as normal."
+            }
+        }
+    ],
+    "brawlManeuvers": [
+        {
+            "name": "Pin Down",
+            "tags": [ "Martial Maneuver (Basic, Brawl)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "2 [AP]",
+            "range": "[MELEE]",
+            "target": "1 [GRAPPLED] Creature",
+            "duration": "[INSTANT]",
+            "description": "Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] on a success, the creature is now prone and additionally [RESTRAINED] as long as it is still [GRAPPLED]"
+        },
+        {
+            "name": "Meat Shield",
+            "tags": [ "Martial Maneuver (Basic, Brawl)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [REACTION]",
+            "range": "[MELEE]",
+            "target": "1 [GRAPPLED] Creature",
+            "duration": "[INSTANT]",
+            "description": "If you are currently grappling one creature and are hit by an [ATTACK] you can use this [REACTION]]. Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] and on a success the [ATTACK] hits the graplled creature instead."
+        },
+        {
+            "name": "Throw",
+            "tags": [ "Martial Maneuver (Basic, Brawl)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "2 [AP]",
+            "range": "[MELEE]",
+            "target": "1 [GRAPPLED] Creature",
+            "duration": "[INSTANT]",
+            "description": "You can throw a creature you are grappling at a destination of your choice within range. Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] . On a success it flies a number of meters equal to twice your [STR] and on impact suffers physical damage equal to your [STR] which can’t be reduced by armor and the creature lands prone.<br>If on the way it collidse against another creature and it’s [DODGE] is less than the [MARTIAL TEST] they collide and both take the damage from the impact and the thrown creature lands within the nearest free space of the collided creature. Additionally if the collided creature’s [HARDNESS] is also less than the [MARTIAL TEST] , then that creature is also prone"
+        }
+    ],
+    "leaderManeuvers": [
+        {
+            "name": "Taunt",
+            "tags": [ "Martial Maneuver (Basic, Leader), Charm" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP]",
+            "range": "3m (2 squares)",
+            "target": "all creatures within range",
+            "duration": "1 [ROUND]",
+            "description": "You target all creatures that are within 3m of you. Make a [CHA] [MARTIAL TEST] against the targets [WILLPOWER] , on a success those targets are [TAUNTED] until the end of your next turn."
+        },
+        {
+            "name": "Challenge",
+            "tags": [ "Martial Maneuver (Basic, Leader), Charm" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP]",
+            "range": "9m",
+            "target": "1 creature",
+            "duration": "1 [ROUND]",
+            "description": "Choose a creature within 9m, make a [CHA] [MARTIAL TEST] against the targets [WILLPOWER], on a success they are [TAUNTED] for 1 round."
+        },
+        {
+            "name": "You can take it!",
+            "tags": [ "Martial Maneuver (Basic, Leader)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP]",
+            "range": "12m (8 squares)",
+            "target": "1 allied creature",
+            "duration": "1 [ROUND]",
+            "description": "You can target 1 ally within range that can hear you and that has suffered damage this or the last round. That ally recieves [THP] equal to [MARTIAL LEVEL] + [CHA] for 1 round."
+        },
+        {
+            "name": "Go Get Em!",
+            "tags": [ "Martial Maneuver (Basic, Leader)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 2, "attribute": "[CHA]" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP]",
+            "range": "12m (8 squares)",
+            "target": "1 allied creature",
+            "duration": "1 [ROUND]",
+            "description": "You can target 1 ally within range that can hear you. Until the start of your next turn, that ally gains 3 extra [MP] and their next [ATTACK] gains a bonus equal to their half of ([MARTIAL LEVEL] + [CHA])."
+        }
+    ],
+    "fortitudeManeuvers": [
+        {
+            "name": "Battle Recovery",
+            "tags": [ "Martial Maneuver (Basic, Fortitude), Heal" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP], 1 [STAMINA]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You quickly recover some wounds you suffered during battle and recover 1d6 + [CON] + [MARTIAL LEVEL] [HP]."
+        },
+        {
+            "name": "Pushing the Limit",
+            "tags": [ "Martial Maneuver (Basic, Fortitude)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "[FREE ACTION], 1 [STAMINA]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you fail an [ATTACK], [MARTIAL TEST] or [STR], [AGI] or [CON] [ATTRIBUTE TEST] you can you can increase the Result by a number equal to 3 times the [STAMINA] used."
+        }
+    ],
+    "tacticalManeuvers": [
+        {
+            "name": "Anticipate",
+            "tags": [ "Martial Maneuver (Basic, Tactical)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 or more [AP]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "1 [ROUND]",
+            "description": "You study your opponents and ready yourself for their actions. You gain a bonus to your [HARDNESS], [DODGE], [TOUGHNESS] and [WILLPOWER] equal to the [AP] spent. Additionally this bonus applies to any [OPPORTUNITY ATTACK] you make."
+        },
+        {
+            "name": "Tag Team",
+            "tags": [ "Martial Maneuver (Basic, Tactical)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [MP]",
+            "range": "[MELEE]",
+            "target": "1 allied creature",
+            "duration": "[INSTANT]",
+            "description": "You can swap places with a friendly creature within meele range of you, the friendly creature has to be willing to do that. This movement does not provoke an [OPPORTUNITY ATTACK]."
+        }
+    ],
+    "weaponManeuvers": [
+        {
+            "name": "Bash",
+            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP]",
+            "range": "[WEAPON RANGE]",
+            "target": "1 creature",
+            "duration": "2 [ROUNDS]",
+            "description": "Make a Weapon [MELEE MARTIAL ATTACK], if that [ATTACK] was successful and exceeds or matches the target’s [TOUGHNESS] it is additionally [DAZED] for 2 rounds",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "Instead of applying [DAZED] to the Target for 2 rounds, the target is [SLOWED] for 2 rounds."
+            }
+        },
+        {
+            "name": "Pushing Attack",
+            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP]",
+            "range": "[WEAPON RANGE]",
+            "target": "1 creature",
+            "duration": "[INSTANT]",
+            "description": "Make a Weapon [MELEE MARTIAL ATTACK], if that [ATTACK] was successful and exceeds or matches the targets [HARDNESS] you have 2 choices:<br>You knock the target prone.<br>Or you push the target a number of meters equal to your [STR] away from you.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "You apply both effects if the [ATTACK] exceedds the targets [HARDNESS]"
+            }
+        },
+        {
+            "name": "Crippling Strike",
+            "tags": [ "Martial Maneuver (Basic, Weapon), Melee, Ranged" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [],
+                "requiredPerks": [ ],
+                "otherRequirements": []
+            },
+            "cost": "3 [AP]",
+            "range": "[WEAPON RANGE]",
+            "target": "1 creature",
+            "duration": "1-2 [ROUNDS]",
+            "description": "Make a Weapon [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], if that [ATTACK] was successful and exceeds or matchess the targets [HARDNESS] it is now [CRIPPLED] for 2 rounds, if it was a [RANGED MARTIAL ATTACK] the duration is 1 round."
+        },
+        {
+            "name": "Deep Cut",
+            "tags": [ "Martial Maneuver (Basic, Weapon), Melee, Ranged" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [],
+                "requiredPerks": [ ],
+                "otherRequirements": []
+            },
+            "cost": "3 [AP]",
+            "range": "[WEAPON RANGE]",
+            "target": "1 creature",
+            "duration": "1-2 [ROUNDS]",
+            "description": "Make a Weapon [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], if that [ATTACK] was successful and exceeds or matchess the targets [HARDNESS] it is now [BLEEDING] equal to 1d6 + [MARTIAL LEVEL] for 2 rounds, if it was a [RANGED MARTIAL ATTACK] the duration is 1 round."
+        },
+        {
+            "name": "Cleave",
+            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP]",
+            "range": "[WEAPON RANGE]",
+            "target": "2 creatures that are next to each other",
+            "duration": "[INSTANT]",
+            "description": "Make a Weapon [MELEE MARTIAL ATTACK] that targets both targets.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "You can now target all enemy targets within melee range as long as all targets are within 4.5m of each other."
+            }
+        },
+        {
+            "name": "Running Throw",
+            "tags": [ "Martial Maneuver (Basic, Weapon), Ranged" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP]",
+            "range": "[WEAPON RANGE]",
+            "target": "1 creature",
+            "duration": "[INSTANT]",
+            "description": "When you have moved at least 3m in the direction of the target you can make a Thrown Weapon [RANGED MARTIAL ATTACK] with the range doubled for all ranges. Additionally your [ATTACK] deals extra damage equal to number of meters moved."
+        },
+        {
+            "name": "Multishot",
+            "tags": [ "Martial Maneuver (Basic, Weapon), Ranged" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP]",
+            "range": "[WEAPON RANGE]",
+            "target": "2 creatures within 4.5m of each other",
+            "duration": "[INSTANT]",
+            "description": "Make a Weapon [MELEE MARTIAL ATTACK] against both targets with a -2 penalty to the [ATTACK] and damage."
+        },
+        {
+            "name": "Heavy Attack",
+            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP]",
+            "range": "[WEAPON RANGE]",
+            "target": "1 creeature",
+            "duration": "[INSTANT]",
+            "description": "Make a Heavy Weapon [MELEE MARTIAL ATTACK], if that Attack was successful you can roll the damage dice of the Weapon twice",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "You can roll the damage dice three times instead of twice."
+            }
+        },
+        {
+            "name": "Parry",
+            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [REACTION]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you are hit by a [MELEE ATTACK] you can use this reaction. Make a Weapon [MELEE MARTIAL ATTACK] if it matches or exceeds the [MELEE ATTACK] that targeted you, the damage received is reduced by an amount equal to: Weapons Damage Dice + [AGI] + [MARTIAL LEVEL], this happens before any other resistances are applied.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "You can now parry any [ATTACK]."
+            }
+        },
+        {
+            "name": "Charge",
+            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[TURN]",
+            "description": "You double the [MP] you have availible this round but you must spend it all on moving closer to your target. If you can manage to move within melee range of the target you can then make a Weapon [MELEE MARTIAL ATTACK] against that target, if the [ATTACK] was successful it deals extra physical damage equal to the amount of meters moved.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "You triple the [MP] instead."
             }
         }
     ]

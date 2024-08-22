@@ -1,13 +1,78 @@
 <div class="ms-2">
-    <h4 class = "mb-2">{{ title }}</h4>
+    <h4 class = "mb-3">Agile Maneuvers</h4>
     <div class="row">
         <div class="col-6">
-            @for (martialManeuver of martialManeuversLeft; track $index) {
+            @for (martialManeuver of agileMartialManeuversLeft; track $index) {
                 <app-ability [ability]="martialManeuver"></app-ability>
             }
         </div>
         <div class="col-6">
-            @for (martialManeuver of martialManeuversRight; track $index) {
+            @for (martialManeuver of agileMartialManeuversRight; track $index) {
+                <app-ability [ability]="martialManeuver"></app-ability>
+            }
+        </div>
+    </div>
+    <h4 class = "mb-3">Brawl Maneuvers</h4>
+    <div class="row">
+        <div class="col-6">
+            @for (martialManeuver of brawlMartialManeuversLeft; track $index) {
+                <app-ability [ability]="martialManeuver"></app-ability>
+            }
+        </div>
+        <div class="col-6">
+            @for (martialManeuver of brawlMartialManeuversRight; track $index) {
+                <app-ability [ability]="martialManeuver"></app-ability>
+            }
+        </div>
+    </div>
+    <h4 class = "mb-3">Leader Maneuvers</h4>
+    <div class="row">
+        <div class="col-6">
+            @for (martialManeuver of leaderMartialManeuversLeft; track $index) {
+                <app-ability [ability]="martialManeuver"></app-ability>
+            }
+        </div>
+        <div class="col-6">
+            @for (martialManeuver of leaderMartialManeuversRight; track $index) {
+                <app-ability [ability]="martialManeuver"></app-ability>
+            }
+        </div>
+    </div>
+    <h4 class = "mb-3">Fortitude Maneuvers</h4>
+    <div class="row">
+        <div class="col-6">
+            @for (martialManeuver of fortitudeMartialManeuversLeft; track $index) {
+                <app-ability [ability]="martialManeuver"></app-ability>
+            }
+        </div>
+        <div class="col-6">
+            @for (martialManeuver of fortitudeMartialManeuversRight; track $index) {
+                <app-ability [ability]="martialManeuver"></app-ability>
+            }
+        </div>
+    </div>
+    <h4 class = "mb-3">Tactical Maneuvers</h4>
+    <div class="row">
+        <div class="col-6">
+            @for (martialManeuver of tacticalMartialManeuversLeft; track $index) {
+                <app-ability [ability]="martialManeuver"></app-ability>
+            }
+        </div>
+        <div class="col-6">
+            @for (martialManeuver of tacticalMartialManeuversRight; track $index) {
+                <app-ability [ability]="martialManeuver"></app-ability>
+            }
+        </div>
+    </div>
+    <h4 class = "mb-3">Weapon Maneuvers</h4>
+    <div class="row">
+        <div class="col-6">
+            @for (martialManeuver of weaponMartialManeuversLeft; track $index) {
+                <app-ability [ability]="martialManeuver"></app-ability>
+            }
+        </div>
+        <div class="col-6">
+            @for (martialManeuver of weaponMartialManeuversRight; track $index) {
                 <app-ability [ability]="martialManeuver"></app-ability>
             }
         </div>

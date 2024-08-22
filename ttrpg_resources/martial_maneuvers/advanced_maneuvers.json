@@ -1,0 +1,206 @@
+{
+    "agileManuevers": [
+        {
+            "name": "Scale Monster",
+            "tags": [ "Martial Maneuver (Advanced, Agile)", "Movement" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 4, "attribute": "[AGI]" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ "4 Ranks in the Athletics SKill" ]
+            },
+            "cost": "3 [MP], 1 [AP]",
+            "range": "[MELLE]",
+            "target": "1 creature that is 2 sizes larger than you",
+            "duration": "[INSTANT]",
+            "description": "You attempt to climb up on a to deal more damage effectively. Make an [AGI] or [STR] (your choice) [ATHLETICS] [SKILL TEST] against the target’s [DODGE] . On a success you are now mounted on top of the creature which has the following effects.:<br>One hand is always occupied with holding on to the creature<br>Any [MARTIAL MELEE ATTACK] that is not a critical miss automatically hits the target and the required roll for a critical is 1 lower.<br>ou can’t be targeted by the creature you are currently on, on it’s turn however it can attempt to shake you of by spending 1 [AP] and you have to succeed on a [HARDNESS SAVE] against the creature’s Melee Attack Bonus+10. On a fail you are thrown away a number of meters equal to the creatures [STR] and might recieve fall damage as a result."
+        }
+    ],
+    "brawlManeuvers": [
+        {
+            "name": "Bodyguard",
+            "tags": [ "Martial Maneuver (Advanced, Brawl)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [REACTION]",
+            "range": "[MELEE]",
+            "target": "1 creature",
+            "duration": "[INSTANT]",
+            "description": "If an ally was hit by an [ATTACK] that is not a critical hit, you can use this [REACTION] and take the hit yourself instead. Even if your [DODGE] is hgher than the [ATTACK] you are still hit, however if your Shield Block is higher than it hits your shield instead.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "You can also use this ability when the [ATTACK] was a critical hit."
+            }
+        }
+    ],
+    "leaderManeuvers": [
+        {
+            "name": "Rallying Cry",
+            "tags": [ "Martial Maneuver (Advanced, Leader)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 4, "attribute": "[CHA]" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "2 [AP]",
+            "range": "9m (6 squares)",
+            "target": "allied creatures within range",
+            "duration": "1 [ROUND]",
+            "description": "You inspire yourself and allies near you and boost their resolve. You and the creatures you target recieve [THP] equal to your [MARTIAL LEVEL] + [CHA], you can't target creatures with this ability that can't hear you.."
+        },
+        {
+            "name": "Get Back in the Fight",
+            "tags": [ "Martial Maneuver (Advanced, Leader), Heal" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount":4, "attribute": "[CHA]" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "2 [AP]",
+            "range": "6m (4 squares)",
+            "target": "1 [UNCONCIOUS] allied creature, or one that is at Deaths' door.",
+            "duration": "[INSTANT]",
+            "description": "You convince one of your allies that their fight is not over. That ally regains [HP] equal to your [MARTIAL LEVEL] +[CHA] and if they are prone can use their [REACTION] to stand up. You can't traget creatures that can't hear you."
+        }
+    ],
+    "fortitudeManeuvers": [
+        {
+            "name": "Overextend",
+            "tags": [ "Martial Maneuver (Advanced, Fortitude)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "[FREE], 1 [STAMINA]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "1 [ROUND]",
+            "description": "You push yourself and grant yourself an extra 2 [AP] this turn, however next turn you start with 2 [AP] less."
+        }
+    ],
+    "tacticalManeuvers": [
+        {
+            "name": "Cut of the Retreat",
+            "tags": [ "Martial Maneuver (Advanced, Tactical)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 4, "attribute": "[INT]" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "2 [AP]",
+            "range": "12m (8 squares)",
+            "target": "1 creature",
+            "duration": "1 [ROUND]",
+            "description": "You form a plan to stop a creature from escaping, for the duration any [OPPORTUNITY ATTACK] of your alies against the target have [ADVANTAGE] and each time the target is hit by an [ATTACK] it loses 1 [MP] for it's next turn. Additionally any Disengage moves made by the target cost 1 additional [MP]."
+        },
+        {
+            "name": "Analyze Weakpoint",
+            "tags": [ "Martial Maneuver (Advanced, Tactical)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 4, "attribute": "[INT]" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "2 [AP]",
+            "range": "12m (8 squares)",
+            "target": "1 creature",
+            "duration": "[TURN]",
+            "description": "You attempt to analyze a creature Weakpoint. Make a [INT] [MARTIAL TEST] where the [DT] is 15 + the creatures [LEVEL]. On a success the next [ATTACK] that you make against this creature during your turn automatically becomes a critical hit."
+        }
+    ],
+    "weaponManeuvers": [
+        {
+            "name": "Shield Throw",
+            "tags": [ "Martial Maneuver (Advanced, Weapon), Ranged" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "2 [AP]",
+            "range": "6m/12m/24m",
+            "target": "1 creature",
+            "duration": "[INSTANT]",
+            "description": "You can treat your shield like a thrown weapon and make a [RANGED MARTIAL ATTACK] with it and afterwards it bounces back towards you regardless if the [RANGED MARTIAL ATTACK] hits or not. The shield has a range of 6m/12m/24m and deals 1d8 + [STR] physical damage to the target on a hit.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "If your [RANGED MARTIALATTACK] hits the first Target, it bounces towards another target within 4.5m of the orginal target, make a second [RANGED MARTIAL ATTACK] against that target and on a hit it recieves half the damage."
+            }
+        },
+        {
+            "name": "Impale",
+            "tags": [ "Martial Maneuver (Advanced, Weapon)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [],
+                "requiredPerks": [],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP]",
+            "range": "[WEAPON RANGE]",
+            "target": "1 creature",
+            "duration": "[INSTANT]",
+            "description": "Make a Thrown Weapon [RANGED MARTIAL ATTACK]. if that [ATTACK] was successful and exceeds or matches the targets [HARDNESS] it is pushed a number of meters equal 1 + half [STR] away from you.<br>If any target is blocking that movement, instead of crashing into it, that movement stops and the blocking target recieves half the damge from the [RANGED MARTIAL ATTACK]"
+        },
+        {
+            "name": "Shield block",
+            "tags": [ "Martial Maneuver (Advanced, Weapon)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [REACTION], 1 [STAMINA]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "If you are hit by an [ATTACK] that is higher than your shield block and not a critical hit, you can use this [REACTION] and block the [ATTACK] with your shield as if it where lower than your Shield block.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "You can also use this ability when the [ATTACK] was a critical hit."
+            }
+        }
+    ]
+}
