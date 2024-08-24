@@ -1,36 +1,36 @@
 {
     "agileManuevers": [
         {
-            "name": "",
-            "tags": [  ],
+            "name": "Transcendent Speed",
+            "tags": [ "Martial Maneuver (Transcendent, Agile)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
-                    { "amount": 3, "attribute": "" }
+                    { "amount": 10, "attribute": "[AGI]" }
                 ],
-                "requiredPerks": [ "" ],
-                "otherRequirements": [ "" ]
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
             },
-            "cost": "",
-            "range": "",
-            "target": "",
-            "duration": "",
-            "description": "",
+            "cost": "1 [REACTION], 5 [STAMINA]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You can trigger this [REACTION] at any moment, when doing so you can interrupt any enemy or allied action and take a turn as if it was your turn, however you only 2 [AP] availible (can’t be increased in any way) and have your [MP] availible",
             "maneuverPush": {
-                "pushingExtraCost": "",
-                "pushingDescription": ""
+                "pushingExtraCost": "5 [STAMINA]",
+                "pushingDescription": "You push yourself beyond limits and have a regular turn with full [AP] and [MP] however this maneuver is very taxing and after finishing it you suffer 5 Levels of [EXHAUSTION]."
             }
         }
     ],
     "brawlManeuvers": [
         {
             "name": "",
-            "tags": [  ],
+            "tags": [ "Martial Maneuver (Transcendent, Brawl)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
                     { "amount": 3, "attribute": "" }
@@ -52,10 +52,10 @@
     "leaderManeuvers": [
         {
             "name": "",
-            "tags": [  ],
+            "tags": [ "Martial Maneuver (Transcendent, Leader)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
                     { "amount": 1, "attribute": "" }
@@ -77,10 +77,10 @@
     "fortitudeManeuvers": [
         {
             "name": "",
-            "tags": [  ],
+            "tags": [ "Martial Maneuver (Transcendent, Fortitude)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
                     { "amount": 1, "attribute": "" }
@@ -102,10 +102,10 @@
     "tacticalManeuvers": [
         {
             "name": "",
-            "tags": [  ],
+            "tags": [ "Martial Maneuver (Transcendent, Tactical)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
                     { "amount": 1, "attribute": "" }
@@ -127,10 +127,10 @@
     "weaponManeuvers": [
         {
             "name": "",
-            "tags": [  ],
+            "tags": [ "Martial Maneuver (Transcendent, Weapon)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
                     { "amount": 1, "attribute": "" }

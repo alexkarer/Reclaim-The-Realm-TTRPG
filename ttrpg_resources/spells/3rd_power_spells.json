@@ -1,0 +1,233 @@
+{
+    "elementalSpells": {
+        "fireSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Elemental, Fire)" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "earthSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Elemental, Earth)" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "waterSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Elemental, Water)" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "airSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Elemental, Air)" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ]
+    },
+    "cosmicSpell": {
+        "lightSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Cosmic, Light)" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "restorationSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Cosmic, Restoration)" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "necromancySpell": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Cosmic, Necromancy)" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "shadowSpell": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Cosmic, Shadow)" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "divinationSpell": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Cosmic, Divination" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ]
+    },
+    "manipulationSpells": {
+        "telekinesisSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Manipulation, Telekinesis" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "transmutationSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Manipulation, Transmutation" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "conjurationSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Manipulation, Conjuration" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "illusionSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Manipulation, Illusion" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "teleportationSpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Manipulation, Teleporation" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ],
+        "telepathySpells": [
+            {
+                "name": "",
+                "tags": [ "3rd-Power Spell (Manipulation, Telepathy" ],
+                "requirements": {
+                    "requiredLevels": [
+                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                    ],
+                    "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+                },
+                "cost": "", "range": "", "target": "", "duration": "",
+                "description": "",
+                "atHigherSpellPower": ""
+            }
+        ]
+    }
+}

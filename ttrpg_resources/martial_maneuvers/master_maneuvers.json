@@ -1,36 +1,55 @@
 {
     "agileManuevers": [
         {
-            "name": "",
-            "tags": [  ],
+            "name": "Inhuman Reactions",
+            "tags": [ "Martial Maneuver (Master, Agile)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
-                    { "amount": 3, "attribute": "" }
+                    { "amount": 6, "attribute": "[AGI]" }
                 ],
-                "requiredPerks": [ "" ],
-                "otherRequirements": [ "" ]
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
             },
-            "cost": "",
-            "range": "",
-            "target": "",
-            "duration": "",
-            "description": "",
+            "cost": "1 [REACTION]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you are hit by an [ATTACK] that is not a critical hit, you can gain a bonus to your [DODGE] equal to your [AGI] + [MARTIAL LEVEL] against that [ATTACK] , potentially avoiding it.",
             "maneuverPush": {
-                "pushingExtraCost": "",
-                "pushingDescription": ""
+                "pushingExtraCost": "2 [STAMINA]",
+                "pushingDescription": "You can also use this against a critical hit and turn that hit into a normal hit."
             }
+        },
+        {
+            "name": "Super Speed",
+            "tags": [ "Martial Maneuver (Master, Agile)" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 6, "attribute": "[AGI]" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 or more [MP], 1 or more [STAMINA]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You dash forward with supernatural speed towards the location you want to reach, as long you would be able reach that location with your regular movement, you move there now instantly and don’t provoke any opportunity attacks on the way. Additionally no other creatures can perform a [REACTION] against your next Action unless their [AGI] or [PER] is higher than your [AGI] + [STAMINA] spent on the Maneuver"
         }
     ],
     "brawlManeuvers": [
         {
             "name": "",
-            "tags": [  ],
+            "tags": [ "Martial Maneuver (Master, Brawl)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
                     { "amount": 3, "attribute": "" }
@@ -52,10 +71,10 @@
     "leaderManeuvers": [
         {
             "name": "",
-            "tags": [  ],
+            "tags": [ "Martial Maneuver (Master, Leader)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
                     { "amount": 1, "attribute": "" }
@@ -77,10 +96,10 @@
     "fortitudeManeuvers": [
         {
             "name": "",
-            "tags": [  ],
+            "tags": [ "Martial Maneuver (Master, Fortitude)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
                     { "amount": 1, "attribute": "" }
@@ -102,10 +121,10 @@
     "tacticalManeuvers": [
         {
             "name": "",
-            "tags": [  ],
+            "tags": [ "Martial Maneuver (Master, Tactical)" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
                     { "amount": 1, "attribute": "" }
@@ -126,27 +145,38 @@
     ],
     "weaponManeuvers": [
         {
-            "name": "",
-            "tags": [  ],
+            "name": "Execute",
+            "tags": [ "Martial Maneuver (Master, Weapon), Melee, Ranged" ],
             "requirements": {
                 "requiredLevels": [
-                    { "amount": 1, "levelType": "" }
+                    { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
-                "requiredAttributes": [
-                    { "amount": 1, "attribute": "" }
-                ],
-                "requiredPerks": [ "" ],
-                "otherRequirements": [ "" ]
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
             },
-            "cost": "",
-            "range": "",
-            "target": "",
-            "duration": "",
-            "description": "",
-            "maneuverPush": {
-                "pushingExtraCost": "",
-                "pushingDescription": ""
-            }
+            "cost": "4 [AP], 2 [STAMINA]",
+            "range": "[WEAPON RANGE]",
+            "target": "one creature with a [LEVEL] below yours",
+            "duration": "[INSTANT]",
+            "description": "Target a creature whose [LEVEL] is below yours. Make a 1 Weapon [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] against that creature. If that [ATTACK] is a miss, it turns into a regular hit. If that [ATTACK] hits but the result is lower than the target’s [TOUGHNESS] it is a critical hit. If the [ATTACK] also matches or exceeds the creature’s [TOUGHNESS], the creature is reduced to 0 [HP]."
+        },
+        {
+            "name": "Onslaught",
+            "tags": [ "Martial Maneuver (Master, Weapon), Melee" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 or more [AP], 2 [STAMINA]",
+            "range": "[MELEE WEAPON RANGE]",
+            "target": "one creature",
+            "duration": "[INSTANT]",
+            "description": "You unleash a series of quick attacks against a single target. For each [AP] spent you can make 1 Weapon [MELEE MARTIAL ATTACK]."
         }
     ]
 }

@@ -166,7 +166,7 @@
         },
         {
             "name": "Impale",
-            "tags": [ "Martial Maneuver (Advanced, Weapon)" ],
+            "tags": [ "Martial Maneuver (Advanced, Weapon), Ranged" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }

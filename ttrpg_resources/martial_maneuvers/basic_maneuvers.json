@@ -258,7 +258,7 @@
                 "otherRequirements": [ ]
             },
             "cost": "3 [AP]",
-            "range": "[WEAPON RANGE]",
+            "range": "[MELEE WEAPON RANGE]",
             "target": "1 creature",
             "duration": "2 [ROUNDS]",
             "description": "Make a Weapon [MELEE MARTIAL ATTACK], if that [ATTACK] was successful and exceeds or matches the target’s [TOUGHNESS] it is additionally [DAZED] for 2 rounds",
@@ -279,7 +279,7 @@
                 "otherRequirements": [ ]
             },
             "cost": "3 [AP]",
-            "range": "[WEAPON RANGE]",
+            "range": "[MELEE WEAPON RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
             "description": "Make a Weapon [MELEE MARTIAL ATTACK], if that [ATTACK] was successful and exceeds or matches the targets [HARDNESS] you have 2 choices:<br>You knock the target prone.<br>Or you push the target a number of meters equal to your [STR] away from you.",
@@ -334,7 +334,7 @@
                 "otherRequirements": [ ]
             },
             "cost": "3 [AP]",
-            "range": "[WEAPON RANGE]",
+            "range": "[MELEE WEAPON RANGE]",
             "target": "2 creatures that are next to each other",
             "duration": "[INSTANT]",
             "description": "Make a Weapon [MELEE MARTIAL ATTACK] that targets both targets.",
@@ -389,7 +389,7 @@
                 "otherRequirements": [ ]
             },
             "cost": "3 [AP]",
-            "range": "[WEAPON RANGE]",
+            "range": "[MELEE WEAPON RANGE]",
             "target": "1 creeature",
             "duration": "[INSTANT]",
             "description": "Make a Heavy Weapon [MELEE MARTIAL ATTACK], if that Attack was successful you can roll the damage dice of the Weapon twice",
