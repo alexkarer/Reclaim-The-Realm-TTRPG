@@ -15,15 +15,26 @@
         ],
         "earthSpells": [
             {
-                "name": "",
-                "tags": [ "1st-Power Spell (Elemental, Earth)" ],
+                "name": "Stone Barrier",
+                "tags": [ "1st-Power Spell (Elemental, Earth), Components: V (Incantation), S, M(nearby earth or stone)" ],
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "1 [REACTION]", "range": "-", "target": "[SELF]", "duration": "1 [ROUND]",
+                "description": "When you are hit by an [ATTACK] you can use your [REACTION] to constact a stone barrier with [HP] equal to 5 + [SPI]. As long as the Barrier is active and has remaining [HP] any [ATTACK] that would hit you now targets the Barrier instead, if the Barrier is destroyed any excess damage spills over to the caster.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power the Barrier’s [HP] is doubled"
+            },
+            {
+                "name": "Poison Touch",
+                "tags": [ "1st-Power Spell (Elemental, Earth), Components: V (Incantation), S (Touch)" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "2 [AP]", "range": "[MELEE]", "target": "1 creature", "duration": "2 [ROUNDS]",
+                "description": "Make a [MELEE SPELL ATTACK] against the target, on a hit if the [MELEE SPELL ATTACK] exceeds or matches the Targets [TOUGHNESS] they recieve 1d12 + ([SPI] / 2) d12 poison damage and are [POISONED] for the duration. [HALF]",
+                "atHigherSpellPower": "every spell power higher than 1st-Power the damage is increased by 3d12 and the duration increases depending on spell power: 2nd: 1 minute, 3rd: 1 hour, 4th: 1 day, 5th: 1 week, 6th: until cured."
             }
         ],
         "waterSpells": [

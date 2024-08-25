@@ -93,16 +93,16 @@ function processKeywords(text: string): ContentPart[] {
                 parts.push(generateGenericKeyword('[RANGED MARTIAL ATTACK]', 'TODO', ''));
                 break;
             case 'SPELL TEST':
-                parts.push(generateGenericKeyword('[SPELL TEST]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[SPELL TEST]', 'Tests made when casting Spells. A [SPELL TEST] is a [D20 TEST] that benefits from your [SPELL LEVEL] and an Attribute that is stated in the context.', 'spell-test'));
                 break;
             case 'MELEE SPELL ATTACK':
-                parts.push(generateGenericKeyword('[MELEE SPELL ATTACK]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[MELEE SPELL ATTACK]', '[MELEE ATTACK], [SPELL TEST]. Certain spells require you to direct a spell towards a target in close range of you which attempts to dodge that. The Attack Bonus is [AGI] + [SPELL LEVEL]', 'melee-spell-attack'));
                 break;
             case 'RANGED SPELL ATTACK':
-                parts.push(generateGenericKeyword('[RANGED SPELL ATTACK]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[RANGED SPELL ATTACK]', '[RANGED ATTACK], [SPELL TEST]. Certain spells require you to hit targets with a magic projectile towards a target which attempts to dodge that. For these spells make an Attack Roll using your Ranged Spell Attack Bonus which is calulated the following way: [PER] + [SPELL LEVEL]', 'ranged-spell-attack'));
                 break;
             case 'CONCENTRATION TEST':
-                parts.push(generateGenericKeyword('[CONCENTRATION TEST]', 'TODO', ''));
+                parts.push(generateGenericKeyword('[CONCENTRATION TEST]', '[SPELL TEST]. A Concentration Test determines if you can maintain focus on a spell while external factors attempt to disrupt it. A [CONCENTRATION TEST] is made by rolling a d20 and adding your Concentration Bonus, which is calculated the following way: [CON] + [SPELL LEVEL]', 'concentration-test'));
                 break;
             case 'SAVE':
                 parts.push(generateGenericKeyword('[SAVE]', 'TODO', 'save'));
@@ -115,10 +115,10 @@ function processKeywords(text: string): ContentPart[] {
                 parts.push(generateGenericKeyword('[LEVEL]', 'Your characters current [LEVEL], it increases as your character spends time adventuring and earns [XP]. When your [LEVEL] increases your characters statistics also improve in several ways.', 'level'));
                 break;
             case 'MARTIAL LEVEL':
-                parts.push(generateGenericKeyword('[MARTIAL LEVEL]', 'Your Characters[MARTIAL LEVEL] is calculated by multiplying the Martial Level Progression of your Class with your [LEVEL] and rounding down.', 'martial-level'));
+                parts.push(generateGenericKeyword('[MARTIAL LEVEL]', 'Your Characters [MARTIAL LEVEL] is calculated by multiplying the Martial Level Progression of your Class with your [LEVEL] and rounding down.', 'martial-level'));
                 break;
             case 'SPELL LEVEL':
-                parts.push(generateGenericKeyword('[SPELL LEVEL]', 'Your Characters [SPELLCASTING LEVEL] is calculated by multiplying the Spellcasting Level Progression of your Class with your [LEVEL] and rounding down.', 'spell-level'));
+                parts.push(generateGenericKeyword('[SPELL LEVEL]', 'Your Characters [SPELL LEVEL] is calculated by multiplying the Spellcasting Level Progression of your Class with your [LEVEL] and rounding down.', 'spell-level'));
                 break;
             case 'HP':
                 parts.push(generateGenericKeyword('[HP]', 'Health Points. Represents how much damage you can take before going unconcious.', 'hp'));

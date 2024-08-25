@@ -12,4 +12,8 @@
         <p class="description mt-2 mb-0"><span class="fw-bold">Pushing extra cost:</span> {{ getPushingExtraCost() }}</p>
         <app-dynamic-content [content]="getPushingDescription() | keywordProcessor"></app-dynamic-content>
     }
+    @if (isSpellAndHasAtHigherSpellPower()) {
+        <p class="fst-italic mb-0">At higher Spell Power:</p>
+        <app-dynamic-content [content]="getAtHigherSpellPower() | keywordProcessor"></app-dynamic-content>
+    }
 </div>

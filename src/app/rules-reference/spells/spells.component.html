@@ -31,19 +31,19 @@
         <div>
             <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.spellcastingTestsdescription| keywordProcessor"></app-dynamic-content>
 
-            <h5 class = "mb-2 mt-3">Spell Test</h5>
+            <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="spell-test">Spell Test</h5>
             <p class="header-subscript">Keyword: [SPELL TEST]</p>
             <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.spellTestDescription| keywordProcessor"></app-dynamic-content>
 
-            <h5 class = "mb-2 mt-3">Melee Spell Attack</h5>
+            <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="melee-spell-attack">Melee Spell Attack</h5>
             <p class="header-subscript">Keyword: [MELEE SPELL AtTACK]</p>
             <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.meleeSpellAttackDescription| keywordProcessor"></app-dynamic-content>
 
-            <h5 class = "mb-2 mt-3">Ranged Spell Attack</h5>
+            <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="ranged-spell-attack">Ranged Spell Attack</h5>
             <p class="header-subscript">Keyword: [RANGED SPELL ATTACK]</p>
             <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.rangedSpellAttackDescription| keywordProcessor"></app-dynamic-content>
 
-            <h5 class = "mb-2 mt-3">Concentration Test</h5>
+            <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="concentration-test">Concentration Test</h5>
             <p class="header-subscript">Keyword: [CONCENTRATION TEST]</p>
             <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.concentrationTestDescription| keywordProcessor"></app-dynamic-content>
         </div>
@@ -105,9 +105,20 @@
         </div>
     </div>
     <h3 class="mt-3 mb-1" ngbScrollSpyFragment="1st-power-spells">First Power Spells</h3>
+    <app-spell-list [spellCollection]="firstPowerSpells"></app-spell-list>
+
     <h3 class="mt-3 mb-1" ngbScrollSpyFragment="2nd-power-spells">Second Power Spells</h3>
+    <app-spell-list [spellCollection]="secondPowerSpells"></app-spell-list>
+
     <h3 class="mt-3 mb-1" ngbScrollSpyFragment="3rd-power-spells">Third Power Spells</h3>
+    <app-spell-list [spellCollection]="thirdPowerSpells"></app-spell-list>
+
     <h3 class="mt-3 mb-1" ngbScrollSpyFragment="4th-power-spells">Fourth Power Spells</h3>
+    <app-spell-list [spellCollection]="fourthPowerSpells"></app-spell-list>
+
     <h3 class="mt-3 mb-1" ngbScrollSpyFragment="5th-power-spells">Fifth Power Spells</h3>
+    <app-spell-list [spellCollection]="fifthPowerSpells"></app-spell-list>
+
     <h3 class="mt-3 mb-1" ngbScrollSpyFragment="6th-power-spells">Sixth Power Spells</h3>
+    <app-spell-list [spellCollection]="sixthPowerSpells"></app-spell-list>
 </div>

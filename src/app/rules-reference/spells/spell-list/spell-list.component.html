@@ -1,0 +1,43 @@
+<div class="ms-2">
+    <h4 class = "mb-2">Elemental Spells</h4>
+    <div class="row">
+        <div class="col-6">
+            @for (spell of elementalSpellsLeft; track $index) {
+                <app-ability [ability]="spell"></app-ability>
+            }
+        </div>
+        <div class="col-6">
+            @for (spell of elementalSpellsRight; track $index) {
+                <app-ability [ability]="spell"></app-ability>
+            }
+        </div>
+    </div>
+
+    <h4 class = "mb-2">Cosmic Spells</h4>
+    <div class="row">
+        <div class="col-6">
+            @for (spell of cosmicSpellsLeft; track $index) {
+                <app-ability [ability]="spell"></app-ability>
+            }
+        </div>
+        <div class="col-6">
+            @for (spell of cosmicSpellsRight; track $index) {
+                <app-ability [ability]="spell"></app-ability>
+            }
+        </div>
+    </div>
+
+    <h4 class = "mb-2">Manipulation Spells</h4>
+    <div class="row">
+        <div class="col-6">
+            @for (spell of manipulationSpellsLeft; track $index) {
+                <app-ability [ability]="spell"></app-ability>
+            }
+        </div>
+        <div class="col-6">
+            @for (spell of manipulationSpellsRight; track $index) {
+                <app-ability [ability]="spell"></app-ability>
+            }
+        </div>
+    </div>
+</div>
