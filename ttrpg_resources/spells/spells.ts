@@ -8,9 +8,10 @@ import fifthPowerSpellsJson from './5th_power_spells.json'
 import sixthPowerSpellsJson from './6th_power_spells.json'
 
 type JsonSpells = typeof firstPowerSpellsJson | typeof secondPowerSpellsJson | typeof thirdPowerSpellsJson | typeof fourthPowerSpellsJson | typeof fifthPowerSpellsJson | typeof sixthPowerSpellsJson;
-type JsonSpell = typeof firstPowerSpellsJson.elementalSpells.fireSpells[0] | typeof secondPowerSpellsJson.elementalSpells.fireSpells[0] | typeof thirdPowerSpellsJson.elementalSpells.fireSpells[0] | typeof fourthPowerSpellsJson.elementalSpells.fireSpells[0] | typeof fifthPowerSpellsJson.elementalSpells.fireSpells[0] | typeof sixthPowerSpellsJson.elementalSpells.fireSpells[0];
+type JsonSpell = typeof firstPowerSpellsJson.elementalSpells.pyromancySpells[0] | typeof secondPowerSpellsJson.elementalSpells.pyromancySpells[0] | typeof thirdPowerSpellsJson.elementalSpells.pyromancySpells[0] | typeof fourthPowerSpellsJson.elementalSpells.pyromancySpells[0] | typeof fifthPowerSpellsJson.elementalSpells.pyromancySpells[0] | typeof sixthPowerSpellsJson.elementalSpells.pyromancySpells[0];
 
 export class Spell extends Ability {
+    components?: string
     atHigherSpellPower?: string
 }
 
@@ -31,10 +32,10 @@ export const sixthPowerSpells: SpellCollection = mapToSpellCollection(sixthPower
 function mapToSpellCollection(jsonSpells: JsonSpells): SpellCollection {
     return {
         elementalSpells: [
-            ... jsonSpells.elementalSpells.fireSpells.map(json => mapToSpell(json)),
-            ... jsonSpells.elementalSpells.earthSpells.map(json => mapToSpell(json)),
-            ... jsonSpells.elementalSpells.waterSpells.map(json => mapToSpell(json)),
-            ... jsonSpells.elementalSpells.airSpells.map(json => mapToSpell(json))
+            ... jsonSpells.elementalSpells.pyromancySpells.map(json => mapToSpell(json)),
+            ... jsonSpells.elementalSpells.geomancySpell.map(json => mapToSpell(json)),
+            ... jsonSpells.elementalSpells.hydromancySpells.map(json => mapToSpell(json)),
+            ... jsonSpells.elementalSpells.aeromancySpells.map(json => mapToSpell(json))
         ],
         cosmicSpells: [
             ... jsonSpells.cosmicSpell.lightSpells.map(json => mapToSpell(json)),
@@ -64,6 +65,7 @@ function mapToSpell(jsonSpell: JsonSpell): Spell {
     spell.target = jsonSpell.target;
     spell.duration = jsonSpell.duration;
     spell.description = jsonSpell.description;
+    spell.components = jsonSpell.components;
     spell.atHigherSpellPower = jsonSpell.atHigherSpellPower;
     return spell;
 }

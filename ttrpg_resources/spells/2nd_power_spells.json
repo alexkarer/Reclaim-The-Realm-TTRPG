@@ -1,12 +1,13 @@
 {
     "elementalSpells": {
-        "fireSpells": [
+        "pyromancySpells": [
             {
                 "name": "",
-                "tags": [ "2nd-Power Spell (Elemental, Fire)" ],
+                "tags": [ "2nd-Power Spell (Elemental, Pyromancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -15,13 +16,14 @@
                 "atHigherSpellPower": ""
             }
         ],
-        "earthSpells": [
+        "geomancySpell": [
             {
                 "name": "",
-                "tags": [ "2nd-Power Spell (Elemental, Earth)" ],
+                "tags": [ "2nd-Power Spell (Elemental, Geomancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -30,13 +32,14 @@
                 "atHigherSpellPower": ""
             }
         ],
-        "waterSpells": [
+        "hydromancySpells": [
             {
                 "name": "",
-                "tags": [ "2nd-Power Spell (Elemental, Water)" ],
+                "tags": [ "2nd-Power Spell (Elemental, Hydromancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -45,13 +48,14 @@
                 "atHigherSpellPower": ""
             }
         ],
-        "airSpells": [
+        "aeromancySpells": [
             {
                 "name": "",
-                "tags": [ "2nd-Power Spell (Elemental, Air)" ],
+                "tags": [ "2nd-Power Spell (Elemental, Aeromancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -66,9 +70,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Cosmic, Light)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -81,9 +86,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Cosmic, Restoration)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -96,9 +102,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Cosmic, Necromancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -111,9 +118,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Cosmic, Shadow)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -126,9 +134,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Cosmic, Divination" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -143,9 +152,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Manipulation, Telekinesis" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -158,9 +168,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Manipulation, Transmutation" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -173,9 +184,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Manipulation, Conjuration" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -188,9 +200,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Manipulation, Illusion" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -203,9 +216,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Manipulation, Teleporation" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -218,9 +232,10 @@
             {
                 "name": "",
                 "tags": [ "2nd-Power Spell (Manipulation, Telepathy" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 3, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },

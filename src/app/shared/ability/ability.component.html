@@ -1,6 +1,9 @@
 <div class="p-1 border bg-body-tertiary mb-3">
     <h5 class = "mb-1">{{ ability?.name }}</h5>
     <p class="fst-italic my-0 text-body-secondary">Tags: {{ ability?.tags?.join('; ') }}</p>
+    @if (isSpellAndHasAtHigherSpellPower()) {
+        <p class="fst-italic my-0 text-body-secondary">Components: {{ getSpellComponents() }}</p>
+    }
     <p class="fst-italic my-0 text-body-secondary">{{ ability?.requirements | requirementsPrettier }}</p>
     <p class="description my-0"><span class="fw-bold">Cost:</span> {{ ability?.cost }}</p>
     <p class="description my-0"><span class="fw-bold">Range:</span> {{ ability?.range }}</p>

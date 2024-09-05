@@ -1,22 +1,36 @@
 {
     "elementalSpells": {
-        "fireSpells": [
+        "pyromancySpells": [
             {
-                "name": "",
-                "tags": [ "1st-Power Spell (Elemental, Fire)" ],
+                "name": "Fire Breath",
+                "tags": [ "1st-Power Spell (Elemental, Pyromancy)" ],
+                "components": "V (Breath)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "2 [AP]", "range": "-", "target": "[CONE] (4.5m)", "duration": "[INSTANT]",
+                "description": "You spray a flame in a 4.5m Cone from you, target each creature within the area with a [INT] [SPELLCASTING TEST] against the targets [DODGE] and on a success they receive 1d8 + ([SPI] / 2) * d8 fire damage [HALF].",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you deal an additional 3d8 fire damage."
+            },
+            {
+                "name": "Ignite",
+                "tags": [ "1st-Power Spell (Elemental, Pyromancy)" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "1 [AP]", "range": "9m", "target": "1 creature", "duration": "1 minute",
+                "description": "You channel the Energy of the Fireplane into your target that you can see and set it on fire. The target suffers from the [BURNING] condition with damage equal to 1d6 + [SPI].",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can target an additional creature and the damage increases by 1d6."
             }
         ],
-        "earthSpells": [
+        "geomancySpell": [
             {
                 "name": "Stone Barrier",
-                "tags": [ "1st-Power Spell (Elemental, Earth), Components: V (Incantation), S, M(nearby earth or stone)" ],
+                "tags": [ "1st-Power Spell (Elemental, Geomancy)" ],
+                "components": "V (Incantation), S, M(nearby earth or stone)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
@@ -27,74 +41,164 @@
             },
             {
                 "name": "Poison Touch",
-                "tags": [ "1st-Power Spell (Elemental, Earth), Components: V (Incantation), S (Touch)" ],
+                "tags": [ "1st-Power Spell (Elemental, Geomancy)" ],
+                "components": "V (Incantation), S (Touch)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
                 "cost": "2 [AP]", "range": "[MELEE]", "target": "1 creature", "duration": "2 [ROUNDS]",
-                "description": "Make a [MELEE SPELL ATTACK] against the target, on a hit if the [MELEE SPELL ATTACK] exceeds or matches the Targets [TOUGHNESS] they recieve 1d12 + ([SPI] / 2) d12 poison damage and are [POISONED] for the duration. [HALF]",
+                "description": "Make a [MELEE SPELL ATTACK] against the target, on a hit if the [MELEE SPELL ATTACK] exceeds or matches the Targets [TOUGHNESS] they recieve 1d12 + ([SPI] / 2) * d12 poison damage and are [POISONED] for the duration. [HALF]",
                 "atHigherSpellPower": "every spell power higher than 1st-Power the damage is increased by 3d12 and the duration increases depending on spell power: 2nd: 1 minute, 3rd: 1 hour, 4th: 1 day, 5th: 1 week, 6th: until cured."
             }
         ],
-        "waterSpells": [
+        "hydromancySpells": [
             {
-                "name": "",
-                "tags": [ "1st-Power Spell (Elemental, Water)" ],
+                "name": "Acid Stream",
+                "tags": [ "1st-Power Spell (Elemental, Hydromancy)" ],
+                "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "2 [AP]", "range": "-", "target": "[LINE] (9m x 1.5m)", "duration": "[INSTANT]",
+                "description": "You spray corrosive gas and liquids in a 9m long and 1.5m wide line in front of you, target each creature within the area with a [INT] [SPELLCASTING TEST] against the targets [DODGE] and on a success they take d6 + ([SPI] / 2) * d6 acid damage [HALF]. On Success targets are affected with [CORROSION] equal to ([SPI] / 2) until the start of your next turn.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you deal an additional 3d6 acid damage."
+            },
+            {
+                "name": "Icy Floor",
+                "tags": [ "1st-Power Spell (Elemental, Hydromancy)" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "2 [AP]", "range": "12m", "target": "[SPHERE] 3m", "duration": "[SPI] rounds",
+                "description": "You create a 3m sphere ice floor at the disignated location. This now counts as difficult Terrain and additionally make a [INT] [SPELLCASTING TEST] against every creature currently on the Ice Floor against their [DODGE] on a success those creatures fall prone. Additionally all creatures starting their turn on the Ice floor recieve d6 cold damage.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power, the sphere increases by 3m, the range by 6m and the damage by 2d6"
             }
         ],
-        "airSpells": [
+        "aeromancySpells": [
             {
-                "name": "",
-                "tags": [ "1st-Power Spell (Elemental, Air)" ],
+                "name": "Lightning Spark",
+                "tags": [ "1st-Power Spell (Elemental, Aeromancy)" ],
+                "components": "V (Incantation), S, M (Electricity conducting material formed in a rod or similar",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "2 [AP]", "range": "18m", "target": "1 creature*", "duration": "[INSTANT]",
+                "description": "You conjure forth a small lightning spark that can bounce between enemies. Make a [RANGED SPELL ATTACK] against a Target within range that you can see, on a hit the target takes d10 + ([SPI] / 2) * d10 electric damage. On success you can repeat the [RANGED SPELL ATTACK] against another creature not yet targeted within 6m of the previous target, on a hit it takes 1d10 less electric damage than the previous hit. This can be repeated until a miss, no targets are left or no damage is left.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power deal an additional 2d10 initial electric damage."
+            },
+            {
+                "name": "Gust of Wind",
+                "tags": [ "1st-Power Spell (Elemental, Aeromancy)" ],
+                "components": "V (Blowing Air), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "2 [AP]", "range": "-", "target": "[CONE] (6m)", "duration": "[INSTANT]",
+                "description": "You conjour forward a gust of wind that pushes away all enemies within a 6m cone. Make a [SPI] [SPELLCASTING TEST] against the targets [HARDNESS] if the test is successfull the targets are pushed away [SPI] m and are knocked prone.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power the cone increases by 3m."
+            },
+            {
+                "name": "Fly",
+                "tags": [ "1st-Power Spell (Elemental, Aeromancy)" ],
+                "components": "S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "1 [AP]", "range": "-", "target": "[SELF]", "duration": "end of current turn, [CONCENTRATION 1]",
+                "description": "You manipulate the aircurrents and the elemental energy of the air plane around you allowing you to fly. For the duration of the spell you gain fly(1.5m ∗ ([SPI] / 2)) speed.",
+                "atHigherSpellPower": "If this spell is cast at 2nd power duration of the spell is 1 minute. At 3rd power the duration is 10 minutes. At 4th power it is 1 hour. At 5th power it is 8 hours. At 6th power for the duration your [DODGE] is also increased by your [SPI]."
             }
         ]
     },
     "cosmicSpell": {
         "lightSpells": [
             {
-                "name": "",
+                "name": "Divine Bolt",
                 "tags": [ "1st-Power Spell (Cosmic, Light)" ],
+                "components": "V (Prayer), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "2 [AP]", "range": "30m", "target": "1 target", "duration": "[INSTANT]",
+                "description": "You shoot a bolt of divine energy at a target far away that you can see. Make a [RANGED SPELL ATTACK], on a hit the Target take d8 + ([SPI] / 2) * d8 holy damage and if the [ATTACK] exceeds the targets [TOUGHNESS] it is additionally [DAZED] until the start of your next turn.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can target an additional creature."
+            },
+            {
+                "name": "Holy Light",
+                "tags": [ "1st-Power Spell (Cosmic, Light)" ],
+                "components": "V (Prayer), S, M(a small relic in your hand)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "3 [AP]", "range": "[AURA] 6m", "target": "[SELF]", "duration": "[SPI] rounds, [CONCENTRATION 1]",
+                "description": "You enchant an item you are holding and it shines bright light within a 6m aura and dim light up to 12m. At the time of casting make a [SPI] [SPELLCASTING TEST] against the [TOUGHNESS] of every creature within the bright light created by this spell. On a success enmies recieve ([SPI] / 2) * d6 holy damage [HALF] and are blinded [SAVE ENDS].",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can increase the bright light aura by 2m and dim light by 4m."
+            },
+            {
+                "name": "Shield of Faith",
+                "tags": [ "1st-Power Spell (Cosmic, Light)" ],
+                "components": "V (Prayer), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "1 [AP]", "range": "6m", "target": "1 friendly target", "duration": "1 minute",
+                "description": "A translucent shield envelopes the target and it recieves [PROTECTION] equal to ([SPI] / 2).",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can target an additional creature."
             }
         ],
         "restorationSpells": [
             {
-                "name": "",
+                "name": "Bless",
                 "tags": [ "1st-Power Spell (Cosmic, Restoration)" ],
+                "components": "V (Prayer), S, M (a springling of holy water)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "2 [AP]", "range": "9m", "target": "three willing creatures", "duration": "[SPI] rounds",
+                "description": "All selected targets recieve [BLESS] equal to 1d4 for the duration.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power an additional creature can be targeted."
+            },
+            {
+                "name": "Heal",
+                "tags": [ "1st-Power Spell (Cosmic, Restoration)" ],
+                "components": "V (Prayer), S (Touch)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "2 [AP]", "range": "[MELEE]", "target": "1 creature", "duration": "[INSTANT]",
+                "description": "You heal a target for 1d8 + ([SPI] / 2) * d8 . Alternatively undead creatures can be targeted by this spell with a [MELEE SPELL ATTACK] and on a success they do not heal but instead take holy damage eqal to the heal instead.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power the heal increases by 3d8."
+            },
+            {
+                "name": "Cleanse",
+                "tags": [ "1st-Power Spell (Cosmic, Restoration)" ],
+                "components": "V (Prayer)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "1 [AP]", "range": "9m", "target": "1 target", "duration": "[INSTANT]",
+                "description": "You can remove one Tier 1 Status Effect affecting a target. Select a Status Effect affecting a target and make a [SPI] [SPELLCASTING TEST] against DC of the [SAVE] when the Status Effect was applied, if no [SAVE] was made, the DC is 10.",
+                "atHigherSpellPower": "If this spell is cast at 2nd Power you can choose to remove a Tier 2 Status Effect . If the spell is cast at 3rd Power you can choose to remove a Tier 3 Status Effect. For each higher Power than 3rd you can choose an additional target."
             }
         ],
         "necromancySpell": [
             {
                 "name": "",
                 "tags": [ "1st-Power Spell (Cosmic, Necromancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
@@ -108,6 +212,7 @@
             {
                 "name": "",
                 "tags": [ "1st-Power Spell (Cosmic, Shadow)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
@@ -121,6 +226,7 @@
             {
                 "name": "",
                 "tags": [ "1st-Power Spell (Cosmic, Divination" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
@@ -136,6 +242,7 @@
             {
                 "name": "",
                 "tags": [ "1st-Power Spell (Manipulation, Telekinesis" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
@@ -149,6 +256,7 @@
             {
                 "name": "",
                 "tags": [ "1st-Power Spell (Manipulation, Transmutation" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
@@ -162,6 +270,7 @@
             {
                 "name": "",
                 "tags": [ "1st-Power Spell (Manipulation, Conjuration" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
@@ -175,6 +284,7 @@
             {
                 "name": "",
                 "tags": [ "1st-Power Spell (Manipulation, Illusion" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
@@ -188,6 +298,7 @@
             {
                 "name": "",
                 "tags": [ "1st-Power Spell (Manipulation, Teleporation" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
@@ -201,6 +312,7 @@
             {
                 "name": "",
                 "tags": [ "1st-Power Spell (Manipulation, Telepathy" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]

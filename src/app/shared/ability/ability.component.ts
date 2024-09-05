@@ -35,6 +35,15 @@ export class AbilityComponent {
     return martialManeuver.maneuverPush?.pushingDescription ?? '';
   }
 
+  public isSpell(): boolean {
+    return (this.ability instanceof Spell)
+  }
+
+  public getSpellComponents(): string {
+    let spell = this.ability as Spell;
+    return spell.components ?? '-';
+  }
+
   public isSpellAndHasAtHigherSpellPower(): boolean {
     if (this.ability instanceof Spell) {
       return this.ability.atHigherSpellPower ? true : false

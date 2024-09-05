@@ -1,12 +1,13 @@
 {
     "elementalSpells": {
-        "fireSpells": [
+        "pyromancySpells": [
             {
                 "name": "",
-                "tags": [ "6th-Power Spell (Elemental, Fire)" ],
+                "tags": [ "6th-Power Spell (Elemental, Pyromancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -15,13 +16,14 @@
                 "atHigherSpellPower": ""
             }
         ],
-        "earthSpells": [
+        "geomancySpell": [
             {
                 "name": "",
-                "tags": [ "6th-Power Spell (Elemental, Earth)" ],
+                "tags": [ "6th-Power Spell (Elemental, Geomancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -30,13 +32,14 @@
                 "atHigherSpellPower": ""
             }
         ],
-        "waterSpells": [
+        "hydromancySpells": [
             {
                 "name": "",
-                "tags": [ "6th-Power Spell (Elemental, Water)" ],
+                "tags": [ "6th-Power Spell (Elemental, Hydromancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -45,13 +48,14 @@
                 "atHigherSpellPower": ""
             }
         ],
-        "airSpells": [
+        "aeromancySpells": [
             {
                 "name": "",
-                "tags": [ "6th-Power Spell (Elemental, Air)" ],
+                "tags": [ "6th-Power Spell (Elemental, Aeromancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -66,9 +70,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Cosmic, Light)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -81,9 +86,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Cosmic, Restoration)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -96,9 +102,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Cosmic, Necromancy)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -111,9 +118,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Cosmic, Shadow)" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -126,9 +134,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Cosmic, Divination" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -143,9 +152,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Manipulation, Telekinesis" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -158,9 +168,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Manipulation, Transmutation" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -173,9 +184,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Manipulation, Conjuration" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -188,9 +200,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Manipulation, Illusion" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -203,9 +216,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Manipulation, Teleporation" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
@@ -218,9 +232,10 @@
             {
                 "name": "",
                 "tags": [ "6th-Power Spell (Manipulation, Telepathy" ],
+                "components": "V",
                 "requirements": {
                     "requiredLevels": [
-                        { "amount": 1, "levelType": "[SPELL LEVEL]" }
+                        { "amount": 12, "levelType": "[SPELL LEVEL]" }
                     ],
                     "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
                 },
