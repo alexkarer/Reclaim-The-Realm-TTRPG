@@ -10,8 +10,8 @@
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
                 "cost": "2 [AP]", "range": "-", "target": "[CONE] (4.5m)", "duration": "[INSTANT]",
-                "description": "You spray a flame in a 4.5m Cone from you, target each creature within the area with a [INT] [SPELLCASTING TEST] against the targets [DODGE] and on a success they receive 1d8 + ([SPI] / 2) * d8 fire damage [HALF].",
-                "atHigherSpellPower": "For every spell power higher than 1st-Power you deal an additional 3d8 fire damage."
+                "description": "You spray a flame in a 4.5m Cone from you, target each creature within the area with a [INT] [SPELL TEST] against the targets [DODGE] and on a success they receive 1d8 + ([SPI] / 2) * d8 fire damage [HALF].",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you deal an additional 2d8 fire damage."
             },
             {
                 "name": "Ignite",
@@ -49,7 +49,7 @@
                 },
                 "cost": "2 [AP]", "range": "[MELEE]", "target": "1 creature", "duration": "2 [ROUNDS]",
                 "description": "Make a [MELEE SPELL ATTACK] against the target, on a hit if the [MELEE SPELL ATTACK] exceeds or matches the Targets [TOUGHNESS] they recieve 1d12 + ([SPI] / 2) * d12 poison damage and are [POISONED] for the duration. [HALF]",
-                "atHigherSpellPower": "every spell power higher than 1st-Power the damage is increased by 3d12 and the duration increases depending on spell power: 2nd: 1 minute, 3rd: 1 hour, 4th: 1 day, 5th: 1 week, 6th: until cured."
+                "atHigherSpellPower": "every spell power higher than 1st-Power the damage is increased by 2d12 and the duration increases depending on spell power: 2nd: 1 minute, 3rd: 1 hour, 4th: 1 day, 5th: 1 week, 6th: until cured."
             }
         ],
         "hydromancySpells": [
@@ -62,8 +62,8 @@
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
                 "cost": "2 [AP]", "range": "-", "target": "[LINE] (9m x 1.5m)", "duration": "[INSTANT]",
-                "description": "You spray corrosive gas and liquids in a 9m long and 1.5m wide line in front of you, target each creature within the area with a [INT] [SPELLCASTING TEST] against the targets [DODGE] and on a success they take d6 + ([SPI] / 2) * d6 acid damage [HALF]. On Success targets are affected with [CORROSION] equal to ([SPI] / 2) until the start of your next turn.",
-                "atHigherSpellPower": "For every spell power higher than 1st-Power you deal an additional 3d6 acid damage."
+                "description": "You spray corrosive gas and liquids in a 9m long and 1.5m wide line in front of you, target each creature within the area with a [INT] [SPELL TEST] against the targets [DODGE] and on a success they take d6 + ([SPI] / 2) * d6 acid damage [HALF]. On Success targets are affected with [CORROSION] equal to ([SPI] / 2) until the start of your next turn.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you deal an additional 2d6 acid damage."
             },
             {
                 "name": "Icy Floor",
@@ -74,7 +74,7 @@
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
                 "cost": "2 [AP]", "range": "12m", "target": "[SPHERE] 3m", "duration": "[SPI] rounds",
-                "description": "You create a 3m sphere ice floor at the disignated location. This now counts as difficult Terrain and additionally make a [INT] [SPELLCASTING TEST] against every creature currently on the Ice Floor against their [DODGE] on a success those creatures fall prone. Additionally all creatures starting their turn on the Ice floor recieve d6 cold damage.",
+                "description": "You create a 3m sphere ice floor at the disignated location. This now counts as difficult Terrain and additionally make a [INT] [SPELL TEST] against every creature currently on the Ice Floor against their [DODGE] on a success those creatures fall prone. Additionally all creatures starting their turn on the Ice floor recieve d6 cold damage.",
                 "atHigherSpellPower": "For every spell power higher than 1st-Power, the sphere increases by 3m, the range by 6m and the damage by 2d6"
             }
         ],
@@ -100,7 +100,7 @@
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
                 "cost": "2 [AP]", "range": "-", "target": "[CONE] (6m)", "duration": "[INSTANT]",
-                "description": "You conjour forward a gust of wind that pushes away all enemies within a 6m cone. Make a [SPI] [SPELLCASTING TEST] against the targets [HARDNESS] if the test is successfull the targets are pushed away [SPI] m and are knocked prone.",
+                "description": "You conjour forward a gust of wind that pushes away all enemies within a 6m cone. Make a [SPI] [SPELL TEST] against the targets [HARDNESS] if the test is successfull the targets are pushed away [SPI] m and are knocked prone.",
                 "atHigherSpellPower": "For every spell power higher than 1st-Power the cone increases by 3m."
             },
             {
@@ -111,7 +111,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "1 [AP]", "range": "-", "target": "[SELF]", "duration": "end of current turn, [CONCENTRATION 1]",
+                "cost": "1 [AP]", "range": "-", "target": "[SELF]", "duration": "end of current turn, [CONCENTRATION] 1",
                 "description": "You manipulate the aircurrents and the elemental energy of the air plane around you allowing you to fly. For the duration of the spell you gain fly(1.5m ∗ ([SPI] / 2)) speed.",
                 "atHigherSpellPower": "If this spell is cast at 2nd power duration of the spell is 1 minute. At 3rd power the duration is 10 minutes. At 4th power it is 1 hour. At 5th power it is 8 hours. At 6th power for the duration your [DODGE] is also increased by your [SPI]."
             }
@@ -140,7 +140,7 @@
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
                 "cost": "3 [AP]", "range": "[AURA] 6m", "target": "[SELF]", "duration": "[SPI] rounds, [CONCENTRATION 1]",
-                "description": "You enchant an item you are holding and it shines bright light within a 6m aura and dim light up to 12m. At the time of casting make a [SPI] [SPELLCASTING TEST] against the [TOUGHNESS] of every creature within the bright light created by this spell. On a success enmies recieve ([SPI] / 2) * d6 holy damage [HALF] and are blinded [SAVE ENDS].",
+                "description": "You enchant an item you are holding and it shines bright light within a 6m aura and dim light up to 12m. At the time of casting make a [SPI] [SPELL TEST] against the [TOUGHNESS] of every creature within the bright light created by this spell. On a success enmies recieve ([SPI] / 2) * d6 holy damage [HALF] and are blinded [SAVE ENDS].",
                 "atHigherSpellPower": "For every spell power higher than 1st-Power you can increase the bright light aura by 2m and dim light by 4m."
             },
             {
@@ -179,7 +179,7 @@
                 },
                 "cost": "2 [AP]", "range": "[MELEE]", "target": "1 creature", "duration": "[INSTANT]",
                 "description": "You heal a target for 1d8 + ([SPI] / 2) * d8 . Alternatively undead creatures can be targeted by this spell with a [MELEE SPELL ATTACK] and on a success they do not heal but instead take holy damage eqal to the heal instead.",
-                "atHigherSpellPower": "For every spell power higher than 1st-Power the heal increases by 3d8."
+                "atHigherSpellPower": "For every spell power higher than 1st-Power the heal increases by 2d8."
             },
             {
                 "name": "Cleanse",
@@ -190,136 +190,232 @@
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
                 "cost": "1 [AP]", "range": "9m", "target": "1 target", "duration": "[INSTANT]",
-                "description": "You can remove one Tier 1 Status Effect affecting a target. Select a Status Effect affecting a target and make a [SPI] [SPELLCASTING TEST] against DC of the [SAVE] when the Status Effect was applied, if no [SAVE] was made, the DC is 10.",
+                "description": "You can remove one Tier 1 Status Effect affecting a target. Select a Status Effect affecting a target and make a [SPI] [SPELL TEST] against DC of the [SAVE] when the Status Effect was applied, if no [SAVE] was made, the DC is 10.",
                 "atHigherSpellPower": "If this spell is cast at 2nd Power you can choose to remove a Tier 2 Status Effect . If the spell is cast at 3rd Power you can choose to remove a Tier 3 Status Effect. For each higher Power than 3rd you can choose an additional target."
             }
         ],
         "necromancySpell": [
             {
-                "name": "",
+                "name": "Create Undead Servant",
                 "tags": [ "1st-Power Spell (Cosmic, Necromancy)" ],
-                "components": "V",
+                "components": "V (Prayer), S, M(A nearby corpse or bone remnants)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "10 minutes", "range": "3m", "target": "Corpse of a creature up to [LEVEL] 1", "duration": "24 hours",
+                "description": "You conduct an unholy Ritual binding the soul of the former inhabitant of the corpse. The corpse or skeleton becomes animate and obeys your commands. Depending on the spirit of the inhabitant they retain more of their personality. You can control an amount of undead equal to your [INT] at the same time. If the undead is reduced to 0 [HP] the spell ends early. After 24 hours the Corpse or Bones return to their former state unless you cast the spell again.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can target corpses of creatures two levels higher."
+            },
+            {
+                "name": "Curse",
+                "tags": [ "1st-Power Spell (Cosmic, Necromancy)" ],
+                "components": "V (Curse)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "1 [AP]", "range": "9m", "target": "1 creature", "duration": "[SPI] rounds",
+                "description": "You target a creature’s soul with a curse that you can see. Make a [SPI] [SPELL TEST] against the targets [WILLPOWER] and on success it sufferes one of the following effects of your choice: [BLINDED], [BANE] 1d4, [DEAFENED], [SILENCED], [FRIGHTENED]. On a fail the target is affected for just 1 round.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can target an additional unit"
             }
         ],
         "shadowSpell": [
             {
-                "name": "",
+                "name": "Unholy Pyre",
                 "tags": [ "1st-Power Spell (Cosmic, Shadow)" ],
-                "components": "V",
+                "components": "V (Prayer), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "2 [AP]", "range": "12m", "target": "[SPHERE] 1.5m", "duration": "[INSTANT]",
+                "description": "You summon an unholy pyre from the Aether damaging the creatures in the Area. Make a [INT] [SPELL TEST] against all targets within the sphere against the targets [DODGE] and on a success they receive 1d8 + ([SPI]/2) * d8 unholy damage [HALF]",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can deal an additional 2d8 damage."
+            },
+            {
+                "name": "Darkness",
+                "tags": [ "1st-Power Spell (Cosmic, Shadow)" ],
+                "components": "V (Curse)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "2 [AP]", "range": "15m", "target": "[SPHERE] 4.5m", "duration": "[SPI] rounds, [CONCENTRATION] 0",
+                "description": "You summon dark energy from the Aether and engulf ta 4.5m sphere in complete darkness. Only magical light of a higher spell power than this can illuminate this area and even creatures with darkvision can not see in this area.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power increases the sphere by 1.5m and the duration is equal to Spell power times 1 hour."
             }
         ],
         "divinationSpell": [
             {
-                "name": "",
+                "name": "Hindsight",
                 "tags": [ "1st-Power Spell (Cosmic, Divination" ],
-                "components": "V",
+                "components": "V (warning)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "1 [REACTION]", "range": "4.5m", "target": "1 friendly creature", "duration": "[INSTANT]",
+                "description": "If a friendly creature fails an [ATTRIBUTE TEST], you foresee the failure before it happens and can give the creature magically the benefit of hindsight and the creature gets a bonus to the [ATTRIBUTE TEST] equal to your [SPI].",
+                "atHigherSpellPower": "If you cast this as a 2nd spell power you can use it also for an [ATTACK], [MARTIAL TEST] or [SPELL TEST] and if you cast it at 3rd spell power you can use it for any [D20 TEST]. For every spell power higher than 3rd the bonus to the [D20 TEST] increases by 5."
+            },
+            {
+                "name": "The Die is Cast",
+                "tags": [ "1st-Power Spell (Cosmic, Divination" ],
+                "components": "V (Prayer), S, M(dice)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "1 minute", "range": "-", "target": "[SELF]", "duration": "24 hours",
+                "description": "You attempt to divine the near future and manipulate it. Roll a d20 and remember the result, at any point during the duration of the spell when you have to make a [D20 TEST] you can use this result instead. You can only benefit from one instance of this spell at a time.",
+                "atHigherSpellPower": "If you cast this as a 2nd spell power or higher you can roll one additional d20 per spell power."
             }
         ]
     },
     "manipulationSpells": {
         "telekinesisSpells": [
             {
-                "name": "",
+                "name": "Telekinetic move",
                 "tags": [ "1st-Power Spell (Manipulation, Telekinesis" ],
-                "components": "V",
+                "components": "S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "1 [AP]", "range": "12m", "target": "one target", "duration": "up to [SPI] rounds, [CONCENTRATION] 1",
+                "description": "You can select one object or creature that you can see weighing up to [SPI] ∗ 20 kg and magically move it, you have the following options: <ul><li>Push/Pull: You can move the target up to a distance of 2 ∗ [SPI] meters in any direction. If you target an unwilling creature or an item held by a creature you have to make a [SPI] [SPELL TEST] against the creatures [HARDNESS] , on a success you move the creature or the item it is holding is freed from the creature’s grasp. Afterwards the spell ends.</li> <li>Hover: Alternatively you can make the target hover in the air and move it [SPI] / 2 meters in any direction. While doing this for the duration of the spell each turn you can move the object again, when the spell ends the target is effected by gravity and other forces as normal. If the target is an unwilling creature you have to succeed on a [SPI] [SPELL TEST] against the creatures [HARDNESS] , when you fail the spell ends.</li></ul>",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power the maximum object weight is doubled and the range increases by 3m."
+            },
+            {
+                "name": "Telekinetic crush",
+                "tags": [ "1st-Power Spell (Manipulation, Telekinesis" ],
+                "components": "S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "2 [AP]", "range": "12m", "target": "one target", "duration": "([SPI] / 2) rounds, [CONCENTRATION] 1",
+                "description": "You target one object or creature that you can see and restrain it. Make a [SPI] [SPELL TEST] against the targets [HARDNESS] on a success the target is restrained. Additionally you when you cast it and every following following turn the spell is still active you can deal ([SPI]/2) * d6 physical damage that can’t be reduced by armor.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can target an additional creature"
             }
         ],
         "transmutationSpells": [
             {
-                "name": "",
+                "name": "Mutate",
                 "tags": [ "1st-Power Spell (Manipulation, Transmutation" ],
-                "components": "V",
+                "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "3 [AP]", "range": "[MELEE]", "target": "one willing creature", "duration": "10 minutes",
+                "description": "You cause a minor mutation within a creature and can grant them one of the following benefits: <ul><li>Quicken: Their limbs change to be more agile: the creature’s [MP] are increasd by 1 + ([SPI]/2)</li> <li>Natural armor: The target’s skin becomes harder and grows more layers to protect it and it grants physical damage resistance equal to [SPI]. Does not stack with physical damage resistance granted by other armor and is treated as armor for all other effects.</li></ul>",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can target one additional creature and the range increases by 1.5m"
             }
         ],
         "conjurationSpells": [
             {
-                "name": "",
+                "name": "Magic Missiles",
                 "tags": [ "1st-Power Spell (Manipulation, Conjuration" ],
-                "components": "V",
+                "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "2 [AP]", "range": "15m", "target": "one or multiple creatures", "duration": "[INSTANT]",
+                "description": "You create 3 magical darts, each of these darts targets a creature within range that you can see and designate. A missile does ([SPI] / 2) 1d4 cosmic damage on impact.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power 2 more magic darts are created."
+            },
+            {
+                "name": "Create Object",
+                "tags": [ "1st-Power Spell (Manipulation, Conjuration" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "3 [AP]", "range": "3m", "target": "-", "duration": "[SPI] minutes",
+                "description": "You can create any tier 1 item of your choice that is not a consumable or something similar like food. The item has to fit in a [SPI] / 4 m Cube and it can’t be hazardous on it’s own like lava or poison but can be a sharp blade for instance. The item lasts for the duration and has a faint shimmer of the Aether to it making it appear as an obvious fake otherwise it shares the same properties. If a complicated item is created like a specific key for a keyhole or a inticrite mechanical device. The GM might call for a [INT] [SPELL TEST] depending on the difficulty and the casters knowledge.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power the item level can be 1 higher and the duration is tripled."
             }
         ],
         "illusionSpells": [
             {
-                "name": "",
+                "name": "Invisibility",
                 "tags": [ "1st-Power Spell (Manipulation, Illusion" ],
-                "components": "V",
+                "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "2 [AP]", "range": "[MELEE]", "target": "one creature", "duration": "[SPI] * 10 minutes [CONCENTRATION] 2",
+                "description": "The target becomes [INVISIBLE] for the duration",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power an additional creature can be targeted"
+            },
+            {
+                "name": "Illusary Image",
+                "tags": [ "1st-Power Spell (Manipulation, Illusion" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "3 [AP]", "range": "9m", "target": "-", "duration": "[SPI] minutes [CONCENTRATION] 1",
+                "description": "You create a silent unmoving illusary image of your choice that fits in a [SPI] / 2 m Cube. Make a [INT] [SPELL TEST] if other creatures are present, if your test is higher than the other creatures passive [INT] [INVESTIGATION] than they percieve the Illusion as real. If they later examine the Illusion and find obvious flaws in it, then they also stop percieving the Illusion as real.",
+                "atHigherSpellPower": "If you cast this spell as a second power spell you can make the image move but it can’t be further than 21m (14 squares) away from you. If cast at 3rd power you can add sound to the Illusion."
             }
         ],
         "teleportationSpells": [
             {
-                "name": "",
+                "name": "Cosmic Shift",
                 "tags": [ "1st-Power Spell (Manipulation, Teleporation" ],
-                "components": "V",
+                "components": "V (Incantation)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "1 [AP]", "range": "3 + [SPI] m", "target": "[SELF]", "duration": "[INSTANT]",
+                "description": "You can teleport to a free space up to 3 + [SPI] m away.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power the range is doubled."
+            },
+            {
+                "name": "Extradimensional Pocket",
+                "tags": [ "1st-Power Spell (Manipulation, Teleporation" ],
+                "components": "V (Incantation), S, M (Pocket or container)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "2 [AP]", "range": "[MELEE]", "target": "one non living object", "duration": "[INDEFINATE]",
+                "description": "You can target one object weighing up to [SPI] ∗ 10 kg. and make it vanish into an extradimensional space. At any point you can cast this spell again and retrieve an item you have previously stored in your extradimensional pocket. Objects in the extradimensional space are perserved indefinete and do not wither or rot.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power the maximum object weight is tripled."
             }
         ],
         "telepathySpells": [
             {
-                "name": "",
+                "name": "Mind Assault",
                 "tags": [ "1st-Power Spell (Manipulation, Telepathy" ],
-                "components": "V",
+                "components": "V (Scream)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Spell Level Progression greater than 0" ]
                 },
-                "cost": "", "range": "", "target": "", "duration": "",
-                "description": "",
-                "atHigherSpellPower": ""
+                "cost": "2 [AP]", "range": "12m", "target": "one sentient creature within range", "duration": "1 round",
+                "description": "Select one creature with an [INT] greater than -4 within range that you can see, make a [SPI] [SPELL TEST] against the creature’s [WILLPOWER]. On a success it takes d8 + ([SPI]/2) * d8 psychic damage [HALF] and is dazed for 1 round.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can target one additional creature"
+            },
+            {
+                "name": "Suggestion",
+                "tags": [ "1st-Power Spell (Manipulation, Telepathy" ],
+                "components": "V (Suggestion)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Spell Level Progression greater than 0" ]
+                },
+                "cost": "2 [AP]", "range": "3m", "target": "one sentient creature within range", "duration": "[SPI] rounds",
+                "description": "You make one request towards a creature with an [INT] greater than -4 within range that you can see. The request has to be a short sentence and be an action that can be completed within the Duration and does not completely go against the creatures regular course of action. Make a [CHA] [SPELL TEST] agains the targets [WILLPOWER] on a success the creature becomes charmed for the duration and completes the request, after which it feels strange about the request but is not aware that it was mind controlled by you. On a failed test the creature simply refuses.",
+                "atHigherSpellPower": "For every spell power higher than 1st-Power you can target two additional creatures and the range increases by 1.5m"
             }
         ]
     }

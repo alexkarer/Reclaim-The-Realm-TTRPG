@@ -1,0 +1,16 @@
+{
+    "noviceHybridAbilitiesDescription": "These are hybrid abilities that require your [SPELL LEVEL] and [MARTIAL LEVEL] to be above 0.",
+    "elementalHybridAbilities": [
+        {
+            "name": "",
+            "tags": [ "Hybrid Ability, [SPELL LIKE] 1, Elemental (Pyromancy)" ],
+            "components": "V (Incantation), M (Weapon)",
+            "requirements": {
+                "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                "otherRequirements": [ "Spell Level Progression greater than 0" ]
+            },
+            "cost": "2 [AP]", "range": "15m", "target": "[SPHERE] 4.5m", "duration": "[SPI] rounds, [CONCENTRATION] 0",
+            "description": "You summon dark energy from the Aether and engulf ta 4.5m sphere in complete darkness. Only magical light of a higher spell power than this can illuminate this area and even creatures with darkvision can not see in this area."
+        }
+    ]
+}
