@@ -2,7 +2,7 @@
     "agileManuevers": [
         {
             "name": "Transcendent Speed",
-            "tags": [ "Martial Maneuver (Transcendent, Agile)" ],
+            "tags": [ "Martial Maneuver (Transcendent)", "Agile" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
@@ -13,7 +13,7 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "1 [REACTION], 5 [STAMINA]",
+            "cost": "[REACTION], 5 [STAMINA]",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -27,7 +27,7 @@
     "brawlManeuvers": [
         {
             "name": "",
-            "tags": [ "Martial Maneuver (Transcendent, Brawl)" ],
+            "tags": [ "Martial Maneuver (Transcendent)", "Agile" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
@@ -52,7 +52,7 @@
     "leaderManeuvers": [
         {
             "name": "",
-            "tags": [ "Martial Maneuver (Transcendent, Leader)" ],
+            "tags": [ "Martial Maneuver (Transcendent)", "Leader" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
@@ -77,7 +77,7 @@
     "fortitudeManeuvers": [
         {
             "name": "",
-            "tags": [ "Martial Maneuver (Transcendent, Fortitude)" ],
+            "tags": [ "Martial Maneuver (Transcendent)", "Fortitude" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
@@ -102,7 +102,7 @@
     "tacticalManeuvers": [
         {
             "name": "",
-            "tags": [ "Martial Maneuver (Transcendent, Tactical)" ],
+            "tags": [ "Martial Maneuver (Transcendent)", "Tactical" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
@@ -127,7 +127,7 @@
     "weaponManeuvers": [
         {
             "name": "",
-            "tags": [ "Martial Maneuver (Transcendent, Weapon)" ],
+            "tags": [ "Martial Maneuver (Transcendent)", "Weapon" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 12, "levelType": "[MARTIAL LEVEL]" }

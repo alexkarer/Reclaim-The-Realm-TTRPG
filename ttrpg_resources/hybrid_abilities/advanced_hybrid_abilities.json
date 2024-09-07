@@ -1,0 +1,41 @@
+{
+    "elementalHybridAbilities": [
+        {
+            "name": "",
+            "tags": [ "Hybrid Ability", "Spell(2)" ],
+            "components": "V",
+            "requirements": {
+                "requiredLevels": [ { "amount": 4, "levelType": "[SPELL LEVEL]" }, { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], 
+                "requiredAttributes": [ ], "requiredPerks": [ ],  "otherRequirements": [ ]
+            },
+            "cost": "", "range": "", "target": "", "duration": "",
+            "description": ""
+        }
+    ],
+    "cosmicHybridAbilities": [
+        {
+            "name": "",
+            "tags": [ "Hybrid Ability", "Spell(2)" ],
+            "components": "V",
+            "requirements": {
+                "requiredLevels": [ { "amount": 4, "levelType": "[SPELL LEVEL]" }, { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], 
+                "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+            },
+            "cost": "", "range": "", "target": "", "duration": "",
+            "description": ""
+        }
+    ],
+    "manipulationHybridAbilities": [
+        {
+            "name": "",
+            "tags": [ "Hybrid Ability", "Spell(2)" ],
+            "components": "V",
+            "requirements": {
+                "requiredLevels": [ { "amount": 4, "levelType": "[SPELL LEVEL]" }, { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], 
+                "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ]
+            },
+            "cost": "", "range": "", "target": "", "duration": "",
+            "description": ""
+        }
+    ]
+}

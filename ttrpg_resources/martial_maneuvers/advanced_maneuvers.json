@@ -2,7 +2,7 @@
     "agileManuevers": [
         {
             "name": "Scale Monster",
-            "tags": [ "Martial Maneuver (Advanced, Agile)", "Movement" ],
+            "tags": [ "Martial Maneuver (Advanced)", "Agile", "Movement" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
@@ -23,7 +23,7 @@
     "brawlManeuvers": [
         {
             "name": "Bodyguard",
-            "tags": [ "Martial Maneuver (Advanced, Brawl)" ],
+            "tags": [ "Martial Maneuver (Advanced)", "Brawl" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
@@ -32,7 +32,7 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "1 [REACTION]",
+            "cost": "[REACTION]",
             "range": "[MELEE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
@@ -46,7 +46,7 @@
     "leaderManeuvers": [
         {
             "name": "Rallying Cry",
-            "tags": [ "Martial Maneuver (Advanced, Leader)" ],
+            "tags": [ "Martial Maneuver (Advanced)", "Leader" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
@@ -65,7 +65,7 @@
         },
         {
             "name": "Get Back in the Fight",
-            "tags": [ "Martial Maneuver (Advanced, Leader), Heal" ],
+            "tags": [ "Martial Maneuver (Advanced)", "Leader", "Heal" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
@@ -86,7 +86,7 @@
     "fortitudeManeuvers": [
         {
             "name": "Overextend",
-            "tags": [ "Martial Maneuver (Advanced, Fortitude)" ],
+            "tags": [ "Martial Maneuver (Advanced)", "Fortitude" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
@@ -105,7 +105,7 @@
     "tacticalManeuvers": [
         {
             "name": "Cut of the Retreat",
-            "tags": [ "Martial Maneuver (Advanced, Tactical)" ],
+            "tags": [ "Martial Maneuver (Advanced)", "Tactical" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
@@ -124,7 +124,7 @@
         },
         {
             "name": "Analyze Weakpoint",
-            "tags": [ "Martial Maneuver (Advanced, Tactical)" ],
+            "tags": [ "Martial Maneuver (Advanced)", "Tactical" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
@@ -145,7 +145,7 @@
     "weaponManeuvers": [
         {
             "name": "Shield Throw",
-            "tags": [ "Martial Maneuver (Advanced, Weapon), Ranged" ],
+            "tags": [ "Martial Maneuver (Advanced)", "Weapon", "Ranged" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
@@ -166,7 +166,7 @@
         },
         {
             "name": "Impale",
-            "tags": [ "Martial Maneuver (Advanced, Weapon), Ranged" ],
+            "tags": [ "Martial Maneuver (Advanced)", "Weapon", "Ranged" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
@@ -183,7 +183,7 @@
         },
         {
             "name": "Shield block",
-            "tags": [ "Martial Maneuver (Advanced, Weapon)" ],
+            "tags": [ "Martial Maneuver (Advanced)", "Weapon" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
@@ -192,7 +192,7 @@
                 "requiredPerks": [],
                 "otherRequirements": [ ]
             },
-            "cost": "1 [REACTION], 1 [STAMINA]",
+            "cost": "[REACTION], 1 [STAMINA]",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",

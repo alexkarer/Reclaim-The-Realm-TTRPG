@@ -2,7 +2,7 @@
     "agileManuevers": [
         {
             "name": "Inhuman Reactions",
-            "tags": [ "Martial Maneuver (Master, Agile)" ],
+            "tags": [ "Martial Maneuver (Master)", "Agile" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
@@ -13,7 +13,7 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "1 [REACTION]",
+            "cost": "[REACTION]",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -25,7 +25,7 @@
         },
         {
             "name": "Super Speed",
-            "tags": [ "Martial Maneuver (Master, Agile)" ],
+            "tags": [ "Martial Maneuver (Master)", "Agile" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
@@ -46,7 +46,7 @@
     "brawlManeuvers": [
         {
             "name": "",
-            "tags": [ "Martial Maneuver (Master, Brawl)" ],
+            "tags": [ "Martial Maneuver (Master)", "Brawl" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
@@ -71,7 +71,7 @@
     "leaderManeuvers": [
         {
             "name": "",
-            "tags": [ "Martial Maneuver (Master, Leader)" ],
+            "tags": [ "Martial Maneuver (Master)", "Leader" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
@@ -96,7 +96,7 @@
     "fortitudeManeuvers": [
         {
             "name": "",
-            "tags": [ "Martial Maneuver (Master, Fortitude)" ],
+            "tags": [ "Martial Maneuver (Master)", "Fortitude" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
@@ -121,7 +121,7 @@
     "tacticalManeuvers": [
         {
             "name": "",
-            "tags": [ "Martial Maneuver (Master, Tactical)" ],
+            "tags": [ "Martial Maneuver (Master)", "Tactical" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
@@ -146,7 +146,7 @@
     "weaponManeuvers": [
         {
             "name": "Execute",
-            "tags": [ "Martial Maneuver (Master, Weapon), Melee, Ranged" ],
+            "tags": [ "Martial Maneuver (Master)", "Weapon", "Melee", "Ranged" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
@@ -163,7 +163,7 @@
         },
         {
             "name": "Onslaught",
-            "tags": [ "Martial Maneuver (Master, Weapon), Melee" ],
+            "tags": [ "Martial Maneuver (Master)", "Weapon", "Melee" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }

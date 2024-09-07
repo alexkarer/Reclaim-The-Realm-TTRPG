@@ -3,7 +3,7 @@
         "pyromancySpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Elemental, Pyromancy)" ],
+                "tags": [ "Spell (4)", "Elemental", "Pyromancy" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -19,7 +19,7 @@
         "geomancySpell": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Elemental, Geomancy)" ],
+                "tags": [ "Spell (4)", "Elemental", "Geomancy" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -35,7 +35,7 @@
         "hydromancySpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Elemental, Hydromancy)" ],
+                "tags": [ "Spell (4)", "Elemental", "Hydromancy" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -51,7 +51,7 @@
         "aeromancySpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Elemental, Aeromancy)" ],
+                "tags": [ "Spell (4)", "Elemental", "Aeromancy" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -69,7 +69,7 @@
         "lightSpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Cosmic, Light)" ],
+                "tags": [ "Spell (4)", "Cosmic", "Light" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -85,7 +85,7 @@
         "restorationSpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Cosmic, Restoration)" ],
+                "tags": [ "Spell (4)", "Cosmic", "Restoration" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -101,7 +101,7 @@
         "necromancySpell": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Cosmic, Necromancy)" ],
+                "tags": [ "Spell (4)", "Cosmic", "Necromancy" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -117,7 +117,7 @@
         "shadowSpell": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Cosmic, Shadow)" ],
+                "tags": [ "Spell (4)", "Cosmic", "Shadow" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -133,7 +133,7 @@
         "divinationSpell": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Cosmic, Divination" ],
+                "tags": [ "Spell (4)", "Cosmic", "Divination" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -151,7 +151,7 @@
         "telekinesisSpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Manipulation, Telekinesis" ],
+                "tags": [ "Spell (4)", "Manipulation", "Telekinesis" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -167,7 +167,7 @@
         "transmutationSpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Manipulation, Transmutation" ],
+                "tags": [ "Spell (4)", "Manipulation", "Transmutation" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -183,7 +183,7 @@
         "conjurationSpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Manipulation, Conjuration" ],
+                "tags": [ "Spell (4)", "Manipulation", "Conjuration" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -199,7 +199,7 @@
         "illusionSpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Manipulation, Illusion" ],
+                "tags": [ "Spell (4)", "Manipulation", "Illusion" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -215,7 +215,7 @@
         "teleportationSpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Manipulation, Teleporation" ],
+                "tags": [ "Spell (4)", "Manipulation", "Teleporation" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [
@@ -231,7 +231,7 @@
         "telepathySpells": [
             {
                 "name": "",
-                "tags": [ "4th-Power Spell (Manipulation, Telepathy" ],
+                "tags": [ "Spell (4)", "Manipulation", "Telepathy" ],
                 "components": "V",
                 "requirements": {
                     "requiredLevels": [

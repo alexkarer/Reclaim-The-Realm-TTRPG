@@ -2,7 +2,7 @@
     "agileManuevers": [
         {
             "name": "Wall Jump",
-            "tags": [ "Martial Maneuver (Basic, Agile)", "Movement" ],
+            "tags": [ "Martial Maneuver (Basic)", "Agile", "Movement" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -13,7 +13,7 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ "3 ranks in the Athletics Skill" ]
             },
-            "cost": "3 [MP] or 1 [REACTION]",
+            "cost": "3 [MP] or [REACTION]",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -25,7 +25,7 @@
         },
         {
             "name": "Pass Through",
-            "tags": [ "Martial Maneuver (Basic, Agile)", "Movement" ],
+            "tags": [ "Martial Maneuver (Basic)", "Agile", "Movement" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -50,7 +50,7 @@
     "brawlManeuvers": [
         {
             "name": "Pin Down",
-            "tags": [ "Martial Maneuver (Basic, Brawl)" ],
+            "tags": [ "Martial Maneuver (Basic)", "Brawl" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -67,7 +67,7 @@
         },
         {
             "name": "Meat Shield",
-            "tags": [ "Martial Maneuver (Basic, Brawl)" ],
+            "tags": [ "Martial Maneuver (Basic)", "Brawl" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -76,7 +76,7 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "1 [REACTION]",
+            "cost": "[REACTION]",
             "range": "[MELEE]",
             "target": "1 [GRAPPLED] Creature",
             "duration": "[INSTANT]",
@@ -84,7 +84,7 @@
         },
         {
             "name": "Throw",
-            "tags": [ "Martial Maneuver (Basic, Brawl)" ],
+            "tags": [ "Martial Maneuver (Basic)", "Brawl" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -138,7 +138,7 @@
         },
         {
             "name": "You can take it!",
-            "tags": [ "Martial Maneuver (Basic, Leader)" ],
+            "tags": [ "Martial Maneuver (Basic)", "Leader" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -155,7 +155,7 @@
         },
         {
             "name": "Go Get Em!",
-            "tags": [ "Martial Maneuver (Basic, Leader)" ],
+            "tags": [ "Martial Maneuver (Basic)", "Leader" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -193,7 +193,7 @@
         },
         {
             "name": "Pushing the Limit",
-            "tags": [ "Martial Maneuver (Basic, Fortitude)" ],
+            "tags": [ "Martial Maneuver (Basic)", "Fortitude" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -212,7 +212,7 @@
     "tacticalManeuvers": [
         {
             "name": "Anticipate",
-            "tags": [ "Martial Maneuver (Basic, Tactical)" ],
+            "tags": [ "Martial Maneuver (Basic)", "Tactical" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -229,7 +229,7 @@
         },
         {
             "name": "Tag Team",
-            "tags": [ "Martial Maneuver (Basic, Tactical)" ],
+            "tags": [ "Martial Maneuver (Basic)", "Tactical" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -248,7 +248,7 @@
     "weaponManeuvers": [
         {
             "name": "Bash",
-            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -269,7 +269,7 @@
         },
         {
             "name": "Pushing Attack",
-            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -290,7 +290,7 @@
         },
         {
             "name": "Crippling Strike",
-            "tags": [ "Martial Maneuver (Basic, Weapon), Melee, Ranged" ],
+            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee", "Ranged" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -307,7 +307,7 @@
         },
         {
             "name": "Deep Cut",
-            "tags": [ "Martial Maneuver (Basic, Weapon), Melee, Ranged" ],
+            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee", "Ranged" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -324,7 +324,7 @@
         },
         {
             "name": "Cleave",
-            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -345,7 +345,7 @@
         },
         {
             "name": "Running Throw",
-            "tags": [ "Martial Maneuver (Basic, Weapon), Ranged" ],
+            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Ranged" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -362,7 +362,7 @@
         },
         {
             "name": "Multishot",
-            "tags": [ "Martial Maneuver (Basic, Weapon), Ranged" ],
+            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Ranged" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -379,7 +379,7 @@
         },
         {
             "name": "Heavy Attack",
-            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -400,7 +400,7 @@
         },
         {
             "name": "Parry",
-            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
@@ -409,7 +409,7 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "1 [REACTION]",
+            "cost": "[REACTION]",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -421,7 +421,7 @@
         },
         {
             "name": "Charge",
-            "tags": [ "Martial Maneuver (Basic, Weapon), Melee" ],
+            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
