@@ -5,6 +5,7 @@ import { Ability } from '../../../../ttrpg_resources/globals/Ability';
 import { RequirementsPrettierPipe } from "../utils/to-pretty-string";
 import { MartialManeuver } from '../../../../ttrpg_resources/martial_maneuvers/martial-maneuvers';
 import { Spell } from '../../../../ttrpg_resources/spells/spells';
+import { HybridAbility } from '../../../../ttrpg_resources/hybrid_abilities/hybrid_abilities';
 
 @Component({
   selector: 'app-ability',
@@ -55,5 +56,9 @@ export class AbilityComponent {
   public getAtHigherSpellPower(): string {
     let spell = this.ability as Spell;
     return spell.atHigherSpellPower ?? '';
+  }
+
+  public isHybridAbility(): boolean {
+    return (this.ability instanceof HybridAbility)
   }
 }

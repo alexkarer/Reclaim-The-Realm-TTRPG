@@ -1,3 +1,17 @@
 <div class="ms-2">
     <app-dynamic-content [content]="hybridAbilityDescription | keywordProcessor"></app-dynamic-content>
+    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="novice-hybrid">Novice Hybrid Abilities</h3>
+    <app-hybrid-ability-list [hybridAbilities]="noviceHybridAbilities"></app-hybrid-ability-list>
+
+    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="advanced-hybrid">Advanced Hybrid Abilities</h3>
+    <app-hybrid-ability-list [hybridAbilities]="advancedHybridAbilities"></app-hybrid-ability-list>
+
+    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="master-hybrid">Master Hybrid Abilities</h3>
+    <app-hybrid-ability-list [hybridAbilities]="masterHybridAbilities"></app-hybrid-ability-list>
+
+    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="martial-hybrid">Martial Focused Hybrid Abilities</h3>
+    <app-hybrid-ability-list [hybridAbilities]="martialFocusedHybridAbilities"></app-hybrid-ability-list>
+
+    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="spell-hybrid">Spell Focused Abilities</h3>
+    <app-hybrid-ability-list [hybridAbilities]="spellFocusedHybridAbilities"></app-hybrid-ability-list>
 </div>

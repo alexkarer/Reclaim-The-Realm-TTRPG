@@ -1,7 +1,7 @@
 <div class="p-1 border bg-body-tertiary mb-3">
     <h5 class = "mb-1">{{ ability?.name }}</h5>
     <p class="fst-italic my-0 text-body-secondary">Tags: {{ ability?.tags?.join('; ') }}</p>
-    @if (isSpellAndHasAtHigherSpellPower()) {
+    @if (isSpell() || isHybridAbility()) {
         <p class="fst-italic my-0 text-body-secondary">Components: {{ getSpellComponents() }}</p>
     }
     <p class="fst-italic my-0 text-body-secondary">{{ ability?.requirements | requirementsPrettier }}</p>
