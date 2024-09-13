@@ -50,25 +50,25 @@
     "manipulationHybridAbilities": [
         {
             "name": "Telekinetic Weapon",
-            "tags": [ "Hybrid Ability", "Spell(1)", "Manipulation", "Telekinesis)" ],
-            "components": "V",
+            "tags": [ "Hybrid Ability", "Spell(1)", "Manipulation", "Telekinesis" ],
+            "components": "V, S, M (Weapon)",
             "requirements": {
                 "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
-            "cost": "", "range": "", "target": "", "duration": "",
-            "description": ""
+            "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one target, [LINE]*", "duration": "[INSTANT]",
+            "description": "You launch your weapon at an enemy with the aid of Telekinetic Force. Make a Weapon [RANGED MARTIAL ATTACK] or [RANGED SPELL ATTACK] (your choice) against the Target. On hit the target recieves damage of your regular weapon damage + [SPI] . Additionally every enemy that is on a straight line from you and your target can be hit by the Weapons return path. Make a [INT] [SPELLCASTING TEST] against their [DODGE] on a success they recieve damage equal to the weapons base damage (in case of versatile weapon, the versitile damage is used)."
         },
         {
             "name": "Teleport Strike",
             "tags": [ "Hybrid Ability", "Spell(1)", "Manipulation", "Teleportation" ],
-            "components": "V, S",
+            "components": "V, M (Weapon, Bodypart or Ammunition)",
             "requirements": {
                 "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
-            "cost": "", "range": "", "target": "", "duration": "",
-            "description": ""
+            "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE] + 9m", "target": "one creature", "duration": "[INSTANT]",
+            "description": "You open a temporary portal to enable your Attacks to reach greater distance or hit from betterangles. Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] against a creature. The creature hit by the [ATTACK] recieves no benefit of cover and additionally the creature is unaware of the attack even if it can see the attacker."
         }
     ]
 }
