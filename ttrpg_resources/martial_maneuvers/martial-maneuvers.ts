@@ -1,5 +1,5 @@
-import { Ability } from '../globals/Ability';
-import { Requirements } from '../globals/AbilityRequirements';
+import { Ability } from '../shared/Ability';
+import { Requirements } from '../shared/AbilityRequirements';
 
 import basicManeuversJson from './basic_maneuvers.json';
 import advancedManeuversJson from './advanced_maneuvers.json';

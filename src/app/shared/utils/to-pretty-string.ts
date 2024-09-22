@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { AttributeRequirement, LevelRequirement, Requirements } from '../../../../ttrpg_resources/globals/AbilityRequirements';
+import { AttributeRequirement, LevelRequirement, Requirements } from '../../../../ttrpg_resources/shared/AbilityRequirements';
 
 @Pipe({
     name: 'requirementsPrettier',

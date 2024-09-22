@@ -1,4 +1,4 @@
-import { Ability } from "../globals/Ability";
+import { Ability } from "../shared/Ability";
 
 import noviceHybridAbilitiesJson from "./novice_hybrid_abilities.json";
 import advancedHybridAbilitiesJson from "./advanced_hybrid_abilities.json";

@@ -1,4 +1,4 @@
-import { Ability } from '../globals/Ability';
+import { Ability } from '../shared/Ability';
 
 import firstPowerSpellsJson from './1st_power_spells.json'
 import secondPowerSpellsJson from './2nd_power_spells.json'

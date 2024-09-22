@@ -1,4 +1,4 @@
-import { Requirements } from '../globals/AbilityRequirements';
+import { Requirements } from '../shared/AbilityRequirements';
 import craftingPerksJson from './crafting_perks.json'
 import defensivePerksJson from './defensive_perks.json'
 import martialPerksJson from './martial_perks.json'

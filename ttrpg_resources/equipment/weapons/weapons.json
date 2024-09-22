@@ -1,0 +1,17 @@
+{
+    "simpleWeapons": [
+        {
+            "name": "Dagger",
+            "tier": 1,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "2 gc",
+            "weightInGram": "500",
+            "type": "Simple Weapon",
+            "description": "A small simple short blade favoured by assasin’s and those looking to conceil their weapon.",
+            "properties": [ "light, thrown(4.5/9/18)" ],
+            "damageDice": "",
+            "weaponType": "",
+            "canAddStrToDamage": false
+        }
+    ]
+}

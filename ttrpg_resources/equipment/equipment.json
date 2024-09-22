@@ -1,0 +1,7 @@
+{
+    "currency": {
+        "currencyDescription": "The Currency used in this system are small metal coins consisting of bronze, silver, and gold. The value of a coin is also equal to the intrinsic value of the metal itself. This results in different currencies being widely accepted across civilization, although the coinage might be different. The Exchange Rate between the Coins is as follows:",
+        "currencyConversion": "The Coins are generally shortened by their initials: Bronze Coin = bc, Silver Coin = sc, Gold Coin = gc. Of course, coins do not only come in single values, there are 2bc, 5bc, 10gc, 50gc, ... coins. However, as they are, an amount heavier equal to their value to retain their metal value. Every coin weighs 5 grams."
+    },
+    "itemTierDescription": "Items have an associated Tier and Skill. The Item Tier determines the required the skill rank for identifying and crafting those items and the Skill describes the Tool, Lore or Regular Skill required for this task.<br> The Item Tiers are not associated with the character [LEVEL] or the abilities to use those items. However it is not recommended for characters to have items 2 tiers higher than their character [LEVEL] since it might significantly affect game balance."
+}
