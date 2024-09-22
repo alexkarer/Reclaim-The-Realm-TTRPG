@@ -1,6 +1,6 @@
 <div class="ms-2">
     <h4 ngbScrollSpyFragment="core-values">Core Values</h4>
-    <div class="row">
+    <div class="px-3 row g-5">
         <div class="col-6">
             <h5 class ="mb-0 mt-1" ngbScrollSpyFragment="level">Level</h5>
             <p class="header-subscript">Keyword: [LEVEL]</p>
@@ -29,7 +29,7 @@
         </div>
     </div>
     <h4 class="mt-3" ngbScrollSpyFragment="resources">Resources</h4>
-    <div class="row">
+    <div class="px-3 row g-5">
         <div class="col-6">
             <h5 class ="mb-0" ngbScrollSpyFragment="hp">HP</h5>
             <p class="header-subscript">Keyword: [HP]</p>
@@ -50,6 +50,7 @@
             <p class="header-subscript">Keyword: [ARCANA]</p>
             <app-dynamic-content [content]="arcanaDescription | keywordProcessor"></app-dynamic-content>
         </div>
+    </div>
     <h4 class="mt-3" ngbScrollSpyFragment="defensive-values">Defensive Values</h4>
     <app-dynamic-content [content]="defensesDescription | keywordProcessor"></app-dynamic-content>
 
@@ -59,7 +60,7 @@
     <h6 class ="mb-0 mt-1" ngbScrollSpyFragment="save">Save Bonus:</h6>
     <app-dynamic-content [content]="saveBonusDescription | keywordProcessor"></app-dynamic-content>
 
-    <div class="row">
+    <div class="px-3 row g-5">
         <div class="col-6">
             <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="hardness">Hardness</h5>
             <p class="header-subscript">Keyword: [HARDNESS]</p>

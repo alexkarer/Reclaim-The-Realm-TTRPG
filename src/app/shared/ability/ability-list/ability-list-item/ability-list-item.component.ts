@@ -1,22 +1,27 @@
 import { Component, Input } from '@angular/core';
-import { DynamicContentComponent } from '../dynamic-component-rendering/dynamic-content.component';
-import { KeywordProcessorPipe } from '../text-transformer/text-transformer';
-import { Ability } from '../../../../ttrpg_resources/shared/Ability';
-import { RequirementsPrettierPipe } from "../utils/to-pretty-string";
-import { MartialManeuver } from '../../../../ttrpg_resources/martial_maneuvers/martial-maneuvers';
-import { Spell } from '../../../../ttrpg_resources/spells/spells';
-import { HybridAbility } from '../../../../ttrpg_resources/hybrid_abilities/hybrid_abilities';
+import { Ability } from '../../../../../../ttrpg_resources/shared/Ability';
+import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
+import { RequirementsPrettierPipe } from "../../../utils/to-pretty-string";
+import { MartialManeuver } from '../../../../../../ttrpg_resources/martial_maneuvers/martial-maneuvers';
+import { Spell } from '../../../../../../ttrpg_resources/spells/spells';
+import { HybridAbility } from '../../../../../../ttrpg_resources/hybrid_abilities/hybrid_abilities';
+import { DynamicContentComponent } from "../../../dynamic-component-rendering/dynamic-content.component";
+import { KeywordProcessorPipe } from "../../../text-transformer/text-transformer";
 
 @Component({
-  selector: 'app-ability',
+  selector: 'app-ability-list-item',
   standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, RequirementsPrettierPipe],
-  templateUrl: './ability.component.html',
-  styleUrl: './ability.component.scss'
+  imports: [NgbCollapse, RequirementsPrettierPipe, DynamicContentComponent, KeywordProcessorPipe],
+  templateUrl: './ability-list-item.component.html',
+  styleUrl: './ability-list-item.component.scss'
 })
-export class AbilityComponent {
-
+export class AbilityListItemComponent {
   @Input() public ability?: Ability;
+  public isCollapsed = true;
+
+  public isMartialManeuver(): boolean {
+    return (this.ability instanceof MartialManeuver);
+  }
 
   public isMartialManeuverAndHasPush(): boolean {
     if (this.ability instanceof MartialManeuver) {

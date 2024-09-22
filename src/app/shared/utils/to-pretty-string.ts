@@ -8,7 +8,7 @@ import { AttributeRequirement, LevelRequirement, Requirements } from '../../../.
 export class RequirementsPrettierPipe implements PipeTransform {
     transform(requirements: Requirements | undefined): string {
         if (!requirements) {
-            return 'Requirements: -';
+            return '-';
         }
         let requirementsPrettyString = '';
         if (requirements?.requiredLevels?.length !== 0) {
@@ -39,7 +39,7 @@ export class RequirementsPrettierPipe implements PipeTransform {
         if (requirementsPrettyString === '') {
             requirementsPrettyString = '-';
         }
-        return 'Requirements: ' + requirementsPrettyString;
+        return requirementsPrettyString;
     }
 }
 

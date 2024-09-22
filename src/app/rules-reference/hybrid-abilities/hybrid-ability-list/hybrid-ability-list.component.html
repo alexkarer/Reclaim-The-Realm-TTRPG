@@ -1,43 +1,10 @@
 <div class="ms-2">
     <h4 class="mb-2">Elemental Hybrid Abilities</h4>
-    <div class="row">
-        <div class="col-6">
-            @for (hybridAbility of elementalHybridAbilitiesLeft; track $index) {
-                <app-ability [ability]="hybridAbility"></app-ability>
-            }
-        </div>
-        <div class="col-6">
-            @for (hybridAbility of elementalHybridAbilitiesRight; track $index) {
-                <app-ability [ability]="hybridAbility"></app-ability>
-            }
-        </div>
-    </div>
+    <app-ability-list [abilities]="elementalHybridAbilities"></app-ability-list>
 
     <h4 class="mb-2">Cosmic Hybrid Abilities</h4>
-    <div class="row">
-        <div class="col-6">
-            @for (hybridAbility of cosmicHybridAbilitiesLeft; track $index) {
-                <app-ability [ability]="hybridAbility"></app-ability>
-            }
-        </div>
-        <div class="col-6">
-            @for (hybridAbility of cosmicHybridAbilitiesRight; track $index) {
-                <app-ability [ability]="hybridAbility"></app-ability>
-            }
-        </div>
-    </div>
+    <app-ability-list [abilities]="cosmicHybridAbilities"></app-ability-list>
 
     <h4 class="mb-2">Manipulation Hybrid Abilities</h4>
-    <div class="row">
-        <div class="col-6">
-            @for (hybridAbility of manipulationHybridAbilitiesLeft; track $index) {
-                <app-ability [ability]="hybridAbility"></app-ability>
-            }
-        </div>
-        <div class="col-6">
-            @for (hybridAbility of manipulationHybridAbilitiesRight; track $index) {
-                <app-ability [ability]="hybridAbility"></app-ability>
-            }
-        </div>
-    </div>
+    <app-ability-list [abilities]="manipulationHybridAbilities"></app-ability-list>
 </div>

@@ -1,11 +1,11 @@
 <div>
-    <div class="row">
-        <div class="col-6">
+    <div class="px-3 row g-5">
+        <div class="col">
             @for (attribute of attributesLeft; track $index) {
                 <app-attribute [attribute]="attribute"></app-attribute>
             }
         </div>
-        <div class="col-6">
+        <div class="col">
             @for (attribute of attributesRight; track $index) {
                 <app-attribute [attribute]="attribute"></app-attribute>
             }
