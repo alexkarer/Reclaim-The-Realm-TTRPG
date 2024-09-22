@@ -17,7 +17,7 @@
             "range": "[MELLE]",
             "target": "1 creature that is 2 sizes larger than you",
             "duration": "[INSTANT]",
-            "description": "You attempt to climb up on a to deal more damage effectively. Make an [AGI] or [STR] (your choice) [ATHLETICS] [SKILL TEST] against the target’s [DODGE] . On a success you are now mounted on top of the creature which has the following effects.:<br>One hand is always occupied with holding on to the creature<br>Any [MARTIAL MELEE ATTACK] that is not a critical miss automatically hits the target and the required roll for a critical is 1 lower.<br>ou can’t be targeted by the creature you are currently on, on it’s turn however it can attempt to shake you of by spending 1 [AP] and you have to succeed on a [HARDNESS SAVE] against the creature’s Melee Attack Bonus+10. On a fail you are thrown away a number of meters equal to the creatures [STR] and might recieve fall damage as a result."
+            "description": "You attempt to climb up on a to deal more damage effectively. Make an [AGI] or [STR] Athletics [SKILL TEST] against the target’s [DODGE] . On a success you are now mounted on top of the creature which has the following effects.:<br>One hand is always occupied with holding on to the creature<br>Any [MELEE MARTIAL ATTACK] that is not a critical miss automatically hits the target and the required roll for a critical is 1 lower.<br>ou can’t be targeted by the creature you are currently on, on it’s turn however it can attempt to shake you of by spending 1 [AP] and you have to succeed on a [HARDNESS] [SAVE] against the creature’s Melee Attack Bonus+10. On a fail you are thrown away a number of meters equal to the creatures [STR] and might recieve fall damage as a result."
         }
     ],
     "brawlManeuvers": [
@@ -161,7 +161,7 @@
             "description": "You can treat your shield like a thrown weapon and make a [RANGED MARTIAL ATTACK] with it and afterwards it bounces back towards you regardless if the [RANGED MARTIAL ATTACK] hits or not. The shield has a range of 6m/12m/24m and deals 1d8 + [STR] physical damage to the target on a hit.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "If your [RANGED MARTIALATTACK] hits the first Target, it bounces towards another target within 4.5m of the orginal target, make a second [RANGED MARTIAL ATTACK] against that target and on a hit it recieves half the damage."
+                "pushingDescription": "If your [RANGED MARTIAL ATTACK] hits the first Target, it bounces towards another target within 4.5m of the orginal target, make a second [RANGED MARTIAL ATTACK] against that target and on a hit it recieves half the damage."
             }
         },
         {

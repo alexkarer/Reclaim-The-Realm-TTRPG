@@ -1,113 +1,118 @@
-<div class="row">
-	<div class="col-2">
-		<nav [ngbScrollSpyMenu]="spy" class="flex-column align-items-stretch pe-4 border-end navbar-nav-scroll">
+<!-- Offcanvas Table of Contents-->
+<ng-template #content let-offcanvas>
+	<div class="offcanvas-header">
+		<h4 class="offcanvas-title">Table of Contents</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+	</div>
+	<nav [ngbScrollSpyMenu]="spy" class="table-of-contents">
+		<nav class="nav nav-pills flex-column">
+			<a role="button" class="nav-link" ngbScrollSpyItem="reclaim-the-realm">Reclaim The Realm</a>
 			<nav class="nav nav-pills flex-column">
-				<a role="button" class="nav-link" ngbScrollSpyItem="reclaim-the-realm">Reclaim The Realm</a>
-				<nav class="nav nav-pills flex-column">
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="core-gameplay" parent="reclaim-the-realm">Core Gameplay</a>
-				</nav>
-		
-				<a role="button" class="nav-link" ngbScrollSpyItem="character-overview">Character Overview</a>
-				<nav class="nav nav-pills flex-column">
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="attributes" parent="character-overview">Attributes</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="important-characteristics" parent="character-overview">Important Characteristics</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="skills" parent="character-overview">Skills</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="progression" parent="character-overview">Progression</a>
-				</nav>
-		
-				<a role="button" class="nav-link" ngbScrollSpyItem="classes">Classes</a>
-				<nav class="nav nav-pills flex-column">
-				</nav>
-		
-				<a role="button" class="nav-link" ngbScrollSpyItem="martial-maneuvers">Martial Maneuvers</a>
-				<nav class="nav nav-pills flex-column">
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="basic-martial-maneuvers" parent="martial-maneuvers">Basic Martial Maneuvers</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="advanced-martial-maneuvers" parent="martial-maneuvers">Advanced Martial Maneuvers</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="master-martial-maneuvers" parent="martial-maneuvers">Master Martial Maneuvers</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="transcendent-martial-maneuvers" parent="martial-maneuvers">Transcendent Martial Maneuvers</a>
-				</nav>
-		
-				<a role="button" class="nav-link" ngbScrollSpyItem="spells">Spells</a>
-				<nav class="nav nav-pills flex-column">
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="1st-power-spells" parent="spells">First Power Spells</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="2nd-power-spells" parent="spells">Second Power Spells</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="3rd-power-spells" parent="spells">Third Power Spells</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="4th-power-spells" parent="spells">Fourth Power Spells</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="5th-power-spells" parent="spells">Fifth Power Spells</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="6th-power-spells" parent="spells">Sixth Power Spells</a>
-				</nav>
-		
-				<a role="button" class="nav-link" ngbScrollSpyItem="hybrid-abilities">Hybrid Abilities</a>
-				<nav class="nav nav-pills flex-column">
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="novice-hybrid" parent="hybrid-abilitie">Novice Hybrid Abilities</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="advanced-hybrid" parent="hybrid-abilitie">Advanced Hybrid Abilities</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="master-hybrid" parent="hybrid-abilitie">Master Hybrid Abilities</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="martial-hybrid" parent="hybrid-abilitie">Martial Focused Hybrid Abilitiess</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="spell-hybrid" parent="hybrid-abilitie">Spell Focused Hybrid Abilities</a>
-				</nav>
-		
-				<a role="button" class="nav-link" ngbScrollSpyItem="perks">Perks</a>
-				<nav class="nav nav-pills flex-column">
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="crafting-perks" parent="perks">Crafting Perks</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="defensive-perks" parent="perks">Defensive Perks</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="martial-perks" parent="perks">Martial Perks</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="skill-perks" parent="perks">Skill Perks</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="spellcasting-perks" parent="perks">Spellcasting Perks</a>
-					<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="other-perks" parent="perks">Other Perks</a>
-				</nav>
-		
-				<a role="button" class="nav-link" ngbScrollSpyItem="equipment">Equipment</a>
-				<nav class="nav nav-pills flex-column">
-				</nav>
-		
-				<a role="button" class="nav-link" ngbScrollSpyItem="adventuring">Adventuring</a>
-				<nav class="nav nav-pills flex-column">
-				</nav>
-		
-				<a role="button" class="nav-link" ngbScrollSpyItem="combat">Combat</a>
-				<nav class="nav nav-pills flex-column">
-				</nav>
-		
-				<a role="button" class="nav-link" ngbScrollSpyItem="toolbox">Toolbox</a>
-				<nav class="nav nav-pills flex-column">
-				</nav>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="core-gameplay" parent="reclaim-the-realm">Core Gameplay</a>
 			</nav>
-		</nav>		
-	</div>
-	<div class="col-10">
-		<div ngbScrollSpy #spy="ngbScrollSpy" class="p-3 rounded-2 mb-3 rules-body">
-			<h1 ngbScrollSpyFragment="reclaim-the-realm">Reclaim The Realm</h1>
-			<app-rules-overview/>
+	
+			<a role="button" class="nav-link" ngbScrollSpyItem="character-overview">Character Overview</a>
+			<nav class="nav nav-pills flex-column">
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="attributes" parent="character-overview">Attributes</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="important-characteristics" parent="character-overview">Important Characteristics</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="skills" parent="character-overview">Skills</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="progression" parent="character-overview">Progression</a>
+			</nav>
+	
+			<a role="button" class="nav-link" ngbScrollSpyItem="classes">Classes</a>
+			<nav class="nav nav-pills flex-column">
+			</nav>
+	
+			<a role="button" class="nav-link" ngbScrollSpyItem="martial-maneuvers">Martial Maneuvers</a>
+			<nav class="nav nav-pills flex-column">
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="basic-martial-maneuvers" parent="martial-maneuvers">Basic Martial Maneuvers</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="advanced-martial-maneuvers" parent="martial-maneuvers">Advanced Martial Maneuvers</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="master-martial-maneuvers" parent="martial-maneuvers">Master Martial Maneuvers</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="transcendent-martial-maneuvers" parent="martial-maneuvers">Transcendent Martial Maneuvers</a>
+			</nav>
+	
+			<a role="button" class="nav-link" ngbScrollSpyItem="spells">Spells</a>
+			<nav class="nav nav-pills flex-column">
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="1st-power-spells" parent="spells">First Power Spells</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="2nd-power-spells" parent="spells">Second Power Spells</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="3rd-power-spells" parent="spells">Third Power Spells</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="4th-power-spells" parent="spells">Fourth Power Spells</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="5th-power-spells" parent="spells">Fifth Power Spells</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="6th-power-spells" parent="spells">Sixth Power Spells</a>
+			</nav>
+	
+			<a role="button" class="nav-link" ngbScrollSpyItem="hybrid-abilities">Hybrid Abilities</a>
+			<nav class="nav nav-pills flex-column">
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="novice-hybrid" parent="hybrid-abilitie">Novice Hybrid Abilities</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="advanced-hybrid" parent="hybrid-abilitie">Advanced Hybrid Abilities</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="master-hybrid" parent="hybrid-abilitie">Master Hybrid Abilities</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="martial-hybrid" parent="hybrid-abilitie">Martial Focused Hybrid Abilitiess</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="spell-hybrid" parent="hybrid-abilitie">Spell Focused Hybrid Abilities</a>
+			</nav>
+	
+			<a role="button" class="nav-link" ngbScrollSpyItem="perks">Perks</a>
+			<nav class="nav nav-pills flex-column">
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="crafting-perks" parent="perks">Crafting Perks</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="defensive-perks" parent="perks">Defensive Perks</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="martial-perks" parent="perks">Martial Perks</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="skill-perks" parent="perks">Skill Perks</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="spellcasting-perks" parent="perks">Spellcasting Perks</a>
+				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="other-perks" parent="perks">Other Perks</a>
+			</nav>
+	
+			<a role="button" class="nav-link" ngbScrollSpyItem="equipment">Equipment</a>
+			<nav class="nav nav-pills flex-column">
+			</nav>
+	
+			<a role="button" class="nav-link" ngbScrollSpyItem="adventuring">Adventuring</a>
+			<nav class="nav nav-pills flex-column">
+			</nav>
+	
+			<a role="button" class="nav-link" ngbScrollSpyItem="combat">Combat</a>
+			<nav class="nav nav-pills flex-column">
+			</nav>
+	
+			<a role="button" class="nav-link" ngbScrollSpyItem="toolbox">Toolbox</a>
+			<nav class="nav nav-pills flex-column">
+			</nav>
+		</nav>
+	</nav>
+</ng-template>
 
-			<h2 class="pt-3" ngbScrollSpyFragment="character-overview">Character Overview</h2>
-			<app-character-overview/>
+<div class="table-of-contents-btn-wrapper">
+	<button class="btn btn-outline-primary" (click)="openTableOfContents(content)">Open Table of Contents</button>
+</div>
+<div ngbScrollSpy #spy="ngbScrollSpy" class="rules-body">
+	<h1 ngbScrollSpyFragment="reclaim-the-realm">Reclaim The Realm</h1>
+	<app-rules-overview/>
 
-			<h2 class="pt-3" ngbScrollSpyFragment="classes">Classes</h2>
-			<app-classes/>
+	<h2 class="pt-3" ngbScrollSpyFragment="character-overview">Character Overview</h2>
+	<app-character-overview/>
 
-			<h2 class="pt-3" ngbScrollSpyFragment="martial-maneuvers">Martial Maneuvers</h2>
-			<app-martial-maneuvers/>
+	<h2 class="pt-3" ngbScrollSpyFragment="classes">Classes</h2>
+	<app-classes/>
 
-			<h2 class="pt-3" ngbScrollSpyFragment="spells">Spells</h2>
-			<app-spells/>
+	<h2 class="pt-3" ngbScrollSpyFragment="martial-maneuvers">Martial Maneuvers</h2>
+	<app-martial-maneuvers/>
 
-			<h2 class="pt-3" ngbScrollSpyFragment="hybrid-abilities">Hybrid Abilities</h2>
-			<app-hybrid-abilities/>
-			
-            <h2 class="pt-3" ngbScrollSpyFragment="perks">Perks</h2>
-			<app-perk-list/>
+	<h2 class="pt-3" ngbScrollSpyFragment="spells">Spells</h2>
+	<app-spells/>
 
-			<h2 class="pt-3" ngbScrollSpyFragment="equipment">Equipment</h2>
-			<app-equipment/>
+	<h2 class="pt-3" ngbScrollSpyFragment="hybrid-abilities">Hybrid Abilities</h2>
+	<app-hybrid-abilities/>
 
-			<h2 class="pt-3" ngbScrollSpyFragment="adventuring">Adventuring</h2>
-			<app-adventuring/>
+	<h2 class="pt-3" ngbScrollSpyFragment="perks">Perks</h2>
+	<app-perk-list/>
 
-			<h2 class="pt-3" ngbScrollSpyFragment="combat">Combat</h2>
-			<app-combat/>
+	<h2 class="pt-3" ngbScrollSpyFragment="equipment">Equipment</h2>
+	<app-equipment/>
 
-			<h2 class="pt-3" ngbScrollSpyFragment="toolbox">Toolbox</h2>
-			<app-toolbox/>
-		</div>
-	</div>
+	<h2 class="pt-3" ngbScrollSpyFragment="adventuring">Adventuring</h2>
+	<app-adventuring/>
+
+	<h2 class="pt-3" ngbScrollSpyFragment="combat">Combat</h2>
+	<app-combat/>
+
+	<h2 class="pt-3" ngbScrollSpyFragment="toolbox">Toolbox</h2>
+	<app-toolbox/>
 </div>

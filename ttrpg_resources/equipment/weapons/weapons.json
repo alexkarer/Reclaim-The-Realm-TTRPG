@@ -5,13 +5,28 @@
             "tier": 1,
             "craftingSkill": "Smith’s Tools",
             "cost": "2 gc",
-            "weightInGram": "500",
+            "weightInGram": 500,
             "type": "Simple Weapon",
             "description": "A small simple short blade favoured by assasin’s and those looking to conceil their weapon.",
             "properties": [ "light, thrown(4.5/9/18)" ],
+            "damageDice": "d6",
+            "weaponType": "Melee",
+            "canAddStrToDamage": true
+        }
+    ],
+    "advancedWeapons": [
+        {
+            "name": "",
+            "tier": 0,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "",
+            "weightInGram": 0,
+            "type": "",
+            "description": "",
+            "properties": [ "" ],
             "damageDice": "",
-            "weaponType": "",
-            "canAddStrToDamage": false
+            "weaponType": "Melee",
+            "canAddStrToDamage": true
         }
     ]
 }

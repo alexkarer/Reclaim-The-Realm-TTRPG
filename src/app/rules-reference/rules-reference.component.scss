@@ -1,3 +1,17 @@
+@import 'bootstrap/scss/bootstrap';
+
+.table-of-contents {
+    @extend .navbar-nav-scroll;
+    @extend .bg-secondary-subtle;
+    --bs-scroll-height: 94vh;
+}
+
+.table-of-contents-btn-wrapper {
+    height: 6vh;
+}
+
 .rules-body {
-    height: 85vh;
+    @extend .px-2;
+    height: 88vh;
+    overflow-x: hidden;
 }

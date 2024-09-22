@@ -11,8 +11,8 @@ export class KeywordProcessorPipe implements PipeTransform {
             return [];
         }
         let content: ContentPart[] = [];
-        content.concat(processKeywords(text));
-        return content;
+        content.push(...processKeywords(text));
+        return processKeywords(text);
     }
 }
 
@@ -32,10 +32,7 @@ function processKeywords(text: string): ContentPart[] {
         }
 
         let fullKeyword = text.substring(keywordIndex + 1, text.indexOf(']', keywordIndex))
-        let keywordContent = keywordToContentPart(fullKeyword);
-        if (keywordContent) {
-            parts.push(keywordContent);
-        }
+        parts.push(keywordToContentPart(fullKeyword));
         
         lastKeywordIndex = text.indexOf(']', keywordIndex) + 1;
     }
@@ -48,7 +45,7 @@ function processKeywords(text: string): ContentPart[] {
     return parts;
 }
 
-function keywordToContentPart(keyword: string): ContentPart | undefined {
+function keywordToContentPart(keyword: string): ContentPart {
     switch(keyword) {
         // ********************** ATTRIBUTES **********************
         case 'STR':
@@ -222,7 +219,7 @@ function keywordToContentPart(keyword: string): ContentPart | undefined {
             return generateGenericKeyword('[MAGIC IMMUNITY]', 'TODO', '');
         default:
             console.error('Unrecognized keyword: ' + keyword);
-            return undefined;
+            return {type: 'text', text: ''};
     }
 }
 

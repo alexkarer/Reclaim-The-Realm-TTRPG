@@ -1,5 +1,5 @@
 import { DiceExpression } from "../../shared/Dice";
-import { Equipment } from "../equipment";
+import { Cost, Equipment } from "../equipment";
 
 export class Weapon extends Equipment {
     properties!: WeaponProperty[];
@@ -117,6 +117,30 @@ export enum WeaponPropertyType {
 }
 
 export enum WeaponType {
-    MELEE = "melee",
-    RANGED = "ranged"
+    MELEE = "Melee",
+    RANGED = "Ranged"
+}
+
+import weaponsJson from './weapons.json';
+
+type CombinedWeaponsJson = typeof weaponsJson.simpleWeapons[0] | typeof weaponsJson.advancedWeapons[0];
+
+export const simpleWeapons: Weapon[] = weaponsJson.simpleWeapons.map(json => map(json));
+export const advancedWeapons: Weapon[] = weaponsJson.advancedWeapons.map(json => map(json));
+
+function map(weaponJson: CombinedWeaponsJson): Weapon {
+    let weapon = new Weapon();
+    weapon.name = weaponJson.name;
+    weapon.tier = weaponJson.tier;
+    weapon.craftingSkill = weaponJson.craftingSkill;
+    weapon.cost = Cost.of(weaponJson.cost);
+    weapon.weightInGram = weaponJson.weightInGram;
+    weapon.type = weaponJson.type;
+    weapon.description = weaponJson.description;
+    weapon.properties
+    weapon.damageDice
+    weapon.weaponType
+    weapon.canAddStrToDamage = weaponJson.canAddStrToDamage;
+
+    return weapon;
 }

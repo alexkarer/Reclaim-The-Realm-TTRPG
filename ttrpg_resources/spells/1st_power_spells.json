@@ -362,7 +362,7 @@
                     "otherRequirements": [ "[SPELL LEVEL] > 0" ]
                 },
                 "cost": "3 [AP]", "range": "9m", "target": "-", "duration": "[SPI] minutes [CONCENTRATION] 1",
-                "description": "You create a silent unmoving illusary image of your choice that fits in a [SPI] / 2 m Cube. Make a [INT] [SPELL TEST] if other creatures are present, if your test is higher than the other creatures passive [INT] [INVESTIGATION] than they percieve the Illusion as real. If they later examine the Illusion and find obvious flaws in it, then they also stop percieving the Illusion as real.",
+                "description": "You create a silent unmoving illusary image of your choice that fits in a [SPI] / 2 m Cube. Make a [INT] [SPELL TEST] if other creatures are present, if your test is higher than the other creatures passive [INT] Investigation than they percieve the Illusion as real. If they later examine the Illusion and find obvious flaws in it, then they also stop percieving the Illusion as real.",
                 "atHigherSpellPower": "If you cast this spell as a second power spell you can make the image move but it can’t be further than 21m (14 squares) away from you. If cast at 3rd power you can add sound to the Illusion."
             }
         ],

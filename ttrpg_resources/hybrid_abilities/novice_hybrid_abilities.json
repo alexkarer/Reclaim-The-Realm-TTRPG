@@ -9,7 +9,7 @@
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
             "cost": "1 [AP], 1 [ARCANA]", "range": "-", "target": "Weapon you are holding", "duration": "[SPI] rounds, [CONCENTRATION] 0",
-            "description": "You enchant one weapon that you are currently wielding. Each [MARTIAL MELEE ATTACK] made with this weapon deals 1d6 extra fire damage."
+            "description": "You enchant one weapon that you are currently wielding. Each [MELEE MARTIAL ATTACK] made with this weapon deals 1d6 extra fire damage."
         },
         {
             "name": "Booming Strike",
@@ -57,7 +57,7 @@
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
             "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one target, [LINE]*", "duration": "[INSTANT]",
-            "description": "You launch your weapon at an enemy with the aid of Telekinetic Force. Make a Weapon [RANGED MARTIAL ATTACK] or [RANGED SPELL ATTACK] (your choice) against the Target. On hit the target recieves damage of your regular weapon damage + [SPI] . Additionally every enemy that is on a straight line from you and your target can be hit by the Weapons return path. Make a [INT] [SPELLCASTING TEST] against their [DODGE] on a success they recieve damage equal to the weapons base damage (in case of versatile weapon, the versitile damage is used)."
+            "description": "You launch your weapon at an enemy with the aid of Telekinetic Force. Make a Weapon [RANGED MARTIAL ATTACK] or [RANGED SPELL ATTACK] (your choice) against the Target. On hit the target recieves damage of your regular weapon damage + [SPI] . Additionally every enemy that is on a straight line from you and your target can be hit by the Weapons return path. Make a [INT] [SPELL TEST] against their [DODGE] on a success they recieve damage equal to the weapons base damage (in case of versatile weapon, the versitile damage is used)."
         },
         {
             "name": "Teleport Strike",

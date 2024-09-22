@@ -17,7 +17,7 @@ export class Cost {
         this.currency = currency;
     }
 
-    static of(rawString: string): Cost | undefined {
+    static of(rawString: string): Cost {
         let amountString = rawString.substring(0, rawString.indexOf(" "));
         let amount = Number.parseFloat(amountString);
 
@@ -25,7 +25,7 @@ export class Cost {
             case "bc": return new Cost(amount, Currency.BC);
             case "sc": return new Cost(amount, Currency.SC);
             case "gc": return new Cost(amount, Currency.GC);
-            default: return undefined;
+            default: return new Cost(0, Currency.BC);
         }
     }
 

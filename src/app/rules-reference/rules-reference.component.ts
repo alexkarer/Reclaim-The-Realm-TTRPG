@@ -1,5 +1,5 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { NgbScrollSpy, NgbScrollSpyMenu, NgbScrollSpyItem, NgbScrollSpyFragment  } from '@ng-bootstrap/ng-bootstrap';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, TemplateRef } from '@angular/core';
+import { NgbScrollSpy, NgbScrollSpyMenu, NgbScrollSpyItem, NgbScrollSpyFragment, NgbOffcanvas  } from '@ng-bootstrap/ng-bootstrap';
 import { PerkListComponent } from "./perk-list/perk-list.component";
 import { SkillListComponent } from './character-overview/skill-list/skill-list.component';
 import { CharacterOverviewComponent } from "./character-overview/character-overview.component";
@@ -32,4 +32,9 @@ import { ToolboxComponent } from "./toolbox/toolbox.component";
 })
 export class RulesReferenceComponent {
 
+  private offcanvasService = inject(NgbOffcanvas);
+  
+  openTableOfContents(content: TemplateRef<any>) {
+		this.offcanvasService.open(content, { scroll: true });
+	}
 }
