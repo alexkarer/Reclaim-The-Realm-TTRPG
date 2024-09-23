@@ -6,6 +6,18 @@ export class Weapon extends Equipment {
     damageDice!: DiceExpression;
     weaponType!: WeaponType;
     canAddStrToDamage!: boolean;
+
+    getPrettyPropertiesString(): string {
+        if (this.properties.length == 0) {
+            return '-';
+        } else {
+            return this.properties.join(', ');
+        }
+    }
+    
+    getPrettyDamageString(): string {
+        return this.damageDice.getPrettyString() + (this.canAddStrToDamage ? ' + [STR]' : '');
+    }
 }
 
 export class WeaponProperty {
@@ -137,10 +149,20 @@ function map(weaponJson: CombinedWeaponsJson): Weapon {
     weapon.weightInGram = weaponJson.weightInGram;
     weapon.type = weaponJson.type;
     weapon.description = weaponJson.description;
-    weapon.properties
-    weapon.damageDice
-    weapon.weaponType
+    weapon.properties = weaponJson.properties.map(json => WeaponProperty.of(json)).filter(json => json !== undefined);
+    weapon.damageDice = DiceExpression.of(weaponJson.damageDice);
     weapon.canAddStrToDamage = weaponJson.canAddStrToDamage;
+
+    switch(weaponJson.weaponType.toLowerCase()) {
+        case 'melee':
+            weapon.weaponType = WeaponType.MELEE;
+            break;
+        case 'ranged':
+            weapon.weaponType = WeaponType.RANGED;
+            break;
+        default:
+            console.error('Unrecognized WeaponType: ' + weaponJson.weaponType);
+    }
 
     return weapon;
 }

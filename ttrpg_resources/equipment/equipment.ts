@@ -6,6 +6,16 @@ export class Equipment {
     weightInGram!: number;
     type!: string;
     description!: string;
+
+    getPrettyWeightString(): string {
+        if (this.weightInGram <= 0) {
+            return '-';
+        } else if (this.weightInGram < 100) {
+            return this.weightInGram + ' g';
+        } else {
+            return Math.round(this.weightInGram * 10) / 1000 + ' kg';
+        }
+    }
 }
 
 export class Cost {

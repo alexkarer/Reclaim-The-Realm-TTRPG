@@ -91,24 +91,30 @@
         <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="size">SIZE</h5>
         <p class="header-subscript">Keyword: [SIZE]</p>
         <app-dynamic-content [content]="sizeDescription | keywordProcessor"></app-dynamic-content>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Size</th>
-                    <th scope="col">[STR] Bonus</th>
-                    <th scope="col">[DODGE] Bonus</th>
-                    <th scope="col">Other size modifiers</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for (size of sizes; track $index) {
-                    <tr>
-                        <td>{{ size.name }}</td>
-                        <td>{{ size.strengthBonus }}</td>
-                        <td>{{ size.dodgeBonus }}</td>
-                        <td>{{ size.otherSizeModifications }}</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Size</th>
+                            <th scope="col">[STR] Bonus</th>
+                            <th scope="col">[DODGE] Bonus</th>
+                            <th scope="col">Other size modifiers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (size of sizes; track $index) {
+                            <tr>
+                                <td>{{ size.name }}</td>
+                                <td>{{ size.strengthBonus }}</td>
+                                <td>{{ size.dodgeBonus }}</td>
+                                <td>{{ size.otherSizeModifications }}</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
 </div>
