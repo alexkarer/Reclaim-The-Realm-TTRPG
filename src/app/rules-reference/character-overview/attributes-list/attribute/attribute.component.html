@@ -1,46 +1,48 @@
-<h4 class = "mb-0" [ngbScrollSpyFragment]="attributeName">{{ attributeName }}</h4>
-<p class="header-subscript">Keyword: {{ attribute?.keyword}}</p>
-<app-dynamic-content [content]="attribute?.fulldescription | keywordProcessor"></app-dynamic-content>
-<h5>Milestone Benefits:</h5>
-<ul>
-    <li>
-        <div class="row">
-            <div class="col-auto pe-1">
-                <span class="fw-bold">-1 or lower: </span>
+<div class="p-2 border bg-body-tertiary mb-3">
+    <h4 class = "mb-0" [ngbScrollSpyFragment]="attributeName">{{ attributeName }}</h4>
+    <p class="header-subscript">Keyword: {{ attribute?.keyword}}</p>
+    <app-dynamic-content [content]="attribute?.fulldescription | keywordProcessor"></app-dynamic-content>
+    <h5>Milestone Benefits:</h5>
+    <ul>
+        <li>
+            <div class="row">
+                <div class="col-auto pe-1">
+                    <span class="fw-bold">-1 or lower: </span>
+                </div>
+                <div class="col px-0">
+                    <app-dynamic-content [content]="attribute?.milestoneBenefits?.minus1OrLower | keywordProcessor"></app-dynamic-content>
+                </div>
             </div>
-            <div class="col px-0">
-                <app-dynamic-content [content]="attribute?.milestoneBenefits?.minus1OrLower | keywordProcessor"></app-dynamic-content>
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-auto pe-1">
+                    <span class="fw-bold">4 or higher: </span>
+                </div>
+                <div class="col px-0">
+                    <app-dynamic-content [content]="attribute?.milestoneBenefits?.['4orHigher'] | keywordProcessor"></app-dynamic-content>
+                </div>
             </div>
-        </div>
-    </li>
-    <li>
-        <div class="row">
-            <div class="col-auto pe-1">
-                <span class="fw-bold">4 or higher: </span>
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-auto pe-1">
+                    <span class="fw-bold">7 or higher: </span>
+                </div>
+                <div class="col px-0">
+                    <app-dynamic-content [content]="attribute?.milestoneBenefits?.['7orHigher'] | keywordProcessor"></app-dynamic-content>
+                </div>
             </div>
-            <div class="col px-0">
-                <app-dynamic-content [content]="attribute?.milestoneBenefits?.['4orHigher'] | keywordProcessor"></app-dynamic-content>
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-auto pe-1">
+                    <span class="fw-bold">10 or higher: </span>
+                </div>
+                <div class="col px-0">
+                    <app-dynamic-content [content]=" attribute?.milestoneBenefits?.['10orHigher'] | keywordProcessor"></app-dynamic-content>
+                </div>
             </div>
-        </div>
-    </li>
-    <li>
-        <div class="row">
-            <div class="col-auto pe-1">
-                <span class="fw-bold">7 or higher: </span>
-            </div>
-            <div class="col px-0">
-                <app-dynamic-content [content]="attribute?.milestoneBenefits?.['7orHigher'] | keywordProcessor"></app-dynamic-content>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="row">
-            <div class="col-auto pe-1">
-                <span class="fw-bold">10 or higher: </span>
-            </div>
-            <div class="col px-0">
-                <app-dynamic-content [content]=" attribute?.milestoneBenefits?.['10orHigher'] | keywordProcessor"></app-dynamic-content>
-            </div>
-        </div>
-    </li>
-</ul>
+        </li>
+    </ul>
+</div>

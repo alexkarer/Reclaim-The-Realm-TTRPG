@@ -11,6 +11,6 @@ import { halveArray } from '../../../shared/utils/array-utils';
   styleUrl: './attributes-list.component.scss'
 })
 export class AttributesListComponent {
-  public attributesLeft: Attribute[] = halveArray(attributes)[0];
-  public attributesRight: Attribute[] = halveArray(attributes)[1];
+  public attributesLeft: Attribute[] = attributes.slice(0,3);
+  public attributesRight: Attribute[] = attributes.slice(3,7);
 }

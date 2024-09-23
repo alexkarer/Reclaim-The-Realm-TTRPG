@@ -13,7 +13,7 @@ export class Equipment {
         } else if (this.weightInGram < 100) {
             return this.weightInGram + ' g';
         } else {
-            return Math.round(this.weightInGram * 10) / 1000 + ' kg';
+            return Math.round(this.weightInGram * 10) / 10000 + ' kg';
         }
     }
 }

@@ -30,22 +30,33 @@
         <h4 class="mb-0 mt-3">Spell Tests</h4>
         <div>
             <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.spellcastingTestsdescription | keywordProcessor"></app-dynamic-content>
-
-            <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="spell-test">Spell Test</h5>
-            <p class="header-subscript">Keyword: [SPELL TEST]</p>
-            <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.spellTestDescription | keywordProcessor"></app-dynamic-content>
-
-            <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="melee-spell-attack">Melee Spell Attack</h5>
-            <p class="header-subscript">Keyword: [MELEE SPELL AtTACK]</p>
-            <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.meleeSpellAttackDescription | keywordProcessor"></app-dynamic-content>
-
-            <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="ranged-spell-attack">Ranged Spell Attack</h5>
-            <p class="header-subscript">Keyword: [RANGED SPELL ATTACK]</p>
-            <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.rangedSpellAttackDescription | keywordProcessor"></app-dynamic-content>
-
-            <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="concentration-test">Concentration Test</h5>
-            <p class="header-subscript">Keyword: [CONCENTRATION TEST]</p>
-            <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.concentrationTestDescription | keywordProcessor"></app-dynamic-content>
+            
+            <div class="row">
+                <div class="col-6">
+                    <div class ="p-2 border bg-body-tertiary mt-3">
+                        <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="spell-test">Spell Test</h5>
+                        <p class="header-subscript">Keyword: [SPELL TEST]</p>
+                        <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.spellTestDescription | keywordProcessor"></app-dynamic-content>
+                    </div>
+                    <div class ="p-2 border bg-body-tertiary mt-3">
+                        <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="melee-spell-attack">Melee Spell Attack</h5>
+                        <p class="header-subscript">Keyword: [MELEE SPELL ATTACK]</p>
+                        <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.meleeSpellAttackDescription | keywordProcessor"></app-dynamic-content>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class ="p-2 border bg-body-tertiary mt-3">
+                        <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="ranged-spell-attack">Ranged Spell Attack</h5>
+                        <p class="header-subscript">Keyword: [RANGED SPELL ATTACK]</p>
+                        <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.rangedSpellAttackDescription | keywordProcessor"></app-dynamic-content>
+                    </div>
+                    <div class ="p-2 border bg-body-tertiary mt-3">
+                        <h5 class = "mb-2 mt-3" ngbScrollSpyFragment="concentration-test">Concentration Test</h5>
+                        <p class="header-subscript">Keyword: [CONCENTRATION TEST]</p>
+                        <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.concentrationTestDescription | keywordProcessor"></app-dynamic-content>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <h4 class = "mb-2 mt-3">Upcasting Spells</h4>
