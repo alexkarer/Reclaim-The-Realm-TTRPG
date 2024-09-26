@@ -16,14 +16,18 @@
         <div class="row">
             <div class="col-6">
                 @for (type of martialManeuverTypesLeft; track $index) {
-                    <h5 class = "mb-1 mt-2">{{ type.type }}</h5>
-                    <app-dynamic-content [content]="type.description| keywordProcessor"></app-dynamic-content>
+                    <div class="p-2 border bg-body-tertiary mt-3">
+                        <h5 class = "mb-1">{{ type.type }}</h5>
+                        <app-dynamic-content [content]="type.description| keywordProcessor"></app-dynamic-content>
+                    </div>
                 }
             </div>
             <div class="col-6">
                 @for (type of martialManeuverTypesRight; track $index) {
-                    <h5 class = "mb-1 mt-2">{{ type.type }}</h5>
-                    <app-dynamic-content [content]="type.description| keywordProcessor"></app-dynamic-content>
+                    <div class="p-2 border bg-body-tertiary mt-3">
+                        <h5 class = "mb-1 mt-2">{{ type.type }}</h5>
+                        <app-dynamic-content [content]="type.description| keywordProcessor"></app-dynamic-content>
+                    </div>
                 }
             </div>
         </div>

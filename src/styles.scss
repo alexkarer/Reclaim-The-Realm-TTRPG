@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@use "sass:map";
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+$mobile-breakpoint: 960px;
 
 h1 {
     @extend .text-body-emphasis;
@@ -27,4 +31,49 @@ h4 {
     @extend .fst-italic;
     @extend .mb-1;
     @extend .text-body-secondary;
+}
+
+.rules-table-50 {
+    @extend .table;
+    @extend .table-striped
+}
+
+.rules-table-75 {
+    @extend .table;
+    @extend .table-striped
+}
+
+.rules-table {
+    @extend .table;
+    @extend .table-striped
+}
+
+.desktop-width-50 {
+    width: auto;
+}
+
+// tablet size
+@media (min-width: map.get($grid-breakpoints, "md")) {
+    .rules-table-50 {
+        width: 75%;
+    }
+    .desktop-width-50 {
+        width: 75%;
+    }
+    .rules-table-75 {
+        width: 85%;
+    }
+}
+
+// desktop size
+@media (min-width: map.get($grid-breakpoints, "lg")){
+    .rules-table-50 {
+        width: 50%;
+    }
+    .desktop-width-50 {
+        width: 50%;
+    }
+    .rules-table-75 {
+        width: 75%;
+    }
 }

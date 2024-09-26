@@ -3,34 +3,30 @@
     <h4 class="mb-1 mt-2">Weapon Proficiency</h4>
     <app-dynamic-content [content]="weaponRulesJson.weaponProficiencyDescription | keywordProcessor"></app-dynamic-content>
 
-    <h4 class="mb-1 mt-2">Weapon Proficiency</h4>
+    <h4 class="mb-1 mt-2">Simple Weapons</h4>
     <h5 class="mb-1 mt-2">Simple Weapons Overview</h5>
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <table class="table table-striped">
-                <thead>
+    <div class="d-flex justify-content-center">
+        <table class="rules-table-75">
+            <thead>
+                <tr>
+                    <th scope="col">Weapon</th>
+                    <th scope="col">Damage</th>
+                    <th scope="col">Properties</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (weapon of simpleWeapons; track $index) {
                     <tr>
-                        <th scope="col">Weapon</th>
-                        <th scope="col">Damage</th>
-                        <th scope="col">Properties</th>
-                        <th scope="col">Weight</th>
-                        <th scope="col">Cost</th>
+                        <td>{{ weapon.name }}</td>
+                        <td>{{ weapon.getPrettyDamageString() }}</td>
+                        <td>{{ weapon.getPrettyPropertiesString() }}</td>
+                        <td>{{ weapon.getPrettyWeightString() }}</td>
+                        <td>{{ weapon.cost.getPrettyString() }}</td>
                     </tr>
-                </thead>
-                <tbody>
-                    @for (weapon of simpleWeapons; track $index) {
-                        <tr>
-                            <td>{{ weapon.name }}</td>
-                            <td>{{ weapon.getPrettyDamageString() }}</td>
-                            <td>{{ weapon.getPrettyPropertiesString() }}</td>
-                            <td>{{ weapon.getPrettyWeightString() }}</td>
-                            <td>{{ weapon.cost.getPrettyString() }}</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
-        <div class="col-2"></div>
+                }
+            </tbody>
+        </table>
     </div>
 </div>

@@ -1,5 +1,28 @@
 {
-    "specialMovementDescription": "There are various types of special movement that allows you to move around more efficiently in certain circumstances. Special movement is accompanied by a number of meters in parentheses (X) that designates how many meters can be moved when spending 1 [MP].<ul><li><span class=\"fw-bold\">Swim (X): </span>Creatures with swim speed can easily navigate bodies of Water. Creatures with swim speed reduce the difficulty of Tests to navigate Water by 10.</li> <li><span class=\"fw-bold\">Climb (X): </span>Creatures with climb speed can easily scale vertical surfaces. Additionally creatures with Climb speed reduce the difficulty on climb Tests by 10.</li> <li><span class=\"fw-bold\">Burrow (X): </span>Creatures with Burrow speed can traverse through earth, sand or similar terrain.</li> <li><span class=\"fw-bold\">Fly (X): </span>Creatures with Fly speed are able to soar through the air, They need to at least spend 1 [MP] each turn to move in a direction or to hover in the air to prevent falling down. If they are falling they can stop their falling by spending 4 [MP] . Additionally if a flying creature is knocked prone they immediatly drop 5 meters and only stay prone if they hit the ground.</li> <li><span class=\"fw-bold\">Hover (X): </span>Creatures with Hover speed can also fly through the air but are a lot more flexible and don’t have to spend [MP] to stay in the air and are not affected by being knocked prone.</li></ul>",
+    "specialMovementDescription": "There are various types of special movement that allows you to move around more efficiently in certain circumstances. Special movement is accompanied by a number of meters in parentheses (X) that designates how many meters can be moved when spending 1 [MP].",
+    "specialMovementTypes": [
+        {
+            "name": "Swim (X)",
+            "description": "Creatures with swim speed can easily navigate bodies of Water. Creatures with swim speed reduce the difficulty of Tests to navigate Water by 10."
+        },
+        {
+            "name": "Climb (X)",
+            "description": "Creatures with climb speed can easily scale vertical surfaces. Additionally creatures with Climb speed reduce the difficulty on climb Tests by 10."
+        },
+        {
+            "name": "Burrow (X)",
+            "description": "Creatures with Burrow speed can traverse through earth, sand or similar terrain."
+        },
+        {
+            "name": "Fly (X)",
+            "description": "Creatures with Fly speed are able to soar through the air, They need to at least spend 1 [MP] each turn to move in a direction or to hover in the air to prevent falling down. If they are falling they can stop their falling by spending 4 [MP] . Additionally if a flying creature is knocked prone they immediatly drop 5 meters and only stay prone if they hit the ground."
+        },
+        {
+            "name": "Hover (X)",
+            "description": "Creatures with Hover speed can also fly through the air but are a lot more flexible and don’t have to spend [MP] to stay in the air and are not affected by being knocked prone."
+        }
+    ],
+
     "sizeDescription": "Most humanoids are medium [SIZE] , however certain species have different ones and certain effects might change your [SIZE] . Changing your [SIZE] affects some of your physical characteristics",
     "sizeValues": [
         {

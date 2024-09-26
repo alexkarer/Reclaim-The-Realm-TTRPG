@@ -14,8 +14,9 @@ import coreGameplayJson from '../../../../../ttrpg_resources/rules_overview/core
 export class CoreGameplayComponent {
   public readonly coreGameplayIntroduction: string = coreGameplayJson.core_gameplay_introduction;
   public readonly d20Test: string = coreGameplayJson.d20_test;
-  public readonly difficulty_threshold: string = coreGameplayJson.difficulty_threshold
+  public readonly difficultyThreshold: string = coreGameplayJson.difficulty_threshold
   public readonly advantageDisadvantage: string = coreGameplayJson.advantage_disadvantage;
   public readonly degreesOfSuccessFailure: string = coreGameplayJson.degrees_of_success_failure;
-  public readonly structured_unstructured_time: string = coreGameplayJson.structured_vs_unstructured_time;
+  public readonly structuredUnstructeredTime: string = coreGameplayJson.structured_vs_unstructured_time;
+  public readonly difficultyThresholds = coreGameplayJson.difficultyThresholds;
 }

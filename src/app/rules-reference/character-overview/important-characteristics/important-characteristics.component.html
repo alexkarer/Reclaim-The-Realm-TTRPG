@@ -48,20 +48,20 @@
             </div>
 
             <div class ="p-2 border bg-body-tertiary mt-3">
-                <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="thp">THP</h5>
+                <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="thp">Temporary HP</h5>
                 <p class="header-subscript">Keyword: [THP]</p>
                 <app-dynamic-content [content]="tempHPDescription | keywordProcessor"></app-dynamic-content>
             </div>
         </div>
         <div class="col-6">
             <div class ="p-2 border bg-body-tertiary mt-3">
-                <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="stamina">STAMINA</h5>
+                <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="stamina">Stamina</h5>
                 <p class="header-subscript">Keyword: [STAMINA]</p>
                 <app-dynamic-content [content]="staminaDescription | keywordProcessor"></app-dynamic-content>
             </div>
 
             <div class ="p-2 border bg-body-tertiary mt-3">
-                <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="arcana">ARCANA</h5>
+                <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="arcana">Arcana</h5>
                 <p class="header-subscript">Keyword: [ARCANA]</p>
                 <app-dynamic-content [content]="arcanaDescription | keywordProcessor"></app-dynamic-content>
             </div>
@@ -77,7 +77,7 @@
     <app-dynamic-content [content]="saveBonusDescription | keywordProcessor"></app-dynamic-content>
 
     <div class="px-3 row g-5">
-        <div class="col-6">
+        <div class="col-sm">
             <div class ="p-2 border bg-body-tertiary mt-3">
                 <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="hardness">Hardness</h5>
                 <p class="header-subscript">Keyword: [HARDNESS]</p>
@@ -96,7 +96,7 @@
                 <app-dynamic-content [content]="toughnessDescription | keywordProcessor"></app-dynamic-content>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-sm">
             <div class ="p-2 border bg-body-tertiary mt-3">
                 <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="willpower">Willpower</h5>
                 <p class="header-subscript">Keyword: [WILLPOWER]</p>
@@ -113,34 +113,38 @@
     <h4 class="mt-3" ngbScrollSpyFragment="other-values">Other Values</h4>
         <h5 class ="mb-0" ngbScrollSpyFragment="special-movement">Special Movement</h5>
         <app-dynamic-content [content]="specialMovementDescription | keywordProcessor"></app-dynamic-content>
+        <ul>
+            @for (specialMovement of specialMovementTypes; track $index) {
+                <li>
+                    <span class="fw-bold">{{ specialMovement.name }}: </span>
+                    <app-dynamic-content [content]="specialMovement.description| keywordProcessor"></app-dynamic-content>
+                </li>
+            }
+        </ul>
 
-        <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="size">SIZE</h5>
+        <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="size">Size</h5>
         <p class="header-subscript">Keyword: [SIZE]</p>
         <app-dynamic-content [content]="sizeDescription | keywordProcessor"></app-dynamic-content>
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <table class="table table-striped">
-                    <thead>
+        <div class="d-flex justify-content-center">
+            <table class="rules-table-75">
+                <thead>
+                    <tr>
+                        <th scope="col">Size</th>
+                        <th scope="col">[STR] Bonus</th>
+                        <th scope="col">[DODGE] Bonus</th>
+                        <th scope="col">Other size modifiers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (size of sizes; track $index) {
                         <tr>
-                            <th scope="col">Size</th>
-                            <th scope="col">[STR] Bonus</th>
-                            <th scope="col">[DODGE] Bonus</th>
-                            <th scope="col">Other size modifiers</th>
+                            <td>{{ size.name }}</td>
+                            <td>{{ size.strengthBonus }}</td>
+                            <td>{{ size.dodgeBonus }}</td>
+                            <td>{{ size.otherSizeModifications }}</td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @for (size of sizes; track $index) {
-                            <tr>
-                                <td>{{ size.name }}</td>
-                                <td>{{ size.strengthBonus }}</td>
-                                <td>{{ size.dodgeBonus }}</td>
-                                <td>{{ size.otherSizeModifications }}</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-2"></div>
+                    }
+                </tbody>
+            </table>
         </div>
 </div>
