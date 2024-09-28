@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { DynamicContentComponent } from "../../../shared/dynamic-component-rendering/dynamic-content.component";
-import { KeywordProcessorPipe } from "../../../shared/text-transformer/text-transformer";
+import { DynamicContentComponent } from "../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
+import { KeywordProcessorPipe } from "../../../shared/text-utils/keyword-processor";
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import coreGameplayJson from '../../../../../ttrpg_resources/rules_overview/core_gameplay.json';
 

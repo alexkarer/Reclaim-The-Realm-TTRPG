@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { DynamicContentComponent } from '../../shared/dynamic-component-rendering/dynamic-content.component';
+import { DynamicContentComponent } from '../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
-import { KeywordProcessorPipe } from '../../shared/text-transformer/text-transformer';
+import { KeywordProcessorPipe } from '../../shared/text-utils/keyword-processor';
 import { WeaponsComponent } from './weapons/weapons.component';
 import { ArmourComponent } from './armour/armour.component';
 import { ShieldsComponent } from './shields/shields.component';

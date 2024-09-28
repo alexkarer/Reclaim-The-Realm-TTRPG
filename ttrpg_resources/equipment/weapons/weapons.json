@@ -8,10 +8,49 @@
             "weightInGram": 500,
             "type": "Simple Weapon",
             "description": "A small simple short blade favoured by assasin’s and those looking to conceil their weapon.",
-            "properties": [ "light, thrown(4.5/9/18)" ],
+            "properties": [ "light", "lethal", "thrown(4.5/9/18)" ],
             "damageDice": "d6",
             "weaponType": "Melee",
             "canAddStrToDamage": true
+        },
+        {
+            "name": "Mace",
+            "tier": 1,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "1 gc",
+            "weightInGram": 2000,
+            "type": "Simple Weapon",
+            "description": "A heavy piece of metal on a stick, not complicated and still dangerous. Can also be a hammer or a similiar bludgeonding weapon",
+            "properties": [ "versatile(2d6)", "armour-piercing" ],
+            "damageDice": "1d10",
+            "weaponType": "Melee",
+            "canAddStrToDamage": true
+        },
+        {
+            "name": "Spear",
+            "tier": 1,
+            "craftingSkill": "Smith’s Tools or Carpenter's Tools",
+            "cost": "5 sc",
+            "weightInGram": 1000,
+            "type": "Simple Weapon",
+            "description": "sharp piece of metal on a stick, the favored weapon of peasents and militia.",
+            "properties": [ "versatile(1d10)", "reach", "thrown(7.5/15/30)" ],
+            "damageDice": "d8",
+            "weaponType": "Melee",
+            "canAddStrToDamage": true
+        },
+        {
+            "name": "Crossbow",
+            "tier": 2,
+            "craftingSkill": "Carpenter’s Tool",
+            "cost": "5 gc",
+            "weightInGram": 3000,
+            "type": "Simple Weapon",
+            "description": "While cumbersome to operate, it is easy to use",
+            "properties": [ "two-handed", "ranged(20/40/80)", "ammunition", "loading(1, 2 [AP])" ],
+            "damageDice": "2d6",
+            "weaponType": "Ranged",
+            "canAddStrToDamage": false
         }
     ],
     "advancedWeapons": [

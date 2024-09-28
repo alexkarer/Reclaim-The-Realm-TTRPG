@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from "@angular/core";
 import { Attribute, attributes } from '../../../../ttrpg_resources/character_values/attributes/attribute';
+import { ContentPart, generateGenericKeyword } from "./text-utils";
 
 @Pipe({
     name: 'keywordProcessor',
@@ -10,39 +11,33 @@ export class KeywordProcessorPipe implements PipeTransform {
         if (!text) {
             return [];
         }
-        let content: ContentPart[] = [];
-        content.push(...processKeywords(text));
-        return processKeywords(text);
-    }
-}
-
-function processKeywords(text: string): ContentPart[] {
-    if (text.indexOf('[') === -1) {
-        return [{type: 'text', text: text}];
-    }
-
-    let parts: ContentPart[] = [];
-    let lastKeywordIndex = 0;
-    while (text.indexOf('[', lastKeywordIndex) !== -1) {
-        let keywordIndex = text.indexOf('[', lastKeywordIndex);
-        let textBeforeKeyword = text.substring(lastKeywordIndex, keywordIndex);
-
-        if (textBeforeKeyword.length !== 0) {
-            parts.push({type: 'text', text: textBeforeKeyword});
+        if (text.indexOf('[') === -1) {
+            return [{type: 'text', text: text}];
         }
-
-        let fullKeyword = text.substring(keywordIndex + 1, text.indexOf(']', keywordIndex))
-        parts.push(keywordToContentPart(fullKeyword));
-        
-        lastKeywordIndex = text.indexOf(']', keywordIndex) + 1;
-    }
-
-    if (lastKeywordIndex !== (text.length -1)) {
-        let remainingText = text.substring(lastKeywordIndex, text.length);
-        parts.push({type: 'text', text: remainingText});
-    }
     
-    return parts;
+        let parts: ContentPart[] = [];
+        let lastKeywordIndex = 0;
+        while (text.indexOf('[', lastKeywordIndex) !== -1) {
+            let keywordIndex = text.indexOf('[', lastKeywordIndex);
+            let textBeforeKeyword = text.substring(lastKeywordIndex, keywordIndex);
+    
+            if (textBeforeKeyword.length !== 0) {
+                parts.push({type: 'text', text: textBeforeKeyword});
+            }
+    
+            let fullKeyword = text.substring(keywordIndex + 1, text.indexOf(']', keywordIndex))
+            parts.push(keywordToContentPart(fullKeyword));
+            
+            lastKeywordIndex = text.indexOf(']', keywordIndex) + 1;
+        }
+    
+        if (lastKeywordIndex !== (text.length -1)) {
+            let remainingText = text.substring(lastKeywordIndex, text.length);
+            parts.push({type: 'text', text: remainingText});
+        }
+        
+        return parts;
+    }
 }
 
 function keywordToContentPart(keyword: string): ContentPart {
@@ -232,27 +227,4 @@ function generateAttributeKeyword(attribute: Attribute): ContentPart {
             link: attribute.name
         }
     };
-}
-
-function generateGenericKeyword(keyword: string, toolTipText: string, link: string): ContentPart {
-    return { 
-        type: 'keyword', 
-        component: {
-            keyword: keyword, 
-            toolTipText: toolTipText, 
-            link: link
-        }
-    };
-}
-
-export type ContentPart = {
-    type: 'text' | 'keyword';
-    text?: string; 
-    component?: KeywordContent;
-}
-
-type KeywordContent = {
-    keyword: string,
-    toolTipText: string,
-    link: string
 }

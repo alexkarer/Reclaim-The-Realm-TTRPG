@@ -1,0 +1,13 @@
+{
+    "ammunitions": [
+        {
+            "name": "",
+            "tier": 0,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "",
+            "weightInGram": 0,
+            "type": "Ammunition",
+            "description": ""
+        }
+    ]
+}

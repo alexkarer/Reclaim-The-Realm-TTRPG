@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { KeywordComponent } from '../keyword/keyword.component';
-import { ContentPart } from '../text-transformer/text-transformer';
+import { ContentPart } from '../text-utils';
 
 @Component({
   selector: 'app-dynamic-content',

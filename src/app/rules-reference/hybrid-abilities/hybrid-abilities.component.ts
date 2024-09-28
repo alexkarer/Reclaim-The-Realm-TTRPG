@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { KeywordProcessorPipe } from "../../shared/text-transformer/text-transformer";
-import { DynamicContentComponent } from "../../shared/dynamic-component-rendering/dynamic-content.component";
+import { KeywordProcessorPipe } from "../../shared/text-utils/keyword-processor";
+import { DynamicContentComponent } from "../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
 import { HybridAbilityListComponent } from "./hybrid-ability-list/hybrid-ability-list.component";
 import { noviceHybridAbilities, advancedHybridAbilities, masterHybridAbilities, martialFocusedHybridAbilities, spellFocusedHybridAbilities } from '../../../../ttrpg_resources/hybrid_abilities/hybrid_abilities';
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';

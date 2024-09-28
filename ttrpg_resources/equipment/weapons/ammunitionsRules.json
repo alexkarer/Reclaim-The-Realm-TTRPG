@@ -1,0 +1,23 @@
+{
+    "ammunitionsDescriptions": "When using weapons with the ammunition property, you have to provide an ammunition for every attack. Besides the standard ammunition, you use different and more expensive ammunition to augment your attacks further. Below is a list of available Ammunition and the weapons it can be used for.",
+    "ammunitionsQuality": {
+        "ammunitionsQualityDescription": "Ammunitions can be found in varying qualities of craftsmanship or condition. These are grouped in three different qualities, which affect the ammunitions’s price and effectiveness",
+        "ammunitionQualities": [
+            {
+                "quality": "Crude",
+                "modifier": "-1 to item tier, unmodofied [ATTACK] Test of 1-9 is a critical miss",
+                "price": "25%"
+            },
+            {
+                "quality": "Regular",
+                "modifier": "-",
+                "price": "100%"
+            },
+            {
+                "quality": "Masterwork",
+                "modifier": "+1 to item tier, +1 to the [ATTACK]",
+                "price": "400%"
+            }
+        ]
+    }
+}

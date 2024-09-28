@@ -11,7 +11,7 @@ export class Weapon extends Equipment {
         if (this.properties.length == 0) {
             return '-';
         } else {
-            return this.properties.join(', ');
+            return this.properties.map(prop => prop.getPrettyString()).join(', ');
         }
     }
     
@@ -32,7 +32,8 @@ export class WeaponProperty {
     }
 
     static of(rawString: string): WeaponProperty | undefined {
-        let rawWeaponPropertyString = rawString.substring(0, rawString.indexOf("("));
+        let propertyNameEndIndex = (rawString.indexOf("(") !== -1) ? rawString.indexOf("(") : rawString.length;
+        let rawWeaponPropertyString = rawString.substring(0, propertyNameEndIndex);
         switch(rawWeaponPropertyString) {
             case "ammunition": return new WeaponProperty(WeaponPropertyType.AMMUNITION);
             case "armour-piercing": return new WeaponProperty(WeaponPropertyType.ARMOUR_PIERCING);
@@ -40,19 +41,20 @@ export class WeaponProperty {
             case "lethal": return new WeaponProperty(WeaponPropertyType.LETHAL);
             case "light": return new WeaponProperty(WeaponPropertyType.LIGHT);
             case "loading": {
-                let argument = rawString.substring(rawString.indexOf("(") + 1, rawString.indexOf(")"));
-                let numberArgument = Number.parseInt(argument);
-                return new WeaponProperty(WeaponPropertyType.LOADING, undefined, numberArgument);
+                let rawNumberArgument = rawString.substring(rawString.indexOf("(") + 1, rawString.indexOf(","));
+                let numberArgument = Number.parseInt(rawNumberArgument);
+                let rawStringArgument = rawString.substring(rawString.indexOf(",") + 1, rawString.indexOf(")"));
+                return new WeaponProperty(WeaponPropertyType.LOADING, rawStringArgument, numberArgument);
             }
             case "ranged": {
                 let argument = rawString.substring(rawString.indexOf("(") + 1, rawString.indexOf("/"));
-                let numberArgument = Number.parseInt(argument);
+                let numberArgument = Number.parseFloat(argument);
                 return new WeaponProperty(WeaponPropertyType.RANGED, undefined, numberArgument);
             }
             case "reach": return new WeaponProperty(WeaponPropertyType.REACH);
             case "thrown": {
                 let argument = rawString.substring(rawString.indexOf("(") + 1, rawString.indexOf("/"));
-                let numberArgument = Number.parseInt(argument);
+                let numberArgument = Number.parseFloat(argument);
                 return new WeaponProperty(WeaponPropertyType.THROWN, undefined, numberArgument);
             }
             case "two-handed": return new WeaponProperty(WeaponPropertyType.TWO_HANDED);
@@ -64,54 +66,21 @@ export class WeaponProperty {
         }
     }
 
-    static create(type: WeaponPropertyType): WeaponProperty | undefined {
-        switch(type) {
-            case WeaponPropertyType.LOADING:
-                return undefined;
-            case WeaponPropertyType.RANGED:
-                return undefined;
-            case WeaponPropertyType.THROWN:
-                return undefined;
-            case WeaponPropertyType.VERSATILE:
-                return undefined;
-        }
-        return new WeaponProperty(type);
-    }
-
-    static createWithNumberArgument(type: WeaponPropertyType, numberArgument: number): WeaponProperty | undefined {
-        switch(type) {
-            case WeaponPropertyType.VERSATILE:
-                return undefined;
-        }
-        return new WeaponProperty(type, undefined, numberArgument);
-    }
-
-    static createWithStringArgument(type: WeaponPropertyType, stringArgument: string): WeaponProperty | undefined {
-        switch(type) {
-            case WeaponPropertyType.LOADING:
-                return undefined;
-            case WeaponPropertyType.RANGED:
-                return undefined;
-            case WeaponPropertyType.THROWN:
-                return undefined;
-        }
-        return new WeaponProperty(type, stringArgument, undefined);
-    }
-
     getPrettyString(): string {
         switch(this.type) {
             case WeaponPropertyType.LOADING:
-                return this.type + "(" + this.numberArgument + ")";
+                return this.type.toString() + "(" + this.numberArgument + ", " + this.stringArgument + ")";
             case WeaponPropertyType.RANGED:
-                return this.type + "(" + this.numberArgument + + "/" + (this.numberArgument * 2) + "/" + (this.numberArgument * 4) + ")";
+                return this.type .toString()+ "(" + this.numberArgument + "/" + (this.numberArgument * 2) + "/" + (this.numberArgument * 4) + ")";
             case WeaponPropertyType.THROWN:
-                return this.type + "(" + this.numberArgument + + "/" + (this.numberArgument * 2) + "/" + (this.numberArgument * 4) + ")";
+                return this.type.toString() + "(" + this.numberArgument + "/" + (this.numberArgument * 2) + "/" + (this.numberArgument * 4) + ")";
             case WeaponPropertyType.VERSATILE:
-                return this.type + "(" + this.stringArgument + ")";
+                return this.type.toString() + "(" + this.stringArgument + ")";
             default:
-                return this.type;
+                return this.type.toString();
         }
     }
+
 }
 
 export enum WeaponPropertyType {

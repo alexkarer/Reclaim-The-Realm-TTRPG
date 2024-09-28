@@ -1,4 +1,70 @@
 {
     "weaponsDescription": "Below is a list of available weapons that a character can wield to attack his foes.",
-    "weaponProficiencyDescription": "Weapon proficiencies represent your ability to effectively wield weapons. It is split up across 3 Ranks, and higher ranks allow you to more difficult weapons as well as gain more uses wielding them. Each time a rank in Weapon Proficiency is gained, it is added to the ranks you already have. The Benefits for each rank are as follows:<ul> <li><span class=\"fw-bold\">Rank I: </span>Usage of Simple Weapons</li> <li><span class=\"fw-bold\">Rank II: </span>Usage of Advanced Weapons</li> <li><span class=\"fw-bold\">Rank III: </span>Weapon Mastery</li> </ul><h5>Using Weapons without proficiency</h5>When using Weapons that you are not proficient with, you have [DISADVANTAGE] on any [ATTACK] made with that weapon.<h5>Gaining Weapon Proficiency</h5>If your Weapon Proficiency Rank is lower than III you can spend 5 skill points to increase your Weapon Proficiency by one rank.<h5>Weapon Mastery</h5>When you reach 3. Rank Weapon Proficiency you can wield any weapons with unmatched skill and you can wield them more effectively than regular warriors can. When you wield a weapon you can grant it one of the following properties, provided it doesn’t already have it:<ul> <li><span class=\"fw-bold\">light,</span> provided the weapon doesn’t have the two-handed or heavy property</li> <li><span class=\"fw-bold\">reach,</span> Usage of Advanced Weapons</li> <li><span class=\"fw-bold\">armour-piercing,</span> no requirement</li> <li><span class=\"fw-bold\">lethal,</span> no requirement</li> </ul>"
+    "weaponProficiencyDescription": "Weapon proficiencies represent your ability to effectively wield weapons. It is split up across 3 Ranks, and higher ranks allow you to more difficult weapons as well as gain more uses wielding them. Each time a rank in Weapon Proficiency is gained, it is added to the ranks you already have. The Benefits for each rank are as follows:<ul> <li><span class=\"fw-bold\">Rank I: </span>Usage of Simple Weapons</li> <li><span class=\"fw-bold\">Rank II: </span>Usage of Advanced Weapons</li> <li><span class=\"fw-bold\">Rank III: </span>Weapon Mastery</li> </ul><h5>Using Weapons without proficiency</h5>When using Weapons that you are not proficient with, you have [DISADVANTAGE] on any [ATTACK] made with that weapon.<h5>Gaining Weapon Proficiency</h5>If your Weapon Proficiency Rank is lower than III you can spend 5 skill points to increase your Weapon Proficiency by one rank.<h5>Weapon Mastery</h5>When you reach 3. Rank Weapon Proficiency you can wield any weapons with unmatched skill and you can wield them more effectively than regular warriors can. When you wield a weapon you can grant it one of the following properties, provided it doesn’t already have it:<ul> <li><span class=\"fw-bold\">light,</span> provided the weapon doesn’t have the two-handed or heavy property</li> <li><span class=\"fw-bold\">reach,</span> Usage of Advanced Weapons</li> <li><span class=\"fw-bold\">armour-piercing,</span> no requirement</li> <li><span class=\"fw-bold\">lethal,</span> no requirement</li> </ul>",
+    "weaponProperties": [
+        {
+            "name": "ammunition",
+            "description": "This weapon requires and uses up ammunitions for its attacks. Certain ammunition can be recovered after the Battle, up to half (rounded down) of the used ammunition. There are also different types of ammunitions that can be used and change the behaviour of a weapon."
+        },
+        {
+            "name": "armour-piercing",
+            "description": "Damage with this weapon ignores half of the physical resistance of the target that is granted by armour."
+        },
+        {
+            "name": "heavy",
+            "description": "These are heavy weapons that are difficult to wield effectively when lacking [STR] . A creature with strength of less than 3 can not wield them effectively and makes attack rolls with that weapon with disadvantage."
+        },
+        {
+            "name": "lethal",
+            "description": "The required natural roll to score a critical hit with this weapon is lowered by 1."
+        },
+        {
+            "name": "light",
+            "description": "When wielding a light weapon in one hand, you can wield another light weapon in the other hand. (See dual-wielding weapons)."
+        },
+        {
+            "name": "loading(x,< [AP])",
+            "description": "Weapon has to be reloaded after firing X times. Reloading can be done by the reload ability which requires ammunition and costs y [AP]."
+        },
+        {
+            "name": "ranged(x/2x/4x)",
+            "description": "The weapon is designed to hit targets further away. Similar to thrown weapons, they come with 3 ranges. If the target is within the first range, you suffer no penalties. If it is within the second, you suffer a -2 to hit and damage, if it is within the third range, you suffer a -5 to hit and damage. If it exceeds all ranges, you automatically miss"
+        },
+        {
+            "name": "reach",
+            "description": "When wielding this weapon, you can attack targets 1.5m further away than normal Also any martial maneuvers of the weapon type has its range increased appropriatly."
+        },
+        {
+            "name": "thrown(x/2x/4x)",
+            "description": "This weapon can also be thrown to make a [RANGED MARTIAL ATTACK]. Similar to ranged weapons, they come with 3 ranges. If the target is within the first range, you suffer no penalties. If it is within the second, you suffer a -2 to hit and damage, if it is within the third range, you suffer a -5 to hit and damage. If it exceeds all ranges, you automatically miss."
+        },
+        {
+            "name": "two-handed",
+            "description": "Weapon requires two hands to attack with effectively, when attempting to do so one-handed you make attacks with disadvantage and only deal half damage."
+        },
+        {
+            "name": "versatile(x)",
+            "description": "This weapon can be used with one hand, but is more effective when wielded with 2 hands. The dice in the bracket indicates the damage dice when wielded with two hands."
+        }
+    ],
+    "weaponQuality": {
+        "weaponQualityDescription": "Weapons can be found in varying qualities of craftsmanship or condition. These are grouped in three different qualities, which affect the weapon’s price and effectiveness",
+        "weaponQualities": [
+            {
+                "quality": "Crude",
+                "modifier": "-1 to item tier, -1 to [ATTACK] and damage",
+                "price": "25%"
+            },
+            {
+                "quality": "Regular",
+                "modifier": "-",
+                "price": "100%"
+            },
+            {
+                "quality": "Masterwork",
+                "modifier": "+1 to item tier, +1 to the [ATTACK]",
+                "price": "400%"
+            }
+        ]
+    }
 }

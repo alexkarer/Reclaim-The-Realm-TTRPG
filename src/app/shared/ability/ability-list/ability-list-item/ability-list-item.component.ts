@@ -5,8 +5,8 @@ import { RequirementsPrettierPipe } from "../../../utils/to-pretty-string";
 import { MartialManeuver } from '../../../../../../ttrpg_resources/martial_maneuvers/martial-maneuvers';
 import { Spell } from '../../../../../../ttrpg_resources/spells/spells';
 import { HybridAbility } from '../../../../../../ttrpg_resources/hybrid_abilities/hybrid_abilities';
-import { DynamicContentComponent } from "../../../dynamic-component-rendering/dynamic-content.component";
-import { KeywordProcessorPipe } from "../../../text-transformer/text-transformer";
+import { DynamicContentComponent } from "../../../text-utils/dynamic-component-rendering/dynamic-content.component";
+import { KeywordProcessorPipe } from "../../../text-utils/keyword-processor";
 
 @Component({
   selector: 'app-ability-list-item',

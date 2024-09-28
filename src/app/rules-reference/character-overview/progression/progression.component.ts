@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { KeywordProcessorPipe } from '../../../shared/text-transformer/text-transformer';
-import { DynamicContentComponent } from '../../../shared/dynamic-component-rendering/dynamic-content.component';
+import { KeywordProcessorPipe } from '../../../shared/text-utils/keyword-processor';
+import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 import progressionJson from '../../../../../ttrpg_resources/character_values/progression.json';
 
 @Component({
