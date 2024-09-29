@@ -1,0 +1,25 @@
+<table class="rules-table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Requirements</th>
+            <th scope="col">Repeatable</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (perk of perkList; track $index) {
+            <tr (click)="perkDescriptionEnabled[$index] = !perkDescriptionEnabled[$index]" style="cursor: pointer">
+                <th scope="row">{{ perk?.name }}</th>
+                <td class="header-subscript">{{ perk?.requirements | requirementsPrettier }}</td>
+                <td class="header-subscript">{{ perk?.repeatable ? 'Yes' : 'No'}}</td>
+            </tr>
+            @if (perkDescriptionEnabled[$index]) {
+                <tr>
+                    <td colspan="3">
+                        <app-dynamic-content [content]="perk?.description | keywordProcessor"></app-dynamic-content>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

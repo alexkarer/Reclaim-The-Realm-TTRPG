@@ -1,4 +1,4 @@
-<div class="card m-2">
+<div class="card">
     <div class="card-header btn" (click)="isCollapsed = !isCollapsed">
         <div class="d-flex flex-row text-start">
             @if (isMartialManeuver() || isHybridAbility()) {
@@ -20,7 +20,6 @@
         <p class="description my-0"><span class="fw-bold">Range:</span> {{ ability?.range }}</p>
         <p class="description my-0"><span class="fw-bold">Target(s):</span> {{ ability?.target }}</p>
         <p class="description my-0"><span class="fw-bold">Duration:</span> {{ ability?.duration }}</p>
-        <!-- TODO: make keywords for duration, range and targets-->
         <app-dynamic-content [content]="ability?.description | keywordProcessor"></app-dynamic-content>
         @if (isMartialManeuverAndHasPush()) {
             <p class="description mt-2 mb-0"><span class="fw-bold">Pushing extra cost:</span> {{ getPushingExtraCost() }}</p>

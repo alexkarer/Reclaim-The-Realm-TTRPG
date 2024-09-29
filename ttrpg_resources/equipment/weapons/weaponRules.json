@@ -23,8 +23,8 @@
             "description": "When wielding a light weapon in one hand, you can wield another light weapon in the other hand. (See dual-wielding weapons)."
         },
         {
-            "name": "loading(x,< [AP])",
-            "description": "Weapon has to be reloaded after firing X times. Reloading can be done by the reload ability which requires ammunition and costs y [AP]."
+            "name": "loading(x, y [AP])",
+            "description": "Weapon has to be reloaded after firing x times. Reloading can be done by the reload ability which requires ammunition and costs y [AP]. However loading weapons are usually quick and easy to fire and only require 1 [AP] to be fired."
         },
         {
             "name": "ranged(x/2x/4x)",

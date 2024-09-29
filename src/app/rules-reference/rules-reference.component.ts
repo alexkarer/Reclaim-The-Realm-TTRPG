@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, TemplateRef } from '@angular/core';
 import { NgbScrollSpy, NgbScrollSpyMenu, NgbScrollSpyItem, NgbScrollSpyFragment, NgbOffcanvas  } from '@ng-bootstrap/ng-bootstrap';
-import { PerkListComponent } from "./perk-list/perk-list.component";
+import { PerksComponent } from "./perks/perks.component";
 import { SkillListComponent } from './character-overview/skill-list/skill-list.component';
 import { CharacterOverviewComponent } from "./character-overview/character-overview.component";
 import { RulesOverviewComponent } from './rules-overview/rules-overview.component';
@@ -18,7 +18,7 @@ import { ToolboxComponent } from "./toolbox/toolbox.component";
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     NgbScrollSpy, NgbScrollSpyMenu, NgbScrollSpyItem, NgbScrollSpyFragment,
-    SkillListComponent, PerkListComponent, CharacterOverviewComponent, RulesOverviewComponent,
+    SkillListComponent, PerksComponent, CharacterOverviewComponent, RulesOverviewComponent,
     MartialManeuversComponent,
     SpellsComponent,
     HybridAbilitiesComponent,

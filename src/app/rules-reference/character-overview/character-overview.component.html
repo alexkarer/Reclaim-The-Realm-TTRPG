@@ -1,4 +1,4 @@
-<div class="ms-2">
+<div class="mx-2">
     <h3 ngbScrollSpyFragment="attributes">Attributes</h3>
     <p class="description" [innerHTML]="attributeDescription"></p>
     <div class="mb-3">
@@ -11,7 +11,18 @@
     <app-important-characteristics></app-important-characteristics>
 
     <h3 ngbScrollSpyFragment="skills">Skills</h3>
-    <app-skill-list></app-skill-list>
+    <h4 class = "mb-3" ngbScrollSpyFragment="regular-skills">Regular Skills</h4>
+    <div class="mx-2">
+        <app-skill-list [skills]="regularSkills "></app-skill-list>
+    </div>
+    <h4 class = "my-3" ngbScrollSpyFragment="lore-skills">Lore Skills</h4>
+    <div class="mx-2">
+        <app-skill-list [skills]="loreSkills "></app-skill-list>
+    </div>
+    <h4 class = "my-3" ngbScrollSpyFragment="tool-skills">Tool Skills</h4>
+    <div class="mx-2">
+        <app-skill-list [skills]="toolSkills "></app-skill-list>
+    </div>
 
     <h3 ngbScrollSpyFragment="progression">Progression</h3>
     <app-progression></app-progression>

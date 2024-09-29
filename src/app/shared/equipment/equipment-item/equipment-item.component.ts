@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Equipment } from '../../../../../ttrpg_resources/equipment/equipment';
 
 @Component({
   selector: 'app-equipment-item',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class EquipmentItemComponent {
 
+  @Input() public equipment?: Equipment;
 }

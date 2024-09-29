@@ -1,5 +1,11 @@
-<div>
-    @for (ability of abilities; track $index) {
-        <app-ability-list-item [ability]="ability"></app-ability-list-item>
-    }
-</div>
+<table class="table table-borderless">
+    <tbody>
+        @for (ability of abilities; track $index) {
+            <tr>
+                <td>
+                    <app-ability-list-item [ability]="ability"></app-ability-list-item>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

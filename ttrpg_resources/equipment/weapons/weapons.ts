@@ -4,7 +4,6 @@ import { Cost, Equipment } from "../equipment";
 export class Weapon extends Equipment {
     properties!: WeaponProperty[];
     damageDice!: DiceExpression;
-    weaponType!: WeaponType;
     canAddStrToDamage!: boolean;
 
     getPrettyPropertiesString(): string {
@@ -121,17 +120,6 @@ function map(weaponJson: CombinedWeaponsJson): Weapon {
     weapon.properties = weaponJson.properties.map(json => WeaponProperty.of(json)).filter(json => json !== undefined);
     weapon.damageDice = DiceExpression.of(weaponJson.damageDice);
     weapon.canAddStrToDamage = weaponJson.canAddStrToDamage;
-
-    switch(weaponJson.weaponType.toLowerCase()) {
-        case 'melee':
-            weapon.weaponType = WeaponType.MELEE;
-            break;
-        case 'ranged':
-            weapon.weaponType = WeaponType.RANGED;
-            break;
-        default:
-            console.error('Unrecognized WeaponType: ' + weaponJson.weaponType);
-    }
 
     return weapon;
 }
