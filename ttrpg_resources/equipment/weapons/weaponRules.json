@@ -20,7 +20,7 @@
         },
         {
             "name": "light",
-            "description": "When wielding a light weapon in one hand, you can wield another light weapon in the other hand. (See dual-wielding weapons)."
+            "description": "When wielding a light weapon in one hand, you can wield another light weapon in the other hand."
         },
         {
             "name": "loading(x, y [AP])",

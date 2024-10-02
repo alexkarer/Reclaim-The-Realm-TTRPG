@@ -154,7 +154,7 @@
             "weightInGram": 750,
             "type": "Advanced Weapon",
             "description": "You require one additional hand for reloading, but it can wield a light weapon or object in the hand simultaneously.",
-            "properties": [ "loading (1, 2 [AP])", "ammunition", "light", "lethal", "ranged(6/12/24)" ],
+            "properties": [ "loading(1, 2 [AP])", "ammunition", "light", "lethal", "ranged(6/12/24)" ],
             "damageDice": "1d8",
             "canAddStrToDamage": false
         },
@@ -166,7 +166,7 @@
             "weightInGram": 3000,
             "type": "Advanced Weapon",
             "description": "A complicated piece of equipment often used stationary in defensive implacements",
-            "properties": [ "loading (5, 4 [AP])", "two-handed", "ammunition", "ranged(6/12/24)" ],
+            "properties": [ "loading(5, 4 [AP])", "two-handed", "ammunition", "ranged(6/12/24)" ],
             "damageDice": "2d4",
             "canAddStrToDamage": false
         }

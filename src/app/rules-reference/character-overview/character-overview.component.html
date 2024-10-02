@@ -11,7 +11,13 @@
     <app-important-characteristics></app-important-characteristics>
 
     <h3 ngbScrollSpyFragment="skills">Skills</h3>
-    <h4 class = "mb-3" ngbScrollSpyFragment="regular-skills">Regular Skills</h4>
+    <app-dynamic-content [content]="skillRules.skillDescription | keywordProcessor"></app-dynamic-content>
+    <h4 class="mb-1 mt-2">Skill Points</h4>
+    <app-dynamic-content [content]="skillRules.skillPointsDescription| keywordProcessor"></app-dynamic-content>
+    <h4 class="mb-1 mt-2">Skill Rank Bonus</h4>
+    <app-dynamic-content [content]="skillRules.skillRankBonusesDescription | keywordProcessor"></app-dynamic-content>
+
+    <h4 class="mb-3 mt-3" ngbScrollSpyFragment="regular-skills">Regular Skills</h4>
     <div class="mx-2">
         <app-skill-list [skills]="regularSkills "></app-skill-list>
     </div>

@@ -1,13 +1,70 @@
 {
     "ammunitions": [
         {
-            "name": "",
-            "tier": 0,
-            "craftingSkill": "Smith’s Tools",
-            "cost": "",
-            "weightInGram": 0,
+            "name": "Arrow",
+            "tier": 1,
+            "craftingSkill": "Carpenter’s Tools",
+            "cost": "5 bc",
+            "weightInGram": 20,
             "type": "Ammunition",
-            "description": ""
+            "description": "Arrow, can be recovered after firing if the shot was not a critical miss.",
+            "availibleWeapons": "Bows",
+            "recoverable": true
+        },
+        {
+            "name": "Armour-piercing Arrow",
+            "tier": 2,
+            "craftingSkill": "Carpenter’s Tools",
+            "cost": "3 sc",
+            "weightInGram": 30,
+            "type": "Ammunition",
+            "description": "Any [ATTACK] made using this arrow have the armour-piercing property, can be recovered after firing if the shot was not a critical miss.",
+            "availibleWeapons": "Bows",
+            "recoverable": true
+        },
+        {
+            "name": "Flaming Arrow",
+            "tier": 3,
+            "craftingSkill": "Carpenter’s Tools, Alchemy Kit",
+            "cost": "2 gc",
+            "weightInGram": 50,
+            "type": "Ammunition",
+            "description": "Before firing the user must spent 1 [AP] to light the arrow on fire. On a hit the target receives [BURNING] 1d4 and [DISTRACTED]. The target can remove these conditions by making a [DT] (10+Item Tier) [TOUGHNESS] [SAVE] for 1 [AP] to remove the arrow. The arrow can not be recovered after firing.",
+            "availibleWeapons": "Bows",
+            "recoverable": false
+        },
+        {
+            "name": "Crossbow Boltt",
+            "tier": 1,
+            "craftingSkill": "Carpenter’s Tools",
+            "cost": "5 bc",
+            "weightInGram": 20,
+            "type": "Ammunition",
+            "description": "Crossbow Bolt, can be recovered after firing if the shot was not a critical miss.",
+            "availibleWeapons": "Crossbows",
+            "recoverable": true
+        },
+        {
+            "name": "Armour-piercing Bolt",
+            "tier": 2,
+            "craftingSkill": "Carpenter’s Tools",
+            "cost": "3 sc",
+            "weightInGram": 30,
+            "type": "Ammunition",
+            "description": "Any [ATTACK] made using this bolt have the armour-piercing property, can be recovered after firing if the shot was not a critical miss.",
+            "availibleWeapons": "Crossbows",
+            "recoverable": true
+        },
+        {
+            "name": "Flaming Bolt",
+            "tier": 3,
+            "craftingSkill": "Carpenter’s Tools, Alchemy Kit",
+            "cost": "2 gc",
+            "weightInGram": 50,
+            "type": "Ammunition",
+            "description": "Before firing the user must spent 1 [AP] to light the bolt on fire. On a hit the target receives [BURNING] 1d4 and [DISTRACTED]. The target can remove these conditions by making a [DT] (10+Item Tier) [TOUGHNESS] [SAVE] for 1 [AP] to remove the arrow. The arrow can not be recovered after firing.",
+            "availibleWeapons": "Crossbows",
+            "recoverable": false
         }
     ]
 }

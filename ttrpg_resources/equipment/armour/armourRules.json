@@ -1,0 +1,40 @@
+{
+    "armourDescription": "Armour enables you to shrug off a certain amount of physical damage at the costs of slightly impeding your manoeuvrability. There are different Armour sizes available and can be split up into 4 types, the heaver the armour, the higher the damage resistance as well as the penalty to your manoeuvrability.",
+    "armourProperties": [
+        {
+            "name": "Damage Block",
+            "description": "Damage Block is the damage resistance your character gains access to. This damage resistance does not stack with any other form of physical damage resistance unless specifically stated otherwise."
+        },
+        {
+            "name": "Manoeuvre Penalty",
+            "description": "The Manoeuvre Penalty grants you a penalty to your [DODGE] and any [AGI] [ATTRIBUTE TEST] while you are wearing that armour."
+        },
+        {
+            "name": "Movement Penalty",
+            "description": "The Movement Penalty grants you a penalty to your [MP] while wearing that armour."
+        }
+    ],
+    "armourQuality": {
+        "armourQualityDescription": "Similar to weapons, armour can be found in varying qualities of craftsmanship or condition. These are grouped in three different qualities, which affect the armour’s price and effectiveness.",
+        "armourQualities": [
+            {
+                "quality": "Crude",
+                "modifier": "-1 to item tier, Increase the Manoeuvre Penalty by ∗1.5 (rounded up)",
+                "price": "50%"
+            },
+            {
+                "quality": "Regular",
+                "modifier": "-",
+                "price": "100%"
+            },
+            {
+                "quality": "Masterwork",
+                "modifier": "+1 to item tier, Light, Medium: reduce Manoeuvre Penalty by 1 Heavy, Super Heavy: increase Damage Block by 1 and reduce Manoeuvre Penalty by 1",
+                "price": "400%"
+            }
+        ]
+    },
+    "armourSizeDescription": "If armour is made for a creature of greater [SIZE] than medium than the price is dobuled and the weight quadrupled for each size step. If the creature is smaller than the price and weight are halved for each step.",
+    "lootingArmourDescription": "Armour usually is fitted to fit the person wearing it in order to be worn effecitvely. If you come across armour made for a creature your size there is a 1 in 20 chance that it will fit you. If it doesn't fit, you can still wear Armour of Regular or Masterwork Quality but they will count as Crude Armour.",
+    "refittingArmourDescription": "Armour can also be refitted to fit the new wearer as long as the armour was made for a creature of similar size. Refitting armour requires the appropriate tools and a tool skill rank for that tool that is at least armour item tier - 1. This then requires then amount of hours work equal to the item tier. It can also be done at an appropriate shop for 10% of the cost of the item."
+}

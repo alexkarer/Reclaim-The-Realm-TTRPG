@@ -19,6 +19,11 @@ export class Weapon extends Equipment {
     }
 }
 
+export class Ammunition extends Equipment {
+    availibleWeapons!: string;
+    recoverable!: boolean;
+}
+
 export class WeaponProperty {
     type!: WeaponPropertyType;
     stringArgument!: string;
@@ -102,11 +107,13 @@ export enum WeaponType {
 }
 
 import weaponsJson from './weapons.json';
+import ammunitionsJson from './ammunitions.json';
 
 type CombinedWeaponsJson = typeof weaponsJson.simpleWeapons[0] | typeof weaponsJson.advancedWeapons[0];
 
 export const simpleWeapons: Weapon[] = weaponsJson.simpleWeapons.map(json => map(json));
 export const advancedWeapons: Weapon[] = weaponsJson.advancedWeapons.map(json => map(json));
+export const ammunitions: Ammunition[] = ammunitionsJson.ammunitions.map(json => mapAmmunition(json));
 
 function map(weaponJson: CombinedWeaponsJson): Weapon {
     let weapon = new Weapon();
@@ -122,4 +129,19 @@ function map(weaponJson: CombinedWeaponsJson): Weapon {
     weapon.canAddStrToDamage = weaponJson.canAddStrToDamage;
 
     return weapon;
+}
+
+function mapAmmunition(ammunitionJson: typeof ammunitionsJson.ammunitions[0]): Ammunition {
+    let ammunition = new Ammunition();
+    ammunition.name = ammunitionJson.name;
+    ammunition.tier = ammunitionJson.tier;
+    ammunition.craftingSkill = ammunitionJson.craftingSkill;
+    ammunition.cost = Cost.of(ammunitionJson.cost);
+    ammunition.weightInGram = ammunitionJson.weightInGram;
+    ammunition.type = ammunitionJson.type;
+    ammunition.description = ammunitionJson.description;
+    ammunition.availibleWeapons = ammunitionJson.availibleWeapons;
+    ammunition.recoverable = ammunitionJson.recoverable;
+
+    return ammunition;
 }

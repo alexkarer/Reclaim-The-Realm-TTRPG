@@ -39,6 +39,7 @@
             <thead>
                 <tr>
                     <th scope="col">Weapon</th>
+                    <th scope="col">Tier</th>
                     <th scope="col">Damage</th>
                     <th scope="col">Properties</th>
                     <th scope="col">Weight</th>
@@ -49,6 +50,7 @@
                 @for (weapon of simpleWeapons; track $index) {
                     <tr>
                         <td>{{ weapon.name }}</td>
+                        <td>{{ weapon.tier }}</td>
                         <td><app-dynamic-content [content]=" weapon.getPrettyDamageString() | keywordProcessor"></app-dynamic-content></td>
                         <td><app-dynamic-content [content]="weapon.properties | weaponPropertyProcessor"></app-dynamic-content></td>
                         <td>{{ weapon.getPrettyWeightString() }}</td>
@@ -65,6 +67,7 @@
             <thead>
                 <tr>
                     <th scope="col">Weapon</th>
+                    <th scope="col">Tier</th>
                     <th scope="col">Damage</th>
                     <th scope="col">Properties</th>
                     <th scope="col">Weight</th>
@@ -75,10 +78,64 @@
                 @for (weapon of advancedWeapons; track $index) {
                     <tr>
                         <td>{{ weapon.name }}</td>
+                        <td>{{ weapon.tier }}</td>
                         <td><app-dynamic-content [content]=" weapon.getPrettyDamageString() | keywordProcessor"></app-dynamic-content></td>
                         <td><app-dynamic-content [content]="weapon.properties | weaponPropertyProcessor"></app-dynamic-content></td>
                         <td>{{ weapon.getPrettyWeightString() }}</td>
                         <td>{{ weapon.cost.getPrettyString() }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
+    <h4 class="mb-1 mt-2">Ammunitions</h4>
+    <app-dynamic-content [content]="ammunitionRulesJson.ammunitionsDescriptions| keywordProcessor"></app-dynamic-content>
+
+    <div class="d-flex justify-content-center">
+        <table class="rules-table">
+            <thead>
+                <tr>
+                    <th scope="col">Weapon</th>
+                    <th scope="col">Ammunition Description</th>
+                    <th scope="col">Available Weapons</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Recoverable</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (ammunition of ammunitions; track $index) {
+                    <tr>
+                        <td>{{ ammunition.name }}</td>
+                        <td><app-dynamic-content [content]="ammunition.description| keywordProcessor"></app-dynamic-content></td>
+                        <td>{{ ammunition.availibleWeapons }}</td>
+                        <td>{{ ammunition.getPrettyWeightString() }}</td>
+                        <td>{{ ammunition.cost.getPrettyString() }}</td>
+                        <td>{{ ammunition.recoverable ? 'yes' : 'no' }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <h5 class="mb-1 mt-2">Weapon Quality</h5>
+    <app-dynamic-content [content]="ammunitionRulesJson.ammunitionsQuality.ammunitionsQualityDescription | keywordProcessor"></app-dynamic-content>
+    <div class="mt-2 d-flex justify-content-center">
+        <table class="rules-table-50">
+            <thead>
+                <tr>
+                    <th scope="col">Quality</th>
+                    <th scope="col">Modifier</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (ammunitionsQuality of ammunitionRulesJson.ammunitionsQuality.ammunitionQualities; track $index) {
+                    <tr>
+                        <td>{{ ammunitionsQuality.quality }}</td>
+                        <td><app-dynamic-content [content]="ammunitionsQuality.modifier  | keywordProcessor"></app-dynamic-content></td>
+                        <td>{{ ammunitionsQuality.price }}</td>
                     </tr>
                 }
             </tbody>

@@ -8,6 +8,7 @@ import { ImportantCharacteristicsComponent } from "./important-characteristics/i
 import { ProgressionComponent } from "./progression/progression.component";
 import { regularSkills, loreSkills, toolSkills } from '../../../../ttrpg_resources/skills/skill';
 import attributeTexts from '../../../../ttrpg_resources/character_values/attributes/attribute-texts.json';
+import skillRulesJson from '../../../../ttrpg_resources/skills/skillRules.json';
 
 @Component({
   selector: 'app-character-overview',
@@ -20,6 +21,7 @@ export class CharacterOverviewComponent {
   public readonly attributeDescription = attributeTexts.attributeDescription;
   public readonly attributeTestDescription = attributeTexts.attributeTestDescription;
 
+  public readonly skillRules = skillRulesJson;
   public readonly regularSkills = regularSkills;
   public readonly loreSkills = loreSkills;
   public readonly toolSkills = toolSkills;

@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Light Armor",
+        "tier": 2,
+        "craftingSkill": "Tailor’s Set",
+        "cost": "15 gc",
+        "weightInGram": 8000,
+        "type": "Armour",
+        "description": "Padded cloth with small mail elements at critical areas",
+        "damageBlock": "1 physical",
+        "manoeuvrePenalty": -1,
+        "movementPenalty": 0
+    },
+    {
+        "name": "Medium Armour",
+        "tier": 3,
+        "craftingSkill": "Smith’s Tools",
+        "cost": "50 gc",
+        "weightInGram": 1500,
+        "type": "Armour",
+        "description": "Chain mail with additional cloth padding and light metal plates at critical areas, sometimes some type of lamellar armour.",
+        "damageBlock": "2 physical",
+        "manoeuvrePenalty": -3,
+        "movementPenalty": 0
+    },
+    {
+        "name": "Heavy Armour",
+        "tier": 5,
+        "craftingSkill": "Smith’s Tools",
+        "cost": "200 gc",
+        "weightInGram": 30000,
+        "type": "Armour",
+        "description": "Steel Plates which protect the body all around with a chain mail vest underneath,",
+        "damageBlock": "4 physical",
+        "manoeuvrePenalty": -5,
+        "movementPenalty": -1
+    },
+    {
+        "name": "Super Heavy Armour",
+        "tier": 7,
+        "craftingSkill": "Smith’s Tools",
+        "cost": "1000 gc",
+        "weightInGram": 60000,
+        "type": "Armour",
+        "description": "Very similar to Heavy Armor, except the steel plates used are much thicker and the protection around the joints is much more elaborate and complex.",
+        "damageBlock": "6 physical",
+        "manoeuvrePenalty": -7,
+        "movementPenalty": -2
+    }
+]
