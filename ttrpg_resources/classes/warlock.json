@@ -1,0 +1,57 @@
+{
+    "className": "Barbarian",
+    "classDescription": "",
+    "coreClassValues": {
+        "hpPerLevel": 12,
+        "martialProficiency": 1.0,
+        "spellProficiency": 0.0,
+        "dodgeProficiency": 0.0,
+        "hardnessProficiency": 0.0,
+        "toughnessProficiency": 0.0,
+        "willpowerProficiency": 0.0,
+        "mainClassAttributes": [ "STR", "CON", "PER" ],
+        "classSKills": [ "Athletics", "Intimidation", "Survival" ],
+        "skillPointsPerLevel": 4,
+        "weaponProficiency": 2
+    },
+    "classCoreFeature": {
+        "name": "",
+        "description1": "",
+        "header1": "",
+        "description2": "",
+        "header2": "",
+        "description3": ""
+    },
+    "classPaths": [
+        {
+            "name": "",
+            "description": ""
+        }
+    ],
+    "classFeatures": [
+        {
+            "name": "",
+            "levels": [ 1 ],
+            "relatedClassPath": "",
+            "description": ""
+        }
+    ],
+    "classTechniquesDescription": "",
+    "classTechniques": [
+        {
+            "name": "",
+            "tags": [ "Class Technique (Barbarian" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "",
+            "range": "-",
+            "target": "",
+            "duration": "",
+            "description": ""
+        }
+    ]
+}

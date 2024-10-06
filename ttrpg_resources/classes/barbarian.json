@@ -1,0 +1,65 @@
+{
+    "className": "Barbarian",
+    "classDescription": "",
+    "coreClassValues": {
+        "hpPerLevel": 12,
+        "martialProficiency": 1.0,
+        "spellProficiency": 0.0,
+        "dodgeProficiency": 0.334,
+        "hardnessProficiency": 1.0,
+        "toughnessProficiency": 1.0,
+        "willpowerProficiency": 0.334,
+        "mainClassAttributes": [ "STR", "CON", "PER" ],
+        "classSKills": [ "Athletics", "Intimidation", "Survival" ],
+        "skillPointsPerLevel": 4,
+        "weaponProficiency": 2
+    },
+    "classCoreFeature": {
+        "name": "Rage",
+        "description1": "",
+        "header1": "",
+        "description2": "",
+        "header2": "",
+        "description3": ""
+    },
+    "classPaths": [
+        {
+            "name": "Berserker",
+            "description": "A warrior who excells when he is in a frenzy and can control it more."
+        },
+        {
+            "name": "Spritual Warrior",
+            "description": "deep connection to a ancestral spirit or other mystical figure that is stronger during the rage."
+        },
+        {
+            "name": "Elemental Touched",
+            "description": "Can harness the powers of the elements during their rage"
+        }
+    ],
+    "classFeatures": [
+        {
+            "name": "",
+            "levels": [ 1 ],
+            "relatedClassPath": "",
+            "description": ""
+        }
+    ],
+    "classTechniquesDescription": "",
+    "classTechniques": [
+        {
+            "name": "",
+            "tags": [ "Class Technique (Barbarian" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "",
+            "range": "-",
+            "target": "",
+            "duration": "",
+            "description": ""
+        }
+    ]
+}
