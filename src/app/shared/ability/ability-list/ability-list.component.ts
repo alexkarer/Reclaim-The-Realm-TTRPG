@@ -12,6 +12,4 @@ import { RequirementsPrettierPipe } from "../../utils/to-pretty-string";
 })
 export class AbilityListComponent {
   @Input() abilities: Ability[] = [];
-
-
 }
