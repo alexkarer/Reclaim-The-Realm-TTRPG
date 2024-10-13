@@ -41,6 +41,25 @@
             "target": "[SELF]",
             "duration": "[INSTANT]",
             "description": "You dash forward with supernatural speed towards the location you want to reach, as long you would be able reach that location with your regular movement, you move there now instantly and don’t provoke any opportunity attacks on the way. Additionally no other creatures can perform a [REACTION] against your next Action unless their [AGI] or [PER] is higher than your [AGI] + [STAMINA] spent on the Maneuver"
+        },
+        {
+            "name": "Wall Run",
+            "tags": [ "Martial Maneuver (Advanced)", "Agile", "Movement" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 6, "attribute": "[AGI]" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [  ]
+            },
+            "cost": "1 [MP]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You can move one 1.5m across a vertical Wall, provided you moved at least 4.5m in a straight line beforehand. If you end your movement running on a wall you will fall down. You can wall run continuesly for up to [AGI] [MP] after which you need to start again."
         }
     ],
     "brawlManeuvers": [

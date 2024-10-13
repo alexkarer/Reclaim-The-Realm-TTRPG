@@ -16,50 +16,438 @@
     },
     "classCoreFeature": {
         "name": "Rage",
-        "description1": "",
-        "header1": "",
-        "description2": "",
-        "header2": "",
-        "description3": ""
+        "textElements": [
+            {
+                "regularText": "At the start of the Battle the Barbarian enters into a controlled Rage that builds up during the Fight and allows him to shrug of certain amount of damage and unleash it against his enemies. However the Barbarian needs to remain discipline while raging if he builds up too much he might go into an uncontrollable frenzy.<br> Rage builds up during the fight and is denoted by a number, at the start of combat the Barbarian’s Rage is 0. The Barbarian gains rage via the following things:",
+                "headerLine": null,
+                "bulletPoints": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "The Barbarian’s Rage also helps sustain him during a fight. At the start of each of the Barbarian’s Turn he regains [HP] he lost last round up to twice his current Rage.",
+                    "For every unique negative status effect that lingers on the Barbarian at the start of the Barbarian’s Turn they gain 1 Rage.",
+                    "The first time they attack an enemy on their turn with a throw weapon or melee attack they gain 1 Rage.",
+                    "Falling Unconcious reduces the Barbarian’s rage to 0."
+                 ]
+            },
+            {
+                "regularText": null,
+                "headerLine": "Entering a frenzy",
+                "bulletPoints": null
+            },
+            {
+                "regularText": "When the Barbarians Rage exceeds 4+[LEVEL] they risk entering a frenzy. If at the start of their turn their Rage is higher than their Rage Limit they can make a [WILLPOWER] [SAVE], where the DC is equal to 5 + their current Rage. On a fail they enter a frenzy which has the following effects:",
+                "headerLine": null,
+                "bulletPoints": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "At the start of the Barbarian’s Turn they have to move to the nearest creature (roll on a tie) and make as many [MELEE MARTIAL ATTACK] as possible against that creature. Each attack has to use the resentful strike class maneuver (even if you don’t know it).",
+                    "At the start of their next turn they have to repeat the [WILLPOWER] [SAVE] and on a success end the frenzy."
+                ]
+            }
+        ]
     },
+    "classPathDescription": "",
     "classPaths": [
         {
             "name": "Berserker",
-            "description": "A warrior who excells when he is in a frenzy and can control it more."
+            "textElements": [
+                {
+                    "regularText": "A warrior who excells when they are in a frenzy and can control it more.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
         },
         {
             "name": "Spritual Warrior",
-            "description": "deep connection to a ancestral spirit or other mystical figure that is stronger during the rage."
+            "textElements": [
+                {
+                    "regularText": "deep connection to a ancestral spirit or other mystical figure that is stronger during the rage.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
         },
         {
             "name": "Elemental Touched",
-            "description": "Can harness the powers of the elements during their rage"
+            "textElements": [
+                {
+                    "regularText": "Can harness the powers of the elements during their rage",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
         }
     ],
     "classFeatures": [
         {
-            "name": "",
+            "name": "Resiliant",
+            "levels": [ 1, 6 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "The Barbarian gains resistance against physical damage equal to half their [CON]. <At [LEVEL] 6 this resistance applies against all damage types except psychic.<br>Additionally the Barbarians Rage allows him to recover from recent wounds to sustain them in the fight for longer. At the start of the Barbarian’s Turn he regains [HP] he lost last round up to twice their current Rage.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
+        },
+        {
+            "name": "Controlled Frenzy",
             "levels": [ 1 ],
-            "relatedClassPath": "",
-            "description": ""
+            "relatedClassPath": "Berserker",
+            "textElements": [
+                {
+                    "regularText": "The Berserker excells when in a frenzy and it now has the following changes:",
+                    "headerLine": null,
+                    "bulletPoints": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "When the Barbarian’s Rage exceeds the Frenzy threshold they can choose automatically fail the [WILLPOWER SAVE] and enter the Frenzy.",
+                        "Instead of the closest creature, they target the closest enemy creature.",
+                        "While the Barbarian still has to perform as many [MELEE MARTIAL ATTACK] as possible against the target, they don’t have to use the Resentful Strike Class Maneuver.",
+                        "The first Class Maneuvers they perform during their turn costs 1 Rage less."
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Cosmic Rage",
+            "levels": [ 1 ],
+            "relatedClassPath": "Spritual Warrior",
+            "textElements": [
+                {
+                    "regularText": "When raging becomes closer to their ancesctor/persons they have close contact to. Rage effect depends on alignment.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
+        },
+        {
+            "name": "Elemental Rage",
+            "levels": [ 1 ],
+            "relatedClassPath": "Elemental Touched",
+            "textElements": [
+                {
+                    "regularText": "This barbarian has a deep connection to an elemental plane and can manifest that element when raging. At the start of their Rage choose one Element and you gain benefits depending on the chosen element which lasts until the end of the battle.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "<span class=\"fw-bold\">Fire: </span>Enemies within 3m recieve fire damage equal to their current Rage. [AURA].",
+                        "<span class=\"fw-bold\">Earth: </span>Friendly creatures within 3m recieve [THP] equal to their current Rage. [AURA]",
+                        "<span class=\"fw-bold\">Water: </span>Enemies within 3m have their [MP] reduced equal to their Rage, however not lower than 2 [MP]",
+                        "<span class=\"fw-bold\">Air: </span>Friendly creatures 3m gain [MP] equal to half their current Rage. Additionally their long jump distance is increased by a number of meters equal to their rage and the high jump by half their rage. [AURA]"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Eager",
+            "levels": [ 2 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "You can add to half your [LEVEL] to your Initiative Bonus and additionally in the first combat round they have an 2 extra [MP] unless they are suprised.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
+        },
+        {
+            "name": "Physical Excellence",
+            "levels": [ 2,4,6,8,10,12 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "You can increase one of your following Attributes by 1: [STR], [AGI], [CON], [PER]",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
+        },
+        {
+            "name": "Tireless",
+            "levels": [ 3 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "When suffer a point of [EXHAUSTION] you can instead make a [TOUGHNESS] [SAVE] against a [DT] 15. If this [SAVE] was successful you don’t suffer the point of [EXHAUSTION], however the [DT] to resist next time is increased by 5. When you complete a Long Rest the [DT] resets again.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
+        },
+        {
+            "name": "Brutal",
+            "levels": [ 3 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "Each time you make a [MELEE MARTIAL ATTACK] you can add your [LEVEL] to the damage.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
+        },
+        {
+            "name": "Improved Frenzy",
+            "levels": [ 5 ],
+            "relatedClassPath": "Berserker",
+            "textElements": [
+                {
+                    "regularText": "The Threshold for the Frenzy now is always 5 and doesn’t increase with your [LEVEL] anymore additionally while in a frenzy you gain the following benefits.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "The Barbarian has 1 extra [AP] per turn.",
+                        "The Barbarian recieves 1 extra Rage at the start of their turn.",
+                        "Every Class Maneuver they perform during their turn costs 1 Rage less.",
+                        "The Barbarian is immune to the [DAZED] , [CRIPPLED] and [CONFUSED] status effects."
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Improved Elemental Rage",
+            "levels": [ 5 ],
+            "relatedClassPath": "Elemental Touched",
+            "textElements": [
+                {
+                    "regularText": "Your connection to the elements deepens now during your turn you can spend 5 Rage and 1 [AP] to can gain an additional elemental effect that is active during the duration of your Rage. However Fire and Water cannot be active at the same time as well as Earth and Air. Additionally the effect of each Element is getting stronger:",
+                    "headerLine": null,
+                    "bulletPoints": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "<span class=\"fw-bold\">Fire: </span>The Aura increases to 4.5m and each time the Barbarian hits a creature with a [MELEE MARTIAL ATTACK] they recieve [BURNING] 1d6+Rage for 2 turns.",
+                        "<span class=\"fw-bold\">Earth: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [TOUGHNESS] they are [DAZED] for 1 turn.",
+                        "<span class=\"fw-bold\">Water: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [HARDNESS] they are [RESTRAINED] by ice for 1 turn.",
+                        "<span class=\"fw-bold\">Air: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] a target of their choice within the area effect is hit by a lightning strike for lightning damage equal 1d6 + Rage."
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Greater Frenzy",
+            "levels": [ 9 ],
+            "relatedClassPath": "Berserker",
+            "textElements": [
+                {
+                    "regularText": "At the start of the combat the Barbarian recieves enugh Rage to instantly trigger their frenzy, once they have done this they can’t use this ability again until the next Long Rest . Additionally while in a frenzy the Barbarian gains the following benefits",
+                    "headerLine": null,
+                    "bulletPoints": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "The Barbarian recieves 3 extra Rage at the start of their turn instead of 1.",
+                        "The [HP] they regain because of their Rage is doubled.",
+                        "The Barbarian is immune to the [STUNNED] , [SLOWED] and [INCAPACITATED] status effects.",
+                        "Dropping to Deaths Door during a frenzy causes no Exhaustion (however recieving damage during Deaths Door still does)"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Greater Elemental Rage",
+            "levels": [ 9 ],
+            "relatedClassPath": "Elemental Touched",
+            "textElements": [
+                {
+                    "regularText": "Your connection to the elements deepens and each elements effect is improved.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "<span class=\"fw-bold\">Fire: </span>The Aura increases to 6m and in addition to setting a target on fire after a successful [MELEE MARTIAL ATTACK] they trigger a firey explosion in a 3m radius around the target that hits every creature except you with the area. If the attack is higher than the creatures [DODGE] they take fire damage equal to 2d6 + Rage [HALF] .",
+                        "<span class=\"fw-bold\">Earth: </span>The Aura increases to 6m and poisonous mist is additionally swirling around you decreasing the [TOUGHNESS] of enemies within the area by half your Rage.",
+                        "<span class=\"fw-bold\">Water: </span>The Aura increases to 6m and a small snowstorm or maelstrom swirls around you decreasing the [DODGE] of enemies within the area by half your Rage.",
+                        "<span class=\"fw-bold\">Air: </span>The Aura increases to 6m and now 3 lightning strikes appear after each [MELEE MARTIAL ATTACK] but they can’t strike the same target twice."
+                    ]
+                }
+            ]
         }
     ],
-    "classTechniquesDescription": "",
+    "classTechniquesDescription": "The Barbarian can expend his Rage to perform Class Techniques which empower can empower his attacks or allow to perform great physical feats.",
     "classTechniques": [
         {
-            "name": "",
-            "tags": [ "Class Technique (Barbarian" ],
+            "name": "Resentful Strike",
+            "tags": [ "Class Technique (Barbarian)" ],
             "requirements": {
                 "requiredLevels": [ ],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "",
+            "cost": "1-3 Rage",
             "range": "-",
-            "target": "",
-            "duration": "",
-            "description": ""
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "After successfully making a [MELEE MARTIAL ATTACK] you deal 1d6 bonus physical damage per Rage spent."
+        },
+        {
+            "name": "Armor of Fury",
+            "tags": [ "Class Technique (Barbarian)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP], at least 1 Rage",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "1 round",
+            "description": "You gain 5 [THP] for every Rage you spend"
+        },
+        {
+            "name": "Furious Charge",
+            "tags": [ "Class Technique (Barbarian)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 1 Rage",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You use the Dash Ability for 0 [AP] , every time this ability is used again in the same turn, the Rage cost is increased by 1."
+        },
+        {
+            "name": "Walk it off",
+            "tags": [ "Class Technique (Barbarian)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP], 1 Rage",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You can remove one Tier I Status Effect effecting you."
+        },
+        {
+            "name": "Rage fueled Maneuver",
+            "tags": [ "Class Technique (Barbarian)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 or more Rage",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you perform a Martial Maneuver instead of it using your [STAMINA] you can alternatively spend 2 Rage per 1 [STAMINA] cost."
+        },
+        {
+            "name": "Reckless Headbutt",
+            "tags": [ "Class Technique (Barbarian)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP], 2 Rage",
+            "range": "[MELEE]",
+            "target": "1 creature",
+            "duration": "1 round",
+            "description": "Make a [MELEE MARTIAL ATTACK] using [STR] + [MARTIAL LEVEL] as a bonus, against your target, on a hit it takes physical damage equal to [STR] + [LEVEL]. Additionally you and the target must make a [HARDNESS SAVE] the one with the lower result is then dazed for 1 round (on a tie, both are [DAZED])."
+        },
+        {
+            "name": "Violent Leap",
+            "tags": [ "Class Technique (Barbarian)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "4 [MP], 2 Rage",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You make a regular Jump Move and at end of your Jump Move roll and make a [STR] [MARTIAL TEST]. Every enemy within 1.5m of the landing is knocked prone if that roll exceeds their [HARDNESS] ."
+        },
+        {
+            "name": "Adrenaline Rush",
+            "tags": [ "Class Technique (Barbarian)" ],
+            "requirements": {
+                "requiredLevels": [ 
+                    { "amount": 4, "levelType": "[LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 Rage",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "If you kill an enemy with a [MARTIAL MELEE ATTACK] , you can use this ability to instantly gain 2 [AP]. You can only use this ability once per turn and only during your turn."
+        },
+        {
+            "name": "Violent Reprisal",
+            "tags": [ "Class Technique (Barbarian)" ],
+            "requirements": {
+                "requiredLevels": [ 
+                    { "amount": 4, "levelType": "[LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 reaction, 3 Rage",
+            "range": "[MELEE]",
+            "target": "1 creature*",
+            "duration": "[INSTANT]",
+            "description": "You can use this reaction against a creature that just caused you to lose [HP] for any reason. You can make a Weapon [MELEE MARTIAL ATTACK] in response dealing extra damage equal to the amount of [HP] you lost."
+        },
+        {
+            "name": "Primal Roar",
+            "tags": [ "Class Technique (Barbarian)" ],
+            "requirements": {
+                "requiredLevels": [ 
+                    { "amount": 8, "levelType": "[LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP], 5 Rage",
+            "range": "-",
+            "target": "[CONE] 6m",
+            "duration": "1 round",
+            "description": "Make a [CON] [MARTIAL TEST]. If that roll is higher than any creature’s [TOUGHNESS] within a 6m cone in front of you. They recieve 2d8 + [CON] Sonic damage and are [DEAFENED] [HALF]."
         }
     ]
 }

@@ -16,24 +16,39 @@
     },
     "classCoreFeature": {
         "name": "",
-        "description1": "",
-        "header1": "",
-        "description2": "",
-        "header2": "",
-        "description3": ""
+        "textElements": [
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null
+            }
+        ]
     },
+    "classPathDescription": "",
     "classPaths": [
         {
             "name": "",
-            "description": ""
+            "textElements": [
+                {
+                    "regularText": "The Barbarian gains resistance against physical damage equal to half their [CON]. <At [LEVEL] 6 this resistance applies against all damage types except psychic.<br>Additionally the Barbarians Rage allows him to recover from recent wounds to sustain them in the fight for longer. At the start of the Barbarian’s Turn he regains [HP] he lost last round up to twice their current Rage.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
         }
     ],
     "classFeatures": [
         {
             "name": "",
             "levels": [ 1 ],
-            "relatedClassPath": "",
-            "description": ""
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "The Barbarian gains resistance against physical damage equal to half their [CON]. <At [LEVEL] 6 this resistance applies against all damage types except psychic.<br>Additionally the Barbarians Rage allows him to recover from recent wounds to sustain them in the fight for longer. At the start of the Barbarian’s Turn he regains [HP] he lost last round up to twice their current Rage.",
+                    "headerLine": null,
+                    "bulletPoints": null
+                }
+            ]
         }
     ],
     "classTechniquesDescription": "",
