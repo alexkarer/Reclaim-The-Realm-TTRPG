@@ -12,7 +12,7 @@
         "mainClassAttributes": [ "STR", "CON", "PER" ],
         "classSKills": [ "Athletics", "Intimidation", "Survival" ],
         "skillPointsPerLevel": 4,
-        "weaponProficiency": 2
+        "weaponRanks": 2
     },
     "classCoreFeature": {
         "name": "Rage",

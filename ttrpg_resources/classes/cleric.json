@@ -1,5 +1,5 @@
 {
-    "className": "Barbarian",
+    "className": "Cleric",
     "classDescription": "",
     "coreClassValues": {
         "hpPerLevel": 12,
@@ -12,7 +12,7 @@
         "mainClassAttributes": [ "STR", "CON", "PER" ],
         "classSKills": [ "Athletics", "Intimidation", "Survival" ],
         "skillPointsPerLevel": 4,
-        "weaponProficiency": 2
+        "weaponRanks": 2
     },
     "classPathDescription": "",
     "classCoreFeature": {
@@ -30,7 +30,7 @@
             "name": "",
             "textElements": [
                 {
-                    "regularText": "The Barbarian gains resistance against physical damage equal to half their [CON]. <At [LEVEL] 6 this resistance applies against all damage types except psychic.<br>Additionally the Barbarians Rage allows him to recover from recent wounds to sustain them in the fight for longer. At the start of the Barbarian’s Turn he regains [HP] he lost last round up to twice their current Rage.",
+                    "regularText": "",
                     "headerLine": null,
                     "bulletPoints": null
                 }
@@ -44,7 +44,7 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "The Barbarian gains resistance against physical damage equal to half their [CON]. <At [LEVEL] 6 this resistance applies against all damage types except psychic.<br>Additionally the Barbarians Rage allows him to recover from recent wounds to sustain them in the fight for longer. At the start of the Barbarian’s Turn he regains [HP] he lost last round up to twice their current Rage.",
+                    "regularText": "",
                     "headerLine": null,
                     "bulletPoints": null
                 }

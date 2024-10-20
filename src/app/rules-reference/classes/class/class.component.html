@@ -1,0 +1,75 @@
+<h3>{{ playerClass?.className }}</h3>
+<div class="mx-2">
+    <app-dynamic-content [content]="playerClass?.classDescription | keywordProcessor"></app-dynamic-content>
+
+    <h4>{{playerClass?.className + ' Core Values'}}</h4>
+    <div class="d-flex justify-content-center">
+        <table class="rules-table-50">
+            <tbody>
+                <tr>
+                    <td><span class="fw-bold">HP per Level</span></td>
+                    <td>{{ playerClass?.coreClassValues?.hpPerLevel }}</td>
+                </tr>
+                <tr>
+                    <td><span class="fw-bold">Martial Level Progression</span></td>
+                    <td>{{ playerClass?.coreClassValues?.martialProficiency }}</td>
+                </tr>
+                <tr>
+                    <td><span class="fw-bold">Spell Level Progression</span></td>
+                    <td>{{ playerClass?.coreClassValues?.spellProficiency }}</td>
+                </tr>
+                <tr>
+                    <td><span class="fw-bold">Defenses</span></td>
+                    <td>
+                        <app-dynamic-content [content]="'[DODGE] Proficiency: ' | keywordProcessor"></app-dynamic-content>{{playerClass?.coreClassValues?.dodgeProficiency}}<br>
+                        <app-dynamic-content [content]="'[HARDNESS] Proficiency: ' | keywordProcessor"></app-dynamic-content>{{playerClass?.coreClassValues?.hardnessProficiency}}<br>
+                        <app-dynamic-content [content]="'[TOUGHNESS] Proficiency: ' | keywordProcessor"></app-dynamic-content>{{playerClass?.coreClassValues?.toughnessProficiency}}<br>
+                        <app-dynamic-content [content]="'[WILLPOWER] Proficiency: ' | keywordProcessor"></app-dynamic-content>{{playerClass?.coreClassValues?.willpowerProficiency}}<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="fw-bold">Main Class Attributes</span></td>
+                    <td>{{ playerClass?.coreClassValues?.mainClassAttributes }}</td>
+                </tr>
+                <tr>
+                    <td><span class="fw-bold">Class Skills</span></td>
+                    <td>{{ playerClass?.coreClassValues?.classSKills }}</td>
+                </tr>
+                <tr>
+                    <td><span class="fw-bold">Skill Points per Level</span></td>
+                    <td>{{ playerClass?.coreClassValues?.skillPointsPerLevel }}</td>
+                </tr>
+                <tr>
+                    <td><span class="fw-bold">Weapon Ranks</span></td>
+                    <td>{{ playerClass?.coreClassValues?.weaponRanks }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>{{playerClass?.className + ' Class Table'}}</h4>
+    <div class="d-flex justify-content-center">
+        <table class="rules-table-50">
+            <thead>
+                <tr>
+                    <th scope="col">[LEVEL]</th>
+                    <th scope="col">Features</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (features of classFeaturesPerLevel; track $index) {
+                    <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td [innerHTML]="features"></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <h4>{{playerClass?.className + ' Core Feature: ' + playerClass?.classCoreFeature?.name }}</h4>
+
+    <h4>{{ 'Other ' + playerClass?.className + ' Features' }}</h4>
+
+    <h4>{{ playerClass?.className + ' Class Techniques' }}</h4>
+</div>

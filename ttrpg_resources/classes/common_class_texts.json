@@ -1,4 +1,16 @@
 {
-    "numberOfTechniquesKnown": "The %s knows a number of Class Techniques equal to half [INT] (rounded down) + [LEVEL] They can choose any Class Technique from the list below. After a [LONG REST] they can switch out one Class Technique they currently know for a different one.",
+    "classesDescription": "Each player character must choose from one of the following classes below. The Class determines the core set of abilities your character is able to use out- but especially in-combat. When your character reaches a higher [LEVEL], their abilities become stronger and they will gain newer ones. Your class will later also allow you to specialize in different ways. After having chosen your class, you have to make choices for skills and certain abilities your class possesses, such as spells.<br>Below are summaries for each Class which show you the key characteristics of each class which are explained below:",
+    "classCoreValuesDescriptions": {
+        "hpPerLevelDescription": "Represents your Class Bonus for determining your [HP] increase each [LEVEL].",
+        "martialLevelProgressionDescription": "Determines the factor with which your [MARTIAL LEVEL] increases with your [LEVEL]. The higher the value the better your character is at fighting using their martial prowess, superior tactics, or charismatic leadership",
+        "spellLevelProgressionDescription": "Determines the factor with which your [SPELL LEVEL] increases with your [LEVEL]. The higher the value, the better your character is at casting spells. A value of 0 indicates no spellcasting ability.",
+        "defensesDescription": "The Factor with which your Defense Values increase with each [LEVEL].",
+        "mainClassAttributesDescription": "Each class has 3 Main Class Attributes, which are relevant for the classes most important abilities. Additionally these abilities have a higher attribute limit and are each increased by 2 when selecting the class.",
+        "classSkillsDescription": "Your class skills, these skills have their rank and rank limit increased by 2.",
+        "skillPointsDescription": "How many skill points you receive at first [LEVEL] and at each [LEVEL] increase to improve your skill ranks.",
+        "weaponRanksDescription": "The ranks of Weapon proficiency the Character gains upon selecting this class."
+    },
+
+    "numberOfTechniquesKnown": "The %s knows a number of Class Techniques equal to half [INT] (rounded down) + [LEVEL] They can choose any Class Technique from the list below. After a Long Rest they can switch out one Class Technique they currently know for a different one.",
     "classPathText": ""
 }

@@ -1,1 +1,41 @@
-<p>classes works!</p>
+<div class="mx-2">
+    <app-dynamic-content [content]="classDescriptions.classesDescription| keywordProcessor"></app-dynamic-content>
+    <ul class="pt-3">
+        <li>
+            <span class="fw-bold">HP per Level: </span>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.hpPerLevelDescription | keywordProcessor"></app-dynamic-content>
+        </li>
+        <li>
+            <span class="fw-bold">Martial Level Progression: </span>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.hpPerLevelDescription | keywordProcessor"></app-dynamic-content>
+        </li>
+        <li>
+            <span class="fw-bold">Spell Level Progression: </span>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.spellLevelProgressionDescription | keywordProcessor"></app-dynamic-content>
+        </li>
+        <li>
+            <span class="fw-bold">Defenses: </span>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.defensesDescription | keywordProcessor"></app-dynamic-content>
+        </li>
+        <li>
+            <span class="fw-bold">Main Class Attributes: </span>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.mainClassAttributesDescription | keywordProcessor"></app-dynamic-content>
+        </li>
+        <li>
+            <span class="fw-bold">Class Skill: </span>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.classSkillsDescription | keywordProcessor"></app-dynamic-content>
+        </li>
+        <li>
+            <span class="fw-bold">Skill Points per Level: </span>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.skillPointsDescription | keywordProcessor"></app-dynamic-content>
+        </li>
+        <li>
+            <span class="fw-bold">Weapon Ranks: </span>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.weaponRanksDescription | keywordProcessor"></app-dynamic-content>
+        </li>
+    </ul>
+
+    @for (clazz of classes; track $index) {
+        <app-class [playerClass]="clazz"></app-class>
+    }
+</div>

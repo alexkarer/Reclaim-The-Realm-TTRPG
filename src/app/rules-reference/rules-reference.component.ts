@@ -11,6 +11,7 @@ import { EquipmentComponent } from "./equipment/equipment.component";
 import { AdventuringComponent } from "./adventuring/adventuring.component";
 import { CombatComponent } from "./combat/combat.component";
 import { ToolboxComponent } from "./toolbox/toolbox.component";
+import { ClassesComponent } from './classes/classes.component';
 
 @Component({
   selector: 'app-rules-reference',
@@ -25,7 +26,8 @@ import { ToolboxComponent } from "./toolbox/toolbox.component";
     EquipmentComponent,
     AdventuringComponent,
     CombatComponent,
-    ToolboxComponent
+    ToolboxComponent,
+    ClassesComponent
 ],
   templateUrl: './rules-reference.component.html',
   styleUrl: './rules-reference.component.scss'
