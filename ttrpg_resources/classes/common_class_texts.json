@@ -10,7 +10,7 @@
         "skillPointsDescription": "How many skill points you receive at first [LEVEL] and at each [LEVEL] increase to improve your skill ranks.",
         "weaponRanksDescription": "The ranks of Weapon proficiency the Character gains upon selecting this class."
     },
+    "classPathDescription": "When you select a Class, you can select one class Path. This class Path includes further specialications with each having a unique twist to the class.",
 
-    "numberOfTechniquesKnown": "The %s knows a number of Class Techniques equal to half [INT] (rounded down) + [LEVEL] They can choose any Class Technique from the list below. After a Long Rest they can switch out one Class Technique they currently know for a different one.",
-    "classPathText": ""
+    "numberOfTechniquesKnown": "The %s knows a number of Class Techniques equal to half [INT] (rounded down) + [LEVEL] They can choose any Class Technique from the list below. After a Long Rest they can switch out one Class Technique they currently know for a different one."
 }

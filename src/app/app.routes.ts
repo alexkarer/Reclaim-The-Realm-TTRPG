@@ -5,6 +5,7 @@ import { MartialManueversSearchComponent } from './martial-manuevers-search/mart
 import { SpellsSearchComponent } from './spells-search/spells-search.component';
 import { HybridAbilitiesSearchComponent } from './hybrid-abilities-search/hybrid-abilities-search.component';
 import { EquipmentSearchComponent } from './equipment-search/equipment-search.component';
+import { ClassesOverviewComponent } from './classes-overview/classes-overview.component';
 
 export const routes: Routes = [
     {
@@ -16,6 +17,11 @@ export const routes: Routes = [
         path: 'rules',
         component: RulesReferenceComponent,
         title: 'Reclaim the Realm - Rules'
+    },
+    {
+        path: 'classes',
+        component: ClassesOverviewComponent,
+        title: 'Reclaim the Realm - Classes'
     },
     {
         path: 'martial-maneuvers',

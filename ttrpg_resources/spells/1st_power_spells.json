@@ -190,7 +190,7 @@
                     "otherRequirements": [ "[SPELL LEVEL] > 0" ]
                 },
                 "cost": "1 [AP]", "range": "9m", "target": "1 target", "duration": "[INSTANT]",
-                "description": "You can remove one Tier 1 Status Effect affecting a target. Select a Status Effect affecting a target and make a [SPI] [SPELL TEST] against DC of the [SAVE] when the Status Effect was applied, if no [SAVE] was made, the DC is 10.",
+                "description": "You can remove one Tier 1 Status Effect affecting a target. Select a Status Effect affecting a target and make a [SPI] [SPELL TEST] against [DT] of the [SAVE] when the Status Effect was applied, if no [SAVE] was made, the [DT] is 10.",
                 "atHigherSpellPower": "If this spell is cast at 2nd Power you can choose to remove a Tier 2 Status Effect . If the spell is cast at 3rd Power you can choose to remove a Tier 3 Status Effect. For each higher Power than 3rd you can choose an additional target."
             }
         ],

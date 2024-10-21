@@ -38,7 +38,7 @@
                 "bulletPoints": null
             },
             {
-                "regularText": "When the Barbarians Rage exceeds 4+[LEVEL] they risk entering a frenzy. If at the start of their turn their Rage is higher than their Rage Limit they can make a [WILLPOWER] [SAVE], where the DC is equal to 5 + their current Rage. On a fail they enter a frenzy which has the following effects:",
+                "regularText": "When the Barbarians Rage exceeds 4+[LEVEL] they risk entering a frenzy. If at the start of their turn their Rage is higher than their Rage Limit they can make a [WILLPOWER] [SAVE], where the [DT] is equal to 5 + their current Rage. On a fail they enter a frenzy which has the following effects:",
                 "headerLine": null,
                 "bulletPoints": null
             },

@@ -1,6 +1,8 @@
 <div class="mx-2">
-    <app-dynamic-content [content]="classDescriptions.classesDescription| keywordProcessor"></app-dynamic-content>
-    <ul class="pt-3">
+    <app-dynamic-content [content]="classDescriptions.classesDescription | keywordProcessor"></app-dynamic-content>
+
+    <h4 class="mt-2">Class Core Values</h4>
+    <ul>
         <li>
             <span class="fw-bold">HP per Level: </span>
             <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.hpPerLevelDescription | keywordProcessor"></app-dynamic-content>
@@ -34,6 +36,9 @@
             <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.weaponRanksDescription | keywordProcessor"></app-dynamic-content>
         </li>
     </ul>
+
+    <h4>Class Paths</h4>
+    <app-dynamic-content [content]="classDescriptions.classPathDescription | keywordProcessor"></app-dynamic-content>
 
     @for (clazz of classes; track $index) {
         <app-class [playerClass]="clazz"></app-class>

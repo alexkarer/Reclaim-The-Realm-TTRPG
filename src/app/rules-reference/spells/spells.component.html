@@ -62,14 +62,14 @@
                 <thead>
                     <tr>
                         <th scope="col">Spell Power</th>
-                        <th scope="col">Upcasting DC</th>
+                        <th scope="col">Upcasting DT</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @for (upcastingSpellDC of spellsJson.castingSpells.upcastingSpells.upcastingSpellDC; track $index) {
+                    @for (upcastingSpellDT of spellsJson.castingSpells.upcastingSpells.upcastingSpellDT; track $index) {
                         <tr>
-                            <td>{{ upcastingSpellDC.spellPower }}</td>
-                            <td>{{ upcastingSpellDC.upcastingDC }}</td>
+                            <td>{{ upcastingSpellDT.spellPower }}</td>
+                            <td>{{ upcastingSpellDT.upcastingDT }}</td>
                         </tr>
                     }
                 </tbody>
