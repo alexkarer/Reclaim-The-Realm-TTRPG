@@ -9,7 +9,7 @@ import { ClassesOverviewComponent } from './classes-overview/classes-overview.co
 
 export const routes: Routes = [
     {
-        path: 'home',
+        path: '',
         component: MainPageComponent,
         title: 'Reclaim the Realm'
     },
