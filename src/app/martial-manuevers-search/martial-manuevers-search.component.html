@@ -22,7 +22,21 @@
         <button ngbDropdownItem (click)="onManeuverTypeFilterChange(ManeuverType.WEAPON)">Weapon Manuevers</button>
 			</div>
 		</div>
-    <input class="form-control me-2" type="search" placeholder="Search for name and tags" aria-label="Search" (input)="onFreeTextFilterChange($event)">
+    <div ngbDropdown class="d-inline-block me-5">
+			<button type="button" class="btn btn-outline-primary" id="dropdown-martial-ability-cost" ngbDropdownToggle [innerHTML]="getCurrentlySelectedManeuverCostText()"></button>
+			<div ngbDropdownMenu aria-labelledby="dropdown-martial-ability-cost" >
+        <button ngbDropdownItem (click)="onManeuverCostChange(ManeuverCost.ANY)">Any Ability Cost</button>
+				<button ngbDropdownItem (click)="onManeuverCostChange(ManeuverCost.MP)">Maneuvers with [MP] Cost</button>
+				<button ngbDropdownItem (click)="onManeuverCostChange(ManeuverCost.REACTION)">Maneuvers with [REACTION] Cost</button>
+				<button ngbDropdownItem (click)="onManeuverCostChange(ManeuverCost.AP1)">Maneuvers with 1 [AP] Cost</button>
+        <button ngbDropdownItem (click)="onManeuverCostChange(ManeuverCost.AP2)">Maneuvers with 2 [AP] Cost</button>
+        <button ngbDropdownItem (click)="onManeuverCostChange(ManeuverCost.AP3)">Maneuvers with 3 [AP] Cost</button>
+        <button ngbDropdownItem (click)="onManeuverCostChange(ManeuverCost.AP4)">Maneuvers with 4 [AP] Cost</button>
+        <button ngbDropdownItem (click)="onManeuverCostChange(ManeuverCost.AP5)">Maneuvers with 5 [AP] Cost</button>
+        <button ngbDropdownItem (click)="onManeuverCostChange(ManeuverCost.AP6)">Maneuvers with 6 [AP] Cost</button>
+			</div>
+		</div>
+    <input class="form-control me-2" type="search" placeholder="Search in name, tags and description" aria-label="Search" (input)="onFreeTextFilterChange()" [(ngModel)]="currentFilterText">
   </div>
 </nav>
 <div class="d-flex justify-content-center">
