@@ -28,6 +28,7 @@ export const fourthPowerSpells: SpellCollection = mapToSpellCollection(fourthPow
 export const fifthPowerSpells: SpellCollection = mapToSpellCollection(fifthPowerSpellsJson);
 export const sixthPowerSpells: SpellCollection = mapToSpellCollection(sixthPowerSpellsJson);
 
+export const allSpells = [...collectionToList(firstPowerSpells), ...collectionToList(secondPowerSpells), ...collectionToList(thirdPowerSpells), ...collectionToList(fourthPowerSpells), ...collectionToList(fifthPowerSpells), ...collectionToList(sixthPowerSpells)];
 
 function mapToSpellCollection(jsonSpells: JsonSpells): SpellCollection {
     return {
@@ -68,4 +69,12 @@ function mapToSpell(jsonSpell: JsonSpell): Spell {
     spell.components = jsonSpell.components;
     spell.atHigherSpellPower = jsonSpell.atHigherSpellPower;
     return spell;
+}
+
+function collectionToList(collection: SpellCollection): Spell[] {
+    let spellList: Spell[] = [];
+    spellList.push(...collection.cosmicSpells);
+    spellList.push(...collection.elementalSpells);
+    spellList.push(...collection.manipulationSpells);
+    return spellList;
 }

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { DynamicContentComponent } from '../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 import { KeywordProcessorPipe } from "../../shared/text-utils/keyword-processor";
-import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import { halveArray } from '../../shared/utils/array-utils';
 import { advancedManeuvers, basicManeuvers, masterManeuvers, transcendentManeuvers } from '../../../../ttrpg_resources/martial_maneuvers/martial-maneuvers';
 
@@ -10,7 +9,7 @@ import martialManeuversJson from '../../../../ttrpg_resources/martial_maneuvers/
 @Component({
   selector: 'app-martial-maneuvers',
   standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
+  imports: [DynamicContentComponent, KeywordProcessorPipe],
   templateUrl: './martial-maneuvers.component.html',
   styleUrl: './martial-maneuvers.component.scss'
 })

@@ -1,1 +1,60 @@
-<p>spells-search works!</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <div ngbDropdown class="d-inline-block me-5">
+            <button type="button" class="btn btn-outline-primary" id="dropdown-spell-power" ngbDropdownToggle>{{ selectedSpellPower }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdown-spell-power">
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.ALL)">{{ SpellPower.ALL }}</button>
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.FIRST)">{{ SpellPower.FIRST }}</button>
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.SECOND)">{{ SpellPower.SECOND }}</button>
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.THIRD)">{{ SpellPower.THIRD }}</button>
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.FOURTH)">{{ SpellPower.FOURTH }}</button>
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.FIFTH)">{{ SpellPower.FIFTH }}</button>
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.SIXTH)">{{ SpellPower.SIXTH }}</button>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block me-5">
+            <button type="button" class="btn btn-outline-primary" id="dropdown-spell-discipline" ngbDropdownToggle>{{ selectedSpellDiscipline }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdown-spell-discipline">
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ALL)">{{ SpellDiscipline.ALL }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ELEMENTAL)">{{ SpellDiscipline.ELEMENTAL }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.PYROMANCY)">{{ SpellDiscipline.PYROMANCY }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.HYDROMANCY)">{{ SpellDiscipline.HYDROMANCY }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.AEROMANCY)">{{ SpellDiscipline.AEROMANCY }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.GEOMANCY)">{{ SpellDiscipline.GEOMANCY }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.COSMIC)">{{ SpellDiscipline.COSMIC }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.LIGHT)">{{ SpellDiscipline.LIGHT }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.RESTORATION)">{{ SpellDiscipline.RESTORATION }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.SHADOW)">{{ SpellDiscipline.SHADOW }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.NECROMANCY)">{{ SpellDiscipline.NECROMANCY }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.DIVINATION)">{{ SpellDiscipline.DIVINATION }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.MANIPULATION)">{{ SpellDiscipline.MANIPULATION }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEKINESIS)">{{ SpellDiscipline.TELEKINESIS }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TRANSMUTATION)">{{ SpellDiscipline.TRANSMUTATION }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.CONJURATION)">{{ SpellDiscipline.CONJURATION }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ILLUSION)">{{ SpellDiscipline.ILLUSION }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEPORTATION)">{{ SpellDiscipline.TELEPORTATION }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEPATHY)">{{ SpellDiscipline.TELEPATHY }}</button>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block me-5">
+            <button type="button" class="btn btn-outline-primary" id="dropdown-spell-ability-cost" ngbDropdownToggle>{{ selectedSpellCost }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdown-spell-ability-cost">
+                <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.ANY)">{{ SpellCost.ANY }}</button>
+                <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.REACTION)">{{ SpellCost.REACTION }}</button>
+                <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP1)">{{ SpellCost.AP1 }}</button>
+                <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP2)">{{ SpellCost.AP2 }}</button>
+                <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP3)">{{ SpellCost.AP3 }}</button>
+                <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP4)">{{ SpellCost.AP4 }}</button>
+                <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP5)">{{ SpellCost.AP5 }}</button>
+                <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP6)">{{ SpellCost.AP6 }}</button>
+            </div>
+        </div>
+        <input class="form-control me-2" type="search" placeholder="Search in name, tags and description"
+            aria-label="Search" (input)="onFreeTextFilterChange()" [(ngModel)]="currentFilterText">
+    </div>
+</nav>
+<div class="d-flex justify-content-center">
+    <div class="desktop-width-50 mt-3">
+        <app-ability-list [abilities]="filteredSpells"></app-ability-list>
+    </div>
+</div>
