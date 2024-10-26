@@ -1,0 +1,120 @@
+<div class="d-flex justify-content-center">
+    <h3>{{ playerClass?.className }}</h3>
+</div>
+<div class="d-flex justify-content-center my-3">
+    <app-dynamic-content [content]="playerClass?.classDescription | keywordProcessor"></app-dynamic-content>
+</div>
+<div class="container g-3">
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <h4>{{playerClass?.className + ' Core Values'}}</h4>
+            </div>
+            <table class="rules-table">
+                <tbody>
+                    <tr>
+                        <td><span class="fw-bold">HP per Level</span></td>
+                        <td>{{ playerClass?.coreClassValues?.hpPerLevel }}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="fw-bold">Martial Level Progression</span></td>
+                        <td>{{ playerClass?.coreClassValues?.martialProficiency }}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="fw-bold">Spell Level Progression</span></td>
+                        <td>{{ playerClass?.coreClassValues?.spellProficiency }}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="fw-bold">Defenses</span></td>
+                        <td>
+                            <app-dynamic-content [content]="'[DODGE] Proficiency: ' | keywordProcessor"></app-dynamic-content>{{playerClass?.coreClassValues?.dodgeProficiency}}<br>
+                            <app-dynamic-content [content]="'[HARDNESS] Proficiency: ' | keywordProcessor"></app-dynamic-content>{{playerClass?.coreClassValues?.hardnessProficiency}}<br>
+                            <app-dynamic-content [content]="'[TOUGHNESS] Proficiency: ' | keywordProcessor"></app-dynamic-content>{{playerClass?.coreClassValues?.toughnessProficiency}}<br>
+                            <app-dynamic-content [content]="'[WILLPOWER] Proficiency: ' | keywordProcessor"></app-dynamic-content>{{playerClass?.coreClassValues?.willpowerProficiency}}<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="fw-bold">Main Class Attributes</span></td>
+                        <td><app-dynamic-content [content]="playerClass?.coreClassValues?.mainClassAttributes?.join(', ') | keywordProcessor"></app-dynamic-content></td>
+                    </tr>
+                    <tr>
+                        <td><span class="fw-bold">Class Skills</span></td>
+                        <td>{{ playerClass?.coreClassValues?.classSKills?.join(', ') }}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="fw-bold">Skill Points per Level</span></td>
+                        <td>{{ playerClass?.coreClassValues?.skillPointsPerLevel }}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="fw-bold">Weapon Ranks</span></td>
+                        <td>{{ playerClass?.coreClassValues?.weaponRanks }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <h4>{{playerClass?.className + ' Class Table'}}</h4>
+            </div>
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">[LEVEL]</th>
+                        <th scope="col">Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (features of classFeaturesPerLevel; track $index) {
+                        <tr>
+                            <td>{{ $index + 1 }}</td>
+                            <td [innerHTML]="features"></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <h4>{{playerClass?.className + ' Core Feature: ' + playerClass?.classCoreFeature?.name }}</h4>
+            </div>
+            <app-text-elements [textElements]="playerClass?.classCoreFeature?.textElements"></app-text-elements>
+        </div>
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <h4>{{ playerClass?.className + ' Class Paths' }}</h4>
+            </div>
+            <app-dynamic-content [content]="playerClass?.classPathDescription | keywordProcessor"></app-dynamic-content>
+            @for (path of playerClass?.classPaths; track $index) {
+                <h5>{{ path.name }}</h5>
+                <app-text-elements [textElements]="path.textElements" [useBoldTextForHeader]="true"></app-text-elements>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <h4>{{ 'Other ' + playerClass?.className + ' Features' }}</h4>
+            </div>
+            @for (classFeature of playerClass?.classFeatures; track $index) {
+                @if (classFeature.relatedClassPath != null) {
+                    <h5 class="mt-2 mb-0">{{ classFeature.name + ' (' }}<span class="fst-italic">{{ classFeature.relatedClassPath }}</span>{{')'}}</h5>
+                } @else {
+                    <h5 class="mt-2 mb-0">{{ classFeature.name }}</h5>
+                }
+                <app-text-elements [textElements]="classFeature.textElements" [useBoldTextForHeader]="true"></app-text-elements>
+            }
+        </div>
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <h4>{{ playerClass?.className + ' Class Techniques' }}</h4>
+            </div>
+            <app-dynamic-content [content]="playerClass?.classTechniquesDescription | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="commonClassTexts.numberOfTechniquesKnown| keywordProcessor"></app-dynamic-content>
+            <div class="mt-2">
+                <app-ability-list [abilities]="playerClass ? playerClass.classTechniques : []"></app-ability-list>
+            </div>
+        </div>
+    </div>
+</div>

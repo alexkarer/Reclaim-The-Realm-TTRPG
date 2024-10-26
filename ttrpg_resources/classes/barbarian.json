@@ -1,6 +1,6 @@
 {
     "className": "Barbarian",
-    "classDescription": "",
+    "classDescription": "The barbarian is one of the classes of all time",
     "coreClassValues": {
         "hpPerLevel": 12,
         "martialProficiency": 1.0,
@@ -9,7 +9,7 @@
         "hardnessProficiency": 1.0,
         "toughnessProficiency": 1.0,
         "willpowerProficiency": 0.334,
-        "mainClassAttributes": [ "STR", "CON", "PER" ],
+        "mainClassAttributes": [ "[STR]", "[CON]", "[PER]" ],
         "classSKills": [ "Athletics", "Intimidation", "Survival" ],
         "skillPointsPerLevel": 4,
         "weaponRanks": 2

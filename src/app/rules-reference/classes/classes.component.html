@@ -39,8 +39,4 @@
 
     <h4>Class Paths</h4>
     <app-dynamic-content [content]="classDescriptions.classPathDescription | keywordProcessor"></app-dynamic-content>
-
-    @for (clazz of classes; track $index) {
-        <app-class [playerClass]="clazz"></app-class>
-    }
 </div>
