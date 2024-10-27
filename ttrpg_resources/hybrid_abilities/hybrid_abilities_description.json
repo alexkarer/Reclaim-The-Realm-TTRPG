@@ -1,0 +1,10 @@
+{
+    "hybridAbilitiesDescription": "Hybrid abilities are special abilities that require both Martial prowess and Spellcasting knowledge to learn and master.",
+    "lerningHybridAbilitiesDescription": "To be able to learn a hybrid ability, the following requirements must be met:",
+    "learningHybridAbilitiesRequirementsDescriptions": [
+        "You must meet all requirements of the ability as usual",
+        "You must be able to lern spells of the Spell Disciple of the Hybrid Ability.",
+        "You must be able to learn one additional Martial Maneuver or Spell, if you choose to learn a Hybrid Ability it counts as a learned spell and Martial Maneuver."
+    ],
+    "performingHybridAbilities": "Hybrid Abilities work similar to other abilities, however they also have spell components similar to spells which need to be provided or otherwise they can't be performed."
+}

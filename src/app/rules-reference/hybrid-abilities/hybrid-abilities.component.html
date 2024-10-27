@@ -1,17 +1,14 @@
 <div class="mx-2">
-    <app-dynamic-content [content]="hybridAbilityDescription | keywordProcessor"></app-dynamic-content>
-    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="novice-hybrid">Novice Hybrid Abilities</h3>
-    <app-hybrid-ability-list [hybridAbilities]="noviceHybridAbilities"></app-hybrid-ability-list>
-
-    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="advanced-hybrid">Advanced Hybrid Abilities</h3>
-    <app-hybrid-ability-list [hybridAbilities]="advancedHybridAbilities"></app-hybrid-ability-list>
-
-    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="master-hybrid">Master Hybrid Abilities</h3>
-    <app-hybrid-ability-list [hybridAbilities]="masterHybridAbilities"></app-hybrid-ability-list>
-
-    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="martial-hybrid">Martial Focused Hybrid Abilities</h3>
-    <app-hybrid-ability-list [hybridAbilities]="martialFocusedHybridAbilities"></app-hybrid-ability-list>
-
-    <h3 class="mt-3 mb-1" ngbScrollSpyFragment="spell-hybrid">Spell Focused Abilities</h3>
-    <app-hybrid-ability-list [hybridAbilities]="spellFocusedHybridAbilities"></app-hybrid-ability-list>
+    <app-dynamic-content [content]="hybridAbilityDescription.hybridAbilitiesDescription | keywordProcessor"></app-dynamic-content>
+    <div class="mx-2">
+        <h4 class="mb-1 mt-3">Learning Hybrid Abilities</h4>
+        <app-dynamic-content [content]="hybridAbilityDescription.lerningHybridAbilitiesDescription| keywordProcessor"></app-dynamic-content>
+        <ul>
+            @for (desc of hybridAbilityDescription.learningHybridAbilitiesRequirementsDescriptions; track $index) {
+                <app-dynamic-content [content]="desc | keywordProcessor"></app-dynamic-content>
+            }
+        </ul>
+        <h4 class="mb-1 mt-3">Performing Hybrid Abilities</h4>
+        <app-dynamic-content [content]="hybridAbilityDescription.performingHybridAbilities | keywordProcessor"></app-dynamic-content>
+    </div>
 </div>

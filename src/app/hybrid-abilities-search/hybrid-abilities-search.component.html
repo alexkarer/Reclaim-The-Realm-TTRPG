@@ -1,1 +1,66 @@
-<p>hybrid-abilities-search works!</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <div ngbDropdown class="d-inline-block me-5">
+            <button type="button" class="btn btn-outline-primary" id="dropdown-hybrid-spell-level" ngbDropdownToggle>{{ selectedSpellLevel }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdown-hybrid-spell-level">
+                <button ngbDropdownItem (click)="onSpellLevelFilterChange(SpellLevel.ANY)">{{ SpellLevel.ANY }}</button>
+                <button ngbDropdownItem (click)="onSpellLevelFilterChange(SpellLevel.THREE)">{{ SpellLevel.THREE }}</button>
+                <button ngbDropdownItem (click)="onSpellLevelFilterChange(SpellLevel.SIX)">{{ SpellLevel.SIX }}</button>
+                <button ngbDropdownItem (click)="onSpellLevelFilterChange(SpellLevel.NINE)">{{ SpellLevel.NINE }}</button>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block me-5">
+            <button type="button" class="btn btn-outline-primary" id="dropdown-hybrid-martial-level" ngbDropdownToggle>{{ selectedMartialLevel }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdown-hybrid-martial-level">
+                <button ngbDropdownItem (click)="onMartialLevelFilterChange(MartialLevel.ANY)">{{ MartialLevel.ANY }}</button>
+                <button ngbDropdownItem (click)="onMartialLevelFilterChange(MartialLevel.THREE)">{{ MartialLevel.THREE }}</button>
+                <button ngbDropdownItem (click)="onMartialLevelFilterChange(MartialLevel.SIX)">{{ MartialLevel.SIX }}</button>
+                <button ngbDropdownItem (click)="onMartialLevelFilterChange(MartialLevel.NINE)">{{ MartialLevel.NINE }}</button>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block me-5">
+            <button type="button" class="btn btn-outline-primary" id="dropdown-hybrid-spell-discipline" ngbDropdownToggle>{{ selectedHybridSpellDiscipline }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdown-hybrid-spell-discipline">
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.ALL)">{{ HybridSpellDiscipline.ALL }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.ELEMENTAL)">{{ HybridSpellDiscipline.ELEMENTAL }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.PYROMANCY)">{{ HybridSpellDiscipline.PYROMANCY }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.HYDROMANCY)">{{ HybridSpellDiscipline.HYDROMANCY }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.AEROMANCY)">{{ HybridSpellDiscipline.AEROMANCY }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.GEOMANCY)">{{ HybridSpellDiscipline.GEOMANCY }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.COSMIC)">{{ HybridSpellDiscipline.COSMIC }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.LIGHT)">{{ HybridSpellDiscipline.LIGHT }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.RESTORATION)">{{ HybridSpellDiscipline.RESTORATION }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.SHADOW)">{{ HybridSpellDiscipline.SHADOW }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.NECROMANCY)">{{ HybridSpellDiscipline.NECROMANCY }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.DIVINATION)">{{ HybridSpellDiscipline.DIVINATION }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.MANIPULATION)">{{ HybridSpellDiscipline.MANIPULATION }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.TELEKINESIS)">{{ HybridSpellDiscipline.TELEKINESIS }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.TRANSMUTATION)">{{ HybridSpellDiscipline.TRANSMUTATION }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.CONJURATION)">{{ HybridSpellDiscipline.CONJURATION }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.ILLUSION)">{{ HybridSpellDiscipline.ILLUSION }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.TELEPORTATION)">{{ HybridSpellDiscipline.TELEPORTATION }}</button>
+                <button ngbDropdownItem (click)="onHybridSpellDisciplineFilterChange(HybridSpellDiscipline.TELEPATHY)">{{ HybridSpellDiscipline.TELEPATHY }}</button>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block me-5">
+            <button type="button" class="btn btn-outline-primary" id="dropdown-hybrid-ability-cost" ngbDropdownToggle>{{ selectedHybridCost }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdown-hybrid-ability-cost">
+                <button ngbDropdownItem (click)="onHybridCostFilterChange(HybridAbilityCost.ANY)">{{ HybridAbilityCost.ANY }}</button>
+                <button ngbDropdownItem (click)="onHybridCostFilterChange(HybridAbilityCost.REACTION)">{{ HybridAbilityCost.REACTION }}</button>
+                <button ngbDropdownItem (click)="onHybridCostFilterChange(HybridAbilityCost.AP1)">{{ HybridAbilityCost.AP1 }}</button>
+                <button ngbDropdownItem (click)="onHybridCostFilterChange(HybridAbilityCost.AP2)">{{ HybridAbilityCost.AP2 }}</button>
+                <button ngbDropdownItem (click)="onHybridCostFilterChange(HybridAbilityCost.AP3)">{{ HybridAbilityCost.AP3 }}</button>
+                <button ngbDropdownItem (click)="onHybridCostFilterChange(HybridAbilityCost.AP4)">{{ HybridAbilityCost.AP4 }}</button>
+                <button ngbDropdownItem (click)="onHybridCostFilterChange(HybridAbilityCost.AP5)">{{ HybridAbilityCost.AP5 }}</button>
+                <button ngbDropdownItem (click)="onHybridCostFilterChange(HybridAbilityCost.AP6)">{{ HybridAbilityCost.AP6 }}</button>
+            </div>
+        </div>
+        <input class="form-control me-2" type="search" placeholder="Search in name, tags and description"
+            aria-label="Search" (input)="onFreeTextFilterChange()" [(ngModel)]="currentFilterText">
+    </div>
+</nav>
+<div class="d-flex justify-content-center">
+    <div class="desktop-width-50 mt-3">
+        <app-ability-list [abilities]="filteredHybridAbilities"></app-ability-list>
+    </div>
+</div>

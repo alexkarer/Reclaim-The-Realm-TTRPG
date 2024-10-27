@@ -21,17 +21,11 @@
 	
 			<a role="button" class="nav-link" ngbScrollSpyItem="classes">Classes</a>
 	
-			<a role="button" class="nav-link" ngbScrollSpyItem="martial-maneuvers">Martial Maneuvers</a>
-	
-			<a role="button" class="nav-link" ngbScrollSpyItem="spells">Spells</a>
-	
-			<a role="button" class="nav-link" ngbScrollSpyItem="hybrid-abilities">Hybrid Abilities</a>
+			<a role="button" class="nav-link" ngbScrollSpyItem="abilities">Abilities</a>
 			<nav class="nav nav-pills flex-column">
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="novice-hybrid" parent="hybrid-abilitie">Novice Hybrid Abilities</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="advanced-hybrid" parent="hybrid-abilitie">Advanced Hybrid Abilities</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="master-hybrid" parent="hybrid-abilitie">Master Hybrid Abilities</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="martial-hybrid" parent="hybrid-abilitie">Martial Focused Hybrid Abilitiess</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="spell-hybrid" parent="hybrid-abilitie">Spell Focused Hybrid Abilities</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="abilities" ngbScrollSpyItem="martial-maneuvers">Martial Maneuvers</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="abilities" ngbScrollSpyItem="spells">Spells</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="abilities" ngbScrollSpyItem="hybrid-abilities">Hybrid Abilities</a>
 			</nav>
 	
 			<a role="button" class="nav-link" ngbScrollSpyItem="perks">Perks</a>
@@ -81,14 +75,15 @@
 	<h2 class="pt-3" ngbScrollSpyFragment="classes">Classes</h2>
 	<app-classes/>
 
-	<h2 class="pt-3" ngbScrollSpyFragment="martial-maneuvers">Martial Maneuvers</h2>
-	<app-martial-maneuvers/>
-
-	<h2 class="pt-3" ngbScrollSpyFragment="spells">Spells</h2>
-	<app-spells/>
-
-	<h2 class="pt-3" ngbScrollSpyFragment="hybrid-abilities">Hybrid Abilities</h2>
-	<app-hybrid-abilities/>
+	<h2 class="pt-3" ngbScrollSpyFragment="abilities">Abilities</h2>
+	<div class="mx-2">
+		<h3 class="pt-3" ngbScrollSpyFragment="martial-maneuvers">Martial Maneuvers</h3>
+		<app-martial-maneuvers/>
+		<h3 class="pt-3" ngbScrollSpyFragment="spells">Spells</h3>
+		<app-spells/>
+		<h3 class="pt-3" ngbScrollSpyFragment="hybrid-abilities">Hybrid Abilities</h3>
+		<app-hybrid-abilities/>
+	</div>
 
 	<h2 class="pt-3" ngbScrollSpyFragment="perks">Perks</h2>
 	<app-perks/>

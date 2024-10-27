@@ -1,3 +1,74 @@
 {
-    "hybridAbilitiesDescription": "Hybrid abilities are special abilities that require both Martial prowess and Spellcasting knowledge to learn and master. To be able to learn a hybrid ability, the following requirements must be met. <ul><li>You must meet the requirements of the ability.</li> <li>You must be able to lern spells of the Disciple of the Hybrid Ability.</li> <li>You must be able to learn one additional Combat maneuver and Spell.</li></ul> When you learn a Hybrid Ability it takes up one Martial Combat Maneuver and one Spell that you can’t learn instead. As such there is no limit for the amount of Hybrid Abilities you can learn as it strongly depends on your Martial and Spellcasting Capacity."
+    "elementalHybridAbilities": [
+        {
+            "name": "Ignite Blade",
+            "tags": [ "Hybrid Ability", "Spell(1)", "Elemental", "Pyromancy" ],
+            "components": "V, M (Weapon)",
+            "requirements": {
+                "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
+            },
+            "cost": "1 [AP], 1 [ARCANA]", "range": "-", "target": "Weapon you are holding", "duration": "[SPI] rounds, [CONCENTRATION] 0",
+            "description": "You enchant one weapon that you are currently wielding. Each [MELEE MARTIAL ATTACK] made with this weapon deals 1d6 extra fire damage."
+        },
+        {
+            "name": "Booming Strike",
+            "tags": [ "Hybrid Ability", "Spell(1)", "Elemental", "Aeromancy" ],
+            "components": "V, M (Weapon, Bodypart or Ammunition)",
+            "requirements": {
+                "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
+            },
+            "cost": "3 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "one target, [CONE] (4.5m)", "duration":"[INSTANT]",
+            "description": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], the target suffers the attack as normal but in addition regardless if your [ATTACK] succeeds or not a sonic wave is unleashed in a 4.5m Cone that starts from the target. Make a [INT] [SPELL TEST] against the [TOUGHNESS] of the creatures inside the cone. On a success they recieve ([SPI]/2) * d8 sonic damage [HALF]."
+        }
+    ],
+    "cosmicHybridAbilities": [
+        {
+            "name": "Smite",
+            "tags": [ "Hybrid Ability", "Spell(1)", "Cosmic", "Light" ],
+            "components": "V, M (Weapon, Bodypart or Ammunition)",
+            "requirements": {
+                "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
+            },
+            "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "one target", "duration": "1 [ROUND]",
+            "description": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], You add 1d6 + ([SPI]/2) * d6 holy damage to the [ATTACK]. If the creature hit is evil and that [ATTACK] exceeds that creatures [TOUGHNESS], it becomes additionally [BLINDED] until the end of your next turn."
+        },
+        {
+            "name": "Unholy Smite",
+            "tags": [ "Hybrid Ability", "Spell(1)", "Cosmic", "Shadow" ],
+            "components": "V, M (Weapon, Bodypart or Ammunition)",
+            "requirements": {
+                "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
+            },
+            "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "one target", "duration": "1 [ROUND]",
+            "description": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], You add 1d6 + ([SPI]/2) * d6 holy damage to the [ATTACK]. If that [ATTACK] exceeds that creatures [TOUGHNESS] it becomes additionally [CRIPPLED] until the end of your next turn."
+        }
+    ],
+    "manipulationHybridAbilities": [
+        {
+            "name": "Telekinetic Weapon",
+            "tags": [ "Hybrid Ability", "Spell(1)", "Manipulation", "Telekinesis" ],
+            "components": "V, S, M (Weapon)",
+            "requirements": {
+                "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
+            },
+            "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one target, [LINE]*", "duration": "[INSTANT]",
+            "description": "You launch your weapon at an enemy with the aid of Telekinetic Force. Make a Weapon [RANGED MARTIAL ATTACK] or [RANGED SPELL ATTACK] (your choice) against the Target. On hit the target recieves damage of your regular weapon damage + [SPI] . Additionally every enemy that is on a straight line from you and your target can be hit by the Weapons return path. Make a [INT] [SPELL TEST] against their [DODGE] on a success they recieve damage equal to the weapons base damage (in case of versatile weapon, the versitile damage is used)."
+        },
+        {
+            "name": "Teleport Strike",
+            "tags": [ "Hybrid Ability", "Spell(1)", "Manipulation", "Teleportation" ],
+            "components": "V, M (Weapon, Bodypart or Ammunition)",
+            "requirements": {
+                "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
+            },
+            "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE] + 9m", "target": "one creature", "duration": "[INSTANT]",
+            "description": "You open a temporary portal to enable your Attacks to reach greater distance or hit from betterangles. Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] against a creature. The creature hit by the [ATTACK] recieves no benefit of cover and additionally the creature is unaware of the attack even if it can see the attacker."
+        }
+    ]
 }
