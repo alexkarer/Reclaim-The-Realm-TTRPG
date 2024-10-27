@@ -6,6 +6,7 @@ import { SpellsSearchComponent } from './spells-search/spells-search.component';
 import { HybridAbilitiesSearchComponent } from './hybrid-abilities-search/hybrid-abilities-search.component';
 import { EquipmentSearchComponent } from './equipment-search/equipment-search.component';
 import { ClassesOverviewComponent } from './classes-overview/classes-overview.component';
+import { PerkSearchComponent } from './perk-search/perk-search.component';
 
 export const routes: Routes = [
     {
@@ -37,6 +38,11 @@ export const routes: Routes = [
         path: 'hybrid-abilities',
         component: HybridAbilitiesSearchComponent,
         title: 'Reclaim the Realm - Hybrid Abilities'
+    },
+    {
+        path: 'perks',
+        component: PerkSearchComponent,
+        title: 'Reclaim the Realm - Perks'
     },
     {
         path: 'equipment',

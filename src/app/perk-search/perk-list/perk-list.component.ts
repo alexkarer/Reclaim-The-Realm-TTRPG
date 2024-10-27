@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Perk } from '../../../../../ttrpg_resources/perks/perk';
-import { RequirementsPrettierPipe } from "../../../shared/utils/to-pretty-string";
-import { DynamicContentComponent } from "../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
-import { KeywordProcessorPipe } from "../../../shared/text-utils/keyword-processor";
+import { Perk } from '../../../../ttrpg_resources/perks/perk';
+import { RequirementsPrettierPipe } from "../../shared/utils/to-pretty-string";
+import { DynamicContentComponent } from "../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
+import { KeywordProcessorPipe } from "../../shared/text-utils/keyword-processor";
 
 @Component({
   selector: 'app-perk-list',

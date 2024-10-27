@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <div ngbDropdown class="d-inline-block me-5">
+            <button type="button" class="btn btn-outline-primary" id="dropdown-perk-tag" ngbDropdownToggle>{{ selectedPerkTag }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdown-perk-tag">
+                <button ngbDropdownItem (click)="onPerkTagFilterChange(PerkTags.ALL)">{{ PerkTags.ALL }}</button>
+                <button ngbDropdownItem (click)="onPerkTagFilterChange(PerkTags.CRAFTING)">{{ PerkTags.CRAFTING }}</button>
+                <button ngbDropdownItem (click)="onPerkTagFilterChange(PerkTags.DEFENSIVE)">{{ PerkTags.DEFENSIVE }}</button>
+                <button ngbDropdownItem (click)="onPerkTagFilterChange(PerkTags.MARTIAL)">{{ PerkTags.MARTIAL }}</button>
+                <button ngbDropdownItem (click)="onPerkTagFilterChange(PerkTags.OTHER)">{{ PerkTags.OTHER }}</button>
+                <button ngbDropdownItem (click)="onPerkTagFilterChange(PerkTags.SKILL)">{{ PerkTags.SKILL }}</button>
+                <button ngbDropdownItem (click)="onPerkTagFilterChange(PerkTags.SPELL)">{{ PerkTags.SPELL }}</button>
+            </div>
+        </div>
+
+        <div class="form-check me-5">
+            <input class="form-check-input" type="checkbox" value="" id="checkbox-perk-repeatable" (change)="onRepeatablePerksChange()">
+            <label class="form-check-label" for="checkbox-perk-repeatable">Repeatable</label>
+        </div>
+
+        <input class="form-control me-2" type="search" placeholder="Search in name, tags and description"
+            aria-label="Search" (input)="onFreeTextFilterChange()" [(ngModel)]="currentFilterText">
+    </div>
+</nav>
+<div class="d-flex justify-content-center">
+    <div class="desktop-width-50 mt-3">
+        <app-perk-list [perkList]="filteredPerks"></app-perk-list>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 [
     {
         "name": "PlaceHolder",
+        "tags": [ "Crafting" ],
         "requirements": {
             "requiredLevels": [
                 { "amount": 1, "levelType": "" }
@@ -11,7 +12,6 @@
             "requiredPerks": [ "" ],
             "otherRequirements": [ "" ]
         },
-        "repeatable": false,
         "description": ""
     }
 ]

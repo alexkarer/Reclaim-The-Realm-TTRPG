@@ -3,7 +3,7 @@
         <tr>
             <th scope="col">Name</th>
             <th scope="col">Requirements</th>
-            <th scope="col">Repeatable</th>
+            <th scope="col">Tags</th>
         </tr>
     </thead>
     <tbody>
@@ -11,7 +11,7 @@
             <tr (click)="perkDescriptionEnabled[$index] = !perkDescriptionEnabled[$index]" style="cursor: pointer">
                 <th scope="row">{{ perk?.name }}</th>
                 <td class="header-subscript">{{ perk?.requirements | requirementsPrettier }}</td>
-                <td class="header-subscript">{{ perk?.repeatable ? 'Yes' : 'No'}}</td>
+                <td class="header-subscript">{{ perk?.tags?.join(', ') }}</td>
             </tr>
             @if (perkDescriptionEnabled[$index]) {
                 <tr>

@@ -1,5 +1,6 @@
 {
     "progressionDescription": "Besides more [HP] , Class Features and Proficiency Bonuses. Gaining a higher level also grants you access to more perks, increases your [AP] and allows you to have higher Attribute values. In this table below, you can see the general bonuses received as well as the [XP] required to hit that level.<br>You gain the following benefits every time you [LEVEL] up.<ul><li>You gain 1 Attribute Point</li><li>You can select one Perk</li></ul>Additionally, every 30 000 [XP] after [LEVEL] 12, you gain an additional Attribute Point and can choose a new Perk. However, your [LEVEL] does not increase.",
+    "perksDescription": "Perks are class agnostic improvements that make your character better in various ways. A character can choose a perk at [LEVEL] 1 and each time their [LEVEL] increases. Any Perk can be choosen as long as the Character meets all the requirements of the Perk. Additionally  Perk can only be choosen once unless it has the <span class=\"fst-italic\">repeatable</span> tag",
     "levelRequirementsAndBonuses": [
         {
             "level": 1,

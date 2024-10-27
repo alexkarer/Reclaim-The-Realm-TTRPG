@@ -12,5 +12,6 @@ import progressionJson from '../../../../../ttrpg_resources/character_values/pro
 })
 export class ProgressionComponent {
   public readonly progressionDescription = progressionJson.progressionDescription;
+  public readonly perksDescription = progressionJson.perksDescription;
   public readonly levelRequirements = progressionJson.levelRequirementsAndBonuses;
 }
