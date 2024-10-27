@@ -77,13 +77,25 @@
         </div>
 
         <h4 class="mb-2 mt-3">Spell Components</h4>
-        <app-dynamic-content [content]="spellsJson.castingSpells.spellComponents | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="spellsJson.castingSpells.spellComponentsDescription | keywordProcessor"></app-dynamic-content>
+        <div class="row gx-4 mt-3">
+            @for (component of spellsJson.castingSpells.spellComponents; track $index) {
+                <div class ="col">
+                    <div class=" p-2 border bg-body-secondary text-center">
+                        <h5>{{ component.name }}</h5>
+                        <app-dynamic-content [content]="component.description| keywordProcessor"></app-dynamic-content>
+                    </div>
+                </div>
+            }
+        </div>
+
 
         <h4 class="mb-2 mt-3">Spell Disciplines</h4>
         <app-dynamic-content [content]="spellsJson.castingSpells.spellDisciplinesDescription | keywordProcessor"></app-dynamic-content>
-        <div class="d-flex flex-column align-items-center">
+        <div class="row gx-4 mt-3">
             @for (spellDiscipline of spellsJson.castingSpells.spellDisciplines; track $index) {
-                <div class ="p-2 border bg-body-secondary mt-3 text-center desktop-width-50 ">
+                <div class ="col">
+                    <div class=" p-2 border bg-body-secondary text-center">
                         <h5>{{ spellDiscipline.majorDisciplineName }}</h5>
                         <app-dynamic-content [content]="spellDiscipline.majorDisciplineDescription | keywordProcessor"></app-dynamic-content>
                         @for (subDiscipline of spellDiscipline.subDisciplines; track $index) {
@@ -93,6 +105,7 @@
                                 <app-dynamic-content [content]="subDiscipline.subDisciplineDescription| keywordProcessor"></app-dynamic-content>
                             </div>
                         }
+                    </div>
                 </div>
             }
         </div>

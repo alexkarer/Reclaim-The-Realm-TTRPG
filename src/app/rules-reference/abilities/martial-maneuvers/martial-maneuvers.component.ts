@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { DynamicContentComponent } from '../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
-import { KeywordProcessorPipe } from "../../shared/text-utils/keyword-processor";
-import { halveArray } from '../../shared/utils/array-utils';
-import { advancedManeuvers, basicManeuvers, masterManeuvers, transcendentManeuvers } from '../../../../ttrpg_resources/martial_maneuvers/martial-maneuvers';
+import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
+import { KeywordProcessorPipe } from "../../../shared/text-utils/keyword-processor";
+import { halveArray } from '../../../shared/utils/array-utils';
+import { advancedManeuvers, basicManeuvers, masterManeuvers, transcendentManeuvers } from '../../../../../ttrpg_resources/martial_maneuvers/martial-maneuvers';
 
-import martialManeuversJson from '../../../../ttrpg_resources/martial_maneuvers/martial_maneuvers_overview.json';
+import martialManeuversJson from '../../../../../ttrpg_resources/martial_maneuvers/martial_maneuvers_overview.json';
 
 @Component({
   selector: 'app-martial-maneuvers',

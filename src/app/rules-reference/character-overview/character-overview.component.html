@@ -6,9 +6,11 @@
         <app-dynamic-content [content]="attributeTestDescription | keywordProcessor"></app-dynamic-content>
     </div>
     <app-attributes-list/>
+    <hr>
 
     <h3 ngbScrollSpyFragment="important-characteristics">Important Characteristics</h3>
     <app-important-characteristics></app-important-characteristics>
+    <hr>
 
     <h3 ngbScrollSpyFragment="skills">Skills</h3>
     <app-dynamic-content [content]="skillRules.skillDescription | keywordProcessor"></app-dynamic-content>
@@ -29,6 +31,7 @@
     <div class="mx-2">
         <app-skill-list [skills]="toolSkills "></app-skill-list>
     </div>
+    <hr>
 
     <h3 ngbScrollSpyFragment="progression">Progression</h3>
     <app-progression></app-progression>

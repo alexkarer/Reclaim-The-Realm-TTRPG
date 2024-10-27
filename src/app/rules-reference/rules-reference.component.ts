@@ -4,30 +4,32 @@ import { PerksComponent } from "./perks/perks.component";
 import { SkillListComponent } from './character-overview/skill-list/skill-list.component';
 import { CharacterOverviewComponent } from "./character-overview/character-overview.component";
 import { RulesOverviewComponent } from './rules-overview/rules-overview.component';
-import { MartialManeuversComponent } from "./martial-maneuvers/martial-maneuvers.component";
-import { SpellsComponent } from "./spells/spells.component";
-import { HybridAbilitiesComponent } from "./hybrid-abilities/hybrid-abilities.component";
 import { EquipmentComponent } from "./equipment/equipment.component";
 import { AdventuringComponent } from "./adventuring/adventuring.component";
 import { CombatComponent } from "./combat/combat.component";
 import { ToolboxComponent } from "./toolbox/toolbox.component";
 import { ClassesComponent } from './classes/classes.component';
+import { AbilitiesComponent } from "./abilities/abilities.component";
 
 @Component({
   selector: 'app-rules-reference',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
-    NgbScrollSpy, NgbScrollSpyMenu, NgbScrollSpyItem, NgbScrollSpyFragment,
-    SkillListComponent, PerksComponent, CharacterOverviewComponent, RulesOverviewComponent,
-    MartialManeuversComponent,
-    SpellsComponent,
-    HybridAbilitiesComponent,
+    NgbScrollSpy, 
+    NgbScrollSpyMenu, 
+    NgbScrollSpyItem, 
+    NgbScrollSpyFragment,
+    SkillListComponent, 
+    PerksComponent, 
+    CharacterOverviewComponent, 
+    RulesOverviewComponent,
     EquipmentComponent,
     AdventuringComponent,
     CombatComponent,
     ToolboxComponent,
-    ClassesComponent
+    ClassesComponent,
+    AbilitiesComponent
 ],
   templateUrl: './rules-reference.component.html',
   styleUrl: './rules-reference.component.scss'
