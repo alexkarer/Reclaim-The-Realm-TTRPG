@@ -12,6 +12,17 @@
             "description": "You enchant one weapon that you are currently wielding. Each [MELEE MARTIAL ATTACK] made with this weapon deals 1d6 extra fire damage."
         },
         {
+            "name": "Flying Slash",
+            "tags": [ "Hybrid Ability", "Spell(1)", "Elemental", "Aeromancy" ],
+            "components": "V, M (Meele Weapon with a sharp edge)",
+            "requirements": {
+                "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
+            },
+            "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "[LINE] (9m) or [CONE] (4.5m)", "duration":"[INSTANT]",
+            "description": "Choose if you want to make a slahs in a line or a cone. Then make a Weapon [MELEE MARTIAL ATTACK] against the targets [DODGE] on a success they take regular damage of your attack."
+        },
+        {
             "name": "Booming Strike",
             "tags": [ "Hybrid Ability", "Spell(1)", "Elemental", "Aeromancy" ],
             "components": "V, M (Weapon, Bodypart or Ammunition)",

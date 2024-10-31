@@ -7,6 +7,16 @@
     <h4 class="mb-1 mt-3">Item Tier</h4>
     <app-dynamic-content [content]="equipmentJson.itemTierDescription | keywordProcessor"></app-dynamic-content>
 
+    <h4 class="mb-1 mt-3">Equipping and Carrying Items</h4>
+    <app-dynamic-content [content]="equipmentJson.equippingItemsDescription | keywordProcessor"></app-dynamic-content>
+    <ul>
+        @for (description of equipmentJson.wearingAndCarryingItemsRules; track $index) {
+            <li>
+                <app-dynamic-content [content]="description | keywordProcessor"></app-dynamic-content>
+            </li>
+        }
+    </ul>
+
     <h3 class="mb-1 mt-3" ngbScrollSpyFragment="weapons-ammunition">Weapons and Ammunitions</h3>
     <app-weapons></app-weapons>
 

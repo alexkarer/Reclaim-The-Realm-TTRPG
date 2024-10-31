@@ -4,13 +4,13 @@
             {
                 "name": "Fire Breath",
                 "tags": [ "Spell (1)", "Elemental", "Pyromancy" ],
-                "components": "V (Breath)",
+                "components": "V (Incantation), M (Mouth, nostrils or similar)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "[SPELL LEVEL] > 0" ]
                 },
                 "cost": "2 [AP]", "range": "-", "target": "[CONE] (4.5m)", "duration": "[INSTANT]",
-                "description": "You spray a flame in a 4.5m Cone from you, target each creature within the area with a [INT] [SPELL TEST] against the targets [DODGE] and on a success they receive 1d8 + ([SPI] / 2) * d8 fire damage [HALF].",
+                "description": "You spray a flame in a 4.5m Cone from you, target each creature within the area with a [CON] [SPELL TEST] against the targets [DODGE] and on a success they receive 1d8 + ([SPI] / 2) * d8 fire damage [HALF].",
                 "atHigherSpellPower": "For every spell power higher than 1st-Power you deal an additional 2d8 fire damage."
             },
             {

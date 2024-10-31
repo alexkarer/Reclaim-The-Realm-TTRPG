@@ -18,8 +18,8 @@ export class SpellsSearchComponent {
   public readonly SpellDiscipline = SpellDiscipline;
   public readonly SpellCost = SpellCost;
 
-  public selectedSpellPower = SpellPower.ALL;
-  public selectedSpellDiscipline = SpellDiscipline.ALL;
+  public selectedSpellPower = SpellPower.ANY;
+  public selectedSpellDiscipline = SpellDiscipline.ANY;
   public selectedSpellCost = SpellCost.ANY;
   public currentFilterText: string = "";
 
@@ -54,7 +54,7 @@ export class SpellsSearchComponent {
 
   private filterForSpellPower(spell:  Spell): boolean {
     switch(this.selectedSpellPower) {
-      case SpellPower.ALL: return true;
+      case SpellPower.ANY: return true;
       case SpellPower.FIRST: return spell.tags.find(tag => tag.includes('Spell (1)')) !== undefined;
       case SpellPower.SECOND: return spell.tags.find(tag => tag.includes('Spell (2)')) !== undefined;
       case SpellPower.THIRD: return spell.tags.find(tag => tag.includes('Spell (3)')) !== undefined;
@@ -66,7 +66,7 @@ export class SpellsSearchComponent {
 
   private filterForSpellDiscipline(spell:  Spell): boolean {
     switch (this.selectedSpellDiscipline) {
-      case SpellDiscipline.ALL: return true;
+      case SpellDiscipline.ANY: return true;
       case SpellDiscipline.ELEMENTAL: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('elemental')) !== undefined;
       case SpellDiscipline.PYROMANCY: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('pyromancy')) !== undefined;
       case SpellDiscipline.HYDROMANCY: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('hydromancy')) !== undefined;
@@ -114,11 +114,11 @@ export class SpellsSearchComponent {
 }
 
 enum SpellPower {
-  ALL = 'All Spells', FIRST = 'First Power Spells', SECOND = 'Second Power Spells', THIRD = 'Third Power Spells', FOURTH = 'Fourth Power Spells', FIFTH = 'Fifth Power Spells', SIXTH = 'Sixth Power Spells'
+  ANY = 'Any Spell Power', FIRST = 'First Power Spells', SECOND = 'Second Power Spells', THIRD = 'Third Power Spells', FOURTH = 'Fourth Power Spells', FIFTH = 'Fifth Power Spells', SIXTH = 'Sixth Power Spells'
 }
 
 enum SpellDiscipline {
-  ALL = 'All Spells',
+  ANY = 'Any Spell Discipline',
   ELEMENTAL = 'Elemental Spells',
   PYROMANCY = 'Elemental(Pyromancy) Spells',
   HYDROMANCY = 'Elemental(Hydromancy) Spells',

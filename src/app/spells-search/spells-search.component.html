@@ -3,7 +3,7 @@
         <div ngbDropdown class="d-inline-block me-5">
             <button type="button" class="btn btn-outline-primary" id="dropdown-spell-power" ngbDropdownToggle>{{ selectedSpellPower }}</button>
             <div ngbDropdownMenu aria-labelledby="dropdown-spell-power">
-                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.ALL)">{{ SpellPower.ALL }}</button>
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.ANY)">{{ SpellPower.ANY }}</button>
                 <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.FIRST)">{{ SpellPower.FIRST }}</button>
                 <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.SECOND)">{{ SpellPower.SECOND }}</button>
                 <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.THIRD)">{{ SpellPower.THIRD }}</button>
@@ -15,7 +15,7 @@
         <div ngbDropdown class="d-inline-block me-5">
             <button type="button" class="btn btn-outline-primary" id="dropdown-spell-discipline" ngbDropdownToggle>{{ selectedSpellDiscipline }}</button>
             <div ngbDropdownMenu aria-labelledby="dropdown-spell-discipline">
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ALL)">{{ SpellDiscipline.ALL }}</button>
+                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ANY)">{{ SpellDiscipline.ANY }}</button>
                 <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ELEMENTAL)">{{ SpellDiscipline.ELEMENTAL }}</button>
                 <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.PYROMANCY)">{{ SpellDiscipline.PYROMANCY }}</button>
                 <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.HYDROMANCY)">{{ SpellDiscipline.HYDROMANCY }}</button>
