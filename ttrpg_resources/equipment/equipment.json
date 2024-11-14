@@ -6,9 +6,44 @@
     "itemTierDescription": "Items have an associated Tier and Skill. The Item Tier determines the required the skill rank for identifying and crafting those items and the Skill describes the Tool, Lore or Regular Skill required for this task.<br> The Item Tiers are not associated with the character [LEVEL] or the abilities to use those items. However it is not recommended for characters to have items 2 tiers higher than their character [LEVEL] since it might significantly affect game balance.",
     "equippingItemsDescription": "When you get an item it is assumed that you store it in a backpack or similar container or wear it on your body. For wearing and carrying items there are the following rules restrictions:",
     "wearingAndCarryingItemsRules": [
-        "If the total weight you carry exceeds your permitted weight you suffer penalties which depends on your [STR].", TODO: add carry capacity
+        "If the total weight you carry exceeds your permitted weight you suffer penalties which depends on your [STR] as can be seen in the Carrying Capacity table below.",
         "There are no rules restrictions for sizes of items but the players and the GM should agree what makes sense.",
         "You can not wield more than one item in each hand.",
         "You can only wear one set of armor."
-    ]
+    ],
+    "carryingCapacityDescription": "Carrying capacity represent how much weight you can carry while travelling which increases with your [STR] according to the Table below. For every additional 5 kg (rounded up) you carry above your carrying limit, you suffer a cumulative Penalty to the following:",
+    "exceedingCarryingCapacityPenalties": [
+        "-1 [MP]", "-1 [DODGE]", "-1 to any [STR] or [AGI] [ATTRIBUTE TEST]", "1 to any [ATTACK] or [MARTIAL TEST]", "+1 [HARDNESS]"
+    ],
+    "liftPushDragDescription": "Lift/Push/Drag represents how much weight you can well lift, push, drag in short bursts, useful for moving obstacles or knocking over objects with an object interaction which increases with your [STR] according to the Table below. These unlike carrying capacity are not hard values and can be modified by circumstance or a [STR] [ATTRIBUTE TEST] determined by the GM.",
+    "carryingCapacityTable": [
+        { "str": -7, "carryingCapacityKg": 1, "liftPushDragKg": 2},
+        { "str": -6, "carryingCapacityKg": 3, "liftPushDragKg": 6},
+        { "str": -5, "carryingCapacityKg": 5, "liftPushDragKg": 10},
+        { "str": -4, "carryingCapacityKg": 10, "liftPushDragKg": 20},
+        { "str": -3, "carryingCapacityKg": 15, "liftPushDragKg": 30},
+        { "str": -2, "carryingCapacityKg": 20, "liftPushDragKg": 50},
+        { "str": -1, "carryingCapacityKg": 25, "liftPushDragKg": 70},
+        { "str": 0, "carryingCapacityKg": 30, "liftPushDragKg": 100},
+        { "str": 1, "carryingCapacityKg": 50, "liftPushDragKg": 200},
+        { "str": 2, "carryingCapacityKg": 75, "liftPushDragKg": 350},
+        { "str": 3, "carryingCapacityKg": 100, "liftPushDragKg": 600},
+        { "str": 4, "carryingCapacityKg": 150, "liftPushDragKg": 1000},
+        { "str": 5, "carryingCapacityKg": 200, "liftPushDragKg": 2000},
+        { "str": 6, "carryingCapacityKg": 300, "liftPushDragKg": 3500},
+        { "str": 7, "carryingCapacityKg": 500, "liftPushDragKg": 6000},
+        { "str": 8, "carryingCapacityKg": 750, "liftPushDragKg": 10000},
+        { "str": 9, "carryingCapacityKg": 1000, "liftPushDragKg": 20000 },
+        { "str": 10, "carryingCapacityKg": 1500, "liftPushDragKg": 35000},
+        { "str": 11, "carryingCapacityKg": 2000, "liftPushDragKg": 60000 },
+        { "str": 12, "carryingCapacityKg": 3000, "liftPushDragKg": 100000},
+        { "str": 13, "carryingCapacityKg": 5000, "liftPushDragKg": 200000},
+        { "str": 14, "carryingCapacityKg": 7500, "liftPushDragKg": 350000},
+        { "str": 15, "carryingCapacityKg": 10000, "liftPushDragKg": 600000},
+        { "str": 16, "carryingCapacityKg": 15000, "liftPushDragKg": 1000000},
+        { "str": 17, "carryingCapacityKg": 20000, "liftPushDragKg": 2000000},
+        { "str": 18, "carryingCapacityKg": 30000, "liftPushDragKg": 3500000},
+        { "str": 19, "carryingCapacityKg": 50000, "liftPushDragKg": 6000000},
+        { "str": 20, "carryingCapacityKg": 75000, "liftPushDragKg": 10000000}
+    ] 
 }

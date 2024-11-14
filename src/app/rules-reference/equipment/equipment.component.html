@@ -16,6 +16,62 @@
             </li>
         }
     </ul>
+    <h5 class="mb-1 mt-3">Carrying Capacity</h5>
+    <app-dynamic-content [content]="equipmentJson.carryingCapacityDescription | keywordProcessor"></app-dynamic-content>
+    <ul>
+        @for (description of equipmentJson.exceedingCarryingCapacityPenalties; track $index) {
+            <li>
+                <app-dynamic-content [content]="description | keywordProcessor"></app-dynamic-content>
+            </li>
+        }
+    </ul>
+
+    <h5 class="mb-1 mt-3">Lift/Push/Drag</h5>
+    <app-dynamic-content [content]="equipmentJson.liftPushDragDescription | keywordProcessor"></app-dynamic-content>
+
+    <h5 class="mb-1 mt-3">Carrying Capacity + Lift/Push/Drag Table</h5>
+    <div class="row g-4">
+        <div class="col">
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">[STR]</th>
+                        <th scope="col">Carrying Capacity</th>
+                        <th scope="col">Lift/Push/Drag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (tableEntry of carryingCapacityTable1; track $index) {
+                        <tr>
+                            <td>{{ tableEntry.str }}</td>
+                            <td>{{ formatWeight(tableEntry.carryingCapacityKg) }}</td>
+                            <td>{{ formatWeight(tableEntry.liftPushDragKg) }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">[STR]</th>
+                        <th scope="col">Carrying Capacity</th>
+                        <th scope="col">Lift/Push/Drag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (tableEntry of carryingCapacityTable2; track $index) {
+                        <tr>
+                            <td>{{ tableEntry.str }}</td>
+                            <td>{{ formatWeight(tableEntry.carryingCapacityKg) }}</td>
+                            <td>{{ formatWeight(tableEntry.liftPushDragKg) }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <h3 class="mb-1 mt-3" ngbScrollSpyFragment="weapons-ammunition">Weapons and Ammunitions</h3>
     <app-weapons></app-weapons>
