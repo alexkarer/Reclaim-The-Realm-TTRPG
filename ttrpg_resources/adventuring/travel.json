@@ -1,0 +1,117 @@
+{
+    "overlandMovement": {
+        "overlandMovementDescription": "During their adventures characters will likey have to cover large distances and depending on their characteristics they are more or less effective at travelling.",
+        "travelSpeedDescription": "Generally the party moves at a travel speed equal to the slowest party member. Generally a character moves an number of kilometers per hour equal to the Characters [MP] . But depending on how fast they want to move, the travel speed of a character is augmented the following way:",
+        "travelModeTable": [
+            {
+                "travelMode": "Careful Approach",
+                "travelSpeed": "[MP] - 2 km/h",
+                "additionalInformation": "Is able to use stealth"
+            },
+            {
+                "travelMode": "Normal",
+                "travelSpeed": "[MP] km/h",
+                "additionalInformation": "."
+            },
+            {
+                "travelMode": "Forced March",
+                "travelSpeed": "[MP] + 2 km/h",
+                "additionalInformation": "1 extra [STAMINA] per Hour"
+            }
+        ],
+        "travelDurationPerDayDescription": "Travelling vast distances by foot can be very taxing for the characters, depending on how much they move they need to spend [STAMINA] depending for how long they travel during one day According to the Table below.",
+        "travelDurationTable": [
+            { "TotalTimeTravelled": "up to 4 hours", "totalStaminaCost": "1 [STAMINA]" },
+            { "TotalTimeTravelled": "up to 6 hours", "totalStaminaCost": "2 [STAMINA]" },
+            { "TotalTimeTravelled": "up to 7 hours", "totalStaminaCost": "3 [STAMINA]" },
+            { "TotalTimeTravelled": "up to 8 hours", "totalStaminaCost": "4 [STAMINA]" },
+            { "TotalTimeTravelled": "every additional 30 minutes", "totalStaminaCost": "+1 [STAMINA]" }
+        ],
+        "travelDurationPerDayDescriptionExtension": "If a character is out of [STAMINA] they can alternatively still travel the distance but they gain 1 point of exhaustion. Additionally after completing a Long Rest the Travel costs resets and it starts from the beginning again."
+    },
+    "terrain": {
+        "terrainDescription": "Depending on what Terrain the party is currently travelling they are effected in different ways.",
+        "travellinOnRoadDescription": "Regardless of the terrain they are currently travelling, if they are following a road, their travel speed increases by ",
+        "terrainTravelTable": [
+            { "terrain": "Plains", "terrainModifiers": "-" },
+            { "terrain": "Coastal", "terrainModifiers": "-" },
+            { "terrain": "Forest", "terrainModifiers": "-1 to the Travel Speed" },
+            { "terrain": "Hill", "terrainModifiers": "-1 to the Travel Speed, 1 additional [STAMINA] per Travel Segment" },
+            { "terrain": "Mountain", "terrainModifiers": "-3 to the Travel Speed, 1 additional [STAMINA] per Travel Segment" },
+            { "terrain": "Desert", "terrainModifiers": "-1 to the Travel Speed" },
+            { "terrain": "Settlement / Ruin", "terrainModifiers": "-2 to the Travel Speed" }
+        ]
+    },
+    "specialMovement": {
+        "specialMovementDescription": "Characters will not always be able to simply walk to get to their Destination.",
+        "jumping": {
+            "longJumpDescription": "Characters can jump a distance of a number of meters equal to 3 + [STR] if they are able to run at least 3 meters in a straight line before making the jump. If they are not able to run 3 meters, the jump distance is halved.",
+            "highJumpDescription": "A character can jump a height equal to a number of meters equal to 1 + [STR] / 2.",
+            "jumpOverObstacleDescription": "For a High Jump it is assumed the distance moved forwards is no more than 1.5m and a long jump does not clear any heights. If the character is required to clear obstacle, the GM might call for a [STR] Athletics [SKILL TEST] to successfully clear it."
+        },
+        "climbing": {
+            "climbingDescrption": "Unless stated otherwise, Climbing requires 2 free hands to move and any movement is made at half speed. While not moving one hand can be free to do something else like make an attack. If during climbing for some reason you no longer have at least 1 free hand you fall down. While climbing the following things apply:",
+            "climbingCircumstances": [
+                "Any [ATTACK] against you has [ADVANTAGE]",
+                "Any [ATTACK] made by you has [DISADVANTAGE]",
+                "You can't cast spells that require somatic components",
+                "If you are forcefully moved while climbing and are still in contact with the climbing surface, you can to make a [HARDNESS SAVE] equal to 10 + meters forcefully moved and on a success still cling on to the surface and potentially prevent fall damage."
+            ],
+            "climbingDifficultyDescription": "Most surfaces are difficult to climb and require a successful [STR] Athletics [SKILL TEST] to successfully traverse. Here below is a guideline for Climbing difficulty. Depending on the length of the climb the GM might also modify this",
+            "climbingDifficultyTable": [
+                { "climbingSurface": "Knotted Rope", "climbingDT": 5 },
+                { "climbingSurface": "Rocky section, Tree with branches", "climbingDT": 10 },
+                { "climbingSurface": "Building Wall, Rope", "climbingDT": 15 },
+                { "climbingSurface": "Slippery surfaces, > 90° climb", "climbingDT": 20 },
+                { "climbingSurface": "Slippery > 90° climb", "climbingDT": 25 },
+                { "climbingSurface": "Ice Wall wihtout gear", "climbingDT": 30 }
+            ]
+        },
+        "swimming": {
+            "swimmingDescrption": "Any chracter with 1 skill rank in Athletics can swim without Issue in calm water. When swimming any movement is made at half speed. If no free hand is availible movement is made at quater speed",
+            "swimmingDifficultyDescription": "If the water conditions are difficult, the DM might call for a [STR] Athletics [SKILL TEST] to successfully traverse the water body. Here below is a guideline for Swimming difficulty. Depending on the distance travel the DM might also modify this Test.",
+            "swimmingDifficultyTable": [
+                { "waterConditions": "Calm Ocean", "swimmingDT": 5 },
+                { "waterConditions": "Small River (<10m width)", "swimmingDT": 10 },
+                { "waterConditions": "Medium River (<50m width), Rough Sea conditions", "swimmingDT": 15 },
+                { "waterConditions": "Large River (>50m width)", "swimmingDT": 20 },
+                { "waterConditions": "Heavy Ocean Storm", "swimmingDT": 25 },
+                { "waterConditions": "Maelstorm", "swimmingDT": 30 }
+            ]
+        },
+        "flying": {
+            "flyingDescription": "TODO, basic description how it works, add table for flying in difficult conditions, make difference to levitation"
+        },
+        "travellingWithMounts": {
+            "travellingOnMountsDescription": "TODO"
+        }
+    },
+    "tracking": {
+        "trackingDescription": "TODO, rough rules for how to track other parties on the move, how long visible on terrain, what is the general [DT] for tracking parties"
+    },
+    "visionAndSenses": {
+        "visionAndSensesDescription": "",
+        "visionAndSenseTypes": [
+            { 
+                "type": "Regular Vision",
+                "description": ""
+            },
+            { 
+                "type": "Darkvision",
+                "description": ""
+            },
+            { 
+                "type": "Tremorsense",
+                "description": ""
+            },
+            { 
+                "type": "Echolocation",
+                "description": ""
+            },
+            { 
+                "type": "Blindsense",
+                "description": ""
+            }
+        ]
+    }
+}

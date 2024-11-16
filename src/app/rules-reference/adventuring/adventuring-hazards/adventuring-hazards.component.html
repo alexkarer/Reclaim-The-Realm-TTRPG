@@ -1,0 +1,96 @@
+<div class="mx-2">
+    <app-dynamic-content [content]="description | keywordProcessor"></app-dynamic-content>
+
+    <h4>Massive Injuries</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="massiveInjuries.description | keywordProcessor"></app-dynamic-content>
+        <div class="d-flex justify-content-center">
+            <table class="rules-table-50">
+                <thead>
+                    <tr>
+                        <th scope="col">d100 + excess damage</th>
+                        <th scope="col">Injury</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (massiveInjury of massiveInjuries.massiveInjuriesTable; track $index) {
+                        <tr>
+                            <td>{{ massiveInjury.diceRoll }}</td>
+                            <td><app-dynamic-content [content]="massiveInjury.Injury| keywordProcessor"></app-dynamic-content></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h4>Falling and Crashing</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="fallingAndCrashing.description | keywordProcessor"></app-dynamic-content>
+        <div class="d-flex justify-content-center">
+            <table class="rules-table-50">
+                <thead>
+                    <tr>
+                        <th scope="col">Turns spent Accelerating</th>
+                        <th scope="col">Meters fallen this turn</th>
+                        <th scope="col">Total Distance fallen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (acceleration of fallingAndCrashing.fallingCreatureAccelerationTable; track $index) {
+                        <tr>
+                            <td>{{ acceleration.truns }}</td>
+                            <td>{{ acceleration.metersFallenThisTurn + ' m' }}</td>
+                            <td>{{ acceleration.totalDistanceFallen + ' m' }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <app-dynamic-content [content]="fallingAndCrashing.cashingIntoOtherCreaturesDescription | keywordProcessor"></app-dynamic-content>
+        <div class="d-flex justify-content-center">
+            <table class="rules-table-50">
+                <thead>
+                    <tr>
+                        <th scope="col">Size</th>
+                        <th scope="col">Physical Damage per 4 m moved</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (creatureFallDamage of fallingAndCrashing.creatureSizeFallDamage; track $index) {
+                        <tr>
+                            <td>{{ creatureFallDamage.size }}</td>
+                            <td>{{ creatureFallDamage.physicalDamagePer4MentersMoved }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h4>Traps</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="traps.description | keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <h4>Suffocating and Drowning</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="downingAndSuffocating.description| keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <h4>Environmental Conditions</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="environmentalConditions.description | keywordProcessor"></app-dynamic-content>
+
+        <h5 class="mt-2 mb-0">Extreme Heat</h5>
+        <app-dynamic-content [content]="environmentalConditions.extremeHeat.description | keywordProcessor"></app-dynamic-content>
+
+        <h5 class="mt-2 mb-0">Extreme Cold</h5>
+        <app-dynamic-content [content]="environmentalConditions.extremeCold.description | keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <h4>Poisons and Diseases</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="poisonsAndDiseases.description | keywordProcessor"></app-dynamic-content>
+    </div>
+</div>

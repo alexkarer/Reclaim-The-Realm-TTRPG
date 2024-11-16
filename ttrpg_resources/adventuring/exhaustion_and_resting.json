@@ -1,0 +1,20 @@
+{
+    "exhaustion": {
+        "description": "",
+        "exhaustionLimitDescription": "",
+        "exhaustionLimitBulletPoints": [
+            ""
+        ]
+    },
+    "shortRest": {
+        "description": "",
+        "effects": ""
+    },
+    "longRest": {
+        "description": "",
+        "effects": ""
+    },
+    "extendedLongRest": {
+        "description": ""
+    }
+}

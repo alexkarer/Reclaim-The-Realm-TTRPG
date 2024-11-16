@@ -1,0 +1,166 @@
+<div class="mx-2">
+    <h4>Overland Movment</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="overlandMovement.overlandMovementDescription | keywordProcessor"></app-dynamic-content>
+
+        <h5>Travel Speed</h5>
+        <app-dynamic-content [content]="overlandMovement.travelSpeedDescription | keywordProcessor"></app-dynamic-content>
+        <div class="d-flex justify-content-center">
+            <table class="rules-table-75">
+                <thead>
+                    <tr>
+                        <th scope="col">Travel mode</th>
+                        <th scope="col">Travel speed</th>
+                        <th scope="col">Additional Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (travelMode of overlandMovement.travelModeTable; track $index) {
+                        <tr>
+                            <td>{{ travelMode.travelMode }}</td>
+                            <td>{{ travelMode.travelSpeed }}</td>
+                            <td><app-dynamic-content [content]="travelMode.additionalInformation | keywordProcessor"></app-dynamic-content></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <h5>Travel Duration per Day</h5>
+        <app-dynamic-content [content]="overlandMovement.travelDurationPerDayDescription | keywordProcessor"></app-dynamic-content>
+        <div class="d-flex justify-content-center">
+            <table class="rules-table-50">
+                <thead>
+                    <tr>
+                        <th scope="col">Total Time Traveleld</th>
+                        <th scope="col">Total [STAMINA] Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (travelDuration of overlandMovement.travelDurationTable; track $index) {
+                        <tr>
+                            <td>{{ travelDuration.TotalTimeTravelled }}</td>
+                            <td><app-dynamic-content [content]="travelDuration.totalStaminaCost | keywordProcessor"></app-dynamic-content></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <app-dynamic-content [content]="overlandMovement.travelDurationPerDayDescriptionExtension | keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <h4 class="mt-3">Terrain</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="terrain.terrainDescription | keywordProcessor"></app-dynamic-content>
+        <h5>Travelling on Road</h5>
+        <app-dynamic-content [content]="terrain.travellinOnRoadDescription | keywordProcessor"></app-dynamic-content>
+        <div class="d-flex justify-content-center">
+            <table class="rules-table-50">
+                <thead>
+                    <tr>
+                        <th scope="col">Terrain</th>
+                        <th scope="col">Terrain modifiers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (terrainItem of terrain.terrainTravelTable; track $index) {
+                        <tr>
+                            <td>{{ terrainItem.terrain }}</td>
+                            <td><app-dynamic-content [content]="terrainItem.terrainModifiers | keywordProcessor"></app-dynamic-content></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h4 class="mt-3">Special Movement</h4>
+    <div class="mx-2">
+        <h5>Jumping</h5>
+        <div class="mx-2">
+            <h6 class="mt-2 mb-0">Long Jump</h6>
+            <app-dynamic-content [content]="specialMovement.jumping.longJumpDescription | keywordProcessor"></app-dynamic-content>
+            <h6 class="mt-2 mb-0">High Jump</h6>
+            <app-dynamic-content [content]="specialMovement.jumping.highJumpDescription | keywordProcessor"></app-dynamic-content>
+            <h6 class="mt-2 mb-0">Jumping over Obstacles</h6>
+            <app-dynamic-content [content]="specialMovement.jumping.jumpOverObstacleDescription | keywordProcessor"></app-dynamic-content>
+        </div>
+
+        <h5>Climbing</h5>
+        <div class="mx-2">
+            <app-dynamic-content [content]="specialMovement.climbing.climbingDescrption | keywordProcessor"></app-dynamic-content>
+            <ul>
+                @for (circumstance of specialMovement.climbing.climbingCircumstances ; track $index) {
+                    <li>
+                        <app-dynamic-content [content]="circumstance | keywordProcessor"></app-dynamic-content>
+                    </li>
+                }
+            </ul>
+            <h6 class="mt-2 mb-0">Climbing Difficulty</h6>
+            <app-dynamic-content [content]="specialMovement.climbing.climbingDifficultyDescription | keywordProcessor"></app-dynamic-content>
+            <div class="d-flex justify-content-center">
+                <table class="rules-table-50">
+                    <thead>
+                        <tr>
+                            <th scope="col">Climbing Surface</th>
+                            <th scope="col"><app-dynamic-content [content]="'Climbing [DT]' | keywordProcessor"></app-dynamic-content></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (climbingDifficulty of specialMovement.climbing.climbingDifficultyTable; track $index) {
+                            <tr>
+                                <td>{{ climbingDifficulty.climbingSurface }}</td>
+                                <td>{{ climbingDifficulty.climbingDT }}</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h5>Swimming</h5>
+        <div class="mx-2">
+            <app-dynamic-content [content]="specialMovement.swimming.swimmingDescrption | keywordProcessor"></app-dynamic-content>
+            <h6 class="mt-2 mb-0">Swimming Difficulty</h6>
+            <app-dynamic-content [content]="specialMovement.swimming.swimmingDifficultyDescription | keywordProcessor"></app-dynamic-content>
+            <div class="d-flex justify-content-center">
+                <table class="rules-table-50">
+                    <thead>
+                        <tr>
+                            <th scope="col">Water Conditions</th>
+                            <th scope="col"><app-dynamic-content [content]="'Swimming [DT]' | keywordProcessor"></app-dynamic-content></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (swimmingDifficulty of specialMovement.swimming.swimmingDifficultyTable; track $index) {
+                            <tr>
+                                <td>{{ swimmingDifficulty.waterConditions }}</td>
+                                <td>{{ swimmingDifficulty.swimmingDT }}</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h5>Flying</h5>
+        <div class="mx-2">
+            <app-dynamic-content [content]="specialMovement.flying.flyingDescription | keywordProcessor"></app-dynamic-content>
+        </div>
+    </div>
+
+    <h4 class="mt-3">Tracking</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="tracking.trackingDescription| keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <h4 class="mt-3">VisionAndSenses</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="visionAndSenses.visionAndSensesDescription | keywordProcessor"></app-dynamic-content>
+        @for (type of visionAndSenses.visionAndSenseTypes; track $index) {
+            <h5>{{ type.type }}</h5>
+            <app-dynamic-content [content]="type.description | keywordProcessor"></app-dynamic-content>
+        }
+    </div>
+
+</div>
