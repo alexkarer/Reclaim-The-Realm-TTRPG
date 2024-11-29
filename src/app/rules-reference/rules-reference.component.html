@@ -57,37 +57,44 @@
 </ng-template>
 
 <div class="table-of-contents-btn-wrapper">
-	<button class="btn btn-outline-primary" (click)="openTableOfContents(content)">Open Table of Contents</button>
+	<button class="btn btn-outline-primary" (click)="openTableOfContents(content)">
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+		  </svg>
+	</button>
 </div>
-<div ngbScrollSpy #spy="ngbScrollSpy" class="px-3 rules-body">
-	<h1 ngbScrollSpyFragment="reclaim-the-realm">Reclaim The Realm</h1>
-	<app-rules-overview/>
-	<hr>
 
-	<h2 class="pt-3 mt-3" ngbScrollSpyFragment="character-overview">Character Overview</h2>
-	<app-character-overview/>
-	<hr>
-
-	<h2 class="pt-3 mt-3" ngbScrollSpyFragment="classes">Classes</h2>
-	<app-classes/>
-	<hr>
-
-	<h2 class="pt-3 mt-3" ngbScrollSpyFragment="abilities">Abilities</h2>
-	<app-abilities/>
-	<hr>
-
-	<h2 class="pt-3 mt-3" ngbScrollSpyFragment="equipment">Equipment</h2>
-	<app-equipment/>
-	<hr>
-
-	<h2 class="pt-3 mt-3" ngbScrollSpyFragment="adventuring">Adventuring</h2>
-	<app-adventuring/>
-	<hr>
-
-	<h2 class="pt-3 mt-3" ngbScrollSpyFragment="combat">Combat</h2>
-	<app-combat/>
-	<hr>
-
-	<h2 class="pt-3 mt-3" ngbScrollSpyFragment="toolbox">Toolbox</h2>
-	<app-toolbox/>
+<div class="d-flex justify-content-center">
+	<div ngbScrollSpy #spy="ngbScrollSpy" class="px-3 rules-body">
+		<h1 ngbScrollSpyFragment="reclaim-the-realm">Reclaim The Realm</h1>
+		<app-rules-overview/>
+		<hr>
+	
+		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="character-overview">Character Overview</h2>
+		<app-character-overview/>
+		<hr>
+	
+		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="classes">Classes</h2>
+		<app-classes/>
+		<hr>
+	
+		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="abilities">Abilities</h2>
+		<app-abilities/>
+		<hr>
+	
+		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="equipment">Equipment</h2>
+		<app-equipment/>
+		<hr>
+	
+		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="adventuring">Adventuring</h2>
+		<app-adventuring/>
+		<hr>
+	
+		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="combat">Combat</h2>
+		<app-combat/>
+		<hr>
+	
+		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="toolbox">Toolbox</h2>
+		<app-toolbox/>
+	</div>
 </div>

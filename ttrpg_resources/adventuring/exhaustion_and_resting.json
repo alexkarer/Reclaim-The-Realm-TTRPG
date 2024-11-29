@@ -1,7 +1,7 @@
 {
     "description": "During your adventures, you will at some point require rest to replenish your resources and recover from damage.",
     "exhaustion": {
-        "description": "When characters push themselves to their physical Limits they suffer points of [EXHAUSTION]. Points of [EXHAUSTION] are a cumulative penalty towards the characters abilities and characteristics. Each Point of [EXHAUSTION] gives you a cumulative -1 Penalty to any [D20 TEST].",
+        "description": "When characters push themselves beyond their physical Limits they suffer points of [EXHAUSTION]. Points of [EXHAUSTION] are a cumulative penalty towards the characters abilities and characteristics. Each Point of [EXHAUSTION] gives you a cumulative -1 Penalty to any [D20 TEST].",
         "exhaustionLimitDescription": "A charcter’s [EXHAUSTION] limit is equal to [LEVEL] + [CON] (minimum of 1). If your current points of [EXHAUSTION] exceed your [EXHAUSTION] limit you drop unconcious unless you are at [DEATHS DOOR]. [EXHAUSTION] can be reduced during a Short Rest (see below). If your current points of [EXHAUSTION] exceed twice your [EXHAUSTION] limit you are dead."
     },
     "shortRest": {

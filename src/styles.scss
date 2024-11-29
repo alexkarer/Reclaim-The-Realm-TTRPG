@@ -4,9 +4,6 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
-
-$mobile-breakpoint: 960px;
-
 h1 {
     @extend .text-body-emphasis;
 }
@@ -52,6 +49,12 @@ h4 {
     width: auto;
 }
 
+.rules-body{
+    width: 100vw;
+    overflow-x: hidden;
+    height: 90vh;
+}
+
 // tablet size
 @media (min-width: map.get($grid-breakpoints, "md")) {
     .rules-table-50 {
@@ -62,6 +65,9 @@ h4 {
     }
     .rules-table-75 {
         width: 85%;
+    }
+    .rules-body {
+        width: 75vw;
     }
 }
 
@@ -75,5 +81,8 @@ h4 {
     }
     .rules-table-75 {
         width: 75%;
+    }
+    .rules-body {
+        width: 50vw;
     }
 }

@@ -1,1 +1,37 @@
-<p>exhaustion-and-resting works!</p>
+<div class="mx-2">
+    <app-dynamic-content [content]="description | keywordProcessor"></app-dynamic-content>
+
+    <h4 ngbScrollSpyFragment="exhaustion" class="mt-2 mb-0">Exhaustion</h4>
+    <p class="header-subscript">Keyword: [EXHAUSTION]</p>
+    <div class="mx-2">
+        <app-dynamic-content [content]="exhaustion.description | keywordProcessor"></app-dynamic-content>
+        <h5 class="mb-0 mt-1">Exhaustion Limit</h5>
+        <app-dynamic-content [content]="exhaustion.exhaustionLimitDescription | keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <h4 class="mt-2">Short Rest</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="shortRest.description | keywordProcessor"></app-dynamic-content>
+        <ul>
+            @for (option of shortRest.options; track $index) {
+                <li><app-dynamic-content [content]="option | keywordProcessor"></app-dynamic-content></li>
+            }
+        </ul>
+    </div>
+
+    <h4>Long Rest</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="longRest.description | keywordProcessor"></app-dynamic-content>
+        <ul>
+            @for (effect of longRest.effects; track $index) {
+                <li><app-dynamic-content [content]="effect | keywordProcessor"></app-dynamic-content></li>
+            }
+        </ul>
+        <app-dynamic-content [content]="longRest.interruptedLongRest | keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <h4 class="mt-2">Extended Long Rest</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="extendedLongRest.description | keywordProcessor"></app-dynamic-content>
+    </div>
+</div>

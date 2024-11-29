@@ -1,13 +1,14 @@
+@use "sass:map";
+
 .table-of-contents {
-    --bs-scroll-height: 94vh;
+    --bs-scroll-height: 90vh;
 }
 
 .table-of-contents-btn-wrapper {
-    height: 6vh;
-    padding-left: 5%;
-}
-
-.rules-body {
-    height: 88vh;
+    padding-left: 5px;
+    padding-top: 1vh;
+    z-index: 1;
+    height: 100%;
+    position: absolute;
     overflow-x: hidden;
 }

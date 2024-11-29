@@ -1,20 +1,25 @@
 {
     "description": "",
     "reducedTo0HP": {
-        "description": "",
+        "description": "As soon as you are reduced to 0 [HP] you risk gaining a massive Injury (see below) and additionally face a choice: Either drop [UNCONCIOUS] or enter [DEATHS DOOR]. When you are reduced to 0 [HP] any excess damage that would bring you below 0 [HP] can be ingored.",
         "deathsDoor": {
-            "description": "TODO add mechanic where if you recieve damage and fail, the toughness save instead of recieving exhaustion you can choose to take an injury or drop unconcious."
+            "description": "[DEATHS DOOR] is a mechanic that allows you to keep on fighting even when you are reduced to 0 [HP] however at great risks to yourself. You can only enter [DEATHS DOOR] when you are reduced to 0 [HP]. If you decide to go [UNCONCIOUS] you cannot enter [DEATHS DOOR] until you are healed and are again reduced to 0 [HP]. While you are at [DEATHS DOOR] the following rules apply:",
+            "effects": [
+                "At the start of your turn you gain 1 point of [EXHAUSTION]",
+                "Any time you recieve damage you have to suceed on a [TOUGHNESS] or [WILLPOWER] [SAVE] with a [DT] equal to 5 + damage recieved. On a success you can continue as if nothing happened but on a fail you either fall [UNCONCIOUS] or you can continue on, but suffer a massive Injury (see below)",
+                "At the end of your turn you can end [DEATHS DOOR] voluntary"
+            ]
         }
     },
     "massiveInuries": {
         "description": "During adventuiring or in combat there is a chance you can suffer a massive Injuriy which usually has a more permanent effect. To determine your Injury roll a d100 and add all the excess damage that is above the triggerpoint upon which you recieve an Injury. There are the following ways you can recieve such an Injury",
         "massiveInjuriesTriggers": [
-            "suffering damage equal or greater than half your maximum [HP], able to resist by passing a [TOUGHNESS] [SAVE] with a [DT] equal to 10 + excess damage beyond half your maximum [HP]",
-            "Being reduced to 0 [HP], able to resist by passing a [TOUGHNESS] [SAVE] with a [DT] equal to 10 + excess damage beyond 0 [HP]",
+            "Suffering damage equal or greater than half your maximum [HP], resist by passing a [TOUGHNESS] [SAVE] with a [DT] equal to 10 + excess damage beyond half your maximum [HP]",
+            "Being reduced to 0 [HP], resist by passing a [TOUGHNESS] [SAVE] with a [DT] equal to 10 + excess damage beyond 0 [HP]",
             "Failing a [TOUGHNESS] [SAVE] during [DEATHS DOOR] and willingly staying alive. Can't be resisted."
         ],
         "massiveInjuriesTable": [
-            { "diceRoll": "01-20", "Injury": "Scar TODO add recovery methids" },
+            { "diceRoll": "01-20", "Injury": "Scar TODO add recovery mehtods, add Table for different damage types and simplify (6-8 entries)" },
             { "diceRoll": "21-40", "Injury": "Broken Bone" },
             { "diceRoll": "41-60", "Injury": "" },
             { "diceRoll": "61-80", "Injury": "" },
