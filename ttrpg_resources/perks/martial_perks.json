@@ -106,6 +106,19 @@
         "description": "After you make a [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] that is not a Lighting Attack, the next [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP])."
     },
     {
+        "name": "Unrelenting",
+        "tags": [ "Martial" ],
+        "requirements": {
+            "requiredLevels": [
+                { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+            ],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ ]
+        },
+        "description": "When a target that you can see moves out of your reach, you can use your reaction to try and prevent their escape. Make a [STR] or [AGI] [MARTIAL TEST] against the targets [DODGE] and on a Success the Targets movement is wasted. You can use this feature even if the target does not provoke an opportunity attack."
+    },
+    {
         "name": "Graze",
         "tags": [ "Martial" ],
         "requirements": {

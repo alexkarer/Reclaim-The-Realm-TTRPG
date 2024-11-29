@@ -1,0 +1,40 @@
+{
+    "description": "",
+    "reducedTo0HP": {
+        "description": "",
+        "deathsDoor": {
+            "description": "TODO add mechanic where if you recieve damage and fail, the toughness save instead of recieving exhaustion you can choose to take an injury or drop unconcious."
+        }
+    },
+    "massiveInuries": {
+        "description": "During adventuiring or in combat there is a chance you can suffer a massive Injuriy which usually has a more permanent effect. To determine your Injury roll a d100 and add all the excess damage that is above the triggerpoint upon which you recieve an Injury. There are the following ways you can recieve such an Injury",
+        "massiveInjuriesTriggers": [
+            "suffering damage equal or greater than half your maximum [HP], able to resist by passing a [TOUGHNESS] [SAVE] with a [DT] equal to 10 + excess damage beyond half your maximum [HP]",
+            "Being reduced to 0 [HP], able to resist by passing a [TOUGHNESS] [SAVE] with a [DT] equal to 10 + excess damage beyond 0 [HP]",
+            "Failing a [TOUGHNESS] [SAVE] during [DEATHS DOOR] and willingly staying alive. Can't be resisted."
+        ],
+        "massiveInjuriesTable": [
+            { "diceRoll": "01-20", "Injury": "Scar TODO add recovery methids" },
+            { "diceRoll": "21-40", "Injury": "Broken Bone" },
+            { "diceRoll": "41-60", "Injury": "" },
+            { "diceRoll": "61-80", "Injury": "" },
+            { "diceRoll": "81-90", "Injury": "" },
+            { "diceRoll": "91-100", "Injury": "" },
+            { "diceRoll": "101-110", "Injury": "" },
+            { "diceRoll": "111-120", "Injury": "" },
+            { "diceRoll": "121-130", "Injury": "" },
+            { "diceRoll": "131+", "Injury": "The character dies" }
+        ]
+    },
+    "recoverFromBeingUnconcious": {
+        "description": "A character can recover from being unconscious via the following ways:",
+        "recoveryMethods": [
+            "Any time they receive healing and some of their [HP] are restored, receiving [THP] does not restore consciousness.",
+            "If someone is taking care of you (water, comfortable position) you regain 1 [HP] after 10 - [CON] (min 1) minutes.",
+            "After 1d12 − [CON] Hours (minimum 30 minutes) you regain 1 [HP]."
+        ]
+    },
+    "resurrection": {
+        "description": "Should come with some downsides but not too hard. Example there should be a mechanic where when you are resurrected you roll what effect that has on a character like: aligment change, semi-permanent debuffs, some P.T.S.D. shit, maybe even losing a level"
+    }
+}

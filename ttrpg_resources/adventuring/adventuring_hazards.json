@@ -1,19 +1,5 @@
 {
     "description": "The dangers that can be encountered while travelling the world.",
-    "massiveInuries": {
-        "description": "When suffering damage equal or greater than half your maximum [HP] or when you are reduced to 0 [HP] the first time in combat you suffer a massive Injuriy which usually has a more permanent effect. To determine your Injury roll a d100 and add all the excess damage then determine your Injury in the Table below (either all damage above half your maximum [HP] or all exceess damage beyond 0 [HP]).",
-        "massiveInjuriesTable": [
-            { "diceRoll": "01-20", "Injury": "Scar" },
-            { "diceRoll": "21-40", "Injury": "Broken Bone" },
-            { "diceRoll": "41-60", "Injury": "" },
-            { "diceRoll": "61-80", "Injury": "" },
-            { "diceRoll": "81-90", "Injury": "" },
-            { "diceRoll": "91-100", "Injury": "" },
-            { "diceRoll": "101-110", "Injury": "" },
-            { "diceRoll": "111-120", "Injury": "" },
-            { "diceRoll": "120+", "Injury": "" }
-        ]
-    },
     "fallingAndCrashingIntoObjects": {
         "description": "For every 4 meters a creature falls dawn they receive physical damage depending on their size (see table below) which can’t be reduced by armor. After 400 meters this damage does not increase any further. To determine how much a creature accelerates while falling down you can consult the Table below. This assumes that the creature doesn't slow down, additionally after turn 5 they don't accelarate further.",
         "fallingCreatureAccelerationTable": [

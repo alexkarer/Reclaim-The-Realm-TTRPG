@@ -1,1 +1,26 @@
-<p>death-and-resurrection works!</p>
+<div class="mx-2">
+
+    <h4>Massive Injuries</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="massiveInjuries.description | keywordProcessor"></app-dynamic-content>
+        <div class="d-flex justify-content-center">
+            <table class="rules-table-50">
+                <thead>
+                    <tr>
+                        <th scope="col">d100 + excess damage</th>
+                        <th scope="col">Injury</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (massiveInjury of massiveInjuries.massiveInjuriesTable; track $index) {
+                        <tr>
+                            <td>{{ massiveInjury.diceRoll }}</td>
+                            <td><app-dynamic-content [content]="massiveInjury.Injury| keywordProcessor"></app-dynamic-content></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

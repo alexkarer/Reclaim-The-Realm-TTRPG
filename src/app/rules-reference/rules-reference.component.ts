@@ -1,6 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, TemplateRef } from '@angular/core';
 import { NgbScrollSpy, NgbScrollSpyMenu, NgbScrollSpyItem, NgbScrollSpyFragment, NgbOffcanvas  } from '@ng-bootstrap/ng-bootstrap';
-import { SkillListComponent } from './character-overview/skill-list/skill-list.component';
 import { CharacterOverviewComponent } from "./character-overview/character-overview.component";
 import { RulesOverviewComponent } from './rules-overview/rules-overview.component';
 import { EquipmentComponent } from "./equipment/equipment.component";
@@ -19,7 +18,6 @@ import { AbilitiesComponent } from "./abilities/abilities.component";
     NgbScrollSpyMenu, 
     NgbScrollSpyItem, 
     NgbScrollSpyFragment,
-    SkillListComponent,
     CharacterOverviewComponent, 
     RulesOverviewComponent,
     EquipmentComponent,

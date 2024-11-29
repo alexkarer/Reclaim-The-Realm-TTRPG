@@ -13,7 +13,6 @@ import adventuringHazardsJson from '../../../../../ttrpg_resources/adventuring/a
 export class AdventuringHazardsComponent {
 
   public readonly description = adventuringHazardsJson.description;
-  public readonly massiveInjuries = adventuringHazardsJson.massiveInuries;
   public readonly fallingAndCrashing = adventuringHazardsJson.fallingAndCrashingIntoObjects;
   public readonly traps = adventuringHazardsJson.traps;
   public readonly downingAndSuffocating = adventuringHazardsJson.suffocatingAndDrowning;
