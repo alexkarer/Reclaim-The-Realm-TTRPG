@@ -1,0 +1,59 @@
+{
+    "tierOneHarmfulStatusEffects": [
+        {
+            "keyword": "[FRIGHTENED I]",
+            "summary": "[DISADVANTAGE] on any [SPELL TEST] or [MARTIAL TEST] against the source of fear and can't move closer to it.",
+            "description": "You are shaken by am event or creature and have [DISADVANTAGE] on any [SPELL TEST] or [MARTIAL TEST] and can't move closer to the source of your fear."
+        },
+        {
+            "keyword": "[BURNING I]",
+            "summary": "Recieves 1d6 fire damage at the start of the turn, can douse the flames to stop the burning",
+            "description": "A burning creature recieves 1d6 fire damage at the start of the creatures turn.<br>The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 10 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
+        }
+    ],
+    "tierTwoHarmfulStatusEffects": [
+        {
+            "keyword": "[FRIGHTENED II]",
+            "summary": "[DISADVANTAGE] on any [D20 TEST], can't move closer to source of fear.",
+            "description": "You are frigthened by an event or creature and have [DISADVANTAGE] on any [D20 TEST] as long as you are within 18m of the source of your fear and can see or hear them. Additionally you can't move closer to the source of your fear."
+        },
+        {
+            "keyword": "[BURNING II]",
+            "summary": "Recieves 4d6 fire damage at the start of the turn, can douse the flames to stop the burning",
+            "description": "A burning creature recieves 4d6 fire damage at the start of the creatures turn.<br>The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 15 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
+        }
+    ],
+    "tierThreeHarmfulStatusEffects": [
+        {
+            "keyword": "[FRIGHTENED III]",
+            "summary": "Deeply terrified, has to spend all [AP] and [MP] to fell from source of fear.",
+            "description": "You are terrified by an event or creature and have to spend all [MP] to move away from the source of fear and all their [AP] to further flee until the source of fear is no longer within line of sight and at least 18m away from them."
+        },
+        {
+            "keyword": "[BURNING III]",
+            "summary": "Recieves 10d6 fire damage at the start of the turn, can douse the flames to stop the burning",
+            "description": "A burning creature recieves 10d6 fire damage at the start of the creatures turn.<br>The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 20 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
+        }
+    ],
+    "tierOneBeneficialStatusEffects": [
+        {
+            "keyword": "[]",
+            "summary": "",
+            "description": ""
+        }
+    ],
+    "tierTwoBeneficialStatusEffects": [
+        {
+            "keyword": "[]",
+            "summary": "",
+            "description": ""
+        }
+    ],
+    "tierThreeBeneficialStatusEffects": [
+        {
+            "keyword": "[]",
+            "summary": "",
+            "description": ""
+        }
+    ]
+}

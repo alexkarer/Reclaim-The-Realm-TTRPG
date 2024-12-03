@@ -1,0 +1,13 @@
+{
+    "generalCombatDescription": "",
+    "combatOverviewDescription": "",
+    "combatStart": {
+        "description": ""
+    },
+    "combatStructure": {
+        "description": "",
+        "combatRound": "",
+        "combatTurn": "",
+        "actingOutsideOfTurn": ""
+    }
+}

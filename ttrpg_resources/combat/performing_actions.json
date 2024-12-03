@@ -1,0 +1,27 @@
+{
+    "description": "",
+    "movement": {
+        "description": "",
+        "standardActions": [
+
+        ]
+    },
+    "actions": {
+        "description": "",
+        "standardActions": [
+            
+        ]
+    },
+    "reactions": {
+        "description": "",
+        "standardReactions": [
+            
+        ]
+    },
+    "damageTypes": {
+        "description": "",
+        "types": [
+
+        ]
+    }
+}
