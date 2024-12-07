@@ -1,40 +1,127 @@
 {
+    // TODO: the curses (bane, cursed, exposed), maybe have BANE I be a d4, BANE II be a d8, BANE III be a d12 and have it only affect martial and spell tests.
+    // TODO: rework exposed maybe to vulnurable/weakened or smth
+    // TODO: silenced, deafened, blinded just make all tier I guess.
+    // TODO: grappled, restrained, unsure hoenstly ?
+    // TODO: crippled probably just a tier I
+    // TODO: confused, should probably be a Tier II one, just too fun not too have
+    // TODO: Taunted, should be Tier II
+    // TODO: Intoxicated, have TIer I-II for this not sutre if III is needed.
+    // TODO: slowed, not sure, maybe include in curse
+    // TODO: Petrified, would skip that one
+    "description": "",
+    "stackingStatusEffectsDescription": "Same status effects that have multiple tiers don't stack, the highest one still applies",
+    "tierOneHarmfulStatusEffectsDescription": "Minor impediment in to their actions",
     "tierOneHarmfulStatusEffects": [
+        {
+            "keyword": "[STUNNED I]",
+            "summary": "Can't use any [REACTION], [AP] are reduced by 1.",
+            "description": "The affected creature is dazed and can't function properly being unable to use any [REACTION] and has their max [AP] reduced by 1."
+        },
         {
             "keyword": "[FRIGHTENED I]",
             "summary": "[DISADVANTAGE] on any [SPELL TEST] or [MARTIAL TEST] against the source of fear and can't move closer to it.",
-            "description": "You are shaken by am event or creature and have [DISADVANTAGE] on any [SPELL TEST] or [MARTIAL TEST] and can't move closer to the source of your fear."
+            "description": "The affected creature is shaken by an event or creature and has [DISADVANTAGE] on any [SPELL TEST] or [MARTIAL TEST] and can't move closer to the source of their fear."
         },
         {
             "keyword": "[BURNING I]",
             "summary": "Recieves 1d6 fire damage at the start of the turn, can douse the flames to stop the burning",
-            "description": "A burning creature recieves 1d6 fire damage at the start of the creatures turn.<br>The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 10 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
+            "description": "A burning creature recieves 1d6 fire damage at the start their turn.The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 10 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
+        },
+        {
+            "keyword": "[BLEEDING I]",
+            "summary": "Recieves 1d6 damage at the start of turn, can be stopped",
+            "description": "A bleeding creature recieves 1d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 10 [CON] [MEDICINE] [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
+        },
+        {
+            "keyword": "[POISON I]",
+            "summary": "Recieves 1d6 poison damage at the start of the turn",
+            "description": "A poisoned creature recieves 1d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 10 [TOUGHNESS SAVE]"
+        },
+        {
+            "keyword": "[CHARMED I]",
+            "summary": "Regards the charmer as an ally and won't harm them.",
+            "description": "A charmed creature regards the charmer as a trusted ally and as such won't harm it in any way. The charmer has [ADVANTAGE] on any [D20 TEST] to interact socially with the creature.<br>If the charmed creature recieves damage they can repeat the [SAVE] caused them to be charmed, if there was no [SAVE] involved they must make a [DT] 10 [WILLPOWER] [SAVE]. If the charmer harms the charmed creature, they can repeat the [SAVE] with [ADVANTAGE]."
         }
     ],
+    "tierTwoHarmfulStatusEffectsDescription": "Major impediment but can still act in some degree",
     "tierTwoHarmfulStatusEffects": [
+        {
+            "keyword": "[STUNNED II]",
+            "summary": "Can't use any [REACTION], [MP] are 0, [AP] reduced by 1 and is unable to defend themselves",
+            "description": "The affected creature is heavily stunned and can bearly act. They can't use any [REACTION], their [MP] are reduced to 0 and their [AP] are reduced by -1.<br>Additionally they are unable to properly defend themselves as such they can't use shields, their [DODGE] and [HARDNESS] are 0 and they automatically fail any [DODGE] or [HARDNESS] [SAVE]."
+        },
         {
             "keyword": "[FRIGHTENED II]",
             "summary": "[DISADVANTAGE] on any [D20 TEST], can't move closer to source of fear.",
-            "description": "You are frigthened by an event or creature and have [DISADVANTAGE] on any [D20 TEST] as long as you are within 18m of the source of your fear and can see or hear them. Additionally you can't move closer to the source of your fear."
+            "description": "The affected creature is frigthened by an event or creature and has [DISADVANTAGE] on any [D20 TEST] as long as they are within 18m of the source of your fear and can see or hear them. Additionally they can't move closer to the source of your fear."
         },
         {
             "keyword": "[BURNING II]",
             "summary": "Recieves 4d6 fire damage at the start of the turn, can douse the flames to stop the burning",
-            "description": "A burning creature recieves 4d6 fire damage at the start of the creatures turn.<br>The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 15 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
+            "description": "A burning creature recieves 4d6 fire damage at the start their turn.The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 15 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
+        },
+        {
+            "keyword": "[BLEEDING II]",
+            "summary": "Recieves 4d6 damage at the start of turn, can be stopped",
+            "description": "A bleeding creature recieves 4d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 15 [CON] [MEDICINE] [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
+        },
+        {
+            "keyword": "[POISON II]",
+            "summary": "Recieves 4d6 poison damage at the start of the turn",
+            "description": "A poisoned creature recieves 4d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 15 [TOUGHNESS SAVE]"
+        },
+        {
+            "keyword": "[CHARMED II]",
+            "summary": "TODO",
+            "description": "TODO maybe can give orders, but can only give an order as the charm starts and it won't obey suicidal or actions that goes strongly against their believes and principles."
         }
     ],
+    "tierThreeHarmfulStatusEffectsDescription": "Creatures affected by Tier III Status are usually unable to act in combat anymore",
     "tierThreeHarmfulStatusEffects": [
+        {
+            "keyword": "[STUNNED III]",
+            "summary": "Can't use any [REACTION], [MP] or [AP] and is unable to defend themselves",
+            "description": "The affected creature is paralyzed and unable to act anymore. They can't use any [REACTION], [MP] or [AP]<br>Additionally they are unable to properly defend themselves as such they can't use shields, their [DODGE] and [HARDNESS] are 0 and they automatically fail any [DODGE] or [HARDNESS] [SAVE]."
+        },
         {
             "keyword": "[FRIGHTENED III]",
             "summary": "Deeply terrified, has to spend all [AP] and [MP] to fell from source of fear.",
-            "description": "You are terrified by an event or creature and have to spend all [MP] to move away from the source of fear and all their [AP] to further flee until the source of fear is no longer within line of sight and at least 18m away from them."
+            "description": "The affected creature is terrified by an event or creature and has to spend all [MP] to move away from the source of fear and all their [AP] to further flee until the source of fear is no longer within line of sight and at least 18m away from them."
         },
         {
             "keyword": "[BURNING III]",
-            "summary": "Recieves 10d6 fire damage at the start of the turn, can douse the flames to stop the burning",
-            "description": "A burning creature recieves 10d6 fire damage at the start of the creatures turn.<br>The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 20 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
+            "summary": "Recieves 12d6 fire damage at the start of the turn, can douse the flames to stop the burning",
+            "description": "A burning creature recieves 10d6 fire damage at the start their turn.The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 20 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
+        },
+        {
+            "keyword": "[BLEEDING I]",
+            "summary": "Recieves 12d6 damage at the start of turn, can be stopped",
+            "description": "A bleeding creature recieves 12d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 20 [CON] [MEDICINE] [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
+        },
+        {
+            "keyword": "[POISON II]",
+            "summary": "Recieves 12d6 poison damage at the start of the turn",
+            "description": "A poisoned creature recieves 12d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 20 [TOUGHNESS SAVE]."
+        },
+        {
+            "keyword": "[CHARMED III]",
+            "summary": "Is completely mind controlled by the charmer and can only perform Actions commanded by the charmer",
+            "description": "The affected creature is completely mind-controlled and has to obay any commands issued by the charmer which requires no [AP] or [REACTION] from the charmer and can be done at any time.<br>If the charmer orders a suicidal command or one that strongly goes against their strongest beliefs and principles they can repeat the [SAVE] that caused them to be charmed and on a success they don't have to obey that command and the charmer must choose a different command. If there was no [SAVE] involved, the charmed creature has to make a [WILLPOWER] [SAVE]  with a [DT] determined by the GM."
+        },
+        {
+            "keyword": "[UNCONCIOUS]",
+            "summary": "Can't use any [REACTION], [MP] or [AP], s unnaware of their sourroundings and unable to defend themselves",
+            "description": "An [UNCONCIOUS] creature can't use any [REACTION], [MP] or [AP] and is not aware of it's sourroundings as such they can't use shields, their [DODGE] and [HARDNESS] are 0 and they automatically fail any [DODGE] or [HARDNESS] [SAVE]<br>A creature that is sleeping is also [UNCONCIOUS] however a Sleeping creature will wake up as soon as it receives damage or is distrubed in other ways."
         }
     ],
+    // TODO: bless I =1d4, II =1d8, III=1d12
+    //TODO: protection I=1d4, II=1d8, III= 1d12 (take 2/4/6 for passive stuff)
+    // TODO: Invisible, should give concealment and other stuff.
+    // TODO: Haste (maybe make 1-3 tiers?)
+    // TODO: magic resistance, should be 3 tiers
+    // TODO: healing should be 3 tiers, (1d6, 3d6, 8d6)
+    // TODO: maybe some more fluffly, skill/rp based ones. Ideas: Focused: bonus tp [INT], [PER] [ATTRIBUTE TEST], Happy: bonus to [CHA] [ATTRIBUTE TEST], Strong/FeelingIt: bonus to [STR][AGI] [ATTRIBUTE TEST], should be [ADVANTAGE] and not 3 tiers. [CON], [SPI] don't need someting.
     "tierOneBeneficialStatusEffects": [
         {
             "keyword": "[]",

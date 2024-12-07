@@ -134,6 +134,7 @@ function keywordToContentPart(keyword: string): ContentPart {
         case 'XP':
             return generateGenericKeyword('[XP]', 'Experience Points. Experience is accumulated during play by adventuring, defeating Monsters, solving Quests, good role-play and other achievements the Game Master deems worth-wile.', 'xp');
         // ********************** STATUS EFFECTS **********************
+        // TODO use the json similar to attributes
         // TIER I Harmful Status Effects
         case 'BANE':
             return generateGenericKeyword('[BANE]', 'TODO', '');

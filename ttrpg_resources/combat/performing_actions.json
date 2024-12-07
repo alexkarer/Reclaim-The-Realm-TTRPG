@@ -2,26 +2,66 @@
     "description": "",
     "movement": {
         "description": "",
-        "standardActions": [
+        "standardAbilities": [
 
         ]
     },
     "actions": {
         "description": "",
-        "standardActions": [
-            
-        ]
+        "standardAbilities": [
+            // maybe a desparate attack action that harmns yourself that costs 1 [AP] that you can do in case nothign else is to do
+        ],
+        "attack": "",
+        "areaEffects": "",
+        "auraEffects": "",
+        "effectDuration": ""
     },
     "reactions": {
         "description": "",
         "standardReactions": [
-            
+            {
+                "name": "Opportunity Attack",
+                "tags": [ "Melee", "Weapon" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "1 [REACTION]",
+                "range": "[MELEE RANGE]",
+                "target": "1 creature",
+                "duration": "[INSTANT]",
+                "description": "If a creature leaves your melee range you can make a Melee [ATTACK] against them."
+            },
+            {
+                "name": "Graceful Landing",
+                "tags": [ ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "1 [REACTION]",
+                "range": "-",
+                "target": "[SELF]",
+                "duration": "[INSTANT]",
+                "description": "If you fall down a large height you can use your reaction to perform a landing to reduce damage. Make an [AGI] [ATTRIBUTE TEST] and reduce the damage of your landing by half of that result."
+            }
         ]
     },
-    "damageTypes": {
+    "circumstancalBonuses": {
         "description": "",
-        "types": [
-
-        ]
+        "cover": "small cover: unmodified roll (25%)1-5 will always hit cover + 2 [DODGE], medium cover: unmodified roll (50%) 1-10 will always hit cover + 4 [DODGE], large cover: unmodified roll (75%) 1-15 will always hit cover + 6 [DODGE]",
+        "prone": "",
+        "flanking": "-2 dodge, -4 shield block",
+        "highGrounnd": "+2 [ATTACK]",
+        "lowGround": "-2 [ATTACK]",
+        "concealment": "see phone notes"
+    },
+    "damage": {
+        "description": "",
+        "damageOrder": "",
+        "damageTypes": {
+            "description": "",
+            "types": [
+    
+            ]
+        }
     }
 }
