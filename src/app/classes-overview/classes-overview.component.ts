@@ -25,5 +25,5 @@ export class ClassesOverviewComponent {
 }
 
 enum ClassNames {
-  BARBARIAN = 'Barbarian', CLERIC = 'Cleric', FIGHTER = 'Fighter', ROGUE = 'Rogue', SORCERER = 'Sorcerer', WARLOCK = 'Warlock'
+  BARBARIAN = 'Barbarian', PRIEST = 'Priest', FIGHTER = 'Fighter', ROGUE = 'Rogue', MAGE = 'Mage', WARLOCK = 'Warlock'
 }

@@ -1,20 +1,19 @@
 {
-    "className": "Cleric",
+    "className": "Mage",
     "classDescription": "",
     "coreClassValues": {
-        "hpPerLevel": 12,
-        "martialProficiency": 1.0,
-        "spellProficiency": 0.0,
-        "dodgeProficiency": 0.0,
-        "hardnessProficiency": 0.0,
-        "toughnessProficiency": 0.0,
-        "willpowerProficiency": 0.0,
-        "mainClassAttributes": [ "STR", "CON", "PER" ],
-        "classSKills": [ "Athletics", "Intimidation", "Survival" ],
-        "skillPointsPerLevel": 4,
-        "weaponRanks": 2
+        "hpPerLevel": 6,
+        "martialProficiency": 0.0,
+        "spellProficiency": 1.0,
+        "dodgeProficiency": 0.667,
+        "hardnessProficiency": 0.334,
+        "toughnessProficiency": 0.334,
+        "willpowerProficiency": 0.667,
+        "mainClassAttributes": [ "SPI", "INT", "PER" ],
+        "classSKills": [ "Investigation", "Magic", "Supernatural" ],
+        "skillPointsPerLevel": 5,
+        "weaponRanks": 0
     },
-    "classPathDescription": "",
     "classCoreFeature": {
         "name": "",
         "textElements": [
@@ -25,6 +24,7 @@
             }
         ]
     },
+    "classPathDescription": "",
     "classPaths": [
         {
             "name": "",

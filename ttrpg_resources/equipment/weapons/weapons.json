@@ -1,4 +1,5 @@
 {
+    // use new properties, add axe and hammer
     "simpleWeapons": [
         {
             "name": "Dagger",
@@ -8,7 +9,7 @@
             "weightInGram": 500,
             "type": "Simple Weapon",
             "description": "A small simple short blade favoured by assasin’s and those looking to conceil their weapon.",
-            "properties": [ "light", "lethal", "thrown(4.5/9/18)" ],
+            "properties": [ "light", "thrown(4.5/9/18)" ],
             "damageDice": "d6",
             "canAddStrToDamage": true
         },

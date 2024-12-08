@@ -9,9 +9,33 @@
     "actions": {
         "description": "",
         "standardAbilities": [
-            // maybe a desparate attack action that harmns yourself that costs 1 [AP] that you can do in case nothign else is to do
+            {
+                "name": "Weapon Attack",
+                "tags": [ "Weapon", "Attack" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "2 [AP]",
+                "range": "[WEAPON RANGE]",
+                "target": "1 creature",
+                "duration": "[INSTANT]",
+                "description": "Make a [MELEE MARTIAL ATTACK] against a creature using any bonuses your weapon provides. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves damage depending on your Weapon."
+            },
+            {
+                "name": "Desperate Attack",
+                "tags": [ "Melee", "Attack" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "1 [AP]",
+                "range": "[MELEE RANGE]",
+                "target": "1 creature",
+                "duration": "[INSTANT]",
+                "description": "Make a [MELEE MARTIAL ATTACK] against a creature. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves physical damage equal to your two-handed martial damage but you yourself additionally suffer half that damage and that damage can't be reduced in any way."
+            }
         ],
-        "attack": "",
+        "attack": "explain abilities withthe weapon tag can use weapon bonuses, explain crits",
+        "ranges": "Explain meele range, weapon range",
         "areaEffects": "",
         "auraEffects": "",
         "effectDuration": ""
@@ -21,7 +45,7 @@
         "standardReactions": [
             {
                 "name": "Opportunity Attack",
-                "tags": [ "Melee", "Weapon" ],
+                "tags": [ "Melee", "Weapon", "Attack" ],
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
                 },
@@ -42,6 +66,18 @@
                 "target": "[SELF]",
                 "duration": "[INSTANT]",
                 "description": "If you fall down a large height you can use your reaction to perform a landing to reduce damage. Make an [AGI] [ATTRIBUTE TEST] and reduce the damage of your landing by half of that result."
+            },
+            {
+                "name": "Parry",
+                "tags": [ "Weapon", "Melee" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ "Weapon" ]
+                },
+                "cost": "[REACTION]",
+                "range": "-",
+                "target": "[SELF]",
+                "duration": "[INSTANT]",
+                "description": "When you are hit by a [MELEE ATTACK] you can use this reaction. Make a Weapon [MELEE MARTIAL ATTACK] if it matches or exceeds the [MELEE ATTACK] that targeted you, the damage from the [ATTACK] is reduced by 2 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded one-handed, or by 3 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded two-handed."
             }
         ]
     },

@@ -1,17 +1,17 @@
 import { Ability } from '../shared/Ability';
 import { TextElement } from '../shared/TextElements';
 import barbarianJson from './barbarian.json';
-import clericJson from './cleric.json';
+import priestJson from './priest.json';
 import fighterJson from './fighter.json';
 import rogueJson from './rogue.json';
-import sorcererJson from './sorcerer.json';
+import mageJson from './mage.json';
 import warlockJson from './warlock.json';
 
-export type PlayerClassJson = typeof barbarianJson | typeof clericJson | typeof fighterJson | typeof rogueJson | typeof sorcererJson | typeof warlockJson;
+export type PlayerClassJson = typeof barbarianJson | typeof priestJson | typeof fighterJson | typeof rogueJson | typeof mageJson | typeof warlockJson;
 
-type CoreClassValues = typeof barbarianJson.coreClassValues | typeof clericJson.coreClassValues | typeof fighterJson.coreClassValues | typeof rogueJson.coreClassValues | typeof sorcererJson.coreClassValues | typeof warlockJson.coreClassValues;
+type CoreClassValues = typeof barbarianJson.coreClassValues | typeof priestJson.coreClassValues | typeof fighterJson.coreClassValues | typeof rogueJson.coreClassValues | typeof mageJson.coreClassValues | typeof warlockJson.coreClassValues;
 
-type ClassTechnique = typeof barbarianJson.classTechniques[0] | typeof clericJson.classTechniques[0] | typeof fighterJson.classTechniques[0] | typeof rogueJson.classTechniques[0] | typeof sorcererJson.classTechniques[0] | typeof warlockJson.classTechniques[0];
+type ClassTechnique = typeof barbarianJson.classTechniques[0] | typeof priestJson.classTechniques[0] | typeof fighterJson.classTechniques[0] | typeof rogueJson.classTechniques[0] | typeof mageJson.classTechniques[0] | typeof warlockJson.classTechniques[0];
 
 export class PlayerClass {
     className!: string;
@@ -93,10 +93,10 @@ function mapClassTechnique(jsonTechnique: ClassTechnique): Ability {
 
 export const playerClasses: PlayerClass[] = [
     mapPlayerClass(barbarianJson),
-    mapPlayerClass(clericJson),
+    mapPlayerClass(priestJson),
     mapPlayerClass(fighterJson),
     mapPlayerClass(rogueJson),
-    mapPlayerClass(sorcererJson),
+    mapPlayerClass(mageJson),
     mapPlayerClass(warlockJson)
 ];
 

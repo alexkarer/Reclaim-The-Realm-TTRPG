@@ -2,7 +2,7 @@
     "className": "Barbarian",
     "classDescription": "The barbarian is one of the classes of all time",
     "coreClassValues": {
-        "hpPerLevel": 12,
+        "hpPerLevel": 10,
         "martialProficiency": 1.0,
         "spellProficiency": 0.0,
         "dodgeProficiency": 0.334,

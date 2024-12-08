@@ -75,7 +75,7 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "When you make a [MELEE MARTIAL ATTACK] with a light or versatile weapon, instead of adding your [STR] you can add half your [AGI] (rounded down) to the damage roll."
+        "description": "When you make a Weapon Attack with a light or versatile weapon you can use half of your [AGI] instead of your [STR] for determining your Martial Damage."
     },
     {
         "name": "Superior Weapon Finesse",
@@ -88,7 +88,7 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "When you make a [MELEE MARTIAL ATTACK] with a light or versatile weapon, instead of adding your [STR] you can add your [AGI] to the damage roll."
+        "description": "When you make a Weapon Attack with a light or versatile weapon you can use three-quaters of your [AGI] instead of your [STR] for determining your Martial Damage."
     },
     {
         "name": "Lightning Attacks",
@@ -103,7 +103,7 @@
             "requiredPerks": [ "Superior Weapon Finesse" ],
             "otherRequirements": [ ]
         },
-        "description": "After you make a [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] that is not a Lighting Attack, the next [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP])."
+        "description": "After you make a Weapon Attack that is not a Lighting Attack, the next Weapon Attack can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP])."
     },
     {
         "name": "Unrelenting",
@@ -144,7 +144,7 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "When wielding a melee weapon that has the heavy property. You deal extra damage for each meter moved (rounded down, max 20) with the next [MELEE MARTIAL ATTACK] made with that weapon after moving, as long as you moved directly towards your opponent."
+        "description": "When wielding a melee weapon that has the heavy property, your next melee attack deals extra damage for each meter you moved directly towards the target (rounded down, max 20)."
     },
     {
         "name": "Point blank shot",
@@ -157,7 +157,7 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "Rank 2 Weapon Proficiency" ]
         },
-        "description": "When making a [RANGED MARTIAL ATTACK], when that target is within half range of the first range, you gain a +1 bonus to [ATTACK] and damage rolls. This bonus increases to +2 when you reach [LEVEL] 7."
+        "description": "When making a ranged weapon Attack, when that target is within half range of the first range, you gain a +1 bonus to [ATTACK] and damage. This bonus increases to +2 when you reach [LEVEL] 7."
     },
     {
         "name": "Rapid Reload",
@@ -204,24 +204,11 @@
         "description": "Any [RANGED MARTIAL ATTACK] you make ignores cover bonuses."
     },
     {
-        "name": "Flexible Dual Wielder",
-        "tags": [ "Martial" ],
-        "requirements": {
-            "requiredLevels": [
-                { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-            ],
-            "requiredAttributes": [ ],
-            "requiredPerks": [ ],
-            "otherRequirements": [ ]
-        },
-        "description": "You can now use the Dual-wield attack even if one of your weapons does not have the light property, but it cannot have the two-handed property."
-    },
-    {
         "name": "Expert Dual Wielder",
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
-                { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                { "amount": 3, "levelType": "[MARTIAL LEVEL]" }
             ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
@@ -230,11 +217,24 @@
         "description": "When performing a Dual-wield attack you can now make an unlimited amount of follow-up attacks with a light weapon at -1 [AP] as long as you follow the same restrictions and always switch to a different weapon when attacking. This can not be combined with the Lightning Attack Perk."
     },
     {
+        "name": "Flexible Dual Wielder",
+        "tags": [ "Martial" ],
+        "requirements": {
+            "requiredLevels": [
+                { "amount": 6, "levelType": "[MARTIAL LEVEL]" }
+            ],
+            "requiredAttributes": [ ],
+            "requiredPerks": [ ],
+            "otherRequirements": [ ]
+        },
+        "description": "You can now use the Dual-wield attack even if one of your weapons does not have the light property, but it cannot have the two-handed property."
+    },
+    {
         "name": "Master Dual Wielder",
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
-                { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
+                { "amount": 9, "levelType": "[MARTIAL LEVEL]" }
             ],
             "requiredAttributes": [ ],
             "requiredPerks": [ "Expert Dual Wielder" ],
@@ -266,7 +266,7 @@
             "requiredPerks": [ "Improved Critical" ],
             "otherRequirements": [ ]
         },
-        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK] , you can roll the damage dice 1 additional time."
+        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK], you can roll the damage dice 1 additional time."
     },
     {
         "name": "Devastating Critical",

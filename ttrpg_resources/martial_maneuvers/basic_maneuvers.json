@@ -378,28 +378,7 @@
             "description": "Make a Weapon [MELEE MARTIAL ATTACK] against both targets with a -2 penalty to the [ATTACK] and damage."
         },
         {
-            "name": "Heavy Attack",
-            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
-            "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [],
-                "otherRequirements": [ ]
-            },
-            "cost": "3 [AP]",
-            "range": "[MELEE WEAPON RANGE]",
-            "target": "1 creeature",
-            "duration": "[INSTANT]",
-            "description": "Make a Heavy Weapon [MELEE MARTIAL ATTACK], if that Attack was successful you can roll the damage dice of the Weapon twice",
-            "maneuverPush": {
-                "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "You can roll the damage dice three times instead of twice."
-            }
-        },
-        {
-            "name": "Parry",
+            "name": "Improved Parry",
             "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
                 "requiredLevels": [

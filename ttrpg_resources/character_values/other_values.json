@@ -40,7 +40,7 @@
         {
             "name": "Medium",
             "strengthBonus": 0,
-            "dodgeBonus": 6,
+            "dodgeBonus": 0,
             "otherSizeModifications": "A Medium creatures can fit in 1 square"
         },
         {

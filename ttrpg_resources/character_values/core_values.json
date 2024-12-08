@@ -4,5 +4,41 @@
     "spellLevelDescription": "Your Characters [SPELL LEVEL] is calculated by multiplying the Spell Level Progression of your Class with your [LEVEL] and rounding down.",
     "xpDescription": "Experience Points. Experience is accumulated during play by adventuring, defeating Monsters, solving Quests, good role-play and other achievements the Game Master deems worthwile. A certain [XP] Total is required to get to a higher [LEVEL] , when getting to a higher level the current [XP] is not reset, instead you keep your total and have to achieve",
     "apDescription": "Action Points. Actions in combat that are not exclusively movement related such as attacking, casting spells or activating magic items require [AP] when used. The more [AP] a character has available, the more they can do during their turn. A Character starts with 3 [AP] and gains more as they [LEVEL] up.",
-    "mpDescription": "Movement points. It is a measurement to determine how much someone can move during Combat, one Movement Point is equal to 1.5m (1 Square). Characters earn more [MP] from various abilities or by increasing their [AGI]."
+    "mpDescription": "Movement points. It is a measurement to determine how much someone can move during Combat, one Movement Point is equal to 1.5m (1 Square). Characters earn more [MP] from various abilities or by increasing their [AGI].",
+    "martialDamage": {
+        "description": "When attacking with weapons the damage you inflict on them depends on your [STR]. There are 3 types of damages and the one you have to use depends on the weapon used.",
+        "martialDamageTable": [
+            { "strength": -10, "lightDamage": "-", "oneHandedDamage": "1d2", "twoHandedDamage": "1d3" },
+            { "strength": -9, "lightDamage": "-", "oneHandedDamage": "1d2", "twoHandedDamage": "1d3" },
+            { "strength": -8, "lightDamage": "1", "oneHandedDamage": "1d3", "twoHandedDamage": "1d4" },
+            { "strength": -7, "lightDamage": "1", "oneHandedDamage": "1d3", "twoHandedDamage": "1d4" },
+            { "strength": -6, "lightDamage": "1d2", "oneHandedDamage": "1d4", "twoHandedDamage": "1d6" },
+            { "strength": -5, "lightDamage": "1d2", "oneHandedDamage": "1d4", "twoHandedDamage": "1d6" },
+            { "strength": -4, "lightDamage": "1d3", "oneHandedDamage": "1d6", "twoHandedDamage": "1d8" },
+            { "strength": -3, "lightDamage": "1d3", "oneHandedDamage": "1d6", "twoHandedDamage": "1d8" },
+            { "strength": -2, "lightDamage": "1d4", "oneHandedDamage": "1d8", "twoHandedDamage": "1d10" },
+            { "strength": -1, "lightDamage": "1d4", "oneHandedDamage": "1d8", "twoHandedDamage": "1d10" },
+            { "strength": 0, "lightDamage": "1d6", "oneHandedDamage": "1d8+1", "twoHandedDamage": "1d12" },
+            { "strength": 1, "lightDamage": "1d6+1", "oneHandedDamage": "1d10", "twoHandedDamage": "1d12+2" },
+            { "strength": 2, "lightDamage": "1d6+2", "oneHandedDamage": "1d10", "twoHandedDamage": "1d12+4" },
+            { "strength": 3, "lightDamage": "2d6", "oneHandedDamage": "1d10", "twoHandedDamage": "2d12" },
+            { "strength": 4, "lightDamage": "2d6+1", "oneHandedDamage": "1d10", "twoHandedDamage": "2d12+2" },
+            { "strength": 5, "lightDamage": "2d6+2", "oneHandedDamage": "1d10", "twoHandedDamage": "2d12+4" },
+            { "strength": 6, "lightDamage": "3d6", "oneHandedDamage": "1d10", "twoHandedDamage": "3d12" },
+            { "strength": 7, "lightDamage": "3d6+1", "oneHandedDamage": "1d10", "twoHandedDamage": "3d12+2" },
+            { "strength": 8, "lightDamage": "3d6+2", "oneHandedDamage": "1d10", "twoHandedDamage": "3d12+4" },
+            { "strength": 9, "lightDamage": "4d6", "oneHandedDamage": "1d10", "twoHandedDamage": "4d12" },
+            { "strength": 10, "lightDamage": "4d6+1", "oneHandedDamage": "1d10", "twoHandedDamage": "4d12+2" },
+            { "strength": 11, "lightDamage": "4d6+2", "oneHandedDamage": "1d10", "twoHandedDamage": "4d12+4" },
+            { "strength": 12, "lightDamage": "5d6", "oneHandedDamage": "1d10", "twoHandedDamage": "5d12" },
+            { "strength": 13, "lightDamage": "5d6+1", "oneHandedDamage": "1d10", "twoHandedDamage": "5d12+2" },
+            { "strength": 14, "lightDamage": "5d6+2", "oneHandedDamage": "1d10", "twoHandedDamage": "5d12+4" },
+            { "strength": 15, "lightDamage": "6d6", "oneHandedDamage": "1d10", "twoHandedDamage": "6d12" },
+            { "strength": 16, "lightDamage": "6d6+1", "oneHandedDamage": "1d10", "twoHandedDamage": "6d12+2" },
+            { "strength": 17, "lightDamage": "6d6+2", "oneHandedDamage": "1d10", "twoHandedDamage": "6d12+4" },
+            { "strength": 18, "lightDamage": "7d6", "oneHandedDamage": "1d10", "twoHandedDamage": "7d12" },
+            { "strength": 19, "lightDamage": "7d6+1", "oneHandedDamage": "1d10", "twoHandedDamage": "7d12+2" },
+            { "strength": 20, "lightDamage": "7d6+2", "oneHandedDamage": "1d10", "twoHandedDamage": "7d12+4" }
+        ]
+    }
 }
