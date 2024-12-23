@@ -20,7 +20,7 @@
         }
     ],
     "weaponVersatility": "You can adapt your fighting style and add one of the following properties to any weapon you are wielding: armour-piercing, shieldbreaker or duelist. After a long rest you can exchange on property of to a different one.",
-        "weaponMastery": "You can wield weapons in ways others can't, add one of the following properties to any weapon you are wielding: reach or heavy (must be wielded two-handed). After a long rest you can exchange on property of to a different one.",
+    "weaponMastery": "You can wield weapons in ways others can't, add one of the following properties to any weapon you are wielding: reach or heavy (must be wielded two-handed). After a long rest you can exchange on property of to a different one.",
     "weaponProperties": [
         {
             "name": "armour-piercing",
@@ -36,7 +36,7 @@
         },
         {
             "name": "heavy",
-            "description": "When making a Weapon Attack with a heavy weapon you can increase the cost by 1 [AP] but deal extra physcial damage equal to ([STR]/3) * d12."
+            "description": "When making a Weapon Attack with a heavy weapon you can alternatively perform a heavy Weapon Attack. By doing this you can increase the cost by 1 [AP] but deal extra physcial damage equal to ([STR]/3) * d12."
         },
         {
             "name": "light",
@@ -60,11 +60,11 @@
         },
         {
             "name": "two-handed",
-            "description": "Weapon requires two hands to attack with effectively, when attempting to do so one-handed any [ATTACK] is made with [DISADVANTAGE] and the damage is only your one handed martial damage."
+            "description": "Weapon requires two hands to attack with effectively, when attempting to do so one-handed any [ATTACK] is made with [DISADVANTAGE] and the damage is only your one handed [MARTIAL DAMAGE]. Additionally if this is a ranged weapon it must use the one handed [MARTIAL DAMAGE] anyways."
         },
         {
             "name": "versatile",
-            "description": "This weapon can either be used one-handed or two-handed. When the weapon is used two-handed you are also eligable to use the two-handed martial damage for determining damagte with weapon attacks."
+            "description": "This weapon can either be used one-handed or two-handed. When the weapon is used two-handed you are also eligable to use the two-handed [MARTIAL DAMAGE] for determining damagte with weapon attacks."
         }
     ],
     "weaponQuality": {

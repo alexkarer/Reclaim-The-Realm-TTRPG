@@ -1,4 +1,5 @@
 {
+    // TODO
     "description": "",
     "movement": {
         "description": "",
@@ -19,7 +20,7 @@
                 "range": "[WEAPON RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "Make a [MELEE MARTIAL ATTACK] against a creature using any bonuses your weapon provides. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves damage depending on your Weapon."
+                "description": "Make a [MELEE MARTIAL ATTACK] against a creature using any bonuses your weapon provides. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves damage depending on your [MARTIAL DAMAGE] and relevant Weapon."
             },
             {
                 "name": "Desperate Attack",

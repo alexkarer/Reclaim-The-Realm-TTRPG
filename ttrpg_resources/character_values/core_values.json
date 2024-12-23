@@ -7,6 +7,9 @@
     "mpDescription": "Movement points. It is a measurement to determine how much someone can move during Combat, one Movement Point is equal to 1.5m (1 Square). Characters earn more [MP] from various abilities or by increasing their [AGI].",
     "martialDamage": {
         "description": "When attacking with weapons the damage you inflict on them depends on your [STR]. There are 3 types of damages and the one you have to use depends on the weapon used.",
+        "lightDamageDescription": "This damage is used when using an unarmored attack or any Weapon Attack with weapons that have the light property.",
+        "oneHandadDamageDescription": "This damage is used when making a Weapon Attack with a melee weapon wielded in one hand or when using ranged weapons that do not have fixed damage (e.g. Bows).",
+        "twoHandedDamageDescription": "This damage is used when making a Weapon Attack with a melee weapon wielded in two hands.",
         "martialDamageTable": [
             { "strength": -10, "lightDamage": "-", "oneHandedDamage": "1d2", "twoHandedDamage": "1d3" },
             { "strength": -9, "lightDamage": "-", "oneHandedDamage": "1d2", "twoHandedDamage": "1d3" },

@@ -147,6 +147,21 @@
         "description": "When wielding a melee weapon that has the heavy property, your next melee attack deals extra damage for each meter you moved directly towards the target (rounded down, max 20)."
     },
     {
+        "name": "Improved Heavy Attack",
+        "tags": [ "Martial" ],
+        "requirements": {
+            "requiredLevels": [
+                { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+            ],
+            "requiredAttributes": [
+                { "amount": 5, "attribute": "[STR]" }
+            ],
+            "requiredPerks": [ ],
+            "otherRequirements": [ ]
+        },
+        "description": "When making a heavy Weapon Attack instead of increasing the damage by ([STR]/3) * d12 it now does by ([STR]/2) * d12."
+    },
+    {
         "name": "Point blank shot",
         "tags": [ "Martial" ],
         "requirements": {
