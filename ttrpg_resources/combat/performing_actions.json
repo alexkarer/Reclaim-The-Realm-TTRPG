@@ -5,7 +5,8 @@
         "description": "",
         "standardAbilities": [
 
-        ]
+        ],
+        "forcedMovement": ""
     },
     "actions": {
         "description": "",

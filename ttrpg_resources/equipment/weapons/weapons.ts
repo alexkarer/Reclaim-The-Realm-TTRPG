@@ -1,10 +1,8 @@
-import { DiceExpression } from "../../shared/Dice";
 import { Cost, Equipment } from "../equipment";
 
 export class Weapon extends Equipment {
     properties!: WeaponProperty[];
-    damageDice!: DiceExpression;
-    canAddStrToDamage!: boolean;
+    damage!: string ;
 
     getPrettyPropertiesString(): string {
         if (this.properties.length == 0) {
@@ -15,7 +13,7 @@ export class Weapon extends Equipment {
     }
     
     getPrettyDamageString(): string {
-        return this.damageDice.getPrettyString() + (this.canAddStrToDamage ? ' + [STR]' : '');
+        return this.damage
     }
 }
 
@@ -39,11 +37,13 @@ export class WeaponProperty {
         let propertyNameEndIndex = (rawString.indexOf("(") !== -1) ? rawString.indexOf("(") : rawString.length;
         let rawWeaponPropertyString = rawString.substring(0, propertyNameEndIndex);
         switch(rawWeaponPropertyString) {
-            case "ammunition": return new WeaponProperty(WeaponPropertyType.AMMUNITION);
             case "armour-piercing": return new WeaponProperty(WeaponPropertyType.ARMOUR_PIERCING);
+            case "shieldbreaker": return new WeaponProperty(WeaponPropertyType.SHIELDBREAKER);
+            case "duelist": return new WeaponProperty(WeaponPropertyType.DUELIST);
             case "heavy": return new WeaponProperty(WeaponPropertyType.HEAVY);
             case "lethal": return new WeaponProperty(WeaponPropertyType.LETHAL);
             case "light": return new WeaponProperty(WeaponPropertyType.LIGHT);
+            case "versatile": return new WeaponProperty(WeaponPropertyType.VERSATILE);
             case "loading": {
                 let rawNumberArgument = rawString.substring(rawString.indexOf("(") + 1, rawString.indexOf(","));
                 let numberArgument = Number.parseInt(rawNumberArgument);
@@ -62,10 +62,6 @@ export class WeaponProperty {
                 return new WeaponProperty(WeaponPropertyType.THROWN, undefined, numberArgument);
             }
             case "two-handed": return new WeaponProperty(WeaponPropertyType.TWO_HANDED);
-            case "versatile": {
-                let argument = rawString.substring(rawString.indexOf("(") + 1, rawString.indexOf(")"));
-                return new WeaponProperty(WeaponPropertyType.VERSATILE, argument, undefined);
-            }
             default: return undefined;
         }
     }
@@ -77,9 +73,7 @@ export class WeaponProperty {
             case WeaponPropertyType.RANGED:
                 return this.type .toString()+ "(" + this.numberArgument + "/" + (this.numberArgument * 2) + "/" + (this.numberArgument * 4) + ")";
             case WeaponPropertyType.THROWN:
-                return this.type.toString() + "(" + this.numberArgument + "/" + (this.numberArgument * 2) + "/" + (this.numberArgument * 4) + ")";
-            case WeaponPropertyType.VERSATILE:
-                return this.type.toString() + "(" + this.stringArgument + ")";
+                return this.type.toString() + "(" + this.numberArgument + "/" + (this.numberArgument * 2) + "/" + (this.numberArgument * 4) + ")";;
             default:
                 return this.type.toString();
         }
@@ -88,7 +82,6 @@ export class WeaponProperty {
 }
 
 export enum WeaponPropertyType {
-    AMMUNITION = "ammunition",
     ARMOUR_PIERCING = "armour-piercing",
     HEAVY = "heavy",
     LETHAL = "lethal",
@@ -98,7 +91,9 @@ export enum WeaponPropertyType {
     REACH = "reach",
     THROWN = "thrown",
     TWO_HANDED = "two-handed",
-    VERSATILE = "versatile"
+    VERSATILE = "versatile",
+    SHIELDBREAKER = "shieldbreaker",
+    DUELIST = "duelist"
 }
 
 export enum WeaponType {
@@ -125,8 +120,7 @@ function map(weaponJson: CombinedWeaponsJson): Weapon {
     weapon.type = weaponJson.type;
     weapon.description = weaponJson.description;
     weapon.properties = weaponJson.properties.map(json => WeaponProperty.of(json)).filter(json => json !== undefined);
-    weapon.damageDice = DiceExpression.of(weaponJson.damageDice);
-    weapon.canAddStrToDamage = weaponJson.canAddStrToDamage;
+    weapon.damage = weaponJson.damage;
 
     return weapon;
 }

@@ -6,6 +6,7 @@ import coreValuesJson from "../../../../../ttrpg_resources/character_values/core
 import resourcesJson from "../../../../../ttrpg_resources/character_values/resources.json";
 import defensesJson from "../../../../../ttrpg_resources/character_values/defenses.json";
 import otherValuesJson from "../../../../../ttrpg_resources/character_values/other_values.json";
+import { halveArray } from '../../../shared/utils/array-utils';
 
 @Component({
   selector: 'app-important-characteristics',
@@ -21,6 +22,9 @@ export class ImportantCharacteristicsComponent {
   public readonly xpDescription: string = coreValuesJson.xpDescription;
   public readonly apDescription: string = coreValuesJson.apDescription;
   public readonly mpDescription: string = coreValuesJson.mpDescription;
+  public readonly martialdamageInfo = coreValuesJson.martialDamage;
+  public readonly martialDamageTableFirstHalf = halveArray(coreValuesJson.martialDamage.martialDamageTable)[0];
+  public readonly martialDamageTableSecondHalf = halveArray(coreValuesJson.martialDamage.martialDamageTable)[1];
 
   public readonly hpDescription: string = resourcesJson.hpDescription;
   public readonly droppingTo0HPDescription: string = resourcesJson.droppingTo0HPDescription;

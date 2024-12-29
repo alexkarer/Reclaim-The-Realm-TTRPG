@@ -16,4 +16,7 @@
             }
         </ul>
     }
+    @if (textElement.ability != null) {
+        <app-ability-list-item [ability]="textElement.ability"></app-ability-list-item>
+    }
 }

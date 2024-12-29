@@ -18,7 +18,7 @@
     <div class="mx-2">
         <app-dynamic-content [content]="massiveInjuries.description | keywordProcessor"></app-dynamic-content>
         <div class="d-flex justify-content-center">
-            <table class="rules-table-100">
+            <table class="rules-table">
                 <thead>
                     <tr>
                         <th scope="col">d100 + excess damage</th>
@@ -29,7 +29,7 @@
                     @for (massiveInjury of massiveInjuries.massiveInjuriesTable; track $index) {
                         <tr>
                             <td>{{ massiveInjury.diceRoll }}</td>
-                            <td><app-dynamic-content [content]="massiveInjury.Injury| keywordProcessor"></app-dynamic-content></td>
+                            <td><app-dynamic-content [content]="massiveInjury.Injury | keywordProcessor"></app-dynamic-content></td>
                         </tr>
                     }
                 </tbody>

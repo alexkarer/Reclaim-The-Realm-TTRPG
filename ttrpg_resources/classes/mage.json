@@ -10,7 +10,7 @@
         "toughnessProficiency": 0.334,
         "willpowerProficiency": 0.667,
         "mainClassAttributes": [ "SPI", "INT", "PER" ],
-        "classSKills": [ "Investigation", "Magic", "Supernatural" ],
+        "classSKills": [ "Investigation", "Magic", "Supernatural", "Elements" ],
         "skillPointsPerLevel": 5,
         "weaponRanks": 0
     },
@@ -20,7 +20,8 @@
             {
                 "regularText": null,
                 "headerLine": null,
-                "bulletPoints": null
+                "bulletPoints": null,
+                "ability": null
             }
         ]
     },
@@ -32,7 +33,8 @@
                 {
                     "regularText": "",
                     "headerLine": null,
-                    "bulletPoints": null
+                    "bulletPoints": null,
+                    "ability": null
                 }
             ]
         }
@@ -46,7 +48,8 @@
                 {
                     "regularText": "",
                     "headerLine": null,
-                    "bulletPoints": null
+                    "bulletPoints": null,
+                    "ability": null
                 }
             ]
         }

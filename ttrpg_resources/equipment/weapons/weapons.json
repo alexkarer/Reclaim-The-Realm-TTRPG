@@ -1,5 +1,4 @@
 {
-    // use new properties, add axe and hammer
     "simpleWeapons": [
         {
             "name": "Dagger",
@@ -10,8 +9,7 @@
             "type": "Simple Weapon",
             "description": "A small simple short blade favoured by assasin’s and those looking to conceil their weapon.",
             "properties": [ "light", "thrown(4.5/9/18)" ],
-            "damageDice": "d6",
-            "canAddStrToDamage": true
+            "damage": "light [MARTIAL DAMAGE]"
         },
         {
             "name": "Mace",
@@ -21,9 +19,8 @@
             "weightInGram": 2000,
             "type": "Simple Weapon",
             "description": "A heavy piece of metal on a stick, not complicated and still dangerous. Can also be a hammer or a similiar bludgeonding weapon",
-            "properties": [ "versatile(2d6)", "armour-piercing" ],
-            "damageDice": "1d10",
-            "canAddStrToDamage": true
+            "properties": [ "armour-piercing" ],
+            "damage": "one-handed [MARTIAL DAMAGE]"
         },
         {
             "name": "Spear",
@@ -33,9 +30,8 @@
             "weightInGram": 1000,
             "type": "Simple Weapon",
             "description": "sharp piece of metal on a stick, the favored weapon of peasents and militia.",
-            "properties": [ "versatile(1d10)", "reach", "thrown(7.5/15/30)" ],
-            "damageDice": "d8",
-            "canAddStrToDamage": true
+            "properties": [ "versatile" ],
+            "damage": "one-handed [MARTIAL DAMAGE]"
         },
         {
             "name": "Crossbow",
@@ -45,9 +41,8 @@
             "weightInGram": 3000,
             "type": "Simple Weapon",
             "description": "While cumbersome to operate, it is easy to use",
-            "properties": [ "two-handed", "ranged(20/40/80)", "ammunition", "loading(1, 2 [AP])" ],
-            "damageDice": "2d6",
-            "canAddStrToDamage": false
+            "properties": [ "two-handed", "ranged(20/40/80)", "loading(1, 2 [AP])" ],
+            "damage": "2d6"
         }
     ],
     "advancedWeapons": [
@@ -59,21 +54,41 @@
             "weightInGram": 1000,
             "type": "Advanced Weapon",
             "description": "flexible small sword: gladius, small scimitar, etc.",
-            "properties": [ "light", "versatile(1d10)" ],
-            "damageDice": "1d8",
-            "canAddStrToDamage": true
+            "properties": [ "light", "duelist" ],
+            "damage": "light [MARTIAL DAMAGE]"
         },
         {
             "name": "Longsword",
             "tier": 2,
             "craftingSkill": "Smith’s Tools",
             "cost": "10 gc",
+            "weightInGram": 1500,
+            "type": "Advanced Weapon",
+            "description": "The classic",
+            "properties": [ "versatile", "duelist" ],
+            "damage": "one-handed [MARTIAL DAMAGE]"
+        },
+        {
+            "name": "Warhammer",
+            "tier": 2,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "5 gc",
+            "weightInGram": 2500,
+            "type": "Advanced Weapon",
+            "description": "Dwarves favourite",
+            "properties": [ "versatile", "armour-piercing" ],
+            "damage": "one-handed [MARTIAL DAMAGE]"
+        },
+        {
+            "name": "Waraxe",
+            "tier": 2,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "8 gc",
             "weightInGram": 2000,
             "type": "Advanced Weapon",
-            "description": "The classic, can alternatively be a battleaxe, morningstar or warhammer or rapier",
-            "properties": [ "versatile(2d6)", "lethal" ],
-            "damageDice": "1d10",
-            "canAddStrToDamage": true
+            "description": "",
+            "properties": [ "versatile", "shieldbreaker" ],
+            "damage": "one-handed [MARTIAL DAMAGE]"
         },
         {
             "name": "Polarm",
@@ -84,20 +99,40 @@
             "type": "Advanced Weapon",
             "description": "Can be a halberd, pike, glaive",
             "properties": [ "two-handed", "reach" ],
-            "damageDice": "2d6",
-            "canAddStrToDamage": true
+            "damage": "two-handed [MARTIAL DAMAGE]"
         },
         {
-            "name": "Great Weapon",
+            "name": "Greatsword",
             "tier": 2,
             "craftingSkill": "Smith’s Tools",
             "cost": "25 gc",
             "weightInGram": 3000,
             "type": "Advanced Weapon",
-            "description": "Can be a greatsword (zweihänder), greataxe, pollaxe or a large mace/hammer.",
-            "properties": [ "heavy", "two-handed" ],
-            "damageDice": "2d8",
-            "canAddStrToDamage": true
+            "description": "Big sword",
+            "properties": [ "heavy", "two-handed", "duelist" ],
+            "damage": "two-handed [MARTIAL DAMAGE]"
+        },
+        {
+            "name": "Greathammer",
+            "tier": 2,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "10 gc",
+            "weightInGram": 3000,
+            "type": "Advanced Weapon",
+            "description": "Big hammer",
+            "properties": [ "heavy", "two-handed", "armour-piercing" ],
+            "damage": "two-handed [MARTIAL DAMAGE]"
+        },
+        {
+            "name": "Greataxe",
+            "tier": 2,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "15 gc",
+            "weightInGram": 3000,
+            "type": "Advanced Weapon",
+            "description": "Big Axe",
+            "properties": [ "heavy", "two-handed", "shieldbreaker" ],
+            "damage": "two-handed [MARTIAL DAMAGE]"
         },
         {
             "name": "Javelin",
@@ -108,8 +143,7 @@
             "type": "Advanced Weapon",
             "description": "similiar to a spear, but designed for throwing. Can also be a throwing axe",
             "properties": [ "thrown(9/18/36)" ],
-            "damageDice": "1d8",
-            "canAddStrToDamage": true
+            "damage": "one-handed [MARTIAL DAMAGE]"
         },
         {
             "name": "Longbow",
@@ -119,21 +153,8 @@
             "weightInGram": 1500,
             "type": "Advanced Weapon",
             "description": "the classic bow, wielded by trainend archers.",
-            "properties": [ "two-handed", "ammunition", "ranged (30/60/120)" ],
-            "damageDice": "1d10",
-            "canAddStrToDamage": true
-        },
-        {
-            "name": "Warbow",
-            "tier": 2,
-            "craftingSkill": "Carpenter’s Tools",
-            "cost": "30 gc",
-            "weightInGram": 2000,
-            "type": "Advanced Weapon",
-            "description": "heavy bow requiring a lot of strength to draw and wield effectively.",
-            "properties": [ "two-handed", "heavy", "ammunition", "ranged (36/72/144)" ],
-            "damageDice": "1d12",
-            "canAddStrToDamage": true
+            "properties": [ "two-handed", "ranged (30/60/120)" ],
+            "damage": "one-handed [MARTIAL DAMAGE]"
         },
         {
             "name": "Heavy Crossbow",
@@ -143,9 +164,8 @@
             "weightInGram": 7000,
             "type": "Advanced Weapon",
             "description": "Large crossbow which is usually only used in siege warfare, often manned by a 2 people simaltanously. If your strength is lower than 3 the reload action requires 4 [AP]",
-            "properties": [ "loading(1, 2 [AP])", "two-handed", "heavy", "ammunition", "ranged(30/60/120" ],
-            "damageDice": "2d12",
-            "canAddStrToDamage": false
+            "properties": [ "loading(1, 2 [AP])", "two-handed", "ranged(30/60/120" ],
+            "damage": "2d12"
         },
         {
             "name": "Hand Crossbow",
@@ -155,9 +175,8 @@
             "weightInGram": 750,
             "type": "Advanced Weapon",
             "description": "You require one additional hand for reloading, but it can wield a light weapon or object in the hand simultaneously.",
-            "properties": [ "loading(1, 2 [AP])", "ammunition", "light", "lethal", "ranged(6/12/24)" ],
-            "damageDice": "1d8",
-            "canAddStrToDamage": false
+            "properties": [ "loading(1, 2 [AP])", "light", "ranged(6/12/24)" ],
+            "damage": "1d8"
         },
         {
             "name": "Repeating Crossbow",
@@ -167,9 +186,8 @@
             "weightInGram": 3000,
             "type": "Advanced Weapon",
             "description": "A complicated piece of equipment often used stationary in defensive implacements",
-            "properties": [ "loading(5, 4 [AP])", "two-handed", "ammunition", "ranged(6/12/24)" ],
-            "damageDice": "2d4",
-            "canAddStrToDamage": false
+            "properties": [ "loading(5, 4 [AP])", "two-handed", "ranged(6/12/24)" ],
+            "damage": "2d4"
         }
     ]
 }

@@ -3,24 +3,22 @@
     "weaponProficiencyDescription": "Weapon proficiencies represent your ability to effectively wield weapons. It is split up across 3 Ranks, and higher ranks allow you to more difficult weapons as well as gain more uses wielding them. Each time a rank in Weapon Proficiency is gained, it is added to the ranks you already have. The Benefits for each rank are as follows:",
     "weaponProficiencyRanks": [
         { 
-            "rank": "Rank 0:", 
+            "rank": "Rank 0", 
             "description": "Is able to use simple Weapons without penalty"
         },
         { 
-            "rank": "Rank 1:", 
+            "rank": "Rank 1", 
             "description": "Is able to use advanced Weapons without penalty"
         },
         { 
-            "rank": "Rank 2:", 
-            "description": "Gains Weapon Versatility (see below)"
+            "rank": "Rank 2", 
+            "description": "You can adapt your fighting style and add one of the following properties to any weapon you are wielding: armour-piercing, shieldbreaker or duelist. After a long rest you can exchange on property of to a different one."
         },
         { 
-            "rank": "Rank 3:", 
-            "description": "Gains Weapon Mastery (see below)"
+            "rank": "Rank 3", 
+            "description": "You can wield weapons in ways others can't, add one of the following properties to any weapon you are wielding: reach or heavy (must be wielded two-handed). After a long rest you can exchange on property of to a different one."
         }
     ],
-    "weaponVersatility": "You can adapt your fighting style and add one of the following properties to any weapon you are wielding: armour-piercing, shieldbreaker or duelist. After a long rest you can exchange on property of to a different one.",
-    "weaponMastery": "You can wield weapons in ways others can't, add one of the following properties to any weapon you are wielding: reach or heavy (must be wielded two-handed). After a long rest you can exchange on property of to a different one.",
     "weaponProperties": [
         {
             "name": "armour-piercing",

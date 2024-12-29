@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PlayerClass } from '../../../../ttrpg_resources/classes/classes';
 import commonClassTexts from '../../../../ttrpg_resources/classes/common_class_texts.json';
 import { DynamicContentComponent } from "../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
@@ -13,16 +13,14 @@ import { TextElementsComponent } from "../../shared/text-utils/text-elements/tex
   templateUrl: './class.component.html',
   styleUrl: './class.component.scss'
 })
-export class ClassComponent implements OnInit {
+export class ClassComponent {
 
-  @Input() public playerClass?: PlayerClass;
-  public readonly commonClassTexts = commonClassTexts;
-  public classFeaturesPerLevel?: [string]
-
-  ngOnInit(): void {
-    let levelOneFeatures = '<span class="fw-bold">' + this.playerClass?.classCoreFeature.name + '</span>' + 
+  private _playerClass?: PlayerClass;
+  @Input() set playerClass(value: PlayerClass) {
+    this._playerClass = value;
+    let levelOneFeatures = '<span class="fw-bold">' + value?.classCoreFeature.name + '</span>' + 
         ', ' + 
-        this.playerClass?.classFeatures
+        value?.classFeatures
           .filter(feature => feature.levels.includes(1))
           .map(feature => this.mapFeatureName(feature))
           .join(', ');
@@ -30,7 +28,7 @@ export class ClassComponent implements OnInit {
     this.classFeaturesPerLevel = [levelOneFeatures];
 
     for (let i = 2; i <= 12; i++) {
-      var featuresAtCurrentLevel = this.playerClass?.classFeatures
+      var featuresAtCurrentLevel = value?.classFeatures
           .filter(feature => feature.levels.includes(i))
           .map(feature => this.mapFeatureName(feature))
           .join(', ');
@@ -42,6 +40,13 @@ export class ClassComponent implements OnInit {
       }
     }
   }
+
+  public get playerClass(): PlayerClass | undefined {
+      return this._playerClass;
+  }
+
+  public readonly commonClassTexts = commonClassTexts;
+  public classFeaturesPerLevel?: [string]
 
   mapFeatureName(feature: { name: string; relatedClassPath: null | string }): string {
     if (feature.relatedClassPath != null) {

@@ -9,9 +9,9 @@
             "Creature with the higher [AGI]",
             "Creature with the higher [PER]",
             "Players acts before NPCs",
-            "resolve via rolling d20s"
+            "Resolve via rolling d20s"
         ],
-        "supriseDescription": "Depending on how the combat started, some participants might not have expected it and can be declared as suprised by the GM which often depends on their passive [AWARENESS] or by failing a [PER] [AWARENESS] [SKILL TEST].<br> Creatures that are suprised in combat do not roll initiative and instead are at the bottom of the initiative order (resolve ties as normal), Additionally in the first round of combat they suffer the following penalties:",
+        "supriseDescription": "Depending on how the combat started, some participants might not have expected it and can be declared as suprised by the GM which often depends on their passive [AWARENESS] or by failing a [PER] [AWARENESS] [SKILL TEST].<br>Creatures that are suprised in combat do not roll initiative and instead are at the bottom of the initiative order (resolve ties as normal), Additionally in the first round of combat they suffer the following penalties:",
         "suprisedPenalties": [
             "They cannot use a [REACTION].",
             "They recieve a -5 penalty to their [DODGE]."
@@ -44,6 +44,6 @@
         },
         "actingOutsideOfTurn": "Certain effects mainly a [REACTION] allow actors to act outside their turn. When they act this way it does not count as a [TURN] and they are limited to performing the actions stated in the relevant ability.",
         "resolvingSimultaneousEffects": "Generally if outside turn, GM descides, if during a turn, the one whos turn it is decides, if during a reaction, the one who used the reaction decides",
-        "combatEnd": "The end of a combat doesn't necesarry mean that all hostile actors have been eliminated. Hostiles might also flee or sourrender."
+        "combatEnd": "The end of a combat doesn't necesarry mean that all hostile actors have been eliminated. Hostiles might also flee or surrender."
     }
 }
