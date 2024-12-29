@@ -1,0 +1,187 @@
+{
+    "description": "Here are all aspects of Combat explained in more detail.",
+    "assymetricCombat": "One important note in combat is that the rule system is an assymetric system while Creatures controlled by the GM follow the same rules as the Player Characters, the Player characters are always rolling except for damage and various special abilities.<br>For example if a Player Character attacks a creature they will roll for an attack and try and beat the creatures static dodge value. If they succeed they can then roll for damage and the creature will recieve the damage. Conversly if a creature controlled by the DM attacks a player they have to make a Dodge Save and on a fail the GM will roll the damage for the creature.",
+    "movement": {
+        "description": "Every character and creature can move around and positon themselves in a battle using the following abilities:",
+        "standardAbilities": [
+            {
+                "name": "Move",
+                "tags": [ "Movement" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "1 [MP]",
+                "range": "-",
+                "target": "self",
+                "duration": "[INSTANT]",
+                "description": "You move 1.5m (1 square), every second time you move diagonally during your [TURN] you have to spend an extra [MP]. Depending on your [SIZE] and other factors you might more distance."
+            },
+            {
+                "name": "Jump",
+                "tags": [ "Movement" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "4 [MP]",
+                "range": "-",
+                "target": "self",
+                "duration": "[INSTANT]",
+                "description": "You can jump up to your jumping distance. Opportunity attacks are only provoked from enemies who where in [MELEE RANGE] at the start of the Jump Move."
+            },
+            {
+                "name": "Disengage",
+                "tags": [ "Movement" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "5 [MP]",
+                "range": "-",
+                "target": "self",
+                "duration": "[INSTANT]",
+                "description": "You move 1.5m (1 square) away from an enemy without provoking an Opportunity Attack."
+            },
+            {
+                "name": "Stand up",
+                "tags": [ "Movement" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "5 [MP]",
+                "range": "-",
+                "target": "self",
+                "duration": "[INSTANT]",
+                "description": "You stand up from being prone."
+            },
+            {
+                "name": "Dash",
+                "tags": [ "Movement" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "1 [AP]",
+                "range": "-",
+                "target": "self",
+                "duration": "[INSTANT]",
+                "description": "You gain 2 + [AGI]/3 (rounded down) extra [MP] in your current [TURN]"
+            },
+            {
+                "name": "Running",
+                "tags": [ "Movement" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "1 [AP]",
+                "range": "-",
+                "target": "self",
+                "duration": "1 [ROUND]",
+                "description": "Only possible as the first ability used this [TURN]. You can engage or sustain a Run which lasts until the start of your next [TURN] brings the following changes:<ul><li>Every time you use the Move Ability you can move an additional 3m which must be in a straight line.</li><li>Every consecetive move can only alter the direction by 45° unless 3 [MP] are used for the Move used upon which the direction can be altered by 90°. Or alternativly 4 [MP] can be used to stop early.</li><li>During a Run [AP] can only be used for Dash, any other actions allow permissions by the GM, additionally someone running can't use Opportunity Attacks</li><li>While Running you recieve a +5 bonus to your [DODGE] and a -5 penalty to your [HARDNESS].</li></ul>"
+            }
+        ],
+        "movingOutOfMeleeRange": "Important note if you are within [MELEE RANGE] of a creature they are able to make an Opportunity Attack (see below) unless stated otherwise.",
+        "forcedMovement": "Sometimes certain abilities force you character to move a certain way, this usually happens as soon as the ability was used unless stated otherwise in the ability. Such movement does not provoke Opportunity Attacks and if your movement ends or would pass through an occupied space consult Crashing into other Creatures in the Adventuring Section."
+    },
+    "actions": {
+        "description": "",
+        "standardAbilities": [
+            {
+                "name": "Weapon Attack",
+                "tags": [ "Weapon", "Attack" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "2 [AP]",
+                "range": "[WEAPON RANGE]",
+                "target": "1 creature",
+                "duration": "[INSTANT]",
+                "description": "Make a [MELEE MARTIAL ATTACK] against a creature using any bonuses your weapon provides. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves damage depending on your [MARTIAL DAMAGE] and relevant Weapon."
+            },
+            {
+                "name": "Desperate Attack",
+                "tags": [ "Melee", "Attack" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "1 [AP]",
+                "range": "[MELEE RANGE]",
+                "target": "1 creature",
+                "duration": "[INSTANT]",
+                "description": "Make a [MELEE MARTIAL ATTACK] against a creature. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves physical damage equal to your two-handed martial damage but you yourself additionally suffer half that damage and that damage can't be reduced in any way."
+            }
+        ],
+        "attack": {
+            "description": "",
+            "critical hits": "mention also that when the players dodge on a 1"
+        },
+        "ranges": {
+            "description": "",
+            "meleeRange": "",
+            "weaponRange": ""
+        },
+        "areaEffects": "",
+        "auraEffects": "",
+        "timingOfEffects": {
+            "instant": "Abilities with the [INSTANT] tag are not happening really instantaneously but if such an ability is used all of it's effects are resolved before any other ability can be used unless that follow up ability directly interacts with the current one.",
+            "longerDuration": ""
+        }
+    },
+    "reactions": {
+        "description": "",
+        "standardReactions": [
+            {
+                "name": "Opportunity Attack",
+                "tags": [ "Melee", "Weapon", "Attack" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "1 [REACTION]",
+                "range": "[MELEE RANGE]",
+                "target": "1 creature",
+                "duration": "[INSTANT]",
+                "description": "If a creature leaves your melee range you can make a Melee [ATTACK] against them."
+            },
+            {
+                "name": "Graceful Landing",
+                "tags": [ ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "1 [REACTION]",
+                "range": "-",
+                "target": "[SELF]",
+                "duration": "[INSTANT]",
+                "description": "If you fall down a large height you can use your reaction to perform a landing to reduce damage. Make an [AGI] [ATTRIBUTE TEST] and reduce the damage of your landing by half of that result."
+            },
+            {
+                "name": "Parry",
+                "tags": [ "Weapon", "Melee" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ "Weapon" ]
+                },
+                "cost": "[REACTION]",
+                "range": "-",
+                "target": "[SELF]",
+                "duration": "[INSTANT]",
+                "description": "When you are hit by a [MELEE ATTACK] you can use this reaction. Make a Weapon [MELEE MARTIAL ATTACK] if it matches or exceeds the [MELEE ATTACK] that targeted you, the damage from the [ATTACK] is reduced by 2 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded one-handed, or by 3 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded two-handed."
+            }
+        ]
+    },
+    "circumstancalBonuses": {
+        "description": "",
+        "cover": "small cover: unmodified roll (25%)1-5 will always hit cover + 2 [DODGE], medium cover: unmodified roll (50%) 1-10 will always hit cover + 4 [DODGE], large cover: unmodified roll (75%) 1-15 will always hit cover + 6 [DODGE]",
+        "prone": "",
+        "flanking": "-2 dodge, -4 shield block",
+        "highGrounnd": "+2 [ATTACK]",
+        "lowGround": "-2 [ATTACK]",
+        "concealment": "see phone notes"
+    },
+    "damage": {
+        "description": "",
+        "damageOrder": "",
+        "damageTypes": {
+            "description": "",
+            "types": [
+    
+            ]
+        }
+    }
+}

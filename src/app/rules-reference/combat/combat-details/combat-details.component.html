@@ -1,0 +1,38 @@
+<div class="mx-2">
+    <app-dynamic-content [content]="combatDetails.description | keywordProcessor"></app-dynamic-content>
+
+    <h5 class="mb-0 mt-2">Assymetric Combat</h5>
+    <app-dynamic-content [content]="combatDetails.assymetricCombat | keywordProcessor"></app-dynamic-content>
+
+    <h4 class="mb-1 mt-2">Movement</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="combatDetails.movement.description | keywordProcessor"></app-dynamic-content>
+
+        <app-ability-list [abilities]="combatDetails.movement.standardAbilities"></app-ability-list>
+
+        <h5 class="mb-0 mt-2">Moving out of Melee Range</h5>
+        <app-dynamic-content [content]="combatDetails.movement.movingOutOfMeleeRange| keywordProcessor"></app-dynamic-content>
+        <h5 class="mb-0 mt-2">Forced Movement</h5>
+        <app-dynamic-content [content]="combatDetails.movement.forcedMovement| keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <h4 class="mb-1 mt-2">Actions</h4>
+    <div class="mx-2">
+        
+    </div>
+
+    <h4 class="mb-1 mt-2">Reactions</h4>
+    <div class="mx-2">
+        
+    </div>
+
+    <h4 class="mb-1 mt-2">Circumstancal Bonuses</h4>
+    <div class="mx-2">
+        
+    </div>
+
+    <h4 class="mb-1 mt-2">Damage</h4>
+    <div class="mx-2">
+        
+    </div>
+</div>

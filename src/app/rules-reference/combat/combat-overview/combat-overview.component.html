@@ -1,0 +1,71 @@
+<div class="mx-2">
+    <app-dynamic-content [content]="combatOverviewJson.combatOverviewDescription | keywordProcessor"></app-dynamic-content>
+    <h4 class="mb-1 mt-2">Combat Start</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="combatOverviewJson.combatStart.description | keywordProcessor"></app-dynamic-content>
+
+        <h5 class="mb-1 mt-2">Initiative Test</h5>
+        <app-dynamic-content [content]="combatOverviewJson.combatStart.initiativeTest | keywordProcessor"></app-dynamic-content>
+        <h6 class="mb-0 mt-1">Resolving Initiative Ties:</h6>
+        <app-dynamic-content [content]="combatOverviewJson.combatStart.resolvingInitiativeTiesDescription | keywordProcessor"></app-dynamic-content>
+        <ul>
+            @for (resolvingTies of combatOverviewJson.combatStart.resolvingInitiativeTies; track $index) {
+                <li>
+                    <app-dynamic-content [content]="resolvingTies | keywordProcessor"></app-dynamic-content>
+                </li>
+            }
+        </ul>
+
+        <h5 class="mb-0 mt-2">Suprise</h5>
+        <app-dynamic-content [content]="combatOverviewJson.combatStart.supriseDescription | keywordProcessor"></app-dynamic-content>
+        <ul>
+            @for (suprisePenalty of combatOverviewJson.combatStart.suprisedPenalties; track $index) {
+                <li>
+                    <app-dynamic-content [content]="suprisePenalty | keywordProcessor"></app-dynamic-content>
+                </li>
+            }
+        </ul>
+    </div>
+    <h4 class="">Combat Structure</h4>
+    <div class="mx-2">
+        <app-dynamic-content [content]="combatOverviewJson.combatStructure.description | keywordProcessor"></app-dynamic-content>
+        <ol>
+            @for (order of combatOverviewJson.combatStructure.combatOrder; track $index) {
+                <li>
+                    <app-dynamic-content [content]="order | keywordProcessor"></app-dynamic-content>
+                </li>
+            }
+        </ol>
+
+        <h5 class="mb-0 mt-2" ngbScrollSpyFragment="round">Combat Round</h5>
+        <p class="header-subscript">Keyword: [ROUND]</p>
+        <app-dynamic-content [content]="combatOverviewJson.combatStructure.combatRound.description | keywordProcessor"></app-dynamic-content>
+        <ol>
+            @for (step of combatOverviewJson.combatStructure.combatRound.steps; track $index) {
+                <li>
+                    <app-dynamic-content [content]="step | keywordProcessor"></app-dynamic-content>
+                </li>
+            }
+        </ol>
+
+        <h5 class="mb-0 mt-2" ngbScrollSpyFragment="turn">Combat Turn</h5>
+        <p class="header-subscript">Keyword: [TURN]</p>
+        <app-dynamic-content [content]="combatOverviewJson.combatStructure.combatTurn.description | keywordProcessor"></app-dynamic-content>
+        <ol>
+            @for (step of combatOverviewJson.combatStructure.combatTurn.steps; track $index) {
+                <li>
+                    <app-dynamic-content [content]="step | keywordProcessor"></app-dynamic-content>
+                </li>
+            }
+        </ol>
+
+        <h6 class="mb-0 mt-2">Acting outside of a [TURN]</h6>
+        <app-dynamic-content [content]="combatOverviewJson.combatStructure.actingOutsideOfTurn | keywordProcessor"></app-dynamic-content>
+
+        <h6 class="mb-0 mt-2">Resolving Simlutaneous Effects</h6>
+        <app-dynamic-content [content]="combatOverviewJson.combatStructure.resolvingSimultaneousEffects | keywordProcessor"></app-dynamic-content>
+
+        <h5 class="mb-0 mt-2">Combat End</h5>
+        <app-dynamic-content [content]="combatOverviewJson.combatStructure.combatEnd | keywordProcessor"></app-dynamic-content>
+    </div>
+</div>

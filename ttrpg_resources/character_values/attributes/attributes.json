@@ -2,85 +2,43 @@
     {
         "name": "Strength",
         "keyword": "[STR]",
-        "shortdescription": "Strength represents the physical strength of a character, for example it affects your damage with melee and thrown weapons as well as bows",
-        "fulldescription": "[STR] represents your physical Strength. In game, it additionally reflects your ability to wield melee weapons and damage with bows and thrown weapons, as well as your carrying capacity and jumping distance.",
-        "milestoneBenefits": {
-            "minus1OrLower": "While wearing armour, the Manoeuvre penalty is increased by 1.",
-            "4orHigher": "While wearing armour, the Manoeuvre penalty is decreased by 1, additionally any [MELEE MARTIAL ATTACK] that uses [STR] for damage deals an extra 1d6 physical damage",
-            "7orHigher": "While wearing armour the Manoeuvre penalty is decreased by 2, additionally any [MELEE MARTIAL ATTACK] that uses [STR] for damage deals an extra 1d6 physical damage",
-            "10orHigher": "While wearing armour, the Manoeuvre penalty is decreased by 2 and the Movement penalty is decreased by 1, additionally any [MELEE MARTIAL ATTACK] that uses [STR] for damage deals an extra 1d6 physical damage."
-        }
+        "shortdescription": "Strength represents the physical strength of a character, it affects your damage with weapons, carrying capacity and jumping distance ",
+        "fulldescription": "[STR] represents your physical Strength. In game, it additionally reflects your ability to wield melee weapons and damage with bows and thrown weapons, as well as your carrying capacity and jumping distance."
     },
     {
         "name": "Agility",
         "keyword": "[AGI]",
-        "shortdescription": "Agility represents how agile, dexterous and fast the character is, for example it represents accuracy with ranged weapons and the ability to dodge incoming attacks",
-        "fulldescription": "[AGI] represents additionally the Agility of a character as well as their reflexes as well as their finesse. It specifically reflects your accuracy with a Meele Attacks, as well as your ability to dodge attacks and other threats.",
-        "milestoneBenefits": {
-            "minus1OrLower": "-1 [MP]",
-            "4orHigher": "+2 [MP]",
-            "7orHigher": "+2 [MP] and any [OPPORTUNITY ATTACK] against you has [DISADVANTAGE].",
-            "10orHigher": "+2 [MP] and you can use one additional [REACTION] per combat round and regain all at the start of the battle and your turn."
-        }
+        "shortdescription": "Agility represents how agile, dexterous and fast the character is, it represents accuracy with melee attacks, movement and the ability to dodge incoming attacks",
+        "fulldescription": "[AGI] represents additionally the Agility of a character as well as their reflexes as well as their finesse. It specifically reflects your accuracy with a melee Attacks, your movement and as your ability to dodge attacks and other threats."
     },
     {
         "name": "Constitution",
         "keyword": "[CON]",
         "shortdescription": "Constitution represents our bodily health as well as your endurance and the ability to resist poisons.",
-        "fulldescription": "[CON] represents your bodily health as well as your endurance and the ability to resist poisons or other harmful effects targeting your body.<br>Additionally, each point in [CON] increases your [HP] for each [LEVEL] you have, furthermore each point increases your natural lifespan by 10 years. Conversely, if your [CON] value is negative, that amount decreases your [HP] and lifespan.",
-        "milestoneBenefits": {
-            "minus1OrLower": "You become vulnurable to poison damage.",
-            "4orHigher": "When you recover your [HP] during a short rest by using your [STAMINA] you can now roll an additional d6.",
-            "7orHigher": "When you recover your [HP] during a short rest by using your [STAMINA] you can roll an additional d6 and you automatically recover one additional point of exhaustion after a long rest.",
-            "10orHigher": "When you recover your [HP] during a short rest you can roll 2 additional d6, additionally if you have to make a [TOUGHNESS] [SAVE] when on deaths door or unconcious against you can make these saves with [ADVANTAGE]."
-        }
+        "fulldescription": "[CON] represents your bodily health as well as your endurance and the ability to resist poisons or other harmful effects targeting your body.<br>Additionally, each point in [CON] increases your [HP] for each [LEVEL] you have, furthermore each point increases your natural lifespan by 10 years. Conversely, if your [CON] value is negative, that amount decreases your [HP] and lifespan."
     },
     {
         "name": "Intelligence",
         "keyword": "[INT]",
-        "shortdescription": "Intelligence represents your Intelligence and ability to reason about problems, recall information, prediction, and imagination of 3D environments, for example it represents how many techniques you can know at the same time.",
-        "fulldescription": "The [INT] Attribute represents your Intelligence and ability to reason about problems, recall information, prediction, and imagination of 3D environments, for example it represents how many techniques you can know at the same time",
-        "milestoneBenefits": {
-            "minus1OrLower": "The maximum rank for a Lore Skill and Tool Skill are halved (rounded down).",
-            "4orHigher": "You get 1 extra Skill Point per [LEVEL].",
-            "7orHigher": "You get 2 extra Skill Points per [LEVEL], and the maximum rank of Skills is increased by 1.",
-            "10orHigher": "You get 2 extra Skill Points per [LEVEL] , and the maximum rank of Skills is increased by 2."
-        }
+        "shortdescription": "Intelligence represents your Intelligence, it represents how many techniques you can know at the same time and how many skill points you have.",
+        "fulldescription": "The [INT] Attribute represents your Intelligence and ability to reason about problems, recall information, prediction, and imagination of 3D environments, for example it represents how many techniques you can know at the same time and how many skill points you have."
     },
     {
         "name": "Spirit",
         "keyword": "[SPI]",
         "shortdescription": "Spirit represents how strong your connection to the elemental planes and the Aether is as well your mental fortitude and spiritual health, it most importantly affects your ability to use spells and other supernatural techniques.",
-        "fulldescription": "The [SPI] Attribute represents how strong your connection to the elemental planes and the Aether is as well your mental fortitude and spiritual health, it most importantly affects your ability to use spells and other supernatural techniques.",
-        "milestoneBenefits": {
-            "minus1OrLower": "You have can’t manifest in the aether in any way and after death your soul will not be able to retain itself after death which makes resurrection impossible.",
-            "4orHigher": "You can summon lesser aether entities.",
-            "7orHigher": "You can summon regular aether entities.",
-            "10orHigher": "You can summon greater aether entities."
-        }
+        "fulldescription": "The [SPI] Attribute represents how strong your connection to the elemental planes and the Aether is as well your mental fortitude and spiritual health, it most importantly affects your ability to use spells and other supernatural techniques."
     },
     {
         "name": "Perception",
         "keyword": "[PER]",
-        "shortdescription": "Perception represents your physical senses and the ability to perceive details and weak spots.",
-        "fulldescription": "The [PER] Attribute represents your physical senses and the ability to perceive details and weak spots or even unnatural senses.",
-        "milestoneBenefits": {
-            "minus1OrLower": "The Range of any [RANGED ATTACK] is reduced by 3 m (minimum of 3 m)",
-            "4orHigher": "You gain blindsight (3m) if you already blindsight, it increases by 1.5m.",
-            "7orHigher": "Your blindsight increases by 1.5m. Additionally the required roll for a critical hit is reduced by 1.",
-            "10orHigher": "Your blindsight increases by 3m. Additionally, enmies don’t gain [ADVANTAGE] against you from being unseen and you don’t suffer [DISADVANTAGE] on attacks against targets you can’t see (but are still aware of)."
-        }
+        "shortdescription": "Perception represents your physical senses and the ability to perceive details and weak spots and accuracy of ranged attacks.",
+        "fulldescription": "The [PER] Attribute represents your physical senses and the ability to perceive details and weak spots or even unnatural senses and your accuracy of ranged attacks."
     },
     {
         "name": "Charisma",
         "keyword": "[CHA]",
         "shortdescription": "Charisma represents how likeable you are and your ability to sway others for your cause.",
-        "fulldescription": "The [CHA] Attribute represents how likeable you are and your ability to sway others for your cause.",
-        "milestoneBenefits": {
-            "minus1OrLower": "",
-            "4orHigher": "",
-            "7orHigher": "",
-            "10orHigher": ""
-        }
+        "fulldescription": "The [CHA] Attribute represents how likeable you are and your ability to sway others for your cause, it additionally improves certain abilities."
     }
 ]

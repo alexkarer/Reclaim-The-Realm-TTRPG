@@ -43,7 +43,7 @@
                     </tr>
                     <tr>
                         <td><span class="fw-bold">Skill Points per Level</span></td>
-                        <td>{{ playerClass?.coreClassValues?.skillPointsPerLevel }}</td>
+                        <td><app-dynamic-content [content]="playerClass?.coreClassValues?.skillPointsPerLevel + ' + [INT]/3 (rounded up)' | keywordProcessor"></app-dynamic-content></td>
                     </tr>
                     <tr>
                         <td><span class="fw-bold">Weapon Ranks</span></td>

@@ -2,12 +2,20 @@
     <div class="px-3 row g-5">
         <div class="col">
             @for (attribute of attributesLeft; track $index) {
-                <app-attribute [attribute]="attribute"></app-attribute>
+                <div class="p-2 border bg-body-tertiary mb-3">
+                    <h4 class = "mb-0" [ngbScrollSpyFragment]="attribute.name ? attribute.name : ''">{{ attribute.name }}</h4>
+                    <p class="header-subscript">Keyword: {{ attribute?.keyword}}</p>
+                    <app-dynamic-content [content]="attribute?.fulldescription | keywordProcessor"></app-dynamic-content>
+                </div>
             }
         </div>
         <div class="col">
             @for (attribute of attributesRight; track $index) {
-                <app-attribute [attribute]="attribute"></app-attribute>
+                <div class="p-2 border bg-body-tertiary mb-3">
+                    <h4 class = "mb-0" [ngbScrollSpyFragment]="attribute.name ? attribute.name : ''">{{ attribute.name }}</h4>
+                    <p class="header-subscript">Keyword: {{ attribute?.keyword}}</p>
+                    <app-dynamic-content [content]="attribute?.fulldescription | keywordProcessor"></app-dynamic-content>
+                </div>
             }
         </div>
     </div>

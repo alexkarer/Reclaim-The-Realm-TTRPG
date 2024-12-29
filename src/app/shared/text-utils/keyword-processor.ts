@@ -97,7 +97,11 @@ function keywordToContentPart(keyword: string): ContentPart {
         case 'EXHAUSTION':
             return generateGenericKeyword('[EXHAUSTION]', 'When characters push themselves beyond their physical limits, they suffer points of [EXHAUSTION] which grant a cumulative -1 penalty to any [D20 TEST]. If that increases beyond their limit they fall unconcious, if it increases above twice their limit they die.', 'exhaustion');
         case 'DEATHS DOOR':
-            return generateGenericKeyword('DEATHS DOOR', '[DEATHS DOOR] is a mechanic that allows you to keep on fighting even when you are reduced to 0 [HP] however at great risks to yourself.', 'deaths-door')
+            return generateGenericKeyword('DEATHS DOOR', '[DEATHS DOOR] is a mechanic that allows you to keep on fighting even when you are reduced to 0 [HP] however at great risks to yourself.', 'deaths-door');
+        case 'ROUND':
+            return generateGenericKeyword('[ROUND]', 'TODO', 'round');
+        case 'TURN':
+            return generateGenericKeyword('[TURN]', 'TODO', 'turn');
         // ********************** CHARACTER VALUES **********************
         case 'LEVEL':
             return generateGenericKeyword('[LEVEL]', 'Your characters current [LEVEL], it increases as your character spends time adventuring and earns [XP]. When your [LEVEL] increases your characters statistics also improve in several ways.', 'level');

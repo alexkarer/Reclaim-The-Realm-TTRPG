@@ -1,1 +1,8 @@
-<p>combat works!</p>
+<div class="mx-2">
+    <app-dynamic-content [content]="generalCombatDescription | keywordProcessor"></app-dynamic-content>
+    <h3 class="" ngbScrollSpyFragment="combat-overview">Combat Overview</h3>
+    <app-combat-overview></app-combat-overview>
+    <hr>
+    <h3 class="" ngbScrollSpyFragment="combat-details">Combat Details</h3>
+    <app-combat-details></app-combat-details>
+</div>
