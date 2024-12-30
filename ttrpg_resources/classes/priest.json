@@ -31,6 +31,29 @@
                     "Falling Unconcious removes all current Aether Dice."
                 ],
                 "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": "Aether Dice Notation",
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": "The following Notation is used for describing Aether Dice (AD) and Desired Values:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "AD = Any Aether Dice",
+                    "AD(1) = Aether Dice with a value of 1",
+                    "AD(4+) = Aether Dice with a value of 4 or higher (4-6)",
+                    "AD(3-) = Aether Dice with a value of 3 or lower (1-3)"
+                ],
+                "ability": null
             }
         ]
     },
@@ -125,7 +148,7 @@
                     "bulletPoints": null,
                     "ability": {
                         "name": "Divine Blessing",
-                        "tags": [ "[SPELL LIKE] 0" ],
+                        "tags": [ "[SPELL ABILITY] 0" ],
                         "requirements": {
                             "requiredLevels": [ ],
                             "requiredAttributes": [ ],
@@ -158,7 +181,7 @@
                     "bulletPoints": null,
                     "ability": {
                         "name": "Unholy Curse",
-                        "tags": [ "[SPELL LIKE] 0" ],
+                        "tags": [ "[SPELL ABILITY] 0" ],
                         "requirements": {
                             "requiredLevels": [ ],
                             "requiredAttributes": [ ],
@@ -350,7 +373,7 @@
                     "regularText": null,
                     "headerLine": null,
                     "bulletPoints": [
-                        "If the cleric died or they soul became trapped or bound they can use this ability and come back alive with their soul being returned to them. Talk with the GM on how they came back.",
+                        "If the Priest died or they soul became trapped or bound they can use this ability and come back alive with their soul being returned to them. Talk with the GM on how they came back.",
                         "They can sacrifice themselves and matyr for their allies or cause. When doing so they can’t be resurrected with their soul now being bound to the aether. For this sacriface they can alter reality in a major way they wish, examples: Forever bind an evli entity somewhere, reverse the destruction of a major city, ...."
                     ],
                     "ability": null
@@ -367,19 +390,232 @@
     "classTechniquesDescription": "",
     "classTechniques": [
         {
-            "name": "",
-            "tags": [ "Class Technique (Priest)" ],
+            "name": "Lingering Healing",
+            "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 1" ],
             "requirements": {
                 "requiredLevels": [ ],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "",
+            "cost": "0 [AP], 2 AD(3-)",
+            "range": "-",
+            "target": "one ally that was targeted by a [SPELL ABILITY]",
+            "duration": "2 [ROUNDS]",
+            "description": "One ally that was targeted with a [SPELL ABILITY] that you cast this turn recieves [HEALING] equal to [SPI] ."
+        },
+        {
+            "name": "Holy Strike",
+            "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 2 AD(3-)",
+            "range": "-",
+            "target": "self",
+            "duration": "[INSTANT]",
+            "description": "When you hit a target with a [MELEE MARTIAL ATTACK] or a [RANGED MARTIAL ATTACK] you can deal 2d6 extra holy damage. For every additional AD(3-) used, you can increase the holy damage by a further d6."
+        },
+        {
+            "name": "Mercy of the Gods",
+            "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], nubmer of AD(2-) equal to spell power",
+            "range": "-",
+            "target": "",
+            "duration": "[INSTANT]",
+            "description": "For your next [SPELL ABILITY] that you cast, that heals you can maximize all dice heal a target."
+        },
+        {
+            "name": "Rejuvination",
+            "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 2" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP], 2 AD(1)",
+            "range": "6m",
+            "target": "one ally that is [UNCONCIOUS]",
+            "duration": "[INSTANT]",
+            "description": "You can target one ally within 6m that is [UNCONCIOUS]. That ally regains 1 [HP] and can immediatly stand up if they are able to move."
+        },
+        {
+            "name": "Holy Fire",
+            "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 2" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP], 3 AD(1)",
+            "range": "9m",
+            "target": "evil creatures with range",
+            "duration": "[INSTANT]",
+            "description": "You unleash a holy flame that deals holy damage to all evil creatures within range. Make a [SPI] [SPELLCASTING TEST] against the creature’s [DODGE] . On a success the damage is equal to a number of d8s equalt to your [LEVEL] [HALF]."
+        },
+        {
+            "name": "Unholy Strike",
+            "tags": [ "Class Technique (Priest, Evil)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 2 AD(4+)",
+            "range": "-",
+            "target": "self",
+            "duration": "[INSTANT]",
+            "description": "When you hit a target with a [MELEE MARTIAL ATTACK] or a [RANGED MARTIAL ATTACK] you can deal 2d6 extra unholy damage. For every additional AD(4+) used, you can increase the unholy damage by a further d6."
+        },
+        {
+            "name": "Unholy Fire",
+            "tags": [ "Class Technique (Priest, Evil)", "[SPELL ABILITY] 2" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP], 3 AD(6)",
+            "range": "12m",
+            "target": "[SPHERE] 3m",
+            "duration": "[INSTANT]",
+            "description": "You unleash an unholy flame that deals unholy damage to all creatures within range. Make a [SPI] [SPELLCASTING TEST] against the creature’s [DODGE]. On a success the damage is equal to a number of d8s equalt to your [LEVEL] [HALF]."
+        },
+        {
+            "name": "Divine Clense",
+            "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP], 2 matching AD",
+            "range": "12m",
+            "target": "1 creature",
+            "duration": "[INSTANT]",
+            "description": "You can remove one Tier I status effect affecting the Target. If that target is a hostile creature you have to succeed on a [INT] [SPELLCASTING TEST] against: 10 + Creature [LEVEL]. When this ability is used with 4 matching AD Tier 2 Status Effects can be removed, When used with 6 matching AD Tier 3 status effects can be removed."
+        },
+        {
+            "name": "Protection",
+            "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 reaction, 2 matching AD",
+            "range": "9m",
+            "target": "1 ally",
+            "duration": "[INSTANT]",
+            "description": "When an ally within 9m of the Priest recieves damage the Priest can use their reaction and reduce the damage by an amount equal to [SPI] + [LEVEL] ∗ 2."
+        },
+        {
+            "name": "Certainty",
+            "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 2 matching AD",
+            "range": "-",
+            "target": "self",
+            "duration": "[INSTANT]",
+            "description": "For the next [D20 TEST] you make during your turn, don’t roll a dice, instead it is a unmodified roll of 10. When this ability is used with 3 matching AD the roll becomes a 16 and when used with 4 matching AD the roll becomes a 20."
+        },
+        {
+            "name": "Sanctified Shackles",
+            "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP], 2 matching AD",
+            "range": "9m",
+            "target": "one creature",
+            "duration": "[SPI]/2 [ROUNDS]",
+            "description": "Make a [SPI] [SPELLCASTING TEST] against the targets [HARDNESS] or [DODGE] (target’s choice). On a success the target is [RESTRAINED] (Escape DC equal to 10 + [LEVEL] + [SPI]). When targeting a chaotic creature you have [ADVANTAGE] on the Test."
+        },
+        {
+            "name": "Unyielding",
+            "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 reaction, 3 matching AD",
+            "range": "-",
+            "target": "self",
+            "duration": "[INSTANT]",
+            "description": "When you fail a [SAVE] you can turn add your [LEVEL] to the roll."
+        },
+        {
+            "name": "Self Restoration",
+            "tags": [ "Class Technique (Priest, Chaos)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], two unique AD",
+            "range": "-",
+            "target": "self",
+            "duration": "1 [ROUND]",
+            "description": "The Cleric gains [THP] equal to [SPI] + [LEVEL] ."
+        },
+        {
+            "name": "Second Chance",
+            "tags": [ "Class Technique (Priest, Chaos)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], two 3- Aether Dice",
             "range": "-",
             "target": "",
             "duration": "",
-            "description": ""
+            "description": "After a creature made a [D20 TEST] you can use this feature and the creature must reroll the test and take the second result."
+        },
+        {
+            "name": "Blessed Cast",
+            "tags": [ "Class Technique (Priest, Chaos)", "[SPELL ABILITY] 1" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], two 3- Aether Dice",
+            "range": "-",
+            "target": "",
+            "duration": "",
+            "description": "The next spell you cast is cast as if it was cast one Spell Power higher without needing to
+expend extra [ARCANA] however if it is higher than your Spell Power Maximum you will
+still have to make a [SPELLCASTING TEST] to prevent an arcanae misshap as if you
+would upcast normally."
         }
     ]
 }
