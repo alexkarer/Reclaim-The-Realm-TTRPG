@@ -593,10 +593,10 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "0 [AP], two 3- Aether Dice",
-            "range": "-",
-            "target": "",
-            "duration": "",
+            "cost": "1 reaction, 3 unique AD",
+            "range": "6m",
+            "target": "1 creature",
+            "duration": "[INSTANT]",
             "description": "After a creature made a [D20 TEST] you can use this feature and the creature must reroll the test and take the second result."
         },
         {
@@ -608,14 +608,11 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "0 [AP], two 3- Aether Dice",
+            "cost": "0 [AP], 4 unique AD",
             "range": "-",
-            "target": "",
-            "duration": "",
-            "description": "The next spell you cast is cast as if it was cast one Spell Power higher without needing to
-expend extra [ARCANA] however if it is higher than your Spell Power Maximum you will
-still have to make a [SPELLCASTING TEST] to prevent an arcanae misshap as if you
-would upcast normally."
+            "target": "self",
+            "duration": "[INSTANT]",
+            "description": "The next spell you cast is cast as if it was cast one Spell Power higher without needing to expend extra [ARCANA] however if it is higher than your Spell Power Maximum you will still have to make a [SPELLCASTING TEST] to prevent an arcanae misshap as if you would upcast normally."
         }
     ]
 }

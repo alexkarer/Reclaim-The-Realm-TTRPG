@@ -96,6 +96,30 @@
                 "description": "Make a [MELEE MARTIAL ATTACK] against a creature using any bonuses your weapon provides. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves damage depending on your [MARTIAL DAMAGE] and relevant Weapon."
             },
             {
+                "name": "Unarmored Attack",
+                "tags": [ "Attack" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "2 [AP]",
+                "range": "[MELEE RANGE]",
+                "target": "1 creature",
+                "duration": "[INSTANT]",
+                "description": "You make a [MELEE MARTIAL ATTACK] against that target, on a hit the target recieves your light [MARTIAL DAMAGE]."
+            },
+            {
+                "name": "Improvised Missile Attack",
+                "tags": [ "Attack" ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "2 [AP]",
+                "range": "3m/6m/12m",
+                "target": "1 creature",
+                "duration": "[INSTANT]",
+                "description": "You can try and use a small object like a small rock or bottle as an improvised thrown weapon. Make a [RANGED MARTIAL ATTACK] using the following range: 3m/6m/12m. On a hit the Damage is equal to your light [MARTIAL DAMAGE]."
+            },
+            {
                 "name": "Desperate Attack",
                 "tags": [ "Melee", "Attack" ],
                 "requirements": {
@@ -106,6 +130,66 @@
                 "target": "1 creature",
                 "duration": "[INSTANT]",
                 "description": "Make a [MELEE MARTIAL ATTACK] against a creature. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves physical damage equal to your two-handed martial damage but you yourself additionally suffer half that damage and that damage can't be reduced in any way."
+            },
+            {
+                "name": "Help up",
+                "tags": [ ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "3 [AP]",
+                "range": "[MELEE RANGE]",
+                "target": "1 willing [UNCONCIOUS] creature",
+                "duration": "[INSTANT]",
+                "description": "You help that target back up, removing the unconcious or sleeping condition from the target and also helping it stand up from prone. If the target was unconcious as the result having dropped to 0 [HP] the target also has to spend 1 [STAMINA] to return to 1 [HP]."
+            },
+            {
+                "name": "Shove",
+                "tags": [ ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "2 [AP]",
+                "range": "[MELEE RANGE]",
+                "target": "1 creature",
+                "duration": "[INSTANT]",
+                "description": "You make a [STR] Martial Test against the targets [HARDNESS] or [DODGE] (targets choice) and on a success you can either choose to drop the target prone or push it away a number of meters equal to your [STR] (min 1.5m)"
+            },
+            {
+                "name": "Grapple",
+                "tags": [ ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "2 [AP]",
+                "range": "[MELEE RANGE]",
+                "target": "1 creature",
+                "duration": "-d",
+                "description": "Provided you have one free hand make a [STR] Martial Test against the Creatures [DODGE] or [HARDNESS] (targets choice), on a success that creature is now grappled by you."
+            },
+            {
+                "name": "Small environment interaction",
+                "tags": [ ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "1 [AP]",
+                "range": "[MELEE RANGE]",
+                "target": "-",
+                "duration": "[INSTANT]",
+                "description": "You make a quick interaction with the enviroment or a small object which can include the following: pick up small item, open/close a door, press a switch or pull a lever, stow and equip a weapon or item."
+            },
+            {
+                "name": "Larger environment interaction",
+                "tags": [ ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "2 [AP]",
+                "range": "[MELEE RANGE]",
+                "target": "",
+                "duration": "[INSTANT]",
+                "description": "You make a larger or more complicated interaction with the enviroment or a object which can include the following: push heavy object, pick a lock, disarm a trap."
             }
         ],
         "attack": {
