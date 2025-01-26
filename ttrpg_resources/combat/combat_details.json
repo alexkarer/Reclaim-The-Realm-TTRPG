@@ -1,7 +1,7 @@
 {
     "description": "Here are all aspects of Combat explained in more detail.",
     "assymetricCombat": "One important note in combat is that the rule system is an assymetric system while Creatures controlled by the GM follow the same rules as the Player Characters, the Player characters are always rolling except for damage and various special abilities.<br>For example if a Player Character attacks a creature they will roll for an attack and try and beat the creatures static dodge value. If they succeed they can then roll for damage and the creature will recieve the damage. Conversly if a creature controlled by the DM attacks a player they have to make a Dodge Save and on a fail the GM will roll the damage for the creature.",
-    "movement": {
+    "movementAbilities": {
         "description": "Every character and creature can move around and positon themselves in a battle using the following abilities:",
         "standardAbilities": [
             {
@@ -77,11 +77,11 @@
                 "description": "Only possible as the first ability used this [TURN]. You can engage or sustain a Run which lasts until the start of your next [TURN] brings the following changes:<ul><li>Every time you use the Move Ability you can move an additional 3m which must be in a straight line.</li><li>Every consecetive move can only alter the direction by 45° unless 3 [MP] are used for the Move used upon which the direction can be altered by 90°. Or alternativly 4 [MP] can be used to stop early.</li><li>During a Run [AP] can only be used for Dash, any other actions allow permissions by the GM, additionally someone running can't use Opportunity Attacks</li><li>While Running you recieve a +5 bonus to your [DODGE] and a -5 penalty to your [HARDNESS].</li></ul>"
             }
         ],
-        "movingOutOfMeleeRange": "Important note if you are within [MELEE RANGE] of a creature they are able to make an Opportunity Attack (see below) unless stated otherwise.",
+        "movingOutOfMeleeRange": "If you are within [MELEE RANGE] of a creature they are able to make an Opportunity Attack (see below) unless stated otherwise.",
         "forcedMovement": "Sometimes certain abilities force you character to move a certain way, this usually happens as soon as the ability was used unless stated otherwise in the ability. Such movement does not provoke Opportunity Attacks and if your movement ends or would pass through an occupied space consult Crashing into other Creatures in the Adventuring Section."
     },
-    "actions": {
-        "description": "",
+    "attackAbilities": {
+        "description": "These are abilities every character and NPC can use.",
         "standardAbilities": [
             {
                 "name": "Weapon Attack",
@@ -130,7 +130,30 @@
                 "target": "1 creature",
                 "duration": "[INSTANT]",
                 "description": "Make a [MELEE MARTIAL ATTACK] against a creature. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves physical damage equal to your two-handed martial damage but you yourself additionally suffer half that damage and that damage can't be reduced in any way."
-            },
+            }
+        ],
+        "attack": {
+            "description": "",
+            "critical hits": "mention also that when the players dodge on a 1"
+        },
+        "ranges": {
+            "description": "",
+            "meleeRange": "",
+            "weaponRange": ""
+        },
+        "target": {
+            "description": "",
+            "areaEffects": "",
+            "auraEffects": ""
+        },
+        "timingOfEffects": {
+            "instant": "Abilities with the [INSTANT] tag are not happening really instantaneously but if such an ability is used all of it's effects are resolved before any other ability can be used unless that follow up ability directly interacts with the current one.",
+            "longerDuration": ""
+        }
+    },
+    "otherAbilities": {
+        "description": "Here are all the other standard abilities every character and NPC can use.",
+        "standardAbilities": [
             {
                 "name": "Help up",
                 "tags": [ ],
@@ -191,22 +214,7 @@
                 "duration": "[INSTANT]",
                 "description": "You make a larger or more complicated interaction with the enviroment or a object which can include the following: push heavy object, pick a lock, disarm a trap."
             }
-        ],
-        "attack": {
-            "description": "",
-            "critical hits": "mention also that when the players dodge on a 1"
-        },
-        "ranges": {
-            "description": "",
-            "meleeRange": "",
-            "weaponRange": ""
-        },
-        "areaEffects": "",
-        "auraEffects": "",
-        "timingOfEffects": {
-            "instant": "Abilities with the [INSTANT] tag are not happening really instantaneously but if such an ability is used all of it's effects are resolved before any other ability can be used unless that follow up ability directly interacts with the current one.",
-            "longerDuration": ""
-        }
+        ]
     },
     "reactions": {
         "description": "",
