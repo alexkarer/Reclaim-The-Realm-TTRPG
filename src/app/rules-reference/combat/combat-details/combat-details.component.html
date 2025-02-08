@@ -4,35 +4,97 @@
     <h5 class="mb-0 mt-2">Assymetric Combat</h5>
     <app-dynamic-content [content]="combatDetails.assymetricCombat | keywordProcessor"></app-dynamic-content>
 
-    <h4 class="mb-1 mt-2">Movement</h4>
+    <h4 class="mb-1 mt-2">Movement Abilities</h4>
     <div class="mx-2">
-        <app-dynamic-content [content]="combatDetails.movement.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.movementAbilities.description | keywordProcessor"></app-dynamic-content>
 
-        <app-ability-list [abilities]="combatDetails.movement.standardAbilities"></app-ability-list>
+        <app-ability-list [abilities]="combatDetails.movementAbilities.standardAbilities"></app-ability-list>
 
         <h5 class="mb-0 mt-2">Moving out of Melee Range</h5>
-        <app-dynamic-content [content]="combatDetails.movement.movingOutOfMeleeRange| keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.movementAbilities.movingOutOfMeleeRange | keywordProcessor"></app-dynamic-content>
         <h5 class="mb-0 mt-2">Forced Movement</h5>
-        <app-dynamic-content [content]="combatDetails.movement.forcedMovement| keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.movementAbilities.forcedMovement | keywordProcessor"></app-dynamic-content>
     </div>
 
-    <h4 class="mb-1 mt-2">Actions</h4>
+    <h4 class="mb-1 mt-2">Attack Abilities</h4>
     <div class="mx-2">
-        
+        <app-dynamic-content [content]="combatDetails.attackAbilities.description | keywordProcessor"></app-dynamic-content>
+        <app-ability-list [abilities]="combatDetails.attackAbilities.standardAbilities"></app-ability-list>
     </div>
 
-    <h4 class="mb-1 mt-2">Reactions</h4>
+    <h4 class="mb-1 mt-2">Other Standard Actions</h4>
     <div class="mx-2">
-        
+        <app-dynamic-content [content]="combatDetails.otherAbilities.description | keywordProcessor"></app-dynamic-content>
+        <app-ability-list [abilities]="combatDetails.otherAbilities.standardAbilities"></app-ability-list>
     </div>
 
-    <h4 class="mb-1 mt-2">Circumstancal Bonuses</h4>
+    <h4 class="mb-1 mt-2">Reations</h4>
     <div class="mx-2">
-        
+        <app-dynamic-content [content]="combatDetails.reactions.description | keywordProcessor"></app-dynamic-content>
+        <app-ability-list [abilities]="combatDetails.reactions.standardReactions"></app-ability-list>
     </div>
 
-    <h4 class="mb-1 mt-2">Damage</h4>
+    <h4 class="mb-1 mt-2">Additional Combat Rules</h4>
     <div class="mx-2">
-        
+        <h5 class="mb-0 mt-2" ngbScrollSpyFragment="attack">Attacks</h5>
+        <p class="header-subscript">Keyword: [ATTACK]</p>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.description | keywordProcessor"></app-dynamic-content>
+        <ul>
+            @for (attackType of combatDetails.additionalCombatRules.attack.attackTypes; track $index) {
+                <li>
+                    <span class="fw-bold"><app-dynamic-content [content]="attackType.type + ': ' | keywordProcessor"></app-dynamic-content></span>
+                    <app-dynamic-content [content]="attackType.description | keywordProcessor"></app-dynamic-content>
+                </li>
+            }
+        </ul>
+        <h6 class="mb-0 mt-2">Critical Hits</h6>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.criticalsDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.criticalHitEffects | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.criticalMissEffects | keywordProcessor"></app-dynamic-content>
+
+        <h5 class="mb-0 mt-2">Damage</h5>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.damage.description | keywordProcessor"></app-dynamic-content>
+        <ol>
+            @for (damageOrder of combatDetails.additionalCombatRules.damage.damageOrder; track $index) {
+                <li>
+                    <app-dynamic-content [content]="damageOrder | keywordProcessor"></app-dynamic-content>
+                </li>
+            }
+        </ol>
+        <h6 class="mb-0 mt-2">Damage Types</h6>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.damage.damageTypes.description | keywordProcessor"></app-dynamic-content>
+        <ul>
+            @for (damageType of combatDetails.additionalCombatRules.damage.damageTypes.types; track $index) {
+                <li>
+                    <span class="fw-bold"><app-dynamic-content [content]="damageType.name + ': ' | keywordProcessor"></app-dynamic-content></span>
+                    <app-dynamic-content [content]="damageType.description | keywordProcessor"></app-dynamic-content>
+                </li>
+            }
+        </ul>
+
+        <h5 class="mb-0 mt-2">Ranges</h5>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.description | keywordProcessor"></app-dynamic-content>
+        <p class="header-subscript">Keyword: [MELEE RANGE]</p>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.meleeRange | keywordProcessor"></app-dynamic-content>
+        <p class="header-subscript">Keyword: [WEAPON RANGE]</p>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.weaponRange | keywordProcessor"></app-dynamic-content>
+
+        <h5 class="mb-0 mt-2">Targets</h5>
+
+        <h5 class="mb-0 mt-2">Duration</h5>
+
+        <h5 class="mb-0 mt-2">Circumstancal Bonuses</h5>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.description | keywordProcessor"></app-dynamic-content>
+        <h6 class="mb-0 mt-2">Cover</h6>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.cover| keywordProcessor"></app-dynamic-content>
+        <h6 class="mb-0 mt-2">Prone</h6>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.prone | keywordProcessor"></app-dynamic-content>
+        <h6 class="mb-0 mt-2">Flanking</h6>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.flanking | keywordProcessor"></app-dynamic-content>
+        <h6 class="mb-0 mt-2">Highground / Lowground</h6>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.highGrounnd | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.lowGround | keywordProcessor"></app-dynamic-content>
+        <h6 class="mb-0 mt-2">Concealment</h6>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.concealment | keywordProcessor"></app-dynamic-content>
     </div>
 </div>

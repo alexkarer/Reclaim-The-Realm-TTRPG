@@ -93,7 +93,7 @@
                 "range": "[WEAPON RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "Make a [MELEE MARTIAL ATTACK] against a creature using any bonuses your weapon provides. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves damage depending on your [MARTIAL DAMAGE] and relevant Weapon."
+                "description": "Make a [MELEE MARTIAL ATTACK] against a creature using any bonuses your weapon provides. On a hit it recieves damage depending on your [MARTIAL DAMAGE] and relevant Weapon."
             },
             {
                 "name": "Unarmored Attack",
@@ -129,27 +129,9 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "Make a [MELEE MARTIAL ATTACK] against a creature. If your [ATTACK] exceeds or matches your targets [DODGE] it recieves physical damage equal to your two-handed martial damage but you yourself additionally suffer half that damage and that damage can't be reduced in any way."
+                "description": "Make a [MELEE MARTIAL ATTACK] against a creature. On a hit it recieves physical damage equal to your two-handed martial damage but you yourself additionally suffer half that damage and that damage can't be reduced in any way."
             }
-        ],
-        "attack": {
-            "description": "",
-            "critical hits": "mention also that when the players dodge on a 1"
-        },
-        "ranges": {
-            "description": "",
-            "meleeRange": "",
-            "weaponRange": ""
-        },
-        "target": {
-            "description": "",
-            "areaEffects": "",
-            "auraEffects": ""
-        },
-        "timingOfEffects": {
-            "instant": "Abilities with the [INSTANT] tag are not happening really instantaneously but if such an ability is used all of it's effects are resolved before any other ability can be used unless that follow up ability directly interacts with the current one.",
-            "longerDuration": ""
-        }
+        ]
     },
     "otherAbilities": {
         "description": "Here are all the other standard abilities every character and NPC can use.",
@@ -213,11 +195,23 @@
                 "target": "",
                 "duration": "[INSTANT]",
                 "description": "You make a larger or more complicated interaction with the enviroment or a object which can include the following: push heavy object, pick a lock, disarm a trap."
+            },
+            {
+                "name": "Hide",
+                "tags": [ ],
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
+                },
+                "cost": "2 [AP]",
+                "range": "-",
+                "target": "[SELF]",
+                "duration": "[INSTANT]",
+                "description": "Assuming you are in cover which prevents creatures from having full visiblity on you, you can use this Ability. Make a [AGI] Stealth [SKILL TEST]. If that Test is higher than the [PER] Spot of every hostile creature that has partial visibility on you. You gain half concealment. This concealment stops as soon any creature gains full visiblity on you, you move faster than half your speed or you use any ability that reveals your presence to enemies."
             }
         ]
     },
     "reactions": {
-        "description": "",
+        "description": "Every character can use the following reactions",
         "standardReactions": [
             {
                 "name": "Opportunity Attack",
@@ -257,23 +251,68 @@
             }
         ]
     },
-    "circumstancalBonuses": {
-        "description": "",
-        "cover": "small cover: unmodified roll (25%)1-5 will always hit cover + 2 [DODGE], medium cover: unmodified roll (50%) 1-10 will always hit cover + 4 [DODGE], large cover: unmodified roll (75%) 1-15 will always hit cover + 6 [DODGE]",
-        "prone": "",
-        "flanking": "-2 dodge, -4 shield block",
-        "highGrounnd": "+2 [ATTACK]",
-        "lowGround": "-2 [ATTACK]",
-        "concealment": "see phone notes"
-    },
-    "damage": {
-        "description": "",
-        "damageOrder": "",
-        "damageTypes": {
+    "additionalCombatRules": {
+        "attack": {
+            "description": "Most offensive abilities are classified as an [ATTACK]. An [ATTACK] is a specific [D20 TEST] that targets the enemies [DODGE]. If the [ATTACK] results is equal or higher than the target's [DODGE] than that [ATTACK] is classified as a hit.",
+            "attackTypes": [
+                { "type": "[MELEE ATTACK]", "description": "An [ATTACK] that takes place in [MELEE RANGE]" },
+                { "type": "[RANGED ATTACK]", "description": "An [ATTACK] which range is limited by the ability used or weapon. Any [RANGED ATTACK] that targets a creature which is in [MELEE RANGE] with you has [DISADVANTAGE]." },
+                { "type": "[MELEE MARTIAL ATTACK]", "description": "For this [MELEE ATTACK] add the [MARTIAL LEVEL] and [AGI] of the Attacker to the Test." },
+                { "type": "[RANGED MARTIAL ATTACK]", "description": "For this [RANGED ATTACK] add the [MARTIAL LEVEL] and [PER] of the Attacker to the Test." },
+                { "type": "[MELEE SPELL ATTACK]", "description": "For this [MELEE ATTACK] add the [SPELL LEVEL] and [AGI] of the Attacker to the Test." },
+                { "type": "[RANGED SPELL ATTACK]", "description": "For this [RANGED ATTACK] add the [SPELL LEVEL] and [PER] of the Attacker to the Test." }
+            ],
+            "criticalsDescription": "Every [ATTACK] additionally has the posibility to score a Critical Hit or Critical Miss. A critical Hit is scored by rolling a natural 20 for an [ATTACK] Test, however certain abilities might enable you additional ways to score a critical hit. A Critical Miss is scored when rolling a natural 1 for an [ATTACK] Test.<br/>Additionally Player Characters recieve cricical hits when they roll a natural 1 or a critical Miss if they roll a natural 20 for a [DODGE SAVE].",
+            "criticalHitEffects": "When a critical hit is scored all damage dice can be rolled twice",
+            "criticalMissEffects": "When a critical miss is scored the [ATTACK] automatically misses."
+        },
+        "damage": {
+            "description": "When dealing damage there are various mechanics in the game which can reduce and amplify the damage you recieve. Damage is reduced/amplifierd in the following order:",
+            "damageOrder": [
+                "Damage is allocated to a target and all effects that happen when damage is allocated, happen now.",
+                "Damage is reduced by any damage resistance the target has.",
+                "Damage is reduced by any [THP] the target has.",
+                "The target recieves any remaining damage and their [HP] is reduced accordingly."
+            ],
+            "damageTypes": {
+                "description": "Damage is associated with a type unless stated otherwise. Certain damage reistances or abilites only interact with specific damage types.",
+                "types": [
+                    {"name": "Physical", "description": "Any form where you are hit/slashed/pierced by a physical object with force."},
+                    {"name": "Fire", "description": "When you come in contact with heat."},
+                    {"name": "Frost", "description": "When your body freezes."},
+                    {"name": "Corrosive", "description": "When you come in contact with Acidic substances."},
+                    {"name": "Sonic", "description": "Being subject to a sound at a dangerously high volume."},
+                    {"name": "Electric", "description": "Your body being subject to a lethal amount of electric energy."},
+                    {"name": "Poison", "description": "Your body becoming in contact or Ingesting/Inhaling poisonous substances."},
+                    {"name": "Psychic", "description": "Your mind being directly assaulted via supernatural means."},
+                    {"name": "Cosmic", "description": "Raw energy from the Aether."},
+                    {"name": "Holy", "description": "Similar to Cosmic damage, but specifically originating from the \"Good\" Realms."},
+                    {"name": "Unholy", "description": "Similar to Cosmic damage, but specifically originating from the \"Bad\" Realms."}
+                ]
+            }
+        },
+        "ranges": {
+            "description": "Usually an ability sepcifies a range which is usally listed in meters or squares which are measured from the edge of the space the ability user occupies. However there are 2 special ranges which are listed below.",
+            "meleeRange": "A creatures [MELEE RANGE] is 1.5m but it can be increased depending on the creatures [SIZE], the weapon they are wielding or other abilities.",
+            "weaponRange": "This specified that the creature can be targeted as long it is in range of a weapon you are wielding which is mostly relevant for ranged weapons."
+        },
+        "target": {
             "description": "",
-            "types": [
-    
-            ]
+            "areaEffects": "",
+            "auraEffects": ""
+        },
+        "duration": {
+            "instant": "Abilities with the [INSTANT] tag are not happening really instantaneously but if such an ability is used all of it's effects are resolved before any other ability can be used unless that follow up ability directly interacts with the current one.",
+            "longerDuration": ""
+        },
+        "circumstancalBonuses": {
+            "description": "During cobmat there are several situations where combatants can gain small advantages.",
+            "cover": "small cover: unmodified roll (25%)1-5 will always hit cover + 2 [DODGE] and shield block, medium cover: unmodified roll (50%) 1-10 will always hit cover + 4 [DODGE] and shield block, large cover: unmodified roll (75%) 1-15 will always hit cover + 6 [DODGE] and shield block",
+            "prone": "Any [MELEE ATTACK] has advantage against you. Any [MELEE ATTACK] made by you has [DISADVANTAG]. Additionally you always recieve small cover against any [RANGED ATTACK], if you already have cover, cover bonus is increased as it makes sense.",
+            "flanking": "-2 [DODGE], -4 shield block",
+            "highGrounnd": "+2 [RANGED ATTACK] when targeting a creature that is 3m below you.",
+            "lowGround": "-2 [RANGED ATTACK] when targeting a creature that is 3m above you.",
+            "concealment": "When a concealed creature is targeted by an abilitiy (aura and area effects not included) the targeter has to make a [PER] Spot Check. The [DT] is tha targets [AGI] Stealth + either 5 (half concealment) or 10 (full concealment)."
         }
     }
 }

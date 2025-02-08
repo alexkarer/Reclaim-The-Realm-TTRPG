@@ -98,6 +98,27 @@
             "target": "1 [GRAPPLED] Creature",
             "duration": "[INSTANT]",
             "description": "You can throw a creature you are grappling at a destination of your choice within range. Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] . On a success it flies a number of meters equal to twice your [STR] and on impact suffers physical damage equal to your [STR] which can’t be reduced by armor and the creature lands prone.<br>If on the way it collidse against another creature and it’s [DODGE] is less than the [MARTIAL TEST] they collide and both take the damage from the impact and the thrown creature lands within the nearest free space of the collided creature. Additionally if the collided creature’s [HARDNESS] is also less than the [MARTIAL TEST] , then that creature is also prone"
+        },
+        {
+            "name": "Charge",
+            "tags": [ "Martial Maneuver (Basic)", "Brawl", "Melee" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "3 [AP]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[TURN]",
+            "description": "You double the [MP] you have availible this round but you must spend it all on moving closer to your target. If you can manage to move within melee range of the target you can then make a Weapon Attack or Unarmored Attack against that target, if the [ATTACK] was successful it deals extra physical damage equal to the amount of meters moved.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "You triple the [MP] instead."
+            }
         }
     ],
     "leaderManeuvers": [
@@ -396,27 +417,6 @@
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can now parry any [ATTACK]."
-            }
-        },
-        {
-            "name": "Charge",
-            "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
-            "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
-            "cost": "3 [AP]",
-            "range": "-",
-            "target": "[SELF]",
-            "duration": "[TURN]",
-            "description": "You double the [MP] you have availible this round but you must spend it all on moving closer to your target. If you can manage to move within melee range of the target you can then make a Weapon [MELEE MARTIAL ATTACK] against that target, if the [ATTACK] was successful it deals extra physical damage equal to the amount of meters moved.",
-            "maneuverPush": {
-                "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "You triple the [MP] instead."
             }
         }
     ]

@@ -71,17 +71,17 @@ function keywordToContentPart(keyword: string): ContentPart {
         case 'SKILL TEST':
             return generateGenericKeyword('[SKILL TEST]', 'A Skill Test is an [ATTRIBUTE TEST] where also ranks of a Skill can be added to the bonus.', '');
         case 'ATTACK':
-            return generateGenericKeyword('[ATTACK]', 'TODO', '');
+            return generateGenericKeyword('[ATTACK]', 'TODO', 'attack');
         case 'MELEE ATTACK':
-            return generateGenericKeyword('[MELEE ATTACK]', 'TODO', '');
+            return generateGenericKeyword('[MELEE ATTACK]', 'TODO', 'attack');
         case 'RANGED ATTACK':
-            return generateGenericKeyword('[RANGED ATTACK]', 'TODO', '');
+            return generateGenericKeyword('[RANGED ATTACK]', 'TODO', 'attack');
         case 'MARTIAL TEST':
             return generateGenericKeyword('[MARTIAL TEST]', 'TODO', '');
         case 'MELEE MARTIAL ATTACK':
-            return generateGenericKeyword('[MARTIAL MEELE ATTACK]', 'TODO', '');
+            return generateGenericKeyword('[MARTIAL MEELE ATTACK]', 'TODO', 'attack');
         case 'RANGED MARTIAL ATTACK':
-            return generateGenericKeyword('[RANGED MARTIAL ATTACK]', 'TODO', '');
+            return generateGenericKeyword('[RANGED MARTIAL ATTACK]', 'TODO', 'attack');
         case 'SPELL TEST':
             return generateGenericKeyword('[SPELL TEST]', 'Tests made when casting Spells. A [SPELL TEST] is a [D20 TEST] that benefits from your [SPELL LEVEL] and an Attribute that is stated in the context.', 'spell-test');
         case 'MELEE SPELL ATTACK':
@@ -92,8 +92,6 @@ function keywordToContentPart(keyword: string): ContentPart {
             return generateGenericKeyword('[CONCENTRATION TEST]', '[SPELL TEST]. A Concentration Test determines if you can maintain focus on a spell while external factors attempt to disrupt it. A [CONCENTRATION TEST] is made by rolling a d20 and adding your Concentration Bonus, which is calculated the following way: [CON] + [SPELL LEVEL]', 'concentration-test');
         case 'SAVE':
             return generateGenericKeyword('[SAVE]', 'TODO', 'save');
-        case 'OPPORTUNITY ATTACK':
-            return generateGenericKeyword('[OPPORTUNITY ATTACK]', 'TODO', '');
         case 'EXHAUSTION':
             return generateGenericKeyword('[EXHAUSTION]', 'When characters push themselves beyond their physical limits, they suffer points of [EXHAUSTION] which grant a cumulative -1 penalty to any [D20 TEST]. If that increases beyond their limit they fall unconcious, if it increases above twice their limit they die.', 'exhaustion');
         case 'DEATHS DOOR':
@@ -137,90 +135,6 @@ function keywordToContentPart(keyword: string): ContentPart {
             return generateGenericKeyword('[SIZE]', 'Most humanoids are medium [SIZE], however certain species have different ones and certain effects might change your [SIZE]. Changing your [SIZE] affects your [STR] and [DODGE].', 'size');
         case 'XP':
             return generateGenericKeyword('[XP]', 'Experience Points. Experience is accumulated during play by adventuring, defeating Monsters, solving Quests, good role-play and other achievements the Game Master deems worth-wile.', 'xp');
-        // ********************** STATUS EFFECTS **********************
-        // TODO use the json similar to attributes
-        // TIER I Harmful Status Effects
-        case 'BANE':
-            return generateGenericKeyword('[BANE]', 'TODO', '');
-        case 'BLINDED':
-            return generateGenericKeyword('[BLINDED]', 'TODO', '');
-        case 'CHARMED':
-            return generateGenericKeyword('[CHARMED]', 'TODO', '');
-        case 'CRIPPLED':
-            return generateGenericKeyword('[CRIPPLED]', 'TODO', '');
-        case 'CURSED':
-            return generateGenericKeyword('[CURSED]', 'TODO', '');
-        case 'DAZED':
-            return generateGenericKeyword('[DAZED]', 'TODO', '');
-        case 'DEAFENED':
-            return generateGenericKeyword('[DEAFENED]', 'TODO', '');
-        case 'DISTRACTED':
-            return generateGenericKeyword('[DISTRACTED]', 'TODO', '');
-        case 'SILENCED':
-            return generateGenericKeyword('[SILENCED]', 'TODO', '');
-        case 'FRIGHTENED':
-            return generateGenericKeyword('[FRIGHTENED]', 'TODO', '');
-        case 'GRAPPLED':
-            return generateGenericKeyword('[GRAPPLED]', 'TODO', '');
-        case 'POISONED':
-            return generateGenericKeyword('[POISONED]', 'TODO', '');
-        case 'BLEEDING':
-            return generateGenericKeyword('[BLEEDING]', 'TODO', '');
-        case 'BURNING':
-            return generateGenericKeyword('[BURNING]', 'TODO', '');
-        case 'POISON':
-            return generateGenericKeyword('[POISON]', 'TODO', '');
-        case 'CORROSION':
-            return generateGenericKeyword('[CORROSION]', 'TODO', '');
-        // TIER II Harmful Status Effects
-        case 'CONFUSED':
-            return generateGenericKeyword('[CONFUSED]', 'TODO', '');
-        case 'EXPOSED':
-            return generateGenericKeyword('[EXPOSED]', 'TODO', '');
-        case 'INCAPACITATED':
-            return generateGenericKeyword('[INCAPACITATED]', 'TODO', '');
-        case 'TAUNTED':
-            return generateGenericKeyword('[TAUNTED]', 'TODO', '');
-        case 'TERRIFIED':
-            return generateGenericKeyword('[TERRIFIED]', 'TODO', '');
-        case 'HYPTNOTIZED':
-            return generateGenericKeyword('[HYPTNOTIZED]', 'TODO', '');
-        case 'STUNNED':
-            return generateGenericKeyword('[STUNNED]', 'TODO', '');
-        case 'INTOXICATED':
-            return generateGenericKeyword('[INTOXICATED]', 'TODO', '');
-        case 'RESTRAINED':
-            return generateGenericKeyword('[RESTRAINED]', 'TODO', '');
-        case 'SLOWED':
-            return generateGenericKeyword('[SLOWED]', 'TODO', '');
-        case 'SLEEPING':
-            return generateGenericKeyword('[SLEEPING]', 'TODO', '');
-        // TIER III Harmful Status Effects
-        case 'PETRIFIED':
-            return generateGenericKeyword('[PETRIFIED]', 'TODO', '');
-        case 'UNCONCIOUS':
-            return generateGenericKeyword('[UNCONCIOUS]', 'TODO', '');
-        case 'MIND-CONTROLLED':
-            return generateGenericKeyword('[MIND-CONTROLLED]', 'TODO', '');
-        // TIER I Beneficial Status Effects
-        case 'BLESS':
-            return generateGenericKeyword('[BLESS]', 'TODO', '');
-        case 'INSPIRED':
-            return generateGenericKeyword('[INSPIRED]', 'TODO', '');
-        case 'HEALING':
-            return generateGenericKeyword('[HEALING]', 'TODO', '');
-        case 'PROTECTION':
-            return generateGenericKeyword('[PROTECTION]', 'TODO', '');
-        // TIER II Beneficial Status Effects
-        case 'INVISIBLE':
-            return generateGenericKeyword('[INVISIBLE]', 'TODO', '');
-        case 'MAGIC RESISTANCE':
-            return generateGenericKeyword('[MAGIC RESISTANCE]', 'TODO', '');
-        case 'HASTED':
-            return generateGenericKeyword('[HASTED]', 'TODO', '');
-        // TIER III Beneficial Status Effects
-        case 'MAGIC IMMUNITY':
-            return generateGenericKeyword('[MAGIC IMMUNITY]', 'TODO', '');
         default:
             console.error('Unrecognized keyword: ' + keyword);
             return {type: 'text', text: ''};
