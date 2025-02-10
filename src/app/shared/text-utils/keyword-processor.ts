@@ -132,6 +132,8 @@ function getGameMechanicsContentPart(keyword: string): ContentPart | undefined {
             return generateGenericKeyword('[MARTIAL MEELE ATTACK]', 'TODO', 'attack');
         case 'RANGED MARTIAL ATTACK':
             return generateGenericKeyword('[RANGED MARTIAL ATTACK]', 'TODO', 'attack');
+        case 'SPELL CAST TEST':
+            return generateGenericKeyword('[SPELL CAST TEST]', 'Roll 2d6 + [SPELL LEVEL] and if the roll is lower than the Cast Difficulty of the Spell or double 1s, a magical mishap occurs after the spell was cast.', 'spell-test');
         case 'SPELL TEST':
             return generateGenericKeyword('[SPELL TEST]', 'Tests made when casting Spells. A [SPELL TEST] is a [D20 TEST] that benefits from your [SPELL LEVEL] and an Attribute that is stated in the context.', 'spell-test');
         case 'MELEE SPELL ATTACK':

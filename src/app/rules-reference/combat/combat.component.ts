@@ -4,13 +4,13 @@ import { DynamicContentComponent } from '../../shared/text-utils/dynamic-compone
 import { KeywordProcessorPipe } from '../../shared/text-utils/keyword-processor';
 import { CombatOverviewComponent } from "./combat-overview/combat-overview.component";
 import { CombatDetailsComponent } from "./combat-details/combat-details.component";
+import { StatusEffectsOverviewComponent } from "./status-effects-overview/status-effects-overview.component";
 import combatOverviewJson from '../../../../ttrpg_resources/combat/combat_overview.json'
-import { StatusEffectsComponent } from "./status-effects-overview/status-effects-overview.component";
 
 @Component({
   selector: 'app-combat',
   standalone: true,
-  imports: [NgbScrollSpyFragment, DynamicContentComponent, KeywordProcessorPipe, CombatOverviewComponent, CombatDetailsComponent, StatusEffectsComponent],
+  imports: [NgbScrollSpyFragment, DynamicContentComponent, KeywordProcessorPipe, CombatOverviewComponent, CombatDetailsComponent, StatusEffectsOverviewComponent],
   templateUrl: './combat.component.html',
   styleUrl: './combat.component.scss'
 })
