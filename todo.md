@@ -1,7 +1,11 @@
 TODO before playtest:
 
 **finish combat section**
-- finish status effects (check notes here)
+- finish status effects, mostly defined, needs to be displayed and added to keywords
+- 
+**magic rework**
+- see notes
+- define magical misshap tables
 
 **finsh other classes**:
 - mage todo (rework overcharge)
@@ -11,16 +15,14 @@ TODO before playtest:
 
 add character creation process with origins
 
-**magic rework**
-- see notes
-- define magical misshap tables
-
 **Equipment**
 - add rules for shields
 - other items
 - books, +1 to lore and a bigger bonus to one specific check if 1h spent to research
 
 create character sheet
+create cheet sheet
+create npc generator
 ___________________________________________________________
 Evaluation for after Playtest:
 
@@ -29,3 +31,9 @@ Evaluation for after Playtest:
 - check if game needs to be simplified
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?
+
+___________________________________________________________
+Future Ideas:
+
+**Status Effects:**
+- Taunted Condition?

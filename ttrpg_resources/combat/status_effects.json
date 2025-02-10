@@ -1,17 +1,6 @@
 {
-    // TODO: the curses (bane, cursed, exposed), maybe have BANE I be a d4, BANE II be a d8, BANE III be a d12 and have it only affect martial and spell tests.
-    // TODO: rework exposed maybe to vulnurable/weakened or smth
-    // TODO: silenced, deafened, blinded just make all tier I guess.
-    // TODO: grappled, restrained, unsure hoenstly ?
-    // TODO: crippled probably just a tier I
-    // TODO: confused, should probably be a Tier II one, just too fun not too have
-    // TODO: Taunted, should be Tier II
-    // TODO: Intoxicated, have TIer I-II for this not sutre if III is needed.
-    // TODO: slowed, not sure, maybe include in curse
-    // TODO: Petrified, would skip that one
-    "description": "",
-    "stackingStatusEffectsDescription": "Same status effects that have multiple tiers don't stack, the highest one still applies",
-    "tierOneHarmfulStatusEffectsDescription": "Minor impediment in to their actions",
+    "description": "Abilities can apply status effects on their targets which might harm, impede or empower their targets.",
+    "stackingStatusEffectsDescription": "If a creature is affected by the same status effect multiple times, the effects are applied only once but are in effect until every instance of that the effect is removed. Most status effects have multiple tiers annotated in roman numerals in the name (I, II, III), if multiple tiers of the same effect are applied to the same creature only the highest tier currently affecting the target is in effect.",
     "tierOneHarmfulStatusEffects": [
         {
             "keyword": "[STUNNED I]",
@@ -42,14 +31,58 @@
             "keyword": "[CHARMED I]",
             "summary": "Regards the charmer as an ally and won't harm them.",
             "description": "A charmed creature regards the charmer as a trusted ally and as such won't harm it in any way. The charmer has [ADVANTAGE] on any [D20 TEST] to interact socially with the creature.<br>If the charmed creature recieves damage they can repeat the [SAVE] caused them to be charmed, if there was no [SAVE] involved they must make a [DT] 10 [WILLPOWER] [SAVE]. If the charmer harms the charmed creature, they can repeat the [SAVE] with [ADVANTAGE]."
+        },
+        {
+            "keyword": "[CRIPPLED I]",
+            "summary": "Base [MP] are set to 2, Dash only grants 1 [MP].",
+            "description": "A crippled creatures base [MP] are now 2 unless they are already less. Each time a crippled creature uises the Dash ability, they only get 1 [MP]."
+        },
+        {
+            "keyword": "[CURSED I]",
+            "summary": "-1d4 on any [ATTACK] [MARTIAL TEST] or [SPELL TEST].",
+            "description": "A lightly cursed creature recieves a 1d4 penalty to any [ATTACK] [MARTIAL TEST] or [SPELL TEST] it makes."
+        },
+        {
+            "keyword": "[WEAKENED I]",
+            "summary": "Each time a creature deals damage it deals 1d6 damage less (min 1)",
+            "description": "Each time a lightly weakened creature deals damage, it deals 1d6 damage less which can't be reduced below 1."
+        },
+        {
+            "keyword": "[VULNURABLE I]",
+            "summary": "All [SAVE] characteristics are reduced by 2 or -1d4 to any [SAVE] Test",
+            "description": "A lightly vulnurable creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are reduced by 2 or any [SAVE] Test made recieves a 1d4 penalty."
+        },
+        {
+            "keyword": "[RESTRAINED I]",
+            "summary": "Can't use [MP] other than escaping, [DISADVANTAGE] on any [ATTACK] that does not target the grappler",
+            "description": "A grappled creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE SAVE] or [HARDNESS SAVE] (grappled creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] on any [ATTACK] against Targets other than the grappler."
+        },
+        {
+            "keyword": "[SILENCED]",
+            "summary": "Can't talk, can't use a [SPELL ABILITY] with verbal compoenents",
+            "description": "A slienced creature can't talk or use any [SPELL ABILITY] that has verbal components."
+        },
+        {
+            "keyword": "[DEAFENED]",
+            "summary": "can't hear, can't use a [SPELL ABILITY] with verbal compoenents ",
+            "description": "A deafened creature can't hear or use any [SPELL ABILITY] that has verbal components."
+        },
+        {
+            "keyword": "[INTOXICATED]",
+            "summary": "[WILLPOWER], [PER] and [AGI] are reduced by 5, resistant to fear.",
+            "description": "An Intoxicated creatures [WILLPOWER], [PER], [AGI] are reduced by 5, but it however recieves a +10 bonus to any [SAVE] made to resist [FRIGHTENED I-III]."
+        },
+        {
+            "keyword": "[DISTRACTED]",
+            "summary": "-2 to any [D20 TEST]. [DISADVANTAGE] on [PER] [ATTRIBUTE TEST] and penalty to passive Awareness/Investigation",
+            "description": "A distracted creature suffers a -2 penalty to any [D20 TEST] and has [DISADVANTAGE] on any [PER] [ATTRIBUTE TEST] and their passive Awareness and Investigation is halved."
         }
     ],
-    "tierTwoHarmfulStatusEffectsDescription": "Major impediment but can still act in some degree",
     "tierTwoHarmfulStatusEffects": [
         {
             "keyword": "[STUNNED II]",
-            "summary": "Can't use any [REACTION], [MP] are 0, [AP] reduced by 1 and is unable to defend themselves",
-            "description": "The affected creature is heavily stunned and can bearly act. They can't use any [REACTION], their [MP] are reduced to 0 and their [AP] are reduced by -1.<br>Additionally they are unable to properly defend themselves as such they can't use shields, their [DODGE] and [HARDNESS] are 0 and they automatically fail any [DODGE] or [HARDNESS] [SAVE]."
+            "summary": "Can't use any [REACTION], [MP] and [AP] are reduced by 2 ",
+            "description": "The affected creature is heavily stunned and can bearly act. They can't use any [REACTION], their [MP] and [AP] are reduced by 2."
         },
         {
             "keyword": "[FRIGHTENED II]",
@@ -73,15 +106,54 @@
         },
         {
             "keyword": "[CHARMED II]",
-            "summary": "TODO",
-            "description": "TODO maybe can give orders, but can only give an order as the charm starts and it won't obey suicidal or actions that goes strongly against their believes and principles."
+            "summary": "The charmed creature carries out a task given by the charmer",
+            "description": "When the charmer applies the condition, they give out a task towards the charmed creature. The charmed creature will carry out this task to the best of it's ability unless it is suicidal or goes strongly against their core values."
+        },
+        {
+            "keyword": "[CRIPPLED II]",
+            "summary": "Can't use any [MP], [DODGE] and [HARDNESS] are 0.",
+            "description": "The affected creature is heavily crippled and can't use any [MP] and is unable to properly defend itself with [DODGE] and [HARDNESS] are 0 and it automatically fails any such [SAVE]."
+        },
+        {
+            "keyword": "[CURSED II]",
+            "summary": "-1d8 on any [ATTACK] [MARTIAL TEST] or [SPELL TEST].",
+            "description": "A cursed creature recieves a 1d8 penalty to any [ATTACK] [MARTIAL TEST] or [SPELL TEST] it makes."
+        },
+        {
+            "keyword": "[WEAKENED II]",
+            "summary": "Each time a creature deals damage it only deals halve damage",
+            "description": "Each time a weakened creature deals damage, it only deals halve as much (rounded down)."
+        },
+        {
+            "keyword": "[VULNURABLE II]",
+            "summary": "All [SAVE] characteristics are reduced by 4 or -1d8 to any [SAVE] Test",
+            "description": "A vulnurable creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are reduced by 4 or any [SAVE] Test made recieves a 1d8 penalty."
+        },
+        {
+            "keyword": "[RESTRAINED II]",
+            "summary": "Can't use [MP] other than escape, [DISADVANTAGE] for any [ATTACK] and [AGI] [ATTRIBUTE TEST], [DODGE] reduced by 5. Can't use abilities or weapons requiring 2 hands.",
+            "description": "A restreained creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE SAVE] or [HARDNESS SAVE] (restrained creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] for any [ATTACK] or [AGI] [ATTRIBUTE TEST] it makes and it's [DODGE] is reduced by 5.<br>A restrained creature can’t make attacks with two-handed weapons unless they are wielded in only one hand, additionally it can’t use any [SPELL ABILITY] that has somatic components."
+        },
+        {
+            "keyword": "[BLINDED]",
+            "summary": "can't see, every enemy recieves half concealment.",
+            "description": "A blinded creature fails any [PER] [ATTRIBUTE TEST] relying on sight and any enemy is under partial concealment. If the blinded creature is additionally [DEAFENED] all enemies recieve full concealment."
+        },
+        {
+            "keyword": "[TAUNTED]",
+            "summary": "Can only target the taunter with harmful abilities",
+            "description": "A taunted creature can not use any harmful ability that targets a creature other than the Taunter and can't move further away from the Taunter."
+        },
+        {
+            "keyword": "[DEACAYING]",
+            "summary": "can't regain [HP]",
+            "description": "A decaying creature can't regain any [HP] but can still recieve [THP]"
         }
     ],
-    "tierThreeHarmfulStatusEffectsDescription": "Creatures affected by Tier III Status are usually unable to act in combat anymore",
     "tierThreeHarmfulStatusEffects": [
         {
             "keyword": "[STUNNED III]",
-            "summary": "Can't use any [REACTION], [MP] or [AP] and is unable to defend themselves",
+            "summary": "Can't use any [REACTION], [MP] or [AP]. [DODGE] and [HARDNESS] are 0.",
             "description": "The affected creature is paralyzed and unable to act anymore. They can't use any [REACTION], [MP] or [AP]<br>Additionally they are unable to properly defend themselves as such they can't use shields, their [DODGE] and [HARDNESS] are 0 and they automatically fail any [DODGE] or [HARDNESS] [SAVE]."
         },
         {
@@ -95,52 +167,135 @@
             "description": "A burning creature recieves 10d6 fire damage at the start their turn.The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 20 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
         },
         {
-            "keyword": "[BLEEDING I]",
+            "keyword": "[BLEEDING III]",
             "summary": "Recieves 12d6 damage at the start of turn, can be stopped",
             "description": "A bleeding creature recieves 12d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 20 [CON] [MEDICINE] [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
         },
         {
-            "keyword": "[POISON II]",
+            "keyword": "[POISON III]",
             "summary": "Recieves 12d6 poison damage at the start of the turn",
             "description": "A poisoned creature recieves 12d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 20 [TOUGHNESS SAVE]."
         },
         {
             "keyword": "[CHARMED III]",
             "summary": "Is completely mind controlled by the charmer and can only perform Actions commanded by the charmer",
-            "description": "The affected creature is completely mind-controlled and has to obay any commands issued by the charmer which requires no [AP] or [REACTION] from the charmer and can be done at any time.<br>If the charmer orders a suicidal command or one that strongly goes against their strongest beliefs and principles they can repeat the [SAVE] that caused them to be charmed and on a success they don't have to obey that command and the charmer must choose a different command. If there was no [SAVE] involved, the charmed creature has to make a [WILLPOWER] [SAVE]  with a [DT] determined by the GM."
+            "description": "The affected creature is completely mind-controlled and has to obay any commands issued by the charmer which requires no [AP] or [REACTION] from the charmer and can be done at any time.<br>If the charmer orders a suicidal command or one that strongly goes against their strongest beliefs and principles they can repeat the [SAVE] that caused them to be charmed and on a success they don't have to obey that command, the charmer then can't repeat that same command again. If there was no [SAVE] involved, the charmed creature has to make a [WILLPOWER] [SAVE]  with a [DT] determined by the GM."
         },
         {
             "keyword": "[UNCONCIOUS]",
             "summary": "Can't use any [REACTION], [MP] or [AP], s unnaware of their sourroundings and unable to defend themselves",
             "description": "An [UNCONCIOUS] creature can't use any [REACTION], [MP] or [AP] and is not aware of it's sourroundings as such they can't use shields, their [DODGE] and [HARDNESS] are 0 and they automatically fail any [DODGE] or [HARDNESS] [SAVE]<br>A creature that is sleeping is also [UNCONCIOUS] however a Sleeping creature will wake up as soon as it receives damage or is distrubed in other ways."
+        },
+        {
+            "keyword": "[CURSED III]",
+            "summary": "-1d12 on any [ATTACK] [MARTIAL TEST] or [SPELL TEST].",
+            "description": "A strongly cursed creature recieves a 1d12 penalty to any [ATTACK] [MARTIAL TEST] or [SPELL TEST] it makes."
+        },
+        {
+            "keyword": "[WEAKENED III]",
+            "summary": "Each time a creature deals damage it only deals 10% damage",
+            "description": "Each time the heavily weakened creature deals it deals just 10% (rounded down) of the original damage."
+        },
+        {
+            "keyword": "[VULNURABLE III]",
+            "summary": "All [SAVE] characteristics are reduced by 6 or -1d12 to any [SAVE] Test",
+            "description": "A strongly vulnurable creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are reduced by 6 or any [SAVE] Test made recieves a 1d12 penalty."
         }
     ],
-    // TODO: bless I =1d4, II =1d8, III=1d12
-    //TODO: protection I=1d4, II=1d8, III= 1d12 (take 2/4/6 for passive stuff)
-    // TODO: Invisible, should give concealment and other stuff.
-    // TODO: Haste (maybe make 1-3 tiers?)
-    // TODO: magic resistance, should be 3 tiers
-    // TODO: healing should be 3 tiers, (1d6, 3d6, 8d6)
-    // TODO: maybe some more fluffly, skill/rp based ones. Ideas: Focused: bonus tp [INT], [PER] [ATTRIBUTE TEST], Happy: bonus to [CHA] [ATTRIBUTE TEST], Strong/FeelingIt: bonus to [STR][AGI] [ATTRIBUTE TEST], should be [ADVANTAGE] and not 3 tiers. [CON], [SPI] don't need someting.
     "tierOneBeneficialStatusEffects": [
         {
-            "keyword": "[]",
-            "summary": "",
-            "description": ""
+            "keyword": "[BLESS I]",
+            "summary": "+1d4 on any [ATTACK] [MARTIAL TEST] or [SPELL TEST].",
+            "description": "A lightly blessed creature recieves a 1d4 bonus to any [ATTACK] [MARTIAL TEST] or [SPELL TEST] it makes."
+        },
+        {
+            "keyword": "[PROTECTION I]",
+            "summary": "All [SAVE] characteristics are increased by 2 or +1d4 to any [SAVE] Test",
+            "description": "A lightly protected creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are increased by 2 or any [SAVE] Test made recieves a +1d4 bonus."
+        },
+        {
+            "keyword": "[HASTE I]",
+            "summary": "+2 [MP], +2 [MP] when using Dash, +2 [DODGE], [ADVANATAGE] on [AGI] [ATTRIBUTE TEST]",
+            "description": "A quickened creature recieves a +2 bonus to their [MP] and each time they use the Dash ability thy gain an extra +2 [MP]. Additionally their [DODGE] is increased by 2 and they recieve [ADVANTAGE] for any [AGI] [ATTRIBUTE TEST]."
+        },
+        {
+            "keyword": "[MAGIC RESISTANCE I]",
+            "summary": "+4 bonus to any [SAVE] against a [SPELL ABILITY]",
+            "description": "A lighlty magic resistant creature recieves a +4 bonus to any [SAVE] made against a [SPELL ABILITY]."
+        },
+        {
+            "keyword": "[HEALING I]",
+            "summary": "heals 1d6 [HP] at the start of their turn.",
+            "description": "A lightly healing creature receives 1d6 [HP] at the start of their turn."
+        },
+        {
+            "keyword": "[INVISIBLITY I]",
+            "summary": "Recieve partial concealment and stealth bonus",
+            "description": "An occluded creature recieves partial concealment bonus against any enemy and a +5 bonus to your [STEALTH]."
+        },
+        {
+            "keyword": "[FOCUSED]",
+            "summary": "Make any [INT], [PER] [ATTRIBUTE TEST] or Tool [SKILL TEST] with [ADVANTAGE]",
+            "description": "While you are focuesed you make any [INT], [PER] [ATTRIBUTE TEST] or Tool [SKILL TEST] with [ADVANTAGE]"
         }
     ],
     "tierTwoBeneficialStatusEffects": [
         {
-            "keyword": "[]",
-            "summary": "",
-            "description": ""
+            "keyword": "[BLESS II]",
+            "summary": "+1d8 on any [ATTACK] [MARTIAL TEST] or [SPELL TEST].",
+            "description": "A blessed creature recieves a 1d8 bonus to any [ATTACK] [MARTIAL TEST] or [SPELL TEST] it makes."
+        },
+        {
+            "keyword": "[PROTECTION II]",
+            "summary": "All [SAVE] characteristics are increased by 4 or +1d8 to any [SAVE] Test",
+            "description": "A protected creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are increased by 4 or any [SAVE] Test made recieves a +1d8 bonus."
+        },
+        {
+            "keyword": "[HASTE II]",
+            "summary": "+4 [MP], +1 [AP], +4 [MP] when using Dash, +4 [DODGE], [ADVANATAGE] on [AGI] [ATTRIBUTE TEST]",
+            "description": "A quickened creature recieves a +4 bonus to their [MP], +1 extra [AP] at the start of their turn and each time they use the Dash ability thy gain an +4 [MP]. Additionally their [DODGE] is increased by 4 and they recieve [ADVANTAGE] for any [AGI] [ATTRIBUTE TEST]."
+        },
+        {
+            "keyword": "[MAGIC RESISTANCE II]",
+            "summary": "+4 bonus to any [SAVE] against a [SPELL ABILITY], only recieve half damage from a [SPELL ABILITY]",
+            "description": "A magic resistant creature recieves a +4 bonus to any [SAVE] made against a [SPELL ABILITY]. Additionally any [SPELL ABILITY] that deals damage now only deals half damage."
+        },
+        {
+            "keyword": "[HEALING II]",
+            "summary": "heals 4d6 [HP] at the start of their turn.",
+            "description": "A healing creature receives 4d6 [HP] at the start of their turn."
+        },
+        {
+            "keyword": "[INVISIBLITY II]",
+            "summary": "Recieve full concealment and stealth bonus",
+            "description": "An invisible creature recieves full concealment bonus against any enemy and a +10 bonus to your [STEALTH]."
         }
     ],
     "tierThreeBeneficialStatusEffects": [
         {
-            "keyword": "[]",
-            "summary": "",
-            "description": ""
+            "keyword": "[BLESS III]",
+            "summary": "+1d12 on any [ATTACK] [MARTIAL TEST] or [SPELL TEST].",
+            "description": "A strongly blessed creature recieves a 1d12 bonus to any [ATTACK] [MARTIAL TEST] or [SPELL TEST] it makes."
+        },
+        {
+            "keyword": "[PROTECTION III]",
+            "summary": "All [SAVE] characteristics are increased by 6 or +1d12 to any [SAVE] Test",
+            "description": "A strongly protected creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are increased by 6 or any [SAVE] Test made recieves a +1d12 bonus."
+        },
+        {
+            "keyword": "[HASTE III]",
+            "summary": "+8 [MP], +2 [AP], +8 [MP] when using Dash, +8 [DODGE], [ADVANATAGE] on [AGI] [ATTRIBUTE TEST]",
+            "description": "A quickened creature recieves a +8 bonus to their [MP], +2 extra [AP] at the start of their turn and each time they use the Dash ability thy gain an +8 [MP]. Additionally their [DODGE] is increased by 8 and they recieve [ADVANTAGE] for any [AGI] [ATTRIBUTE TEST]."
+        },
+        {
+            "keyword": "[MAGIC RESISTANCE III]",
+            "summary": "Immunity against any [SPELL ABILITY]",
+            "description": "Any [SPELL ABILITY] can't affect this creature directly. However indirect effects such as a rock being magically accelerated against the creature or a pit being created unter the creature still affect it."
+        },
+        {
+            "keyword": "[HEALING III]",
+            "summary": "heals 12d6 [HP] at the start of their turn.",
+            "description": "A strongly healing creature receives 12d6 [HP] at the start of their turn."
         }
     ]
 }

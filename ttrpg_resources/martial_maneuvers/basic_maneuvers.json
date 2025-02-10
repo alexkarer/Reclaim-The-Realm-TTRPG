@@ -61,9 +61,9 @@
             },
             "cost": "2 [AP]",
             "range": "[MELEE]",
-            "target": "1 [GRAPPLED] Creature",
+            "target": "1 Creature affected by [RESTRAINED I]",
             "duration": "[INSTANT]",
-            "description": "Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] on a success, the creature is now prone and additionally [RESTRAINED] as long as it is still [GRAPPLED]"
+            "description": "Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] on a success, the creature is now prone and [RESTRAINED II]."
         },
         {
             "name": "Meat Shield",

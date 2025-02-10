@@ -158,7 +158,7 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "You make a [STR] Martial Test against the targets [HARDNESS] or [DODGE] (targets choice) and on a success you can either choose to drop the target prone or push it away a number of meters equal to your [STR] (min 1.5m)"
+                "description": "You make a [STR] [MARTIAL TEST]  against the targets [HARDNESS] or [DODGE] (targets choice) and on a success you can either choose to drop the target prone or push it away a number of meters equal to your [STR] (min 1.5m)"
             },
             {
                 "name": "Grapple",
@@ -170,7 +170,7 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "-d",
-                "description": "Provided you have one free hand make a [STR] Martial Test against the Creatures [DODGE] or [HARDNESS] (targets choice), on a success that creature is now grappled by you."
+                "description": "Provided you have one free hand make a [STR] [MARTIAL TEST] against the Creatures [DODGE] or [HARDNESS] (targets choice), on a success that creature is now [RESTRAINED I] by you."
             },
             {
                 "name": "Small environment interaction",
@@ -206,7 +206,7 @@
                 "range": "-",
                 "target": "[SELF]",
                 "duration": "[INSTANT]",
-                "description": "Assuming you are in cover which prevents creatures from having full visiblity on you, you can use this Ability. Make a [AGI] Stealth [SKILL TEST]. If that Test is higher than the [PER] Spot of every hostile creature that has partial visibility on you. You gain half concealment. This concealment stops as soon any creature gains full visiblity on you, you move faster than half your speed or you use any ability that reveals your presence to enemies."
+                "description": "Assuming you are in cover which prevents creatures from having full visiblity on you, you can use this Ability. Make a [AGI] Stealth [SKILL TEST]. If that Test is higher than the [PER] Awareness of every hostile creature that has partial visibility on you. You gain half concealment. This concealment stops as soon any creature gains full visiblity on you, you move faster than half your speed or you use any ability that reveals your presence to enemies."
             }
         ]
     },
@@ -223,7 +223,7 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "If a creature leaves your melee range you can make a Melee [ATTACK] against them."
+                "description": "If a creature that is not under the effect of concleament leaves your melee range with a move, you can make a Melee [ATTACK] against them."
             },
             {
                 "name": "Graceful Landing",
@@ -257,10 +257,10 @@
             "attackTypes": [
                 { "type": "[MELEE ATTACK]", "description": "An [ATTACK] that takes place in [MELEE RANGE]" },
                 { "type": "[RANGED ATTACK]", "description": "An [ATTACK] which range is limited by the ability used or weapon. Any [RANGED ATTACK] that targets a creature which is in [MELEE RANGE] with you has [DISADVANTAGE]." },
-                { "type": "[MELEE MARTIAL ATTACK]", "description": "For this [MELEE ATTACK] add the [MARTIAL LEVEL] and [AGI] of the Attacker to the Test." },
-                { "type": "[RANGED MARTIAL ATTACK]", "description": "For this [RANGED ATTACK] add the [MARTIAL LEVEL] and [PER] of the Attacker to the Test." },
-                { "type": "[MELEE SPELL ATTACK]", "description": "For this [MELEE ATTACK] add the [SPELL LEVEL] and [AGI] of the Attacker to the Test." },
-                { "type": "[RANGED SPELL ATTACK]", "description": "For this [RANGED ATTACK] add the [SPELL LEVEL] and [PER] of the Attacker to the Test." }
+                { "type": "[MELEE MARTIAL ATTACK]", "description": "This is a [MELEE ATTACK] as well as a [MARTIAL TEST] and it recieves a bonus equal to the [MARTIAL LEVEL] and [AGI] of the Attacker to the Test." },
+                { "type": "[RANGED MARTIAL ATTACK]", "description": "This is a [RANGED ATTACK] as well as a [MARTIAL TEST] and it recieves a bonus equal to the [MARTIAL LEVEL] and [PER] of the Attacker to the Test." },
+                { "type": "[MELEE SPELL ATTACK]", "description": "This is a [MELEE ATTACK] as well as a [SPELL TEST] and it recieves a bonus equal to the [SPELL LEVEL] and [AGI] of the Attacker to the Test." },
+                { "type": "[RANGED SPELL ATTACK]", "description": "This is a [RANGED ATTACK] as well as a [SPELL TEST] and it recieves a bonus equal to the [SPELL LEVEL] and [PER] of the Attacker to the Test." }
             ],
             "criticalsDescription": "Every [ATTACK] additionally has the posibility to score a Critical Hit or Critical Miss. A critical Hit is scored by rolling a natural 20 for an [ATTACK] Test, however certain abilities might enable you additional ways to score a critical hit. A Critical Miss is scored when rolling a natural 1 for an [ATTACK] Test.<br/>Additionally Player Characters recieve cricical hits when they roll a natural 1 or a critical Miss if they roll a natural 20 for a [DODGE SAVE].",
             "criticalHitEffects": "When a critical hit is scored all damage dice can be rolled twice",
@@ -269,7 +269,7 @@
         "damage": {
             "description": "When dealing damage there are various mechanics in the game which can reduce and amplify the damage you recieve. Damage is reduced/amplifierd in the following order:",
             "damageOrder": [
-                "Damage is allocated to a target and all effects that happen when damage is allocated, happen now.",
+                "Damage is dealt to a target and all effects that happen when damage is dealt, happen now.",
                 "Damage is reduced by any damage resistance the target has.",
                 "Damage is reduced by any [THP] the target has.",
                 "The target recieves any remaining damage and their [HP] is reduced accordingly."
@@ -312,7 +312,7 @@
             "flanking": "-2 [DODGE], -4 shield block",
             "highGrounnd": "+2 [RANGED ATTACK] when targeting a creature that is 3m below you.",
             "lowGround": "-2 [RANGED ATTACK] when targeting a creature that is 3m above you.",
-            "concealment": "When a concealed creature is targeted by an abilitiy (aura and area effects not included) the targeter has to make a [PER] Spot Check. The [DT] is tha targets [AGI] Stealth + either 5 (half concealment) or 10 (full concealment)."
+            "concealment": "A concealed creature is a creature that is only partially or not visible to the currently acting creature. When a concealed creature is targeted by an abilitiy (aura and area effects not included) the targeter has to make a [PER] Awareness [SKILL TEST]. The [DT] is tha targets [AGI] Stealth + either 5 (partial concealment) or 15 (full concealment).<br>If a creature targets another creature it is concealed from with an [ATTACK], it recieves a +5 bonus for partial concealment or [ADVANTAGE] with a +5 bonus for full concealment."
         }
     }
 }
