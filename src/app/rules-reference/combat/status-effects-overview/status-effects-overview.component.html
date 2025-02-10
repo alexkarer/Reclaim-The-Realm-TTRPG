@@ -1,0 +1,35 @@
+<div class="mx-2">
+    <app-dynamic-content [content]="statusEffectsJson.description | keywordProcessor"></app-dynamic-content>
+    <h5 class="mb-0 mt-1">Stacking Status Effects</h5>
+    <app-dynamic-content [content]="statusEffectsJson.stackingStatusEffectsDescription | keywordProcessor"></app-dynamic-content>
+
+    <h4 class="">Tier I Harmful Status Effects</h4>
+    @for (statusEffect of statusEffectsJson.tierOneHarmfulStatusEffects; track $index) {
+        <app-status-effect [name]="statusEffect.keyword" [description]="statusEffect.description" [link]="statusEffect.link"></app-status-effect>
+    }
+
+    <h4 class="">Tier II Harmful Status Effects</h4>
+    @for (statusEffect of statusEffectsJson.tierTwoHarmfulStatusEffects; track $index) {
+        <app-status-effect [name]="statusEffect.keyword" [description]="statusEffect.description" [link]="statusEffect.link"></app-status-effect>
+    }
+
+    <h4 class="">Tier III Harmful Status Effects</h4>
+    @for (statusEffect of statusEffectsJson.tierThreeHarmfulStatusEffects; track $index) {
+        <app-status-effect [name]="statusEffect.keyword" [description]="statusEffect.description" [link]="statusEffect.link"></app-status-effect>
+    }
+
+    <h4 class="">Tier I Beneficial Status Effects</h4>
+    @for (statusEffect of statusEffectsJson.tierOneBeneficialStatusEffects; track $index) {
+        <app-status-effect [name]="statusEffect.keyword" [description]="statusEffect.description" [link]="statusEffect.link"></app-status-effect>
+    }
+
+    <h4 class="">Tier II Beneficial Status Effects</h4>
+    @for (statusEffect of statusEffectsJson.tierTwoBeneficialStatusEffects; track $index) {
+        <app-status-effect [name]="statusEffect.keyword" [description]="statusEffect.description" [link]="statusEffect.link"></app-status-effect>
+    }
+
+    <h4 class="">Tier III Beneficial Status Effects</h4>
+    @for (statusEffect of statusEffectsJson.tierThreeBeneficialStatusEffects; track $index) {
+        <app-status-effect [name]="statusEffect.keyword" [description]="statusEffect.description" [link]="statusEffect.link"></app-status-effect>
+    }
+</div>

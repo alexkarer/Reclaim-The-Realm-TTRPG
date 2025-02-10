@@ -1,7 +1,4 @@
 TODO before playtest:
-
-**finish combat section**
-- finish status effects, mostly defined, needs to be displayed and added to keywords
 - 
 **magic rework**
 - see notes
@@ -31,6 +28,12 @@ Evaluation for after Playtest:
 - check if game needs to be simplified
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?
+
+___________________________________________________________
+Cleanup:
+
+- fix some keywords
+- proper phrasing of some stuff in the combat
 
 ___________________________________________________________
 Future Ideas:

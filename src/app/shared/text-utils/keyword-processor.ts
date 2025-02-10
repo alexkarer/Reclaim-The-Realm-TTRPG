@@ -1,7 +1,15 @@
 import { Pipe, PipeTransform } from "@angular/core";
 import { Attribute, attributes } from '../../../../ttrpg_resources/character_values/attributes/attribute';
 import { ContentPart, generateGenericKeyword } from "./text-utils";
+import statusEffectsJson from '../../../../ttrpg_resources/combat/status_effects.json';
 
+let combinedStatusEffects = [...statusEffectsJson.tierOneBeneficialStatusEffects];
+combinedStatusEffects.push(...statusEffectsJson.tierOneHarmfulStatusEffects);
+combinedStatusEffects.push(...statusEffectsJson.tierTwoBeneficialStatusEffects);
+combinedStatusEffects.push(...statusEffectsJson.tierTwoHarmfulStatusEffects);
+combinedStatusEffects.push(...statusEffectsJson.tierThreeBeneficialStatusEffects);
+combinedStatusEffects.push(...statusEffectsJson.tierThreeHarmfulStatusEffects);
+;
 @Pipe({
     name: 'keywordProcessor',
     standalone: true,
@@ -41,23 +49,65 @@ export class KeywordProcessorPipe implements PipeTransform {
 }
 
 function keywordToContentPart(keyword: string): ContentPart {
+    let attributeContentPart = getAttributeContentPart(keyword);
+    if (attributeContentPart) {
+        return attributeContentPart;
+    }
+
+    let gameMechanicsContentPart = getGameMechanicsContentPart(keyword);
+    if (gameMechanicsContentPart) {
+        return gameMechanicsContentPart;
+    }
+
+    let characterValuesContentPart = getCharacterValuesContentPart(keyword);
+    if (characterValuesContentPart) {
+        return characterValuesContentPart;
+    }
+
+    // check status effects last because they have the worst performance
+    let statusEffectsContentPart = getStatusEffectsContentPart(keyword);
+    if (statusEffectsContentPart) {
+        return statusEffectsContentPart;
+    }
+
+    console.error('Unrecognized keyword: ' + keyword);
+    return {type: 'text', text: ''};
+}
+
+function getAttributeContentPart(keyword: string): ContentPart | undefined {
     switch(keyword) {
-        // ********************** ATTRIBUTES **********************
-        case 'STR':
+        case attributes[0].keyword:
             return generateAttributeKeyword(attributes[0]);
-        case 'AGI':
+        case attributes[1].keyword:
             return generateAttributeKeyword(attributes[1]);
-        case 'CON':
+        case attributes[2].keyword:
             return generateAttributeKeyword(attributes[2]);
-        case 'INT':
+        case attributes[3].keyword:
             return generateAttributeKeyword(attributes[3]);
-        case 'SPI':
+        case attributes[4].keyword:
             return generateAttributeKeyword(attributes[4]);
-        case 'PER':
+        case attributes[5].keyword:
             return generateAttributeKeyword(attributes[5]);
-        case 'CHA':
+        case attributes[6].keyword:
             return generateAttributeKeyword(attributes[6]);
-        // ********************** MECHANICS **********************
+        default:
+            return undefined;
+    }
+}
+
+function generateAttributeKeyword(attribute: Attribute): ContentPart {
+    return { 
+        type: 'keyword', 
+        component: {
+            keyword: attribute.keyword, 
+            toolTipText: attribute.shortdescription, 
+            link: attribute.name
+        }
+    };
+}
+
+function getGameMechanicsContentPart(keyword: string): ContentPart | undefined {
+    switch (keyword) {
         case 'D20 TEST':
             return generateGenericKeyword('[D20 TEST]', 'On a d20 Test you roll a d20 dice and most of a time add a number to the result which decreases or increases the result which is made against some Difficulty Threshold [DT] that has to be exceeded.', 'd20-test');
         case 'DT':
@@ -100,7 +150,13 @@ function keywordToContentPart(keyword: string): ContentPart {
             return generateGenericKeyword('[ROUND]', 'TODO', 'round');
         case 'TURN':
             return generateGenericKeyword('[TURN]', 'TODO', 'turn');
-        // ********************** CHARACTER VALUES **********************
+        default:
+            return undefined;
+    }
+}
+
+function getCharacterValuesContentPart(keyword: string): ContentPart | undefined {
+    switch(keyword) {
         case 'LEVEL':
             return generateGenericKeyword('[LEVEL]', 'Your characters current [LEVEL], it increases as your character spends time adventuring and earns [XP]. When your [LEVEL] increases your characters statistics also improve in several ways.', 'level');
         case 'MARTIAL LEVEL':
@@ -135,19 +191,14 @@ function keywordToContentPart(keyword: string): ContentPart {
             return generateGenericKeyword('[SIZE]', 'Most humanoids are medium [SIZE], however certain species have different ones and certain effects might change your [SIZE]. Changing your [SIZE] affects your [STR] and [DODGE].', 'size');
         case 'XP':
             return generateGenericKeyword('[XP]', 'Experience Points. Experience is accumulated during play by adventuring, defeating Monsters, solving Quests, good role-play and other achievements the Game Master deems worth-wile.', 'xp');
-        default:
-            console.error('Unrecognized keyword: ' + keyword);
-            return {type: 'text', text: ''};
     }
+    return undefined;
 }
 
-function generateAttributeKeyword(attribute: Attribute): ContentPart {
-    return { 
-        type: 'keyword', 
-        component: {
-            keyword: attribute.keyword, 
-            toolTipText: attribute.shortdescription, 
-            link: attribute.name
-        }
-    };
+function getStatusEffectsContentPart(keyword: string): ContentPart | undefined {
+    let foundKeywords = combinedStatusEffects.filter(effect => effect.keyword === keyword);
+    if (foundKeywords.length > 0) {
+        return generateGenericKeyword('[' + foundKeywords[0] + ']', foundKeywords[0].summary, foundKeywords[0].link);
+    }
+    return undefined;
 }
