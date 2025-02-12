@@ -1,117 +1,479 @@
 {
-    "spellsDescription": "Spells are magical phenomena that are a result of harnessing from the Aether and the Elemental Planes and manifesting it. Almost all living beings have a connection to the Outer Planes, but few are able to effectively and safely harness it. Those who are able to master spellcasting wield tremendous power with which they can shape and destroy reality.",
-    "castingSpells": {
-        "castingSpellsDescription": "Theoretically any creature can cast a spell as long as it has the [ARCANA] availible to do so which is your resource that is consumed when casting spells. There are no restrictions on what of spells you can learn or cast, however the more powerful the spell, the more [ARCANA] the spell consumes and the more can go wrong when casting.<br>The Attributes of a character also play an important roll when casting a Spell. Your [SPI] is the most important Attribute and represents the force and intensity of your spells. The other Attributes also play a role, you will still have to rely on your [CHA] when magically charming an opponent or your [INT] to create crafty Illusions.<br>Your [SPELL LEVEL] determines how expierienced and proficient you are at spellcasting which influences your [SPELL TEST] and [SPELL CAST TEST] bonus which reduces the chance of magical mishaps when casting a spell.",
-        "spellcastingTests": {
-            "spellCastTestsDescription": "In order to successfully cast a spell you have to first make a [SPELL CAST TEST]. Roll 2d6 and add your [SPELL LEVEL], if the result is higher or equal than the Cast Difficulty of the Spell, the spell is cast successfully and nothing further happens. If the result is lower thean the Cast Difficulty or you rolled double 1s, the spell is still cast successfully but afterwards a spell mishap occurs (see below).",
-            "spellTestDescription": "Certain spells require you to apply spells effectively that depends on a certain Attribute mentioned in the context. For those spells you are required to make a [SPELL TEST] which is a [D20 TEST] where you add your [SPELL LEVEL] and the relevant Attribute.",
-            "meleeSpellAttackDescription": "Certain spells require you to direct a spell towards a target in close range of you which attempts to dodge that. For these spells make a [MELEE ATTACK] and add your [AGI] + [SPELL LEVEL] to the result and that roll has to exceed the targets [DODGE]. This is also considered a [SPELL TEST].",
-            "rangedSpellAttackDescription": "Certain spells require you to hit targets with a magic projectile towards a target which attempts to dodge that. For these spells make a [RANGED ATTACK] and add your [PER] + [SPELL LEVEL] to the result and that roll has to exceed the targets [DODGE]. This is also considered a [SPELL TEST].",
-            "concentrationTestDescription": "Certain spells have the Concentration X tag listed at the spell’s duration. These spells require a lot of focus to maintain. Spells with this tag have the following properties: <ul> <li>During your turn you have to spend X AP to maintain the spell, if you don’t do this, the spell stops at the end of your turn.</li> <li>Every time you receive damage, you have to make a Concentration Test with a [DT] that is equal to 5 + half the damage received.</li> </ul> A [CONCENTRATION TEST] determines if you can maintain focus on a spell while external factors attempt to disrupt it. A [CONCENTRATION TEST] is a specialized [CON] [SPELL TEST]."
-        },
-        "magicalMishaps": {
-            "description": "TODO"
-        },
-        "upcastingSpells": {
-            "upcastingSpellsDescription": "Spells can be cast as more powerful versions of the normal version. When done so the spells [ARCANA] Cost and Spell Difficulty increase as described and the spell’s effect changes as stated in the spell itself. However this increase makes the spell more costly, difficult and dangerous when a magical mishap occurs."
-        },
-        "spellComponentsDescription": "Spells Require Components to be cast, that can be three categories. All components have to be fulfilled and can’t be replaced unless stated otherwise. Certain components require more specific things, which are stated in brackets ().",
-        "spellComponents": [
+    "elementalSpells": {
+        "pyromancySpells": [
             {
-                "name": "V - Verbal",
-                "description": "Verbal components require specific words are incantations uttered and heard. Being deafened, unable to talk or under the effect of the Silence Spell are example which prevent you from using Verbal components. The most common Verbal components are (Incantations) which are specific words uttered in a forgotten language and leave no doubt that a spell is being cast. The other common verbal component are (Prayers) which are at most sentence long prayers to a deity."
+                "name": "Fire Breath",
+                "tags": [ "Spell", "Elemental", "Pyromancy" ],
+                "components": "V (Incantation), M (Mouth, nostrils or similar)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "3 [AP], 1 [ARCANA]", "range": "-", "target": "[CONE] (4.5m)", "duration": "[INSTANT]",
+                "description": "You spray a flame in a 4.5m Cone from you, target each creature within the area with a [CON] [SPELL TEST] against the targets [DODGE] and on a success they receive 1d8 + ([SPI] / 2) * d8 fire damage [HALF].",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you deal an additional 2d8 fire damage."
             },
             {
-                "name": "S — Somatic",
-                "description": "Somatic components are gestures that need to be performed to cast a spell. They require at least one free hand that is free to do gestures, but it can hold small items or weapons, but not shields. Being restrained or not having a free hand for example when climbing prevents you from performing somatic components."
+                "name": "Ignite",
+                "tags": [ "Spell", "Elemental", "Pyromancy" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "1 [AP], 1 [ARCANA]", "range": "9m", "target": "1 creature", "duration": "[SPI] [ROUNDS]",
+                "description": "You can set the target on fire and it recieves the [BURNING I] Status Effect.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 3, the target instead suffers the [BURNING II] Status Effect and if you increase it by 6, the effect becomes [BURNING III]"
             },
             {
-                "name": "M — Material",
-                "description": "Material components are physical objects that need to be either held or somewhere present for the spell to be cast. Certain spell consume their physical components, which will be marked via an (*). Other spells require objects which have a certain value which will be stated in gc."
+                "name": "Fireball",
+                "tags": [ "Spell", "Elemental", "Pyromancy" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "4 [AP], 3 [ARCANA]", "range": "30m", "target": "[SPHERE] 3m", "duration": "[INSTANT]",
+                "description": "You launch a small fire projectile at the designated location that you can see and without amy obstructions. It then errupts in a fiery that hits all creatures within that sphere. Make an [INT] [SPELL TEST] against the creatures [DODGE] on a success they take 4d6 + [SPI] * d6 fire damage [HALF] .",
+                "spellDifficulty": 8,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the radius increases by 1.5m and the damage by 2d6."
+            }
+        ],
+        "geomancySpell": [
+            {
+                "name": "Stone Barrier",
+                "tags": [ "Spell", "Elemental", "Geomancy" ],
+                "components": "V (Incantation), S, M(nearby earth or stone)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "[REACTION], 1 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "1 [ROUND]",
+                "description": "When you are hit by an [ATTACK] you can use your [REACTION] to constact a stone barrier with [HP] equal to 5 + [SPI]. As long as the Barrier is active and has remaining [HP] any [ATTACK] that would hit you now targets the Barrier instead, if the Barrier is destroyed any excess damage spills over to the caster.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the Barrier’s [HP] is doubled"
+            },
+            {
+                "name": "Poison Touch",
+                "tags": [ "Spell", "Elemental", "Geomancy" ],
+                "components": "V (Incantation), S (Touch)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "1 creature", "duration": "2 [ROUNDS]",
+                "description": "Make a [MELEE SPELL ATTACK] against the target, on a hit if the [MELEE SPELL ATTACK] exceeds or matches the Targets [TOUGHNESS] they recieve 1d12 + ([SPI] / 2) * d12 poison damage and recieve the [WEAKENED I] status effect for the duration. [HALF]",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage is increased by 2d12."
+            }
+        ],
+        "hydromancySpells": [
+            {
+                "name": "Acid Stream",
+                "tags": [ "Spell", "Elemental", "Hydromancy" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "3 [AP], 1 [ARCANA]", "range": "-", "target": "[LINE] (9m x 1.5m)", "duration": "[INSTANT]",
+                "description": "You spray corrosive gas and liquids in a 9m long and 1.5m wide line in front of you, target each creature within the area with a [INT] [SPELL TEST] against the targets [DODGE] and on a success they take d8 + ([SPI] / 2) * d8 acid damage [HALF].",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you deal an additional 2d8 acid damage."
+            },
+            {
+                "name": "Icy Floor",
+                "tags": [ "Spell", "Elemental", "Hydromancy" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "[SPHERE] 3m", "duration": "[SPI] rounds",
+                "description": "You create a 3m sphere ice floor at the disignated location. This now counts as difficult Terrain and additionally make a [INT] [SPELL TEST] against every creature currently on the Ice Floor against their [DODGE] on a success those creatures fall prone. Additionally all creatures starting their turn on the Ice floor recieve d6 cold damage.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase, the sphere increases by 3m, the range by 6m and the damage by 2d6"
+            }
+        ],
+        "aeromancySpells": [
+            {
+                "name": "Lightning Spark",
+                "tags": [ "Spell", "Elemental", "Aeromancy" ],
+                "components": "V (Incantation), S, M (object consisting of conductive material)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "3 [AP], 1 [ARCANA]", "range": "18m", "target": "1 creature*", "duration": "[INSTANT]",
+                "description": "You conjure forth a small lightning spark that can bounce between enemies. Make a [RANGED SPELL ATTACK] against a Target within range that you can see, on a hit the target takes d10 + ([SPI] / 2) * d10 electric damage. On success you can repeat the [RANGED SPELL ATTACK] against another creature not yet targeted within 6m of the previous target, on a hit it takes 1d10 less electric damage than the previous hit. This can be repeated until a miss, no targets are left or no damage is left.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase deal an additional 2d10 initial electric damage."
+            },
+            {
+                "name": "Gust of Wind",
+                "tags": [ "Spell", "Elemental", "Aeromancy" ],
+                "components": "V (Blowing Air), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "-", "target": "[CONE] (6m)", "duration": "[INSTANT]",
+                "description": "You conjour forward a gust of wind that pushes away all enemies within a 6m cone. Make a [SPI] [SPELL TEST] against the targets [HARDNESS] if the test is successfull the targets are pushed away [SPI] m and are knocked prone.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the cone increases by 3m."
+            },
+            {
+                "name": "Fly",
+                "tags": [ "Spell", "Elemental", "Aeromancy" ],
+                "components": "S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "1 [AP], 1 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "end of current turn, [CONCENTRATION] 1",
+                "description": "You manipulate the aircurrents and the elemental energy of the air plane around you allowing you to fly. For the duration of the spell you gain fly(1.5m ∗ ([SPI] / 2)) speed.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "TODO"
             }
         ]
     },
-    "learningSpells": {
-        "learningSpellsDescription": "A character can know up to 2 + [SPELL LEVEL] + [INT]/2 (rounded down, minimum of 1) Spells at the same time and during a long rest they can swap out one spell they know for a different one they are able to learn. A character can learn any spell as long as they have training in the relevant discipline of the spell.",
-        "spellDisciplinesDescription": "Spells are categorized by disciplines that describe roughly the effect of the spell and the origin of the magical power. Characters usually can not learn spells from all disciplines, and certain features or perks might change how you interact with spells from a certain discipline. Certain spells can also have multiple disciplines, to be able to learn this spell the character must be able to learn spells of all disciplines listed in the spell.<br>Spells are split into 3 major disciplines, which are again split into different subdisciplines. If you can learn spells of a major discipline, you can then also learn spells of the corresponding subdisciplines. The same goes for effects/perks that interact with major disciplines, they also affect spells of the corresponding subdisciplines.",
-        "spellDisciplines": [
+    "cosmicSpell": {
+        "lightSpells": [
             {
-                "majorDisciplineName": "Elemental",
-                "majorDisciplineDescription": "Spells from the Elemental Discipline draw their power from the Elemental Planes. They generally deal acid, fire, cold, or lightning damage or otherwise manipulate the elements.",
-                "subDisciplines": [
-                    {
-                        "subDisciplineName": "Pyromancy",
-                        "subDisciplineDescription": "The summoning and manipulation of fire/heat and their elementals."
-                    },
-                    {
-                        "subDisciplineName": "Hydromancy",
-                        "subDisciplineDescription": "The summoning and manipulation of water/cold/acid and their elementals."
-                    },
-                    {
-                        "subDisciplineName": "Aeromancy",
-                        "subDisciplineDescription": "The summoning and manipulation of air/lightnning and their elementals"
-                    },
-                    {
-                        "subDisciplineName": "Geomancy",
-                        "subDisciplineDescription": "The summoning and manipulation of earth/stone/poison and their elementals"
-                    }
-                ]
+                "name": "Divine Bolt",
+                "tags": [ "Spell", "Cosmic", "Light" ],
+                "components": "V (Prayer), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "30m", "target": "1 target", "duration": "1 [ROUND]",
+                "description": "You shoot a bolt of divine energy at a target far away that you can see. Make a [RANGED SPELL ATTACK], on a hit the Target take d8 + ([SPI] / 2) * d8 holy damage and if the [ATTACK] exceeds the targets [TOUGHNESS] it is additionally [STUNNED I] until the start of your next turn.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage by 2d8."
             },
             {
-                "majorDisciplineName": "Cosmic",
-                "majorDisciplineDescription": "Spells from the Cosmic Discipline draw their power from Ideals, Hopes, Dreams and Fears of Mortals that is reflected in the Aether.",
-                "subDisciplines": [
-                    {
-                        "subDisciplineName": "Light",
-                        "subDisciplineDescription": "The purest and most virtious power, able to summon light and searing pillars of gold that burn the evil and the ability to summon angles and other good spirits."
-                    },
-                    {
-                        "subDisciplineName": "Restoration",
-                        "subDisciplineDescription": "The most merciful and joyful power, able to heal the most grevious wounds, and empower allies to great height"
-                    },
-                    {
-                        "subDisciplineName": "Necromancy",
-                        "subDisciplineDescription": "The most wicked and ambitious power, able to interact with souls directly, summon the dead and revive them"
-                    },
-                    {
-                        "subDisciplineName": "Shadow",
-                        "subDisciplineDescription": "The cruelest and darkest power, able to summon impenitrable darkness and create shadowfire that hurts the living."
-                    },
-                    {
-                        "subDisciplineName": "Divination",
-                        "subDisciplineDescription": "Pierce into the combined conciousness of all to find out what is, what has been or what could yet be."
-                    }
-                ]
+                "name": "Holy Light",
+                "tags": [ "Spell", "Cosmic", "Light" ],
+                "components": "V (Prayer), S, M(a small relic in your hand)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "3 [AP], 1 [ARCANA]", "range": "[AURA] 6m", "target": "[SELF]", "duration": "[SPI] rounds, [CONCENTRATION 1]",
+                "description": "You enchant an item you are holding and it shines bright light within a 6m aura and dim light up to 12m. At the time of casting make a [SPI] [SPELL TEST] against the [TOUGHNESS] of every creature within the bright light created by this spell. On a success enmies recieve ([SPI] / 2) * d6 holy damage [HALF] and are blinded [SAVE ENDS].",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can boost the bright light aura by 2m and dim light by 4m."
             },
             {
-                "majorDisciplineName": "Manipulation",
-                "majorDisciplineDescription": "Spells that interact with raw aether energy to manipulate things in realspace.",
-                "subDisciplines": [
-                    {
-                        "subDisciplineName": "Telekinesis",
-                        "subDisciplineDescription": "Channel Energy of the Aether to act on other physical objects with force."
-                    },
-                    {
-                        "subDisciplineName": "Transmutation",
-                        "subDisciplineDescription": "Through Energy of the Aether physically change other objects or creatures in various ways."
-                    },
-                    {
-                        "subDisciplineName": "Conjuration",
-                        "subDisciplineDescription": "Pull Energy from the Aether and manifast them in reality in a physical form."
-                    },
-                    {
-                        "subDisciplineName": "Illusion",
-                        "subDisciplineDescription": "Blend the Aether into reality to trick sentient beings into percieving something that is not there."
-                    },
-                    {
-                        "subDisciplineName": "Teleportation",
-                        "subDisciplineDescription": "Open pathways and travel to other places in reality or other realities through the Aether."
-                    },
-                    {
-                        "subDisciplineName": "Telepathy",
-                        "subDisciplineDescription": "Through the Aether you can act upon other minds in harmless and very harmful ways."
-                    }
-                ]
+                "name": "Shield of Faith",
+                "tags": [ "Spell", "Cosmic", "Light" ],
+                "components": "V (Prayer), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "1 [AP], 1 [ARCANA]", "range": "6m", "target": "1 friendly target", "duration": "[SPI] [ROUNDS]",
+                "description": "A translucent shield envelopes the target and it recieves [PROTECTION I] status effect..",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 3, the target instead recieves the [PROTECTION II] Status Effect and if you increase it by 6, the effect becomes [PROTECTION III]."
+            }
+        ],
+        "restorationSpells": [
+            {
+                "name": "Bless",
+                "tags": [ "Spell", "Cosmic", "Restoration" ],
+                "components": "V (Prayer), S, M (a springling of holy water)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "9m", "target": "three willing creatures", "duration": "[SPI] rounds",
+                "description": "All selected targets recieve the [BLESS I] status effect for the duration.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase an additional creature can be targeted."
+            },
+            {
+                "name": "Heal",
+                "tags": [ "Spell", "Cosmic", "Restoration" ],
+                "components": "V (Prayer), S (Touch)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "1 creature", "duration": "[INSTANT]",
+                "description": "You heal a target for 1d8 + ([SPI] / 2) * d8 . Alternatively undead creatures can be targeted by this spell with a [MELEE SPELL ATTACK] and on a success they do not heal but instead take holy damage eqal to the heal instead.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the heal increases by 2d8."
+            },
+            {
+                "name": "Cleanse",
+                "tags": [ "Spell", "Cosmic", "Restoration" ],
+                "components": "V (Prayer)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "1 [AP], 1 [ARCANA]", "range": "9m", "target": "1 target", "duration": "[INSTANT]",
+                "description": "You can remove one Tier 1 Status Effect affecting a target. Select a Status Effect affecting a target and make a [SPI] [SPELL TEST] against [DT] of the [SAVE] when the Status Effect was applied, if no [SAVE] was made, the [DT] is 10.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 3,you can choose to remove a Tier 2 Status Effect and if you increase it by 6, you can choose to remove a Tier 3 Status Effect."
+            },
+            {
+                "name": "Sanctuary",
+                "tags": [ "Spell", "Cosmic", "Restoration" ],
+                "components": "V (Prayer), S, M(holy water sprinkled on the ground)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "4 [AP], 3 [ARCANA]", "range": "6m", "target": "[SPHERE] 4.5m", "duration": "[SPI]/2 rounds, [CONCENTRATION] 1",
+                "description": "You bless the ground below you and create a 4.5m (3 square) radius sanctuary. Each allied creature (including yourself) that starts its turn in the sancutuary or eneters the area for the first time regains ([SPI]/2) * d6 [HP] and each evil enemy creature that starts its turn there or enters it for the first time recieves ([SPI]/2) * d6 holy damage.",
+                "spellDifficulty": 8,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and increase the damage/heal by 1d6 and the duration by 1 [ROUND]."
+            }
+        ],
+        "necromancySpell": [
+            {
+                "name": "Create Undead Servant",
+                "tags": [ "Spell", "Cosmic", "Necromancy" ],
+                "components": "V (Prayer), S, M(A nearby corpse or bone remnants)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "10 minutes, 1 [ARCANA]", "range": "3m", "target": "Corpse of a creature up to [LEVEL] 1", "duration": "24 hours",
+                "description": "You conduct an unholy Ritual binding the soul of the former inhabitant of the corpse. The corpse or skeleton becomes animate and obeys your commands. Depending on the spirit of the inhabitant they retain more of their personality. You can control an amount of undead equal to your [INT] at the same time. If the undead is reduced to 0 [HP] the spell ends early. After 24 hours the Corpse or Bones return to their former state unless you cast the spell again.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target corpses of creatures one [LEVEL] higher."
+            },
+            {
+                "name": "Curse",
+                "tags": [ "Spell", "Cosmic", "Necromancy" ],
+                "components": "V (Curse)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "1 [AP], 1 [ARCANA]", "range": "9m", "target": "1 creature", "duration": "[SPI] rounds",
+                "description": "You target a creature’s soul with a curse that you can see. Make a [SPI] [SPELL TEST] against the targets [WILLPOWER] and on success it sufferes one of the following effects of your choice: [CURSED I], [FRIGHTENED I], [WEAKENED I], [VULNURABLE I], [DEAFENED], [SILENCED]. On a fail the target is affected for just 1 [ROUND].",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target an additional unit"
+            }
+        ],
+        "shadowSpell": [
+            {
+                "name": "Unholy Pyre",
+                "tags": [ "Spell", "Cosmic", "Shadow" ],
+                "components": "V (Prayer), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "3 [AP], 1 [ARCANA]", "range": "12m", "target": "[SPHERE] 1.5m", "duration": "[INSTANT]",
+                "description": "You summon an unholy pyre from the Aether damaging the creatures in the Area. Make a [INT] [SPELL TEST] against all targets within the sphere against the targets [DODGE] and on a success they receive 1d8 + ([SPI]/2) * d8 unholy damage [HALF]",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can deal an additional 2d8 damage."
+            },
+            {
+                "name": "Darkness",
+                "tags": [ "Spell", "Cosmic", "Shadow" ],
+                "components": "V (Curse)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "15m", "target": "[SPHERE] 4.5m", "duration": "[SPI] rounds, [CONCENTRATION] 0",
+                "description": "You summon dark energy from the Aether and engulf ta 4.5m sphere in complete darkness. Only magical light of a higher spell power than this can illuminate this area and even creatures with darkvision can not see in this area.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increases the sphere is enlarged by 1.5m and the duration is lengthed by 10 minutes."
+            }
+        ],
+        "divinationSpell": [
+            {
+                "name": "Hindsight",
+                "tags": [ "Spell", "Cosmic", "Divination" ],
+                "components": "V (warning)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "[REACTION], 1 [ARCANA]", "range": "4.5m", "target": "1 friendly creature", "duration": "[INSTANT]",
+                "description": "If a friendly creature fails an [ATTRIBUTE TEST], you foresee the failure before it happens and can give the creature magically the benefit of hindsight and the creature gets a bonus to the [ATTRIBUTE TEST] equal to your [SPI].",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 3, you can use it also for an [ATTACK], [MARTIAL TEST] or [SPELL TEST] and if you increase it by 6, you can also use it for a [D20 TEST]."
+            },
+            {
+                "name": "The Die is Cast",
+                "tags": [ "Spell", "Cosmic", "Divination" ],
+                "components": "V (Prayer), S, M(dice)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "1 minute, 1 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "24 hours",
+                "description": "You attempt to divine the near future and manipulate it. Roll a d20 and remember the result, at any point during the duration of the spell when you have to make a [D20 TEST] you can use this result instead. You can only benefit from one instance of this spell at a time.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase you can roll one additional d20 per spell power."
+            }
+        ]
+    },
+    "manipulationSpells": {
+        "telekinesisSpells": [
+            {
+                "name": "Telekinetic move",
+                "tags": [ "Spell", "Manipulation", "Telekinesis" ],
+                "components": "S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "1 [AP], 1 [ARCANA]", "range": "12m", "target": "one target", "duration": "up to [SPI] rounds, [CONCENTRATION] 1",
+                "description": "You can select one object or creature that you can see weighing up to [SPI] ∗ 20 kg and magically move it, you have the following options: <ul><li>Push/Pull: You can move the target up to a distance of 2 ∗ [SPI] meters in any direction. If you target an unwilling creature or an item held by a creature you have to make a [SPI] [SPELL TEST] against the creatures [HARDNESS] , on a success you move the creature or the item it is holding is freed from the creature’s grasp. Afterwards the spell ends.</li> <li>Hover: Alternatively you can make the target hover in the air and move it [SPI] / 2 meters in any direction. While doing this for the duration of the spell each turn you can move the object again, when the spell ends the target is effected by gravity and other forces as normal. If the target is an unwilling creature you have to succeed on a [SPI] [SPELL TEST] against the creatures [HARDNESS] , when you fail the spell ends.</li></ul>",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the maximum object weight is doubled and the range increases by 3m."
+            },
+            {
+                "name": "Telekinetic crush",
+                "tags": [ "Spell", "Manipulation", "Telekinesis" ],
+                "components": "S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one target", "duration": "([SPI] / 2) rounds, [CONCENTRATION] 1",
+                "description": "You target one object or creature that you can see and restrain it. Make a [SPI] [SPELL TEST] against the targets [HARDNESS] on a success the target is restrained. Additionally you when you cast it and every following following turn the spell is still active you can deal ([SPI]/2) * d6 physical damage that can’t be reduced by armor.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target an additional creature"
+            }
+        ],
+        "transmutationSpells": [
+            {
+                "name": "Mutate",
+                "tags": [ "Spell", "Manipulation", "Transmutation" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "3 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "one willing creature", "duration": "10 minutes",
+                "description": "You cause a minor mutation within a creature and can grant them one of the following benefits: <ul><li>Quicken: Their limbs change to be more agile: the creature’s [MP] are increasd by 1 + ([SPI]/2)</li> <li>Natural armor: The target’s skin becomes harder and grows more layers to protect it and it grants physical damage resistance equal to [SPI]. Does not stack with physical damage resistance granted by other armor and is treated as armor for all other effects.</li></ul>",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target one additional creature and the range increases by 1.5m"
+            }
+        ],
+        "conjurationSpells": [
+            {
+                "name": "Magic Missiles",
+                "tags": [ "Spell", "Manipulation", "Conjuration" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "15m", "target": "one or multiple creatures", "duration": "[INSTANT]",
+                "description": "You create 3 magical darts, each of these darts targets a creature within range that you can see and designate. A missile does ([SPI] / 2) 1d4 cosmic damage on impact.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase 1 additional magic dart is created."
+            },
+            {
+                "name": "Create Object",
+                "tags": [ "Spell", "Manipulation", "Conjuration" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "3 [AP], 1 [ARCANA]", "range": "3m", "target": "-", "duration": "[SPI] minutes",
+                "description": "You can create any tier 1 item of your choice that is not a consumable or something similar like food. The item has to fit in a [SPI] / 4 m Cube and it can’t be hazardous on it’s own like lava or poison but can be a sharp blade for instance. The item lasts for the duration and has a faint shimmer of the Aether to it making it appear as an obvious fake otherwise it shares the same properties. If a complicated item is created like a specific key for a keyhole or a inticrite mechanical device. The GM might call for a [INT] [SPELL TEST] depending on the difficulty and the casters knowledge.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the item level can be 1 higher and the duration is tripled."
+            }
+        ],
+        "illusionSpells": [
+            {
+                "name": "Shroud",
+                "tags": [ "Spell", "Manipulation", "Illusion" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "one creature", "duration": "[SPI] * 10 minutes [CONCENTRATION] 2",
+                "description": "The target recieves the [INVISIBLE I] status effect for the duration",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "TODO"
+            },
+            {
+                "name": "Illusary Image",
+                "tags": [ "Spell", "Manipulation", "Illusion" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "3 [AP], 1 [ARCANA]", "range": "9m", "target": "-", "duration": "[SPI] minutes [CONCENTRATION] 1",
+                "description": "You create a silent unmoving illusary image of your choice that fits in a [SPI] / 2 m Cube. Make a [INT] [SPELL TEST] if other creatures are present, if your test is higher than the other creatures passive [INT] Investigation than they percieve the Illusion as real. If they later examine the Illusion and find obvious flaws in it, then they also stop percieving the Illusion as real.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 2 you can make the image move but it can’t be further than 21m (14 squares) away from you. If increase it by 4 you can add sound to the Illusion."
+            }
+        ],
+        "teleportationSpells": [
+            {
+                "name": "Cosmic Shift",
+                "tags": [ "Spell", "Manipulation", "Teleporation" ],
+                "components": "V (Incantation)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "1 [AP], 1 [ARCANA]", "range": "3 + [SPI] m", "target": "[SELF]", "duration": "[INSTANT]",
+                "description": "You can teleport to a free space up to 3 + [SPI] m away.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the range is doubled."
+            },
+            {
+                "name": "Extradimensional Pocket",
+                "tags": [ "Spell", "Manipulation", "Teleporation" ],
+                "components": "V (Incantation), S, M (Pocket or container)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "one non living object", "duration": "-",
+                "description": "You can target one object weighing up to [SPI] ∗ 10 kg. and make it vanish into an extradimensional space. At any point you can cast this spell again and retrieve an item you have previously stored in your extradimensional pocket. Objects in the extradimensional space are perserved indefinete and do not wither or rot.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the maximum object weight is doubled."
+            }
+        ],
+        "telepathySpells": [
+            {
+                "name": "Mind Assault",
+                "tags": [ "Spell", "Manipulation", "Telepathy" ],
+                "components": "V (Scream)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one sentient creature within range", "duration": "1 [ROUND]",
+                "description": "Select one creature with an [INT] greater than -4 within range that you can see, make a [SPI] [SPELL TEST] against the creature’s [WILLPOWER]. On a success it takes d8 + ([SPI]/2) * d8 psychic damage [HALF] and recieves [STUNNED I].",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage by 2d8."
+            },
+            {
+                "name": "Suggestion",
+                "tags": [ "Spell", "Manipulation", "Telepathy" ],
+                "components": "V (Suggestion)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 1 [ARCANA]", "range": "3m", "target": "one sentient creature within range", "duration": "[SPI] rounds",
+                "description": "You make one request towards a creature with an [INT] greater than -4 within range that you can see. The request has to be a short sentence and be an action that can be completed within the Duration and does not completely go against the creatures regular course of action. Make a [CHA] [SPELL TEST] agains the targets [WILLPOWER] on a success the creature becomes charmed for the duration and completes the request, after which it feels strange about the request but is not aware that it was mind controlled by you. On a failed test the creature simply refuses.",
+                "spellDifficulty": 6,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target one additional creatures and the range increases by 1.5m"
             }
         ]
     }

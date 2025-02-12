@@ -1,10 +1,6 @@
 TODO before playtest:
 
 **magic rework**
-- when reworking spells make lots of them cost 3 AP (at least all the AOE ones)
-  - put absolute spell difficulty in parentheses where currently the spell level was
-  - rework athigherPower for all
-  - consolidate spells into 1 document
 - define magical misshap tables
 - fix casting perks, maybe for base school perks let them add to spell cast tests (base thing give you +1, specialization lets you reroll one d6)
 - fix spell search view to instead of using spell level, you can filter for ranges of 
@@ -34,6 +30,7 @@ Evaluation for after Playtest:
 - check if game needs to be simplified
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?
+- hybrid abilities necesarry?
 
 ___________________________________________________________
 Cleanup:

@@ -16,18 +16,19 @@
         @if (isSpell() || isHybridAbility()) {
             <p class="fst-italic my-0 text-body-secondary">Components: {{ getSpellComponents() }}</p>
         }
-        <p class="description my-0"><span class="fw-bold">Cost:</span> {{ ability?.cost }}</p>
-        <p class="description my-0"><span class="fw-bold">Range:</span> {{ ability?.range }}</p>
-        <p class="description my-0"><span class="fw-bold">Target(s):</span> {{ ability?.target }}</p>
-        <p class="description my-0"><span class="fw-bold">Duration:</span> {{ ability?.duration }}</p>
+        <p class="description my-0"><span class="fw-bold">Spell Difficulty:</span> {{ getSpellDifficulty() }}</p>
+        <p class="description my-0"><span class="fw-bold">Cost:</span><app-dynamic-content [content]="ability?.cost | keywordProcessor"></app-dynamic-content></p>
+        <p class="description my-0"><span class="fw-bold">Range:</span><app-dynamic-content [content]="ability?.range | keywordProcessor"></app-dynamic-content></p>
+        <p class="description my-0"><span class="fw-bold">Target(s):</span><app-dynamic-content [content]="ability?.target | keywordProcessor"></app-dynamic-content></p>
+        <p class="description my-0"><span class="fw-bold">Duration:</span><app-dynamic-content [content]="ability?.duration | keywordProcessor"></app-dynamic-content></p>
         <app-dynamic-content [content]="ability?.description | keywordProcessor"></app-dynamic-content>
         @if (isMartialManeuverAndHasPush()) {
             <p class="description mt-2 mb-0"><span class="fw-bold">Pushing extra cost:</span> {{ getPushingExtraCost() }}</p>
             <app-dynamic-content [content]="getPushingDescription() | keywordProcessor"></app-dynamic-content>
         }
-        @if (isSpellAndHasAtHigherSpellPower()) {
-            <p class="fst-italic mb-0">At higher Spell Power:</p>
-            <app-dynamic-content [content]="getAtHigherSpellPower() | keywordProcessor"></app-dynamic-content>
+        @if (isSpellAndHasUpcastingTheSpell()) {
+            <p class="fst-italic mb-0 text-light">Upcasting the Spell</p>
+            <app-dynamic-content [content]="getUpcastingTheSpell() | keywordProcessor"></app-dynamic-content>
         }
     </div>
 </div>

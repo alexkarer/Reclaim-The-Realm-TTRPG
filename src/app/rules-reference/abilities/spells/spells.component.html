@@ -1,54 +1,52 @@
 <div class="mx-2">
-    <app-dynamic-content [content]="spellsJson.spellsDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="spellRulesJson.spellsDescription | keywordProcessor"></app-dynamic-content>
     <h3 class="mb-1 mt-3">Casting Spells</h3>
     <div class="mx-2">
-        <app-dynamic-content [content]="spellsJson.castingSpells.castingSpellsDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="spellRulesJson.castingSpells.castingSpellsDescription | keywordProcessor"></app-dynamic-content>
 
-        <h4 class="mb-0 mt-3">Spell Tests</h4>
-        <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.spellCastTestsDescription | keywordProcessor"></app-dynamic-content>
-            
+        <h4 class="mb-0 mt-3">Spellcasting Tests</h4>
         <div class="row">
             <div class="col-6">
                 <div class ="p-2 border bg-body-tertiary mt-3">
                     <h5 class="mb-0" ngbScrollSpyFragment="spell-test">Spell Cast Test</h5>
                     <p class="header-subscript">Keyword: [SPELL CAST TEST]</p>
-                    <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.spellCastTestsDescription | keywordProcessor"></app-dynamic-content>
+                    <app-dynamic-content [content]="spellRulesJson.castingSpells.spellcastingTests.spellCastTestsDescription | keywordProcessor"></app-dynamic-content>
                 </div>
                 <div class ="p-2 border bg-body-tertiary mt-3">
                     <h5 class="mb-0" ngbScrollSpyFragment="spell-test">Spell Test</h5>
                     <p class="header-subscript">Keyword: [SPELL TEST]</p>
-                    <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.spellTestDescription | keywordProcessor"></app-dynamic-content>
+                    <app-dynamic-content [content]="spellRulesJson.castingSpells.spellcastingTests.spellTestDescription | keywordProcessor"></app-dynamic-content>
                 </div>
                 <div class ="p-2 border bg-body-tertiary mt-3">
                     <h5 class="mb-0" ngbScrollSpyFragment="melee-spell-attack">Melee Spell Attack</h5>
                     <p class="header-subscript">Keyword: [MELEE SPELL ATTACK]</p>
-                    <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.meleeSpellAttackDescription | keywordProcessor"></app-dynamic-content>
+                    <app-dynamic-content [content]="spellRulesJson.castingSpells.spellcastingTests.meleeSpellAttackDescription | keywordProcessor"></app-dynamic-content>
                 </div>
             </div>
             <div class="col-6">
                 <div class ="p-2 border bg-body-tertiary mt-3">
                     <h5 class="mb-0" ngbScrollSpyFragment="ranged-spell-attack">Ranged Spell Attack</h5>
                     <p class="header-subscript">Keyword: [RANGED SPELL ATTACK]</p>
-                    <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.rangedSpellAttackDescription | keywordProcessor"></app-dynamic-content>
+                    <app-dynamic-content [content]="spellRulesJson.castingSpells.spellcastingTests.rangedSpellAttackDescription | keywordProcessor"></app-dynamic-content>
                 </div>
                 <div class ="p-2 border bg-body-tertiary mt-3">
                     <h5 class="mb-0" ngbScrollSpyFragment="concentration-test">Concentration Test</h5>
                     <p class="header-subscript">Keyword: [CONCENTRATION TEST]</p>
-                    <app-dynamic-content [content]="spellsJson.castingSpells.spellcastingTests.concentrationTestDescription | keywordProcessor"></app-dynamic-content>
+                    <app-dynamic-content [content]="spellRulesJson.castingSpells.spellcastingTests.concentrationTestDescription | keywordProcessor"></app-dynamic-content>
                 </div>
             </div>
         </div>
 
         <h4 class="mb-2 mt-3">Magical Mishaps</h4>
-        <app-dynamic-content [content]="spellsJson.castingSpells.magicalMishaps.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="spellRulesJson.castingSpells.magicalMishaps.description | keywordProcessor"></app-dynamic-content>
 
         <h4 class="mb-2 mt-3">Upcasting Spells</h4>
-        <app-dynamic-content [content]="spellsJson.castingSpells.upcastingSpells.upcastingSpellsDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="spellRulesJson.castingSpells.upcastingSpells.upcastingSpellsDescription | keywordProcessor"></app-dynamic-content>
 
         <h4 class="mb-2 mt-3">Spell Components</h4>
-        <app-dynamic-content [content]="spellsJson.castingSpells.spellComponentsDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="spellRulesJson.castingSpells.spellComponentsDescription | keywordProcessor"></app-dynamic-content>
         <div class="row gx-4 mt-3">
-            @for (component of spellsJson.castingSpells.spellComponents; track $index) {
+            @for (component of spellRulesJson.castingSpells.spellComponents; track $index) {
                 <div class ="col">
                     <div class=" p-2 border bg-body-secondary text-center">
                         <h5>{{ component.name }}</h5>
@@ -61,12 +59,12 @@
 
     <h3 class="mb-1 mt-3">Learning Spells</h3>
     <div class="mx-2">
-        <app-dynamic-content [content]="spellsJson.learningSpells.learningSpellsDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="spellRulesJson.learningSpells.learningSpellsDescription | keywordProcessor"></app-dynamic-content>
 
         <h4 class="mb-2 mt-3">Spell Disciplines</h4>
-        <app-dynamic-content [content]="spellsJson.learningSpells.spellDisciplinesDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="spellRulesJson.learningSpells.spellDisciplinesDescription | keywordProcessor"></app-dynamic-content>
         <div class="row gx-4 mt-3">
-            @for (spellDiscipline of spellsJson.learningSpells.spellDisciplines; track $index) {
+            @for (spellDiscipline of spellRulesJson.learningSpells.spellDisciplines; track $index) {
                 <div class ="col">
                     <div class=" p-2 border bg-body-secondary text-center">
                         <h5>{{ spellDiscipline.majorDisciplineName }}</h5>

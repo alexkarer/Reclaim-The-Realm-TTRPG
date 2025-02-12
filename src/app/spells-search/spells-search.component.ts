@@ -109,7 +109,7 @@ export class SpellsSearchComponent {
     return spell.name.toLocaleLowerCase().includes(text) || 
       spell.tags.find(tag => tag.toLocaleLowerCase().includes(text)) !== undefined ||
       spell.description.toLocaleLowerCase().includes(text) ||
-      spell.atHigherSpellPower?.toLowerCase().includes(text);
+      spell.upCastingTheSpell?.toLowerCase().includes(text);
   }
 }
 

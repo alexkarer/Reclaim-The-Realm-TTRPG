@@ -1,18 +1,14 @@
 import { Ability } from '../shared/Ability';
 
-import firstPowerSpellsJson from './1st_power_spells.json'
-import secondPowerSpellsJson from './2nd_power_spells.json'
-import thirdPowerSpellsJson from './3rd_power_spells.json'
-import fourthPowerSpellsJson from './4th_power_spells.json'
-import fifthPowerSpellsJson from './5th_power_spells.json'
-import sixthPowerSpellsJson from './6th_power_spells.json'
+import JsonSpellList from './spells.json'
 
-type JsonSpells = typeof firstPowerSpellsJson | typeof secondPowerSpellsJson | typeof thirdPowerSpellsJson | typeof fourthPowerSpellsJson | typeof fifthPowerSpellsJson | typeof sixthPowerSpellsJson;
-type JsonSpell = typeof firstPowerSpellsJson.elementalSpells.pyromancySpells[0] | typeof secondPowerSpellsJson.elementalSpells.pyromancySpells[0] | typeof thirdPowerSpellsJson.elementalSpells.pyromancySpells[0] | typeof fourthPowerSpellsJson.elementalSpells.pyromancySpells[0] | typeof fifthPowerSpellsJson.elementalSpells.pyromancySpells[0] | typeof sixthPowerSpellsJson.elementalSpells.pyromancySpells[0];
+type JsonSpells = typeof JsonSpellList;
+type JsonSpell = typeof JsonSpellList.elementalSpells.pyromancySpells[0];
 
 export class Spell extends Ability {
     components?: string
-    atHigherSpellPower?: string
+    spellDifficulty?: number
+    upCastingTheSpell?: string
 }
 
 export type SpellCollection = {
@@ -21,14 +17,7 @@ export type SpellCollection = {
     manipulationSpells: Spell[]
 }
 
-export const firstPowerSpells: SpellCollection = mapToSpellCollection(firstPowerSpellsJson);
-export const secondPowerSpells: SpellCollection = mapToSpellCollection(secondPowerSpellsJson);
-export const thirdPowerSpells: SpellCollection = mapToSpellCollection(thirdPowerSpellsJson);
-export const fourthPowerSpells: SpellCollection = mapToSpellCollection(fourthPowerSpellsJson);
-export const fifthPowerSpells: SpellCollection = mapToSpellCollection(fifthPowerSpellsJson);
-export const sixthPowerSpells: SpellCollection = mapToSpellCollection(sixthPowerSpellsJson);
-
-export const allSpells = [...collectionToList(firstPowerSpells), ...collectionToList(secondPowerSpells), ...collectionToList(thirdPowerSpells), ...collectionToList(fourthPowerSpells), ...collectionToList(fifthPowerSpells), ...collectionToList(sixthPowerSpells)];
+export const allSpells = [...mapToSpellCollection(JsonSpellList).elementalSpells, ...mapToSpellCollection(JsonSpellList).cosmicSpells, ...mapToSpellCollection(JsonSpellList).manipulationSpells];
 
 function mapToSpellCollection(jsonSpells: JsonSpells): SpellCollection {
     return {
@@ -67,14 +56,7 @@ function mapToSpell(jsonSpell: JsonSpell): Spell {
     spell.duration = jsonSpell.duration;
     spell.description = jsonSpell.description;
     spell.components = jsonSpell.components;
-    spell.atHigherSpellPower = jsonSpell.atHigherSpellPower;
+    spell.spellDifficulty = jsonSpell.spellDifficulty;
+    spell.upCastingTheSpell = jsonSpell.upCastingTheSpell;
     return spell;
-}
-
-function collectionToList(collection: SpellCollection): Spell[] {
-    let spellList: Spell[] = [];
-    spellList.push(...collection.cosmicSpells);
-    spellList.push(...collection.elementalSpells);
-    spellList.push(...collection.manipulationSpells);
-    return spellList;
 }

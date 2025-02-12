@@ -50,17 +50,22 @@ export class AbilityListItemComponent {
     return spell.components ?? '-';
   }
 
-  public isSpellAndHasAtHigherSpellPower(): boolean {
+  public isSpellAndHasUpcastingTheSpell(): boolean {
     if (this.ability instanceof Spell) {
-      return this.ability.atHigherSpellPower ? true : false
+      return this.ability.upCastingTheSpell ? true : false
     } else {
       return false;
     }
   }
 
-  public getAtHigherSpellPower(): string {
+  public getUpcastingTheSpell(): string {
     let spell = this.ability as Spell;
-    return spell.atHigherSpellPower ?? '';
+    return spell.upCastingTheSpell ?? '';
+  }
+
+  public getSpellDifficulty(): number {
+    let spell = this.ability as Spell;
+    return spell.spellDifficulty ?? -1;
   }
 
   public isHybridAbility(): boolean {
