@@ -10,9 +10,9 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "-", "target": "[CONE] (4.5m)", "duration": "[INSTANT]",
-                "description": "You spray a flame in a 4.5m Cone from you, target each creature within the area with a [CON] [SPELL TEST] against the targets [DODGE] and on a success they receive 1d8 + ([SPI] / 2) * d8 fire damage [HALF].",
+                "description": "You spray a flame in a 4.5m Cone from you, target each creature within the area with a [CON] [SPELL TEST] against the targets [DODGE] and on a success they receive 2d8 + ([SPI] / 4) * d8 fire damage [HALF].",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you deal an additional 2d8 fire damage."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you deal an additional 1d8 + ([SPI] / 4) * d8 fire damage."
             },
             {
                 "name": "Ignite",
@@ -38,7 +38,7 @@
                 "cost": "4 [AP], 3 [ARCANA]", "range": "30m", "target": "[SPHERE] 3m", "duration": "[INSTANT]",
                 "description": "You launch a small fire projectile at the designated location that you can see and without amy obstructions. It then errupts in a fiery that hits all creatures within that sphere. Make an [INT] [SPELL TEST] against the creatures [DODGE] on a success they take 4d6 + [SPI] * d6 fire damage [HALF] .",
                 "spellDifficulty": 8,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the radius increases by 1.5m and the damage by 2d6."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the radius increases by 1.5m and the damage by 2d6 + ([SPI] / 4) * d6."
             }
         ],
         "geomancySpell": [
@@ -47,7 +47,7 @@
                 "tags": [ "Spell", "Elemental", "Geomancy" ],
                 "components": "V (Incantation), S, M(nearby earth or stone)",
                 "requirements": {
-                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "[REACTION], 1 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "1 [ROUND]",
@@ -64,9 +64,9 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "1 creature", "duration": "2 [ROUNDS]",
-                "description": "Make a [MELEE SPELL ATTACK] against the target, on a hit if the [MELEE SPELL ATTACK] exceeds or matches the Targets [TOUGHNESS] they recieve 1d12 + ([SPI] / 2) * d12 poison damage and recieve the [WEAKENED I] status effect for the duration. [HALF]",
+                "description": "Make a [MELEE SPELL ATTACK] against the target, on a hit if the [MELEE SPELL ATTACK] exceeds or matches the Targets [TOUGHNESS] they recieve 2d12 + ([SPI] / 4) * d12 poison damage and recieve the [WEAKENED I] status effect for the duration. [HALF]",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage is increased by 2d12."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage is increased by  1d12 + ([SPI] / 4) * d12."
             }
         ],
         "hydromancySpells": [
@@ -79,9 +79,9 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "-", "target": "[LINE] (9m x 1.5m)", "duration": "[INSTANT]",
-                "description": "You spray corrosive gas and liquids in a 9m long and 1.5m wide line in front of you, target each creature within the area with a [INT] [SPELL TEST] against the targets [DODGE] and on a success they take d8 + ([SPI] / 2) * d8 acid damage [HALF].",
+                "description": "You spray corrosive gas and liquids in a 9m long and 1.5m wide line in front of you, target each creature within the area with a [INT] [SPELL TEST] against the targets [DODGE] and on a success they take 2d8 + ([SPI] / 4) * d8 acid damage [HALF].",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you deal an additional 2d8 acid damage."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you deal an additional 1d8 + ([SPI] / 4) * d8 acid damage."
             },
             {
                 "name": "Icy Floor",
@@ -107,9 +107,9 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "18m", "target": "1 creature*", "duration": "[INSTANT]",
-                "description": "You conjure forth a small lightning spark that can bounce between enemies. Make a [RANGED SPELL ATTACK] against a Target within range that you can see, on a hit the target takes d10 + ([SPI] / 2) * d10 electric damage. On success you can repeat the [RANGED SPELL ATTACK] against another creature not yet targeted within 6m of the previous target, on a hit it takes 1d10 less electric damage than the previous hit. This can be repeated until a miss, no targets are left or no damage is left.",
+                "description": "You conjure forth a small lightning spark that can bounce between enemies. Make a [RANGED SPELL ATTACK] against a Target within range that you can see, on a hit the target takes 2d10 + ([SPI] / 4) * d10 electric damage. On success you can repeat the [RANGED SPELL ATTACK] against another creature not yet targeted within 6m of the previous target, on a hit it takes 1d10 less electric damage than the previous hit. This can be repeated until a miss, no targets are left or no damage is left.",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase deal an additional 2d10 initial electric damage."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase deal an additional 1d10 + ([SPI] / 4) * d10 initial electric damage."
             },
             {
                 "name": "Gust of Wind",
@@ -150,9 +150,9 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "30m", "target": "1 target", "duration": "1 [ROUND]",
-                "description": "You shoot a bolt of divine energy at a target far away that you can see. Make a [RANGED SPELL ATTACK], on a hit the Target take d8 + ([SPI] / 2) * d8 holy damage and if the [ATTACK] exceeds the targets [TOUGHNESS] it is additionally [STUNNED I] until the start of your next turn.",
+                "description": "You shoot a bolt of divine energy at a target far away that you can see. Make a [RANGED SPELL ATTACK], on a hit the Target take 2d8 + ([SPI] / 4) * d8 holy damage and if the [ATTACK] exceeds the targets [TOUGHNESS] it is additionally [STUNNED I] until the start of your next turn.",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage by 2d8."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage by 1d8 + ([SPI] / 4) * d8."
             },
             {
                 "name": "Holy Light",
@@ -204,9 +204,9 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "1 creature", "duration": "[INSTANT]",
-                "description": "You heal a target for 1d8 + ([SPI] / 2) * d8 . Alternatively undead creatures can be targeted by this spell with a [MELEE SPELL ATTACK] and on a success they do not heal but instead take holy damage eqal to the heal instead.",
+                "description": "You heal a target for 2d8 + ([SPI] / 4) * d8 . Alternatively undead creatures can be targeted by this spell with a [MELEE SPELL ATTACK] and on a success they do not heal but instead take holy damage eqal to the heal instead.",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the heal increases by 2d8."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the heal increases by 1d8 + ([SPI] / 4) * d8."
             },
             {
                 "name": "Cleanse",
@@ -273,9 +273,9 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "12m", "target": "[SPHERE] 1.5m", "duration": "[INSTANT]",
-                "description": "You summon an unholy pyre from the Aether damaging the creatures in the Area. Make a [INT] [SPELL TEST] against all targets within the sphere against the targets [DODGE] and on a success they receive 1d8 + ([SPI]/2) * d8 unholy damage [HALF]",
+                "description": "You summon an unholy pyre from the Aether damaging the creatures in the Area. Make a [INT] [SPELL TEST] against all targets within the sphere against the targets [DODGE] and on a success they receive 2d8 + ([SPI]/4) * d8 unholy damage [HALF]",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can deal an additional 2d8 damage."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can deal an additional 1d8 + ([SPI]/4) * d8 damage."
             },
             {
                 "name": "Darkness",
@@ -344,7 +344,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one target", "duration": "([SPI] / 2) rounds, [CONCENTRATION] 1",
-                "description": "You target one object or creature that you can see and restrain it. Make a [SPI] [SPELL TEST] against the targets [HARDNESS] on a success the target is restrained. Additionally you when you cast it and every following following turn the spell is still active you can deal ([SPI]/2) * d6 physical damage that can’t be reduced by armor.",
+                "description": "You target one object or creature that you can see and restrain it. Make a [SPI] [SPELL TEST] against the targets [HARDNESS] on a success the target is restrained. Additionally you when you cast it and every following following turn the spell is still active you can deal [SPI] * d6 physical damage that can’t be reduced by armor.",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target an additional creature"
             }
@@ -374,7 +374,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "15m", "target": "one or multiple creatures", "duration": "[INSTANT]",
-                "description": "You create 3 magical darts, each of these darts targets a creature within range that you can see and designate. A missile does ([SPI] / 2) 1d4 cosmic damage on impact.",
+                "description": "You create 3 magical darts, each of these darts targets a creature within range that you can see and designate. A missile does 1d4 + ([SPI] / 3) * 1d4 cosmic damage on impact.",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase 1 additional magic dart is created."
             },
@@ -458,9 +458,9 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one sentient creature within range", "duration": "1 [ROUND]",
-                "description": "Select one creature with an [INT] greater than -4 within range that you can see, make a [SPI] [SPELL TEST] against the creature’s [WILLPOWER]. On a success it takes d8 + ([SPI]/2) * d8 psychic damage [HALF] and recieves [STUNNED I].",
+                "description": "Select one creature with an [INT] greater than -4 within range that you can see, make a [SPI] [SPELL TEST] against the creature’s [WILLPOWER]. On a success it takes 2d8 + ([SPI]/4) * d8 psychic damage [HALF] and recieves [STUNNED I].",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage by 2d8."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage by 1d8 + ([SPI]/4) * d8."
             },
             {
                 "name": "Suggestion",

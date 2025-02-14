@@ -2,8 +2,7 @@ TODO before playtest:
 
 **magic rework**
 - define magical misshap tables
-- fix casting perks, maybe for base school perks let them add to spell cast tests (base thing give you +1, specialization lets you reroll one d6)
-- fix spell search view to instead of using spell level, you can filter for ranges of 
+- fix spell search view to instead of using spell level, you can filter for ranges of base difficulty.
 
 **finsh other classes**:
 - list what spells and martial maneuvers they are able to learn
@@ -31,6 +30,7 @@ Evaluation for after Playtest:
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?
 - hybrid abilities necesarry?
+- have another look at the implementation of the martial training perks
 
 ___________________________________________________________
 Cleanup:
@@ -38,7 +38,8 @@ Cleanup:
 - add missing keyword descritpions
 - check no console errors
 - proper phrasing of some stuff in the combat
-- fix scrolling 
+- fix scrolling
+- add missing spellcasting perk stuff
 
 ___________________________________________________________
 Future Ideas / Nice to have:
