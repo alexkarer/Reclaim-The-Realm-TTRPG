@@ -49,10 +49,14 @@ h4 {
     width: auto;
 }
 
-.rules-body{
+.navbar-padding {
+    margin-top: 12vh;
+}
+
+.rules-body {
     width: 100vw;
     overflow-x: hidden;
-    height: 90vh;
+    @extend .navbar-padding
 }
 
 // tablet size
@@ -69,6 +73,9 @@ h4 {
     .rules-body {
         width: 75vw;
     }
+    .navbar-padding {
+        margin-top: 6vh;
+    }
 }
 
 // desktop size
@@ -84,5 +91,8 @@ h4 {
     }
     .rules-body {
         width: 50vw;
+    }
+    .navbar-padding {
+        margin-top: 6vh;
     }
 }

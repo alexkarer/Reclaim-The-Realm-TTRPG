@@ -76,19 +76,19 @@ function keywordToContentPart(keyword: string): ContentPart {
 
 function getAttributeContentPart(keyword: string): ContentPart | undefined {
     switch(keyword) {
-        case attributes[0].keyword:
+        case attributes[0].keyword.replaceAll(/[\[\]]/g, ''):
             return generateAttributeKeyword(attributes[0]);
-        case attributes[1].keyword:
+        case attributes[1].keyword.replaceAll(/[\[\]]/g, ''):
             return generateAttributeKeyword(attributes[1]);
-        case attributes[2].keyword:
+        case attributes[2].keyword.replaceAll(/[\[\]]/g, ''):
             return generateAttributeKeyword(attributes[2]);
-        case attributes[3].keyword:
+        case attributes[3].keyword.replaceAll(/[\[\]]/g, ''):
             return generateAttributeKeyword(attributes[3]);
-        case attributes[4].keyword:
+        case attributes[4].keyword.replaceAll(/[\[\]]/g, ''):
             return generateAttributeKeyword(attributes[4]);
-        case attributes[5].keyword:
+        case attributes[5].keyword.replaceAll(/[\[\]]/g, ''):
             return generateAttributeKeyword(attributes[5]);
-        case attributes[6].keyword:
+        case attributes[6].keyword.replaceAll(/[\[\]]/g, ''):
             return generateAttributeKeyword(attributes[6]);
         default:
             return undefined;
@@ -198,7 +198,7 @@ function getCharacterValuesContentPart(keyword: string): ContentPart | undefined
 }
 
 function getStatusEffectsContentPart(keyword: string): ContentPart | undefined {
-    let foundKeywords = combinedStatusEffects.filter(effect => effect.keyword === keyword);
+    let foundKeywords = combinedStatusEffects.filter(effect => effect.keyword.replaceAll(/[\[\]]/g, '') === keyword);
     if (foundKeywords.length > 0) {
         return generateGenericKeyword('[' + foundKeywords[0] + ']', foundKeywords[0].summary, foundKeywords[0].link);
     }

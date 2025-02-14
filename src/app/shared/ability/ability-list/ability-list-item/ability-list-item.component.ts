@@ -19,6 +19,15 @@ export class AbilityListItemComponent {
   @Input() public ability?: Ability;
   public isCollapsed = true;
 
+  public getAbilityName(): string | undefined {
+    if (this.isSpell()) {
+      let spell = this.ability as Spell;
+      return this.ability?.name + ' (' + spell.spellDifficulty + ')';
+    } else {
+      return this.ability?.name;
+    }
+  }
+
   public isMartialManeuver(): boolean {
     return (this.ability instanceof MartialManeuver);
   }

@@ -14,16 +14,16 @@ import { allSpells, Spell } from '../../../ttrpg_resources/spells/spells';
 export class SpellsSearchComponent {
   public filteredSpells: Spell[] = allSpells;
 
-  public readonly SpellPower = SpellPower;
+  public readonly SpellDifficulty = SpellDifficulty;
   public readonly SpellDiscipline = SpellDiscipline;
   public readonly SpellCost = SpellCost;
 
-  public selectedSpellPower = SpellPower.ANY;
+  public selectedSpellPower = SpellDifficulty.ANY;
   public selectedSpellDiscipline = SpellDiscipline.ANY;
   public selectedSpellCost = SpellCost.ANY;
   public currentFilterText: string = "";
 
-  public onSpellPowerFilterChange(spellPower: SpellPower): void {
+  public onSpellPowerFilterChange(spellPower: SpellDifficulty): void {
     this.selectedSpellPower = spellPower;
     this.applyCurrentFilters();
   }
@@ -54,13 +54,9 @@ export class SpellsSearchComponent {
 
   private filterForSpellPower(spell:  Spell): boolean {
     switch(this.selectedSpellPower) {
-      case SpellPower.ANY: return true;
-      case SpellPower.FIRST: return spell.tags.find(tag => tag.includes('Spell (1)')) !== undefined;
-      case SpellPower.SECOND: return spell.tags.find(tag => tag.includes('Spell (2)')) !== undefined;
-      case SpellPower.THIRD: return spell.tags.find(tag => tag.includes('Spell (3)')) !== undefined;
-      case SpellPower.FOURTH: return spell.tags.find(tag => tag.includes('Spell (4)')) !== undefined;
-      case SpellPower.FIFTH: return spell.tags.find(tag => tag.includes('Spell (5)')) !== undefined;
-      case SpellPower.SIXTH: return spell.tags.find(tag => tag.includes('Spell (6)')) !== undefined;
+      case SpellDifficulty.ANY: return true;
+      case SpellDifficulty.SD_6: return spell.spellDifficulty === 6;
+      case SpellDifficulty.SD_9: return spell.spellDifficulty === 9;
     }
   }
 
@@ -113,8 +109,10 @@ export class SpellsSearchComponent {
   }
 }
 
-enum SpellPower {
-  ANY = 'Any Spell Power', FIRST = 'First Power Spells', SECOND = 'Second Power Spells', THIRD = 'Third Power Spells', FOURTH = 'Fourth Power Spells', FIFTH = 'Fifth Power Spells', SIXTH = 'Sixth Power Spells'
+enum SpellDifficulty {
+  ANY = 'Any Spell Difficulty',
+  SD_6 = 'Spell Difficulty 6',
+  SD_9 = 'Spell Difficulty 9',
 }
 
 enum SpellDiscipline {

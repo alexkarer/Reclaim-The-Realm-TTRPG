@@ -2,7 +2,6 @@ TODO before playtest:
 
 **magic rework**
 - define magical misshap tables
-- fix spell search view to instead of using spell level, you can filter for ranges of base difficulty.
 
 **finsh other classes**:
 - list what spells and martial maneuvers they are able to learn
@@ -35,6 +34,7 @@ Evaluation for after Playtest:
 ___________________________________________________________
 Cleanup:
 
+- fix bookmark links
 - add missing keyword descritpions
 - check no console errors
 - proper phrasing of some stuff in the combat
@@ -46,4 +46,7 @@ Future Ideas / Nice to have:
 
 **Status Effects:**
 - Confused Condition?
+
+have colored abilities and more icons
+
 create npc generator

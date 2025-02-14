@@ -59,7 +59,7 @@
 	</nav>
 </ng-template>
 
-<div class="table-of-contents-btn-wrapper">
+<div class="table-of-contents-btn-wrapper navbar-padding">
 	<button class="btn btn-outline-primary" (click)="openTableOfContents(content)">
 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
 			<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
@@ -67,8 +67,8 @@
 	</button>
 </div>
 
-<div class="d-flex justify-content-center pt-2">
-	<div ngbScrollSpy #spy="ngbScrollSpy" class="px-3 rules-body">
+<div class="d-flex justify-content-center">
+	<div ngbScrollSpy #spy="ngbScrollSpy" class="rules-body">
 		<h1 ngbScrollSpyFragment="reclaim-the-realm">Reclaim The Realm</h1>
 		<app-rules-overview/>
 		<hr>

@@ -1,15 +1,14 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar-padding navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
+        <div ngbDropdown class="d-inline-block me-4">
+            <h6 style="white-space: nowrap;">{{ filteredSpells.length + ' Spells' }}</h6>
+        </div>
         <div ngbDropdown class="d-inline-block me-5">
             <button type="button" class="btn btn-outline-primary" id="dropdown-spell-power" ngbDropdownToggle>{{ selectedSpellPower }}</button>
             <div ngbDropdownMenu aria-labelledby="dropdown-spell-power">
-                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.ANY)">{{ SpellPower.ANY }}</button>
-                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.FIRST)">{{ SpellPower.FIRST }}</button>
-                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.SECOND)">{{ SpellPower.SECOND }}</button>
-                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.THIRD)">{{ SpellPower.THIRD }}</button>
-                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.FOURTH)">{{ SpellPower.FOURTH }}</button>
-                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.FIFTH)">{{ SpellPower.FIFTH }}</button>
-                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellPower.SIXTH)">{{ SpellPower.SIXTH }}</button>
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellDifficulty.ANY)">{{ SpellDifficulty.ANY }}</button>
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellDifficulty.SD_6)">{{ SpellDifficulty.SD_6 }}</button>
+                <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellDifficulty.SD_9)">{{ SpellDifficulty.SD_9 }}</button>
             </div>
         </div>
         <div ngbDropdown class="d-inline-block me-5">
@@ -17,23 +16,23 @@
             <div ngbDropdownMenu aria-labelledby="dropdown-spell-discipline">
                 <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ANY)">{{ SpellDiscipline.ANY }}</button>
                 <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ELEMENTAL)">{{ SpellDiscipline.ELEMENTAL }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.PYROMANCY)">{{ SpellDiscipline.PYROMANCY }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.HYDROMANCY)">{{ SpellDiscipline.HYDROMANCY }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.AEROMANCY)">{{ SpellDiscipline.AEROMANCY }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.GEOMANCY)">{{ SpellDiscipline.GEOMANCY }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.PYROMANCY)">{{ SpellDiscipline.PYROMANCY }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.HYDROMANCY)">{{ SpellDiscipline.HYDROMANCY }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.AEROMANCY)">{{ SpellDiscipline.AEROMANCY }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.GEOMANCY)">{{ SpellDiscipline.GEOMANCY }}</button>
                 <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.COSMIC)">{{ SpellDiscipline.COSMIC }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.LIGHT)">{{ SpellDiscipline.LIGHT }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.RESTORATION)">{{ SpellDiscipline.RESTORATION }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.SHADOW)">{{ SpellDiscipline.SHADOW }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.NECROMANCY)">{{ SpellDiscipline.NECROMANCY }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.DIVINATION)">{{ SpellDiscipline.DIVINATION }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.LIGHT)">{{ SpellDiscipline.LIGHT }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.RESTORATION)">{{ SpellDiscipline.RESTORATION }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.SHADOW)">{{ SpellDiscipline.SHADOW }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.NECROMANCY)">{{ SpellDiscipline.NECROMANCY }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.DIVINATION)">{{ SpellDiscipline.DIVINATION }}</button>
                 <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.MANIPULATION)">{{ SpellDiscipline.MANIPULATION }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEKINESIS)">{{ SpellDiscipline.TELEKINESIS }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TRANSMUTATION)">{{ SpellDiscipline.TRANSMUTATION }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.CONJURATION)">{{ SpellDiscipline.CONJURATION }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ILLUSION)">{{ SpellDiscipline.ILLUSION }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEPORTATION)">{{ SpellDiscipline.TELEPORTATION }}</button>
-                <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEPATHY)">{{ SpellDiscipline.TELEPATHY }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEKINESIS)">{{ SpellDiscipline.TELEKINESIS }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TRANSMUTATION)">{{ SpellDiscipline.TRANSMUTATION }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.CONJURATION)">{{ SpellDiscipline.CONJURATION }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ILLUSION)">{{ SpellDiscipline.ILLUSION }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEPORTATION)">{{ SpellDiscipline.TELEPORTATION }}</button>
+                <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEPATHY)">{{ SpellDiscipline.TELEPATHY }}</button>
             </div>
         </div>
         <div ngbDropdown class="d-inline-block me-5">

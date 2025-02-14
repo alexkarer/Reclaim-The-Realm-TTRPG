@@ -1,5 +1,8 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar-padding navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
+        <div ngbDropdown class="d-inline-block me-4">
+            <h6 style="white-space: nowrap;">{{ filteredHybridAbilities.length + ' Hybrid Abilities' }}</h6>
+        </div>
         <div ngbDropdown class="d-inline-block me-5">
             <button type="button" class="btn btn-outline-primary" id="dropdown-hybrid-spell-level" ngbDropdownToggle>{{ selectedSpellLevel }}</button>
             <div ngbDropdownMenu aria-labelledby="dropdown-hybrid-spell-level">

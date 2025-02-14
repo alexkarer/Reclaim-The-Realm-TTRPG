@@ -35,9 +35,9 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "4 [AP], 3 [ARCANA]", "range": "30m", "target": "[SPHERE] 3m", "duration": "[INSTANT]",
-                "description": "You launch a small fire projectile at the designated location that you can see and without amy obstructions. It then errupts in a fiery that hits all creatures within that sphere. Make an [INT] [SPELL TEST] against the creatures [DODGE] on a success they take 4d6 + [SPI] * d6 fire damage [HALF] .",
-                "spellDifficulty": 8,
+                "cost": "4 [AP], 4 [ARCANA]", "range": "30m", "target": "[SPHERE] 3m", "duration": "[INSTANT]",
+                "description": "You launch a small fire projectile at the designated location that you can see and without amy obstructions. It then errupts in a fiery that hits all creatures within that sphere. Make an [INT] [SPELL TEST] against the creatures [DODGE] on a success they take 6d6 + [SPI] * d6 fire damage [HALF] .",
+                "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the radius increases by 1.5m and the damage by 2d6 + ([SPI] / 4) * d6."
             }
         ],
@@ -229,9 +229,9 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "4 [AP], 3 [ARCANA]", "range": "6m", "target": "[SPHERE] 4.5m", "duration": "[SPI]/2 rounds, [CONCENTRATION] 1",
+                "cost": "4 [AP], 4 [ARCANA]", "range": "6m", "target": "[SPHERE] 4.5m", "duration": "[SPI]/2 rounds, [CONCENTRATION] 1",
                 "description": "You bless the ground below you and create a 4.5m (3 square) radius sanctuary. Each allied creature (including yourself) that starts its turn in the sancutuary or eneters the area for the first time regains ([SPI]/2) * d6 [HP] and each evil enemy creature that starts its turn there or enters it for the first time recieves ([SPI]/2) * d6 holy damage.",
-                "spellDifficulty": 8,
+                "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and increase the damage/heal by 1d6 and the duration by 1 [ROUND]."
             }
         ],
