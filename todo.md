@@ -1,8 +1,5 @@
 TODO before playtest:
 
-**magic rework**
-- define magical misshap tables
-
 **finsh other classes**:
 - list what spells and martial maneuvers they are able to learn
 - mage todo (rework overcharge)
@@ -34,7 +31,7 @@ Evaluation for after Playtest:
 ___________________________________________________________
 Cleanup:
 
-- fix bookmark links
+- fix links
 - add missing keyword descritpions
 - check no console errors
 - proper phrasing of some stuff in the combat
@@ -44,9 +41,15 @@ Cleanup:
 ___________________________________________________________
 Future Ideas / Nice to have:
 
+- Flesh out Adventure Section
+
+- flesh out magical misshap table
+
 **Status Effects:**
 - Confused Condition?
 
 have colored abilities and more icons
 
 create npc generator
+
+add missing abilities

@@ -10,7 +10,22 @@
             "concentrationTestDescription": "Certain spells have the Concentration X tag listed at the spell’s duration. These spells require a lot of focus to maintain. Spells with this tag have the following properties: <ul> <li>During your turn you have to spend X AP to maintain the spell, if you don’t do this, the spell stops at the end of your turn.</li> <li>Every time you receive damage, you have to make a Concentration Test with a [DT] that is equal to 5 + half the damage received.</li> </ul> A [CONCENTRATION TEST] determines if you can maintain focus on a spell while external factors attempt to disrupt it. A [CONCENTRATION TEST] is a specialized [CON] [SPELL TEST]."
         },
         "magicalMishaps": {
-            "description": "TODO"
+            "description": "Roll d20+[ARCANA] cost of spell. If [ARCANA] Cost was lowered by some other ability does not reduce the bonus here.",
+            "table": [
+                {"roll": "4 or lower", "effect": "Make [TOUGHNESS] [SAVE] or recieve [STUNNED I] until the end of your next turn"},
+                {"roll": "5-7", "effect": "Recieve small damage, type depending on spell"},
+                {"roll": "8-10", "effect": "Gain 1 level of [EXHAUSTION]"},
+                {"roll": "11-13", "effect": "Small Effect depending on spell discipline, elemental: summon weak elemental, cosmic: summon weak angel/demon/stragnething"},
+                {"roll": "14-16", "effect": "Make [TOUGHNESS] [SAVE] or recieve [STUNNED II] until the end of your next turn"},
+                {"roll": "17-19", "effect": "Gain 2 levels of [EXHAUSTION]"},
+                {"roll": "20-22", "effect": "Recieve medium damage depending on spell"},
+                {"roll": "23-25", "effect": "Medium Effect depending on spell discipline, elemental: summon medium elemental, cosmic: summon medium angel/demon/stragnething"},
+                {"roll": "26-28", "effect": "Make [TOUGHNESS] [SAVE] or recieve [STUNNED III] until the end of your next turn"},
+                {"roll": "29-31", "effect": "Recieve large damage depending on spell"},
+                {"roll": "32-34", "effect": "Gain 3 levels of [EXHAUSTION]"},
+                {"roll": "35-37", "effect": "Strong Effect depending on spell discipline, elemental: summon strong elemental, cosmic: summon strong angel/demon/stragnething"},
+                {"roll": "38 or higher", "effect": "Permanently change area depending on spell"}
+            ]
         },
         "upcastingSpells": {
             "upcastingSpellsDescription": "Spells can be cast as more powerful versions of the normal version. When done so the spells [ARCANA] Cost and Spell Difficulty increase as described and the spell’s effect changes as stated in the spell itself. However this increase makes the spell more costly, difficult and dangerous when a magical mishap occurs."

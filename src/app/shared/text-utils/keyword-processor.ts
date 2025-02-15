@@ -200,7 +200,7 @@ function getCharacterValuesContentPart(keyword: string): ContentPart | undefined
 function getStatusEffectsContentPart(keyword: string): ContentPart | undefined {
     let foundKeywords = combinedStatusEffects.filter(effect => effect.keyword.replaceAll(/[\[\]]/g, '') === keyword);
     if (foundKeywords.length > 0) {
-        return generateGenericKeyword('[' + foundKeywords[0] + ']', foundKeywords[0].summary, foundKeywords[0].link);
+        return generateGenericKeyword(foundKeywords[0].keyword, foundKeywords[0].summary, foundKeywords[0].link);
     }
     return undefined;
 }

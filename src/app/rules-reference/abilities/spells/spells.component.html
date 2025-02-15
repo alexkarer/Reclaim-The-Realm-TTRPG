@@ -39,6 +39,24 @@
 
         <h4 class="mb-2 mt-3">Magical Mishaps</h4>
         <app-dynamic-content [content]="spellRulesJson.castingSpells.magicalMishaps.description | keywordProcessor"></app-dynamic-content>
+        <div class="d-flex justify-content-center">
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Roll</th>
+                        <th scope="col">Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (tableEntry of spellRulesJson.castingSpells.magicalMishaps.table; track $index) {
+                        <tr>
+                            <td>{{ tableEntry.roll }}</td>
+                            <td><app-dynamic-content [content]="tableEntry.effect| keywordProcessor"></app-dynamic-content></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
 
         <h4 class="mb-2 mt-3">Upcasting Spells</h4>
         <app-dynamic-content [content]="spellRulesJson.castingSpells.upcastingSpells.upcastingSpellsDescription | keywordProcessor"></app-dynamic-content>
