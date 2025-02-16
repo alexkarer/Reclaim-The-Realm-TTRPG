@@ -1,7 +1,7 @@
 TODO before playtest:
 
 **finsh other classes**:
-- list what spells and martial maneuvers they are able to learn
+- list what spells and martial maneuvers they are able to learn properly
 - mage todo (rework overcharge)
   - counter should be based on arcana cost or spell-like number in parantheses
 - warlock (should be mostly fine, define possession events)

@@ -87,8 +87,10 @@
             </div>
             <app-dynamic-content [content]="playerClass?.classPathDescription | keywordProcessor"></app-dynamic-content>
             @for (path of playerClass?.classPaths; track $index) {
-                <h5>{{ path.name }}</h5>
-                <app-text-elements [textElements]="path.textElements" [useBoldTextForHeader]="true"></app-text-elements>
+                <div class="p-2 border bg-body-tertiary mb-3">
+                    <h5 class="mb-0">{{ path.name }}</h5>
+                    <app-text-elements [textElements]="path.textElements" [useBoldTextForHeader]="true"></app-text-elements>
+                </div>
             }
         </div>
     </div>

@@ -1,6 +1,6 @@
 {
     "className": "Rogue",
-    "classDescription": "",
+    "classDescription": "sneaky beaky like",
     "coreClassValues": {
         "hpPerLevel": 8,
         "martialProficiency": 1.0,
@@ -15,12 +15,24 @@
         "weaponRanks": 2
     },
     "classCoreFeature": {
-        "name": "",
+        "name": "Trickery",
         "textElements": [
+            {
+                "regularText": "The Rogue thrives in chaotic circumstances during combat and is the best at figuring out the weaknesses of opponents during these circumstances. When enemies make mistakes you gain Trickery which is denoted by a number which you can then to exploit these mistakes with a sneak attack or class techniques. You gain Trickery via when the following happen:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
             {
                 "regularText": null,
                 "headerLine": null,
-                "bulletPoints": null,
+                "bulletPoints": [
+                    "The first time an enemy gets hit by you during a [ROUND], you gain 1 Trickery.",
+                    "The first time an enemy fails to hit you during a [ROUND], you gain 1 Trickery.",
+                    "The first time an enemy fails to resist an ability of you during a [ROUND], you gain 1 Trickery.",
+                    "The first time an enemy makes a critical fail or you score a critical hit during a [ROUND], you gain 1 Trickery.",
+                    "The first time during during a [ROUND] you recieve a benefical circumstancal bonus when making any [D20 TEST] you gain 1 Trickery."
+                ],
                 "ability": null
             }
         ]
@@ -28,10 +40,32 @@
     "classPathDescription": "",
     "classPaths": [
         {
-            "name": "",
+            "name": "Assassin",
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "Assassins are specialists at eliminating specific targets. They are also masters of stealth and Infiltration and rely on meticulous preperations to achieve their goals.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Daredevil",
+            "textElements": [
+                {
+                    "regularText": "Daredevils are reckless individuals who want to fight up close with their opponents and rely on their quick thinking and maneuverability to gain the upper hand on their enemeis.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Shadow",
+            "textElements": [
+                {
+                    "regularText": "A Shadow is a rogue who is attuned to the cosmic plane and can harness the energies to aid them",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -41,12 +75,136 @@
     ],
     "classFeatures": [
         {
-            "name": "",
+            "name": "Sneak Attack",
             "levels": [ 1 ],
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "You gain access to the Sneak Attack ability:",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Sneak Attack",
+                        "tags": [ "Class Technique (Rogue)" ],
+                        "requirements": {
+                            "requiredLevels": [ ],
+                            "requiredAttributes": [ ],
+                            "requiredPerks": [ ],
+                            "otherRequirements": [ ]
+                        },
+                        "cost": "0 [AP], 1 or more Trickery",
+                        "range": "-",
+                        "target": "self",
+                        "duration": "[INSTANT]",
+                        "description": "When you hit a single creature with a [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] you can use this ability. When you use this ability you can add 2d6 phyiscal damage to the damage of the [ATTACK] for each Trickery used. You can not use more than two times your [LEVEL] of Trickery for a single [ATTACK]."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Assassin Improvements",
+            "levels": [ 1 ],
+            "relatedClassPath": "Assassin",
+            "textElements": [
+                {
+                    "regularText": "When using sneak attack when under concealment can add 1 Trickery for free (does not count to max). Additionally at the start of the battle the Assasin can target 1 enemy. When attacking the enemy the crit threshold is reduced by 1. When the target is eleminated from the combat you gain Trickery equal to the [LEVEL] of the target.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Daredevil Improvemnets",
+            "levels": [ 1 ],
+            "relatedClassPath": "Daredevil",
+            "textElements": [
+                {
+                    "regularText": "+1 [HP] per [LEVEL]. When using sneak attack against a target that is flanked can add 1 Trickery for free (does not count to max). Additionally the Daredevil can select one Martial Maneuver type they do not yet know. They can now learn martial maneuvers of that type.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Shadow Improvements",
+            "levels": [ 1 ],
+            "relatedClassPath": "Shadow",
+            "textElements": [
+                {
+                    "regularText": "The Shadow gains [SPELL LEVEL] Progression of 1/3 and is able to learn spells of the following disciplines: Shadow, Divination, Manipulation. Additionally you can now also use sneak attacks with a [MELEE SPELL ATTACK] or [MELEE RANGED ATTACK].",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Quick Footed",
+            "levels": [ 2 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "Each time you use the Jump, Disengage or Stand Up you require 1 [MP] less and you can now use your [AGI] for determining jump distance, climbing or swimming.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Favored Skills",
+            "levels": [ 2,4,6,8,10,12 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "Pick one skill or Tool and increase the rank and rank maximum by 2.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Seizing the Initiative",
+            "levels": [ 3 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "The rogue gains [ADVANTAGE] on Initiative Tests. Additionally the Rogues starts combat with one additional Trickery for every opponent that acts after them, to a maximum of their [LEVEL].",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Quickast",
+            "levels": [ 5 ],
+            "relatedClassPath": "Shadow",
+            "textElements": [
+                {
+                    "regularText": "Can use Trickery to reduced [AP] Cost of Spells",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Eternal Shroud",
+            "levels": [ 9 ],
+            "relatedClassPath": "Shadow",
+            "textElements": [
+                {
+                    "regularText": "You permanently gain the benefit of partial concealment as long as you are in low light Situations",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -57,19 +215,154 @@
     "classTechniquesDescription": "",
     "classTechniques": [
         {
-            "name": "",
-            "tags": [ "Class Technique (Barbarian" ],
+            "name": "Stunning Sneak Attack",
+            "tags": [ "Class Technique (Rogue)" ],
             "requirements": {
                 "requiredLevels": [ ],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "",
+            "cost": "0 [AP], 2 or more Trickery",
             "range": "-",
-            "target": "",
-            "duration": "",
-            "description": ""
+            "target": "self",
+            "duration": "2 [ROUNDS]",
+            "description": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a stunning effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [STUNNED I], 4 for [STUNNED II], 8 for [STUNNED III]."
+        },
+        {
+            "name": "Crippling Sneak Attack",
+            "tags": [ "Class Technique (Rogue)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 2 or more Trickery",
+            "range": "-",
+            "target": "self",
+            "duration": "2 [ROUNDS]",
+            "description": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a crippling effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [CRIPPLED  I], 4 for [CRIPPLED II]."
+        },
+        {
+            "name": "Bleeding Sneak Attack",
+            "tags": [ "Class Technique (Rogue)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 2 or more Trickery",
+            "range": "-",
+            "target": "self",
+            "duration": "2 [ROUNDS]",
+            "description": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a bleeding effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [BLEEDING I], 4 for [BLEEDING II], 8 for [BLEEDING III]."
+        },
+        {
+            "name": "Weakening Sneak Attack",
+            "tags": [ "Class Technique (Rogue)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 2 or more Trickery",
+            "range": "-",
+            "target": "self",
+            "duration": "2 [ROUNDS]",
+            "description": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a weakaning effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [WEAKENED  I], 4 for [WEAKENED  II], 8 for [WEAKENED III]."
+        },
+        {
+            "name": "Flash of Inspiration",
+            "tags": [ "Class Technique (Rogue)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 1 or more Trickery",
+            "range": "-",
+            "target": "self",
+            "duration": "[INSTANT]",
+            "description": "After having made a [ATTRIBUTE TEST] you can use your Trickery to add to the result, potentially turing a failure into a succes. For each Trickery used you can add d6 to the result."
+        },
+        {
+            "name": "Lightning Reactions",
+            "tags": [ "Class Technique (Rogue)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 1 or more Trickery",
+            "range": "-",
+            "target": "self",
+            "duration": "[INSTANT]",
+            "description": "After having made a [DODGE] [SAVE] you can use your Trickery to add to the result, potentially turing a failure into a succes. For each Trickery used you can add d3 to the result."
+        },
+        {
+            "name": "Quick spurt",
+            "tags": [ "Class Technique (Rogue)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 1 Trickery",
+            "range": "-",
+            "target": "self",
+            "duration": "[INSTANT]",
+            "description": "When using the Dash Ability you can use this Ability and gain d3 extra [MP]."
+        },
+        {
+            "name": "Blending In",
+            "tags": [ "Class Technique (Rogue)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "0 [AP], 2 Trickery",
+            "range": "-",
+            "target": "self",
+            "duration": "[INSTANT]",
+            "description": "When using the Hide Ability it now costs 1 [AP] less (minimum 1)."
+        },
+        {
+            "name": "Efficient Maneuver",
+            "tags": [ "Class Technique (Barbarian)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "2 or more Trickery",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you perform a Martial Maneuver instead of it using your [STAMINA] you can alternatively spend 2 Trickery per 1 [STAMINA] cost."
+        },
+        {
+            "name": "Identify Weakspot",
+            "tags": [ "Class Technique (Rogue)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "1 [AP] + Trickery",
+            "range": "1 creature",
+            "target": "12m",
+            "duration": "next attack this [ROUND]",
+            "description": "You identify the weaksots of your enemy and for the next [ATTACK] the crit threashold is reduced by 1 for each Trickery and you gain a d3 bonus on the [ATTACk] for each Trickery."
         }
     ]
 }
