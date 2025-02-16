@@ -4,7 +4,9 @@
     "coreClassValues": {
         "hpPerLevel": 8,
         "martialProficiency": 1.0,
+        "knownMartialManeuvers": "Agile, Tactical, Weapon",
         "spellProficiency": 0.0,
+        "knownSpellDisciplines": null,
         "dodgeProficiency": 1.0,
         "hardnessProficiency": 0.334,
         "toughnessProficiency": 0.334,
@@ -179,6 +181,19 @@
             "textElements": [
                 {
                     "regularText": "The rogue gains [ADVANTAGE] on Initiative Tests. Additionally the Rogues starts combat with one additional Trickery for every opponent that acts after them, to a maximum of their [LEVEL].",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Improved Trickery",
+            "levels": [ 4,8,12 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "Increase the [ROUND] Limit for each of the conditions for getting Trickery by 1.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null

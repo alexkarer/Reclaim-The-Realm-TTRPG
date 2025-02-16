@@ -4,7 +4,9 @@
     "coreClassValues": {
         "hpPerLevel": 6,
         "martialProficiency": 0.334,
+        "knownMartialManeuvers": "Leader",
         "spellProficiency": 1.0,
+        "knownSpellDisciplines": "Cosmic, Manipulation",
         "dodgeProficiency": 0.334,
         "hardnessProficiency": 0.334,
         "toughnessProficiency": 0.334,

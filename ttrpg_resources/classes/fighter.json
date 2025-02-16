@@ -1,10 +1,12 @@
 {
     "className": "Fighter",
-    "classDescription": "",
+    "classDescription": "I like the incredable diverse character options, thats why I choose a Human Fighter.",
     "coreClassValues": {
         "hpPerLevel": 10,
         "martialProficiency": 1.0,
+        "knownMartialManeuvers": "Agile, Brawl, Fortitude, Leader, Tactical, Weapon",
         "spellProficiency": 0.0,
+        "knownSpellDisciplines": null,
         "dodgeProficiency": 0.667,
         "hardnessProficiency": 0.667,
         "toughnessProficiency": 0.667,
@@ -15,12 +17,23 @@
         "weaponRanks": 2
     },
     "classCoreFeature": {
-        "name": "",
+        "name": "Focus",
         "textElements": [
+            {
+                "regularText": "A Fighter thrives on the battlefield and the better understanding or feel they have for their current combat, the more effective they can exploit the combat situation. Focus is denoted by a number which will increase during the fight which you can then spend on Class Techniques. The Fighter gains Focus via the follwoing things:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
             {
                 "regularText": null,
                 "headerLine": null,
-                "bulletPoints": null,
+                "bulletPoints": [
+                    "The first time during a [ROUND] you make an [ATTACK] against a target you are currently flanking or have a high ground bonus, you gain 1 Focus.",
+                    "The first time during a [ROUND] you make an opportunity Attack or a successful Parry, you gain 1 Focus.",
+                    "The first time during a [ROUND] an enemy was forcefully moved by you or a friendly creature, you gain 1 Focus.",
+                    "The first time during a [ROUND] an enemy recieves a harmful Status Effect, you gain 1 Focus."
+                ],
                 "ability": null
             }
         ]
@@ -28,7 +41,29 @@
     "classPathDescription": "",
     "classPaths": [
         {
-            "name": "",
+            "name": "Champion",
+            "textElements": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Tactician",
+            "textElements": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Ranger",
             "textElements": [
                 {
                     "regularText": "",
@@ -41,12 +76,51 @@
     ],
     "classFeatures": [
         {
-            "name": "",
+            "name": "Champion Improvements",
             "levels": [ 1 ],
-            "relatedClassPath": null,
+            "relatedClassPath": "Champion",
+            "textElements": [
+                {
+                    "regularText": "[CHA] is now a Class Attribute for you (Increase attribute maximum or current). Additionally the first time each [ROUND] an ally gains [THP] or a receives benficial Status Effect, you gain 1 Focus.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Tactician Improvements",
+            "levels": [ 1 ],
+            "relatedClassPath": "Tactician",
             "textElements": [
                 {
                     "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "",
+            "levels": [ 1 ],
+            "relatedClassPath": "Ranger",
+            "textElements": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Improved Focus",
+            "levels": [ 4,8,12 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "Increase the [ROUND] Limit for each of the conditions for getting Focus by 1.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -58,7 +132,67 @@
     "classTechniques": [
         {
             "name": "",
-            "tags": [ "Class Technique (Barbarian" ],
+            "tags": [ "Class Technique (Fighter)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "",
+            "range": "-",
+            "target": "",
+            "duration": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "tags": [ "Class Technique (Fighter)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "",
+            "range": "-",
+            "target": "",
+            "duration": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "tags": [ "Class Technique (Fighter)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "",
+            "range": "-",
+            "target": "",
+            "duration": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "tags": [ "Class Technique (Fighter)" ],
+            "requirements": {
+                "requiredLevels": [ ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "",
+            "range": "-",
+            "target": "",
+            "duration": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "tags": [ "Class Technique (Fighter)" ],
             "requirements": {
                 "requiredLevels": [ ],
                 "requiredAttributes": [ ],

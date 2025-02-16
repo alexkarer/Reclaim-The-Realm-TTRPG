@@ -20,10 +20,22 @@
                         <td><span class="fw-bold">Martial Level Progression</span></td>
                         <td>{{ playerClass?.coreClassValues?.martialProficiency }}</td>
                     </tr>
+                    @if (playerClass?.coreClassValues?.knownMartialManeuvers !== null) {
+                        <tr>
+                            <td><span class="fw-bold">Known Martial Maneuver Types</span></td>
+                            <td>{{ playerClass?.coreClassValues?.knownMartialManeuvers }}</td>
+                        </tr>
+                    }
                     <tr>
                         <td><span class="fw-bold">Spell Level Progression</span></td>
                         <td>{{ playerClass?.coreClassValues?.spellProficiency }}</td>
                     </tr>
+                    @if (playerClass?.coreClassValues?.knownSpellDisciplines !== null) {
+                        <tr>
+                            <td><span class="fw-bold">Known Spell Disciplines</span></td>
+                            <td>{{ playerClass?.coreClassValues?.knownSpellDisciplines }}</td>
+                        </tr>
+                    }
                     <tr>
                         <td><span class="fw-bold">Defenses</span></td>
                         <td>

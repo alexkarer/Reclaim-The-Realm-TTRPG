@@ -4,7 +4,9 @@
     "coreClassValues": {
         "hpPerLevel": 10,
         "martialProficiency": 1.0,
+        "knownMartialManeuvers": "Brawl, Fortitude, Weapon, Leader",
         "spellProficiency": 0.0,
+        "knownSpellDisciplines": null,
         "dodgeProficiency": 0.334,
         "hardnessProficiency": 1.0,
         "toughnessProficiency": 1.0,
