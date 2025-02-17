@@ -5,11 +5,10 @@ import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle } from
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-hybrid-abilities-search',
-  standalone: true,
-  imports: [AbilityListComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule],
-  templateUrl: './hybrid-abilities-search.component.html',
-  styleUrl: './hybrid-abilities-search.component.scss'
+    selector: 'app-hybrid-abilities-search',
+    imports: [AbilityListComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule],
+    templateUrl: './hybrid-abilities-search.component.html',
+    styleUrl: './hybrid-abilities-search.component.scss'
 })
 export class HybridAbilitiesSearchComponent {
   public filteredHybridAbilities: HybridAbility[] = allHybridAbilities;

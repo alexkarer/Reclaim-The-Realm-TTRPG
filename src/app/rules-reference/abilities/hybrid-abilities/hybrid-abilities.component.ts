@@ -5,11 +5,10 @@ import { DynamicContentComponent } from "../../../shared/text-utils/dynamic-comp
 import hybridAbilitiesDescriptionJson from '../../../../../ttrpg_resources/hybrid_abilities/hybrid_abilities_description.json';
 
 @Component({
-  selector: 'app-hybrid-abilities',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe],
-  templateUrl: './hybrid-abilities.component.html',
-  styleUrl: './hybrid-abilities.component.scss'
+    selector: 'app-hybrid-abilities',
+    imports: [DynamicContentComponent, KeywordProcessorPipe],
+    templateUrl: './hybrid-abilities.component.html',
+    styleUrl: './hybrid-abilities.component.scss'
 })
 export class HybridAbilitiesComponent {
   public readonly hybridAbilityDescription = hybridAbilitiesDescriptionJson;

@@ -9,11 +9,10 @@ import weaponRulesJson from '../../../../../ttrpg_resources/equipment/weapons/we
 import ammunitionRulesJson from '../../../../../ttrpg_resources/equipment/weapons/ammunitionsRules.json'
 
 @Component({
-  selector: 'app-weapons',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment, WeaponPropertyProcessor],
-  templateUrl: './weapons.component.html',
-  styleUrl: './weapons.component.scss'
+    selector: 'app-weapons',
+    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment, WeaponPropertyProcessor],
+    templateUrl: './weapons.component.html',
+    styleUrl: './weapons.component.scss'
 })
 export class WeaponsComponent {
   public readonly weaponRulesJson = weaponRulesJson;

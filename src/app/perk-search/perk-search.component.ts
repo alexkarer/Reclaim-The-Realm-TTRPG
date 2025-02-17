@@ -5,11 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { allPerks, Perk } from '../../../ttrpg_resources/perks/perk';
 
 @Component({
-  selector: 'app-perk-search',
-  standalone: true,
-  imports: [PerkListComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule],
-  templateUrl: './perk-search.component.html',
-  styleUrl: './perk-search.component.scss'
+    selector: 'app-perk-search',
+    imports: [PerkListComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule],
+    templateUrl: './perk-search.component.html',
+    styleUrl: './perk-search.component.scss'
 })
 export class PerkSearchComponent {
 

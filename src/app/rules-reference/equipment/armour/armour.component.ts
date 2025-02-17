@@ -7,11 +7,10 @@ import { armours } from '../../../../../ttrpg_resources/equipment/armour/armour'
 import armourRulesJson from '../../../../../ttrpg_resources/equipment/armour/armourRules.json'
 
 @Component({
-  selector: 'app-armour',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
-  templateUrl: './armour.component.html',
-  styleUrl: './armour.component.scss'
+    selector: 'app-armour',
+    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
+    templateUrl: './armour.component.html',
+    styleUrl: './armour.component.scss'
 })
 export class ArmourComponent {
   public readonly armourRules = armourRulesJson;

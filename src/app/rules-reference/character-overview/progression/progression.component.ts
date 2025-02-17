@@ -4,11 +4,10 @@ import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-comp
 import progressionJson from '../../../../../ttrpg_resources/character_values/progression.json';
 
 @Component({
-  selector: 'app-progression',
-  standalone: true,
-  imports: [KeywordProcessorPipe, DynamicContentComponent],
-  templateUrl: './progression.component.html',
-  styleUrl: './progression.component.scss'
+    selector: 'app-progression',
+    imports: [KeywordProcessorPipe, DynamicContentComponent],
+    templateUrl: './progression.component.html',
+    styleUrl: './progression.component.scss'
 })
 export class ProgressionComponent {
   public readonly progressionDescription = progressionJson.progressionDescription;

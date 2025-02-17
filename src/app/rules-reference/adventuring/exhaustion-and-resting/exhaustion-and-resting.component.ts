@@ -5,11 +5,10 @@ import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import exhaustionAndRestingJson from '../../../../../ttrpg_resources/adventuring/exhaustion_and_resting.json'
 
 @Component({
-  selector: 'app-exhaustion-and-resting',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
-  templateUrl: './exhaustion-and-resting.component.html',
-  styleUrl: './exhaustion-and-resting.component.scss'
+    selector: 'app-exhaustion-and-resting',
+    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
+    templateUrl: './exhaustion-and-resting.component.html',
+    styleUrl: './exhaustion-and-resting.component.scss'
 })
 export class ExhaustionAndRestingComponent {
   public readonly description = exhaustionAndRestingJson.description;

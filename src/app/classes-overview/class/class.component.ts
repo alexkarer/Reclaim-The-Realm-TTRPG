@@ -7,11 +7,10 @@ import { AbilityListComponent } from "../../shared/ability/ability-list/ability-
 import { TextElementsComponent } from "../../shared/text-utils/text-elements/text-elements.component";
 
 @Component({
-  selector: 'app-class',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, AbilityListComponent, TextElementsComponent],
-  templateUrl: './class.component.html',
-  styleUrl: './class.component.scss'
+    selector: 'app-class',
+    imports: [DynamicContentComponent, KeywordProcessorPipe, AbilityListComponent, TextElementsComponent],
+    templateUrl: './class.component.html',
+    styleUrl: './class.component.scss'
 })
 export class ClassComponent {
 

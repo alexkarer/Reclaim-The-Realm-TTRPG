@@ -5,11 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { allSpells, Spell } from '../../../ttrpg_resources/spells/spells';
 
 @Component({
-  selector: 'app-spells-search',
-  standalone: true,
-  imports: [AbilityListComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule],
-  templateUrl: './spells-search.component.html',
-  styleUrl: './spells-search.component.scss'
+    selector: 'app-spells-search',
+    imports: [AbilityListComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule],
+    templateUrl: './spells-search.component.html',
+    styleUrl: './spells-search.component.scss'
 })
 export class SpellsSearchComponent {
   public filteredSpells: Spell[] = allSpells;

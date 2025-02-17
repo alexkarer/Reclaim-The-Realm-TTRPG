@@ -8,11 +8,10 @@ import { StatusEffectsOverviewComponent } from "./status-effects-overview/status
 import combatOverviewJson from '../../../../ttrpg_resources/combat/combat_overview.json'
 
 @Component({
-  selector: 'app-combat',
-  standalone: true,
-  imports: [NgbScrollSpyFragment, DynamicContentComponent, KeywordProcessorPipe, CombatOverviewComponent, CombatDetailsComponent, StatusEffectsOverviewComponent],
-  templateUrl: './combat.component.html',
-  styleUrl: './combat.component.scss'
+    selector: 'app-combat',
+    imports: [NgbScrollSpyFragment, DynamicContentComponent, KeywordProcessorPipe, CombatOverviewComponent, CombatDetailsComponent, StatusEffectsOverviewComponent],
+    templateUrl: './combat.component.html',
+    styleUrl: './combat.component.scss'
 })
 export class CombatComponent {
 

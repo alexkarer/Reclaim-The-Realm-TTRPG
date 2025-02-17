@@ -11,11 +11,10 @@ import equipmentJson from '../../../../ttrpg_resources/equipment/equipment.json'
 import { halveArray } from '../../shared/utils/array-utils';
 
 @Component({
-  selector: 'app-equipment',
-  standalone: true,
-  imports: [DynamicContentComponent, NgbScrollSpyFragment, KeywordProcessorPipe, WeaponsComponent, ArmourComponent, OtherItemsComponent, CraftingComponent, MagicItemsComponent],
-  templateUrl: './equipment.component.html',
-  styleUrl: './equipment.component.scss'
+    selector: 'app-equipment',
+    imports: [DynamicContentComponent, NgbScrollSpyFragment, KeywordProcessorPipe, WeaponsComponent, ArmourComponent, OtherItemsComponent, CraftingComponent, MagicItemsComponent],
+    templateUrl: './equipment.component.html',
+    styleUrl: './equipment.component.scss'
 })
 export class EquipmentComponent {
   public readonly equipmentJson = equipmentJson;

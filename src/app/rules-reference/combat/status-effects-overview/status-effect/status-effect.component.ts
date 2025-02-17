@@ -4,11 +4,10 @@ import { DynamicContentComponent } from '../../../../shared/text-utils/dynamic-c
 import { KeywordProcessorPipe } from '../../../../shared/text-utils/keyword-processor';
 
 @Component({
-  selector: 'app-status-effect',
-  standalone: true,
-  imports: [NgbScrollSpyFragment, DynamicContentComponent, KeywordProcessorPipe],
-  templateUrl: './status-effect.component.html',
-  styleUrl: './status-effect.component.scss'
+    selector: 'app-status-effect',
+    imports: [NgbScrollSpyFragment, DynamicContentComponent, KeywordProcessorPipe],
+    templateUrl: './status-effect.component.html',
+    styleUrl: './status-effect.component.scss'
 })
 export class StatusEffectComponent {
 

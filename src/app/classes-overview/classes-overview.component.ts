@@ -4,11 +4,10 @@ import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle } from
 import { ClassComponent } from './class/class.component';
 
 @Component({
-  selector: 'app-classes-overview',
-  standalone: true,
-  imports: [NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, ClassComponent],
-  templateUrl: './classes-overview.component.html',
-  styleUrl: './classes-overview.component.scss'
+    selector: 'app-classes-overview',
+    imports: [NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, ClassComponent],
+    templateUrl: './classes-overview.component.html',
+    styleUrl: './classes-overview.component.scss'
 })
 export class ClassesOverviewComponent {
   public readonly ClassNames = ClassNames;

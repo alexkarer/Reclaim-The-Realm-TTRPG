@@ -10,25 +10,24 @@ import { ClassesComponent } from './classes/classes.component';
 import { AbilitiesComponent } from "./abilities/abilities.component";
 
 @Component({
-  selector: 'app-rules-reference',
-  standalone: true,
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [
-    NgbScrollSpy, 
-    NgbScrollSpyMenu, 
-    NgbScrollSpyItem, 
-    NgbScrollSpyFragment,
-    CharacterOverviewComponent, 
-    RulesOverviewComponent,
-    EquipmentComponent,
-    AdventuringComponent,
-    CombatComponent,
-    ToolboxComponent,
-    ClassesComponent,
-    AbilitiesComponent
-],
-  templateUrl: './rules-reference.component.html',
-  styleUrl: './rules-reference.component.scss'
+    selector: 'app-rules-reference',
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    imports: [
+        NgbScrollSpy,
+        NgbScrollSpyMenu,
+        NgbScrollSpyItem,
+        NgbScrollSpyFragment,
+        CharacterOverviewComponent,
+        RulesOverviewComponent,
+        EquipmentComponent,
+        AdventuringComponent,
+        CombatComponent,
+        ToolboxComponent,
+        ClassesComponent,
+        AbilitiesComponent
+    ],
+    templateUrl: './rules-reference.component.html',
+    styleUrl: './rules-reference.component.scss'
 })
 export class RulesReferenceComponent {
 

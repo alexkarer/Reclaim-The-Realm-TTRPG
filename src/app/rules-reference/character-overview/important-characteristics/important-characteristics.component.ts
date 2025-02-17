@@ -9,11 +9,10 @@ import otherValuesJson from "../../../../../ttrpg_resources/character_values/oth
 import { halveArray } from '../../../shared/utils/array-utils';
 
 @Component({
-  selector: 'app-important-characteristics',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
-  templateUrl: './important-characteristics.component.html',
-  styleUrl: './important-characteristics.component.scss'
+    selector: 'app-important-characteristics',
+    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
+    templateUrl: './important-characteristics.component.html',
+    styleUrl: './important-characteristics.component.scss'
 })
 export class ImportantCharacteristicsComponent {
   public readonly levelDescription: string = coreValuesJson.levelDescription;

@@ -5,11 +5,10 @@ import { KeywordProcessorPipe } from "../../../shared/text-utils/keyword-process
 import spellsRulesJson from '../../../../../ttrpg_resources/spells/spellRules.json';
 
 @Component({
-  selector: 'app-spells',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe],
-  templateUrl: './spells.component.html',
-  styleUrl: './spells.component.scss'
+    selector: 'app-spells',
+    imports: [DynamicContentComponent, KeywordProcessorPipe],
+    templateUrl: './spells.component.html',
+    styleUrl: './spells.component.scss'
 })
 export class SpellsComponent {
   public readonly spellRulesJson = spellsRulesJson;

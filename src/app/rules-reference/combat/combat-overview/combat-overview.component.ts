@@ -5,11 +5,10 @@ import { KeywordProcessorPipe } from "../../../shared/text-utils/keyword-process
 import combatOverviewJson from '../../../../../ttrpg_resources/combat/combat_overview.json'
 
 @Component({
-  selector: 'app-combat-overview',
-  standalone: true,
-  imports: [NgbScrollSpyFragment, DynamicContentComponent, KeywordProcessorPipe],
-  templateUrl: './combat-overview.component.html',
-  styleUrl: './combat-overview.component.scss'
+    selector: 'app-combat-overview',
+    imports: [NgbScrollSpyFragment, DynamicContentComponent, KeywordProcessorPipe],
+    templateUrl: './combat-overview.component.html',
+    styleUrl: './combat-overview.component.scss'
 })
 export class CombatOverviewComponent {
   public readonly combatOverviewJson = combatOverviewJson;

@@ -6,11 +6,10 @@ import combatDetailsJson from '../../../../../ttrpg_resources/combat/combat_deta
 import { AbilityListComponent } from "../../../shared/ability/ability-list/ability-list.component";
 
 @Component({
-  selector: 'app-combat-details',
-  standalone: true,
-  imports: [NgbScrollSpyFragment, DynamicContentComponent, KeywordProcessorPipe, AbilityListComponent],
-  templateUrl: './combat-details.component.html',
-  styleUrl: './combat-details.component.scss'
+    selector: 'app-combat-details',
+    imports: [NgbScrollSpyFragment, DynamicContentComponent, KeywordProcessorPipe, AbilityListComponent],
+    templateUrl: './combat-details.component.html',
+    styleUrl: './combat-details.component.scss'
 })
 export class CombatDetailsComponent {
 

@@ -4,11 +4,10 @@ import { KeywordProcessorPipe } from '../../../shared/text-utils/keyword-process
 import travelJson from '../../../../../ttrpg_resources/adventuring/travel.json'
 
 @Component({
-  selector: 'app-travel',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe],
-  templateUrl: './travel.component.html',
-  styleUrl: './travel.component.scss'
+    selector: 'app-travel',
+    imports: [DynamicContentComponent, KeywordProcessorPipe],
+    templateUrl: './travel.component.html',
+    styleUrl: './travel.component.scss'
 })
 export class TravelComponent {
 

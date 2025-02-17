@@ -7,11 +7,10 @@ import { advancedManeuvers, basicManeuvers, masterManeuvers, transcendentManeuve
 import martialManeuversJson from '../../../../../ttrpg_resources/martial_maneuvers/martial_maneuvers_overview.json';
 
 @Component({
-  selector: 'app-martial-maneuvers',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe],
-  templateUrl: './martial-maneuvers.component.html',
-  styleUrl: './martial-maneuvers.component.scss'
+    selector: 'app-martial-maneuvers',
+    imports: [DynamicContentComponent, KeywordProcessorPipe],
+    templateUrl: './martial-maneuvers.component.html',
+    styleUrl: './martial-maneuvers.component.scss'
 })
 export class MartialManeuversComponent {
 

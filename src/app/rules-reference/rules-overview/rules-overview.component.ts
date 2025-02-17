@@ -7,11 +7,10 @@ import keywordsJson from '../../../../ttrpg_resources/rules_overview/keywords.js
 import { CoreGameplayComponent } from "./core-gameplay/core-gameplay.component";
 
 @Component({
-  selector: 'app-rules-overview',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment, CoreGameplayComponent],
-  templateUrl: './rules-overview.component.html',
-  styleUrl: './rules-overview.component.scss'
+    selector: 'app-rules-overview',
+    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment, CoreGameplayComponent],
+    templateUrl: './rules-overview.component.html',
+    styleUrl: './rules-overview.component.scss'
 })
 export class RulesOverviewComponent {
   public readonly introductionText: string = introductionJson.introduction;

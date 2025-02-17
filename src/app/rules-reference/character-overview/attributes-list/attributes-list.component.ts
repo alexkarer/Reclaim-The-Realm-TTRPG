@@ -5,11 +5,10 @@ import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import { KeywordProcessorPipe } from "../../../shared/text-utils/keyword-processor";
 
 @Component({
-  selector: 'app-attributes-list',
-  standalone: true,
-  imports: [DynamicContentComponent, NgbScrollSpyFragment, KeywordProcessorPipe],
-  templateUrl: './attributes-list.component.html',
-  styleUrl: './attributes-list.component.scss'
+    selector: 'app-attributes-list',
+    imports: [DynamicContentComponent, NgbScrollSpyFragment, KeywordProcessorPipe],
+    templateUrl: './attributes-list.component.html',
+    styleUrl: './attributes-list.component.scss'
 })
 export class AttributesListComponent {
   public attributesLeft: Attribute[] = attributes.slice(0,3);

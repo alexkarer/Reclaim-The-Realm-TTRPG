@@ -5,11 +5,10 @@ import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle } from
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-martial-manuevers-search',
-  standalone: true,
-  imports: [AbilityListComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule],
-  templateUrl: './martial-manuevers-search.component.html',
-  styleUrl: './martial-manuevers-search.component.scss'
+    selector: 'app-martial-manuevers-search',
+    imports: [AbilityListComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule],
+    templateUrl: './martial-manuevers-search.component.html',
+    styleUrl: './martial-manuevers-search.component.scss'
 })
 export class MartialManueversSearchComponent {
   private allManeuvers: MartialManeuver[] = [];

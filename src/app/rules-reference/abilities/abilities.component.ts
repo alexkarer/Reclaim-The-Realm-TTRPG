@@ -5,11 +5,10 @@ import { HybridAbilitiesComponent } from "./hybrid-abilities/hybrid-abilities.co
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-abilities',
-  standalone: true,
-  imports: [MartialManeuversComponent, SpellsComponent, HybridAbilitiesComponent, NgbScrollSpyFragment],
-  templateUrl: './abilities.component.html',
-  styleUrl: './abilities.component.scss'
+    selector: 'app-abilities',
+    imports: [MartialManeuversComponent, SpellsComponent, HybridAbilitiesComponent, NgbScrollSpyFragment],
+    templateUrl: './abilities.component.html',
+    styleUrl: './abilities.component.scss'
 })
 export class AbilitiesComponent {
 

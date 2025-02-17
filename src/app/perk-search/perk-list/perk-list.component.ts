@@ -5,11 +5,10 @@ import { DynamicContentComponent } from "../../shared/text-utils/dynamic-compone
 import { KeywordProcessorPipe } from "../../shared/text-utils/keyword-processor";
 
 @Component({
-  selector: 'app-perk-list',
-  standalone: true,
-  imports: [RequirementsPrettierPipe, DynamicContentComponent, KeywordProcessorPipe],
-  templateUrl: './perk-list.component.html',
-  styleUrl: './perk-list.component.scss'
+    selector: 'app-perk-list',
+    imports: [RequirementsPrettierPipe, DynamicContentComponent, KeywordProcessorPipe],
+    templateUrl: './perk-list.component.html',
+    styleUrl: './perk-list.component.scss'
 })
 export class PerkListComponent implements OnInit {
   @Input() public perkList?: Perk[];

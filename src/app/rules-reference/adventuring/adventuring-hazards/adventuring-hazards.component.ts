@@ -4,11 +4,10 @@ import { KeywordProcessorPipe } from '../../../shared/text-utils/keyword-process
 import adventuringHazardsJson from '../../../../../ttrpg_resources/adventuring/adventuring_hazards.json'
 
 @Component({
-  selector: 'app-adventuring-hazards',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe],
-  templateUrl: './adventuring-hazards.component.html',
-  styleUrl: './adventuring-hazards.component.scss'
+    selector: 'app-adventuring-hazards',
+    imports: [DynamicContentComponent, KeywordProcessorPipe],
+    templateUrl: './adventuring-hazards.component.html',
+    styleUrl: './adventuring-hazards.component.scss'
 })
 export class AdventuringHazardsComponent {
 

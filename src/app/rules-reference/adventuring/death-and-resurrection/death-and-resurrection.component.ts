@@ -5,11 +5,10 @@ import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import deathAndRessurectionJson from '../../../../../ttrpg_resources/adventuring/death_and_resurrection.json'
 
 @Component({
-  selector: 'app-death-and-resurrection',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
-  templateUrl: './death-and-resurrection.component.html',
-  styleUrl: './death-and-resurrection.component.scss'
+    selector: 'app-death-and-resurrection',
+    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
+    templateUrl: './death-and-resurrection.component.html',
+    styleUrl: './death-and-resurrection.component.scss'
 })
 export class DeathAndResurrectionComponent {
   public readonly description = deathAndRessurectionJson.description;

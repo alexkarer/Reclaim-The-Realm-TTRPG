@@ -9,11 +9,10 @@ import { DynamicContentComponent } from "../../../text-utils/dynamic-component-r
 import { KeywordProcessorPipe } from "../../../text-utils/keyword-processor";
 
 @Component({
-  selector: 'app-ability-list-item',
-  standalone: true,
-  imports: [NgbCollapse, RequirementsPrettierPipe, DynamicContentComponent, KeywordProcessorPipe],
-  templateUrl: './ability-list-item.component.html',
-  styleUrl: './ability-list-item.component.scss'
+    selector: 'app-ability-list-item',
+    imports: [NgbCollapse, RequirementsPrettierPipe, DynamicContentComponent, KeywordProcessorPipe],
+    templateUrl: './ability-list-item.component.html',
+    styleUrl: './ability-list-item.component.scss'
 })
 export class AbilityListItemComponent {
   @Input() public ability?: Ability;

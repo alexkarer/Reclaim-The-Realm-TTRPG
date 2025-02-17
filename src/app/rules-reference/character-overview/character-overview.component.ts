@@ -11,11 +11,10 @@ import attributeTexts from '../../../../ttrpg_resources/character_values/attribu
 import skillRulesJson from '../../../../ttrpg_resources/skills/skillRules.json';
 
 @Component({
-  selector: 'app-character-overview',
-  standalone: true,
-  imports: [SkillListComponent, AttributesListComponent, NgbScrollSpyFragment, KeywordProcessorPipe, DynamicContentComponent, ImportantCharacteristicsComponent, ProgressionComponent],
-  templateUrl: './character-overview.component.html',
-  styleUrl: './character-overview.component.scss'
+    selector: 'app-character-overview',
+    imports: [SkillListComponent, AttributesListComponent, NgbScrollSpyFragment, KeywordProcessorPipe, DynamicContentComponent, ImportantCharacteristicsComponent, ProgressionComponent],
+    templateUrl: './character-overview.component.html',
+    styleUrl: './character-overview.component.scss'
 })
 export class CharacterOverviewComponent {
   public readonly attributeDescription = attributeTexts.attributeDescription;

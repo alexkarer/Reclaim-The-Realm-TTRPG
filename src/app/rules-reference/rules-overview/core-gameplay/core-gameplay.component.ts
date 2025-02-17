@@ -5,11 +5,10 @@ import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import coreGameplayJson from '../../../../../ttrpg_resources/rules_overview/core_gameplay.json';
 
 @Component({
-  selector: 'app-core-gameplay',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
-  templateUrl: './core-gameplay.component.html',
-  styleUrl: './core-gameplay.component.scss'
+    selector: 'app-core-gameplay',
+    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
+    templateUrl: './core-gameplay.component.html',
+    styleUrl: './core-gameplay.component.scss'
 })
 export class CoreGameplayComponent {
   public readonly coreGameplayIntroduction: string = coreGameplayJson.core_gameplay_introduction;

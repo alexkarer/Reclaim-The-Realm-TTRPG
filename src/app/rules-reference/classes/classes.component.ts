@@ -4,11 +4,10 @@ import { KeywordProcessorPipe } from '../../shared/text-utils/keyword-processor'
 import commonClassTexts from '../../../../ttrpg_resources/classes/common_class_texts.json';
 
 @Component({
-  selector: 'app-classes',
-  standalone: true,
-  imports: [DynamicContentComponent, KeywordProcessorPipe],
-  templateUrl: './classes.component.html',
-  styleUrl: './classes.component.scss'
+    selector: 'app-classes',
+    imports: [DynamicContentComponent, KeywordProcessorPipe],
+    templateUrl: './classes.component.html',
+    styleUrl: './classes.component.scss'
 })
 export class ClassesComponent {
 
