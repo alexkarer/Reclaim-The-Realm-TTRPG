@@ -1,6 +1,6 @@
 {
     "className": "Priest",
-    "classDescription": "",
+    "classDescription": "Someone has to play to healer.",
     "coreClassValues": {
         "hpPerLevel": 6,
         "martialProficiency": 0.334,
@@ -394,12 +394,7 @@
         {
             "name": "Lingering Healing",
             "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 2 AD(3-)",
             "range": "-",
             "target": "one ally that was targeted by a [SPELL ABILITY]",
@@ -409,12 +404,7 @@
         {
             "name": "Holy Strike",
             "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 2 AD(3-)",
             "range": "-",
             "target": "self",
@@ -424,12 +414,7 @@
         {
             "name": "Mercy of the Gods",
             "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], nubmer of AD(2-) equal to spell power",
             "range": "-",
             "target": "",
@@ -439,12 +424,7 @@
         {
             "name": "Rejuvination",
             "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 2" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "1 [AP], 2 AD(1)",
             "range": "6m",
             "target": "one ally that is [UNCONCIOUS]",
@@ -454,12 +434,7 @@
         {
             "name": "Holy Fire",
             "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 2" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "3 [AP], 3 AD(1)",
             "range": "9m",
             "target": "evil creatures with range",
@@ -469,12 +444,7 @@
         {
             "name": "Unholy Strike",
             "tags": [ "Class Technique (Priest, Evil)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 2 AD(4+)",
             "range": "-",
             "target": "self",
@@ -484,12 +454,7 @@
         {
             "name": "Unholy Fire",
             "tags": [ "Class Technique (Priest, Evil)", "[SPELL ABILITY] 2" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "3 [AP], 3 AD(6)",
             "range": "12m",
             "target": "[SPHERE] 3m",
@@ -499,12 +464,7 @@
         {
             "name": "Divine Clense",
             "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "1 [AP], 2 matching AD",
             "range": "12m",
             "target": "1 creature",
@@ -514,12 +474,7 @@
         {
             "name": "Protection",
             "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "1 reaction, 2 matching AD",
             "range": "9m",
             "target": "1 ally",
@@ -529,12 +484,7 @@
         {
             "name": "Certainty",
             "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 2 matching AD",
             "range": "-",
             "target": "self",
@@ -544,12 +494,7 @@
         {
             "name": "Sanctified Shackles",
             "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "1 [AP], 2 matching AD",
             "range": "9m",
             "target": "one creature",
@@ -559,12 +504,7 @@
         {
             "name": "Unyielding",
             "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "1 reaction, 3 matching AD",
             "range": "-",
             "target": "self",
@@ -574,12 +514,7 @@
         {
             "name": "Self Restoration",
             "tags": [ "Class Technique (Priest, Chaos)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], two unique AD",
             "range": "-",
             "target": "self",
@@ -589,12 +524,7 @@
         {
             "name": "Second Chance",
             "tags": [ "Class Technique (Priest, Chaos)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "1 reaction, 3 unique AD",
             "range": "6m",
             "target": "1 creature",
@@ -604,12 +534,7 @@
         {
             "name": "Blessed Cast",
             "tags": [ "Class Technique (Priest, Chaos)", "[SPELL ABILITY] 1" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 4 unique AD",
             "range": "-",
             "target": "self",

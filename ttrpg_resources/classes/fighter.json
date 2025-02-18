@@ -1,6 +1,6 @@
 {
     "className": "Fighter",
-    "classDescription": "I like the incredable diverse character options, thats why I choose a Human Fighter.",
+    "classDescription": "I like the incredible diverse character options, thats why I choose a Human Fighter.",
     "coreClassValues": {
         "hpPerLevel": 10,
         "martialProficiency": 1.0,
@@ -10,7 +10,7 @@
         "dodgeProficiency": 0.667,
         "hardnessProficiency": 0.667,
         "toughnessProficiency": 0.667,
-        "willpowerProficiency": 0.667,
+        "willpowerProficiency": 0.334,
         "mainClassAttributes": [ "[STR]", "[AGI]", "[PER]" ],
         "classSKills": [ "Athletics", "Awareness", "Survival" ],
         "skillPointsPerLevel": 4,
@@ -44,7 +44,7 @@
             "name": "Champion",
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "The Champion is a Leader, a Hero inspiring his group and leading them towards Victory.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -55,7 +55,7 @@
             "name": "Tactician",
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "The Tactician is genious in tactics and strategy, spezialising in meticulous planning and finding ways to turn around a losing battle.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -66,7 +66,7 @@
             "name": "Ranger",
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "The Ranger is an expierienced survivalist and traveller, they are often sought as guides through the dangerous wildlands of the realm. They live for the challange of the wildlands and is no path they will not seek out no matter how dangerous.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -81,7 +81,7 @@
             "relatedClassPath": "Champion",
             "textElements": [
                 {
-                    "regularText": "[CHA] is now a Class Attribute for you (Increase attribute maximum or current). Additionally the first time each [ROUND] an ally gains [THP] or a receives benficial Status Effect, you gain 1 Focus.",
+                    "regularText": "[CHA] is now a Class Attribute for you (Increase attribute maximum or current). Additionally the first time each [ROUND] you target an ally with a buffing ability, you gain 1 Focus.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -94,7 +94,59 @@
             "relatedClassPath": "Tactician",
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "[INT] is now a Class Attribute for you (Increase attribute maximum or current). Additionally you gain access to the following Ability:",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability":  {
+                        "name": "Priority Target",
+                        "tags": [ "Class Technique (Fighter, Tactician)" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "1 [AP]",
+                        "range": "12m",
+                        "target": "1 creature",
+                        "duration": "until end of combat or the creature is reduced to 0 [HP].",
+                        "description": "You designate the targeted creature as a priority target, each time you or your allies target the priority target with an ability, they gain a bonus any relevant [D20 TEST] equal to half your [INT] (rounded down). You can only have 1 priority target simultaneously. As soon as the priority target is reduced to 0 [HP], you gain Focus equal to the [LEVEL] of the creature (rounded up)."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Ranger Improvements",
+            "levels": [ 1 ],
+            "relatedClassPath": "Ranger",
+            "textElements": [
+                {
+                    "regularText": "The Ranger recieves the following benefits:",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Reduce the Speed Penalty you get through Terrain modifiers by 1. (e.g. a -1 penalty to Travel speed becomes 0).",
+                        "During the first 6 hours of Travel you do not need to spend any [STAMINA]",
+                        "You can add Geography and Stealth to your Class Skills and you gain 2 additional Skill Points per [LEVEL].",
+                        "Improve your base [MP] by 1."
+                    ],
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Martial Expertiese",
+            "levels": [ 1,3,5,7,9,11 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "Each time you get this feature you recieve an additional Martial Perk.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -102,12 +154,50 @@
             ]
         },
         {
-            "name": "",
-            "levels": [ 1 ],
-            "relatedClassPath": "Ranger",
+            "name": "Rigorous training Regiment",
+            "levels": [ 2,4,6,8,10,12 ],
+            "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "Each time you get this feature you can increase your [STR], [AGI], [CON] or [PER] Attribute by 1, but not above your maximum.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Armour expert",
+            "levels": [ 2,5,8,11 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "The Fighter is an expert at wearing armour and moving efficiently with it. Each time you get this feature you can reduced the Manoeuvre Penalty by 1. Additionally at 11th level you can also reduce the Movement Penalty by 1.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Against all Odds",
+            "levels": [ 3,6,9 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "Each time you have to make a [SAVE] to resist an ability that bestows a [FRIGHTENED I], [FRIGHTENED II] or [FRIGHTINED III] status effect. Instead of your regular Defense Proficiency, you can add your [LEVEL] to the Roll.<br>",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": "At 6th Level you also gain [ADVANTAGE] on such a [SAVE].",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": "At 9th Level you are immune to the [FRIGHTENED I], [FRIGHTENED II] or [FRIGHTINED III] status effects.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -131,79 +221,64 @@
     "classTechniquesDescription": "",
     "classTechniques": [
         {
-            "name": "",
+            "name": "Efficient Maneuver",
             "tags": [ "Class Technique (Fighter)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
-            "cost": "",
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "2 or more Focus",
             "range": "-",
-            "target": "",
-            "duration": "",
-            "description": ""
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you perform a Martial Maneuver instead of it using your [STAMINA] you can alternatively spend 2 Focus per 1 [STAMINA] cost."
         },
         {
-            "name": "",
+            "name": "Optimal Deflection",
             "tags": [ "Class Technique (Fighter)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
-            "cost": "",
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "1 [REACTION], 1 or more Focus",
             "range": "-",
-            "target": "",
-            "duration": "",
-            "description": ""
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you are hit by an [ATTACK], you can use this Class Technique. If you are wearing a Shield, you can increase the Shield Block Test by +1 for each Focus you spend. Or alternativly you can improve the phyiscial resistance provided by the armor by 2 for each Focus you spend against that [ATTACK]."
         },
         {
-            "name": "",
+            "name": "Deadly Strike",
             "tags": [ "Class Technique (Fighter)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
-            "cost": "",
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 1-3 Focus",
             "range": "-",
-            "target": "",
-            "duration": "",
-            "description": ""
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "After successfully making an [ATTACK] you can deal 1d8 bonus physical damage per Focus spent."
         },
         {
-            "name": "",
+            "name": "Precision Strike",
             "tags": [ "Class Technique (Fighter)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
-            "cost": "",
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 1 or more Focus",
             "range": "-",
-            "target": "",
-            "duration": "",
-            "description": ""
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "After making an [ATTACK] you can use this Class Technique and you can add 1d6 to the [ATTACK] roll for each Focus spent."
         },
         {
-            "name": "",
+            "name": "Pain Suppression",
             "tags": [ "Class Technique (Fighter)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
-            "cost": "",
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 1-3 Focus",
             "range": "-",
-            "target": "",
-            "duration": "",
-            "description": ""
+            "target": "[SELF]",
+            "duration": "until the end of your [TURN]",
+            "description": "You can use this Class Technique at the start of the [TURN] even if you otherwise couldn't act, unless you are [UNCONCIOUS]. You can suppress a single Status Effect of your choice except [GRAPPLED] and [RESTRAINED] and it's effect will seize for the duration of the ability. If you spend 1 Focus you an suppress a Tier I status effect, 2 Focus a Tier II status effect and 3 Focus a Tier III status effect. Keep in mind you can only suppress 1 instance of a Status Effect meaning that if the same status affect has 2 instances affecting you, you will have to use this ability twice against both status effects for it to have an effect."
+        },
+        {
+            "name": "Combined Maneuver",
+            "tags": [ "Class Technique (Fighter)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 3 Focus",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you use a Martial Maneuver that includes a Weapon Attack, you can use a different Martial Maneuver as part of the same Weapon Attack.<br>(Explanation: still only 1 Weapon Attack is made however you could use crippling strike and deep cut simultaneously and if the attack is successfuly the target is bleeding and crippled at the same time)."
         }
     ]
 }

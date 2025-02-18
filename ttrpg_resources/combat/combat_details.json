@@ -247,7 +247,7 @@
                 "range": "-",
                 "target": "[SELF]",
                 "duration": "[INSTANT]",
-                "description": "When you are hit by a [MELEE ATTACK] you can use this reaction. Make a Weapon [MELEE MARTIAL ATTACK] if it matches or exceeds the [MELEE ATTACK] that targeted you, the damage from the [ATTACK] is reduced by 2 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded one-handed, or by 3 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded two-handed."
+                "description": "When you are hit by a [MELEE ATTACK] you can use this reaction. Make a Weapon [MELEE MARTIAL ATTACK] if it matches or exceeds the [MELEE ATTACK] that targeted you, the damage from the [ATTACK] is reduced by [AGI] + [MARTIAL LEVEL] if weapon is wielded one-handed, or by 2 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded two-handed."
             }
         ]
     },

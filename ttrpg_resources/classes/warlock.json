@@ -61,12 +61,7 @@
         {
             "name": "",
             "tags": [ "Class Technique (Barbarian" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "",
             "range": "-",
             "target": "",

@@ -1,6 +1,6 @@
 {
     "className": "Mage",
-    "classDescription": "",
+    "classDescription": "Wanna play a nerd?",
     "coreClassValues": {
         "hpPerLevel": 6,
         "martialProficiency": 0.0,
@@ -61,12 +61,7 @@
         {
             "name": "",
             "tags": [ "Class Technique (Barbarian" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "",
             "range": "-",
             "target": "",

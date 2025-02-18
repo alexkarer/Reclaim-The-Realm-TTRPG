@@ -232,12 +232,7 @@
         {
             "name": "Stunning Sneak Attack",
             "tags": [ "Class Technique (Rogue)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 2 or more Trickery",
             "range": "-",
             "target": "self",
@@ -247,12 +242,7 @@
         {
             "name": "Crippling Sneak Attack",
             "tags": [ "Class Technique (Rogue)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 2 or more Trickery",
             "range": "-",
             "target": "self",
@@ -262,12 +252,7 @@
         {
             "name": "Bleeding Sneak Attack",
             "tags": [ "Class Technique (Rogue)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 2 or more Trickery",
             "range": "-",
             "target": "self",
@@ -277,12 +262,7 @@
         {
             "name": "Weakening Sneak Attack",
             "tags": [ "Class Technique (Rogue)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 2 or more Trickery",
             "range": "-",
             "target": "self",
@@ -292,12 +272,7 @@
         {
             "name": "Flash of Inspiration",
             "tags": [ "Class Technique (Rogue)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 1 or more Trickery",
             "range": "-",
             "target": "self",
@@ -307,12 +282,7 @@
         {
             "name": "Lightning Reactions",
             "tags": [ "Class Technique (Rogue)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 1 or more Trickery",
             "range": "-",
             "target": "self",
@@ -322,12 +292,7 @@
         {
             "name": "Quick spurt",
             "tags": [ "Class Technique (Rogue)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 1 Trickery",
             "range": "-",
             "target": "self",
@@ -337,12 +302,7 @@
         {
             "name": "Blending In",
             "tags": [ "Class Technique (Rogue)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "0 [AP], 2 Trickery",
             "range": "-",
             "target": "self",
@@ -352,12 +312,7 @@
         {
             "name": "Efficient Maneuver",
             "tags": [ "Class Technique (Barbarian)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "2 or more Trickery",
             "range": "-",
             "target": "[SELF]",
@@ -367,12 +322,7 @@
         {
             "name": "Identify Weakspot",
             "tags": [ "Class Technique (Rogue)" ],
-            "requirements": {
-                "requiredLevels": [ ],
-                "requiredAttributes": [ ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "1 [AP] + Trickery",
             "range": "1 creature",
             "target": "12m",

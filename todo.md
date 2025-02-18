@@ -6,14 +6,17 @@ TODO before playtest:
 - warlock, carry over and rework
   - corruption table
   - Mutations
-- fighter (implement ideas)
 
 add character creation process with origins
+
+fix martial maneuver writing (reference Weapon Attack ability)
 
 **Equipment**
 - add rules for shields
 - other items
 - books, +1 to lore and a bigger bonus to one specific check if 1h spent to research
+
+finish massive injuries table
 
 create character sheet
 create cheet sheet
@@ -27,29 +30,21 @@ Evaluation for after Playtest:
 - Robes?
 - hybrid abilities necesarry?
 - have another look at the implementation of the martial training perks
-
-___________________________________________________________
-Cleanup:
-
-- fix links
-- add missing keyword descritpions
-- check no console errors
-- proper phrasing of some stuff in the combat
-- fix scrolling
-- add missing spellcasting perk stuff
-
 ___________________________________________________________
 Future Ideas / Nice to have:
 
-- Flesh out Adventure Section
-
+**Missing/partially done things**
+- Finish out Adventure Section
 - flesh out magical misshap table
+- add missing spellcasting perk stuff
+- fix links
+- add missing keyword descritpions
+- proper phrasing of some stuff in the combat
 
 **Status Effects:**
 - Confused Condition?
 
-have colored abilities and more icons
-
-create npc generator
-
-add missing abilities
+**Nice to have**
+- have colored abilities and more icons
+- create npc generator
+- add missing abilities

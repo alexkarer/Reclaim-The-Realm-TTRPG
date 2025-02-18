@@ -125,7 +125,7 @@
             <div class="d-flex justify-content-center">
                 <h4>{{ playerClass?.className + ' Class Techniques' }}</h4>
             </div>
-            <app-dynamic-content [content]="playerClass?.classTechniquesDescription | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="playerClass?.classTechniquesDescription?.replace('%s', playerClass?.className ?? '')| keywordProcessor"></app-dynamic-content>
             <app-dynamic-content [content]="commonClassTexts.numberOfTechniquesKnown | keywordProcessor"></app-dynamic-content>
             <div class="mt-2">
                 <app-ability-list [abilities]="playerClass ? playerClass.classTechniques : []"></app-ability-list>
