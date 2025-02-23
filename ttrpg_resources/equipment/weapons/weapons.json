@@ -7,7 +7,14 @@
             "cost": "2 gc",
             "weightInGram": 500,
             "type": "Simple Weapon",
-            "description": "A small simple short blade favoured by assasin’s and those looking to conceil their weapon.",
+            "description": [
+                {
+                    "regularText": "A small simple short blade favoured by assasin’s and those looking to conceil their weapon.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "light", "thrown(4.5/9/18)" ],
             "damage": "light [MARTIAL DAMAGE]"
         },
@@ -18,7 +25,14 @@
             "cost": "1 gc",
             "weightInGram": 2000,
             "type": "Simple Weapon",
-            "description": "A heavy piece of metal on a stick, not complicated and still dangerous. Can also be a hammer or a similiar bludgeonding weapon",
+            "description": [
+                {
+                    "regularText": "A heavy piece of metal on a stick, not complicated and still dangerous. Can also be a hammer or a similiar bludgeonding weapon",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "armour-piercing" ],
             "damage": "one-handed [MARTIAL DAMAGE]"
         },
@@ -29,7 +43,14 @@
             "cost": "5 sc",
             "weightInGram": 1000,
             "type": "Simple Weapon",
-            "description": "sharp piece of metal on a stick, the favored weapon of peasents and militia.",
+            "description": [
+                {
+                    "regularText": "sharp piece of metal on a stick, the favored weapon of peasents and militia.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "versatile" ],
             "damage": "one-handed [MARTIAL DAMAGE]"
         },
@@ -40,7 +61,14 @@
             "cost": "5 gc",
             "weightInGram": 3000,
             "type": "Simple Weapon",
-            "description": "While cumbersome to operate, it is easy to use",
+            "description": [
+                {
+                    "regularText": "While cumbersome to operate, it is easy to use",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "two-handed", "ranged(20/40/80)", "loading(1, 2 [AP])" ],
             "damage": "2d6"
         }
@@ -53,7 +81,14 @@
             "cost": "5 gc",
             "weightInGram": 1000,
             "type": "Advanced Weapon",
-            "description": "flexible small sword: gladius, small scimitar, etc.",
+            "description": [
+                {
+                    "regularText": "flexible small sword: gladius, small scimitar, etc.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "light", "duelist" ],
             "damage": "light [MARTIAL DAMAGE]"
         },
@@ -64,7 +99,14 @@
             "cost": "10 gc",
             "weightInGram": 1500,
             "type": "Advanced Weapon",
-            "description": "The classic",
+            "description": [
+                {
+                    "regularText": "The classic",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "versatile", "duelist" ],
             "damage": "one-handed [MARTIAL DAMAGE]"
         },
@@ -75,7 +117,14 @@
             "cost": "5 gc",
             "weightInGram": 2500,
             "type": "Advanced Weapon",
-            "description": "Dwarves favourite",
+            "description": [
+                {
+                    "regularText": "Dwarves favourite",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "versatile", "armour-piercing" ],
             "damage": "one-handed [MARTIAL DAMAGE]"
         },
@@ -86,7 +135,14 @@
             "cost": "8 gc",
             "weightInGram": 2000,
             "type": "Advanced Weapon",
-            "description": "",
+            "description": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "versatile", "shieldbreaker" ],
             "damage": "one-handed [MARTIAL DAMAGE]"
         },
@@ -97,7 +153,14 @@
             "cost": "10 gc",
             "weightInGram": 4000,
             "type": "Advanced Weapon",
-            "description": "Can be a halberd, pike, glaive",
+            "description": [
+                {
+                    "regularText": "Can be a halberd, pike, glaive",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "two-handed", "reach" ],
             "damage": "two-handed [MARTIAL DAMAGE]"
         },
@@ -108,7 +171,14 @@
             "cost": "25 gc",
             "weightInGram": 3000,
             "type": "Advanced Weapon",
-            "description": "Big sword",
+            "description": [
+                {
+                    "regularText": "Big sword",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "heavy", "two-handed", "duelist" ],
             "damage": "two-handed [MARTIAL DAMAGE]"
         },
@@ -119,7 +189,14 @@
             "cost": "10 gc",
             "weightInGram": 3000,
             "type": "Advanced Weapon",
-            "description": "Big hammer",
+            "description": [
+                {
+                    "regularText": "Big hammer",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "heavy", "two-handed", "armour-piercing" ],
             "damage": "two-handed [MARTIAL DAMAGE]"
         },
@@ -130,7 +207,14 @@
             "cost": "15 gc",
             "weightInGram": 3000,
             "type": "Advanced Weapon",
-            "description": "Big Axe",
+            "description": [
+                {
+                    "regularText": "Big Axe",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "heavy", "two-handed", "shieldbreaker" ],
             "damage": "two-handed [MARTIAL DAMAGE]"
         },
@@ -141,7 +225,14 @@
             "cost": "3 sc",
             "weightInGram": 500,
             "type": "Advanced Weapon",
-            "description": "similiar to a spear, but designed for throwing. Can also be a throwing axe",
+            "description": [
+                {
+                    "regularText": "similiar to a spear, but designed for throwing. Can also be a throwing axe",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "thrown(9/18/36)" ],
             "damage": "one-handed [MARTIAL DAMAGE]"
         },
@@ -152,7 +243,14 @@
             "cost": "10 gc",
             "weightInGram": 1500,
             "type": "Advanced Weapon",
-            "description": "the classic bow, wielded by trainend archers.",
+            "description": [
+                {
+                    "regularText": "the classic bow, wielded by trainend archers.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "two-handed", "ranged (30/60/120)" ],
             "damage": "one-handed [MARTIAL DAMAGE]"
         },
@@ -163,7 +261,14 @@
             "cost": "30 gc",
             "weightInGram": 7000,
             "type": "Advanced Weapon",
-            "description": "Large crossbow which is usually only used in siege warfare, often manned by a 2 people simaltanously. If your strength is lower than 3 the reload action requires 4 [AP]",
+            "description": [
+                {
+                    "regularText": "Large crossbow which is usually only used in siege warfare, often manned by a 2 people simaltanously. If your strength is lower than 3 the reload action requires 4 [AP]",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "loading(1, 2 [AP])", "two-handed", "ranged(30/60/120" ],
             "damage": "2d12"
         },
@@ -174,7 +279,14 @@
             "cost": "15 gc",
             "weightInGram": 750,
             "type": "Advanced Weapon",
-            "description": "You require one additional hand for reloading, but it can wield a light weapon or object in the hand simultaneously.",
+            "description": [
+                {
+                    "regularText": "You require one additional hand for reloading, but it can wield a light weapon or object in the hand simultaneously.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "loading(1, 2 [AP])", "light", "ranged(6/12/24)" ],
             "damage": "1d8"
         },
@@ -185,7 +297,14 @@
             "cost": "50 gc",
             "weightInGram": 3000,
             "type": "Advanced Weapon",
-            "description": "A complicated piece of equipment often used stationary in defensive implacements",
+            "description": [
+                {
+                    "regularText": "A complicated piece of equipment often used stationary in defensive implacements",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "properties": [ "loading(5, 4 [AP])", "two-handed", "ranged(6/12/24)" ],
             "damage": "2d4"
         }

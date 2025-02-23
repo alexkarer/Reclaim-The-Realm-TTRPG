@@ -1,3 +1,5 @@
+import { TextElement } from "../shared/TextElements";
+
 export class Equipment {
     name!: string;
     tier!: number;
@@ -5,7 +7,7 @@ export class Equipment {
     cost!: Cost;
     weightInGram!: number;
     type!: string;
-    description!: string;
+    description!: TextElement[];
 
     getPrettyWeightString(): string {
         if (this.weightInGram <= 0) {

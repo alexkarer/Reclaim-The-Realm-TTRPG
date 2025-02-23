@@ -7,10 +7,11 @@ import { simpleWeapons, advancedWeapons, ammunitions } from '../../../../../ttrp
 
 import weaponRulesJson from '../../../../../ttrpg_resources/equipment/weapons/weaponRules.json'
 import ammunitionRulesJson from '../../../../../ttrpg_resources/equipment/weapons/ammunitionsRules.json'
+import { TextElementsComponent } from "../../../shared/text-utils/text-elements/text-elements.component";
 
 @Component({
     selector: 'app-weapons',
-    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment, WeaponPropertyProcessor],
+    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment, WeaponPropertyProcessor, TextElementsComponent],
     templateUrl: './weapons.component.html',
     styleUrl: './weapons.component.scss'
 })

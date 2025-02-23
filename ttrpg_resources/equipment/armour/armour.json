@@ -6,7 +6,14 @@
         "cost": "15 gc",
         "weightInGram": 8000,
         "type": "Armour",
-        "description": "Padded cloth with small mail elements at critical areas",
+        "description": [
+            {
+                "regularText": "Padded cloth with small mail elements at critical areas",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ],
         "damageBlock": "1 physical",
         "manoeuvrePenalty": -1,
         "movementPenalty": 0
@@ -18,7 +25,14 @@
         "cost": "50 gc",
         "weightInGram": 1500,
         "type": "Armour",
-        "description": "Chain mail with additional cloth padding and light metal plates at critical areas, sometimes some type of lamellar armour.",
+        "description": [
+            {
+                "regularText": "Chain mail with additional cloth padding and light metal plates at critical areas, or some type of lamellar armour.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ],
         "damageBlock": "2 physical",
         "manoeuvrePenalty": -3,
         "movementPenalty": 0
@@ -30,7 +44,14 @@
         "cost": "200 gc",
         "weightInGram": 30000,
         "type": "Armour",
-        "description": "Steel Plates which protect the body all around with a chain mail vest underneath,",
+        "description": [
+            {
+                "regularText": "Steel Plates which protect the body all around with a chain mail vest underneath",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ],
         "damageBlock": "4 physical",
         "manoeuvrePenalty": -5,
         "movementPenalty": -1
@@ -42,7 +63,14 @@
         "cost": "1000 gc",
         "weightInGram": 60000,
         "type": "Armour",
-        "description": "Very similar to Heavy Armor, except the steel plates used are much thicker and the protection around the joints is much more elaborate and complex.",
+        "description": [
+            {
+                "regularText": "Very similar to Heavy Armor, except the steel plates used are much thicker and the protection around the joints is much more elaborate and complex.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ],
         "damageBlock": "6 physical",
         "manoeuvrePenalty": -7,
         "movementPenalty": -2

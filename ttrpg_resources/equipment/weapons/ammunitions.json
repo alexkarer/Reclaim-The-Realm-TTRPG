@@ -7,7 +7,14 @@
             "cost": "5 bc",
             "weightInGram": 20,
             "type": "Ammunition",
-            "description": "Arrow, can be recovered after firing if the shot was not a critical miss.",
+            "description": [
+                {
+                    "regularText": "Arrow, can be recovered after firing if the shot was not a critical miss.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "availibleWeapons": "Bows",
             "recoverable": true
         },
@@ -18,7 +25,14 @@
             "cost": "3 sc",
             "weightInGram": 30,
             "type": "Ammunition",
-            "description": "Any [ATTACK] made using this arrow have the armour-piercing property, can be recovered after firing if the shot was not a critical miss.",
+            "description": [
+                {
+                    "regularText": "Any [ATTACK] made using this arrow have the armour-piercing property, can be recovered after firing if the shot was not a critical miss.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "availibleWeapons": "Bows",
             "recoverable": true
         },
@@ -29,7 +43,14 @@
             "cost": "2 gc",
             "weightInGram": 50,
             "type": "Ammunition",
-            "description": "Before firing the user must spent 1 [AP] to light the arrow on fire. On a hit the target receives [BURNING] 1d4 and [DISTRACTED]. The target can remove these conditions by making a [DT] (10+Item Tier) [TOUGHNESS] [SAVE] for 1 [AP] to remove the arrow. The arrow can not be recovered after firing.",
+            "description": [
+                {
+                    "regularText": "Before firing the user must spent 1 [AP] to light the arrow on fire. On a hit the target receives [BURNING I] and [DISTRACTED]. The target can remove these conditions by making a [DT] (10+Item Tier) [TOUGHNESS] [SAVE] for 1 [AP] to remove the arrow. The arrow can not be recovered after firing.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "availibleWeapons": "Bows",
             "recoverable": false
         },
@@ -40,7 +61,14 @@
             "cost": "5 bc",
             "weightInGram": 20,
             "type": "Ammunition",
-            "description": "Crossbow Bolt, can be recovered after firing if the shot was not a critical miss.",
+            "description": [
+                {
+                    "regularText": "Crossbow Bolt, can be recovered after firing if the shot was not a critical miss.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "availibleWeapons": "Crossbows",
             "recoverable": true
         },
@@ -51,7 +79,14 @@
             "cost": "3 sc",
             "weightInGram": 30,
             "type": "Ammunition",
-            "description": "Any [ATTACK] made using this bolt have the armour-piercing property, can be recovered after firing if the shot was not a critical miss.",
+            "description": [
+                {
+                    "regularText": "Any [ATTACK] made using this bolt have the armour-piercing property, can be recovered after firing if the shot was not a critical miss.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ],
             "availibleWeapons": "Crossbows",
             "recoverable": true
         },
@@ -62,7 +97,14 @@
             "cost": "2 gc",
             "weightInGram": 50,
             "type": "Ammunition",
-            "description": "Before firing the user must spent 1 [AP] to light the bolt on fire. On a hit the target receives [BURNING] 1d4 and [DISTRACTED]. The target can remove these conditions by making a [DT] (10+Item Tier) [TOUGHNESS] [SAVE] for 1 [AP] to remove the arrow. The arrow can not be recovered after firing.",
+            "description": [
+            {
+                "regularText": "Before firing the user must spent 1 [AP] to light the bolt on fire. On a hit the target receives [BURNING I] and [DISTRACTED]. The target can remove these conditions by making a [DT] (10+Item Tier) [TOUGHNESS] [SAVE] for 1 [AP] to remove the arrow. The arrow can not be recovered after firing.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ],
             "availibleWeapons": "Crossbows",
             "recoverable": false
         }

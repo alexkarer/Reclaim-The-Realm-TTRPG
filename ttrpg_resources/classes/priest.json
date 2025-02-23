@@ -54,7 +54,7 @@
                     "<span class=\"fw-bold\">Evil: </span>The first time during a [ROUND] you damage an enemy or inflict a negative status effect on them you gain one Aether Dice equal d3+3." ,
                     "<span class=\"fw-bold\">Lawful: </span>The first time during a [ROUND] you succeed a [SAVE] or remove a status effect from a creature you gain one Aether Dice you already have, if you have none none you can choose one.",
                     "<span class=\"fw-bold\">Chaotic: </span>The first time during a [ROUND] you turn a [D20 TEST] from a failure to a success or from a success to a failure, you gain a random aether dice.",
-                    "<span class=\"fw-bold\">Partial Neutral: </span>You can trigger the ability of your other allignment twice per [ROUND].>",
+                    "<span class=\"fw-bold\">Partial Neutral: </span>You can trigger the ability of your other allignment twice per [ROUND].",
                     "<span class=\"fw-bold\">True Neutral: </span>You gain an additional Aether Dice at the start of your Turn."
                 ],
                 "ability": null
@@ -90,7 +90,7 @@
             "name": "Warrior Priest",
             "textElements": [
                 {
-                    "regularText": "The Warrior",
+                    "regularText": "The Warrior Priest not only fights with their supernatural abilites, but also martial skills and leadership qualities",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -101,7 +101,7 @@
             "name": "Zealot",
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "Zealots have strong Idiological and moral beliveves and set themselves on a path of rightous crusading.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -109,10 +109,10 @@
             ]
         },
         {
-            "name": "Philosipher",
+            "name": "Mystic",
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "The Mystic attempts to find explanations for the universe, they are able to see any viewpoint and thus are the closes to achieve full understanding of the cosmos. A Mystic's alignment must be True Neutral",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -165,12 +165,12 @@
             ]
         },
         {
-            "name": "Fuel the Aether",
-            "levels": [ 2 ],
-            "relatedClassPath": null,
+            "name": "Warrior Priest Improvements",
+            "levels": [ 1 ],
+            "relatedClassPath": "Warrior Priest",
             "textElements": [
                 {
-                    "regularText": "The Priest can use their [ARCANA] to fuel the Energies of the Aether. You gain access to the following ability:",
+                    "regularText": "The Warrior Priest gains the following benefits:",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -178,17 +178,72 @@
                 {
                     "regularText": null,
                     "headerLine": null,
+                    "bulletPoints": [
+                        "You gain 2 additional [HP] per [LEVEL]",
+                        "You gain a [MARTIAL LEVEL] Progression of 1/3 and gain 1 Weapon Rank.",
+                        "You can learn martial maneuvers of the types Leader and Weapon."
+                    ],
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Zealot Improvments",
+            "levels": [ 1 ],
+            "relatedClassPath": "Zealot",
+            "textElements": [
+                {
+                    "regularText": "TODO",
+                    "headerLine": null,
                     "bulletPoints": null,
-                    "ability": {
-                        "name": "Fuel the Aether",
-                        "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 0" ],
-                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-                        "cost": "1 [AP]",
-                        "range": "-",
-                        "target": "[SELF]",
-                        "duration": "[INSTANT]",
-                        "description": "You can target up to half your [CHA] , minimum 1 (rounded down) creatures. Make a [SPELLCASTING TEST] against their [WILLPOWER] on a success they recieve unholy damage equal to your [SPI] and the [BANE 1] status effect."
-                    }
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Mystic Improvements",
+            "levels": [ 1 ],
+            "relatedClassPath": "Mystic",
+            "textElements": [
+                {
+                    "regularText": "The Mystic gains the following benefits:",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "[INT] is now a class Attribute for you (Increase attribute maximum or current).",
+                        "For the purposes of recieving certain bonuses, interacting with abilites or meeting requirements you count as having any allignment. Additionally you can't recieve penalties due to your alignment",
+                        "At the start of any battle choose one moral or idialogical alignment besiedes Neutral. You can now also recieve Aether Dice as if you had that alignment."
+                    ],
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Cosmic Interference",
+            "levels": [ 2 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "The more Aether Dice you have the stronger the Aether influences the Battle.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "If you have 2 AD(1) then increase the healing of any ability you use by your [LEVEL] and increase the duration of postive Status Effects you grant by 1 [ROUND]. For each additional AD(1) increase the healing by [LEVEL]/2 and the duration by 1 further.",
+                        "If you have 2 AD(6) then increase the damage of any ability you use by your [LEVEL] and increase the duration of negative Status Effects you grant by 1 [ROUND]. For each additional AD(1) increase the damage by [LEVEL]/2 and the duration by 1 further..",
+                        "If you have 3 matching AD then you recieve a +1 bonus to any [SAVE] you make. For any further matching dice increase the bonus by 1.",
+                        "If you have 4 unique then once per [ROUND] if you make a [D20 TEST] you can adjust the result by +[LEVEL] or -[LEVEL], for every additional unique dice you can do this one additional time per [ROUND]."
+                    ],
+                    "ability": null
                 }
             ]
         },
@@ -227,54 +282,60 @@
             ]
         },
         {
-            "name": "Cosmic Interference",
-            "levels": [ 4 ],
-            "relatedClassPath": "Good",
+            "name": "Tides of the Aether Improvements",
+            "levels": [ 4,8,12 ],
+            "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "For each Aether dice with a value of 1 you currently have in your Aether Dice Pool you positively affect the battlefield in a 9m aura around you. The more 1 dice you have currently in your pool, the stronger the effects are:",
+                    "regularText": "Each time you receive an Aether Dice, you gain an additional one.",
                     "headerLine": null,
                     "bulletPoints": null,
-                    "ability": null
-                },
-                {
-                    "regularText": null,
-                    "headerLine": null,
-                    "bulletPoints": [
-                        "1. The area within your aura is brightly lit.",
-                        "2. Each friendly creature that is within the aura gains resistance([SPI]) against unholy damage.",
-                        "3. Each evil creature that starts their turn in your aura recieves holy damage equal to your [SPI]."
-                    ],
                     "ability": null
                 }
             ]
         },
         {
-            "name": "Cosmic Interference",
-            "levels": [ 4 ],
-            "relatedClassPath": "Evil",
+            "name": "Warrior Priest Improvements 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Warrior Priest",
             "textElements": [
                 {
-                    "regularText": "For each Aether dice with a value of 6 you currently have in your Aether Dice Pool you positively affect the battlefield in a 9m aura around you. The more 6 dice you have currently in your pool, the stronger the effects are:",
+                    "regularText": "",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
-                },
+                }
+            ]
+        },
+        {
+            "name": "Zealot Improvments 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Zealot",
+            "textElements": [
                 {
-                    "regularText": null,
+                    "regularText": "",
                     "headerLine": null,
-                    "bulletPoints": [
-                        "1. Every good creature within the area is now vulnurable to unholy damage.",
-                        "2. Each creature that starts their turn in your aura recieves unholy damage equal to your [SPI].",
-                        "3. The area within your aura is shrouded in darkness through which you and your alies can see through. Only magical effects of a spell power greater than [SPI]/3 can illuminate it."
-                    ],
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Mystic Improvements 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Mystic",
+            "textElements": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
                     "ability": null
                 }
             ]
         },
         {
             "name": "Armour of Faith",
-            "levels": [ 5 ],
+            "levels": [ 6 ],
             "relatedClassPath": null,
             "textElements": [
                 {
@@ -287,7 +348,7 @@
         },
         {
             "name": "Miracle",
-            "levels": [ 6 ],
+            "levels": [ 7 ],
             "relatedClassPath": null,
             "textElements": [
                 {
@@ -314,8 +375,47 @@
             ]
         },
         {
-            "name": "Greater Miracle",
+            "name": "Warrior Priest Improvements",
             "levels": [ 9 ],
+            "relatedClassPath": "Warrior Priest 3",
+            "textElements": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Zealot Improvments 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Zealot",
+            "textElements": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Mystic Improvements 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Mystic",
+            "textElements": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Greater Miracle",
+            "levels": [ 11 ],
             "relatedClassPath": null,
             "textElements": [
                 {
@@ -375,7 +475,7 @@
         {
             "name": "Lingering Healing",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
             "cost": "0 [AP], 2 AD(3-)",
             "range": "-",
             "target": "one ally that was targeted by a [SPELL ABILITY]",
@@ -385,7 +485,7 @@
         {
             "name": "Holy Strike",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
             "cost": "0 [AP], 2 AD(3-)",
             "range": "-",
             "target": "self",
@@ -395,7 +495,7 @@
         {
             "name": "Mercy of the Gods",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
             "cost": "0 [AP], nubmer of AD(2-) equal to spell power",
             "range": "-",
             "target": "",
@@ -405,7 +505,7 @@
         {
             "name": "Rejuvination",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 2" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
             "cost": "1 [AP], 2 AD(1)",
             "range": "6m",
             "target": "one ally that is [UNCONCIOUS]",
@@ -415,7 +515,7 @@
         {
             "name": "Holy Fire",
             "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 2" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
             "cost": "3 [AP], 3 AD(1)",
             "range": "9m",
             "target": "evil creatures with range",
@@ -425,7 +525,7 @@
         {
             "name": "Unholy Strike",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Evil or LN/CN Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Evil or LN/CN/N Alignment" ] },
             "cost": "0 [AP], 2 AD(4+)",
             "range": "-",
             "target": "self",
@@ -435,7 +535,7 @@
         {
             "name": "Unholy Fire",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 2" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Evil or LN/CN Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Evil or LN/CN/N Alignment" ] },
             "cost": "3 [AP], 3 AD(6)",
             "range": "12m",
             "target": "[SPHERE] 3m",
@@ -445,7 +545,7 @@
         {
             "name": "Divine Clense",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "1 [AP], 2 matching AD",
             "range": "12m",
             "target": "1 creature",
@@ -455,7 +555,7 @@
         {
             "name": "Protection",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "1 reaction, 2 matching AD",
             "range": "9m",
             "target": "1 ally",
@@ -465,7 +565,7 @@
         {
             "name": "Certainty",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "0 [AP], 2 matching AD",
             "range": "-",
             "target": "self",
@@ -475,7 +575,7 @@
         {
             "name": "Sanctified Shackles",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "1 [AP], 2 matching AD",
             "range": "9m",
             "target": "one creature",
@@ -485,7 +585,7 @@
         {
             "name": "Unyielding",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "1 reaction, 3 matching AD",
             "range": "-",
             "target": "self",
@@ -495,7 +595,7 @@
         {
             "name": "Self Restoration",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE/N Alignment" ] },
             "cost": "0 [AP], two unique AD",
             "range": "-",
             "target": "self",
@@ -505,7 +605,7 @@
         {
             "name": "Second Chance",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE/N Alignment" ] },
             "cost": "1 reaction, 3 unique AD",
             "range": "6m",
             "target": "1 creature",
@@ -515,7 +615,7 @@
         {
             "name": "Blessed Cast",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE Alignment" ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE/N Alignment" ] },
             "cost": "0 [AP], 4 unique AD",
             "range": "-",
             "target": "self",

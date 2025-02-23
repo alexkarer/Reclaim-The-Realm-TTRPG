@@ -1,8 +1,6 @@
 TODO before playtest:
 
 **finsh other classes**:
-- mage todo
-  - needs at least 1 feature and a few more class techniques
 - warlock, implement phone ideas.
 
 spells: spell cast test fails when below 5
@@ -41,6 +39,9 @@ Future Ideas / Nice to have:
 - fix links
 - add missing keyword descritpions
 - proper phrasing of some stuff in the combat
+
+**Classes**
+- add missing stuff
 
 **Status Effects:**
 - Confused Condition?

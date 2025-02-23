@@ -116,7 +116,7 @@
                 @for (ammunition of ammunitions; track $index) {
                     <tr>
                         <td>{{ ammunition.name }}</td>
-                        <td><app-dynamic-content [content]="ammunition.description| keywordProcessor"></app-dynamic-content></td>
+                        <td><app-text-elements [textElements]="ammunition.description" [useBoldTextForHeader]="true"></app-text-elements></td>
                         <td>{{ ammunition.availibleWeapons }}</td>
                         <td>{{ ammunition.getPrettyWeightString() }}</td>
                         <td>{{ ammunition.cost.getPrettyString() }}</td>
