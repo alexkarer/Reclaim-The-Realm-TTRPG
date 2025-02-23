@@ -63,10 +63,10 @@
             ]
         },
         {
-            "name": "Ranger",
+            "name": "Spellsword",
             "textElements": [
                 {
-                    "regularText": "The Ranger is an expierienced survivalist and traveller, they are often sought as guides through the dangerous wildlands of the realm. They live for the challange of the wildlands and is no path they will not seek out no matter how dangerous.",
+                    "regularText": "The Spellsword maximizes their combat potential via Arcane means.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -117,25 +117,14 @@
             ]
         },
         {
-            "name": "Ranger Improvements",
+            "name": "Spellsword Improvements",
             "levels": [ 1 ],
-            "relatedClassPath": "Ranger",
+            "relatedClassPath": "Spellsword",
             "textElements": [
                 {
-                    "regularText": "The Ranger recieves the following benefits:",
+                    "regularText": "The Spellsowrds gains [SPELL LEVEL] Progression of 1/3 and is able to learn spells of the Elemental Discipline and 3 Subdisciplines of Manipulation. Additionally time you cast a Spell make a Weapon Attack in the same [TURN], you gain 1 Focus.",
                     "headerLine": null,
                     "bulletPoints": null,
-                    "ability": null
-                },
-                {
-                    "regularText": null,
-                    "headerLine": null,
-                    "bulletPoints": [
-                        "Reduce the Speed Penalty you get through Terrain modifiers by 1. (e.g. a -1 penalty to Travel speed becomes 0).",
-                        "During the first 6 hours of Travel you do not need to spend any [STAMINA]",
-                        "You can add Geography and Stealth to your Class Skills and you gain 2 additional Skill Points per [LEVEL].",
-                        "Improve your base [MP] by 1."
-                    ],
                     "ability": null
                 }
             ]
@@ -168,11 +157,11 @@
         },
         {
             "name": "Armour expert",
-            "levels": [ 2,5,8,11 ],
+            "levels": [ 2,6,10 ],
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "The Fighter is an expert at wearing armour and moving efficiently with it. Each time you get this feature you can reduced the Manoeuvre Penalty by 1. Additionally at 11th level you can also reduce the Movement Penalty by 1.",
+                    "regularText": "The Fighter is an expert at wearing armour and moving efficiently with it. Each time you get this feature you can reduced the Manoeuvre Penalty by 1. Additionally at 10th level you can also reduce the Movement Penalty by 1.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -181,7 +170,7 @@
         },
         {
             "name": "Against all Odds",
-            "levels": [ 3,6,9 ],
+            "levels": [ 3,7 ],
             "relatedClassPath": null,
             "textElements": [
                 {
@@ -191,13 +180,7 @@
                     "ability": null
                 },
                 {
-                    "regularText": "At 6th Level you also gain [ADVANTAGE] on such a [SAVE].",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
-                {
-                    "regularText": "At 9th Level you are immune to the [FRIGHTENED I], [FRIGHTENED II] or [FRIGHTINED III] status effects.",
+                    "regularText": "At 7th Level you also gain [ADVANTAGE] on such a [SAVE].",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -210,7 +193,85 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "Increase the [ROUND] Limit for each of the conditions for getting Focus by 1.",
+                    "regularText": "Increase amout of Focus you get for each of the conditions for getting Focus by 1.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Champion Improvements 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Champion",
+            "textElements": [
+                {
+                    "regularText": "TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Tactician Improvements 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Tactician",
+            "textElements": [
+                {
+                    "regularText": "TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Spellsword Improvements 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Spellsword",
+            "textElements": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Champion Improvements 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Champion",
+            "textElements": [
+                {
+                    "regularText": "TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Tactician Improvements 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Tactician",
+            "textElements": [
+                {
+                    "regularText": "TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Spellsword Improvements 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Spellsword",
+            "textElements": [
+                {
+                    "regularText": "TODO",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -278,7 +339,17 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you use a Martial Maneuver that includes a Weapon Attack, you can use a different Martial Maneuver as part of the same Weapon Attack.<br>(Explanation: still only 1 Weapon Attack is made however you could use crippling strike and deep cut simultaneously and if the attack is successfuly the target is bleeding and crippled at the same time)."
+            "description": "When you use a Martial Maneuver that includes a Weapon Attack, you can use a different Basic Martial Maneuver as part of the same Weapon Attack.<br>(Explanation: still only 1 Weapon Attack is made however you could use crippling strike and deep cut simultaneously and if the attack is successfuly the target is bleeding and crippled at the same time)."
+        },
+        {
+            "name": "Masterful Parry",
+            "tags": [ "Class Technique (Fighter)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 3 Focus",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you use the Parry or Improved Parry Abilities you can use this ability and you automatically roll a 20 for the [MELEE MARTIAL ATTACK] to successfully parry."
         },
         {
             "name": "Target Guidance",

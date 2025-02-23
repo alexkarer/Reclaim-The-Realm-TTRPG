@@ -166,6 +166,61 @@
         </div>
     </div>
     <h4 class="mt-3" ngbScrollSpyFragment="other-values">Other Values</h4>
+        <h5 class ="mb-0" ngbScrollSpyFragment="alignemnt">Alignment</h5>
+        <app-dynamic-content [content]="alginmentJson.alignmentDescription | keywordProcessor"></app-dynamic-content>
+
+        <div class="d-flex justify-content-center m-3">
+            <table class="rules-table table-bordered align-middle">
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td class="text-center">
+                            <h6 class="text-center">{{ alginmentJson.lawfulAlignment.name }}</h6>
+                            <span class="text-center description">{{ alginmentJson.lawfulAlignment.ideas.join(', ') }}</span>
+                        </td>
+                        <td class="text-center">
+                            <h6 class="text-center">{{ alginmentJson.idiologicalNeutralAlignment.name }}</h6>
+                            <span class="text-center description">{{ alginmentJson.idiologicalNeutralAlignment.ideas.join(', ') }}</span>
+                        </td>
+                        <td class="text-center">
+                            <h6 class="text-center">{{ alginmentJson.chaoticAlignment.name }}</h6>
+                            <span class="text-center description">{{ alginmentJson.chaoticAlignment.ideas.join(', ') }}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <h6 >{{ alginmentJson.goodAlignment.name }}</h6>
+                            <span class=" description">{{ alginmentJson.goodAlignment.ideas.join(', ') }}</span>
+                        </td>
+                        <td class="text-center">Lawful Good (LG)</td>
+                        <td class="text-center">Neutral Good (NG)</td>
+                        <td class="text-center">Chaotic Good (CG)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="text-center">{{ alginmentJson.moralNeutralAlignment.name }}</h6>
+                            <span class="text-center description">{{ alginmentJson.moralNeutralAlignment.ideas.join(', ') }}</span>
+                        </td>
+                        <td class="text-center">Lawful Neutral (LN)</td>
+                        <td class="text-center">True Neutral (N)</td>
+                        <td class="text-center">Chaotic Neutral (CN)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="text-center">{{ alginmentJson.evilAlignment.name }}</h6>
+                            <span class="text-center description">{{ alginmentJson.evilAlignment.ideas.join(', ') }}</span>
+                        </td>
+                        <td class="text-center">Lawful Evil (LE)</td>
+                        <td class="text-center">Neutral Evil (NE)</td>
+                        <td class="text-center">Chaotic Evil (CE)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <app-dynamic-content [content]="alginmentJson.additionaDetailDescription | keywordProcessor"></app-dynamic-content>
+        <a [href]="alginmentJson.link">{{ alginmentJson.linkText }}</a>
+
         <h5 class ="mb-0" ngbScrollSpyFragment="special-movement">Special Movement</h5>
         <app-dynamic-content [content]="specialMovementDescription | keywordProcessor"></app-dynamic-content>
         <ul>

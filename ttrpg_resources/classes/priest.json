@@ -3,8 +3,8 @@
     "classDescription": "Someone has to play to healer.",
     "coreClassValues": {
         "hpPerLevel": 6,
-        "martialProficiency": 0.334,
-        "knownMartialManeuvers": "Leader",
+        "martialProficiency": 0,
+        "knownMartialManeuvers": null,
         "spellProficiency": 1.0,
         "knownSpellDisciplines": "Cosmic, Manipulation",
         "dodgeProficiency": 0.334,
@@ -29,8 +29,33 @@
                 "regularText": null,
                 "headerLine": null,
                 "bulletPoints": [
-                    "At the start of each of the Priest’s turn he receives one random Aether dice.",
+                    "At the start of each of the Priest’s turn he receives ona Aether dice of random value.",
                     "Falling Unconcious removes all current Aether Dice."
+                ],
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": "Alignment",
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": "The Priest also gains additional Aether Dice depending on their Allignment",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "<span class=\"fw-bold\">Good: </span>The first time during a [ROUND] you heal an ally or grant a positive status effect, you gain one Aether Dice equal to d3.",
+                    "<span class=\"fw-bold\">Evil: </span>The first time during a [ROUND] you damage an enemy or inflict a negative status effect on them you gain one Aether Dice equal d3+3." ,
+                    "<span class=\"fw-bold\">Lawful: </span>The first time during a [ROUND] you succeed a [SAVE] or remove a status effect from a creature you gain one Aether Dice you already have, if you have none none you can choose one.",
+                    "<span class=\"fw-bold\">Chaotic: </span>The first time during a [ROUND] you turn a [D20 TEST] from a failure to a success or from a success to a failure, you gain a random aether dice.",
+                    "<span class=\"fw-bold\">Partial Neutral: </span>You can trigger the ability of your other allignment twice per [ROUND].>",
+                    "<span class=\"fw-bold\">True Neutral: </span>You gain an additional Aether Dice at the start of your Turn."
                 ],
                 "ability": null
             },
@@ -41,7 +66,7 @@
                 "ability": null
             },
             {
-                "regularText": "The following Notation is used for describing Aether Dice (AD) and Desired Values:",
+                "regularText": "The following Notation is used for describing Aether Dice (AD) and desired Values:",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -59,74 +84,37 @@
             }
         ]
     },
-    "classPathDescription": "The Priest is different form other classes in that their class Paths are tied to the characters alignment. This means that you are usually tied to 2 Class Paths unless you are True Neutral. These class Paths modify how you generate Aether Dice and what class Techniques you can access.",
+    "classPathDescription": "",
     "classPaths": [
         {
-            "name": "Good",
+            "name": "Warrior Priest",
             "textElements": [
                 {
-                    "regularText": null,
+                    "regularText": "The Warrior",
                     "headerLine": null,
-                    "bulletPoints": [
-                        "You gain access to \"Good\" Class Techniques",
-                        "The first time on your turn you heal an ally or grant a positive status effect,you gain one Aether Dice equal to d3."
-                    ],
+                    "bulletPoints": null,
                     "ability": null
                 }
             ]
         },
         {
-            "name": "Evil",
+            "name": "Zealot",
             "textElements": [
                 {
-                    "regularText": null,
+                    "regularText": "",
                     "headerLine": null,
-                    "bulletPoints": [
-                        "You gain access to \"Evil\" Class Techniques",
-                        "When you damage an enemy or inflict a negative status effect on them you gain one Aether Dice equal d3+3."
-                    ],
+                    "bulletPoints": null,
                     "ability": null
                 }
             ]
         },
         {
-            "name": "Lawful",
+            "name": "Philosipher",
             "textElements": [
                 {
-                    "regularText": null,
+                    "regularText": "",
                     "headerLine": null,
-                    "bulletPoints": [
-                        "You gain access to \"Order\" Class Techniques",
-                        "The first time on your turn you succeed a [SAVE] or remove a status effect from a creature you gain one Aether Dice you already have, if you have none none you can choose one."
-                    ],
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Chaotic",
-            "textElements": [
-                {
-                    "regularText": null,
-                    "headerLine": null,
-                    "bulletPoints": [
-                        "You gain access to \"Chaos\" Class Techniques",
-                        "At the start of your turn you can decide to reroll all of your TotA dice from your pool. Additionally the first time on each turn you modify a roll (bonus, penalty, reroll) you gain a random aether dice."
-                    ],
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Neutral",
-            "textElements": [
-                {
-                    "regularText": null,
-                    "headerLine": null,
-                    "bulletPoints": [
-                        "If you are good or evil you gain access to \"Order\" and \"Chaos\" Class Techniques. If you are chaotic or lawful you gain access to \"Good\" and \"Evil\" Class Techniques. If you are true neutral you gain access to all.",
-                        "If you are partially neutral you can gain an aether dice twice per turn from your other alignment. If you are true neutral you now get an additional aether dice at the start of your turn."
-                    ],
+                    "bulletPoints": null,
                     "ability": null
                 }
             ]
@@ -134,12 +122,12 @@
     ],
     "classFeatures": [
         {
-            "name": "Divine Blessing",
+            "name": "Divine Blessing/Curse",
             "levels": [ 1 ],
-            "relatedClassPath": "Good",
+            "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "You gain access the following ability:",
+                    "regularText": "If you are of good allignment, you gain access to the Divine Blessing ability. If you are of evil allignment you gain the Divine Curse ability. If you are neutral, you gain access to both.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -150,32 +138,14 @@
                     "bulletPoints": null,
                     "ability": {
                         "name": "Divine Blessing",
-                        "tags": [ "[SPELL ABILITY] 0" ],
-                        "requirements": {
-                            "requiredLevels": [ ],
-                            "requiredAttributes": [ ],
-                            "requiredPerks": [ ],
-                            "otherRequirements": [ ]
-                        },
+                        "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 0" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                         "cost": "2 [AP]",
                         "range": "6m",
                         "target": "one or more friendly creatures",
                         "duration": "1 [ROUND]",
                         "description": "A number of friendly creatures up to half your [CHA] (rounded down, minimum 1) recieve [THP] equal to your [SPI] and they recieve [BLESS 1]"
                     }
-                }
-            ]
-        },
-        {
-            "name": "Unholy Curse",
-            "levels": [ 1 ],
-            "relatedClassPath": "Evil",
-            "textElements": [
-                {
-                    "regularText": "You gain access the following ability:",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
                 },
                 {
                     "regularText": null,
@@ -183,13 +153,8 @@
                     "bulletPoints": null,
                     "ability": {
                         "name": "Unholy Curse",
-                        "tags": [ "[SPELL ABILITY] 0" ],
-                        "requirements": {
-                            "requiredLevels": [ ],
-                            "requiredAttributes": [ ],
-                            "requiredPerks": [ ],
-                            "otherRequirements": [ ]
-                        },
+                        "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 0" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                         "cost": "2 [AP]",
                         "range": "9m",
                         "target": "one or more creatures",
@@ -205,10 +170,25 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "The Priest can use their [ARCANA] to fuel the Energies of the Aether. For 1 [AP] they can spend [ARCANA] and gain an equal amount of random Aether Dice equal to the [ARCANA] spent. If you spend more than 2 [ARCANA] and you roll the same dice twice you have to roll on the Cosmic Spellcasting Misshap Table",
+                    "regularText": "The Priest can use their [ARCANA] to fuel the Energies of the Aether. You gain access to the following ability:",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Fuel the Aether",
+                        "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 0" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "1 [AP]",
+                        "range": "-",
+                        "target": "[SELF]",
+                        "duration": "[INSTANT]",
+                        "description": "You can target up to half your [CHA] , minimum 1 (rounded down) creatures. Make a [SPELLCASTING TEST] against their [WILLPOWER] on a success they recieve unholy damage equal to your [SPI] and the [BANE 1] status effect."
+                    }
                 }
             ]
         },
@@ -218,7 +198,7 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "The Priest is able to perform minor miracles as long as they keep their faith. These miracles can’t generally be used in combat and take concentration and a clear mind to perform. Choose one of the following miracles below:",
+                    "regularText": "The Priest is able to perform minor miracles as long as they keep their faith. These miracles can’t generally be used in combat and take concentration and a clear mind to perform. They gain the following ability:",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -226,16 +206,20 @@
                 {
                     "regularText": null,
                     "headerLine": null,
-                    "bulletPoints": [
-                        "Provide tasty food and drink for up to 20 people.",
-                        "Heal a crature up to full [HP].",
-                        "End all Tier 1 and 2 negative status effects affecting a Crature.",
-                        "Restore 2 Stamina to all party members."
-                    ],
-                    "ability": null
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Minor Miracle",
+                        "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 2" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "1 minute",
+                        "range": "varies",
+                        "target": "varies",
+                        "duration": "varies",
+                        "description": "You invoke a minor miracle, choose one of the effects below:<br>Provide tasty food and drink for up to 20 people.<br>Heal a crature up to full [HP].<br>End all Tier 1 and 2 negative status effects affecting a Crature.<br>Restore 2 Stamina to all party members.<br>Alternative Miracle effect agreed if agreed by the GM.<br><br>After usage, Miracle recovery [DT] is 25."
+                    }
                 },
                 {
-                    "regularText": "Alternatively they might also perform a different miracles if agreed by the GM. After they performed a minor miracle they can’t do it any more, once at the start of each day they make a prayer and make a DC 25 [SPI] [ATTRIBUTE TEST] which can’t be modified in any other way. They can repeat the Test each following day where they reduce the DC by 5 until they succeed. Alternatively if the Priest Character acts well within their believes or played well the GM may grant them the Miracle again without rolling.",
+                    "regularText": "Each time the Priest uses a Miracle Ability they can’t do so it any more. Once at the start of each day they make a prayer and make a [DT] 25 [SPI] [ATTRIBUTE TEST] which can’t be modified in any other way, on a success they can use miracles again. They can repeat the Test each following day where they reduce the [DT] by 5 until they succeed. Alternatively if the Priest Character acts well within their believes or played well the GM may grant them the Miracle again without rolling.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -315,24 +299,22 @@
                 {
                     "regularText": null,
                     "headerLine": null,
-                    "bulletPoints": [
-                        "Provide tasty food and drink for for a village.",
-                        "Heal your party to full [HP].",
-                        "End all negative status effects affecting a Creature.",
-                        "Restore 5 [STAMINA] to all party members."
-                    ],
-                    "ability": null
-                },
-                {
-                    "regularText": "When performing such a Miracle the DC for being able to use a Miracle again starts now at 50.",
-                    "headerLine": null,
                     "bulletPoints": null,
-                    "ability": null
+                    "ability": {
+                        "name": "Miracle",
+                        "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 3" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "1 minute",
+                        "range": "varies",
+                        "target": "varies",
+                        "duration": "varies",
+                        "description": "You invoke a miracle, choose one of the effects below:<br>Provide tasty food and drink for a village.<br>Heal your party to full [HP].<br>End all negative status effects affecting a Creature.<br>Restore 5 [STAMINA] to all party members.<br>Alternative Miracle effect agreed if agreed by the GM.<br><br>After usage, Miracle recovery [DT] is 50.."
+                    }
                 }
             ]
         },
         {
-            "name": "Miracle",
+            "name": "Greater Miracle",
             "levels": [ 9 ],
             "relatedClassPath": null,
             "textElements": [
@@ -345,18 +327,17 @@
                 {
                     "regularText": null,
                     "headerLine": null,
-                    "bulletPoints": [
-                        "Provide tasty food and drink for a town.",
-                        "Restore a creature to life which has died within the last hour.",
-                        "Summon an angel to assist you"
-                    ],
-                    "ability": null
-                },
-                {
-                    "regularText": "When performing such a Miracle the DC for being able to use a Miracle again starts now at 100.",
-                    "headerLine": null,
                     "bulletPoints": null,
-                    "ability": null
+                    "ability": {
+                        "name": "Miracle",
+                        "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 3" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "1 minute",
+                        "range": "varies",
+                        "target": "varies",
+                        "duration": "varies",
+                        "description": "You invoke a miracle, choose one of the effects below:<br>Provide tasty food and drink for a town.<br>Restore a creature to life which has died within the last hour.<br>Restore all [STAMINA] of your party.<br>Summon a cosmic to assist you<br>Alternative Miracle effect agreed if agreed by the GM.<br><br>After usage, Miracle recovery [DT] is 100."
+                    }
                 }
             ]
         },
@@ -393,8 +374,8 @@
     "classTechniques": [
         {
             "name": "Lingering Healing",
-            "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN Alignment" ] },
             "cost": "0 [AP], 2 AD(3-)",
             "range": "-",
             "target": "one ally that was targeted by a [SPELL ABILITY]",
@@ -403,8 +384,8 @@
         },
         {
             "name": "Holy Strike",
-            "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN Alignment" ] },
             "cost": "0 [AP], 2 AD(3-)",
             "range": "-",
             "target": "self",
@@ -413,8 +394,8 @@
         },
         {
             "name": "Mercy of the Gods",
-            "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN Alignment" ] },
             "cost": "0 [AP], nubmer of AD(2-) equal to spell power",
             "range": "-",
             "target": "",
@@ -423,8 +404,8 @@
         },
         {
             "name": "Rejuvination",
-            "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 2" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 2" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN Alignment" ] },
             "cost": "1 [AP], 2 AD(1)",
             "range": "6m",
             "target": "one ally that is [UNCONCIOUS]",
@@ -434,7 +415,7 @@
         {
             "name": "Holy Fire",
             "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 2" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN Alignment" ] },
             "cost": "3 [AP], 3 AD(1)",
             "range": "9m",
             "target": "evil creatures with range",
@@ -443,8 +424,8 @@
         },
         {
             "name": "Unholy Strike",
-            "tags": [ "Class Technique (Priest, Evil)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Evil or LN/CN Alignment" ] },
             "cost": "0 [AP], 2 AD(4+)",
             "range": "-",
             "target": "self",
@@ -453,8 +434,8 @@
         },
         {
             "name": "Unholy Fire",
-            "tags": [ "Class Technique (Priest, Evil)", "[SPELL ABILITY] 2" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 2" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Evil or LN/CN Alignment" ] },
             "cost": "3 [AP], 3 AD(6)",
             "range": "12m",
             "target": "[SPHERE] 3m",
@@ -463,8 +444,8 @@
         },
         {
             "name": "Divine Clense",
-            "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE Alignment" ] },
             "cost": "1 [AP], 2 matching AD",
             "range": "12m",
             "target": "1 creature",
@@ -473,8 +454,8 @@
         },
         {
             "name": "Protection",
-            "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE Alignment" ] },
             "cost": "1 reaction, 2 matching AD",
             "range": "9m",
             "target": "1 ally",
@@ -483,8 +464,8 @@
         },
         {
             "name": "Certainty",
-            "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE Alignment" ] },
             "cost": "0 [AP], 2 matching AD",
             "range": "-",
             "target": "self",
@@ -493,8 +474,8 @@
         },
         {
             "name": "Sanctified Shackles",
-            "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE Alignment" ] },
             "cost": "1 [AP], 2 matching AD",
             "range": "9m",
             "target": "one creature",
@@ -503,8 +484,8 @@
         },
         {
             "name": "Unyielding",
-            "tags": [ "Class Technique (Priest, Order)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE Alignment" ] },
             "cost": "1 reaction, 3 matching AD",
             "range": "-",
             "target": "self",
@@ -513,8 +494,8 @@
         },
         {
             "name": "Self Restoration",
-            "tags": [ "Class Technique (Priest, Chaos)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE Alignment" ] },
             "cost": "0 [AP], two unique AD",
             "range": "-",
             "target": "self",
@@ -523,8 +504,8 @@
         },
         {
             "name": "Second Chance",
-            "tags": [ "Class Technique (Priest, Chaos)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE Alignment" ] },
             "cost": "1 reaction, 3 unique AD",
             "range": "6m",
             "target": "1 creature",
@@ -533,8 +514,8 @@
         },
         {
             "name": "Blessed Cast",
-            "tags": [ "Class Technique (Priest, Chaos)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE Alignment" ] },
             "cost": "0 [AP], 4 unique AD",
             "range": "-",
             "target": "self",

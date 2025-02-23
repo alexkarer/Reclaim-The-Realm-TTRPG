@@ -12,6 +12,7 @@ import { ClassComponent } from './class/class.component';
 export class ClassesOverviewComponent {
   public readonly ClassNames = ClassNames;
   public selectedClass: ClassNames = ClassNames.BARBARIAN;
+  public selectedClassPath: string = 'All Classpaths';
 
   public getCurrentlySelectedClass(): PlayerClass {
     let clazz = playerClasses.find(clazz => clazz.className === this.selectedClass);

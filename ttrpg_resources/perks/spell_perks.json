@@ -5,7 +5,7 @@
         "requirements": {
             "requiredLevels": [],
             "requiredAttributes": [
-                { "amount": 2, "attribute": "[SPI]" }
+                { "amount": 3, "attribute": "[SPI]" }
             ],
             "requiredPerks": [],
             "otherRequirements": [ "[SPELL LEVEL] Progression of 0" ]

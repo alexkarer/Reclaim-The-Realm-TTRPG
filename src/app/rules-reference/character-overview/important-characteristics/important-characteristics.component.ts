@@ -40,6 +40,7 @@ export class ImportantCharacteristicsComponent {
   public readonly willpowerDescription: string = defensesJson.willpowerDescription;
   public readonly damageResistanceDescription: string = defensesJson.damageResistanceDescription;
 
+  public readonly alginmentJson = otherValuesJson.alignment;
   public readonly specialMovementDescription: string = otherValuesJson.specialMovementDescription;
   public readonly specialMovementTypes = otherValuesJson.specialMovementTypes;
   public readonly sizeDescription: string = otherValuesJson.sizeDescription;

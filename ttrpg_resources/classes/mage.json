@@ -37,21 +37,6 @@
             },
             {
                 "regularText": null,
-                "headerLine": null,
-                "bulletPoints": null,
-                "ability": {
-                    "name": "Channel",
-                    "tags": [ "Class Technique (Mage)" ],
-                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-                    "cost": "1 [AP]",
-                    "range": "-",
-                    "target": "[SELF]",
-                    "duration": "[INSTANT]",
-                    "description": "You gain 1 + [LEVEL] / 4 (rounded down) Magical Charge."
-                }
-            },
-            {
-                "regularText": null,
                 "headerLine": "Overcharge",
                 "bulletPoints": null,
                 "ability": null
@@ -101,6 +86,34 @@
         }
     ],
     "classFeatures": [
+        {
+            "name": "Magical Channeling",
+            "levels": [ 1 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "You gain access to the following ability:",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Channel",
+                        "tags": [ "Class Technique (Mage)" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "1 [AP]",
+                        "range": "-",
+                        "target": "[SELF]",
+                        "duration": "[INSTANT]",
+                        "description": "You gain 1 + [LEVEL] / 4 (rounded down) Magical Charge."
+                    }
+                }
+            ]
+        },
         {
             "name": "Elemental Mage Improvements",
             "levels": [ 1 ],
@@ -179,6 +192,58 @@
                     "ability": null
                 }
             ]
+        },
+        {
+            "name": "Elemental Mage Improvements 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Elemental Mage",
+            "textElements": [
+                {
+                    "regularText": "Improve Overcharge, grant additional options for each element",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Reckless Mage Improvements 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Reckless Mage",
+            "textElements": [
+                {
+                    "regularText": "Improve Overcharge",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Elemental Mage Improvements 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Elemental Mage",
+            "textElements": [
+                {
+                    "regularText": "Improve Overcharge",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Reckless Mage Improvements 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Reckless Mage",
+            "textElements": [
+                {
+                    "regularText": "Improve Overcharge",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
         }
     ],
     "classTechniquesDescription": "",
@@ -187,7 +252,7 @@
             "name": "Twined Cast",
             "tags": [ "Class Technique (Mage)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "0 [AP], varied Magical Charge",
+            "cost": "0 [AP], 1+ Magical Charge",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -197,7 +262,7 @@
             "name": "Quickened Cast",
             "tags": [ "Class Technique (Mage)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "0 [AP], varied Magical Charge",
+            "cost": "0 [AP], 1+ Magical Charge",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -207,7 +272,7 @@
             "name": "Efficient Cast",
             "tags": [ "Class Technique (Mage)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "0 [AP], 3 or more Magical Charge",
+            "cost": "0 [AP], 3+ Magical Charge",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -217,7 +282,7 @@
             "name": "Devestating Cast",
             "tags": [ "Class Technique (Mage)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "0 [AP], varied Magical Charge",
+            "cost": "0 [AP], 1+ Magical Charge",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -227,17 +292,27 @@
             "name": "Safe cast",
             "tags": [ "Class Technique (Mage)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "0 [AP], varied Magical Charge",
+            "cost": "0 [AP], 1+ Magical Charge",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
             "description": "For the next spell that you cast, you automatically succed the [SPELL CAST TEST]. The magical charge cost is equal to half the [ARCANA] Cost of the Spell. (rounded up)"
         },
         {
+            "name": "Distrupt Spell",
+            "tags": [ "Class Technique (Mage)", "[SPELL LIKE] 1" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "1 [REACTION], 3+ Magical Charge",
+            "range": "9m",
+            "target": "1 creature making a [SPELL CAST TEST]",
+            "duration": "[INSTANT]",
+            "description": "You attempt to distrupt other creatures attempting to cast spells. When the creature makes a [SPELL CAST TEST] subtract the magical charge cost of this ability from the result."
+        },
+        {
             "name": "Elemental Bolt",
             "tags": [ "Class Technique (Mage)", "[SPELL LIKE] 0" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "2 [AP], 0-3 Magical Charge",
+            "cost": "2 [AP], 0+ Magical Charge",
             "range": "18m",
             "target": "1 target",
             "duration": "[INSTANT]",

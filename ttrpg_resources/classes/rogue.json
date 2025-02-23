@@ -115,7 +115,7 @@
             "relatedClassPath": "Assassin",
             "textElements": [
                 {
-                    "regularText": "When using sneak attack when under concealment can add 1 Trickery for free (does not count to max). Additionally at the start of the battle the Assasin can target 1 enemy. When attacking the enemy the crit threshold is reduced by 1. When the target is eleminated from the combat you gain Trickery equal to the [LEVEL] of the target.",
+                    "regularText": "When using sneak attack when under concealment can add 1 Trickery for free (does not count to max). Additionally at the start of the battle the Assasin can select 1 enemy, that enemy is your elimination target. When attacking the elimination targe the crit threshold is reduced by 1. When the elimination targe is eleminated from the combat you gain Trickery equal to the [LEVEL] of the elimination targe.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -193,7 +193,7 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "Increase the [ROUND] Limit for each of the conditions for getting Trickery by 1.",
+                    "regularText": "Increase amout of Trickery you get for each of the conditions for getting Trickery by 1.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -201,12 +201,38 @@
             ]
         },
         {
-            "name": "Quickast",
+            "name": "Assassin Improvements 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Assassin",
+            "textElements": [
+                {
+                    "regularText": "The crit threshold against your elimination target is further reduced by 1 and when the elimination target is reduced to 0 [HP] or out of the combat. You can designate a new one at the start of your next [TURN].",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Daredevil Improvemnets 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Daredevil",
+            "textElements": [
+                {
+                    "regularText": "TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Shadow Improvements 2",
             "levels": [ 5 ],
             "relatedClassPath": "Shadow",
             "textElements": [
                 {
-                    "regularText": "Can use Trickery to reduced [AP] Cost of Spells",
+                    "regularText": "Can use Trickery to reduced [AP] Cost of Spells (maybe should be class technique)",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -214,7 +240,33 @@
             ]
         },
         {
-            "name": "Eternal Shroud",
+            "name": "Assassin Improvements 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Assassin",
+            "textElements": [
+                {
+                    "regularText": "TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Daredevil Improvemnets 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Daredevil",
+            "textElements": [
+                {
+                    "regularText": "TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Shadow Improvements 3",
             "levels": [ 9 ],
             "relatedClassPath": "Shadow",
             "textElements": [

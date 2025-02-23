@@ -413,7 +413,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "This is an improved version of the regular parry: When you are hit by a [MELEE ATTACK] you can use this reaction. Make a Weapon [MARTIAL MEELE ATTACK] if it matches or exceeds the [MELEE ATTACK] that targeted you, the damage from the [ATTACK] is reduced by 2 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded one-handed, or by 3 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded two-handed.",
+            "description": "This is an improved version of the regular parry: When you are hit by a [MELEE ATTACK] you can use this reaction. Make a [MEELE MARTIAL ATTACK] using weapon bonuses, if it matches or exceeds the [MELEE ATTACK] that targeted you, the damage from the [ATTACK] is reduced by 2 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded one-handed, or by 3 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded two-handed.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can now parry any [ATTACK]."

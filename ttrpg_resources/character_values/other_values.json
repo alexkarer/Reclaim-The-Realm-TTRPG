@@ -1,4 +1,16 @@
 {
+    "alignment": {
+        "alignmentDescription": "A characters alignment roughly describes their moral and idiological outlook. Every character and most NPC's have one. It is important to realize that these are not hard and characters can change their allignment during their lifetime. An allignement consists of one Moral and one Ideiological component.",
+        "goodAlignment": { "name": "Good", "ideas": [ "Altruism", "Respect for life" ] },
+        "evilAlignment": { "name": "Evil", "ideas": [ "Greed", "Selfishness", "Sadism" ] },
+        "moralNeutralAlignment": { "name": "Moral Neutral", "ideas": [] },
+        "lawfulAlignment": { "name": "Lawful", "ideas": [ "Equality", "Honor", "Dogmatism" ] },
+        "chaoticAlignment": { "name": "Chaotic", "ideas": [ "Pragmatism", "Freedom" ] },
+        "idiologicalNeutralAlignment": { "name": "Idiological Neutral", "ideas": [] },
+        "additionaDetailDescription": "For a more detailed analysis I recommend the following: ",
+        "linkText": "easydamus.com - Alignment",
+        "link": "https://easydamus.com/alignment.html"
+    },
     "specialMovementDescription": "There are various types of special movement that allows you to move around more efficiently in certain circumstances. Special movement is accompanied by a number of meters in parentheses (X) that designates how many meters can be moved when spending 1 [MP].",
     "specialMovementTypes": [
         {
@@ -22,7 +34,6 @@
             "description": "Creatures with Hover speed can also fly through the air but are a lot more flexible and don’t have to spend [MP] to stay in the air and are not affected by being knocked prone."
         }
     ],
-
     "sizeDescription": "Most humanoids are medium [SIZE] , however certain species have different ones and certain effects might change your [SIZE] . Changing your [SIZE] affects some of your physical characteristics",
     "sizeValues": [
         {

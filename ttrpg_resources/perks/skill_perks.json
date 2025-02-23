@@ -133,7 +133,7 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Survival Skill" ]
         },
-        "description": "Your party ignores 1 Travel speed penalty of Terrains and the first time you have to spend [STAMINA] because of travel you don’t need to spend [STAMINA]."
+        "description": "Reduce the Speed Penalty of your party they get through Terrain modifiers by 1. (e.g. a -1 penalty to Travel speed becomes 0). Additionally the first time you have to spend [STAMINA] during Travel you can reduce the cost by 1. (not below 0)"
     },
     {
         "name": "Thief",
