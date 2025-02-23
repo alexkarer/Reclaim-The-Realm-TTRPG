@@ -1,11 +1,12 @@
 TODO before playtest:
 
 **finsh other classes**:
-- mage todo (rework overcharge)
-  - counter should be based on arcana cost or spell-like number in parantheses
-- warlock, carry over and rework
-  - corruption table
-  - Mutations
+- mage todo
+  - needs at least 1 feature and a few more class techniques
+- warlock, implement phone ideas.
+
+spells: spell cast test fails when below 5
+  - magical mishap table needs to be improved
 
 add character creation process with origins
 

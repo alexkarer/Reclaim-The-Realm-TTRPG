@@ -3,7 +3,7 @@
         "pyromancySpells": [
             {
                 "name": "Fire Breath",
-                "tags": [ "Spell", "Elemental", "Pyromancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Pyromancy" ],
                 "components": "V (Incantation), M (Mouth, nostrils or similar)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -16,7 +16,7 @@
             },
             {
                 "name": "Ignite",
-                "tags": [ "Spell", "Elemental", "Pyromancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Pyromancy" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -29,22 +29,22 @@
             },
             {
                 "name": "Fireball",
-                "tags": [ "Spell", "Elemental", "Pyromancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 2", "Elemental", "Pyromancy" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "4 [AP], 4 [ARCANA]", "range": "30m", "target": "[SPHERE] 3m", "duration": "[INSTANT]",
+                "cost": "4 [AP], 3 [ARCANA]", "range": "30m", "target": "[SPHERE] 3m", "duration": "[INSTANT]",
                 "description": "You launch a small fire projectile at the designated location that you can see and without amy obstructions. It then errupts in a fiery that hits all creatures within that sphere. Make an [INT] [SPELL TEST] against the creatures [DODGE] on a success they take 6d6 + [SPI] * d6 fire damage [HALF] .",
-                "spellDifficulty": 9,
+                "spellDifficulty": 8,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the radius increases by 1.5m and the damage by 2d6 + ([SPI] / 4) * d6."
             }
         ],
         "geomancySpell": [
             {
                 "name": "Stone Barrier",
-                "tags": [ "Spell", "Elemental", "Geomancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Geomancy" ],
                 "components": "V (Incantation), S, M(nearby earth or stone)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
@@ -57,7 +57,7 @@
             },
             {
                 "name": "Poison Touch",
-                "tags": [ "Spell", "Elemental", "Geomancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Geomancy" ],
                 "components": "V (Incantation), S (Touch)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -72,7 +72,7 @@
         "hydromancySpells": [
             {
                 "name": "Acid Stream",
-                "tags": [ "Spell", "Elemental", "Hydromancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Hydromancy" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -85,7 +85,7 @@
             },
             {
                 "name": "Icy Floor",
-                "tags": [ "Spell", "Elemental", "Hydromancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Hydromancy" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -100,7 +100,7 @@
         "aeromancySpells": [
             {
                 "name": "Lightning Spark",
-                "tags": [ "Spell", "Elemental", "Aeromancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Aeromancy" ],
                 "components": "V (Incantation), S, M (object consisting of conductive material)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -113,7 +113,7 @@
             },
             {
                 "name": "Gust of Wind",
-                "tags": [ "Spell", "Elemental", "Aeromancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Aeromancy" ],
                 "components": "V (Blowing Air), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -126,7 +126,7 @@
             },
             {
                 "name": "Fly",
-                "tags": [ "Spell", "Elemental", "Aeromancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Aeromancy" ],
                 "components": "S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -143,7 +143,7 @@
         "lightSpells": [
             {
                 "name": "Divine Bolt",
-                "tags": [ "Spell", "Cosmic", "Light" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Light" ],
                 "components": "V (Prayer), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -156,7 +156,7 @@
             },
             {
                 "name": "Holy Light",
-                "tags": [ "Spell", "Cosmic", "Light" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Light" ],
                 "components": "V (Prayer), S, M(a small relic in your hand)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -169,7 +169,7 @@
             },
             {
                 "name": "Shield of Faith",
-                "tags": [ "Spell", "Cosmic", "Light" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Light" ],
                 "components": "V (Prayer), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -184,7 +184,7 @@
         "restorationSpells": [
             {
                 "name": "Bless",
-                "tags": [ "Spell", "Cosmic", "Restoration" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Restoration" ],
                 "components": "V (Prayer), S, M (a springling of holy water)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -197,7 +197,7 @@
             },
             {
                 "name": "Heal",
-                "tags": [ "Spell", "Cosmic", "Restoration" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Restoration" ],
                 "components": "V (Prayer), S (Touch)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -210,7 +210,7 @@
             },
             {
                 "name": "Cleanse",
-                "tags": [ "Spell", "Cosmic", "Restoration" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Restoration" ],
                 "components": "V (Prayer)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -223,22 +223,22 @@
             },
             {
                 "name": "Sanctuary",
-                "tags": [ "Spell", "Cosmic", "Restoration" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 2", "Cosmic", "Restoration" ],
                 "components": "V (Prayer), S, M(holy water sprinkled on the ground)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "4 [AP], 4 [ARCANA]", "range": "6m", "target": "[SPHERE] 4.5m", "duration": "[SPI]/2 rounds, [CONCENTRATION] 1",
+                "cost": "4 [AP], 3 [ARCANA]", "range": "6m", "target": "[SPHERE] 4.5m", "duration": "[SPI]/2 rounds, [CONCENTRATION] 1",
                 "description": "You bless the ground below you and create a 4.5m (3 square) radius sanctuary. Each allied creature (including yourself) that starts its turn in the sancutuary or eneters the area for the first time regains ([SPI]/2) * d6 [HP] and each evil enemy creature that starts its turn there or enters it for the first time recieves ([SPI]/2) * d6 holy damage.",
-                "spellDifficulty": 9,
+                "spellDifficulty": 8,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and increase the damage/heal by 1d6 and the duration by 1 [ROUND]."
             }
         ],
         "necromancySpell": [
             {
                 "name": "Create Undead Servant",
-                "tags": [ "Spell", "Cosmic", "Necromancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Necromancy" ],
                 "components": "V (Prayer), S, M(A nearby corpse or bone remnants)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -251,7 +251,7 @@
             },
             {
                 "name": "Curse",
-                "tags": [ "Spell", "Cosmic", "Necromancy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Necromancy" ],
                 "components": "V (Curse)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -266,7 +266,7 @@
         "shadowSpell": [
             {
                 "name": "Unholy Pyre",
-                "tags": [ "Spell", "Cosmic", "Shadow" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Shadow" ],
                 "components": "V (Prayer), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -279,7 +279,7 @@
             },
             {
                 "name": "Darkness",
-                "tags": [ "Spell", "Cosmic", "Shadow" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Shadow" ],
                 "components": "V (Curse)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -294,7 +294,7 @@
         "divinationSpell": [
             {
                 "name": "Hindsight",
-                "tags": [ "Spell", "Cosmic", "Divination" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Divination" ],
                 "components": "V (warning)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -307,7 +307,7 @@
             },
             {
                 "name": "The Die is Cast",
-                "tags": [ "Spell", "Cosmic", "Divination" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Divination" ],
                 "components": "V (Prayer), S, M(dice)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -324,7 +324,7 @@
         "telekinesisSpells": [
             {
                 "name": "Telekinetic move",
-                "tags": [ "Spell", "Manipulation", "Telekinesis" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Telekinesis" ],
                 "components": "S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -337,7 +337,7 @@
             },
             {
                 "name": "Telekinetic crush",
-                "tags": [ "Spell", "Manipulation", "Telekinesis" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Telekinesis" ],
                 "components": "S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -352,7 +352,7 @@
         "transmutationSpells": [
             {
                 "name": "Mutate",
-                "tags": [ "Spell", "Manipulation", "Transmutation" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Transmutation" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -367,7 +367,7 @@
         "conjurationSpells": [
             {
                 "name": "Magic Missiles",
-                "tags": [ "Spell", "Manipulation", "Conjuration" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Conjuration" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -380,7 +380,7 @@
             },
             {
                 "name": "Create Object",
-                "tags": [ "Spell", "Manipulation", "Conjuration" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Conjuration" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -395,7 +395,7 @@
         "illusionSpells": [
             {
                 "name": "Shroud",
-                "tags": [ "Spell", "Manipulation", "Illusion" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Illusion" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -408,7 +408,7 @@
             },
             {
                 "name": "Illusary Image",
-                "tags": [ "Spell", "Manipulation", "Illusion" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Illusion" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -423,7 +423,7 @@
         "teleportationSpells": [
             {
                 "name": "Cosmic Shift",
-                "tags": [ "Spell", "Manipulation", "Teleporation" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Teleporation" ],
                 "components": "V (Incantation)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -436,7 +436,7 @@
             },
             {
                 "name": "Extradimensional Pocket",
-                "tags": [ "Spell", "Manipulation", "Teleporation" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Teleporation" ],
                 "components": "V (Incantation), S, M (Pocket or container)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -446,12 +446,25 @@
                 "description": "You can target one object weighing up to [SPI] ∗ 10 kg. and make it vanish into an extradimensional space. At any point you can cast this spell again and retrieve an item you have previously stored in your extradimensional pocket. Objects in the extradimensional space are perserved indefinete and do not wither or rot.",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the maximum object weight is doubled."
+            },
+            {
+                "name": "Emergency Teleport",
+                "tags": [ "Spell", "[SPELL ABILITY] 2", "Manipulation", "Teleporation" ],
+                "components": "V (Incantation)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "1 [REACTION], 3 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "[INSTANT]",
+                "description": "If you are hit by an [ATTACK] you can use your reaction and teleport in a random direction (roll d8) a number of meters equal to d6+[SPI] causing the attack to miss. If the space where you would land is not free you land in the closest free space.",
+                "spellDifficulty": 8,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can roll an additional d8 for the direction and choose any die for the direction you will be teleported."
             }
         ],
         "telepathySpells": [
             {
                 "name": "Mind Assault",
-                "tags": [ "Spell", "Manipulation", "Telepathy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Telepathy" ],
                 "components": "V (Scream)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -464,7 +477,7 @@
             },
             {
                 "name": "Suggestion",
-                "tags": [ "Spell", "Manipulation", "Telepathy" ],
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Telepathy" ],
                 "components": "V (Suggestion)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 

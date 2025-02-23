@@ -1,6 +1,6 @@
 {
     "className": "Mage",
-    "classDescription": "Wanna play a nerd?",
+    "classDescription": "The nerd",
     "coreClassValues": {
         "hpPerLevel": 6,
         "martialProficiency": 0.0,
@@ -17,10 +17,47 @@
         "weaponRanks": 0
     },
     "classCoreFeature": {
-        "name": "",
+        "name": "Magical Charge",
         "textElements": [
             {
+                "regularText": "When excessive amounts of spells and supernatural abilities are used then then cosmic energy is incresingly flooding into realspace which the mage attempts to harness it which can prove dangerous when faced with large amounts. Magical Charge builds up during the fight and is denoted by a number, at the start of combat the Mage's Magical Charge is 0. The Mage gains Magical Charge via the following things:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
                 "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "Each time a [SPELL ABILITY] is used the mage gains Magical Charge equal to the number denoted in the [SPELL ABILITY] up to a maximum of 2 * [LEVEL] per [ROUND].",
+                    "Each time a creature is reduced to 0 [HP] the mage gains magical charge equal to half the creatures [SPELL LEVEL] (rounded up).",
+                    "They can use the Channel Ability to gain Magical Charge"
+                ],
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Channel",
+                    "tags": [ "Class Technique (Mage)" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "1 [AP]",
+                    "range": "-",
+                    "target": "[SELF]",
+                    "duration": "[INSTANT]",
+                    "description": "You gain 1 + [LEVEL] / 4 (rounded down) Magical Charge."
+                }
+            },
+            {
+                "regularText": null,
+                "headerLine": "Overcharge",
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": "The Mage can have a maximum number of Magical Charge equal to 4 + 2 * [LEVEL]. As soon their magical Charge reaches that amount, they can unleassh a devestating attack depending on their chosen Class Path which gets stronger at higher levels.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -30,10 +67,32 @@
     "classPathDescription": "",
     "classPaths": [
         {
-            "name": "",
+            "name": "Elemental Mage",
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "The elemental mage is able to harness and master the energy of the elemental chaos, like no other mortal. They are able to unleash this raw energy as an overcharge at their enemey. They are the most destructive and powerful mages when measured in raw magical energy output.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Reckless Mage",
+            "textElements": [
+                {
+                    "regularText": "While most mages attempt to keep the chaotic energies of the aether and elements under control, the Reckless Mage has a different approach to accessing the energy of the planes. They try to reach for as much power as possible and trust their training and intuition to prevent disaster from happening.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "TODO",
+            "textElements": [
+                {
+                    "regularText": "Blood Mage Idea",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -43,12 +102,78 @@
     ],
     "classFeatures": [
         {
-            "name": "",
+            "name": "Elemental Mage Improvements",
+            "levels": [ 1 ],
+            "relatedClassPath": "Elemental Mage",
+            "textElements": [
+                {
+                    "regularText": "You gain the Elementalist Perk and gain the follwoing Overcharge ability:",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Elemental Overcharge",
+                        "tags": [ "Class Technique (Mage)", "[SPELL LIKE] 3" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "3 [AP], 4 + 2 * [LEVEL] Magical Charge",
+                        "range": "12m",
+                        "target": "2-4 targets",
+                        "duration": "[INSTANT]",
+                        "description": "You unleash a large amount of charged elemental energy at your enemies. The energy forms into 4 instances for each element and can be directed at a different target, however opposite elements can't be directed at the same target. (fire/water, earth/air). The effect depends on the chosen element and the damage is equal to d6 for every 2nd magical Charge used:<br><span class=\"fw-bold\">Fire: </span>Make a [RANGED SPELL ATTACK] and on a hit, deal fire damage and the target recieves [BURNING II].<br><span class=\"fw-bold\">Earth: </span>Make a [RANGED SPELL ATTACK] and on a hit deal physical damage and if it exceeds the targets [HARDNESS] it is knocked prone.<br><span class=\"fw-bold\">Water: </span>Make a [RANGED SPELL ATTACK] and on a hit deal physical damage and if it exceeds the targets [HARDNESS] it is knocked [SPI] meters away.<br><span class=\"fw-bold\">Air: </span>Make a [RANGED SPELL ATTACK] and on a hit, deal lightning damage and if another target is within 3m it recieves also half that damage.<br>"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Reckless Mage Improvements",
             "levels": [ 1 ],
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "The Reckless Mage thrives during Magical Mishaps and attempts to direct these magical incidents at his enemies. They gain the following benefits as well as the following Overcharge",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Each time a Magical Mishap is triggered you gain Magical Charge equal to the number denoted in the [SPELL ABILITY] that caused the Mishap.",
+                        "Each time you make a [SPELL CAST TEST] if you roll doubles you also trigger a magical mishap regardless if it usually would be successful.",
+                        "When a magical mishap is triggered you can roll twice choose what effect you wish to trigger."
+                    ],
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Reckless Overcharge",
+                        "tags": [ "Class Technique (Mage)", "[SPELL LIKE] 3" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "3 [AP], 4 + 2 * [LEVEL] Magical Charge",
+                        "range": "9m",
+                        "target": "multiple targets",
+                        "duration": "[INSTANT]",
+                        "description": "trigger magical mishaps for every second magical charge used, roll a d8 for each magical mishap, 1: targets yourself, 2: targets random ally, 3-8: targets enemy."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Arcane Expertise",
+            "levels": [ 2,4,6,8,10,12 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "Each time you get this feature you can select an additional Spell Perk.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -59,14 +184,64 @@
     "classTechniquesDescription": "",
     "classTechniques": [
         {
-            "name": "",
-            "tags": [ "Class Technique (Barbarian" ],
+            "name": "Twined Cast",
+            "tags": [ "Class Technique (Mage)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "",
+            "cost": "0 [AP], varied Magical Charge",
             "range": "-",
-            "target": "",
-            "duration": "",
-            "description": ""
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "The next Spell that you cast that has exactly one Target (and not self) affects an additional different target. The magical charge cost is equal to half the [ARCANA] Cost of the Spell. (rounded up)."
+        },
+        {
+            "name": "Quickened Cast",
+            "tags": [ "Class Technique (Mage)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], varied Magical Charge",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You can reduce the [AP] cost of the next Spell that you cast by 1 (to a minimum of 1). The magical charge cost is equal to half the [ARCANA] Cost of the Spell. (rounded up)."
+        },
+        {
+            "name": "Efficient Cast",
+            "tags": [ "Class Technique (Mage)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 3 or more Magical Charge",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You can reduce the [ARCANA] consumed by the next Spell that you cast by 1 (to a minimum of 1). For every 3 additional magical Charge used, the consumption is reduced by 1 further (still minimum of 1)."
+        },
+        {
+            "name": "Devestating Cast",
+            "tags": [ "Class Technique (Mage)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], varied Magical Charge",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "The next spell that you cast has all it's damage dice maximized. The magical charge cost is equal to the [ARCANA] Cost of the Spell. (rounded up)."
+        },
+        {
+            "name": "Safe cast",
+            "tags": [ "Class Technique (Mage)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], varied Magical Charge",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "For the next spell that you cast, you automatically succed the [SPELL CAST TEST]. The magical charge cost is equal to half the [ARCANA] Cost of the Spell. (rounded up)"
+        },
+        {
+            "name": "Elemental Bolt",
+            "tags": [ "Class Technique (Mage)", "[SPELL LIKE] 0" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "2 [AP], 0-3 Magical Charge",
+            "range": "18m",
+            "target": "1 target",
+            "duration": "[INSTANT]",
+            "description": "Hurl an elemental Bolt at an enemy. Make a [RANGED SPELL ATTACK] and on a hit deal acid, cold, fire, lightning or thunder damage (choose one) equal to 1d8 + [SPI]. For each magical charge used, the damage increases by 1d8."
         }
     ]
 }

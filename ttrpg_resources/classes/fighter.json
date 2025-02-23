@@ -146,7 +146,7 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "Each time you get this feature you recieve an additional Martial Perk.",
+                    "regularText": "Each time you get this feature you can select an additional Martial Perk.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -279,6 +279,26 @@
             "target": "[SELF]",
             "duration": "[INSTANT]",
             "description": "When you use a Martial Maneuver that includes a Weapon Attack, you can use a different Martial Maneuver as part of the same Weapon Attack.<br>(Explanation: still only 1 Weapon Attack is made however you could use crippling strike and deep cut simultaneously and if the attack is successfuly the target is bleeding and crippled at the same time)."
+        },
+        {
+            "name": "Target Guidance",
+            "tags": [ "Class Technique (Tactician)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "1 [AP], 1 Focus",
+            "range": "6m",
+            "target": "1 allied creature",
+            "duration": "1 [ROUND]",
+            "description": "Select 1 allied creature, each time that creature makes an [ATTACK] against your priority target, that [ATTACK] has [ADVANTAGE]."
+        },
+        {
+            "name": "Bring it Down!",
+            "tags": [ "Class Technique (Tactician)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "2 [AP], 3 Focus",
+            "range": "-",
+            "target": "priority target",
+            "duration": "1 [ROUND]",
+            "description": "Any time an [ATTACK] hits your priority target, it recieves 1d6 + [INT] extra damage."
         }
     ]
 }
