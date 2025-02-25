@@ -329,7 +329,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "until the end of your [TURN]",
-            "description": "You can use this Class Technique at the start of the [TURN] even if you otherwise couldn't act, unless you are [UNCONCIOUS]. You can suppress a single Status Effect of your choice except [GRAPPLED] and [RESTRAINED] and it's effect will seize for the duration of the ability. If you spend 1 Focus you an suppress a Tier I status effect, 2 Focus a Tier II status effect and 3 Focus a Tier III status effect. Keep in mind you can only suppress 1 instance of a Status Effect meaning that if the same status affect has 2 instances affecting you, you will have to use this ability twice against both status effects for it to have an effect."
+            "description": "You can use this Class Technique at the start of the [TURN] even if you otherwise couldn't act, unless you are [UNCONCIOUS]. You can suppress a single Status Effect of your choice except [RESTRAINED I] and [RESTRAINED II] and it's effect will seize for the duration of the ability. If you spend 1 Focus you an suppress a Tier I status effect, 2 Focus a Tier II status effect and 3 Focus a Tier III status effect. Keep in mind you can only suppress 1 instance of a Status Effect meaning that if the same status affect has 2 instances affecting you, you will have to use this ability twice against both status effects for it to have an effect."
         },
         {
             "name": "Combined Maneuver",

@@ -22,7 +22,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "1 [AP], 1 [ARCANA]", "range": "9m", "target": "1 creature", "duration": "[SPI] [ROUNDS]",
+                "cost": "1 [AP], 1 [ARCANA]", "range": "9m", "target": "1 creature", "duration": "[SPI] [ROUND]",
                 "description": "You can set the target on fire and it recieves the [BURNING I] Status Effect.",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 3, the target instead suffers the [BURNING II] Status Effect and if you increase it by 6, the effect becomes [BURNING III]"
@@ -63,7 +63,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "1 creature", "duration": "2 [ROUNDS]",
+                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "1 creature", "duration": "2 [ROUND]",
                 "description": "Make a [MELEE SPELL ATTACK] against the target, on a hit if the [MELEE SPELL ATTACK] exceeds or matches the Targets [TOUGHNESS] they recieve 2d12 + ([SPI] / 4) * d12 poison damage and recieve the [WEAKENED I] status effect for the duration. [HALF]",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage is increased by  1d12 + ([SPI] / 4) * d12."
@@ -162,7 +162,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "3 [AP], 1 [ARCANA]", "range": "[AURA] 6m", "target": "[SELF]", "duration": "[SPI] rounds, [CONCENTRATION 1]",
+                "cost": "3 [AP], 1 [ARCANA]", "range": "[AURA] 6m", "target": "[SELF]", "duration": "[SPI] rounds, [CONCENTRATION] 1",
                 "description": "You enchant an item you are holding and it shines bright light within a 6m aura and dim light up to 12m. At the time of casting make a [SPI] [SPELL TEST] against the [TOUGHNESS] of every creature within the bright light created by this spell. On a success enmies recieve ([SPI] / 2) * d6 holy damage [HALF] and are blinded [SAVE ENDS].",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can boost the bright light aura by 2m and dim light by 4m."
@@ -175,7 +175,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "1 [AP], 1 [ARCANA]", "range": "6m", "target": "1 friendly target", "duration": "[SPI] [ROUNDS]",
+                "cost": "1 [AP], 1 [ARCANA]", "range": "6m", "target": "1 friendly target", "duration": "[SPI] [ROUND]",
                 "description": "A translucent shield envelopes the target and it recieves [PROTECTION I] status effect..",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 3, the target instead recieves the [PROTECTION II] Status Effect and if you increase it by 6, the effect becomes [PROTECTION III]."
@@ -203,7 +203,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "1 creature", "duration": "[INSTANT]",
+                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "1 creature", "duration": "[INSTANT]",
                 "description": "You heal a target for 2d8 + ([SPI] / 4) * d8 . Alternatively undead creatures can be targeted by this spell with a [MELEE SPELL ATTACK] and on a success they do not heal but instead take holy damage eqal to the heal instead.",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the heal increases by 1d8 + ([SPI] / 4) * d8."
@@ -358,7 +358,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "3 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "one willing creature", "duration": "10 minutes",
+                "cost": "3 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "one willing creature", "duration": "10 minutes",
                 "description": "You cause a minor mutation within a creature and can grant them one of the following benefits: <ul><li>Quicken: Their limbs change to be more agile: the creature’s [MP] are increasd by 1 + ([SPI]/2)</li> <li>Natural armor: The target’s skin becomes harder and grows more layers to protect it and it grants physical damage resistance equal to [SPI]. Does not stack with physical damage resistance granted by other armor and is treated as armor for all other effects.</li></ul>",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target one additional creature and the range increases by 1.5m"
@@ -401,7 +401,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "one creature", "duration": "[SPI] * 10 minutes [CONCENTRATION] 2",
+                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "one creature", "duration": "[SPI] * 10 minutes [CONCENTRATION] 2",
                 "description": "The target recieves the [INVISIBLE I] status effect for the duration",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "TODO"
@@ -442,7 +442,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE]", "target": "one non living object", "duration": "-",
+                "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "one non living object", "duration": "-",
                 "description": "You can target one object weighing up to [SPI] ∗ 10 kg. and make it vanish into an extradimensional space. At any point you can cast this spell again and retrieve an item you have previously stored in your extradimensional pocket. Objects in the extradimensional space are perserved indefinete and do not wither or rot.",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the maximum object weight is doubled."

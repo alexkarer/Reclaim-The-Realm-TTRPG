@@ -29,6 +29,7 @@ Evaluation for after Playtest:
 - Robes?
 - hybrid abilities necesarry?
 - have another look at the implementation of the martial training perks
+- Martial Damage?
 ___________________________________________________________
 Future Ideas / Nice to have:
 

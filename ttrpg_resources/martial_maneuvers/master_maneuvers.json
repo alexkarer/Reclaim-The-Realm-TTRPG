@@ -192,7 +192,7 @@
                 "otherRequirements": [ ]
             },
             "cost": "1 or more [AP], 2 [STAMINA]",
-            "range": "[MELEE WEAPON RANGE]",
+            "range": "[MELEE RANGE]",
             "target": "one creature",
             "duration": "[INSTANT]",
             "description": "You unleash a series of quick attacks against a single target. For each [AP] spent you can make 1 Weapon [MELEE MARTIAL ATTACK]."

@@ -11,7 +11,7 @@
             "Players acts before NPCs",
             "Resolve via rolling d20s"
         ],
-        "supriseDescription": "Depending on how the combat started, some participants might not have expected it and can be declared as suprised by the GM which often depends on their passive [AWARENESS] or by failing a [PER] [AWARENESS] [SKILL TEST].<br>Creatures that are suprised in combat do not roll initiative and instead are at the bottom of the initiative order (resolve ties as normal), Additionally in the first round of combat they suffer the following penalties:",
+        "supriseDescription": "Depending on how the combat started, some participants might not have expected it and can be declared as suprised by the GM which often depends on their passive Awareness or by failing a [PER] Awareness [SKILL TEST].<br>Creatures that are suprised in combat do not roll initiative and instead are at the bottom of the initiative order (resolve ties as normal), Additionally in the first round of combat they suffer the following penalties:",
         "suprisedPenalties": [
             "They cannot use a [REACTION].",
             "They recieve a -5 penalty to their [DODGE]."

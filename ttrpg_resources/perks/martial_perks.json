@@ -294,7 +294,7 @@
             "requiredPerks": [ "Superior Critical" ],
             "otherRequirements": [ ]
         },
-        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK], you can grant your target one of the following status effects of your choice for 1 round: [BLINDED], [SILENCED], [BLEEDING] equal to  2d6 + [MARTIAL LEVEL], [DAZED], [CRIPPLED]"
+        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK], you can grant your target one of the following status effects of your choice for 1 round: [BLINDED], [SILENCED], [BLEEDING I] equal to  2d6 + [MARTIAL LEVEL], [STUNNED I], [CRIPPLED I]"
     },
     {
         "name": "Quick-footed",

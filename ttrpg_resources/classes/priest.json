@@ -479,7 +479,7 @@
             "cost": "0 [AP], 2 AD(3-)",
             "range": "-",
             "target": "one ally that was targeted by a [SPELL ABILITY]",
-            "duration": "2 [ROUNDS]",
+            "duration": "2 [ROUND]",
             "description": "One ally that was targeted with a [SPELL ABILITY] that you cast this turn recieves [HEALING] equal to [SPI] ."
         },
         {
@@ -579,8 +579,8 @@
             "cost": "1 [AP], 2 matching AD",
             "range": "9m",
             "target": "one creature",
-            "duration": "[SPI]/2 [ROUNDS]",
-            "description": "Make a [SPI] [SPELLCASTING TEST] against the targets [HARDNESS] or [DODGE] (target’s choice). On a success the target is [RESTRAINED] (Escape DC equal to 10 + [LEVEL] + [SPI]). When targeting a chaotic creature you have [ADVANTAGE] on the Test."
+            "duration": "[SPI]/2 [ROUND]",
+            "description": "Make a [SPI] [SPELLCASTING TEST] against the targets [HARDNESS] or [DODGE] (target’s choice). On a success the target is [RESTRAINED I] (Escape DC equal to 10 + [LEVEL] + [SPI]). When targeting a chaotic creature you have [ADVANTAGE] on the Test."
         },
         {
             "name": "Unyielding",

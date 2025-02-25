@@ -21,8 +21,8 @@
         "massiveInjuriesTable": [
             { "diceRoll": "01-20", "Injury": "Scar TODO add recovery mehtods, add Table for different damage types and simplify (6-8 entries)" },
             { "diceRoll": "21-40", "Injury": "Broken Bone" },
-            { "diceRoll": "41-60", "Injury": "" },
-            { "diceRoll": "61-80", "Injury": "" },
+            { "diceRoll": "41-60", "Injury": "reduce healing (also long/short rest)" },
+            { "diceRoll": "61-80", "Injury": "reduce long rest stamina/arcana recovery" },
             { "diceRoll": "81-90", "Injury": "" },
             { "diceRoll": "91-100", "Injury": "" },
             { "diceRoll": "101-110", "Injury": "" },

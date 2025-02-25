@@ -262,7 +262,7 @@
                 { "type": "[MELEE SPELL ATTACK]", "description": "This is a [MELEE ATTACK] as well as a [SPELL TEST] and it recieves a bonus equal to the [SPELL LEVEL] and [AGI] of the Attacker to the Test." },
                 { "type": "[RANGED SPELL ATTACK]", "description": "This is a [RANGED ATTACK] as well as a [SPELL TEST] and it recieves a bonus equal to the [SPELL LEVEL] and [PER] of the Attacker to the Test." }
             ],
-            "criticalsDescription": "Every [ATTACK] additionally has the posibility to score a Critical Hit or Critical Miss. A critical Hit is scored by rolling a natural 20 for an [ATTACK] Test, however certain abilities might enable you additional ways to score a critical hit. A Critical Miss is scored when rolling a natural 1 for an [ATTACK] Test.<br/>Additionally Player Characters recieve cricical hits when they roll a natural 1 or a critical Miss if they roll a natural 20 for a [DODGE SAVE].",
+            "criticalsDescription": "Every [ATTACK] additionally has the posibility to score a Critical Hit or Critical Miss. A critical Hit is scored by rolling a natural 20 for an [ATTACK] Test, however certain abilities might enable you additional ways to score a critical hit. A Critical Miss is scored when rolling a natural 1 for an [ATTACK] Test.<br/>Additionally Player Characters recieve cricical hits when they roll a natural 1 or a critical Miss if they roll a natural 20 for a [DODGE] [SAVE].",
             "criticalHitEffects": "When a critical hit is scored all damage dice can be rolled twice",
             "criticalMissEffects": "When a critical miss is scored the [ATTACK] automatically misses."
         },
@@ -305,10 +305,15 @@
             "instant": "Abilities with the [INSTANT] tag are not happening really instantaneously but if such an ability is used all of it's effects are resolved before any other ability can be used unless that follow up ability directly interacts with the current one.",
             "longerDuration": ""
         },
+        "helperKeywords": {
+            "half": "",
+            "saveEnds": "",
+            "spellAbility": ""
+        },
         "circumstancalBonuses": {
             "description": "During cobmat there are several situations where combatants can gain small advantages.",
             "cover": "small cover: unmodified roll (25%)1-5 will always hit cover + 2 [DODGE] and shield block, medium cover: unmodified roll (50%) 1-10 will always hit cover + 4 [DODGE] and shield block, large cover: unmodified roll (75%) 1-15 will always hit cover + 6 [DODGE] and shield block",
-            "prone": "Any [MELEE ATTACK] has advantage against you. Any [MELEE ATTACK] made by you has [DISADVANTAG]. Additionally you always recieve small cover against any [RANGED ATTACK], if you already have cover, cover bonus is increased as it makes sense.",
+            "prone": "Any [MELEE ATTACK] has advantage against you. Any [MELEE ATTACK] made by you has [DISADVANTAGE]. Additionally you always recieve small cover against any [RANGED ATTACK], if you already have cover, cover bonus is increased as it makes sense.",
             "flanking": "-2 [DODGE], -4 shield block",
             "highGrounnd": "+2 [RANGED ATTACK] when targeting a creature that is 3m below you.",
             "lowGround": "-2 [RANGED ATTACK] when targeting a creature that is 3m above you.",

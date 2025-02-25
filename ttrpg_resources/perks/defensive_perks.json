@@ -10,7 +10,7 @@
             "requiredPerks": [],
             "otherRequirements": []
         },
-        "description": "You gain one extra [MP] and you gain a +4 bonus to your [DODGE] against any [OPPORTUNITY ATTACK]. Additionally escaping a grapple or standing up from prone requires 2 [MP] less."
+        "description": "You gain one extra [MP] and you gain a +4 bonus to your [DODGE] against any Opportunity Attack. Additionally escaping a grapple or standing up from prone requires 2 [MP] less."
     },
     {
         "name": "Immovable",
@@ -49,7 +49,7 @@
             "requiredPerks": [],
             "otherRequirements": []
         },
-        "description": "Gain a +2 bonus to [TOUGHNESS] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [BLINDED], [DAZED], [DEAFENED], [SILENCED], [POISONED], [BLEEDING], [POISON]"
+        "description": "Gain a +2 bonus to [TOUGHNESS] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [BLINDED], [STUNNED I], [DEAFENED], [SILENCED], [POISONED], [BLEEDING I], [POISON]"
     },
     {
         "name": "Mind of Steel",

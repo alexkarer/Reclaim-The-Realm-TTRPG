@@ -48,7 +48,7 @@
                 "Any [ATTACK] against you has [ADVANTAGE]",
                 "Any [ATTACK] made by you has [DISADVANTAGE]",
                 "You can't cast spells that require somatic components",
-                "If you are forcefully moved while climbing and are still in contact with the climbing surface, you can to make a [HARDNESS SAVE] equal to 10 + meters forcefully moved and on a success still cling on to the surface and potentially prevent fall damage."
+                "If you are forcefully moved while climbing and are still in contact with the climbing surface, you can to make a [HARDNESS] [SAVE] equal to 10 + meters forcefully moved and on a success still cling on to the surface and potentially prevent fall damage."
             ],
             "climbingDifficultyDescription": "Most surfaces are difficult to climb and require a successful [STR] Athletics [SKILL TEST] to successfully traverse. Here below is a guideline for Climbing difficulty. Depending on the length of the climb the GM might also modify this",
             "climbingDifficultyTable": [

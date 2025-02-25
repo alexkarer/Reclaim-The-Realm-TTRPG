@@ -24,13 +24,13 @@
             "keyword": "[BLEEDING I]",
             "link": "bleeding-i",
             "summary":  "Recieves 1d6 damage at the start of turn, can be stopped",
-            "description": "A bleeding creature recieves 1d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 10 [CON] [MEDICINE] [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
+            "description": "A bleeding creature recieves 1d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 10 [CON] Medicine [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
         },
         {
             "keyword": "[POISON I]",
             "link": "poison-i",
             "summary":  "Recieves 1d6 poison damage at the start of the turn",
-            "description": "A poisoned creature recieves 1d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 10 [TOUGHNESS SAVE]"
+            "description": "A poisoned creature recieves 1d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 10 [TOUGHNESS] [SAVE]"
         },
         {
             "keyword": "[CHARMED I]",
@@ -66,7 +66,7 @@
             "keyword": "[RESTRAINED I]",
             "link": "restrained-i",
             "summary":  "Can't use [MP] other than escaping, [DISADVANTAGE] on any [ATTACK] that does not target the grappler",
-            "description": "A grappled creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE SAVE] or [HARDNESS SAVE] (grappled creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] on any [ATTACK] against Targets other than the grappler."
+            "description": "A grappled creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE] [SAVE] or [HARDNESS] [SAVE] (grappled creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] on any [ATTACK] against Targets other than the grappler."
         },
         {
             "keyword": "[SILENCED]",
@@ -84,7 +84,7 @@
             "keyword": "[INTOXICATED]",
             "link": "Intoxicated-i",
             "summary":  "[WILLPOWER], [PER] and [AGI] are reduced by 5, resistant to fear.",
-            "description": "An Intoxicated creatures [WILLPOWER], [PER], [AGI] are reduced by 5, but it however recieves a +10 bonus to any [SAVE] made to resist [FRIGHTENED I-III]."
+            "description": "An Intoxicated creatures [WILLPOWER], [PER], [AGI] are reduced by 5, but it however recieves a +10 bonus to any [SAVE] made to resist the [FRIGHTENED I], [FRIGHTENED II] or [FRIGHTENED III] status effects."
         },
         {
             "keyword": "[DISTRACTED]",
@@ -116,13 +116,13 @@
             "keyword": "[BLEEDING II]",
             "link": "bleeding-ii",
             "summary":  "Recieves 4d6 damage at the start of turn, can be stopped",
-            "description": "A bleeding creature recieves 4d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 15 [CON] [MEDICINE] [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
+            "description": "A bleeding creature recieves 4d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 15 [CON] Medicine [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
         },
         {
             "keyword": "[POISON II]",
             "link": "poison-ii",
             "summary":  "Recieves 4d6 poison damage at the start of the turn",
-            "description": "A poisoned creature recieves 4d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 15 [TOUGHNESS SAVE]"
+            "description": "A poisoned creature recieves 4d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 15 [TOUGHNESS] [SAVE]"
         },
         {
             "keyword": "[CHARMED II]",
@@ -158,7 +158,7 @@
             "keyword": "[RESTRAINED II]",
             "link": "restrained-ii",
             "summary":  "Can't use [MP] other than escape, [DISADVANTAGE] for any [ATTACK] and [AGI] [ATTRIBUTE TEST], [DODGE] reduced by 5. Can't use abilities or weapons requiring 2 hands.",
-            "description": "A restreained creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE SAVE] or [HARDNESS SAVE] (restrained creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] for any [ATTACK] or [AGI] [ATTRIBUTE TEST] it makes and it's [DODGE] is reduced by 5.<br>A restrained creature can’t make attacks with two-handed weapons unless they are wielded in only one hand, additionally it can’t use any [SPELL ABILITY] that has somatic components."
+            "description": "A restreained creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE] [SAVE] or [HARDNESS] [SAVE] (restrained creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] for any [ATTACK] or [AGI] [ATTRIBUTE TEST] it makes and it's [DODGE] is reduced by 5.<br>A restrained creature can’t make attacks with two-handed weapons unless they are wielded in only one hand, additionally it can’t use any [SPELL ABILITY] that has somatic components."
         },
         {
             "keyword": "[BLINDED]",
@@ -202,13 +202,13 @@
             "keyword": "[BLEEDING III]",
             "link": "bleeding-iii",
             "summary":  "Recieves 12d6 damage at the start of turn, can be stopped",
-            "description": "A bleeding creature recieves 12d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 20 [CON] [MEDICINE] [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
+            "description": "A bleeding creature recieves 12d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 20 [CON] Medicine [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
         },
         {
             "keyword": "[POISON III]",
             "link": "poison-iii",
             "summary":  "Recieves 12d6 poison damage at the start of the turn",
-            "description": "A poisoned creature recieves 12d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 20 [TOUGHNESS SAVE]."
+            "description": "A poisoned creature recieves 12d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 20 [TOUGHNESS] [SAVE]."
         },
         {
             "keyword": "[CHARMED III]",
@@ -273,10 +273,10 @@
             "description": "A lightly healing creature receives 1d6 [HP] at the start of their turn."
         },
         {
-            "keyword": "[INVISIBLITY I]",
+            "keyword": "[INVISIBLE I]",
             "link": "invisiblity-i",
             "summary":  "Recieve partial concealment and stealth bonus",
-            "description": "An occluded creature recieves partial concealment bonus against any enemy and a +5 bonus to your [STEALTH]."
+            "description": "An occluded creature recieves partial concealment bonus against any enemy and a +5 bonus to your Stealth."
         },
         {
             "keyword": "[FOCUSED]",
@@ -317,10 +317,10 @@
             "description": "A healing creature receives 4d6 [HP] at the start of their turn."
         },
         {
-            "keyword": "[INVISIBLITY II]",
+            "keyword": "[INVISIBLE II]",
             "link": "invisiblity-ii",
             "summary":  "Recieve full concealment and stealth bonus",
-            "description": "An invisible creature recieves full concealment bonus against any enemy and a +10 bonus to your [STEALTH]."
+            "description": "An invisible creature recieves full concealment bonus against any enemy and a +10 bonus to your Stealth."
         }
     ],
     "tierThreeBeneficialStatusEffects": [

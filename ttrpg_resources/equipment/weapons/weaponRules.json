@@ -30,7 +30,7 @@
         },
         {
             "name": "duelist",
-            "description": "When performing a parry with this weapon, the [MARTIAL MELEE ATTACK] to determine if the parry is successful is made with [ADVANTAGE]"
+            "description": "When performing a parry with this weapon, the [MELEE MARTIAL ATTACK] to determine if the parry is successful is made with [ADVANTAGE]"
         },
         {
             "name": "heavy",

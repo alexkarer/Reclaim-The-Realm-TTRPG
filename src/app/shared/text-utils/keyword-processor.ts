@@ -129,9 +129,11 @@ function getGameMechanicsContentPart(keyword: string): ContentPart | undefined {
         case 'MARTIAL TEST':
             return generateGenericKeyword('[MARTIAL TEST]', 'TODO', '');
         case 'MELEE MARTIAL ATTACK':
-            return generateGenericKeyword('[MARTIAL MEELE ATTACK]', 'TODO', 'attack');
+            return generateGenericKeyword('[MEELE MARTIAL ATTACK]', 'TODO', 'attack');
         case 'RANGED MARTIAL ATTACK':
             return generateGenericKeyword('[RANGED MARTIAL ATTACK]', 'TODO', 'attack');
+        case 'SPELL ABILITY':
+            return generateGenericKeyword('[SPELL ABILITY]', 'Any Ability with the [SPELL ABILITY] Tag, these Abilities also have a number associated with it, if not the nuzmber is 0.', 'spell-test');
         case 'SPELL CAST TEST':
             return generateGenericKeyword('[SPELL CAST TEST]', 'Roll 2d6 + [SPELL LEVEL] and if the roll is lower than the Cast Difficulty of the Spell or double 1s, a magical mishap occurs after the spell was cast.', 'spell-test');
         case 'SPELL TEST':
@@ -140,6 +142,8 @@ function getGameMechanicsContentPart(keyword: string): ContentPart | undefined {
             return generateGenericKeyword('[MELEE SPELL ATTACK]', '[MELEE ATTACK], [SPELL TEST]. Certain spells require you to direct a spell towards a target in close range of you which attempts to dodge that. The Attack Bonus is [AGI] + [SPELL LEVEL]', 'melee-spell-attack');
         case 'RANGED SPELL ATTACK':
             return generateGenericKeyword('[RANGED SPELL ATTACK]', '[RANGED ATTACK], [SPELL TEST]. Certain spells require you to hit targets with a magic projectile towards a target which attempts to dodge that. For these spells make an Attack Roll using your Ranged Spell Attack Bonus which is calulated the following way: [PER] + [SPELL LEVEL]', 'ranged-spell-attack');
+        case 'CONCENTRATION':
+            return generateGenericKeyword('[CONCENTRATION]', 'Abilities with these keywords need to activly maintained by the caster. They are listed with a number which denotes how much [AP] they need to spend to maintain the ability, if they are not able to spend the [AP] the ability ends.', 'concentration-test');
         case 'CONCENTRATION TEST':
             return generateGenericKeyword('[CONCENTRATION TEST]', '[SPELL TEST]. A Concentration Test determines if you can maintain focus on a spell while external factors attempt to disrupt it. A [CONCENTRATION TEST] is made by rolling a d20 and adding your Concentration Bonus, which is calculated the following way: [CON] + [SPELL LEVEL]', 'concentration-test');
         case 'SAVE':
@@ -154,6 +158,26 @@ function getGameMechanicsContentPart(keyword: string): ContentPart | undefined {
             return generateGenericKeyword('[ROUND]', 'TODO', 'round');
         case 'TURN':
             return generateGenericKeyword('[TURN]', 'TODO', 'turn');
+        case 'MELEE RANGE':
+            return generateGenericKeyword('[MELEE RANGE]', 'within 1.5m of you, can be modified by [SIZE] and certain abilities', 'ranges');
+        case 'WEAPON RANGE':
+            return generateGenericKeyword('[WEAPON RANGE]', 'within range to be targeted by any weapon you wield, ranged or melee.', 'ranges');
+        case 'SELF':
+            return generateGenericKeyword('[SELF]', 'you are the target', 'targets');
+        case 'AURA':
+            return generateGenericKeyword('[AURA]', 'listed with a radius, effects every creature that is within range of that radius. The effect is applied at the start of the target creatures turn or the first time they enter the aura radius but only once during a [ROUND].', 'targets');
+        case 'SPHERE':
+            return generateGenericKeyword('[SPHERE]', 'listed with a radius, the center of a sphere needs to be within range of the ability and the center is always in between squares', 'targets');
+        case 'LINE':
+            return generateGenericKeyword('[LINE]', 'listed with a length x width. It starts from the caster of the ability and extends until the lenght.', 'targets');
+        case 'CONE':
+            return generateGenericKeyword('[CONE]', 'A cone with the listed length starting from the ability caster.', 'targets');
+        case 'INSTANT':
+            return generateGenericKeyword('[INSTANT]', 'Ability happens now and there are no lingering effects. The actor can not use any other abilities until all the effects of this ability have been resolved.', 'duration');
+        case 'HALF':
+            return generateGenericKeyword('[HALF]', 'If the related [ATTACK], [SPELL TEST] or [MARTIAL TEST] fails then the ability does still half the damage it would on a success. However no additional effects are applied unless stated otherwise.', 'targets');
+        case 'SAVE ENDS':
+            return generateGenericKeyword('[SAVE ENDS]', 'The target can repeat the [SAVE] at the end of each of their [TURN] ending all effects of the ability on a sucess', 'targets');
         default:
             return undefined;
     }
@@ -171,6 +195,8 @@ function getCharacterValuesContentPart(keyword: string): ContentPart | undefined
             return generateGenericKeyword('[HP]', 'Health Points. Represents how much damage you can take before going unconcious.', 'hp');
         case 'THP':
             return generateGenericKeyword('[THP]', 'Temporary health points. They are a buffer against damage, a pool of hit points that protect you from injury.', 'thp');
+        case 'MARTIAL DAMAGE':
+            return generateGenericKeyword('[MARTIAL DAMAGE]', 'The damage you deal with weapon attacks, split into light, one-handed and two-handed damage.', 'martial-damage');
         case 'STAMINA':
             return generateGenericKeyword('[STAMINA]', '[STAMINA] is your energy reserve with which you can replenish your Resources like HP and Aether and is used up when performing physically demanding tasks.', 'stamina');
         case 'ARCANA':

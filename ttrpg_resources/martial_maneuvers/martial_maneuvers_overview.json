@@ -23,7 +23,7 @@
         },
         {
             "type": "Tactical",
-            "description": "Tactical Maneuvers represents the characters knowledge, expierience and awarness of battlefield situations and how to best resolve them and gain advantages."
+            "description": "Tactical Maneuvers represents the characters knowledge, expierience and situational awareness of battlefield situations and how to best resolve them and gain advantages."
         },
         {
             "type": "Weapon",

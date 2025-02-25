@@ -72,16 +72,16 @@
             }
         </ul>
 
-        <h5 class="mb-0 mt-2">Ranges</h5>
+        <h5 class="mb-0 mt-2" ngbScrollSpyFragment="ranges">Ranges</h5>
         <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.description | keywordProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: [MELEE RANGE]</p>
         <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.meleeRange | keywordProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: [WEAPON RANGE]</p>
         <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.weaponRange | keywordProcessor"></app-dynamic-content>
 
-        <h5 class="mb-0 mt-2">Targets</h5>
+        <h5 class="mb-0 mt-2" ngbScrollSpyFragment="targets">Targets</h5>
 
-        <h5 class="mb-0 mt-2">Duration</h5>
+        <h5 class="mb-0 mt-2" ngbScrollSpyFragment="duration">Duration</h5>
 
         <h5 class="mb-0 mt-2">Circumstancal Bonuses</h5>
         <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.description | keywordProcessor"></app-dynamic-content>

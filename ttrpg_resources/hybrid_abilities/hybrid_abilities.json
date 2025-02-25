@@ -55,7 +55,7 @@
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
             "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "one target", "duration": "1 [ROUND]",
-            "description": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], You add 1d6 + ([SPI]/2) * d6 holy damage to the [ATTACK]. If that [ATTACK] exceeds that creatures [TOUGHNESS] it becomes additionally [CRIPPLED] until the end of your next turn."
+            "description": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], You add 1d6 + ([SPI]/2) * d6 holy damage to the [ATTACK]. If that [ATTACK] exceeds that creatures [TOUGHNESS] it becomes additionally [CRIPPLED I] until the end of your next turn."
         }
     ],
     "manipulationHybridAbilities": [

@@ -124,7 +124,7 @@
                     "regularText": null,
                     "headerLine": null,
                     "bulletPoints": [
-                        "When the Barbarian’s Rage exceeds the Frenzy threshold they can choose automatically fail the [WILLPOWER SAVE] and enter the Frenzy.",
+                        "When the Barbarian’s Rage exceeds the Frenzy threshold they can choose automatically fail the [WILLPOWER] [SAVE] and enter the Frenzy.",
                         "Instead of the closest creature, they target the closest enemy creature.",
                         "While the Barbarian still has to perform as many [MELEE MARTIAL ATTACK] as possible against the target, they don’t have to use the Resentful Strike Class Maneuver.",
                         "The first Class Maneuvers they perform during their turn costs 1 Rage less."
@@ -240,7 +240,7 @@
                         "The Barbarian has 1 extra [AP] per turn.",
                         "The Barbarian recieves 1 extra Rage at the start of their turn.",
                         "Every Class Maneuver they perform during their turn costs 1 Rage less.",
-                        "The Barbarian is immune to the [DAZED] , [CRIPPLED] and [CONFUSED] status effects."
+                        "The Barbarian is immune to the [STUNNED I], [CRIPPLED I], [FRIGHTENED I], [FRIGHTENED II] and [FRIGHTENED III] status effects."
                     ],
                     "ability": null
                 }
@@ -261,9 +261,9 @@
                     "regularText": null,
                     "headerLine": null,
                     "bulletPoints": [
-                        "<span class=\"fw-bold\">Fire: </span>The Aura increases to 4.5m and each time the Barbarian hits a creature with a [MELEE MARTIAL ATTACK] they recieve [BURNING] 1d6+Rage for 2 turns.",
-                        "<span class=\"fw-bold\">Earth: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [TOUGHNESS] they are [DAZED] for 1 turn.",
-                        "<span class=\"fw-bold\">Water: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [HARDNESS] they are [RESTRAINED] by ice for 1 turn.",
+                        "<span class=\"fw-bold\">Fire: </span>The Aura increases to 4.5m and each time the Barbarian hits a creature with a [MELEE MARTIAL ATTACK] they recieve [BURNING I] for 2 turns.",
+                        "<span class=\"fw-bold\">Earth: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [TOUGHNESS] they are [STUNNED I] for 1 turn.",
+                        "<span class=\"fw-bold\">Water: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [HARDNESS] they are [RESTRAINED I] by ice for 1 turn.",
                         "<span class=\"fw-bold\">Air: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] a target of their choice within the area effect is hit by a lightning strike for lightning damage equal 1d6 + Rage."
                     ],
                     "ability": null
@@ -287,7 +287,7 @@
                     "bulletPoints": [
                         "The Barbarian recieves 3 extra Rage at the start of their turn instead of 1.",
                         "The [HP] they regain because of their Rage is doubled.",
-                        "The Barbarian is immune to the [STUNNED] , [SLOWED] and [INCAPACITATED] status effects.",
+                        "The Barbarian is immune to the [STUNNED II] and [STUNNED III] status effects.",
                         "Dropping to Deaths Door during a frenzy causes no Exhaustion (however recieving damage during Deaths Door still does)"
                     ],
                     "ability": null
@@ -376,10 +376,10 @@
             "tags": [ "Class Technique (Barbarian)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "1 [AP], 2 Rage",
-            "range": "[MELEE]",
+            "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "1 round",
-            "description": "Make a [MELEE MARTIAL ATTACK] using [STR] + [MARTIAL LEVEL] as a bonus, against your target, on a hit it takes physical damage equal to [STR] + [LEVEL]. Additionally you and the target must make a [HARDNESS SAVE] the one with the lower result is then dazed for 1 round (on a tie, both are [DAZED])."
+            "description": "Make a [MELEE MARTIAL ATTACK] using [STR] + [MARTIAL LEVEL] as a bonus, against your target, on a hit it takes physical damage equal to [STR] + [LEVEL]. Additionally you and the target must make a [HARDNESS] [SAVE] the one with the lower result is then dazed for 1 round (on a tie, both are [STUNNED I])."
         },
         {
             "name": "Violent Leap",
@@ -406,7 +406,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "If you kill an enemy with a [MARTIAL MELEE ATTACK] , you can use this ability to instantly gain 2 [AP]. You can only use this ability once per turn and only during your turn."
+            "description": "If you kill an enemy with a [MELEE MARTIAL ATTACK] , you can use this ability to instantly gain 2 [AP]. You can only use this ability once per turn and only during your turn."
         },
         {
             "name": "Violent Reprisal",
@@ -420,7 +420,7 @@
                 "otherRequirements": [ ]
             },
             "cost": "1 reaction, 3 Rage",
-            "range": "[MELEE]",
+            "range": "[MELEE RANGE]",
             "target": "1 creature*",
             "duration": "[INSTANT]",
             "description": "You can use this reaction against a creature that just caused you to lose [HP] for any reason. You can make a Weapon [MELEE MARTIAL ATTACK] in response dealing extra damage equal to the amount of [HP] you lost."
