@@ -1,0 +1,29 @@
+{
+    "description": "For additional protection, you can wield a shield in a free hand and gain the ability to defend against any [ATTACK] as an alternative to use [DODGE] to evade the [ATTACK]. Everyone is able to wield shields, but the effectiveness of the shield depends on the type and the [MARTIAL LEVEL] of the Character.",
+    "shieldblockDescription": "Shield Block is a value that can be used instead of [DODGE], when you are hit by an [ATTACK], instead of making a [DODGE] [SAVE] make a [SHIELD BLOCK]. Which is a [SAVE] that is calculated using Shield Block + [MARTIAL LEVEL].",
+    "shieldPropertiesDescription": "Manoeuvre Penalty and Movement Penalty work like they do for armour, and they do stack with each other.",
+    "shieldProperties": [
+        { "name": "Shield Block", "description": "This is the base block value used to calculate the [SHIELD BLOCK]"},
+        { "name": "Damage Threshold", "description": "If you attempt to block an attack that exceeds the Damage Threshold, you still block the attack but the shield breaks and is rendered unusable but can be repaired."}
+    ],
+    "shieldQuality": {
+        "description": "Similar to weapons, shield can be found in varying qualities of craftsmanship or condition. These are grouped in three different qualities, which affect the armour’s price and effectiveness.",
+        "shieldQualities": [
+            {
+                "quality": "Crude",
+                "modifier": "-1 to item tier, reduce Shield Block Base by 1 half the Damage Threshold (rounded down)",
+                "price": "25%"
+            },
+            {
+                "quality": "Regular",
+                "modifier": "-",
+                "price": "100%"
+            },
+            {
+                "quality": "Masterwork",
+                "modifier": "+1 to item tier, double the Damage Threshold.",
+                "price": "400%"
+            }
+        ]
+    }
+}

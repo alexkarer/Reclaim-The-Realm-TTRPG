@@ -15,9 +15,8 @@
     "longRest": {
         "description": "During a Long Rest you take time to lie down and sleep and recuperate your strength. A long rest takes an amount of time equal to: 8 − [CON]/2 and requires you to have consumed enough food and drank enough water for this day. A long rest can only be completed once within 24 hours. Upon completion of a Long rest, you recover the following Things:",
         "effects": [
-            "You recover [STAMINA] equal to your [CON] (minimum of 1).",
-            "You recover [ARCANA] equal to your [SPI] (minimum of 1)",
-            "You heal a number of [HP] equal to your [CON] + [LEVEL] (minimum of 1).",
+            "You recover a third of your [STAMINA], [ARCANA] and [HP] (rounded up).",
+            "All your [THP] are removed",
             "You remove one point of [EXHAUSTION]."
         ],
         "interruptedLongRest": "In case a character was interrupted by an ambush or couldn't complete their long rest due to other circumstances they don't get the benefits of a full long rest but at might at least get partial benefits. As such they don't reduce their [EXHAUSTION] and recover 1d6 less [STAMINA], [ARCANA] and [HP] (can't be less than 0). If they complete their long rest afterwards they recieve the remaining benefits."

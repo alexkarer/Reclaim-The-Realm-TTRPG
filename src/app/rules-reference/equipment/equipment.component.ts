@@ -9,10 +9,11 @@ import { CraftingComponent } from './crafting/crafting.component';
 import { MagicItemsComponent } from './magic-items/magic-items.component';
 import equipmentJson from '../../../../ttrpg_resources/equipment/equipment.json';
 import { halveArray } from '../../shared/utils/array-utils';
+import { ShieldsComponent } from "./shield/shields.component";
 
 @Component({
     selector: 'app-equipment',
-    imports: [DynamicContentComponent, NgbScrollSpyFragment, KeywordProcessorPipe, WeaponsComponent, ArmourComponent, OtherItemsComponent, CraftingComponent, MagicItemsComponent],
+    imports: [DynamicContentComponent, NgbScrollSpyFragment, KeywordProcessorPipe, WeaponsComponent, ArmourComponent, OtherItemsComponent, CraftingComponent, MagicItemsComponent, ShieldsComponent],
     templateUrl: './equipment.component.html',
     styleUrl: './equipment.component.scss'
 })

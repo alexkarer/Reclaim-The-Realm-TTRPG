@@ -1,0 +1,68 @@
+<div class="mx-2">
+    <app-dynamic-content [content]="shieldRules.description | keywordProcessor"></app-dynamic-content>
+
+    <h5 ngbScrollSpyFragment="shield-block">Shield Block</h5>
+    <app-dynamic-content [content]="shieldRules.shieldblockDescription | keywordProcessor"></app-dynamic-content>
+
+    <h4 class="mb-1 mt-2">Shield Properties</h4>
+    <app-dynamic-content [content]="shieldRules.shieldPropertiesDescription | keywordProcessor"></app-dynamic-content>
+    @for (property of shieldRules.shieldProperties; track $index) {
+        <h5 class="mt-2 mb-0">{{ property.name }}</h5>
+        <app-dynamic-content [content]="property.description | keywordProcessor"></app-dynamic-content>
+    }
+
+    <h4 class="mb-1 mt-2">Shield Quality</h4>
+    <app-dynamic-content [content]="shieldRules.shieldQuality.description | keywordProcessor"></app-dynamic-content>
+    <div class="mt-2 d-flex justify-content-center">
+        <table class="rules-table-50">
+            <thead>
+                <tr>
+                    <th scope="col">Quality</th>
+                    <th scope="col">Modifier</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (quality of shieldRules.shieldQuality.shieldQualities; track $index) {
+                    <tr>
+                        <td>{{ quality.quality }}</td>
+                        <td><app-dynamic-content [content]="quality.modifier  | keywordProcessor"></app-dynamic-content></td>
+                        <td>{{ quality.price }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <h4 class="mb-1 mt-2">Shield Types</h4>
+    <div class="d-flex justify-content-center">
+        <table class="rules-table">
+            <thead>
+                <tr>
+                    <th scope="col">Armour Type</th>
+                    <th scope="col">Tier</th>
+                    <th scope="col">Shield Block</th>
+                    <th scope="col">Damage Thres.</th>
+                    <th scope="col">Man. Penalty</th>
+                    <th scope="col">Move Penalty</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (shield of shields; track $index) {
+                    <tr>
+                        <td>{{ shield.name }}</td>
+                        <td>{{ shield.tier }}</td>
+                        <td>{{ shield.shieldBlock }}</td>
+                        <td>{{ shield.damageThreshold }}</td>
+                        <td>{{ shield.manoeuvrePenalty === 0 ? '-' : shield.manoeuvrePenalty }}</td>
+                        <td>{{ shield.movementPenalty === 0 ? '-' : shield.movementPenalty }}</td>
+                        <td>{{ shield.getPrettyWeightString() }}</td>
+                        <td>{{ shield.cost.getPrettyString() }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

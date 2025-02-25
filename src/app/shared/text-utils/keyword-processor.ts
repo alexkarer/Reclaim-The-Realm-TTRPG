@@ -144,10 +144,12 @@ function getGameMechanicsContentPart(keyword: string): ContentPart | undefined {
             return generateGenericKeyword('[CONCENTRATION TEST]', '[SPELL TEST]. A Concentration Test determines if you can maintain focus on a spell while external factors attempt to disrupt it. A [CONCENTRATION TEST] is made by rolling a d20 and adding your Concentration Bonus, which is calculated the following way: [CON] + [SPELL LEVEL]', 'concentration-test');
         case 'SAVE':
             return generateGenericKeyword('[SAVE]', 'TODO', 'save');
+        case 'SHIELD BLOCK':
+            return generateGenericKeyword('[SHIELD BLOCK]', 'When wielding and hit by an [ATTACK], instead of a [DODGE] [SAVE] make a [SHIELD BLOCK]. Which is a [SAVE] with a bonus of Shield Block + [MARTIAL LEVEL]', 'shield-block');
         case 'EXHAUSTION':
             return generateGenericKeyword('[EXHAUSTION]', 'When characters push themselves beyond their physical limits, they suffer points of [EXHAUSTION] which grant a cumulative -1 penalty to any [D20 TEST]. If that increases beyond their limit they fall unconcious, if it increases above twice their limit they die.', 'exhaustion');
         case 'DEATHS DOOR':
-            return generateGenericKeyword('DEATHS DOOR', '[DEATHS DOOR] is a mechanic that allows you to keep on fighting even when you are reduced to 0 [HP] however at great risks to yourself.', 'deaths-door');
+            return generateGenericKeyword('[DEATHS DOOR]', '[DEATHS DOOR] is a mechanic that allows you to keep on fighting even when you are reduced to 0 [HP] however at great risks to yourself.', 'deaths-door');
         case 'ROUND':
             return generateGenericKeyword('[ROUND]', 'TODO', 'round');
         case 'TURN':

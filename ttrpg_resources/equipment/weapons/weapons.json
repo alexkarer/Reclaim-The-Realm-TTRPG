@@ -39,7 +39,7 @@
         {
             "name": "Spear",
             "tier": 1,
-            "craftingSkill": "Smith’s Tools or Carpenter's Tools",
+            "craftingSkill": "Smith’s Tools, Carpenter's Tools",
             "cost": "5 sc",
             "weightInGram": 1000,
             "type": "Simple Weapon",
@@ -149,7 +149,7 @@
         {
             "name": "Polarm",
             "tier": 2,
-            "craftingSkill": "Smith’s Tools or Carpenter's Tools",
+            "craftingSkill": "Smith’s Tools, Carpenter's Tools",
             "cost": "10 gc",
             "weightInGram": 4000,
             "type": "Advanced Weapon",
@@ -221,7 +221,7 @@
         {
             "name": "Javelin",
             "tier": 2,
-            "craftingSkill": "Smith’s Tools or Carpenter’s Tools",
+            "craftingSkill": "Smith’s Tools, Carpenter’s Tools",
             "cost": "3 sc",
             "weightInGram": 500,
             "type": "Advanced Weapon",

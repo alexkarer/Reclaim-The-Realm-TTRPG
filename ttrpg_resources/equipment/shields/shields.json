@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Small shield",
+        "tier": 1,
+        "craftingSkill": "Smith's Tools, Carpenter's Tools",
+        "cost": "2 gc",
+        "weightInGram": 1000,
+        "type": "Shield",
+        "description": [
+            {
+                "regularText": "small shield like a buckler",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ],
+        "shieldBlock": 0,
+        "damageThreshold": 15,
+        "manoeuvrePenalty": 0,
+        "movementPenalty": 0
+    },
+    {
+        "name": "Medium shield",
+        "tier": 2,
+        "craftingSkill": "Smith's Tools, Carpenter's Tools",
+        "cost": "5 gc",
+        "weightInGram": 2500,
+        "type": "Shield",
+        "description": [
+            {
+                "regularText": "can be in form of a round-, heater or kiteshield",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ],
+        "shieldBlock": 2,
+        "damageThreshold": 25,
+        "manoeuvrePenalty": -1,
+        "movementPenalty": 0
+    },
+    {
+        "name": "Tower shield",
+        "tier": 2,
+        "craftingSkill": "Smith's Tools, Carpenter's Tools",
+        "cost": "10 gc",
+        "weightInGram": 6000,
+        "type": "Shield",
+        "description": [
+            {
+                "regularText": "large tower shield that blocks completely one side",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ],
+        "shieldBlock": 5,
+        "damageThreshold": 40,
+        "manoeuvrePenalty": -3,
+        "movementPenalty": -1
+    }
+]

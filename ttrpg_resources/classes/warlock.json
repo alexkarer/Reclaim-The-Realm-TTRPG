@@ -17,12 +17,42 @@
         "weaponRanks": 1
     },
     "classCoreFeature": {
-        "name": "",
+        "name": "Corruption",
         "textElements": [
+            {
+                "regularText": "A Warlock harbours an extraplanar Entity and the Warlock is the conduit from which the power can Manifest in Realspace. Although the Warlock can accomplish great things it comes at the risk of his own safety. Corruption can build up when using abilities and is denoted by a number, using Eldritch Corruption abilites causes the Warlock to gain Eldritch Corruption and they can only be reduced the following ways:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
             {
                 "regularText": null,
                 "headerLine": null,
+                "bulletPoints": [
+                    "During a short rest the Warlock can spend 1 [STAMINA] and reduce the corruption by 2.",
+                    "When finishing a long rest, if the Warlock has Corrpution above 0 they have to make a [WILLPOWER] [SAVE] with [DT] equal to 10 + [LEVEL]. On a success they recover Corruption equal to their [LEVEL], on failure the Warlock suffers nightmares."
+                ],
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": "Corruption Effects",
                 "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": "As corruption increases your host manifests in different ways and changes you. The higher your corruption the more notable the changes. The changes are listed here in the table below, if the Corruption increases past a certain level all previous effects still apply.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "<span class=\"fw-bold\">0+ Corruption: </span>Nothing",
+                    "<span class=\"fw-bold\">2+[LEVEL]/3+ Corruption: </span>"
+                ],
                 "ability": null
             }
         ]
@@ -42,6 +72,19 @@
         }
     ],
     "classFeatures": [
+        {
+            "name": "Extraplanar Entity",
+            "levels": [ 1 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
         {
             "name": "",
             "levels": [ 1 ],

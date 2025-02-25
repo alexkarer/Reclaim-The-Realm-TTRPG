@@ -46,6 +46,9 @@ Future Ideas / Nice to have:
 **Status Effects:**
 - Confused Condition?
 
+**Equipment:**
+- isntead of masterwork, just list bonuses and cost increase that happen for each additional tier.
+
 **Nice to have**
 - have colored abilities and more icons
 - create npc generator

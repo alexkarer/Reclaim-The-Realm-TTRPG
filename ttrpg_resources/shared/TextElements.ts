@@ -30,4 +30,10 @@ export type TextElement =
     headerLine: null;
     bulletPoints: null;
     ability: Ability;
+} | 
+{
+    regularText: null;
+    headerLine: null;
+    bulletPoints: null;
+    ability: null;
 };

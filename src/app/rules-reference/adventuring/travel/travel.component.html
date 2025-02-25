@@ -28,24 +28,7 @@
 
         <h5>Travel Duration per Day</h5>
         <app-dynamic-content [content]="overlandMovement.travelDurationPerDayDescription | keywordProcessor"></app-dynamic-content>
-        <div class="d-flex justify-content-center">
-            <table class="rules-table-50">
-                <thead>
-                    <tr>
-                        <th scope="col">Total Time Traveleld</th>
-                        <th scope="col">Total [STAMINA] Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @for (travelDuration of overlandMovement.travelDurationTable; track $index) {
-                        <tr>
-                            <td>{{ travelDuration.TotalTimeTravelled }}</td>
-                            <td><app-dynamic-content [content]="travelDuration.totalStaminaCost | keywordProcessor"></app-dynamic-content></td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
+        <h6 class="mb-1 mt-2">Running out of Stamina</h6>
         <app-dynamic-content [content]="overlandMovement.travelDurationPerDayDescriptionExtension | keywordProcessor"></app-dynamic-content>
     </div>
 
@@ -55,7 +38,7 @@
         <h5>Travelling on Road</h5>
         <app-dynamic-content [content]="terrain.travellinOnRoadDescription | keywordProcessor"></app-dynamic-content>
         <div class="d-flex justify-content-center">
-            <table class="rules-table-50">
+            <table class="rules-table-75">
                 <thead>
                     <tr>
                         <th scope="col">Terrain</th>
