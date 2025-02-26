@@ -4,7 +4,7 @@
     "coreClassValues": {
         "hpPerLevel": 6,
         "martialProficiency": 0.334,
-        "knownMartialManeuvers": "Fortitude, Weapon",
+        "knownMartialManeuvers": "Weapon",
         "spellProficiency": 0.667,
         "knownSpellDisciplines": "Manipulation",
         "dodgeProficiency": 0.334,
@@ -20,7 +20,7 @@
         "name": "Corruption",
         "textElements": [
             {
-                "regularText": "A Warlock harbours an extraplanar Entity and the Warlock is the conduit from which the power can Manifest in Realspace. Although the Warlock can accomplish great things it comes at the risk of his own safety. Corruption can build up when using abilities and is denoted by a number, using Eldritch Corruption abilites causes the Warlock to gain Eldritch Corruption and they can only be reduced the following ways:",
+                "regularText": "A Warlock harbours an extraplanar Entity and the Warlock is the conduit from which the power can Manifest in Realspace. Although the Warlock can accomplish great things it comes at the risk of his own safety. Corruption can build up when using abilities and is denoted by a number, using Corruption abilites causes the Warlock to gain Corruption and they can only be reduced the following ways:",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -41,18 +41,9 @@
                 "ability": null
             },
             {
-                "regularText": "As corruption increases your host manifests in different ways and changes you. The higher your corruption the more notable the changes. The changes are listed here in the table below, if the Corruption increases past a certain level all previous effects still apply.",
+                "regularText": "As corruption increases the entity manifests in different ways and changes the host. The higher your corruption the more notable the changes. Generally as your corruption increases the Hosts personality slightly alters and becomes more alligned with the entity and generally more irretable. But there are also gameplay effects to consider which are the following:<br>If your Corruption is below 5 nothing changes. As soon as your corruption increases to 5 and every increase of 3 afterwards a random non-corrupted Mutation of yours becomes corrupted. If you don't have any mutations yet or there are no non-corrutped mutations left for each additional Corruption you now gain, you gain 1 Level of Exhaustion which can't be removed by any means other than reducing Corruption. If your Corruption is reduced below the Mutation thresholds the mutation become non corrupted again.",
                 "headerLine": null,
                 "bulletPoints": null,
-                "ability": null
-            },
-            {
-                "regularText": null,
-                "headerLine": null,
-                "bulletPoints": [
-                    "<span class=\"fw-bold\">0+ Corruption: </span>Nothing",
-                    "<span class=\"fw-bold\">2+[LEVEL]/3+ Corruption: </span>"
-                ],
                 "ability": null
             }
         ]
@@ -60,10 +51,21 @@
     "classPathDescription": "",
     "classPaths": [
         {
-            "name": "",
+            "name": "Elemental Entity",
             "textElements": [
                 {
-                    "regularText": "",
+                    "regularText": "An elemental was bound to the Warlock. While elementals normally have a more phyiscal manifastation this one was magically bound to exist in a subplane within the body. When picking an Elemental entity it also has to be decided which type of Elemental (fire, earth, water, air) the entity is.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Cosmic Entity",
+            "textElements": [
+                {
+                    "regularText": "A Cosmic Entity is bound to the Warlock. While this entity still exists in an isolated Place in the Aether, there exists a direct connection from the Host towards the Entity from which it's powers and potentially itself can manifest. When choosing a cosmic entity a choice between an angelic, demonic or eldritch entity has to be made.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -73,9 +75,273 @@
     ],
     "classFeatures": [
         {
-            "name": "Extraplanar Entity",
+            "name": "Warlock Archetype",
             "levels": [ 1 ],
             "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "Choose one of the following archetypes:",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Mutant Warrior",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Gain an extra 1/3 Martial Level Progression (to a total of 2/3).",
+                        "Pick two Martial Maneuver Types, you can now learn maneuvers of that type.",
+                        "Gain an extra +1 [HP] per [LEVEL]."
+                    ],
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Mystic",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Gain an extra 1/3 Spell Level Progression (to a total of 1).",
+                        "If you have a Cosmic Host, you now can learn Spells of the Elemental Discipline, if you have an Elemental Host you can now learn Spells of the Cosmic Discipline"
+                    ],
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Elemental Entity Improvements",
+            "levels": [ 1 ],
+            "relatedClassPath": "Elemental Entity",
+            "textElements": [
+                {
+                    "regularText": "When picking an Elemental Entity choose one elemental type. Each Entity comes with it's dedicated entity damage type which is relevant for class techniques later.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Fire Elemental",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Your entity is an Fire Elemental, the most passionate and temperamental of elements",
+                        "You can learn spells of the Pyromancy Subdiscipline.",
+                        "You gain damage resistance towards fire damage equal to 5 + [LEVEL]",
+                        "Persuasion and Intimidation become Class Skills for you.",
+                        "Your entity damage type is fire."
+                    ],
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Earth Elemental",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Your entity is an Earth Elemental, the most steadfast and stubborn of elements",
+                        "You can learn spells of the Geomancy Subdiscipline.",
+                        "You gain damage resistance towards poison damage equal to 5 + [LEVEL]",
+                        "You gain an additional 1 [HP] per [LEVEL].",
+                        "Your entity damage type is poison."
+                    ],
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Water Elemental",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Your entity is a Water Elemental, the most intiutive and flexible of all elements",
+                        "You can learn spells of the Hydromancy Subdiscipline.",
+                        "You gain damage resistance towards frost damage equal to 5 + [LEVEL]",
+                        "You gain swimming speed equal to your walking speed and can breath underwater",
+                        "Your entity damage type is frost."
+                    ],
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Air Elemental",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Your entity is an Air Elemental, the most free spirited and uncaring of elementals",
+                        "You can learn spells of the Aeromancy Subdiscipline.",
+                        "You gain damage resistance towards lightning damage equal to 5 + [LEVEL]",
+                        "Increase your [MP] by 1.",
+                        "Your entity damage type is lightning."
+                    ],
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Cosmic Entity Improvements",
+            "levels": [ 1 ],
+            "relatedClassPath": "Cosmic Entity",
+            "textElements": [
+                {
+                    "regularText": "When picking a Cosmic Entity choose one cosmic type. Each Entity comes with it's dedicated entity damage type which is relevant for class techniques later.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Angelic Elemental",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Your Entity is an Angel, a Saint or a former Hero.",
+                        "You can learn spells of the Light and Restoration Subdisciplines.",
+                        "You gain damage resistance towards holy damage equal to 5 + [LEVEL].",
+                        "Each time you make a [D20 TEST] where you assist another creature without immediate gain for yourself instead of rolling a dice you can gain 1 Corruption and treat the roll as a 15. If your actions are especially selfless the GM might instead allow the roll to be treated as a 20 instead.",
+                        "Your entity damage type is holy."
+                    ],
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Demonic Elemental",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Your Entity is a Demon, a long dead Tyrant or villain.",
+                        "You can learn spells of the Necromancy and Shadow Subdisciplines.",
+                        "You gain damage resistance towards unholy damage equal to 5 + [LEVEL].",
+                        "Any time you make a [D20 TEST] instead of rolling a dice you can choose to gain 1 Corruption and turn the roll into a natural 20. However for the next [D20 TEST] you make the dice roll will be automatically a 1.",
+                        "Your entity damage type is unholy."
+                    ],
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Eldrtich Elemental",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": [
+                        "Your Entity is an unfathomable Entity, a Cosmic Horror or a Mysterious Observer.",
+                        "You can learn spells of the Divination, Necromancy, Restoration Subdisciplines.",
+                        "You gain damage resistance towards cosmic damage equal to 5 + [LEVEL]",
+                        "The bound entity possess unkowable knowledge. When making any [INT] [ATTRIBUTE TEST] to recall knowledge instead of rolling a dice you can immediatly succeed that [ATTRIBUTE TEST] and gain 1 Corruption.",
+                        "Your entity damage type is cosmic."
+                    ],
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Mutations",
+            "levels": [ 2,4,6,8,10,12 ],
+            "relatedClassPath": null,
+            "textElements": [
+                {
+                    "regularText": "The supernatural entity bound the you grows with you in power. As it grows more powerful the strong connection starts to manifest in physical changes. Each time you get this feature pick from one of the Mutations below. Each Mutation also has an additional effect that can be activated if your Corruption reaches a certain level.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                { "regularText": null, "headerLine": "Supernatural Strength", "bulletPoints": null, "ability": null },
+                {
+                    "regularText": "For calculating your [MARTIAL DAMAGE] you can now use your [SPI] instead of your [STR].<span class=\"fw-bold\">Corruption Effect: </span>Increase the [MARTIAL DAMAGE] by your current Corruption, but each time you make a [MARTIAL MEELE ATTACK] or [MARTIAL RANGED ATTACK] you suffer damage equal to half your current Corruption which can't be reduced in any way.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                { "regularText": null, "headerLine": "Extra Limb", "bulletPoints": null, "ability": null },
+                {
+                    "regularText": "TODO.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                { "regularText": null, "headerLine": "Natural Weapons", "bulletPoints": null, "ability": null },
+                {
+                    "regularText": "Claws/Fangs/Talons.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                { "regularText": null, "headerLine": "Wings (requires [LEVEL] 8+)", "bulletPoints": null, "ability": null },
+                {
+                    "regularText": "TODO.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                { "regularText": null, "headerLine": "Uncanny Sight", "bulletPoints": null, "ability": null },
+                {
+                    "regularText": "TODO.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                { "regularText": null, "headerLine": "Natural armor", "bulletPoints": null, "ability": null },
+                {
+                    "regularText": "gain physical 2 + [LEVEL]/2 phyiscal resistance.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Elemental Entity Improvements 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Elemental Entity",
+            "textElements": [
+                {
+                    "regularText": "Pick an adjecent element, you also gain benefits of that one and can choose between the entity damage types.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Cosmic Entity Improvements 2",
+            "levels": [ 5 ],
+            "relatedClassPath": "Cosmic Entity",
             "textElements": [
                 {
                     "regularText": "",
@@ -86,9 +352,22 @@
             ]
         },
         {
-            "name": "",
-            "levels": [ 1 ],
-            "relatedClassPath": null,
+            "name": "Elemental Entity Improvements 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Elemental Entity",
+            "textElements": [
+                {
+                    "regularText": "",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Cosmic Entity Improvements 3",
+            "levels": [ 9 ],
+            "relatedClassPath": "Cosmic Entity",
             "textElements": [
                 {
                     "regularText": "",

@@ -106,16 +106,16 @@
             }
         </div>
     </div>
-    <div class="row">
+    <div class="row mt-3">
         <div class="col">
             <div class="d-flex justify-content-center">
-                <h4>{{ 'Other ' + playerClass?.className + ' Features' }}</h4>
+                <h4 class="mb-0">{{ 'Other ' + playerClass?.className + ' Features' }}</h4>
             </div>
             @for (classFeature of playerClass?.classFeatures; track $index) {
                 @if (classFeature.relatedClassPath != null) {
-                    <h5 class="mt-2 mb-0">{{ classFeature.name + ' (' }}<span class="fst-italic">{{ classFeature.relatedClassPath }}</span>{{')'}}</h5>
+                    <h5 class="mt-0 mb-1">{{ classFeature.name + ' (' }}<span class="fst-italic">{{ classFeature.relatedClassPath }}</span>{{')'}}</h5>
                 } @else{
-                    <h5 class="mt-2 mb-0">{{ classFeature.name }}</h5>
+                    <h5 class="mt-0 mb-1">{{ classFeature.name }}</h5>
                 }
                 <app-text-elements [textElements]="classFeature.textElements" [useBoldTextForHeader]="true"></app-text-elements>
                 <hr>
