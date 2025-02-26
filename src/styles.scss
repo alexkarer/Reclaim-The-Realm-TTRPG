@@ -53,11 +53,18 @@ h4 {
     margin-top: 12vh;
 }
 
-.rules-body {
+.rules-body-wrapper {
     max-height: 92svh;
     overflow-y: auto;
     overflow-x: hidden;
+    scrollbar-width: none;
     @extend .navbar-padding;
+}
+
+.rules-body {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    max-width: 94vw;
 }
 
 // tablet size
@@ -72,7 +79,9 @@ h4 {
         width: 85%;
     }
     .rules-body {
-        width: 75vw;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        max-width: 1000px;
     }
     .navbar-padding {
         margin-top: 6vh;
@@ -91,7 +100,8 @@ h4 {
         width: 75%;
     }
     .rules-body {
-        width: 50vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
     }
     .navbar-padding {
         margin-top: 6vh;

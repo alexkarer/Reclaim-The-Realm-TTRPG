@@ -37,7 +37,6 @@ Future Ideas / Nice to have:
 - Finish out Adventure Section
 - flesh out magical misshap table
 - add missing spellcasting perk stuff
-- fix links
 - add missing keyword descritpions
 - proper phrasing of some stuff in the combat
 

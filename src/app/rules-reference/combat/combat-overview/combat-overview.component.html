@@ -1,7 +1,7 @@
-<div class="mx-2">
+<div>
     <app-dynamic-content [content]="combatOverviewJson.combatOverviewDescription | keywordProcessor"></app-dynamic-content>
     <h4 class="mb-1 mt-2">Combat Start</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="combatOverviewJson.combatStart.description | keywordProcessor"></app-dynamic-content>
 
         <h5 class="mb-1 mt-2">Initiative Test</h5>
@@ -27,7 +27,7 @@
         </ul>
     </div>
     <h4 class="">Combat Structure</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="combatOverviewJson.combatStructure.description | keywordProcessor"></app-dynamic-content>
         <ol>
             @for (order of combatOverviewJson.combatStructure.combatOrder; track $index) {

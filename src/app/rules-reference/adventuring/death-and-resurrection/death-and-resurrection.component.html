@@ -1,8 +1,8 @@
-<div class="mx-2">
+<div>
     <app-dynamic-content [content]="description | keywordProcessor"></app-dynamic-content>
 
     <h4>Being Reduced to 0 [HP]</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="reducedTo0Hp.description | keywordProcessor"></app-dynamic-content>
         <h5 ngbScrollSpyFragment="deaths-door" class=" mt-2 mb-0">Death's Door</h5>
         <p class="header-subscript">Keyword: [DEATHS DOOR]</p>
@@ -15,7 +15,7 @@
     </div>
 
     <h4>Massive Injuries</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="massiveInjuries.description | keywordProcessor"></app-dynamic-content>
         <div class="d-flex justify-content-center">
             <table class="rules-table">
@@ -38,7 +38,7 @@
     </div>
 
     <h4>Recovering from dropping Unconcious</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="recoverFromBeingUnconcious.description| keywordProcessor"></app-dynamic-content>
         <ul>
             @for (recoveryMethod of recoverFromBeingUnconcious.recoveryMethods; track $index) {
@@ -48,7 +48,7 @@
     </div>
 
     <h4>Resurrection</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="resurrection.description | keywordProcessor"></app-dynamic-content>
     </div>
 </div>

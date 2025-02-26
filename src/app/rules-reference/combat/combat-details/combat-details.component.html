@@ -1,11 +1,11 @@
-<div class="mx-2">
+<div>
     <app-dynamic-content [content]="combatDetails.description | keywordProcessor"></app-dynamic-content>
 
     <h5 class="mb-0 mt-2">Assymetric Combat</h5>
     <app-dynamic-content [content]="combatDetails.assymetricCombat | keywordProcessor"></app-dynamic-content>
 
     <h4 class="mb-1 mt-2">Movement Abilities</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="combatDetails.movementAbilities.description | keywordProcessor"></app-dynamic-content>
 
         <app-ability-list [abilities]="combatDetails.movementAbilities.standardAbilities"></app-ability-list>
@@ -17,25 +17,25 @@
     </div>
 
     <h4 class="mb-1 mt-2">Attack Abilities</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="combatDetails.attackAbilities.description | keywordProcessor"></app-dynamic-content>
         <app-ability-list [abilities]="combatDetails.attackAbilities.standardAbilities"></app-ability-list>
     </div>
 
     <h4 class="mb-1 mt-2">Other Standard Actions</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="combatDetails.otherAbilities.description | keywordProcessor"></app-dynamic-content>
         <app-ability-list [abilities]="combatDetails.otherAbilities.standardAbilities"></app-ability-list>
     </div>
 
     <h4 class="mb-1 mt-2">Reations</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="combatDetails.reactions.description | keywordProcessor"></app-dynamic-content>
         <app-ability-list [abilities]="combatDetails.reactions.standardReactions"></app-ability-list>
     </div>
 
     <h4 class="mb-1 mt-2">Additional Combat Rules</h4>
-    <div class="mx-2">
+    <div>
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="attack">Attacks</h5>
         <p class="header-subscript">Keyword: [ATTACK]</p>
         <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.description | keywordProcessor"></app-dynamic-content>

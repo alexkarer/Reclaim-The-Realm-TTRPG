@@ -1,6 +1,6 @@
-<div class="mx-2">
+<div>
     <h4>Overland Movment</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="overlandMovement.overlandMovementDescription | keywordProcessor"></app-dynamic-content>
 
         <h5>Travel Speed</h5>
@@ -33,7 +33,7 @@
     </div>
 
     <h4 class="mt-3">Terrain</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="terrain.terrainDescription | keywordProcessor"></app-dynamic-content>
         <h5>Travelling on Road</h5>
         <app-dynamic-content [content]="terrain.travellinOnRoadDescription | keywordProcessor"></app-dynamic-content>
@@ -58,9 +58,9 @@
     </div>
 
     <h4 class="mt-3">Special Movement</h4>
-    <div class="mx-2">
+    <div>
         <h5>Jumping</h5>
-        <div class="mx-2">
+        <div>
             <h6 class="mt-2 mb-0">Long Jump</h6>
             <app-dynamic-content [content]="specialMovement.jumping.longJumpDescription | keywordProcessor"></app-dynamic-content>
             <h6 class="mt-2 mb-0">High Jump</h6>
@@ -70,7 +70,7 @@
         </div>
 
         <h5>Climbing</h5>
-        <div class="mx-2">
+        <div>
             <app-dynamic-content [content]="specialMovement.climbing.climbingDescrption | keywordProcessor"></app-dynamic-content>
             <ul>
                 @for (circumstance of specialMovement.climbing.climbingCircumstances ; track $index) {
@@ -102,7 +102,7 @@
         </div>
 
         <h5>Swimming</h5>
-        <div class="mx-2">
+        <div>
             <app-dynamic-content [content]="specialMovement.swimming.swimmingDescrption | keywordProcessor"></app-dynamic-content>
             <h6 class="mt-2 mb-0">Swimming Difficulty</h6>
             <app-dynamic-content [content]="specialMovement.swimming.swimmingDifficultyDescription | keywordProcessor"></app-dynamic-content>
@@ -127,18 +127,18 @@
         </div>
 
         <h5>Flying</h5>
-        <div class="mx-2">
+        <div>
             <app-dynamic-content [content]="specialMovement.flying.flyingDescription | keywordProcessor"></app-dynamic-content>
         </div>
     </div>
 
     <h4 class="mt-3">Tracking</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="tracking.trackingDescription| keywordProcessor"></app-dynamic-content>
     </div>
 
     <h4 class="mt-3">VisionAndSenses</h4>
-    <div class="mx-2">
+    <div>
         <app-dynamic-content [content]="visionAndSenses.visionAndSensesDescription | keywordProcessor"></app-dynamic-content>
         @for (type of visionAndSenses.visionAndSenseTypes; track $index) {
             <h5>{{ type.type }}</h5>
