@@ -288,7 +288,7 @@
                     "bulletPoints": null,
                     "ability": null
                 },
-                { "regularText": null, "headerLine": "Extra Limb", "bulletPoints": null, "ability": null },
+                { "regularText": null, "headerLine": "Tail", "bulletPoints": null, "ability": null },
                 {
                     "regularText": "TODO.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
                     "headerLine": null,
@@ -309,7 +309,7 @@
                     "bulletPoints": null,
                     "ability": null
                 },
-                { "regularText": null, "headerLine": "Uncanny Sight", "bulletPoints": null, "ability": null },
+                { "regularText": null, "headerLine": "Unnatural Senses", "bulletPoints": null, "ability": null },
                 {
                     "regularText": "TODO.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
                     "headerLine": null,

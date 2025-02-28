@@ -2,6 +2,7 @@
     <thead>
         <tr>
             <th scope="col">Name</th>
+            <th scope="col">Type</th>
             <th scope="col">Tier</th>
             <th scope="col">Cost</th>
             <th scope="col">Weight</th>
@@ -11,18 +12,33 @@
         @for (equipment of equipmentList; track $index) {
             <tr (click)="equipmentDescriptionEnabled[$index] = !equipmentDescriptionEnabled[$index]" style="cursor: pointer">
                 <th scope="row">{{ equipment?.name }}</th>
-                <td class="header-subscript">{{ equipment?.tier }}</td>
-                <td class="header-subscript">{{ equipment?.cost?.getPrettyString() }}</td>
-                <td class="header-subscript">{{ equipment?.getPrettyWeightString() }}</td>
+                <td>{{ equipment?.type }}</td>
+                <td>{{ equipment?.tier }}</td>
+                <td>{{ equipment?.cost?.getPrettyString() }}</td>
+                <td>{{ equipment?.getPrettyWeightString() }}</td>
             </tr>
             @if (equipmentDescriptionEnabled[$index]) {
                 <tr>
-                    <td colspan="4">
+                    <td colspan="5">
                         <p class="description my-0"><span class="fw-bold">Crafting Skills: </span> {{ equipment.craftingSkill }}</p>
+                        @if (isWeapon(equipment)) {
+                            <p class="description my-0"><span class="fw-bold">Weapon properties: </span><app-dynamic-content [content]="getWeaponProperties(equipment) | weaponPropertyProcessor"></app-dynamic-content></p>
+                            <p class="description my-0"><span class="fw-bold">Damage: </span>{{ getDamage(equipment) }}</p>
+                        }
+                        @if (isAmmunition(equipment)) {
+                            <p class="description my-0"><span class="fw-bold">Availible Weapons: </span>{{ getAvailibleWeapons(equipment) }}</p>
+                            <p class="description my-0"><span class="fw-bold">Recoverable: </span>{{ getRecoverable(equipment) }}</p>
+                        }
                         @if (isArmour(equipment)) {
-                            <p class="description my-0"><span class="fw-bold">Damage Block: </span> {{ getArmourDamageBlock(equipment) }}</p>
-                            <p class="description my-0"><span class="fw-bold">Manoeuvre Penalty: </span> {{ getArmourManoeuvrePeanlty(equipment) }}</p>
-                            <p class="description my-0"><span class="fw-bold">Movement Penalty: </span> {{ getArmourMovementPenalty(equipment) }}</p>
+                            <p class="description my-0"><span class="fw-bold">Damage Block: </span>{{ getDamageBlock(equipment) }}</p>
+                        }
+                        @if (isShield(equipment)) {
+                            <p class="description my-0"><span class="fw-bold">Shield Block: </span>{{ getShieldBlock(equipment) }}</p>
+                            <p class="description my-0"><span class="fw-bold">Damage Threshold: </span>{{ getDamageThresholdBlock(equipment) }}</p>
+                        }
+                        @if (isArmour(equipment) || isShield(equipment)) {
+                            <p class="description my-0"><span class="fw-bold">Manoeuvre Penalty: </span>{{ getManoeuvrePeanlty(equipment) }}</p>
+                            <p class="description my-0"><span class="fw-bold">Movement Penalty: </span>{{ getMovementPenalty(equipment) }}</p>
                         }
                         <span class="text-body-secondary"><app-text-elements [textElements]="equipment.description" [useBoldTextForHeader]="true"></app-text-elements></span>
                     </td>

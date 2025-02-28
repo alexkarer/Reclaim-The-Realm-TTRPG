@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { allEquipment, Equipment } from '../../../ttrpg_resources/equipment/equipment';
+import { Equipment } from '../../../ttrpg_resources/equipment/equipment';
 import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { armours } from '../../../ttrpg_resources/equipment/armour/armour';
 import { EquipmentListComponent } from "./equipment-list/equipment-list.component";
+import { advancedWeapons, ammunitions, simpleWeapons } from '../../../ttrpg_resources/equipment/weapons/weapons';
+import { shields } from '../../../ttrpg_resources/equipment/shields/shields';
 
 @Component({
     selector: 'app-equipment-search',
@@ -12,7 +14,15 @@ import { EquipmentListComponent } from "./equipment-list/equipment-list.componen
     styleUrl: './equipment-search.component.scss'
 })
 export class EquipmentSearchComponent {
-    public filteredEquipment: Equipment[] = armours;
+
+    public readonly allEquipment: Equipment[] = [
+        ...simpleWeapons,
+        ...advancedWeapons,
+        ...ammunitions,
+        ...armours,
+        ...shields
+    ];
+    public filteredEquipment: Equipment[] = this.allEquipment;
 
     public readonly EquipmentType = EquipmentType;
 
@@ -29,12 +39,11 @@ export class EquipmentSearchComponent {
     }
 
     private applyCurrentFilters() {
-        this.filteredEquipment = armours;
-        /*this.filteredEquipment = [...allEquipment
+        this.filteredEquipment = [...this.allEquipment
             .filter(e => this.filterForEquipmentType(e))
             .filter(e => this.filterforFreeText(e))
             .filter(e => e.name.length !== 0)
-        ];*/
+        ];
     }
 
     private filterForEquipmentType(equipment: Equipment): boolean {
@@ -43,7 +52,7 @@ export class EquipmentSearchComponent {
             case EquipmentType.WEAPON: return equipment.type.toLocaleLowerCase().includes('weapon');
             case EquipmentType.AMMUNATION: return equipment.type.toLocaleLowerCase().includes('ammunition');
             case EquipmentType.ARMOUR: return equipment.type.toLocaleLowerCase().includes('armour');
-            case EquipmentType.SHIELDS: return equipment.type.toLocaleLowerCase().includes('shields');
+            case EquipmentType.SHIELDS: return equipment.type.toLocaleLowerCase().includes('shield');
         }
     }
 

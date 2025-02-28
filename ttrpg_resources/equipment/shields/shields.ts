@@ -1,8 +1,8 @@
 import { Cost, Equipment } from "../equipment";
 
 export class Shield extends Equipment {
-    shieldBlock?: number;
-    damageThreshold?: number;
+    shieldBlock!: number;
+    damageThreshold!: number;
     manoeuvrePenalty!: number;
     movementPenalty!: number;
 }
