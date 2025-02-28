@@ -1,0 +1,33 @@
+<table class="rules-table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Tier</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Weight</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (equipment of equipmentList; track $index) {
+            <tr (click)="equipmentDescriptionEnabled[$index] = !equipmentDescriptionEnabled[$index]" style="cursor: pointer">
+                <th scope="row">{{ equipment?.name }}</th>
+                <td class="header-subscript">{{ equipment?.tier }}</td>
+                <td class="header-subscript">{{ equipment?.cost?.getPrettyString() }}</td>
+                <td class="header-subscript">{{ equipment?.getPrettyWeightString() }}</td>
+            </tr>
+            @if (equipmentDescriptionEnabled[$index]) {
+                <tr>
+                    <td colspan="4">
+                        <p class="description my-0"><span class="fw-bold">Crafting Skills: </span> {{ equipment.craftingSkill }}</p>
+                        @if (isArmour(equipment)) {
+                            <p class="description my-0"><span class="fw-bold">Damage Block: </span> {{ getArmourDamageBlock(equipment) }}</p>
+                            <p class="description my-0"><span class="fw-bold">Manoeuvre Penalty: </span> {{ getArmourManoeuvrePeanlty(equipment) }}</p>
+                            <p class="description my-0"><span class="fw-bold">Movement Penalty: </span> {{ getArmourMovementPenalty(equipment) }}</p>
+                        }
+                        <span class="text-body-secondary"><app-text-elements [textElements]="equipment.description" [useBoldTextForHeader]="true"></app-text-elements></span>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

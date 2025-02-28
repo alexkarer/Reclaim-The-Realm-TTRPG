@@ -1,4 +1,7 @@
 import { TextElement } from "../shared/TextElements";
+import { armours } from "./armour/armour";
+import { shields } from "./shields/shields";
+import { advancedWeapons, ammunitions, simpleWeapons } from "./weapons/weapons";
 
 export class Equipment {
     name!: string;
@@ -63,3 +66,11 @@ export enum Currency {
     GC = "gc"
 }
 
+export const allEquipment: Equipment[] = simpleWeapons;
+//[
+    //...simpleWeapons
+    //...advancedWeapons,
+    //...ammunitions,
+    //...armours,
+    //...shields
+//]

@@ -49,16 +49,11 @@ h4 {
     width: auto;
 }
 
-.navbar-padding {
-    margin-top: 12vh;
-}
-
 .rules-body-wrapper {
     max-height: 92svh;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
-    @extend .navbar-padding;
 }
 
 .rules-body {
@@ -83,9 +78,6 @@ h4 {
         margin-right: 3vw;
         max-width: 1000px;
     }
-    .navbar-padding {
-        margin-top: 6vh;
-    }
 }
 
 // desktop size
@@ -102,8 +94,5 @@ h4 {
     .rules-body {
         margin-left: 0vw;
         margin-right: 0vw;
-    }
-    .navbar-padding {
-        margin-top: 6vh;
     }
 }
