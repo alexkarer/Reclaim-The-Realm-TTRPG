@@ -1,19 +1,17 @@
 TODO before playtest:
 
-**finsh other classes**:
-- warlock, implement phone ideas.
+**Equipment**
+- other items
+- books, +1 to lore and a bigger bonus to one specific check if 1h spent to research
 
-spells: spell cast test fails when below 5
-  - magical mishap table needs to be improved
-
-add character creation process with origins
+**Character Creation**
+- write down process
+- add origin creation step
 
 fix martial maneuver writing (reference Weapon Attack ability)
 
-**Equipment**
-- add rules for shields
-- other items
-- books, +1 to lore and a bigger bonus to one specific check if 1h spent to research
+spells: spell cast test fails when below 5
+  - magical mishap table needs to be improved
 
 finish massive injuries table
 
@@ -42,6 +40,7 @@ Future Ideas / Nice to have:
 
 **Classes**
 - add missing stuff
+- warlock definitly still needing lots of fleshing out
 
 **Status Effects:**
 - Confused Condition?

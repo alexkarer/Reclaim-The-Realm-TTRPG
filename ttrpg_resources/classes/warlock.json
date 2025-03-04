@@ -290,7 +290,7 @@
                 },
                 { "regularText": null, "headerLine": "Tail", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "TODO.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "regularText": "You grow a Tail, or different form of Limb.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -318,7 +318,14 @@
                 },
                 { "regularText": null, "headerLine": "Natural armor", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "gain physical 2 + [LEVEL]/2 phyiscal resistance.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "regularText": "You gain physical 2 + [LEVEL]/2 phyiscal resistance which does not stack with armor.<span class=\"fw-bold\">Corruption Effect: </span>Your damage resistance works now against all damage types, however any [SAVE] you make recieves a Penalty equal to half your current Corruption.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                { "regularText": null, "headerLine": "Regenerative Tissue", "bulletPoints": null, "ability": null },
+                {
+                    "regularText": "Each time you gain Corruption you heal for [LEVEL] + [SPI] for each Corruption agained.<span class=\"fw-bold\">Corruption Effect: </span> You heal an additional amount equal to your current Corruption but each time you heal. Make a [TOUGHNESS] [SAVE] against a [DT] of 10 + Corruption. On a fail you suffer 1 Level of [EXHAUSTION].",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -381,14 +388,64 @@
     "classTechniquesDescription": "",
     "classTechniques": [
         {
-            "name": "",
+            "name": "Defensive Manifestation",
             "tags": [ "Class Technique (Warlock)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "",
+            "cost": "1 [REACTION], 1 Corruption",
             "range": "-",
-            "target": "",
-            "duration": "",
-            "description": ""
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you are hit by an [ATTACK] you can use this Ability and when you do so your Entity partially manifsts and Shields you from all of the Damage."
+        },
+        {
+            "name": "Eldrtich Blast",
+            "tags": [ "Class Technique (Warlock)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "2 [AP], 1-2 Corruption",
+            "range": "21m",
+            "target": "1 Creature",
+            "duration": "2 [ROUND]",
+            "description": "Make a [RANGED SPELL ATTACK] against your target, on a hit you deal ([SPI] + [LEVEL]/2) * d6 entity damage. If you spend 1 extra Corruption when using this ability if the [ATTACK] is higher than the creatures [TOUGHNESS] it is affected by one of the following effects for 2 [ROUND]: [CURSED I], [WEAKENED I], [VULNURABLE I]."
+        },
+        {
+            "name": "Corrupted Energy Reserve",
+            "tags": [ "Class Technique (Warlock)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 1 Corruption",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You immediatly gain 1 [ARCANA], 1 [STAMINA] or you regain [SPI]+[LEVEL] [HP]."
+        },
+        {
+            "name": "Push beyond mortal means",
+            "tags": [ "Class Technique (Warlock)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 2 Corruption",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "You gain 2 extra [AP] this [TURN]. You can't use this ability more than once per [ROUND]."
+        },
+        {
+            "name": "Elemental Enchantment",
+            "tags": [ "Class Technique (Warlock, Elemental Entity)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "1 [AP], 1 Corruptiuon",
+            "range": "-",
+            "target": "1 Weapon you are wielding",
+            "duration": "2 + [LEVEL] [ROUND]",
+            "description": "One Weapon you are wielding is enchanted with the Element of you Entity. Each time you make a Weapon Attack with that Weapon you deal an extra d8 entity damage."
+        },
+        {
+            "name": "Life Steal",
+            "tags": [ "Class Technique (Warlock, Cosmic Entity)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 1 Corruption",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When you make [MELEE MARTIAL ATTACK] or [MELEE SPELL ATTACK] you can use this Ability. You deal an extra d8 + ([LEVEL]/4) d8 entity damage. You then regain [HP] equal to the amount of entity damage you dealt."
         }
     ]
 }

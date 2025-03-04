@@ -12,22 +12,22 @@
         }
     },
     "massiveInuries": {
-        "description": "During adventuiring or in combat there is a chance you can suffer a massive Injuriy which usually has a more permanent effect. To determine your Injury roll a d100 and add all the excess damage that is above the triggerpoint upon which you recieve an Injury. There are the following ways you can recieve such an Injury",
+        "description": "During adventuiring or in combat there is a chance you can suffer a massive Injuriy which usually has a more permanent effect. To determine your Injury roll a d100 and add all the excess damage that is above the triggerpoint upon which you recieve an Injury. There are the following ways you can recieve such an Injury. You can only retrieve each injury only once unless it says you can have it multiple times. If you roll for an injury you already have you gain the one above in the table.",
         "massiveInjuriesTriggers": [
             "Suffering damage equal or greater than half your maximum [HP], resist by passing a [TOUGHNESS] [SAVE] with a [DT] equal to 10 + excess damage beyond half your maximum [HP]",
             "Being reduced to 0 [HP], resist by passing a [TOUGHNESS] [SAVE] with a [DT] equal to 10 + excess damage beyond 0 [HP]",
             "Failing a [TOUGHNESS] [SAVE] during [DEATHS DOOR] and willingly staying alive. Can't be resisted."
         ],
         "massiveInjuriesTable": [
-            { "diceRoll": "01-20", "Injury": "Scar TODO add recovery mehtods, add Table for different damage types and simplify (6-8 entries)" },
-            { "diceRoll": "21-40", "Injury": "Broken Bone" },
-            { "diceRoll": "41-60", "Injury": "reduce healing (also long/short rest)" },
-            { "diceRoll": "61-80", "Injury": "reduce long rest stamina/arcana recovery" },
-            { "diceRoll": "81-90", "Injury": "" },
-            { "diceRoll": "91-100", "Injury": "" },
-            { "diceRoll": "101-110", "Injury": "" },
-            { "diceRoll": "111-120", "Injury": "" },
-            { "diceRoll": "121-130", "Injury": "" },
+            { "diceRoll": "01-20", "Injury": "You recieve a minor cosmetic scar fitting to the damage type. After extra 2 days of spending a long rest, the scar will mostly dissapear. Can be retrieved mutliple times" },
+            { "diceRoll": "21-40", "Injury": "Sprain/Distortion: reduce your [MP] by 1, removed after 3 days extended rest" },
+            { "diceRoll": "41-60", "Injury": "pierced lung: you only recover a quater of your [ARCANA] and [STAMINA] each long rest, removed after 3 days extended rest." },
+            { "diceRoll": "61-80", "Injury": "chronic wounds: each time you recover [HP], you only recover half, removed after 7 days extended rest" },
+            { "diceRoll": "81-90", "Injury": "Muscle Injury: reduce your [STR] by -5, rcovered after 7 days extended rest." },
+            { "diceRoll": "91-100", "Injury": "Concussion: reduce your [INT] by -3, rcovered after 7 days extended rest." },
+            { "diceRoll": "101-110", "Injury": "Nerve Damage: reduce your [AGI] and [PER] by -3, rcovered after 7 days extended rest." },
+            { "diceRoll": "111-120", "Injury": "Permanent Inury can be recieved multiple times, Possibilities: Head Trauma, permanent reduce [INT] by 1. " },
+            { "diceRoll": "121-130", "Injury": "Amputation can be recieved multiple times: loose a random limb" },
             { "diceRoll": "131+", "Injury": "The character dies" }
         ]
     },

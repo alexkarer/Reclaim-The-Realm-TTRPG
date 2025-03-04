@@ -363,7 +363,7 @@
         },
         {
             "name": "Efficient Maneuver",
-            "tags": [ "Class Technique (Barbarian)" ],
+            "tags": [ "Class Technique (Rogue)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "cost": "2 or more Trickery",
             "range": "-",
