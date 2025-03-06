@@ -6,6 +6,7 @@ import { armours } from '../../../ttrpg_resources/equipment/armour/armour';
 import { EquipmentListComponent } from "./equipment-list/equipment-list.component";
 import { advancedWeapons, ammunitions, simpleWeapons } from '../../../ttrpg_resources/equipment/weapons/weapons';
 import { shields } from '../../../ttrpg_resources/equipment/shields/shields';
+import { otherItems } from '../../../ttrpg_resources/equipment/other_items/other_items';
 
 @Component({
     selector: 'app-equipment-search',
@@ -20,7 +21,8 @@ export class EquipmentSearchComponent {
         ...advancedWeapons,
         ...ammunitions,
         ...armours,
-        ...shields
+        ...shields,
+        ...otherItems
     ];
     public filteredEquipment: Equipment[] = this.allEquipment;
 
@@ -53,6 +55,10 @@ export class EquipmentSearchComponent {
             case EquipmentType.AMMUNATION: return equipment.type.toLocaleLowerCase().includes('ammunition');
             case EquipmentType.ARMOUR: return equipment.type.toLocaleLowerCase().includes('armour');
             case EquipmentType.SHIELDS: return equipment.type.toLocaleLowerCase().includes('shield');
+            case EquipmentType.WEARABLES: return equipment.type.toLocaleLowerCase().includes('wearable');
+            case EquipmentType.CONSUMBABLES: return equipment.type.toLocaleLowerCase().includes('consumable');
+            case EquipmentType.TOOLS_AND_GADGETS: return equipment.type.toLocaleLowerCase().includes('tool');
+            case EquipmentType.SURVIVAL: return equipment.type.toLocaleLowerCase().includes('survival');
         }
     }
 
@@ -80,5 +86,9 @@ enum EquipmentType {
     WEAPON = "Weapons",
     AMMUNATION = "Ammunitions",
     ARMOUR = "Armour",
-    SHIELDS = "Shields"
+    SHIELDS = "Shields",
+    WEARABLES = "Wearables",
+    CONSUMBABLES = "Consumables",
+    TOOLS_AND_GADGETS = "Tools and Gadgets",
+    SURVIVAL = "Survival"
 }

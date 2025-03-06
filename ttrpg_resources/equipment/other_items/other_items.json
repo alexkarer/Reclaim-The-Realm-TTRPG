@@ -1,0 +1,916 @@
+{
+    "wearables": [
+        {
+            "name": "Common Shoes",
+            "tier": 1,
+            "craftingSkill": "Tailor's Set",
+            "cost": "2 sc",
+            "weightInGram": 500,
+            "type": "Wearable (Boots)",
+            "description": [
+                {
+                    "regularText": "Common shoes",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Sturdy Travel Boots",
+            "tier": 1,
+            "craftingSkill": "Tailor's Set",
+            "cost": "2 gc",
+            "weightInGram": 1000,
+            "type": "Wearable (Boots)",
+            "description": [
+                {
+                    "regularText": "The first time you need to use [STAMINA] during Travel, you can use 1 less.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Fancy Town Shoes",
+            "tier": 3,
+            "craftingSkill": "Tailor's Set",
+            "cost": "3 gc",
+            "weightInGram": 500,
+            "type": "Wearable (Boots)",
+            "description": [
+                {
+                    "regularText": "Fancy Shoes crafted of the finest Leather and decorations.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Fancy Armor Set Bonus",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Sabatons",
+            "tier": 3,
+            "craftingSkill": "Smith's Tools",
+            "cost": "10 gc",
+            "weightInGram": 2000,
+            "type": "Wearable (Boots)",
+            "description": [
+                {
+                    "regularText": "Sabaton is a metal boot part of Armor.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Metal Armor Set Bonus",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase the physical resistance by 1.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Common Clothes",
+            "tier": 1,
+            "craftingSkill": "Tailor's Set",
+            "cost": "3 sc",
+            "weightInGram": 1000,
+            "type": "Wearable (Clothes)",
+            "description": [
+                {
+                    "regularText": "Common Clothes",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Fancy Clothes",
+            "tier": 3,
+            "craftingSkill": "Tailor's Set",
+            "cost": "10 gc",
+            "weightInGram": 2000,
+            "type": "Wearable (Clothes)",
+            "description": [
+                {
+                    "regularText": "You gain a +1 bonus to any [CHA] [ATTRIBUTE TEST] when in Settlements, assuming no armor is worn over these clothes.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Fancy Armor Set Bonus",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Travel Clothes",
+            "tier": 1,
+            "craftingSkill": "Tailor's Set",
+            "cost": "1 gc",
+            "weightInGram": 1500,
+            "type": "Wearable (Clothes)",
+            "description": [
+                {
+                    "regularText": "Comfortable Clothes designed for long journeys.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Thick Winter clothes",
+            "tier": 2,
+            "craftingSkill": "Tailor's Set",
+            "cost": "4 gc",
+            "weightInGram": 4000,
+            "type": "Wearable (Clothes)",
+            "description": [
+                {
+                    "regularText": "These winter clothes will keep you comfortable in Cold Temperatures and come with a cloak that can be woarn over armor. While wearing these clothes you gain Frost Resistance 1, but you cannot wear these clothes in Temperatures over 15°.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Leather Gloves",
+            "tier": 1,
+            "craftingSkill": "Tailor's Set",
+            "cost": "2 sc",
+            "weightInGram": 250,
+            "type": "Wearable (Gloves)",
+            "description": [
+                {
+                    "regularText": "Comfortable Leather Gloves",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Silk Gloves",
+            "tier": 3,
+            "craftingSkill": "Tailor's Set",
+            "cost": "5 gc",
+            "weightInGram": 100,
+            "type": "Wearable (Gloves)",
+            "description": [
+                {
+                    "regularText": "You gain a +1 bonus to any [CHA] [ATTRIBUTE TEST] when in Settlements.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Fancy Armor Set Bonus",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Metal Gauntlets",
+            "tier": 3,
+            "craftingSkill": "Smith's Tools",
+            "cost": "10 gc",
+            "weightInGram": 1000,
+            "type": "Wearable (Gloves)",
+            "description": [
+                {
+                    "regularText": "Sturdy Metal Gauntlets.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Metal Armor Set Bonus",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase the physical resistance by 1.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Hood",
+            "tier": 1,
+            "craftingSkill": "Tailor's Set",
+            "cost": "1 sc",
+            "weightInGram": 100,
+            "type": "Wearable (Helmet)",
+            "description": [
+                {
+                    "regularText": "For those who whish not to be seen.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Fancy Hat",
+            "tier": 3,
+            "craftingSkill": "Tailor's Set",
+            "cost": "5 gc",
+            "weightInGram": 250,
+            "type": "Wearable (Helmet)",
+            "description": [
+                {
+                    "regularText": "A finely crafted and extravagant hat.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Fancy Armor Set Bonus",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Steel Helmet",
+            "tier": 1,
+            "craftingSkill": "Smith's Tools",
+            "cost": "10 gc",
+            "weightInGram": 1000,
+            "type": "Wearable (Helmet)",
+            "description": [
+                {
+                    "regularText": "A steel helmet comes with a Visor which still allows you to retain Vision when outside of combat.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": "Metal Armor Set Bonus",
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase the physical resistance by 1.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        }
+    ],
+    "consumables": [
+        {
+            "name": "Healing Potion",
+            "tier": 3,
+            "craftingSkill": "Alchemy Kit",
+            "cost": "25 gc",
+            "weightInGram": 250,
+            "type": "Consumable (Potion)",
+            "description": [
+                {
+                    "regularText": "You can use this ability to consume the Potion. Once consumed you can't consume this Potion again and you have an empty vial left over.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Consume Healing Potion",
+                        "tags": [ "Item" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "1-2 [AP]",
+                        "range": "[MELEE]",
+                        "target": "[SELF] or 1 Creature",
+                        "duration": "[INSTANT]",
+                        "description": "You regain 2d6+3 [HP]. If used on another creature, this ability costs 2 [AP]"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Arcana Potion",
+            "tier": 3,
+            "craftingSkill": "Alchemy Kit",
+            "cost": "50 gc",
+            "weightInGram": 250,
+            "type": "Consumable (Potion)",
+            "description": [
+                {
+                    "regularText": "You can use this ability to consume the Potion. Once consumed you can't consume this Potion again and you have an empty vial left over.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Consume Arcana Potion",
+                        "tags": [ "Item" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "1-2 [AP]",
+                        "range": "[MELEE]",
+                        "target": "[SELF] or 1 Creature",
+                        "duration": "[INSTANT]",
+                        "description": "You regain 1 [ARCANA]. If used on another creature, this ability costs 2 [AP]"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Antidote",
+            "tier": 3,
+            "craftingSkill": "Alchemy Kit",
+            "cost": "30 gc",
+            "weightInGram": 250,
+            "type": "Consumable (Potion)",
+            "description": [
+                {
+                    "regularText": "You can use this ability to consume the Potion. Once consumed you can't consume this Potion again and you have an empty vial left over.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Consume Antidote Potion",
+                        "tags": [ "Item" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "1-2 [AP]",
+                        "range": "[MELEE]",
+                        "target": "[SELF] or 1 Creature",
+                        "duration": "[INSTANT]",
+                        "description": "You remove a [POISON I] Status Effect affecting you. If used on another creature, this ability costs 2 [AP]"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Bandage",
+            "tier": 1,
+            "craftingSkill": "Tailor's Set, Medicine",
+            "cost": "5 sc",
+            "weightInGram": 100,
+            "type": "Consumable",
+            "description": [
+                {
+                    "regularText": "A small piece of decently sterile cloth used to staunch wounds. Once used, it can't be used again.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Apply Bandage",
+                        "tags": [ "Item" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "2 [AP]",
+                        "range": "[MELEE]",
+                        "target": "1 Creature",
+                        "duration": "[INSTANT]",
+                        "description": "You remove a [BLEEDING I] Status Effect affecting the target."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Acid vial",
+            "tier": 2,
+            "craftingSkill": "Alchemy Kit",
+            "cost": "15 gc",
+            "weightInGram": 250,
+            "type": "Consumable",
+            "description": [
+                {
+                    "regularText": "A corrosive fluid. Once used the item is consumed.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Throw acid vial",
+                        "tags": [ "Item" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "2 [AP]",
+                        "range": "9m",
+                        "target": "[SPHERE] 1.5m",
+                        "duration": "[INSTANT]",
+                        "description": "Make a [RAGNED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets they recieve 2d6 Corrosive damage [HALF]."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Oil flask",
+            "tier": 2,
+            "craftingSkill": "Alchemy Kit",
+            "cost": "5 gc",
+            "weightInGram": 500,
+            "type": "Consumable",
+            "description": [
+                {
+                    "regularText": "A highly flammable fluid. Once used the item is consumed.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Throw Oil Flask",
+                        "tags": [ "Item" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "2 [AP]",
+                        "range": "9m",
+                        "target": "[SPHERE] 1.5m",
+                        "duration": "3 [ROUND]",
+                        "description": "Make a [RAGNED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets they are drenched in oil and when ignited recieve the [BURNING I] Status Effect until the duration is over or the oil is washed away. Additionally the target area can also be ignited and when done so the area is lit with fire and any creature that starts its [TURN] in the Area or enters it for the first time it recieves damage is if they had the [BURNING I] Status Effect."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Holy Water",
+            "tier": 2,
+            "craftingSkill": "Lore (Supernatural)",
+            "cost": "15 gc",
+            "weightInGram": 250,
+            "type": "Consumable",
+            "description": [
+                {
+                    "regularText": "This water was blessed Good Etheral energy. Once used the item is consumed.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Throw Holy Water",
+                        "tags": [ "Item" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "2 [AP]",
+                        "range": "9m",
+                        "target": "[SPHERE] 1.5m",
+                        "duration": "3 [ROUND]",
+                        "description": "Make a [RAGNED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets, undead and evil cosmic creatures receive 2d6 damage."
+                    }
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Consume Holy Water",
+                        "tags": [ "Item" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                        "cost": "1-2 [AP]",
+                        "range": "[MELEE]",
+                        "target": "[SELF] or 1 Creature",
+                        "duration": "[INSTANT]",
+                        "description": "You end one [CURSED I], [WEAKENED I] or [VULNURABLE I] Status effect affecing you. If used on another creature, this ability costs 2 [AP]."
+                    }
+                }
+            ]
+        }
+    ],
+    "toolsAndGadgets": [
+        {
+            "name": "Crowbar",
+            "tier": 1,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "5 sc",
+            "weightInGram": 2000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "A brute alternative to Thieves Tools. Using a crowbar grants a +2 to bonus any [STR] [ATTRIBUTE TEST] used to force open doors or other similiar objects.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Shovel",
+            "tier": 1,
+            "craftingSkill": "Smith’s Tools or Carpenter’s Tools",
+            "cost": "5 sc",
+            "weightInGram": 2000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "Useful for digging up graves.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Pickaxe",
+            "tier": 1,
+            "craftingSkill": "Smith’s Tools or Carpenter’s Tools",
+            "cost": "5 sc",
+            "weightInGram": 2000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "Rock and Stone!",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Axe",
+            "tier": 1,
+            "craftingSkill": "Smith’s Tools or Carpenter’s Tools",
+            "cost": "5 sc",
+            "weightInGram": 2000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "Alternative to punching Trees.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Thieves Tools",
+            "tier": 3,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "5 gc",
+            "weightInGram": 500,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "Thieves Tools contain various lockpicks, small files, oil and other fine instruments. These tools can be used to lock and unlock doors and disarm traps.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Medi-kit",
+            "tier": 3,
+            "craftingSkill": "Medicine",
+            "cost": "10 gc",
+            "weightInGram": 3000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "This Medi-kit contains various herbs, potions and bandages to treat wounded creatures. It has 10 uses and one use can be replenished at most towns at an apothacary for the price of 3 sc. You can use the medi-kit the following ways:",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Emergency Treatment",
+                        "tags": [ "Item" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "1 Rank in Medicine" ] },
+                        "cost": "2 [AP], 1 Medi-kit use",
+                        "range": "[MELEE]",
+                        "target": "1 willing creature",
+                        "duration": "[INSTANT]",
+                        "description": "You can end one of [POISON I], [BLEEDING I] Status Effect affecting the creature. Make a [INT] Medicine [SKILL TEST] against [DT] 15. For a [POISON II] or [BLEADING II] Status Effect the [DT] is 20. For a [POISON III] or [BLEEDING III] the [DT] is 25."
+                    }
+                },
+                {
+                    "regularText": null,
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": {
+                        "name": "Field Treatment",
+                        "tags": [ "Item" ],
+                        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "1 Rank in Medicine" ] },
+                        "cost": "5 minutes, 1 Medi-kit use",
+                        "range": "[MELEE]",
+                        "target": "1 willing creature",
+                        "duration": "[INSTANT]",
+                        "description": "Make an [INT] Medicine [SKILL TEST], if your result is 10 or above you heal the target for 1d6 [HP]. For every further 5 your result is higher than 10 the target heals by an additional 1d6. A creature can only benefit from this no more than once per long rest."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Smith’s Tools",
+            "tier": 2,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "5 gc",
+            "weightInGram": 7000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "Smith’s Tools contains a set of prongs, hammers, files, used for shaping and manipulating metals.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Alchemy Kit",
+            "tier": 3,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "20 gc",
+            "weightInGram": 5000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "Alchemy Kit contains various vials and measurement instruments and various reagents and catalysts for creating potions.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Jeweller’s Tools",
+            "tier": 3,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "10 gc",
+            "weightInGram": 3000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "Jeweller’s Tools contain variour fine tools of analyzing, cutting and polishing fine gemstones and crystals.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Tailor’s Set",
+            "tier": 3,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "5 gc",
+            "weightInGram": 1000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "Tailor’s Set contains scissors, measurement tools, needles and other sewing tools to create and repair clothing.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Carpenter’s Tools",
+            "tier": 2,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "5 gc",
+            "weightInGram": 5000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "Carpenter’s Tools contain hammers, saws, planes, axes and other tools for woodworking.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Field Cooking set",
+            "tier": 1,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "2 sc",
+            "weightInGram": 1000,
+            "type": "Tool",
+            "description": [
+                {
+                    "regularText": "This set contains a small cylinder where food can be prepared and eaten out of and additional small cooking tools and cutlery.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        }
+    ],
+    "survival": [
+        {
+            "name": "Field Tent",
+            "tier": 1,
+            "craftingSkill": "Tailor’s Set or Carptenter'S Tools",
+            "cost": "1 gc",
+            "weightInGram": 5000,
+            "type": "Survival",
+            "description": [
+                {
+                    "regularText": "A small tent that can be set up within 10 minutes and has comfortable space for 1 person and 2 persons if need be.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Bedroll",
+            "tier": 1,
+            "craftingSkill": "Tailor’s Set",
+            "cost": "2 sc",
+            "weightInGram": 2000,
+            "type": "Survival",
+            "description": [
+                {
+                    "regularText": "Durable and portable bedding consisting of sewn together leather and wool. Not the most comfortable, but good enough for travel.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Waterskin",
+            "tier": 1,
+            "craftingSkill": "Tailor’s Set",
+            "cost": "5 bc",
+            "weightInGram": 2500,
+            "type": "Survival",
+            "description": [
+                {
+                    "regularText": "This is a durable container for water made out of leather that is able to hold 2 liters of liquid.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Ration",
+            "tier": 1,
+            "craftingSkill": "Survival or Lore(Nature)",
+            "cost": "3 bc",
+            "weightInGram": 500,
+            "type": "Survival",
+            "description": [
+                {
+                    "regularText": "A ration that contains long lasting food of local variety that can last for multiple weeks or even months. One such ration is enough to sustain one medium creature for 1 day.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Flintstone and Tinder",
+            "tier": 1,
+            "craftingSkill": "Smith’s Tools",
+            "cost": "3 sc",
+            "weightInGram": 1000,
+            "type": "Survival",
+            "description": [
+                {
+                    "regularText": "This set contains flintstone, steel to ignite spark and easily flammable tinder.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Torch",
+            "tier": 1,
+            "craftingSkill": "Carpenter's Tools",
+            "cost": "2 bc",
+            "weightInGram": 250,
+            "type": "Survival",
+            "description": [
+                {
+                    "regularText": "When a torch is lit, it can shine light(6m/12m) for 1 hour. Additionally a torch can act as a weapon. It has the light property and on a hit does 1d4 fire damage instead of your [MARTIAL DAMAGE].",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Backpack",
+            "tier": 1,
+            "craftingSkill": "Tailor’s Set",
+            "cost": "1 gc",
+            "weightInGram": 3000,
+            "type": "Survival",
+            "description": [
+                {
+                    "regularText": "A sturdy backpack with room for your essentials",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Pouch",
+            "tier": 1,
+            "craftingSkill": "Tailor’s Set",
+            "cost": "8 bc",
+            "weightInGram": 250,
+            "type": "Survival",
+            "description": [
+                {
+                    "regularText": "A small leather pouch where you can store your valuables.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        },
+        {
+            "name": "Rope (10m)",
+            "tier": 1,
+            "craftingSkill": "Tailor’s Set",
+            "cost": "2 sc",
+            "weightInGram": 5000,
+            "type": "Survival",
+            "description": [
+                {
+                    "regularText": "A 10m long heavy rope that can reliably hold 500 kg of weight.",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
+                }
+            ]
+        }
+    ]
+}

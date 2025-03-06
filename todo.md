@@ -1,9 +1,5 @@
 TODO before playtest:
 
-**Equipment**
-- other items
-- books, +1 to lore and a bigger bonus to one specific check if 1h spent to research
-
 **Character Creation**
 - write down process
 - add origin creation step
@@ -41,6 +37,11 @@ Future Ideas / Nice to have:
 **Classes**
 - add missing stuff
 - warlock definitly still needing lots of fleshing out
+
+**Equipment**
+- other useful items, books that give bonuses to lore checks
+- magic item rules
+- crafting rules
 
 **Status Effects:**
 - Confused Condition?

@@ -11,6 +11,39 @@
     </ul>
     <app-dynamic-content [content]="equipmentJson.currency.coinValueDescription | keywordProcessor"></app-dynamic-content>
 
+    <h4 class="mb-1 mt-3">Goods And Services</h4>
+    <app-dynamic-content [content]="equipmentJson.goodsAndServices.description | keywordProcessor"></app-dynamic-content>
+    <div class="d-flex justify-content-center">
+        <table class="rules-table-75">
+            <thead>
+                <tr>
+                    <th scope="col">Name </th>
+                    <th scope="col">Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th colspan="2" class="text-center">Example Goods</th>
+                </tr>
+                @for (example of equipmentJson.goodsAndServices.exampleGoods; track $index) {
+                    <tr>
+                        <td>{{ example.name }}</td>
+                        <td>{{ example.price }}</td>
+                    </tr>
+                }
+                <tr>
+                    <th colspan="2" class="text-center">Example Services</th>
+                </tr>
+                @for (example of equipmentJson.goodsAndServices.exampleServices; track $index) {
+                    <tr>
+                        <td>{{ example.name }}</td>
+                        <td>{{ example.price }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
     <h4 class="mb-1 mt-3">Item Tier</h4>
     <app-dynamic-content [content]="equipmentJson.itemTierDescription | keywordProcessor"></app-dynamic-content>
 
@@ -90,7 +123,7 @@
     <app-shields></app-shields>
 
     <h3 class="mb-1" ngbScrollSpyFragment="other-items">Other Items</h3>
-    <app-other-items></app-other-items>
+    <app-dynamic-content [content]="equipmentJson.otherItemsDescriptions | keywordProcessor"></app-dynamic-content>
 
     <h3 class="mb-1" ngbScrollSpyFragment="magic-items">Magic Items</h3>
     <app-magic-items></app-magic-items>

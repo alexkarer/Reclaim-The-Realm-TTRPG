@@ -4,7 +4,6 @@ import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import { KeywordProcessorPipe } from '../../shared/text-utils/keyword-processor';
 import { WeaponsComponent } from './weapons/weapons.component';
 import { ArmourComponent } from './armour/armour.component';
-import { OtherItemsComponent } from './other-items/other-items.component';
 import { CraftingComponent } from './crafting/crafting.component';
 import { MagicItemsComponent } from './magic-items/magic-items.component';
 import equipmentJson from '../../../../ttrpg_resources/equipment/equipment.json';
@@ -13,7 +12,7 @@ import { ShieldsComponent } from "./shield/shields.component";
 
 @Component({
     selector: 'app-equipment',
-    imports: [DynamicContentComponent, NgbScrollSpyFragment, KeywordProcessorPipe, WeaponsComponent, ArmourComponent, OtherItemsComponent, CraftingComponent, MagicItemsComponent, ShieldsComponent],
+    imports: [DynamicContentComponent, NgbScrollSpyFragment, KeywordProcessorPipe, WeaponsComponent, ArmourComponent, CraftingComponent, MagicItemsComponent, ShieldsComponent],
     templateUrl: './equipment.component.html',
     styleUrl: './equipment.component.scss'
 })

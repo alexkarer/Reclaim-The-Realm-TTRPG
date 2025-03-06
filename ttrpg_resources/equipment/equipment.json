@@ -8,13 +8,39 @@
         ],
         "coinValueDescription": "Every coin weighs 5 grams. While the metal of the coin also holds intrinsic value that roughly equates the the monetary value. During different time periods and region that value can differ more or less. It is also important that currency comes in different sizes as well. For example there are heavier cc weighing 50 g that are worht 10 regular bc. However only the basic units are tracked"
     },
+    "goodsAndServices": {
+        "description": "Here are example goods and services listed to give you an Idea of prices in RtR. Of course these can vary depending on the location or circumstances however can be a rough guideline to be used during the game.",
+        "exampleGoods": [
+            {"name": "Sack of Grain/Flour (25 kg)", "price": "2 sc"},
+            {"name": "A Chicken", "price": "15 bc"},
+            {"name": "A cow", "price": "5 gc"},
+            {"name": "A Horse (riding horse, basic training)", "price": "30 gc"},
+            {"name": "A Warhorse (well-trained steed)", "price": "100 gc"},
+            {"name": "A barrel of beer (50 liters)", "price": "5 sc"},
+            {"name": "Buying a House in a Town (small home, poor area)", "price": "100 gc"},
+            {"name": "Buying a House in a Town (medium home in a good district)", "price": "500 gc"}
+        ],
+        "exampleServices": [
+            {"name": "A Stay at an Inn (Common Room, One Night)", "price": "1 sc"},
+            {"name": "A Stay at an Inn (Private Room, One Night)", "price": "5 sc"},
+            {"name": "A Meal at a Tavern (Simple Stew & Bread)", "price": "5 bc"},
+            {"name": "A Meal at a Tavern (Hearty Meal with Meat)", "price": "2 sc"},
+            {"name": "A mug of Beer", "price": "2 bc"},
+            {"name": "A bottle of wine (common)", "price": "5 sc"},
+            {"name": "A Week of Unskilled Labor", "price": "7 sc"},
+            {"name": "A Week of Skilled Labor (e.g., blacksmith, mason, carpenter)", "price": "2 gc"},
+            {"name": "Courier Services (per 10 km, basic messenger)", "price": "3 sc"},
+            {"name": "Transportation of 100 kg of Goods (by Sea, per 10 km)", "price": "2 sc"},
+            {"name": "Transportation of 100 kg of Goods (by Land, per 10 km)", "price": "5 sc"}
+        ]
+    },
     "itemTierDescription": "Items have an associated Tier and Skill. The Item Tier determines the required the skill rank for identifying and crafting those items and the Skill describes the Tool, Lore or Regular Skill required for this task.<br> The Item Tiers are not associated with the character [LEVEL] or the abilities to use those items. However it is not recommended for characters to have items 2 tiers higher than their character [LEVEL] since it might significantly affect game balance.",
     "equippingItemsDescription": "When you get an item it is assumed that you store it in a backpack or similar container or wear it on your body. For wearing and carrying items there are the following rules restrictions:",
     "wearingAndCarryingItemsRules": [
         "If the total weight you carry exceeds your permitted weight you suffer penalties which depends on your [STR] as can be seen in the Carrying Capacity table below.",
         "There are no rules restrictions for sizes of items but the players and the GM should agree what makes sense.",
         "You can not wield more than one item in each hand.",
-        "You can only wear one set of armor."
+        "You can wield multiple items of the same type where it makes sense but you can only wear one set of armor, boots, clothes or gauntlets/gloves"
     ],
     "carryingCapacityDescription": "Carrying capacity represent how much weight you can carry while travelling which increases with your [STR] according to the Table below. For every additional 5 kg (rounded up) you carry above your carrying limit, you suffer a cumulative Penalty to the following:",
     "exceedingCarryingCapacityPenalties": [
@@ -50,5 +76,6 @@
         { "str": 18, "carryingCapacityKg": 30000, "liftPushDragKg": 3500000},
         { "str": 19, "carryingCapacityKg": 50000, "liftPushDragKg": 6000000},
         { "str": 20, "carryingCapacityKg": 75000, "liftPushDragKg": 10000000}
-    ] 
+    ],
+    "otherItemsDescriptions": "There are also many other items which are necesarry for your adventuring story but don't have many rules associated with them."
 }

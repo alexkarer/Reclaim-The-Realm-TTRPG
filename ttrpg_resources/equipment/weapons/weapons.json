@@ -22,7 +22,7 @@
             "name": "Mace",
             "tier": 1,
             "craftingSkill": "Smith’s Tools",
-            "cost": "1 gc",
+            "cost": "2 gc",
             "weightInGram": 2000,
             "type": "Simple Weapon",
             "description": [
@@ -40,7 +40,7 @@
             "name": "Spear",
             "tier": 1,
             "craftingSkill": "Smith’s Tools, Carpenter's Tools",
-            "cost": "5 sc",
+            "cost": "15 sc",
             "weightInGram": 1000,
             "type": "Simple Weapon",
             "description": [
