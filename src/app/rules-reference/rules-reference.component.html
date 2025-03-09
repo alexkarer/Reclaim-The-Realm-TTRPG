@@ -7,9 +7,7 @@
 	<nav [ngbScrollSpyMenu]="spy" class="navbar-nav-scroll bg-secondary-subtle table-of-contents">
 		<nav class="nav nav-pills flex-column">
 			<a role="button" class="nav-link" ngbScrollSpyItem="reclaim-the-realm">Reclaim The Realm</a>
-			<nav class="nav nav-pills flex-column">
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="core-gameplay" parent="reclaim-the-realm">Core Gameplay</a>
-			</nav>
+			<a role="button" class="nav-link" ngbScrollSpyItem="character-creation">Character Creation</a>
 	
 			<a role="button" class="nav-link" ngbScrollSpyItem="character-overview">Character Overview</a>
 			<nav class="nav nav-pills flex-column">
@@ -71,6 +69,10 @@
 	<div class="rules-body">
 		<h1 ngbScrollSpyFragment="reclaim-the-realm">Reclaim The Realm</h1>
 		<app-rules-overview/>
+		<hr>
+
+		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="character-creation">Character Creation</h2>
+		<app-character-creation/>
 		<hr>
 	
 		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="character-overview">Character Overview</h2>

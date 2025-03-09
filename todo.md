@@ -4,8 +4,6 @@ TODO before playtest:
 - write down process
 - add origin creation step
 
-fix martial maneuver writing (reference Weapon Attack ability)
-
 spells: spell cast test fails when below 5
   - magical mishap table needs to be improved
 
@@ -17,7 +15,6 @@ ___________________________________________________________
 Evaluation for after Playtest:
 
 - Weapon properties necesarry?
-- Should spells be reworked to just cost Arcana?
 - check if game needs to be simplified
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?

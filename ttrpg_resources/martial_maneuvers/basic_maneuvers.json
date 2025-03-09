@@ -246,7 +246,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "You study your opponents and ready yourself for their actions. You gain a bonus to your [HARDNESS], [DODGE], [TOUGHNESS] and [WILLPOWER] equal to the [AP] spent. Additionally this bonus applies to any Opportunity Attack you make."
+            "description": "You study your opponents and ready yourself for their actions. You gain a bonus to your [HARDNESS], [DODGE], [TOUGHNESS] and [WILLPOWER] equal to the [AP] spent. Additionally this bonus applies to the [ATTACK] of any Opportunity Attack you make."
         },
         {
             "name": "Tag Team",
@@ -282,7 +282,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "2 [ROUND]",
-            "description": "Make a Weapon [MELEE MARTIAL ATTACK], if that [ATTACK] was successful and exceeds or matches the target’s [TOUGHNESS] it is additionally [STUNNED I] for 2 rounds",
+            "description": "Make a Weapon Attack with a melee weapon, if the [ATTACK] was successful and exceeds or matches the target’s [TOUGHNESS] it is additionally [STUNNED I] for 2 rounds",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "Instead of applying [STUNNED I], the target is [STUNNED II]."
@@ -303,7 +303,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon [MELEE MARTIAL ATTACK], if that [ATTACK] was successful and exceeds or matches the targets [HARDNESS] you have 2 choices:<br>You knock the target prone.<br>Or you push the target a number of meters equal to your [STR] away from you.",
+            "description": "Make a Weapon Attack with a melee weapon, if thathet [ATTACK] was successful and exceeds or matches the targets [HARDNESS] you have 2 choices:<br>You knock the target prone.<br>Or you push the target a number of meters equal to your [STR] away from you.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You apply both effects if the [ATTACK] exceedds the targets [HARDNESS]"
@@ -324,7 +324,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "1-2 [ROUND]",
-            "description": "Make a Weapon [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], if that [ATTACK] was successful and exceeds or matchess the targets [HARDNESS] it is now [CRIPPLED I] for 2 rounds, if it was a [RANGED MARTIAL ATTACK] the duration is 1 round."
+            "description": "Make a Weapon Attack, if the [ATTACK] was successful and exceeds or matchess the targets [HARDNESS] it is now [CRIPPLED I] for 2 rounds, if it was a [RANGED MARTIAL ATTACK] the duration is 1 round."
         },
         {
             "name": "Deep Cut",
@@ -341,7 +341,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "1-2 [ROUND]",
-            "description": "Make a Weapon [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], if that [ATTACK] was successful and exceeds or matchess the targets [HARDNESS] it is recieves the [BLEEDING I] status effect for 2 rounds, if it was a [RANGED MARTIAL ATTACK] the duration is 1 round.",
+            "description": "Make aWeapon Attack, if the [ATTACK] was successful and exceeds or matchess the targets [HARDNESS] it is recieves the [BLEEDING I] status effect for 2 rounds, if it was a [RANGED MARTIAL ATTACK] the duration is 1 round.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "The target is now affected by [BLEEDING II]"
@@ -362,7 +362,7 @@
             "range": "[MELEE RANGE]",
             "target": "2 creatures that are next to each other",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon [MELEE MARTIAL ATTACK] that targets both targets.",
+            "description": "Make a Weapon Attack with a melee Weapon that targets both targets.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can now target all enemy targets within melee range as long as all targets are within 4.5m of each other."
@@ -383,7 +383,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "When you have moved at least 3m in the direction of the target you can make a Thrown Weapon [RANGED MARTIAL ATTACK] with the range doubled for all ranges. Additionally your [ATTACK] deals extra damage equal to number of meters moved."
+            "description": "When you have moved at least 3m in the direction of the target you can make a Thrown Weapon Weapon Attack with the range doubled for all ranges. Additionally your [ATTACK] deals extra damage equal to number of meters moved."
         },
         {
             "name": "Multishot",
@@ -400,7 +400,7 @@
             "range": "[WEAPON RANGE]",
             "target": "2 creatures within 4.5m of each other",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon [MELEE MARTIAL ATTACK] against both targets with a -2 penalty to the [ATTACK] and damage."
+            "description": "Make a Weapon Attack with a Ranged Weapon against both targets with a -2 penalty to the [ATTACK] and damage."
         },
         {
             "name": "Improved Parry",

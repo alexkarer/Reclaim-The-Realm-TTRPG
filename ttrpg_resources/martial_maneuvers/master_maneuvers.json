@@ -178,7 +178,7 @@
             "range": "[WEAPON RANGE]",
             "target": "one creature with a [LEVEL] below yours",
             "duration": "[INSTANT]",
-            "description": "Target a creature whose [LEVEL] is below yours. Make a 1 Weapon [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] against that creature. If that [ATTACK] is a miss, it turns into a regular hit. If that [ATTACK] hits but the result is lower than the target’s [TOUGHNESS] it is a critical hit. If the [ATTACK] also matches or exceeds the creature’s [TOUGHNESS], the creature is reduced to 0 [HP]."
+            "description": "Target a creature whose [LEVEL] is below yours. Make a Weapon Attack against that creature. If the [ATTACK] was a miss, it turns into a regular hit. If that [ATTACK] hits but the result is lower than the target’s [TOUGHNESS] it is a critical hit. If the [ATTACK] also matches or exceeds the creature’s [TOUGHNESS], the creature is reduced to 0 [HP]."
         },
         {
             "name": "Onslaught",
@@ -195,7 +195,7 @@
             "range": "[MELEE RANGE]",
             "target": "one creature",
             "duration": "[INSTANT]",
-            "description": "You unleash a series of quick attacks against a single target. For each [AP] spent you can make 1 Weapon [MELEE MARTIAL ATTACK]."
+            "description": "You unleash a series of quick attacks against a single target. For each [AP] spent you can make A Weapon ATtack."
         }
     ]
 }

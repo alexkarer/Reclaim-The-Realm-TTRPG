@@ -1,0 +1,77 @@
+{
+    "description": "When creating a character the follwowing steps are involved. While it is recommended to follow the steps in the order listed below. that is not required.",
+    "characterCreationSteps": [
+        "Determine your origin",
+        "Choose a class",
+        "Assign your attributes",
+        "Choose your Level 1 Abilities and Perks",
+        "Select your starting equipment"
+    ],
+    "determineYourOrigin": {
+        "description": "All Player characters are born as humans in the world of RTR, their origins often differ widely. Your origin defines the place you grew up and your early childhood, while this also slightly impacts your character’s abilities and skills, most importantly, it adds a lot of flavour and depth to your character. In the following steps you are presented with tables which you can roll, this however is optional. It merely represents the likelihood of where people are usually born, and can of course also be chosen freely.",
+        "birthPlace": {
+            "description": "This table represents the location of your birth and where you spent most of your childhood. Depending on what you select, this affects your choices later on, so be aware that certain options might not be available to you later on. When you have chosen your Location, you can roll on the Family Table according to your Location.",
+            "birthplaces": [
+                { "d100": "1-10", "birthLocation": "Nomadic Tribe", "attributeBonus": "+1 [CON] and [PER]" },
+                { "d100": "11–20", "birthLocation": "Small Island/Coastal", "attributeBonus": "+1 [PER] and [AGI]" },
+                { "d100": "21–30", "birthLocation": "Mountain Valley", "attributeBonus": "+1 [STR] and [CON]" },
+                { "d100": "31-75", "birthLocation": "Village", "attributeBonus": "+1 [STR] and [CHA]" },
+                { "d100": "76–95", "birthLocation": "City", "attributeBonus": "+1 [CHA] and [INT]" },
+                { "d100": "86-100", "birthLocation": "Roll on Exotic Location Table", "attributeBonus": "-" }
+            ],
+            "exoticBirthplaces": [
+                { "d6": "1", "exoticBirthLocation": "Elemental Plane of Fire", "bonus": "Fire Damage Resistance equal to 5 + half your [LEVEL] (rounded down)" },
+                { "d6": "2", "exoticBirthLocation": "Elemental Plane of Earth", "bonus": "+2 [HP] per Level up." },
+                { "d6": "3", "exoticBirthLocation": "Elemental Plane of Water", "bonus": "Swim Speed equal to your walking speed and Frost Damage Resistance equal to 5 + half your [LEVEL] (rounded down)" },
+                { "d6": "4", "exoticBirthLocation": "Elemental Plane of Air", "bonus": "permanent +2 [MP]" },
+                { "d6": "5", "exoticBirthLocation": "Corrupted by Positive Aether Energy", "bonus": "+1 [SPI], can choose one first power Divine or Restoration spell and cast it once per day without spending [ARCANA]" },
+                { "d6": "6", "exoticBirthLocation": "Corrupted by Negative Aether Energy", "bonus": "+1 [SPI], can choose one first power Necromancy or Shadow spell and cast it once per day without spending [ARCANA]" }
+            ],
+            "birthPlaceCircumstancesDescription": "Below you can determine additional information about your birthplace that do not affect any of your character characteristics but can flesh out your character backstory or can act as inspiration for it.",
+            "birthPlaceCircumstances": [
+                // number of siblings
+                // wealth of parents => affect starting money
+                // where perants absent?
+            ]
+        },
+        "earlyChildHood": {
+            "description": ""
+            // early training
+            // waulity of childhood
+        },
+        "lifeEvents": {
+            "description": "",
+            "lifeEventType": [
+                { "d8": "1-3", "life event": "Happy Nemory" },
+                { "d8": "4-5", "life event": "Tragedy" },
+                { "d8": "6", "life event": "Early Adventuring" },
+                { "d8": "7", "life event": "Martial Events" },
+                { "d8": "8", "life event": "Supernatural Events" }
+            ],
+            "happyMemories": [],
+            "tragedies": [],
+            "earlyAdventuring": [],
+            "martialEvents": [],
+            "supernaturalEvents": []
+        },
+        "definingMoment": {
+            "description": "Every adventurer has their defining moment which spurs them on to achieve great things and take risks. Depending on what happened during that important moment it can define your further adventurer path. They don’t necessarily provide mechanical benefits, instead focusing more about the roleplaying aspect.<br> Of course you don’t have to limit yourself to these options and together with the GM think up your own.",
+            "exampleDefiningMoments": [
+
+            ]
+        }
+    },
+    "selectAClass": {
+        "description": "Now you should choose one of the following classes below. The Class determines the core set of abilities your character is able to use out- but especially in-combat. When your character reaches higher levels, their abilities become stronger and they will gain newer ones. Your class will later also allow you to specialize in different ways. <br> Below are summaries for each Class which show you the key characteristics of each class which are explained below:"
+    },
+    "assignYourAttributers": {
+        "description": "Each Attribute represents one Aspect of your Character and is denoted by a number, an average human is expected to have an Attribute of 0. A higher Attribute grants you a higher bonus for an [ATTRIBUTE TEST] made with that Attribute, or might increase different bonuses or other values.",
+        "assiningAttributesDescription": "You have 10 Attribute Points, you can spend one attribute point to improve an Attribute by 1. You can additionally reduce one Attribute by 1 and gain an additional Attribute Point, but you can’t do so more than twice per Attribute . This assignment happens after all Attribute increases from your origin and species and Main Class Attributes are applied.<br> You are, however, not allowed to improve an Attribute beyond your attribute limit. At first [LEVEL], this limit is 3 and will increase as your [LEVEL] increases. There is one exception, your Main Class Attributes have their limit increased by 2."
+    },
+    "chooseLevel1AbilitiesAndPerks": {
+        "description": "TODO choose class techniques, martial maneuvers, spells and perks"
+    },
+    "selectYourStartingEquipment": {
+        "description": "You start with 50 + 6d6 gc . With the starting Money you are given, you can purchase any equipment found in the Equipment Section".
+    }
+}

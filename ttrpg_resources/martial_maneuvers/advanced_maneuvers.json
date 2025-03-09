@@ -179,7 +179,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "Make a Thrown Weapon [RANGED MARTIAL ATTACK]. if that [ATTACK] was successful and exceeds or matches the targets [HARDNESS] it is pushed a number of meters equal 1 + half [STR] away from you.<br>If any target is blocking that movement, instead of crashing into it, that movement stops and the blocking target recieves half the damge from the [RANGED MARTIAL ATTACK]"
+            "description": "Make a Weapon Attack with a thrown weapon. if the [ATTACK] was successful and exceeds or matches the targets [HARDNESS] it is pushed a number of meters equal 1 + half [STR] away from you.<br>If any target is blocking that movement, instead of crashing into it, that movement stops and the blocking target recieves half the damge from the [RANGED MARTIAL ATTACK]"
         },
         {
             "name": "Shield block",

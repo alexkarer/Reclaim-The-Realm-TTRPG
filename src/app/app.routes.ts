@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { RulesReferenceComponent } from './rules-reference/rules-reference.component';
-import { MainPageComponent } from './main-page/main-page.component';
 import { MartialManueversSearchComponent } from './martial-manuevers-search/martial-manuevers-search.component';
 import { SpellsSearchComponent } from './spells-search/spells-search.component';
 import { HybridAbilitiesSearchComponent } from './hybrid-abilities-search/hybrid-abilities-search.component';
@@ -11,11 +10,6 @@ import { PerkSearchComponent } from './perk-search/perk-search.component';
 export const routes: Routes = [
     {
         path: '',
-        component: MainPageComponent,
-        title: 'Reclaim the Realm'
-    },
-    {
-        path: 'rules',
         component: RulesReferenceComponent,
         title: 'Reclaim the Realm - Rules'
     },
