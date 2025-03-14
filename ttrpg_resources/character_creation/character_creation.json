@@ -13,6 +13,8 @@
         "birthPlace": {
             "description": "This table represents the location of your birth and where you spent most of your childhood. Depending on what you select, this affects your choices later on, so be aware that certain options might not be available to you later on. When you have chosen your Location, you can roll on the Family Table according to your Location.",
             "birthplaces": [
+                // Instead of just attribute bonus, should be a combination of attribute bonus + starting HP
+                // additionally HP should be calculated using half CON, maybe also apply that to martial damage (d6 + ([STR]/2() * d6)
                 { "d100": "1-10", "birthLocation": "Nomadic Tribe", "attributeBonus": "+1 [CON] and [PER]" },
                 { "d100": "11–20", "birthLocation": "Small Island/Coastal", "attributeBonus": "+1 [PER] and [AGI]" },
                 { "d100": "21–30", "birthLocation": "Mountain Valley", "attributeBonus": "+1 [STR] and [CON]" },
