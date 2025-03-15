@@ -8,6 +8,7 @@ import { CombatComponent } from "./combat/combat.component";
 import { ToolboxComponent } from "./toolbox/toolbox.component";
 import { ClassesComponent } from './classes/classes.component';
 import { AbilitiesComponent } from "./abilities/abilities.component";
+import { CharacterCreationComponent } from './character-creation/character-creation.component';
 
 @Component({
     selector: 'app-rules-reference',
@@ -17,6 +18,7 @@ import { AbilitiesComponent } from "./abilities/abilities.component";
         NgbScrollSpyMenu,
         NgbScrollSpyItem,
         NgbScrollSpyFragment,
+        CharacterCreationComponent,
         CharacterOverviewComponent,
         RulesOverviewComponent,
         EquipmentComponent,

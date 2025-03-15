@@ -1,1 +1,155 @@
-<p>character-creation works!</p>
+<div>
+    <app-dynamic-content [content]="characterCreationJson.description | keywordProcessor"></app-dynamic-content>
+    <ol>
+        @for (step of characterCreationJson.characterCreationSteps; track $index) {
+            <li>
+                <app-dynamic-content [content]="step | keywordProcessor"></app-dynamic-content>
+            </li>
+        }
+    </ol>
+    <div>
+        <h3 class="m-0">Determine your Origin</h3>
+        <app-dynamic-content [content]="characterCreationJson.determineYourOrigin.description | keywordProcessor"></app-dynamic-content>
+
+        <div class="mt-2">
+            <h4 class="m-0">Birthplace</h4>
+            <app-dynamic-content [content]="characterCreationJson.determineYourOrigin.birthPlace.description | keywordProcessor"></app-dynamic-content>
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">d100</th>
+                        <th scope="col">Birth Location</th>
+                        <th scope="col">Attribute Bonus</th>
+                        <th scope="col"><app-dynamic-content [content]="'Extra Starting [HP]' | keywordProcessor"></app-dynamic-content></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (birthplace of characterCreationJson.determineYourOrigin.birthPlace.birthplaces; track $index) {
+                        <tr>
+                            <td>{{ birthplace.d100 }}</td>
+                            <td>{{ birthplace.birthLocation }}</td>
+                            <td><app-dynamic-content [content]="birthplace.attributeBonus | keywordProcessor"></app-dynamic-content></td>
+                            <td>{{ birthplace.startingHp }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <h5>Exotic Birthpalces</h5>
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">d6</th>
+                        <th scope="col">Exotic Birth Location</th>
+                        <th scope="col">Bonus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (birthplace of characterCreationJson.determineYourOrigin.birthPlace.exoticBirthplaces; track $index) {
+                        <tr>
+                            <td>{{ birthplace.d6 }}</td>
+                            <td>{{ birthplace.exoticBirthLocation }}</td>
+                            <td><app-dynamic-content [content]="birthplace.bonus| keywordProcessor"></app-dynamic-content></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-2">
+            <h4 class="m-0">Early Training</h4>
+            <app-dynamic-content [content]="characterCreationJson.determineYourOrigin.earlyTraining.description | keywordProcessor"></app-dynamic-content>
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">d10</th>
+                        <th scope="col">Training Type</th>
+                        <th scope="col">Benefits</th>
+                        <th scope="col">Extra starting money</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (trainingType of characterCreationJson.determineYourOrigin.earlyTraining.earlyTrainingTypes ; track $index) {
+                        <tr>
+                            <td>{{ trainingType.d10 }}</td>
+                            <td>{{ trainingType.trainingType }}</td>
+                            <td>{{ trainingType.benefits }}</td>
+                            <td>{{ trainingType.extraStartingMoney }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-2">
+            <h4 class="m-0">Life Events</h4>
+            <app-dynamic-content [content]="characterCreationJson.determineYourOrigin.lifeEvents.description | keywordProcessor"></app-dynamic-content>
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">d8</th>
+                        <th scope="col">Life Event Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (lifeEventType of characterCreationJson.determineYourOrigin.lifeEvents.lifeEventTypes ; track $index) {
+                        <tr>
+                            <td>{{ lifeEventType.d8 }}</td>
+                            <td>{{ lifeEventType.lifeEventType }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-2">
+            <h4 class="m-0">Defining Moment</h4>
+            <app-dynamic-content [content]="characterCreationJson.determineYourOrigin.definingMoment.description | keywordProcessor"></app-dynamic-content>
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Moment</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (definingMoment of characterCreationJson.determineYourOrigin.definingMoment.exampleDefiningMoments; track $index) {
+                        <tr>
+                            <td>{{ definingMoment.moment }}</td>
+                            <td>{{ definingMoment.description }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="mt-2">
+        <h3 class="m-0">Select a Class</h3>
+        <app-dynamic-content [content]="characterCreationJson.selectAClass.description | keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <div class="mt-2">
+        <h3 class="m-0">Assign your Attributes</h3>
+        <app-dynamic-content [content]="characterCreationJson.assignYourAttributers.description| keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <div class="mt-2">
+        <h3 class="m-0">Choose First Level Abilities and a Perk</h3>
+        <app-dynamic-content [content]="characterCreationJson.chooseLevel1AbilitiesAndPerks.description | keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <div class="mt-2">
+        <h3 class="m-0">Select your Starting Equipment</h3>
+        <app-dynamic-content [content]="characterCreationJson.selectYourStartingEquipment.description | keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <div class="mt-2">
+        <h3 class="m-0">Finish your character Details</h3>
+        <app-dynamic-content [content]="characterCreationJson.finishCharacterDetails.description | keywordProcessor"></app-dynamic-content>
+    </div>
+
+    <div class="mt-2">
+        <h3 class="m-0">Optional: Party Origin</h3>
+        <app-dynamic-content [content]="characterCreationJson.partyOrigin.description | keywordProcessor"></app-dynamic-content>
+    </div>
+</div>

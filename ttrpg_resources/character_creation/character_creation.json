@@ -6,21 +6,20 @@
         "Assign your attributes",
         "Choose your Level 1 Abilities and Perks",
         "Select your starting equipment",
-        "Finish character details"
+        "Finish character details",
+        "Optional: choose party origin"
     ],
     "determineYourOrigin": {
         "description": "All Player characters are born as humans in the world of RTR, their origins often differ widely. Your origin defines the place you grew up and your early childhood, while this also slightly impacts your character’s abilities and skills, most importantly, it adds a lot of flavour and depth to your character. In the following steps you are presented with tables which you can roll, this however is optional. It merely represents the likelihood of where people are usually born, and can of course also be chosen freely.",
         "birthPlace": {
             "description": "This table represents the location of your birth and where you spent most of your childhood. Depending on what you select, this affects your choices later on, so be aware that certain options might not be available to you later on. When you have chosen your Location, you can roll on the Family Table according to your Location.",
             "birthplaces": [
-                // Instead of just attribute bonus, should be a combination of attribute bonus + starting HP
-                // additionally HP should be calculated using half CON, maybe also apply that to martial damage (d6 + ([STR]/2() * d6)
-                { "d100": "1-10", "birthLocation": "Nomadic Tribe", "attributeBonus": "+1 [CON] and [PER]" },
-                { "d100": "11–20", "birthLocation": "Small Island/Coastal", "attributeBonus": "+1 [PER] and [AGI]" },
-                { "d100": "21–30", "birthLocation": "Mountain Valley", "attributeBonus": "+1 [STR] and [CON]" },
-                { "d100": "31-75", "birthLocation": "Village", "attributeBonus": "+1 [STR] and [CHA]" },
-                { "d100": "76–95", "birthLocation": "City", "attributeBonus": "+1 [CHA] and [INT]" },
-                { "d100": "86-100", "birthLocation": "Roll on Exotic Location Table", "attributeBonus": "-" }
+                { "d100": "1-10", "birthLocation": "Nomadic Tribe", "attributeBonus": "+1 [PER]", "startingHp": "8" },
+                { "d100": "11–20", "birthLocation": "Small Island/Coastal", "attributeBonus": "+1 [AGI]", "startingHp": "8" },
+                { "d100": "21–30", "birthLocation": "Mountain Valley", "attributeBonus": "+1 [CON]", "startingHp": "8" },
+                { "d100": "31-75", "birthLocation": "Village", "attributeBonus": "+1 [STR]", "startingHp": "8" },
+                { "d100": "76–95", "birthLocation": "City", "attributeBonus": "+1 [CHA], +1 [INT],", "startingHp": "6" },
+                { "d100": "86-100", "birthLocation": "Roll on Exotic Location Table", "attributeBonus": "-", "startingHp": "4" }
             ],
             "exoticBirthplaces": [
                 { "d6": "1", "exoticBirthLocation": "Elemental Plane of Fire", "bonus": "Fire Damage Resistance equal to 5 + half your [LEVEL] (rounded down)" },
@@ -29,15 +28,14 @@
                 { "d6": "4", "exoticBirthLocation": "Elemental Plane of Air", "bonus": "permanent +2 [MP]" },
                 { "d6": "5", "exoticBirthLocation": "Corrupted by Positive Aether Energy", "bonus": "+1 [SPI], can choose one first power Divine or Restoration spell and cast it once per day without spending [ARCANA]" },
                 { "d6": "6", "exoticBirthLocation": "Corrupted by Negative Aether Energy", "bonus": "+1 [SPI], can choose one first power Necromancy or Shadow spell and cast it once per day without spending [ARCANA]" }
-            ],
-            "birthPlaceCircumstancesDescription": "Below you can determine additional information about your birthplace that do not affect any of your character characteristics but can flesh out your character backstory or can act as inspiration for it."
+            ]
         },
         "earlyTraining": {
             "description": "This represents what training or tutelage you recieved during adolescence which is usually heavily influenced by your parents. You gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with persons of the same profession or background. This step also grants you extra an extra class skills, extra starting coins, and other bonuses.<br>If this skill is also a class skill for your chosen class you can instead choose a different one.",
             "earlyTrainingTypes": [
                 { "d10": "1", "trainingType": "Wildman", "benefits": "Surivival and Intimidation become class skills for you.", "extraStartingMoney": "0 gc" },
                 { "d10": "2", "trainingType": "Farmhand", "benefits": "Animal Handling and Nature become class skills for you.", "extraStartingMoney": "3 gc" },
-                { "d10": "3", "trainingType": "Assistant Hunter", "benefits": "Survival and NAture become class skills for you", "extraStartingMoney": "5 gc" },
+                { "d10": "3", "trainingType": "Assistant Hunter", "benefits": "Survival and Nature become class skills for you", "extraStartingMoney": "5 gc" },
                 { "d10": "4", "trainingType": "Militia Training", "benefits": "Athletics becomes class skill for you and your Weapon proficiency increases by one rank", "extraStartingMoney": "5 gc" },
                 { "d10": "5", "trainingType": "Artisan Training", "benefits": "one tool skill of your choice becomes a class skill for you and it's rank is increased by 1. Additionally you start with one tier 3 item of your choice that can be crafted with your chosen tool.", "extraStartingMoney": "10 gc" },
                 { "d10": "6", "trainingType": "Entertainer", "benefits": "Persuasion and Deception become Class skills for you.", "extraStartingMoney": "10 gc" },
@@ -109,6 +107,8 @@
     },
     "finishCharacterDetails": {
         "description": "Give your character a name and choose a fitting alignment."
+    },
+    "partyOrigin": {
+        "description": "Optional, can set your party origin, binding moment, maybe had same mentor, lost common friend"
     }
-    // optional maybe: Pary Origin? maybe also some binding moment, like same mentor, or lost common friend
 }

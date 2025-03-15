@@ -15,7 +15,7 @@
         "name": "Constitution",
         "keyword": "[CON]",
         "shortdescription": "Constitution represents our bodily health as well as your endurance and the ability to resist poisons.",
-        "fulldescription": "[CON] represents your bodily health as well as your endurance and the ability to resist poisons or other harmful effects targeting your body.<br>Additionally, each point in [CON] increases your [HP] for each [LEVEL] you have, furthermore each point increases your natural lifespan by 10 years. Conversely, if your [CON] value is negative, that amount decreases your [HP] and lifespan."
+        "fulldescription": "[CON] represents your bodily health as well as your endurance and the ability to resist poisons or other harmful effects targeting your body.<br>Additionally every second point in [CON] increases your [HP] for each [LEVEL] you have, furthermore each second point increases your natural lifespan by 10 years. Conversely, if your [CON] value is negative, every second negative point decreases your [HP] and lifespan."
     },
     {
         "name": "Intelligence",
