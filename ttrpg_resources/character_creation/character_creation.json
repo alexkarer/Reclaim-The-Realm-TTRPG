@@ -54,35 +54,35 @@
                 { "d8": "7", "lifeEventType": "Martial Events" },
                 { "d8": "8", "lifeEventType": "Supernatural Events" }
             ],
-            "happyMemories": [
-                { "d4": "1", "memory": "Inhheritance", "description": "" },
-                { "d4": "2", "memory": "Found Love", "description": "" },
-                { "d4": "3", "memory": "", "description": "" },
-                { "d4": "4", "memory": "", "description": "" }
+            "happyMoments": [
+                { "d4": "1", "description": "Inhheritance" },
+                { "d4": "2", "description": "Found Love" },
+                { "d4": "3", "description": "" },
+                { "d4": "4", "description": "" }
             ],
             "tragedies": [
-                { "d4": "1", "memory": "Traumatic Childhood", "description": "" },
-                { "d4": "2", "memory": "Gambling Addiction", "description": "You have a gambling problem, you lose 20 gc starting money and you can't complete an extended long rest unless you spend one evening gambling" },
-                { "d4": "3", "memory": "Substance Abuse", "description": "" },
-                { "d4": "4", "memory": "Parents Died", "description": "" }
+                { "d4": "1", "description": "Traumatic Childhood" },
+                { "d4": "2", "description": "You have a gambling problem, you lose 20 gc starting money and you can't complete an extended long rest unless you spend one evening gambling" },
+                { "d4": "3", "description": "Substance Abuse" },
+                { "d4": "4", "description": "Parents Died" }
             ],
-            "earlyAdventuring": [
-                { "d4": "1", "memory": "", "description": "" },
-                { "d4": "2", "memory": "", "description": "" },
-                { "d4": "3", "memory": "", "description": "" },
-                { "d4": "4", "memory": "", "description": "" }
+            "earlyAdventuringMoment": [
+                { "d4": "1", "description": "" },
+                { "d4": "2", "description": "" },
+                { "d4": "3", "description": "" },
+                { "d4": "4", "description": "" }
             ],
             "martialEvents": [
-                { "d4": "1", "memory": "", "description": "" },
-                { "d4": "2", "memory": "", "description": "" },
-                { "d4": "3", "memory": "", "description": "" },
-                { "d4": "4", "memory": "", "description": "" }
+                { "d4": "1", "description": "" },
+                { "d4": "2", "description": "" },
+                { "d4": "3", "description": "" },
+                { "d4": "4", "description": "" }
             ],
             "supernaturalEvents": [
-                { "d4": "1", "memory": "", "description": "" },
-                { "d4": "2", "memory": "", "description": "" },
-                { "d4": "3", "memory": "", "description": "" },
-                { "d4": "4", "memory": "", "description": "" }
+                { "d4": "1", "description": "" },
+                { "d4": "2", "description": "" },
+                { "d4": "3", "description": "" },
+                { "d4": "4", "description": "" }
             ]
         },
         "definingMoment": {
