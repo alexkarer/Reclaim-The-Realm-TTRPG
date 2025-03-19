@@ -1,0 +1,66 @@
+{
+    "description": "Your species represents your biological make and your ancestry. Species also have certain traits that make them unique to others.",
+    "speciesList": [
+        {
+            "name": "Human",
+            "description": "Humans are the unique since they only started to emerge during the unification of the elemental planes in the material plane and did not form during or before the elemental turmoil. They are a very communal species and require social interaction in their lives. They are the most versatile of all people and also have a strong drive to make a name for themselves and achieve something in their lives.",
+            "size": "Medium",
+            "height": "140cm + 6d12 cm",
+            "weight": "40kg + 6d12 kg",
+            "startingHPBonus": 8,
+            "traits": [
+                "They gain one additional skill point per [LEVEL].",
+                "Increase one Attribute of your choice by 1.",
+                "You can choose one additional Perk."
+            ]
+        },
+        {
+            "name": "Dwarf",
+            "description": "Dwarves originally formed in the Elemental Plane of Earth as an evolution of advanced earth elementals. A sizeable amount of dwarves still remain there, however most of them migrated to the Material Plane eventually. Their connections still remain strong and they mostly reside in mountanous regions where the connection the their native plane is the strongest. They have a very strict society and strongly adhere to the codes of their clan or society. Thus they are very suspecious of people outside their communities, however once you earn they trust they will welcome you as their own.",
+            "size": "Medium",
+            "height": "100 cm + 5d12 cm",
+            "weight": "40 kg + 5d12 kg",
+            "startingHPBonus": 10,
+            "traits": [
+                "You gain poison resistance equal to 5 + half your [LEVEL] (rounded down).",
+                "You ignore extra [STAMINA] Cost when travelling on hill or mountain terrain and you have [ADVANTAGE] on any Geography or Survival [SKILL TEST] in those Terrains.",
+                "In the dark instead of seeing just in a 1.5m radius, you can see in a 4.5m radius."
+            ]
+        },
+        {
+            "name": "Elf",
+            "description": "Elves originate form the Elemental Plane of Air after evolving from the advanced AIr Elementals. Their ability to live there was limited since they are not able to fly innatly and thus most of them migrated towards the Material Plane when it formed. They are remarkable for their slender and tall physique and are the first people to master the ethereal plane and have built a strong connection. Which has evolved them to the point everytime a new elf is born instead of creating a new soul, a soul of a previous dead elf inhabits them and merges with their.",
+            "size": "Medium",
+            "height": "170 cm + 4d12 cm",
+            "weight": "40kg + 4d12 kg",
+            "startingHPBonus": 6,
+            "traits": [
+                "Increase your [MP] by one.",
+                "You gain 6 Additional Skill Points at first [LEVEL] and know one additional language",
+                "You can tap into the wisdom of your past lives, after meditating for 10 minutes you can recieve a +10 bonus to a [SKILL TEST] to gain knowledge something."
+            ]
+        },
+        {
+            "name": "",
+            "description": "",
+            "size": "Medium",
+            "height": "",
+            "weight": "",
+            "startingHPBonus": 6,
+            "traits": [
+                ""
+            ]
+        },
+        {
+            "name": "",
+            "description": "",
+            "size": "Medium",
+            "height": "",
+            "weight": "",
+            "startingHPBonus": 6,
+            "traits": [
+                ""
+            ]
+        }
+    ]
+}

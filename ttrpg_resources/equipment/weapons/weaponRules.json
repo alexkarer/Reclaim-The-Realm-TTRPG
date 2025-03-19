@@ -38,7 +38,7 @@
         },
         {
             "name": "light",
-            "description": "When wielding a light weapon in one hand, you can wield another light weapon in the other hand."
+            "description": "When wielding a light weapon in one hand, you can wield another light weapon in the other hand. You can perform a dual-wield Attack which is a single ability where you perform 2 Weapon Attacks at a total cost of 3 [AP]."
         },
         {
             "name": "loading(x, y [AP])",
@@ -62,7 +62,7 @@
         },
         {
             "name": "versatile",
-            "description": "This weapon can either be used one-handed or two-handed. When the weapon is used two-handed you are also eligable to use the two-handed [MARTIAL DAMAGE] for determining damagte with weapon attacks."
+            "description": "This weapon can either be used one-handed or two-handed. When the weapon is used two-handed you are also eligable to use the heavy [MARTIAL DAMAGE] for determining damagte with weapon attacks."
         }
     ],
     "weaponQuality": {

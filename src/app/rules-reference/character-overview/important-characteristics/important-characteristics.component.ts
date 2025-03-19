@@ -22,8 +22,6 @@ export class ImportantCharacteristicsComponent {
   public readonly apDescription: string = coreValuesJson.apDescription;
   public readonly mpDescription: string = coreValuesJson.mpDescription;
   public readonly martialdamageInfo = coreValuesJson.martialDamage;
-  public readonly martialDamageTableFirstHalf = halveArray(coreValuesJson.martialDamage.martialDamageTable)[0];
-  public readonly martialDamageTableSecondHalf = halveArray(coreValuesJson.martialDamage.martialDamageTable)[1];
 
   public readonly hpDescription: string = resourcesJson.hpDescription;
   public readonly droppingTo0HPDescription: string = resourcesJson.droppingTo0HPDescription;

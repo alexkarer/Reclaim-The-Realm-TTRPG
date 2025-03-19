@@ -39,6 +39,7 @@ Future Ideas / Nice to have:
 - other useful items, books that give bonuses to lore checks (treats skill as 1 rank higher, can only be affected by [INT]/3 amount of books at the same time, no skill twice)
 - magic item rules
 - crafting rules
+- cooking items
 
 **Status Effects:**
 - Confused Condition?

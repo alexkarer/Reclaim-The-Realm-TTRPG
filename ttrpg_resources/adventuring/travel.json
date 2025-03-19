@@ -5,17 +5,17 @@
         "travelModeTable": [
             {
                 "travelMode": "Careful Approach",
-                "travelSpeed": "[MP] - 2 km/h",
+                "travelSpeed": "3 km/h",
                 "additionalInformation": "Is able to use stealth"
             },
             {
                 "travelMode": "Normal",
-                "travelSpeed": "[MP] km/h",
-                "additionalInformation": "."
+                "travelSpeed": "4 km/h",
+                "additionalInformation": "-"
             },
             {
                 "travelMode": "Forced March",
-                "travelSpeed": "[MP] + 2 km/h",
+                "travelSpeed": "6 km/h",
                 "additionalInformation": "+1 [STAMINA] Cost per Hour"
             }
         ],
@@ -24,15 +24,15 @@
     },
     "terrain": {
         "terrainDescription": "Depending on what Terrain the party is currently travelling they are effected in different ways.",
-        "travellinOnRoadDescription": "Regardless of the terrain they are currently travelling, if they are following a road, their travel speed increases by ",
+        "travellinOnRoadDescription": "Regardless of the terrain they are currently travelling, if they are following a road, their travel speed increases by 2",
         "terrainTravelTable": [
             { "terrain": "Plains", "terrainModifiers": "-" },
             { "terrain": "Coastal", "terrainModifiers": "-" },
-            { "terrain": "Forest", "terrainModifiers": "-1 to the Travel Speed" },
+            { "terrain": "Forest", "terrainModifiers": "-2 to the Travel Speed" },
             { "terrain": "Hill", "terrainModifiers": "-1 to the Travel Speed, +1 [STAMINA] Cost per Hour travelled" },
             { "terrain": "Mountain", "terrainModifiers": "-3 to the Travel Speed, +1 [STAMINA] Cost per Hour travelled" },
             { "terrain": "Desert", "terrainModifiers": "-1 to the Travel Speed" },
-            { "terrain": "Settlement / Ruin", "terrainModifiers": "-2 to the Travel Speed" }
+            { "terrain": "Settlement / Ruin", "terrainModifiers": "-1 to the Travel Speed" }
         ]
     },
     "specialMovement": {

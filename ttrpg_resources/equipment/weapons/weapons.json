@@ -34,7 +34,7 @@
                 }
             ],
             "properties": [ "armour-piercing" ],
-            "damage": "one-handed [MARTIAL DAMAGE]"
+            "damage": "medium [MARTIAL DAMAGE]"
         },
         {
             "name": "Spear",
@@ -52,7 +52,7 @@
                 }
             ],
             "properties": [ "versatile" ],
-            "damage": "one-handed [MARTIAL DAMAGE]"
+            "damage": "medium [MARTIAL DAMAGE]"
         },
         {
             "name": "Crossbow",
@@ -108,7 +108,7 @@
                 }
             ],
             "properties": [ "versatile", "duelist" ],
-            "damage": "one-handed [MARTIAL DAMAGE]"
+            "damage": "medium [MARTIAL DAMAGE]"
         },
         {
             "name": "Warhammer",
@@ -126,7 +126,7 @@
                 }
             ],
             "properties": [ "versatile", "armour-piercing" ],
-            "damage": "one-handed [MARTIAL DAMAGE]"
+            "damage": "medium [MARTIAL DAMAGE]"
         },
         {
             "name": "Waraxe",
@@ -144,7 +144,7 @@
                 }
             ],
             "properties": [ "versatile", "shieldbreaker" ],
-            "damage": "one-handed [MARTIAL DAMAGE]"
+            "damage": "medium [MARTIAL DAMAGE]"
         },
         {
             "name": "Polarm",
@@ -162,7 +162,7 @@
                 }
             ],
             "properties": [ "two-handed", "reach" ],
-            "damage": "two-handed [MARTIAL DAMAGE]"
+            "damage": "heavy [MARTIAL DAMAGE]"
         },
         {
             "name": "Greatsword",
@@ -180,7 +180,7 @@
                 }
             ],
             "properties": [ "heavy", "two-handed", "duelist" ],
-            "damage": "two-handed [MARTIAL DAMAGE]"
+            "damage": "heavy [MARTIAL DAMAGE]"
         },
         {
             "name": "Greathammer",
@@ -198,7 +198,7 @@
                 }
             ],
             "properties": [ "heavy", "two-handed", "armour-piercing" ],
-            "damage": "two-handed [MARTIAL DAMAGE]"
+            "damage": "heavy [MARTIAL DAMAGE]"
         },
         {
             "name": "Greataxe",
@@ -216,7 +216,7 @@
                 }
             ],
             "properties": [ "heavy", "two-handed", "shieldbreaker" ],
-            "damage": "two-handed [MARTIAL DAMAGE]"
+            "damage": "heavy [MARTIAL DAMAGE]"
         },
         {
             "name": "Javelin",
@@ -234,7 +234,7 @@
                 }
             ],
             "properties": [ "thrown(9/18/36)" ],
-            "damage": "one-handed [MARTIAL DAMAGE]"
+            "damage": "medium [MARTIAL DAMAGE]"
         },
         {
             "name": "Longbow",
@@ -252,7 +252,7 @@
                 }
             ],
             "properties": [ "two-handed", "ranged (30/60/120)" ],
-            "damage": "one-handed [MARTIAL DAMAGE]"
+            "damage": "medium [MARTIAL DAMAGE]"
         },
         {
             "name": "Heavy Crossbow",
