@@ -39,28 +39,6 @@
                 "You gain 6 Additional Skill Points at first [LEVEL] and know one additional language",
                 "You can tap into the wisdom of your past lives, after meditating for 10 minutes you can recieve a +10 bonus to a [SKILL TEST] to gain knowledge something."
             ]
-        },
-        {
-            "name": "",
-            "description": "",
-            "size": "Medium",
-            "height": "",
-            "weight": "",
-            "startingHPBonus": 6,
-            "traits": [
-                ""
-            ]
-        },
-        {
-            "name": "",
-            "description": "",
-            "size": "Medium",
-            "height": "",
-            "weight": "",
-            "startingHPBonus": 6,
-            "traits": [
-                ""
-            ]
         }
     ]
 }

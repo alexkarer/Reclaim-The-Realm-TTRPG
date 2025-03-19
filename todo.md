@@ -1,16 +1,11 @@
 TODO before playtest:
 
-**Character Creation**
-- write down process
-- add origin creation step
-
 spells: spell cast test fails when below 5
   - magical mishap table needs to be improved
 
 finish massive injuries table
 
 create character sheet
-create cheet sheet
 ___________________________________________________________
 Evaluation for after Playtest:
 
@@ -23,6 +18,8 @@ Evaluation for after Playtest:
 - Martial Damage?
 ___________________________________________________________
 Future Ideas / Nice to have:
+
+create cheet sheet
 
 **Missing/partially done things**
 - Finish out Adventure Section

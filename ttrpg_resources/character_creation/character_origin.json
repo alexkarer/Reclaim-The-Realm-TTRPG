@@ -45,7 +45,7 @@
         ],
         "happyMoments": [
             { "d4": "1", "description": "You came into the possesion of a treasure map" },
-            { "d4": "2", "description": "" },
+            { "d4": "2", "description": "You inherited a masterwork weapon from your family." },
             { "d4": "3", "description": "You made a friend of another adventurer, work together with the GM to create an Idendity for this adventurer" },
             { "d4": "4", "description": "You found love and got happily married." }
         ],
@@ -57,9 +57,9 @@
         ],
         "earlyAdventuringMoment": [
             { "d4": "1", "description": "You barely made it out of a dangerous dungeon (or equivalent) and vow to come back when you are stronger." },
-            { "d4": "2", "description": "You found some treasure in an abandoned ruin/dungeon, start the game with extra 6d6 gc." },
-            { "d4": "3", "description": "" },
-            { "d4": "4", "description": "" }
+            { "d4": "2", "description": "You were terribly frightened by something you encountered and ran away, abandoning your companions to their fate." },
+            { "d4": "3", "description": "You still have a healing potion that you didn't need to use in the last adventure." },
+            { "d4": "4", "description": "You found some treasure in an abandoned ruin/dungeon, start the game with extra 8d6 gc." }
         ],
         "martialEvents": [
             { "d4": "1", "description": "You took part in a battle but where either terribly injured or you had to run away." },
@@ -70,8 +70,8 @@
         "supernaturalEvents": [
             { "d4": "1", "description": "You caused a Spell Mishap and people got hurt." },
             { "d4": "2", "description": "You came into contact with a demon or angel from the Aether." },
-            { "d4": "3", "description": "" },
-            { "d4": "4", "description": "" }
+            { "d4": "3", "description": "You had a vision of an event that will come to pass." },
+            { "d4": "4", "description": "You where mind controlled for the last 1d4 years and have no clear recollection of what you did during that time." }
         ]
     },
     "definingMoment": {
