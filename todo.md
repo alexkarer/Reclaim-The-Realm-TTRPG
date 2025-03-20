@@ -1,11 +1,7 @@
 TODO before playtest:
 
-spells: spell cast test fails when below 5
-  - magical mishap table needs to be improved
-
-finish massive injuries table
-
 create character sheet
+prepare adventure
 ___________________________________________________________
 Evaluation for after Playtest:
 
@@ -16,6 +12,7 @@ Evaluation for after Playtest:
 - hybrid abilities necesarry?
 - have another look at the implementation of the martial training perks
 - Martial Damage?
+- spell casting system work?
 ___________________________________________________________
 Future Ideas / Nice to have:
 
@@ -37,6 +34,10 @@ create cheet sheet
 - magic item rules
 - crafting rules
 - cooking items
+
+**Spells**
+- more spells
+- finish out the spell discipline specific effects.
 
 **Status Effects:**
 - Confused Condition?

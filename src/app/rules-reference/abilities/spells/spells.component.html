@@ -11,6 +11,13 @@
                     <h5 class="mb-0" ngbScrollSpyFragment="spell-test">Spell Cast Test</h5>
                     <p class="header-subscript">Keyword: [SPELL CAST TEST]</p>
                     <app-dynamic-content [content]="spellRulesJson.castingSpells.spellcastingTests.spellCastTestsDescription | keywordProcessor"></app-dynamic-content>
+                    <ul>
+                        @for (spellCastResult of spellRulesJson.castingSpells.spellcastingTests.spellCastResults; track $index) {
+                            <li>
+                                <app-dynamic-content [content]="spellCastResult | keywordProcessor"></app-dynamic-content>
+                            </li>
+                        }
+                    </ul>
                 </div>
                 <div class ="p-2 border bg-body-tertiary mt-3">
                     <h5 class="mb-0" ngbScrollSpyFragment="spell-test">Spell Test</h5>
@@ -39,7 +46,7 @@
 
         <h4 class="mb-2 mt-3">Magical Mishaps</h4>
         <app-dynamic-content [content]="spellRulesJson.castingSpells.magicalMishaps.description | keywordProcessor"></app-dynamic-content>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center flex-column">
             <table class="rules-table">
                 <thead>
                     <tr>
@@ -52,6 +59,27 @@
                         <tr>
                             <td>{{ tableEntry.roll }}</td>
                             <td><app-dynamic-content [content]="tableEntry.effect| keywordProcessor"></app-dynamic-content></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <h5>Spell Descilpine Specific Effects</h5>
+            <table class="rules-table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Spell Discipline</th>
+                        <th scope="col">Weak Effect</th>
+                        <th scope="col">Medium Effect</th>
+                        <th scope="col">Strong Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (specificSpellDisciplineEffect of spellRulesJson.castingSpells.magicalMishaps.spellDisciplineSpecificEffects; track $index) {
+                        <tr>
+                            <th>{{ specificSpellDisciplineEffect.discipline }}</th>
+                            <td><app-dynamic-content [content]="specificSpellDisciplineEffect.weakEffect | keywordProcessor"></app-dynamic-content></td>
+                            <td><app-dynamic-content [content]="specificSpellDisciplineEffect.mediumEffect | keywordProcessor"></app-dynamic-content></td>
+                            <td><app-dynamic-content [content]="specificSpellDisciplineEffect.strongEffect | keywordProcessor"></app-dynamic-content></td>
                         </tr>
                     }
                 </tbody>

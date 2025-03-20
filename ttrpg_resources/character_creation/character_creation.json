@@ -15,7 +15,7 @@
     },
     "assignYourAttributers": {
         "description": "Each Attribute represents one Aspect of your Character and is denoted by a number, an average human is expected to have an Attribute of 0. A higher Attribute grants you a higher bonus for an [ATTRIBUTE TEST] made with that Attribute, or might increase different bonuses or other values.",
-        "assiningAttributesDescription": "You have 10 Attribute Points, you can spend one attribute point to improve an Attribute by 1. You can additionally reduce one Attribute by 1 and gain an additional Attribute Point, but you can’t do so more than twice per Attribute . This assignment happens after all Attribute increases from your origin and species and Main Class Attributes are applied.<br> You are, however, not allowed to improve an Attribute beyond your attribute limit. At first [LEVEL], this limit is 3 and will increase as your [LEVEL] increases. There is one exception, your Main Class Attributes have their limit increased by 2."
+        "assigningAttributesDescription": "You have 12 Attribute Points, you can spend one attribute point to improve an Attribute by 1. You can additionally reduce one Attribute by 1 and gain an additional Attribute Point, but you can’t do so more than twice per Attribute . This assignment happens after all Attribute increases from your origin and Main Class Attributes are applied.<br> You are, however, not allowed to improve an Attribute beyond your attribute limit. At first [LEVEL], this limit is 3 and will increase as your [LEVEL] increases. There is one exception, your Main Class Attributes have their limit increased by 2."
     },
     "chooseLevel1AbilitiesAndPerks": {
         "description": "Choose class techniques, martial maneuvers, spells and perks"

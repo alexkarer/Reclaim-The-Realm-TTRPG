@@ -1,7 +1,7 @@
 {
     "description": "",
     "reducedTo0HP": {
-        "description": "As soon as you are reduced to 0 [HP] you risk gaining a massive Injury (see below) and additionally face a choice: Either drop [UNCONCIOUS] or enter [DEATHS DOOR]. When you are reduced to 0 [HP] any excess damage that would bring you below 0 [HP] can be ingored.",
+        "description": "As soon as you are reduced to 0 [HP] you risk gaining a massive Injury (see below) and additionally face a choice: Either drop [UNCONCIOUS] or enter [DEATHS DOOR]. When you are reduced to 0 [HP] any excess damage that would bring you below 0 [HP] can be ignored.",
         "deathsDoor": {
             "description": "[DEATHS DOOR] is a mechanic that allows you to keep on fighting even when you are reduced to 0 [HP] however at great risks to yourself. You can only enter [DEATHS DOOR] when you are reduced to 0 [HP]. If you decide to go [UNCONCIOUS] you cannot enter [DEATHS DOOR] until you are healed and are again reduced to 0 [HP]. While you are at [DEATHS DOOR] the following rules apply:",
             "effects": [
@@ -20,14 +20,15 @@
         ],
         "massiveInjuriesTable": [
             { "diceRoll": "01-20", "Injury": "You recieve a minor cosmetic scar fitting to the damage type. After extra 2 days of spending a long rest, the scar will mostly dissapear. Can be retrieved mutliple times" },
-            { "diceRoll": "21-40", "Injury": "Sprain/Distortion: reduce your [MP] by 1, removed after 3 days extended rest" },
-            { "diceRoll": "41-60", "Injury": "pierced lung: you only recover a quater of your [ARCANA] and [STAMINA] each long rest, removed after 3 days extended rest." },
-            { "diceRoll": "61-80", "Injury": "chronic wounds: each time you recover [HP], you only recover half, removed after 7 days extended rest" },
-            { "diceRoll": "81-90", "Injury": "Muscle Injury: reduce your [STR] by -5, rcovered after 7 days extended rest." },
-            { "diceRoll": "91-100", "Injury": "Concussion: reduce your [INT] by -3, rcovered after 7 days extended rest." },
-            { "diceRoll": "101-110", "Injury": "Nerve Damage: reduce your [AGI] and [PER] by -3, rcovered after 7 days extended rest." },
-            { "diceRoll": "111-120", "Injury": "Permanent Inury can be recieved multiple times, Possibilities: Head Trauma, permanent reduce [INT] by 1. " },
-            { "diceRoll": "121-130", "Injury": "Amputation can be recieved multiple times: loose a random limb" },
+            { "diceRoll": "21-40", "Injury": "Lung damage: you only recover a quater of your [ARCANA] and [STAMINA] each long rest, removed after 3 days extended rest." },
+            { "diceRoll": "41-60", "Injury": "Internal damage: Reduce your maximum [HP] by 1d6. removed after 3 days extended rest. Can be retrieved multiple times." },
+            { "diceRoll": "61-70", "Injury": "Sprain/Distortion: reduce your [MP] by 1, removed after 3 days extended rest" },
+            { "diceRoll": "71-80", "Injury": "chronic wounds: each time you recover [HP], you only recover half, removed after 7 days extended rest" },
+            { "diceRoll": "81-90", "Injury": "Muscle Injury: reduce your [STR] by -2d3 recovered after 7 days extended rest." },
+            { "diceRoll": "91-100", "Injury": "Concussion: reduce your [INT] by -1d4, rcovered after 7 days extended rest." },
+            { "diceRoll": "101-110", "Injury": "Nerve Damage: reduce your [AGI] and [PER] by -2d3, rcovered after 30 days extended rest." },
+            { "diceRoll": "111-120", "Injury": "Severe Internal Damage: rediuce your maximum [HP] by 5d6, recoverd after 30 days extended rest." },
+            { "diceRoll": "121-130", "Injury": "Amputation: can be recieved multiple times as long as you still have something to loose, roll a 1d10: 1: eye, 2: ear, 3-4: hand, 5-6: foot, 7-10: finger" },
             { "diceRoll": "131+", "Injury": "The character dies" }
         ]
     },

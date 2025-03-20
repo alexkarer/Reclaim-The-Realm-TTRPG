@@ -17,6 +17,12 @@
     <h4>Massive Injuries</h4>
     <div>
         <app-dynamic-content [content]="massiveInjuries.description | keywordProcessor"></app-dynamic-content>
+        <h5>Massive Injury Triggers</h5>
+        <ul>
+            @for (trigger of massiveInjuries.massiveInjuriesTriggers; track $index) {
+                <li><app-dynamic-content [content]="trigger | keywordProcessor"></app-dynamic-content></li>
+            }
+        </ul>
         <div class="d-flex justify-content-center">
             <table class="rules-table">
                 <thead>

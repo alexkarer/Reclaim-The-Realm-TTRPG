@@ -3,28 +3,54 @@
     "castingSpells": {
         "castingSpellsDescription": "Theoretically any creature can cast a spell as long as it has the [ARCANA] availible to do so which is your resource that is consumed when casting spells. There are no restrictions on what of spells you can learn or cast, however the more powerful the spell, the more [ARCANA] the spell consumes and the more can go wrong when casting.<br>The Attributes of a character also play an important roll when casting a Spell. Your [SPI] is the most important Attribute and represents the force and intensity of your spells. The other Attributes also play a role, you will still have to rely on your [CHA] when magically charming an opponent or your [INT] to create crafty Illusions.<br>Your [SPELL LEVEL] determines how expierienced and proficient you are at spellcasting which influences your [SPELL TEST] and [SPELL CAST TEST] bonus which reduces the chance of magical mishaps when casting a spell.",
         "spellcastingTests": {
-            "spellCastTestsDescription": "In order to successfully cast a spell you have to first make a [SPELL CAST TEST]. Roll 2d6 and add your [SPELL LEVEL], if the result is higher or equal than the Cast Difficulty of the Spell, the spell is cast successfully and nothing further happens. If the result is lower thean the Cast Difficulty or you rolled double 1s, the spell is still cast successfully but afterwards a spell mishap occurs (see below).",
+            "spellCastTestsDescription": "In order to successfully cast a spell you have to first make a [SPELL CAST TEST]. Roll 2d6 and add your [SPELL LEVEL] and compare against the Spell Cast Difficulty:",
+            "spellCastResults": [
+                "If the result is higher or equal than the Cast Difficulty of the Spell, the spell is cast successfully and nothing further happens",
+                "If the result is lower than the Cast Difficulty or you rolled double 1s, the spell is still cast successfully but afterwards a spell mishap occurs (see below.",
+                "If the result is lower than the Cast Difficulty - 5. The spell is not cast at all and only a Spell mishap occurs (see below)"
+            ],
             "spellTestDescription": "Certain spells require you to apply spells effectively that depends on a certain Attribute mentioned in the context. For those spells you are required to make a [SPELL TEST] which is a [D20 TEST] where you add your [SPELL LEVEL] and the relevant Attribute.",
             "meleeSpellAttackDescription": "Certain spells require you to direct a spell towards a target in close range of you which attempts to dodge that. For these spells make a [MELEE ATTACK] and add your [AGI] + [SPELL LEVEL] to the result and that roll has to exceed the targets [DODGE]. This is also considered a [SPELL TEST].",
             "rangedSpellAttackDescription": "Certain spells require you to hit targets with a magic projectile towards a target which attempts to dodge that. For these spells make a [RANGED ATTACK] and add your [PER] + [SPELL LEVEL] to the result and that roll has to exceed the targets [DODGE]. This is also considered a [SPELL TEST].",
             "concentrationTestDescription": "Certain spells have the Concentration X tag listed at the spell’s duration. These spells require a lot of focus to maintain. Spells with this tag have the following properties: <ul> <li>During your turn you have to spend X AP to maintain the spell, if you don’t do this, the spell stops at the end of your turn.</li> <li>Every time you receive damage, you have to make a Concentration Test with a [DT] that is equal to 5 + half the damage received.</li> </ul> A [CONCENTRATION TEST] determines if you can maintain focus on a spell while external factors attempt to disrupt it. A [CONCENTRATION TEST] is a specialized [CON] [SPELL TEST]."
         },
         "magicalMishaps": {
-            "description": "Roll d20+[ARCANA] cost of spell. If [ARCANA] Cost was lowered by some other ability does not reduce the bonus here.",
+            "description": "Roll d20 + [ARCANA] cost of spell. If [ARCANA] Cost was lowered by some other ability does not reduce the bonus here.",
             "table": [
-                {"roll": "4 or lower", "effect": "Make [TOUGHNESS] [SAVE] or recieve [STUNNED I] until the end of your next turn"},
-                {"roll": "5-7", "effect": "Recieve small damage, type depending on spell"},
-                {"roll": "8-10", "effect": "Gain 1 level of [EXHAUSTION]"},
-                {"roll": "11-13", "effect": "Small Effect depending on spell discipline, elemental: summon weak elemental, cosmic: summon weak angel/demon/stragnething"},
-                {"roll": "14-16", "effect": "Make [TOUGHNESS] [SAVE] or recieve [STUNNED II] until the end of your next turn"},
-                {"roll": "17-19", "effect": "Gain 2 levels of [EXHAUSTION]"},
-                {"roll": "20-22", "effect": "Recieve medium damage depending on spell"},
-                {"roll": "23-25", "effect": "Medium Effect depending on spell discipline, elemental: summon medium elemental, cosmic: summon medium angel/demon/stragnething"},
-                {"roll": "26-28", "effect": "Make [TOUGHNESS] [SAVE] or recieve [STUNNED III] until the end of your next turn"},
-                {"roll": "29-31", "effect": "Recieve large damage depending on spell"},
-                {"roll": "32-34", "effect": "Gain 3 levels of [EXHAUSTION]"},
-                {"roll": "35-37", "effect": "Strong Effect depending on spell discipline, elemental: summon strong elemental, cosmic: summon strong angel/demon/stragnething"},
-                {"roll": "38 or higher", "effect": "Permanently change area depending on spell"}
+                {"roll": "4 or lower", "effect": "You gain 1 lepointvel of [EXHAUSTION]"},
+                {"roll": "5-7", "effect": "A disturbing shirek resounds within the head of every living creature within 9m and they must make a [DT] 15 [WILLPOWER] [SAVE] or recieve the [STUNNED III] Condition for 1 [TURN]."},
+                {"roll": "8-10", "effect": "You recieve 4d6 damage depending on spell discipline (holy/elemental/cosmic)."},
+                {"roll": "11-13", "effect": "Weak Effect depending on spell discipline"},
+                {"roll": "14-16", "effect": "For 1 minute you loose all senses, [SAVE ENDS] [DT] 15 [TOUGHNESS] [SAVE]."},
+                {"roll": "17-19", "effect": "You summon a [LEVEL] 3 Extraplanar Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests."},
+                {"roll": "20-22", "effect": "You cast a random Spell of the same Discipline of the same [SPELL ABILITY] Level without upcasting or [ARCANA] Cost with you being the target, or the center of the area effect."},
+                {"roll": "23-25", "effect": "Medium Effect depending on spell discipline"},
+                {"roll": "26-28", "effect": "The arcane energy causes a temporal disturbance, The spellcaster is removed from existance and appears in 1d10 [ROUND] in again, at the nearest unnocupied space."},
+                {"roll": "29-31", "effect": "You summon a [LEVEL] 8 Extraplanar Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests."},
+                {"roll": "32-34", "effect": "You open a temporary Rift to another Plane depending on your Spell Discipline. Every creature is sucked in unless they pass a [DT] 30 [HARDNESS] [SAVE]"},
+                {"roll": "35-37", "effect": "Strong Effect depending on spell discipline"},
+                {"roll": "38-40", "effect": "Your spell gives you a violent Feedback that shatters through your body. Make a [DT] 30 [TOUGHNESS] or [WILLPOWER] [SAVE]. On a success you suffer 20d6 damage which can't be reduced in any way. On a failure you are reduced to 0 [HP], suffer 5 points of [EXHAUSTION] and suffer a permanent Injury with a +20 to the Injury Test."},
+                {"roll": "41-43", "effect": "You summon a [LEVEL] 15 Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests. Additionally this Entity is summoned by an army of weaker followers chosen by the GM."},
+                {"roll": "44+", "effect": "You create a stable Rift, linking the current area in a 1d4 km radius with another Plane depending on your Spell Discipline. The Area will be permanently transformed unless the Rift can be closed within 1 hour. extraplanar Entities will also start to freely emerge here."}
+            ],
+            "spellDisciplineSpecificEffects": [
+                { "discipline": "Pyrmoancy",  "weakEffect": "You light yourself and the nearest flammable creature or object on fire, they suffer the [BURNING I] Status Effect.", "mediumEffect": "I have added here a bit of text to pad out the table to properly see if the formatting works or looks like shit", "strongEffect": "I have added here a bit of text to pad out the table to properly see if the formatting works or looks like shit" },
+                { "discipline": "Hydromancy",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Aeromancy",  "weakEffect": "Strong Winds appear for 1d4 [ROUND]. On Initial appearance every creature within 15m have to make a [DT] 15 [HARDNESS] [SAVE] or fall prone. While winds are here [MP] Cost of Movement Abilities is doubled.", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Geomancy",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
+
+                { "discipline": "Light",  "weakEffect": "You shine bright for 1d6 [ROUND] (18m/36m). Every creature that can see you for the first time has to make a [DT] 15 [TOUGHNESS] [SAVE] or recieve the [BLINDED] Status Effect for 1 [ROUND].", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Restoration",  "weakEffect": " ", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Necromancy",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Shadow",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Divination",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
+
+                { "discipline": "Telekinesis",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Transmutation",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Conjuration",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Illusion",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Teleportation",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Telepathy",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" }
             ]
         },
         "upcastingSpells": {

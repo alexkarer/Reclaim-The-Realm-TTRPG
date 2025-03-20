@@ -78,7 +78,7 @@
         "description": "Every adventurer has their defining moment which spurs them on to achieve great things and take risks. Depending on what happened during that important moment it can define your further adventurer path. They don’t necessarily provide mechanical benefits, instead focusing more about the roleplaying aspect.<br>Of course you don’t have to limit yourself to these options and together with the GM think up your own.",
         "exampleDefiningMoments": [
             { "moment": "Rescued a person or group", "description": "You rescued an important person during from a dangerous situation. The person or group is now an important ally to you and will aid you where possible within reason." },
-            { "moment": "• Desiring Revenge:", "description": "Someone has done great harm to you or people close to you and you can no longer rest while it is still active." },
+            { "moment": "Desiring Revenge:", "description": "Someone has done great harm to you or people close to you and you can no longer rest while it is still active." },
             { "moment": "Fulfilling an Oath", "description": "You made an oath or a promise to perform a duty." },
             { "moment": "Forced out of previous life", "description": "You are unable to continue your previous life and you try your luck at adventuring" },
             { "moment": "Found dark knowledge or unspeakable horrors:", "description": "You came into contact with dark knowledge or demons from the aether and you and are unable to live in your society anymore." },
