@@ -1,6 +1,6 @@
 {
     "className": "Priest",
-    "classDescription": "Someone has to play to healer.",
+    "classDescription": "Someone has to play the healer.",
     "coreClassValues": {
         "hpPerLevel": 6,
         "martialProficiency": 0,

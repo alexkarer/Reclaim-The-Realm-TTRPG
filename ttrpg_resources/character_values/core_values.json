@@ -8,10 +8,10 @@
     "martialDamage": {
         "description": "When attacking with weapons the damage you inflict on them depends on your [STR]. There are 3 types of damages and the one you have to use depends on the weapon used.",
         "lightDamageDescription": "This damage is used when using an unarmored attack or any Weapon Attack with weapons that have the light property.",
-        "lightDamage": "1d6 + ([STR] / 3) * d6",
+        "lightDamage": "1d6 + ([STR] / 3) * d6, if ([STR] % 3) = 1, add +1, if ([STR] % 3) = 2, add +2. ",
         "mediumDamageDescription": "This damage is used when making a Weapon Attack with a melee weapon wielded in one hand or when using ranged weapons that do not have fixed damage (e.g. Bows).",
-        "mediumDamage": "1d10 + ([STR] / 3) * d10", 
+        "mediumDamage": "1d10 + ([STR] / 3) * d10, if ([STR] % 3) = 1, add +1, if ([STR] % 3) = 2, add +3. ", 
         "heavyDamageDescription": "This damage is used when making a Weapon Attack with a melee weapon wielded in two hands.",
-        "heavyDamage": "1d12 + ([STR] / 3) * d12"
+        "heavyDamage": "1d12 + ([STR] / 3) * d12, if ([STR] % 3) = 1, add +2, if ([STR] % 3) = 2, add +4. "
     } 
 }

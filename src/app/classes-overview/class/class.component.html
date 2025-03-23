@@ -14,7 +14,7 @@
                 <tbody>
                     <tr>
                         <td><span class="fw-bold">HP per Level</span></td>
-                        <td><app-dynamic-content [content]="playerClass?.coreClassValues?.hpPerLevel + ' + [CON]' | keywordProcessor"></app-dynamic-content></td>
+                        <td><app-dynamic-content [content]="playerClass?.coreClassValues?.hpPerLevel?.toString() | keywordProcessor"></app-dynamic-content></td>
                     </tr>
                     <tr>
                         <td><span class="fw-bold">Martial Level Progression</span></td>

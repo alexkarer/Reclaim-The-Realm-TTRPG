@@ -1,6 +1,6 @@
 {
     "weaponsDescription": "Below is a list of available weapons that a character can wield to attack his foes.",
-    "weaponProficiencyDescription": "Weapon proficiencies represent your ability to effectively wield weapons. It is split up across 3 Ranks, and higher ranks allow you to more difficult weapons as well as gain more uses wielding them. Each time a rank in Weapon Proficiency is gained, it is added to the ranks you already have. The Benefits for each rank are as follows:",
+    "weaponProficiencyDescription": "Weapon proficiencies represent your ability to effectively wield weapons. It is split up across 4 Ranks, and higher ranks allow you to more difficult weapons as well as gain more uses wielding them. Each time a rank in Weapon Proficiency is gained, it is added to the ranks you already have. The Benefits for each rank are as follows:",
     "weaponProficiencyRanks": [
         { 
             "rank": "Rank 0", 
