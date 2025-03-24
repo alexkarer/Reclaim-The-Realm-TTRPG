@@ -8,10 +8,37 @@
     "martialDamage": {
         "description": "When attacking with weapons the damage you inflict on them depends on your [STR]. There are 3 types of damages and the one you have to use depends on the weapon used.",
         "lightDamageDescription": "This damage is used when using an unarmored attack or any Weapon Attack with weapons that have the light property.",
-        "lightDamage": "1d6 + ([STR] / 3) * d6, if ([STR] % 3) = 1, add +1, if ([STR] % 3) = 2, add +2. ",
         "mediumDamageDescription": "This damage is used when making a Weapon Attack with a melee weapon wielded in one hand or when using ranged weapons that do not have fixed damage (e.g. Bows).",
-        "mediumDamage": "1d10 + ([STR] / 3) * d10, if ([STR] % 3) = 1, add +1, if ([STR] % 3) = 2, add +3. ", 
         "heavyDamageDescription": "This damage is used when making a Weapon Attack with a melee weapon wielded in two hands.",
-        "heavyDamage": "1d12 + ([STR] / 3) * d12, if ([STR] % 3) = 1, add +2, if ([STR] % 3) = 2, add +4. "
-    } 
+        "martialDamageTable": [
+            { "str": -6, "light": "d2", "medium": "d4", "heavy": "d6" },
+            { "str": -5, "light": "d2", "medium": "d4", "heavy": "d6" },
+            { "str": -4, "light": "d3", "medium": "d6", "heavy": "d8" },
+            { "str": -3, "light": "d3", "medium": "d6", "heavy": "d8" },
+            { "str": -2, "light": "d4", "medium": "d8", "heavy": "d10" },
+            { "str": -1, "light": "d4", "medium": "d8", "heavy": "d10" },
+            { "str": 0, "light": "d6", "medium": "d10", "heavy": "d12" },
+            { "str": 1, "light": "d6", "medium": "d10+1", "heavy": "d12+1" },
+            { "str": 2, "light": "d6+1", "medium": "d10+2", "heavy": "d12+2" },
+            { "str": 3, "light": "d6+2", "medium": "d10+3", "heavy": "d12+3" },
+            { "str": 4, "light": "d6+3", "medium": "d10+4", "heavy": "d12+4" },
+            { "str": 5, "light": "2d6", "medium": "2d10", "heavy": "2d12" },
+            { "str": 6, "light": "2d6+1", "medium": "2d10+1", "heavy": "2d12+2" },
+            { "str": 7, "light": "2d6+2", "medium": "2d10+3", "heavy": "2d12+4" },
+            { "str": 8, "light": "3d6", "medium": "3d10", "heavy": "3d12" },
+            { "str": 9, "light": "3d6+2", "medium": "3d10+2", "heavy": "3d12+3" },
+            { "str": 10, "light": "4d6", "medium": "4d10", "heavy": "4d12" },
+            { "str": 11, "light": "5d6", "medium": "5d10", "heavy": "6d12" },
+            { "str": 12, "light": "6d6", "medium": "6d10", "heavy": "6d12" },
+            { "str": 13, "light": "7d6", "medium": "7d10", "heavy": "7d12" },
+            { "str": 14, "light": "8d6", "medium": "8d10", "heavy": "8d12" },
+            { "str": 15, "light": "9d6", "medium": "9d10", "heavy": "9d12" },
+            { "str": 16, "light": "10d6", "medium": "10d10", "heavy": "10d12" },
+            { "str": 17, "light": "12d6", "medium": "12d10", "heavy": "12d12" },
+            { "str": 18, "light": "14d6", "medium": "14d10", "heavy": "14d12" },
+            { "str": 19, "light": "16d6", "medium": "16d10", "heavy": "16d12" },
+            { "str": 20, "light": "18d6", "medium": "18d10", "heavy": "18d12" },
+            { "str": 21, "light": "20d6", "medium": "20d10", "heavy": "20d12" }
+        ]
+    }
 }

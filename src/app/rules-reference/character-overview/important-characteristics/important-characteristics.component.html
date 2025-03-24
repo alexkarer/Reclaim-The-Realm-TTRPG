@@ -35,18 +35,40 @@
             <app-dynamic-content [content]="martialdamageInfo.description | keywordProcessor"></app-dynamic-content>
             <ul>
                 <li>
-                    <span class="fw-bold">light damage: </span><span>{{ martialdamageInfo.lightDamage }}</span>
+                    <span class="fw-bold">Light damage: </span>
                     <app-dynamic-content [content]="martialdamageInfo.lightDamageDescription | keywordProcessor"></app-dynamic-content>
                 </li>
                 <li>
-                    <span class="fw-bold">medium damage: </span><span>{{ martialdamageInfo.mediumDamage }}</span>
+                    <span class="fw-bold">Medium damage: </span>
                     <app-dynamic-content [content]="martialdamageInfo.mediumDamageDescription | keywordProcessor"></app-dynamic-content>
                 </li>
                 <li>
-                    <span class="fw-bold">heavy damage:</span><span>{{ martialdamageInfo.heavyDamage }}</span>
+                    <span class="fw-bold">Heavy damage: </span>
                     <app-dynamic-content [content]="martialdamageInfo.heavyDamageDescription | keywordProcessor"></app-dynamic-content>
                 </li>
             </ul>
+        </div>
+        <div class="mt-3 mx-3 d-flex justify-content-center">
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col"><app-dynamic-content [content]="'[STR]' | keywordProcessor"></app-dynamic-content></th>
+                        <th scope="col">Light Damage</th>
+                        <th scope="col">Medium Damage</th>
+                        <th scope="col">Heavy Damage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (martialDamage of martialdamageInfo.martialDamageTable; track $index) {
+                        <tr>
+                            <td>{{ martialDamage.str }}</td>
+                            <td>{{ martialDamage.light }}</td>
+                            <td>{{ martialDamage.medium }}</td>
+                            <td>{{ martialDamage.heavy }}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
     <h4 class="mt-3" ngbScrollSpyFragment="resources">Resources</h4>

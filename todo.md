@@ -8,7 +8,6 @@ Evaluation for after Playtest:
 - hybrid abilities necesarry?
 - have another look at the implementation of the martial training perks
 - Martial Damage
-  - adjust damage so it doesn't ramp up so fast (2d12 should be 5 STR)
 - spell casting system work?
 
 ____________________________________________________________
@@ -17,7 +16,6 @@ Things to change after Playtest:
 - improve layout of character creation 
 - maybe make seperate pages for the individual headers
 - warlock: rename mystic something else
-- warlock: change supernatural Strength to be [SPI] - 2. 
 - adjust equipment item tier
 ___________________________________________________________
 Future Ideas / Nice to have:

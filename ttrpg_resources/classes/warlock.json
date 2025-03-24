@@ -283,49 +283,49 @@
                 },
                 { "regularText": null, "headerLine": "Supernatural Strength", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "For calculating your [MARTIAL DAMAGE] you can now use your [SPI] instead of your [STR].<span class=\"fw-bold\">Corruption Effect: </span>Increase the [MARTIAL DAMAGE] by your current Corruption, but each time you make a [MARTIAL MEELE ATTACK] or [MARTIAL RANGED ATTACK] you suffer damage equal to half your current Corruption which can't be reduced in any way.",
+                    "regularText": "For calculating your [MARTIAL DAMAGE] you can now use ([SPI]-2) instead of your [STR].<br><span class=\"fw-bold\">Corruption Effect: </span>Increase the [MARTIAL DAMAGE] by your current Corruption, but each time you make a [MARTIAL MEELE ATTACK] or [MARTIAL RANGED ATTACK] you suffer damage equal to half your current Corruption which can't be reduced in any way.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
                 },
                 { "regularText": null, "headerLine": "Tail", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "You grow a Tail, or different form of Limb.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "regularText": "You grow a Tail, or different form of Limb. Which you can use to perform unarmored Attacks hold weapons or perform spell components.<br><span class=\"fw-bold\">Corruption Effect: </span>Each time you make a [D20 TEST] involving your limb, make a [WILLPOWER] or [TOUGHNESS] [SAVE] against a [DT] equal to 10 + your Corruption and on a failure the [D20 TEST] automatically fails.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
                 },
                 { "regularText": null, "headerLine": "Natural Weapons", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "Claws/Fangs/Talons.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "regularText": "Claws/Fangs/Talons/Stingers.<br><span class=\"fw-bold\">Corruption Effect: </span>TODO",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
                 },
                 { "regularText": null, "headerLine": "Wings (requires [LEVEL] 8+)", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "TODO.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "regularText": "You can gain 1 Corruption and grow Wings for 1 hour which grant you special movement fly(3m).<br><span class=\"fw-bold\">Corruption Effect: </span>Your Wings become harder to control, you now gain fly(6m) but each time you Move using your fly speed you have to move the maximum distance.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
                 },
                 { "regularText": null, "headerLine": "Unnatural Senses", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "TODO.<span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "regularText": "TODO.<br><span class=\"fw-bold\">Corruption Effect: </span>TODO",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
                 },
                 { "regularText": null, "headerLine": "Natural armor", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "You gain physical 2 + [LEVEL]/2 phyiscal resistance which does not stack with armor.<span class=\"fw-bold\">Corruption Effect: </span>Your damage resistance works now against all damage types, however any [SAVE] you make recieves a Penalty equal to half your current Corruption.",
+                    "regularText": "You gain physical 2 + [LEVEL]/2 physical resistance which does not stack with armor.<br><span class=\"fw-bold\">Corruption Effect: </span>Your damage resistance works now against all damage types, however any [SAVE] you make recieves a Penalty equal to half your current Corruption.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
                 },
                 { "regularText": null, "headerLine": "Regenerative Tissue", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "Each time you gain Corruption you heal for [LEVEL] + [SPI] for each Corruption agained.<span class=\"fw-bold\">Corruption Effect: </span> You heal an additional amount equal to your current Corruption but each time you heal. Make a [TOUGHNESS] [SAVE] against a [DT] of 10 + Corruption. On a fail you suffer 1 Level of [EXHAUSTION].",
+                    "regularText": "Each time you gain Corruption you heal for [LEVEL] + [SPI] for each Corruption agained.<br><span class=\"fw-bold\">Corruption Effect: </span> You heal an additional amount equal to your current Corruption but each time you heal. Make a [TOUGHNESS] [SAVE] against a [DT] of 10 + Corruption. On a fail you suffer 1 Level of [EXHAUSTION].",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null

@@ -34,7 +34,7 @@
         },
         {
             "name": "heavy",
-            "description": "When making a Weapon Attack with a heavy weapon you can alternatively perform a heavy Weapon Attack. By doing this you can increase the cost by 1 [AP] but deal extra physcial damage equal to ([STR]/3) * d12."
+            "description": "When making a Weapon Attack with a heavy weapon you can alternatively perform a heavy Weapon Attack. By doing this you can increase the cost by 1 [AP] but deal extra physcial damage equal to ([STR]/4) * d12."
         },
         {
             "name": "light",
