@@ -20,7 +20,7 @@
         "name": "Tides of the Aether",
         "textElements": [
             {
-                "regularText": "During combat the Priest deepens his connection with the Aether and they use that connection to empower their spells or other magical abilities.<br>At the start of the fight the Priest rolls a number of d6 equal to half their [SPI] (rounded down). These dice represent the current Aether dice pool, the lower the value the more they represent good and the higher the values the more they represent Evil. During the battle these dice can change and additional dice are added.",
+                "regularText": "During combat the Priest deepens his connection with the Aether and they use that connection to empower their spells or other magical abilities.<br>During the battle you will aquimulate Aether Dice which are d6. These dice represent the current Aether dice pool, the lower the value the more they represent good and the higher the values the more they represent Evil. During the battle these dice can change and additional dice are added.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null

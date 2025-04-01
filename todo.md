@@ -22,6 +22,8 @@ Future Ideas / Nice to have:
 
 create cheet sheet
 
+help othrs, roll same check, for every 5 gain +1.
+
 Table for when NPCs drop to 0 [HP] to determine what happens to them.
 
 **Character Creation Builder**
