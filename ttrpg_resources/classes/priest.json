@@ -479,8 +479,8 @@
             "cost": "0 [AP], 2 AD(3-)",
             "range": "-",
             "target": "one ally that was targeted by a [SPELL ABILITY]",
-            "duration": "2 [ROUND]",
-            "description": "One ally that was targeted with a [SPELL ABILITY] that you cast this turn recieves [HEALING] equal to [SPI] ."
+            "duration": "[SPI]/2, min 1 [ROUND]",
+            "description": "One ally that was targeted with a [SPELL ABILITY] that you cast this turn recieves [HEALING I]."
         },
         {
             "name": "Holy Strike",

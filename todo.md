@@ -17,14 +17,34 @@ Things to change after Playtest:
 - maybe make seperate pages for the individual headers
 - warlock: rename mystic something else
 - adjust equipment item tier
+- add fate points / some mechanics to reroll things
+- rename harndess to stability
+- check barbarian abilities.
 ___________________________________________________________
 Future Ideas / Nice to have:
 
+flanking should only work in melee.
+
 create cheet sheet
 
-help othrs, roll same check, for every 5 gain +1.
+add activities that can be done during long rests:
+- crafting
+- research
+- community service
+- spend time with loved ones
+- community service.
+- go undercover
+- improve relations with faction
+- religous service
+- carousing
+
+rule for helping othrs, roll same check, for every 5 above 10 gain +1.
 
 Table for when NPCs drop to 0 [HP] to determine what happens to them.
+
+add faction relations thing: 
+- should be adventure specific
+- higher should give you like access to items and other benefits
 
 **Character Creation Builder**
 - need a character wizard
@@ -39,12 +59,18 @@ Table for when NPCs drop to 0 [HP] to determine what happens to them.
 **Classes**
 - add missing stuff
 - warlock definitly still needing lots of fleshing out
+- Make class core abilities more unique:
+  - Cleric, Warlock, Barbarian and Mage I am pretty happy
+  - Fighter and Rogue need to feel more different.
+  - Maybe fighter only has a focus target (oath of moment style) ability and all class techniques are based of that Or maybe fighter can select different stances: Horde Breaker, Beast slayer, Tank and your class techniques change depending on that, you gain Focus 1 per Round and your stance changes how much you gain additionally.
+  - Rogue?
 
 **Equipment**
 - other useful items, books that give bonuses to lore checks (treats skill as 1 rank higher, can only be affected by [INT]/3 amount of books at the same time, no skill twice)
 - magic item rules
 - crafting rules
 - cooking items
+- - masterwork: also +1 damage.
 
 **Spells**
 - more spells
@@ -53,10 +79,15 @@ Table for when NPCs drop to 0 [HP] to determine what happens to them.
 **Status Effects:**
 - Confused Condition?
 
-**Equipment:**
-- isntead of masterwork, just list bonuses and cost increase that happen for each additional tier.
-
 **Nice to have**
 - have colored abilities and more icons
 - create npc generator
 - add missing abilities
+
+**Travel/Adventure**
+- More random Tables
+  - Camp Events
+  - Travel Events by Terrain
+  - Add Terrain Tiers
+  - Make random tables for weather and encounter similar to how in FG.
+  - Special weather and circumstances for Rift Travel.

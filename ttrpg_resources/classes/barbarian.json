@@ -29,9 +29,9 @@
                 "regularText": null,
                 "headerLine": null,
                 "bulletPoints": [
-                    "The Barbarian’s Rage also helps sustain him during a fight. At the start of each of the Barbarian’s Turn he regains [HP] he lost last round up to twice his current Rage.",
-                    "For every unique negative status effect that lingers on the Barbarian at the start of the Barbarian’s Turn they gain 1 Rage.",
-                    "The first time they attack an enemy on their turn with a throw weapon or melee attack they gain 1 Rage.",
+                    "For every unique negative status effect that lingers on the Barbarian at the start of the Barbarian’s [TURN] they gain 1 Rage.",
+                    "The first time during a [ROUND] they target an enemy with a [MELEE MARTIAL ATTACK] or a Weapon Attack using a thrown weapon, they gain 1 Rage.",
+                    "The first time during a [ROUND] the Barbarian recieves damage they gain 1 Rage.",
                     "Falling Unconcious reduces the Barbarian’s rage to 0."
                  ],
                  "ability": null
@@ -102,7 +102,7 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "The Barbarian gains resistance against physical damage equal to half their [CON]. <At [LEVEL] 6 this resistance applies against all damage types except psychic.<br>Additionally the Barbarians Rage allows him to recover from recent wounds to sustain them in the fight for longer. At the start of the Barbarian’s Turn he regains [HP] he lost last round up to twice their current Rage.",
+                    "regularText": "The Barbarian gains resistance against physical damage equal to half their [CON]. <At [LEVEL] 6 this resistance applies against all damage types except psychic.<br>Additionally the Barbarians Rage allows him to recover from recent wounds to sustain them in the fight for longer. At the start of the Barbarian’s [TURN] he regains [HP] he lost last round up to twice their current Rage.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null

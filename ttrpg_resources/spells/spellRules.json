@@ -40,7 +40,7 @@
                 { "discipline": "Geomancy",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
 
                 { "discipline": "Light",  "weakEffect": "You shine bright for 1d6 [ROUND] (18m/36m). Every creature that can see you for the first time has to make a [DT] 15 [TOUGHNESS] [SAVE] or recieve the [BLINDED] Status Effect for 1 [ROUND].", "mediumEffect": "", "strongEffect": "" },
-                { "discipline": "Restoration",  "weakEffect": " ", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Restoration",  "weakEffect": "A random Enemy recieves Healing as if the Heal spell was cast with the same [ARCANA] Cost.", "mediumEffect": "", "strongEffect": "" },
                 { "discipline": "Necromancy",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
                 { "discipline": "Shadow",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
                 { "discipline": "Divination",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
