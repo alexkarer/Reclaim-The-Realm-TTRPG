@@ -38,6 +38,8 @@ add activities that can be done during long rests:
 - religous service
 - carousing
 
+Massive Injuries should be split into mental and physical, additionally there should be maybe 3 damage type specific tiers.
+
 rule for helping othrs, roll same check, for every 5 above 10 gain +1.
 
 Table for when NPCs drop to 0 [HP] to determine what happens to them.
@@ -81,7 +83,6 @@ add faction relations thing:
 
 **Nice to have**
 - have colored abilities and more icons
-- create npc generator
 - add missing abilities
 
 **Travel/Adventure**
@@ -89,5 +90,6 @@ add faction relations thing:
   - Camp Events
   - Travel Events by Terrain
   - Add Terrain Tiers
+  - Change riftlands modifier to only have one d6 in a SPELL CAST TEST Roll.
   - Make random tables for weather and encounter similar to how in FG.
-  - Special weather and circumstances for Rift Travel.
+  - Special weather and circumstances for Rift Travel: There should be a table describing the Path what kind of Path it is they take (maybe also for other events), what pheonomana they see in the distance or the sky.
