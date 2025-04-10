@@ -72,7 +72,8 @@ add faction relations thing:
 - magic item rules
 - crafting rules
 - cooking items
-- - masterwork: also +1 damage.
+- masterwork: also +1 damage.
+- There should be a trinkets table.
 
 **Spells**
 - more spells
@@ -89,7 +90,8 @@ add faction relations thing:
 - More random Tables
   - Camp Events
   - Travel Events by Terrain
-  - Add Terrain Tiers
-  - Change riftlands modifier to only have one d6 in a SPELL CAST TEST Roll.
   - Make random tables for weather and encounter similar to how in FG.
   - Special weather and circumstances for Rift Travel: There should be a table describing the Path what kind of Path it is they take (maybe also for other events), what pheonomana they see in the distance or the sky.
+  - add some more montage tables/scenes, during travel, which might be the special weather circumstances.
+- Change riftlands modifier to only have one d6 in a SPELL CAST TEST Roll.
+- Add Terrain Tiers
