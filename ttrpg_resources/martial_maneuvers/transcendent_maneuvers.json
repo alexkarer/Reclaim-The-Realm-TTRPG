@@ -27,13 +27,13 @@
     "brawlManeuvers": [
         {
             "name": "",
-            "tags": [ "Martial Maneuver (Transcendent)", "Agile" ],
+            "tags": [ "Martial Maneuver (Transcendent)", "Brawk" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 12, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
-                    { "amount": 3, "attribute": "" }
+                    { "amount": 10, "attribute": "[STR" }
                 ],
                 "requiredPerks": [ "" ],
                 "otherRequirements": [ "" ]

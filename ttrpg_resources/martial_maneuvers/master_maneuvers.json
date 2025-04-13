@@ -50,7 +50,7 @@
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
-                    { "amount": 6, "attribute": "[AGI]" }
+                    { "amount": 7, "attribute": "[AGI]" }
                 ],
                 "requiredPerks": [ ],
                 "otherRequirements": [  ]
@@ -64,26 +64,26 @@
     ],
     "brawlManeuvers": [
         {
-            "name": "",
+            "name": "Break Neck",
             "tags": [ "Martial Maneuver (Master)", "Brawl" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
-                    { "amount": 3, "attribute": "" }
+                    { "amount": 7, "attribute": "[STR]" }
                 ],
                 "requiredPerks": [ "" ],
                 "otherRequirements": [ "" ]
             },
-            "cost": "",
-            "range": "",
-            "target": "",
-            "duration": "",
-            "description": "",
+            "cost": "4 [AP], 1 [STAMINA]",
+            "range": "[MELEE RANGE]",
+            "target": "1 targed affected by [RESTRAINED I] caused by you",
+            "duration": "[INSTANT]",
+            "description": "Make a [STR] [MARTIAL TEST] against the creatures [TOUGHNESS] or [HARDNESS] (targets choice). On a success the target recieves 3 * heavy [MARTIAL DAMAGE] phyiscal damage. On a fail it just recieves regular heavy [MARTIAL DAMAGE] phyiscal damage",
             "maneuverPush": {
-                "pushingExtraCost": "",
-                "pushingDescription": ""
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "For each 1 [STAMINA] increase the damage on a success by your heavy [MARTIAL DAMAGE] phyiscal damage."
             }
         }
     ],
@@ -176,9 +176,13 @@
             },
             "cost": "4 [AP], 2 [STAMINA]",
             "range": "[WEAPON RANGE]",
-            "target": "one creature with a [LEVEL] below yours",
+            "target": "one creature",
             "duration": "[INSTANT]",
-            "description": "Target a creature whose [LEVEL] is below yours. Make a Weapon Attack against that creature. If the [ATTACK] was a miss, it turns into a regular hit. If that [ATTACK] hits but the result is lower than the target’s [TOUGHNESS] it is a critical hit. If the [ATTACK] also matches or exceeds the creature’s [TOUGHNESS], the creature is reduced to 0 [HP]."
+            "description": "Target a creature whose [LEVEL] is below yours. Make a Weapon Attack against that creature. If the [ATTACK] was a miss, it turns into a regular hit. If that [ATTACK] hits but the result is lower than the target’s [TOUGHNESS] it is a critical hit. If the [ATTACK] also matches or exceeds the creature’s [TOUGHNESS], it recieves 3 * heavy [MARTIAL DAMAGE] as physical damage.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "For each 1 [STAMINA] increase the damage on a success by your heavy [MARTIAL DAMAGE]."
+            }
         },
         {
             "name": "Onslaught",
@@ -195,7 +199,7 @@
             "range": "[MELEE RANGE]",
             "target": "one creature",
             "duration": "[INSTANT]",
-            "description": "You unleash a series of quick attacks against a single target. For each [AP] spent you can make A Weapon ATtack."
+            "description": "You unleash a series of quick attacks against a single target. For each [AP] spent you can make A Weapon Attack."
         }
     ]
 }

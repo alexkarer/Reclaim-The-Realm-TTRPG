@@ -313,8 +313,8 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "3 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "1 objetct", "duration": "[SPI] minutes",
-                "description": "For the duration when somone through the object they can see traces of magical and the associated Spell Discipline (if present) energy which includes the following:<ul><li>Magical creatures (Elemental, Cosmic, Undead) or Magical Items.</li><li>You know if a spell is currently affecting a creature or object, you don't know the exact spell, but you know the discipline.</li><li>You see if a spell was cast ther recently. Spells linger for a number of days equal to their [ARCANA] Cost, you don't what exact spell, but you know the discipline.</li></ul>",
+                "cost": "3 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "1 object", "duration": "[SPI] minutes",
+                "description": "For the duration when somone looks through the object they can see traces of magical and the associated Spell Discipline (if present) energy which includes the following:<ul><li>Magical creatures (Elemental, Cosmic, Undead) or Magical Items.</li><li>You know if a spell is currently affecting a creature or object, you don't know the exact spell, but you know the discipline.</li><li>You see if a spell was cast ther recently. Spells linger for a number of days equal to their Arcana Cost, you don't what exact spell, but you know the discipline.</li></ul>",
                 "spellDifficulty": 6,   
                 "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by the following, the Spell improves in the following ways:<ul><li>Increase by 3: You know the Specific spell (if spell at all) that was cast.</li><li>Improve by 9: You see exactly what happened when the Spell was cast at the time.</li></ul>"
             },

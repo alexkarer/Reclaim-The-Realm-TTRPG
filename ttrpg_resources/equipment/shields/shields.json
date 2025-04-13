@@ -14,7 +14,7 @@
                 "ability": null
             }
         ],
-        "shieldBlock": 0,
+        "shieldBlock": 2,
         "damageThreshold": 15,
         "manoeuvrePenalty": 0,
         "movementPenalty": 0
@@ -34,7 +34,7 @@
                 "ability": null
             }
         ],
-        "shieldBlock": 2,
+        "shieldBlock": 4,
         "damageThreshold": 25,
         "manoeuvrePenalty": -1,
         "movementPenalty": 0
@@ -54,7 +54,7 @@
                 "ability": null
             }
         ],
-        "shieldBlock": 5,
+        "shieldBlock": 6,
         "damageThreshold": 40,
         "manoeuvrePenalty": -3,
         "movementPenalty": -1

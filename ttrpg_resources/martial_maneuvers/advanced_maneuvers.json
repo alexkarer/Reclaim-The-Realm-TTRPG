@@ -18,6 +18,29 @@
             "target": "1 creature that is 2 sizes larger than you",
             "duration": "[INSTANT]",
             "description": "You attempt to climb up on a to deal more damage effectively. Make an [AGI] or [STR] Athletics [SKILL TEST] against the target’s [DODGE] . On a success you are now mounted on top of the creature which has the following effects.:<br>One hand is always occupied with holding on to the creature<br>Any [MELEE MARTIAL ATTACK] that is not a critical miss automatically hits the target and the required roll for a critical is 1 lower.<br>ou can’t be targeted by the creature you are currently on, on it’s turn however it can attempt to shake you of by spending 1 [AP] and you have to succeed on a [HARDNESS] [SAVE] against the creature’s Melee Attack Bonus+10. On a fail you are thrown away a number of meters equal to the creatures [STR] and might recieve fall damage as a result."
+        },
+        {
+            "name": "Reactive Move",
+            "tags": [ "Martial Maneuver (Advanced)", "Agile", "Movement" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 4, "attribute": "[AGI]" }
+                ],
+                "requiredPerks": [],
+                "otherRequirements": []
+            },
+            "cost": "1 [REACTION]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "If a creature moves within 6m you can instantly move [AGI]/2 meters",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "For each stamina used, you can move an extra 1.5 m."
+            }
         }
     ],
     "brawlManeuvers": [

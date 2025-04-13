@@ -27,6 +27,10 @@ flanking should only work in melee.
 
 create cheet sheet
 
+change battle recovery to be less useful than resting.
+
+automatic long rest recovery button.
+
 add activities that can be done during long rests:
 - crafting
 - research
@@ -44,6 +48,8 @@ rule for helping othrs, roll same check, for every 5 above 10 gain +1.
 
 Table for when NPCs drop to 0 [HP] to determine what happens to them.
 
+New keyword: [SAVE LOWERS], status effect gains 1 tier lower.
+
 add faction relations thing: 
 - should be adventure specific
 - higher should give you like access to items and other benefits
@@ -59,6 +65,8 @@ add faction relations thing:
 - proper phrasing of some stuff in the combat
 
 **Classes**
+- barbarian nerf resentful strike, should be d6 bonus damage.
+  - generally rewrite lots of the barbarian rules
 - add missing stuff
 - warlock definitly still needing lots of fleshing out
 - Make class core abilities more unique:
@@ -94,4 +102,7 @@ add faction relations thing:
   - Special weather and circumstances for Rift Travel: There should be a table describing the Path what kind of Path it is they take (maybe also for other events), what pheonomana they see in the distance or the sky.
   - add some more montage tables/scenes, during travel, which might be the special weather circumstances.
 - Change riftlands modifier to only have one d6 in a SPELL CAST TEST Roll.
+- Riftlands every week has to make a Willpower or recieve Mental damage (should be a mental permanent injury table).
+  - Increases the longer one stays in the Riftlands.
 - Add Terrain Tiers
+- when travelling, long rest can be made withotu food water but then get exhaustion which can't be recovered.

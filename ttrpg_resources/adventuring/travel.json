@@ -33,7 +33,7 @@
             { "terrain": "Mountain", "terrainModifiers": "-3 to the Travel Speed, +1 [STAMINA] Cost per Hour travelled" },
             { "terrain": "Desert", "terrainModifiers": "-1 to the Travel Speed" },
             { "terrain": "Settlement / Ruin", "terrainModifiers": "-1 to the Travel Speed" },
-            { "terrain": "Riftlands", "terrainModifiers": "-1 to any [SPELL CAST TEST]" }
+            { "terrain": "Riftlands", "terrainModifiers": "Only 1 d6 can be used for a [SPELL CAST TEST]." }
         ]
     },
     "specialMovement": {
