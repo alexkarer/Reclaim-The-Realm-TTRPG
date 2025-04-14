@@ -1,12 +1,20 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
+/rules-reference/dist
+/npc-generator/dist
+/shop-generators/dist
+/travel-encounters/dist
 /dist
 /tmp
 /out-tsc
 /bazel-out
 
 # Node
+/rules-reference/node_modules
+/npc-generator/node_modules
+/shop-generators/node_modules
+/travel-encounters/node_modules
 /node_modules
 npm-debug.log
 yarn-error.log
@@ -29,6 +37,10 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
+/rules-reference/.angular/cache
+/npc-generator/.angular/cache
+/shop-generators/.angular/cache
+/travel-encounters/.angular/cache
 /.angular/cache
 .sass-cache/
 /connect.lock
