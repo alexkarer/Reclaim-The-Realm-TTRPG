@@ -1,0 +1,70 @@
+{
+    "creatureTypeSpecificTraits": [
+        { "pointsCost": 0, "name": "Human Versatility", "description": "Increase NPC creation Points by 1." },
+        { "pointsCost": 0, "name": "Elven Nimbleness", "description": "+1 [MP]" },
+        { "pointsCost": 0, "name": "Dwarven Nightvision", "description": "Gain 4.5m nightvision" },
+        { "pointsCost": 0, "name": "Undead", "description": "Doesn't require food, water or sleep. Can't get Exhausted" },
+        { "pointsCost": 0, "name": "Primordial", "description": "When it is reduced to 0 [HP] instead of dying it's energy reforms again in the Elemental Plane of it's orgin." },
+        { "pointsCost": 0, "name": "Earth Elemental", "description": "Gain Burrow(3m) speed." },
+        { "pointsCost": 0, "name": "Fire Elemental", "description": "[AURA] creatures recieve 2*[LEVEL] fire damage" },
+        { "pointsCost": 0, "name": "Air Elemental", "description": "Gain fly(1.5m) speed." },
+        { "pointsCost": 0, "name": "Water Elemental", "description": "Gain swim(3m) speed." },
+        { "pointsCost": 0, "name": "Immortal", "description": "Doesn't require food, water or sleep. Can't get Exhausted. When it is reduced to 0 [HP] instead of dying it goes back to the Aether where it reforms." },
+        { "pointsCost": 0, "name": "Incorporeal", "description": "Gain fly(1.5m) speed and you can move through walls but can't end your mvoe in there" }
+    ],
+    "movementTraits": [
+        { "pointsCost": 1, "name": "Nimble I", "description": "+1 [MP]" },
+        { "pointsCost": 2, "name": "Nimble II", "description": "+2 [MP]" },
+        { "pointsCost": 3, "name": "Nimble III", "description": "+3 [MP]" },
+        { "pointsCost": 1, "name": "Fly I", "description": "gain fly(1.5m) speed." },
+        { "pointsCost": 2, "name": "Fly II", "description": "Increase fly speed by 1.5m." },
+        { "pointsCost": 3, "name": "Fly III", "description": "Increase fly speed by 3m." }
+    ],
+    "defensiveTraits": [
+        { "pointsCost": 1, "name": "Tank I", "description": "+5 [HP], +2 [HP] per [LEVEL]" },
+        { "pointsCost": 2, "name": "Tank II", "description": "+10 [HP], +2 [HP] per [LEVEL]" },
+        { "pointsCost": 3, "name": "Tank III", "description": "+20 [HP], +2 [HP] per [LEVEL]" },
+        { "pointsCost": 1, "name": "Hardness I", "description": "+2 [HARDNESS]" },
+        { "pointsCost": 1, "name": "Hardness II", "description": "+2 [HARDNESS]" },
+        { "pointsCost": 1, "name": "Dodge I", "description": "+1 [DODGE]" },
+        { "pointsCost": 1, "name": "Dodge II", "description": "+2 [DODGE]" },
+        { "pointsCost": 1, "name": "Toughness I", "description": "+2 [TOUGHNESS]" },
+        { "pointsCost": 1, "name": "Toughness II", "description": "+2 [TOUGHNESS]" },
+        { "pointsCost": 1, "name": "Willpower I", "description": "+2 [WILLPOWER]" },
+        { "pointsCost": 1, "name": "Willpower II", "description": "+2 [WILLPOWER]" },
+        { "pointsCost": 3, "name": "Natural Armor", "description": "gain resistance 2 + [LEVEL] physical." },
+        { "pointsCost": 2, "name": "Damage Resistance I", "description": "gain resistance 5 + [HALF LEVEL] against a damage type of your choice except phyiscal." },
+        { "pointsCost": 4, "name": "Damage Resistance II", "description": "gain resistance 15 + [LEVEL] against a damage type of your choice except phyiscal." },
+        { "pointsCost": 4, "name": "Damage Immunity", "description": "Gain Immunity against a damage type of your choice." },
+        { "pointsCost": 1, "name": "Status Effect Resistance", "description": "Gain resistance against a status effect, if you are affected by the status affect, you instead suffer a version one tier lower." },
+        { "pointsCost": 2, "name": "Status Effect Immunity", "description": "Gain immunity against a status effect and all it's tiers." }
+    ],
+    "wargearTraits": [
+        { "pointsCost": 1, "name": "Armor I", "description": "Wear Armor to gain damage resistance: phyiscal 2, maneuvrepeanlty -1." },
+        { "pointsCost": 1, "name": "Armor II", "description": "Wear Armor to gain damage resistance: phyiscal 4, increases maneuvrepenalty to -3." },
+        { "pointsCost": 2, "name": "Armor III", "description": "Wear Armor to gain damage resistance: phyiscal 6, increases maneuvrepenalty to -5 and a movementpenalt of -1." },
+        { "pointsCost": 0, "name": "Small Shield", "description": "Gain shield block base of 10 and threshold of 15" },
+        { "pointsCost": 1, "name": "Medium Shield", "description": "Gain shield block base of 12 and threshold of 25 with maneuvrepeanlty of -1" },
+        { "pointsCost": 1, "name": "Tower Shield", "description": "Gain shield block base of 15 and threshold of 40 with maneuvrepeanlty of -3 and movement penalty of -1" }
+    ],
+    "otherTraits": [
+        { "pointsCost": 1, "name": "Nightvision I", "description": "Gain 4.5m nightvision" },
+        { "pointsCost": 2, "name": "Nightvision II", "description": "Gain 6m nightvision" },
+        { "pointsCost": 3, "name": "Nightvision III", "description": "Gain 12m nightvision" },
+        { "pointsCost": 1, "name": "Deadly I", "description": "Increase Crit Threshold by 1." },
+        { "pointsCost": 3, "name": "Deadly II", "description": "Increase Crit Threshold by 1." },
+        { "pointsCost": 5, "name": "Deadly III", "description": "Increase Crit Threshold by 1." },
+        { "pointsCost": 2, "name": "Tag Team", "description": "If another creature with the same trait is within [MELEE] of a target, then the creature has [DISADVANTAGE] on any [DODGE] [SAVE] or [SHIELD BLOCK]" },
+        { "pointsCost": 2, "name": "REGENERATION I", "description": "At the start of the Creatures [TURN] it regenerates d6 [HP]." },
+        { "pointsCost": 4, "name": "REGENERATION II", "description": "At the start of the Creatures [TURN] it regenerates 10 [HP]." },
+        { "pointsCost": 6, "name": "REGENERATION III", "description": "At the start of the Creatures [TURN] it regenerates 20 [HP]." },
+        { "pointsCost": 2, "name": "Spell Eater", "description": "Each time a [SPELL ABILITY] is used within 9m of the creature, the creature regains 1d6 + additional d6 per [SPELL ABILITY] level and the next damaging Ability deals d6 for [SPELL ABILITY] level." },
+        { "pointsCost": 1, "name": "Deadly Demise I", "description": "When the creature dies all creautre within 1.5m have to make [SAVE] or recieve 2d6 damage." },
+        { "pointsCost": 3, "name": "Deadly Demise II", "description": "When the creature dies all creautre within 3m have to make [SAVE] or recieve 4d6 damage." },
+        { "pointsCost": 5, "name": "Deadly Demise III", "description": "When the creature dies all creautre within 4.5m have to make [SAVE] or recieve 6d6 damage." }
+    ],
+    "creatureTypeTraits": [
+        { "pointsCost": 1, "name": "Mimic", "description": "If the creature remains motionless it is undistinguishable from the object it is mimicing. But can be detected with a [DT] 25 + [LEVEL] [PER] Investigation [SKILL TEST]. Each creature that touches the Mimic gets stuck on it and recieves [RESTRAINED I] [DT] 10 + [LEVEl] + [CON]." },
+        { "pointsCost": 1, "name": "Cosmic Corrupted", "description": "The creature has been strongly corrupted by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL]" }
+    ]
+}

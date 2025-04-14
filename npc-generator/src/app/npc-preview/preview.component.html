@@ -1,0 +1,192 @@
+<div class="m-1">
+    <div class="d-flex justify-content-between mt-3">
+        <h3 class="text-white">{{ npcRepo.$name | async }}</h3>
+        <h5 class="text-white">Level {{ npcRepo.$level | async }}, {{ npcRepo.$xp | async }} XP</h5>
+    </div>
+    <div class="d-flex justify-content-between mt-2">
+        <h5 class="text-white">{{ npcRepo.$alignment | async }} {{ npcRepo.$creatureSize | async }} {{ npcRepo.$creatureType | async }} ({{ npcRepo.$creatureSubType | async }})</h5>
+        <h5 class="text-white">Martial Level: {{ npcRepo.$martialLevel | async }}, Spell Level: {{ npcRepo.$spellLevel | async }}</h5>
+    </div>
+    <hr class="mt-0">
+    <div class="mt-3 d-flex justify-content-between">
+        <table class="table w-25">
+            <tbody class="text-center">
+                <tr>
+                    <th>STR</th>
+                    <td>{{ npcRepo.$str | async }}</td>
+                </tr>
+                <tr>
+                    <th>AGI</th>
+                    <td>{{ npcRepo.$agi | async }}</td>
+                </tr>
+                <tr>
+                    <th>CON</th>
+                    <td>{{ npcRepo.$con | async }}</td>
+                </tr>
+                <tr>
+                    <th>INT</th>
+                    <td>{{ npcRepo.$int | async }}</td>
+                </tr>
+                <tr>
+                    <th>SPI</th>
+                    <td>{{ npcRepo.$spi | async }}</td>
+                </tr>
+                <tr>
+                    <th>PER</th>
+                    <td>{{ npcRepo.$per | async }}</td>
+                </tr>
+                <tr>
+                    <th>CHA</th>
+                    <td>{{ npcRepo.$cha | async }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mx-2 d-flex flex-column">
+            <table class="table">
+                <tbody class="text-center">
+                    <tr>
+                        <th>HP</th>
+                        <td>{{ npcRepo.$hp | async }}</td>
+                    </tr>
+                    <tr>
+                        <th>AP</th>
+                        <td>{{ npcRepo.$ap | async }}</td>
+                    </tr>
+                    <tr>
+                        <th>MP</th>
+                        <td>{{ npcRepo.$mp | async }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table mt-1">
+                <tbody class="text-center">
+                    <tr>
+                        <th>⚔️</th>
+                        <td>{{ npcRepo.$meleeMartialAttack | async }}</td>
+                    </tr>
+                    <tr>
+                        <th>🏹</th>
+                        <td>{{ npcRepo.$rangedMartialAttack | async }}</td>
+                    </tr>
+                    <tr>
+                        <th>⚔️✨</th>
+                        <td>{{ npcRepo.$meleeSpellAttack | async }}</td>
+                    </tr>
+                    <tr>
+                        <th>🏹✨</th>
+                        <td>{{ npcRepo.$rangedSpellAttack | async }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table class="table w-25">
+            <tbody>
+                <tr>
+                    <th>Hardness</th>
+                    <td>{{ npcRepo.$hardness | async }}</td>
+                </tr>
+                <tr>
+                    <th>Dodge</th>
+                    <td>{{ npcRepo.$dodge | async }}</td>
+                </tr>
+                <tr>
+                    <th>Toughness</th>
+                    <td>{{ npcRepo.$toughness | async }}</td>
+                </tr>
+                <tr>
+                    <th>Willpower</th>
+                    <td>{{ npcRepo.$willpower | async }}</td>
+                </tr>
+                <tr>
+                    <th>Shield Block</th>
+                    <td>{{ npcRepo.$shieldBlock | async }} ({{ npcRepo.$shieldThreshold | async }})</td>
+                </tr>
+                <tr>
+                    <th>Special Movement</th>
+                    <td>{{ npcRepo.$specialMovement | async }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row mt-1">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Vulnurabilities</th>
+                    <td>{{ npcRepo.$damageVulnurabilities | async }}</td>
+                </tr>
+                <tr>
+                    <th>Damage Resistances</th>
+                    <td>{{ npcRepo.$damageResistances | async }}</td>
+                </tr>
+                <tr>
+                    <th>Damage Immunities</th>
+                    <td>{{ npcRepo.$damageImmunities | async }}</td>
+                </tr>
+                <tr>
+                    <th>Status Effect Immunities</th>
+                    <td>{{ npcRepo.$statusEffectImmunties | async }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr class="mt-0">
+    <!-- TRAITS -->
+    <div class="row mt-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Trait</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody class="table-striped">
+                @for (trait of npcRepo.$traits | async; track $index) {
+                    <tr>
+                        <td><span class="fw-bold">{{ trait.name }}</span></td>
+                        <td>{{ trait.description }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <!-- ABILITIES -->
+    <div class="row mt-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ability</th>
+                    <th>Cost</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody class="table-striped">
+                @for (ability of npcRepo.$allAbilities | async; track $index) {
+                    <tr>
+                        <td><span class="fw-bold">{{ ability.name }}</span></td>
+                        <td>{{ getAbilityCost(ability) }}</td>
+                        <td>{{ ability.description }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="row mt-1">
+        <table class="table">
+            <thead class="text-center">
+                <tr>
+                    <th>Reaction</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody class="text-center table-striped">
+                @for (reaction of npcRepo.$reactions | async; track $index) {
+                    <tr>
+                        <td><span class="fw-bold">{{ reaction.name }}</span></td>
+                        <td>{{ reaction.description }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

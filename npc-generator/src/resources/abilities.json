@@ -1,0 +1,14 @@
+{
+    "movementAbilities": [
+        { "name": "Pounce I", "pointsCost": 1, "apCost": 0, "mpCost": 5, "description": "Jump, on landing select 1 target within [MELEE RANGE]: 10 + [MARTIAL LEVEL] + [STR] or fall prone." },
+        { "name": "Pounce II", "pointsCost": 3, "apCost": 0, "mpCost": 5, "description": "Jump, on landing select multiple targets within [MELEE RANGE]: 10 + [MARTIAL LEVEL] + [STR] or fall prone." }
+    ],
+    "reactionAbilities": [
+        { "name": "Unnatural Dodge", "pointsCost": 1, "description": "When hit by an [ATTACK] halve the damge recieved by that [ATTACK]." }
+    ],
+    "otherAbilities": [
+        { "name": "Heal I", "pointsCost": 1, "apCost": 2, "mpCost": 0, "description": "Heal, [MEELE RANGE] reach, 1 target, [LIGHT SPELL DAMAGE]" },
+        { "name": "Heal II", "pointsCost": 2, "apCost": 2, "mpCost": 0, "description": "Heal, [MEELE RANGE] reach, 1 target, [MEDIUM SPELL DAMAGE]" },
+        { "name": "Heal III", "pointsCost": 3, "apCost": 2, "mpCost": 0, "description": "Heal, [MEELE RANGE] reach, 1 target, [HEAVY SPELL DAMAGE]" }
+    ]
+}
