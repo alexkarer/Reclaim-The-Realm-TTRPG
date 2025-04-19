@@ -11,7 +11,7 @@
         "hardnessProficiency": 1.0,
         "toughnessProficiency": 1.0,
         "willpowerProficiency": 0.334,
-        "mainClassAttributes": [ "[STR]", "[CON]", "[PER]" ],
+        "mainClassAttributes": [ "[STR]", "[AGI]", "[CON]" ],
         "classSKills": [ "Athletics", "Intimidation", "Survival" ],
         "skillPointsPerLevel": 4,
         "weaponRanks": 2
@@ -329,7 +329,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "After successfully making a [MELEE MARTIAL ATTACK] you deal 1d10 bonus physical damage per Rage spent."
+            "description": "After successfully making a [MELEE MARTIAL ATTACK] you deal 1d6+([LEVEL]/6) bonus physical damage per Rage spent."
         },
         {
             "name": "Armor of Fury",
@@ -339,7 +339,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 round",
-            "description": "You gain 5 [THP] for every Rage you spend"
+            "description": "You gain [CON]+[LEVEL] [THP] for every Rage you spend"
         },
         {
             "name": "Furious Charge",
@@ -355,11 +355,11 @@
             "name": "Walk it off",
             "tags": [ "Class Technique (Barbarian)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "1 [AP], 1 Rage",
+            "cost": "1 [AP], 1 or more Rage",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You can remove one Tier I Status Effect effecting you."
+            "description": "You can remove one Tier I Status Effect effecting you. When using 2 [AP] and 4 Rage you can end a Tier II Status Effect. When using 3 [AP] and 8 Rage you can end a Tier III Status Effect."
         },
         {
             "name": "Rage fueled Maneuver",
@@ -378,8 +378,8 @@
             "cost": "1 [AP], 2 Rage",
             "range": "[MELEE RANGE]",
             "target": "1 creature",
-            "duration": "1 round",
-            "description": "Make a [MELEE MARTIAL ATTACK] using [STR] + [MARTIAL LEVEL] as a bonus, against your target, on a hit it takes physical damage equal to [STR] + [LEVEL]. Additionally you and the target must make a [HARDNESS] [SAVE] the one with the lower result is then dazed for 1 round (on a tie, both are [STUNNED I])."
+            "duration": "2 [ROUND]",
+            "description": "Make a [MELEE MARTIAL ATTACK] against your target, on a hit it takes ([STR]/2) * d6 physical damage. Additionally on a hit compare your [TOUGHNESS] to your target's if yours is higher the target recieves the [STUNNED I] status effect, if the target is higher you recieve the [STUNNED I] status effect. On a tie, both are [STUNNED I]."
         },
         {
             "name": "Violent Leap",
@@ -389,7 +389,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You make a regular Jump Move and at end of your Jump Move roll and make a [STR] [MARTIAL TEST]. Every enemy within 1.5m of the landing is knocked prone if that roll exceeds their [HARDNESS] ."
+            "description": "You make a regular Jump Move and at end of your Jump Move roll and make a [STR] [MARTIAL TEST]. Every enemy within [MELEE RANGE] of the landing is knocked prone if that roll exceeds their [HARDNESS]."
         },
         {
             "name": "Adrenaline Rush",
@@ -419,11 +419,11 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "1 reaction, 3 Rage",
+            "cost": "1 [REACTION], 3 Rage",
             "range": "[MELEE RANGE]",
             "target": "1 creature*",
             "duration": "[INSTANT]",
-            "description": "You can use this reaction against a creature that just caused you to lose [HP] for any reason. You can make a Weapon [MELEE MARTIAL ATTACK] in response dealing extra damage equal to the amount of [HP] you lost."
+            "description": "You can use this [REACTION] when you loose [HP] from a creature within [MELEE RANGE]. You can make a Weapon Attack agaisnt that creature in response dealing extra damage equal to the amount of [HP] you lost."
         },
         {
             "name": "Primal Roar",
@@ -440,7 +440,7 @@
             "range": "-",
             "target": "[CONE] 6m",
             "duration": "1 round",
-            "description": "Make a [CON] [MARTIAL TEST]. If that roll is higher than any creature’s [TOUGHNESS] within a 6m cone in front of you. They recieve 2d8 + [CON] Sonic damage and are [DEAFENED] [HALF]."
+            "description": "Make a [CON] [MARTIAL TEST]. If that roll is higher than any creature’s [TOUGHNESS] within a 6m cone in front of you. They recieve [CON]*d6 Sonic damage and are [DEAFENED] [HALF]."
         }
     ]
 }

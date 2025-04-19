@@ -41,6 +41,29 @@
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "For each stamina used, you can move an extra 1.5 m."
             }
+        },
+        {
+            "name": "Wall Run",
+            "tags": [ "Martial Maneuver (Advanced)", "Agile", "Movement" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 4, "attribute": "[AGI]" }
+                ],
+                "requiredPerks": [],
+                "otherRequirements": []
+            },
+            "cost": "2 [MP]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT] or [TURN]",
+            "description": "Make a Move, during that move you can move vertically along moves. If at the end of your [TURN] you are not standing or holding on to anything, you are falling down.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "If you use this Ability again during your [TURN] it only costs 1 [MP]."
+            }
         }
     ],
     "brawlManeuvers": [
@@ -63,6 +86,52 @@
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can also use this ability when the [ATTACK] was a critical hit."
+            }
+        },
+        {
+            "name": "Giant Leap",
+            "tags": [ "Martial Maneuver (Advanced)", "Brawl" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 5, "attribute": "[STR]" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "6 [MP]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "Make a Jump Move and increase the jumping distance by an additional [STR] m for a long jump or [STR]/2 m for a high jump.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "Increase the distance by further [STR]/2 m for a long jump or [STR]/4 m for a high jump."
+            }
+        },
+        {
+            "name": "",
+            "tags": [ "Martial Maneuver (Advanced)", "Brawl" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [
+                    { "amount": 5, "attribute": "[STR]" }
+                ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "6 [MP]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "Make a Jump Move and increase the jumping distance by an additional [STR] m for a long jump or [STR]/2 m for a high jump.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "Increase the distance by further [STR]/2 m for a long jump or [STR]/4 m for a high jump."
             }
         }
     ],
@@ -223,6 +292,27 @@
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can also use this ability when the [ATTACK] was a critical hit."
+            }
+        },
+        {
+            "name": "Parry stance",
+            "tags": [ "Martial Maneuver (Advanced)", "Weapon" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [],
+                "otherRequirements": [ ]
+            },
+            "cost": "2 [AP]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "1 [ROUND]",
+            "description": "Each time you use the Parry or Improved Parry Ability without consuming a [REACTION]",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "Each [STAMINA] used grants you a +2 bonus to the [D20 TEST] when using the Parry or Improved Parry Ability."
             }
         }
     ]

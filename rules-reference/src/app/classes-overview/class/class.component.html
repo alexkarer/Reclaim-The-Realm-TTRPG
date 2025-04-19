@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col">
             <div class="d-flex justify-content-center">
-                <h4>{{playerClass?.className + ' Core Values'}}</h4>
+                <h3>{{playerClass?.className + ' Core Values'}}</h3>
             </div>
             <table class="rules-table">
                 <tbody>
@@ -66,7 +66,7 @@
         </div>
         <div class="col">
             <div class="d-flex justify-content-center">
-                <h4>{{playerClass?.className + ' Class Table'}}</h4>
+                <h3>{{playerClass?.className + ' Class Table'}}</h3>
             </div>
             <table class="rules-table">
                 <thead>
@@ -89,7 +89,7 @@
     <div class="row">
         <div class="col">
             <div class="d-flex justify-content-center">
-                <h4>{{playerClass?.className + ' Core Feature: ' + playerClass?.classCoreFeature?.name }}</h4>
+                <h3>{{playerClass?.className + ' Core Feature: ' + playerClass?.classCoreFeature?.name }}</h3>
             </div>
             <app-text-elements [textElements]="playerClass?.classCoreFeature?.textElements"></app-text-elements>
         </div>
@@ -109,21 +109,21 @@
     <div class="row mt-3">
         <div class="col">
             <div class="d-flex justify-content-center">
-                <h4 class="mb-0">{{ 'Other ' + playerClass?.className + ' Features' }}</h4>
+                <h3 class="mb-0">{{ 'Other ' + playerClass?.className + ' Features' }}</h3>
             </div>
             @for (classFeature of playerClass?.classFeatures; track $index) {
                 @if (classFeature.relatedClassPath != null) {
-                    <h5 class="mt-0 mb-1">{{ classFeature.name + ' (' }}<span class="fst-italic">{{ classFeature.relatedClassPath }}</span>{{')'}}</h5>
+                    <h4 class="mt-0 mb-1">{{ classFeature.name + ' (' }}<span class="fst-italic">{{ classFeature.relatedClassPath }}</span>{{')'}}</h4>
                 } @else{
-                    <h5 class="mt-0 mb-1">{{ classFeature.name }}</h5>
+                    <h4 class="mt-0 mb-1">{{ classFeature.name }}</h4>
                 }
-                <app-text-elements [textElements]="classFeature.textElements" [useBoldTextForHeader]="true"></app-text-elements>
+                <app-text-elements [textElements]="classFeature.textElements" [useBoldTextForHeader]="false"></app-text-elements>
                 <hr>
             }
         </div>
         <div class="col">
             <div class="d-flex justify-content-center">
-                <h4>{{ playerClass?.className + ' Class Techniques' }}</h4>
+                <h3>{{ playerClass?.className + ' Class Techniques' }}</h3>
             </div>
             <app-dynamic-content [content]="playerClass?.classTechniquesDescription?.replace('%s', playerClass?.className ?? '')| keywordProcessor"></app-dynamic-content>
             <app-dynamic-content [content]="commonClassTexts.numberOfTechniquesKnown | keywordProcessor"></app-dynamic-content>

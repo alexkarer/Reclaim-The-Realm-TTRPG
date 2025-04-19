@@ -56,6 +56,8 @@ export class SpellsSearchComponent {
       case SpellDifficulty.ANY: return true;
       case SpellDifficulty.SD_6: return spell.spellDifficulty === 6;
       case SpellDifficulty.SD_9: return spell.spellDifficulty === 9;
+      case SpellDifficulty.SD_15: return spell.spellDifficulty === 15;
+      case SpellDifficulty.SD_25: return spell.spellDifficulty === 25;
     }
   }
 
@@ -112,6 +114,8 @@ enum SpellDifficulty {
   ANY = 'Any Spell Difficulty',
   SD_6 = 'Spell Difficulty 6',
   SD_9 = 'Spell Difficulty 9',
+  SD_15 = 'Spell Difficulty 15',
+  SD_25 = 'Spell Difficulty 25',
 }
 
 enum SpellDiscipline {

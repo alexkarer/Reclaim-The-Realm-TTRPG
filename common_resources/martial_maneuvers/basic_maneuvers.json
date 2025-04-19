@@ -59,7 +59,7 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "2 [AP]",
+            "cost": "1 [AP]",
             "range": "[MELEE RANGE]",
             "target": "1 Creature affected by [RESTRAINED I]",
             "duration": "[INSTANT]",
@@ -223,11 +223,15 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "0 [AP], 1 [STAMINA]",
+            "cost": "[FREE], 1 [STAMINA]",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you fail an [ATTACK], [MARTIAL TEST] or [STR], [AGI] or [CON] [ATTRIBUTE TEST] you can you can increase the Result by a number equal to 3 times the [STAMINA] used."
+            "description": "When you fail a [D20 TEST] you can add 2 to the Result potentially turning it into a Success.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "For each [STAMINA] used you can add further +2."
+            }
         }
     ],
     "tacticalManeuvers": [
@@ -264,6 +268,23 @@
             "target": "1 allied creature",
             "duration": "[INSTANT]",
             "description": "You can swap places with a friendly creature within meele range of you, the friendly creature has to be willing to do that. This movement does not provoke an Opportunity Attack."
+        },
+        {
+            "name": "Prepared Position",
+            "tags": [ "Martial Maneuver (Basic)", "Tactical" ],
+            "requirements": {
+                "requiredLevels": [
+                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
+                ],
+                "requiredAttributes": [ ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ ]
+            },
+            "cost": "2 [AP]",
+            "range": "9m",
+            "target": "unnocupied Space",
+            "duration": "1 [ROUND]",
+            "description": "The next time an enemy enters this space any allied creature can use their [REACTION] and make a Weapon Attack against that Creature."
         }
     ],
     "weaponManeuvers": [

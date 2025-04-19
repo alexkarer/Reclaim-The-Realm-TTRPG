@@ -1,36 +1,38 @@
-___________________________________________________________
-Evaluation for after Playtest:
-
-- Weapon properties necesarry?
-- check if game needs to be simplified
-- Add Wands and Staffs that enable spell basic attacks
-- Robes?
-- hybrid abilities necesarry?
-- have another look at the implementation of the martial training perks
-- Martial Damage
-- spell casting system work?
-
 ____________________________________________________________
-Things to change after Playtest:
+Things to change/evaluate after Playtest:
 
-- barbarian is AGI instead of PER.
+**Big Things**
+- rethink if attacks should miss at all and dodging should just be a Reaction
+  - Every Melee Attack just Hits, additional Effects still require a roll
+  - Maybe treat ranged attacks different, or make the concealment check now rely on the attack.
+  - Aoe Abilities still work as normal
+  - New Reaction to Evade Attack completetly, Parry can do the same thing
+  - Damage should probably be rescaled
+- add fate points / some mechanics to reroll things
+- hybrid abilities necesarry?
+- spell casting system work?
+- Martial Damage
+- check if game needs to be simplified
+- Weapon properties necesarry?
+
+**Minor Things**
+- properly differentiate [FREE] vs 0 [AP]
 - improve layout of character creation 
 - maybe make seperate pages for the individual headers
 - warlock: rename mystic something else
 - adjust equipment item tier
-- add fate points / some mechanics to reroll things
 - rename harndess to stability
-- check barbarian abilities.
 - reduce number of attribute points to 10 maybe
+- have another look at the implementation of the martial training perks
+- Add Wands and Staffs that enable spell basic attacks
+- Robes?
+- change battle recovery to be less useful than resting.
+- rework the way spell abilities interact with each other.
 ___________________________________________________________
 Future Ideas / Nice to have:
 
 flanking should only work in melee.
-
 create cheet sheet
-
-change battle recovery to be less useful than resting.
-
 automatic long rest recovery button.
 
 add activities that can be done during long rests:
@@ -45,11 +47,8 @@ add activities that can be done during long rests:
 - carousing
 
 Massive Injuries should be split into mental and physical, additionally there should be maybe 3 damage type specific tiers.
-
 rule for helping othrs, roll same check, for every 5 above 10 gain +1.
-
 Table for when NPCs drop to 0 [HP] to determine what happens to them.
-
 New keyword: [SAVE LOWERS], status effect gains 1 tier lower.
 
 add faction relations thing: 
@@ -95,6 +94,7 @@ add faction relations thing:
 **Nice to have**
 - have colored abilities and more icons
 - add missing abilities
+- add linking and tooltips for abilities
 
 **Travel/Adventure**
 - More random Tables

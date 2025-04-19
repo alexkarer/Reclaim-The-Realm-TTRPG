@@ -329,6 +329,13 @@
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
+                },
+                { "regularText": null, "headerLine": "TODO", "bulletPoints": null, "ability": null },
+                {
+                    "regularText": "TODO.<br><span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "headerLine": null,
+                    "bulletPoints": null,
+                    "ability": null
                 }
             ]
         },
@@ -431,11 +438,11 @@
             "name": "Elemental Enchantment",
             "tags": [ "Class Technique (Warlock, Elemental Entity)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "1 [AP], 1 Corruptiuon",
+            "cost": "1 [AP], 1 or more Corruptiuon",
             "range": "-",
             "target": "1 Weapon you are wielding",
             "duration": "2 + [LEVEL] [ROUND]",
-            "description": "One Weapon you are wielding is enchanted with the Element of you Entity. Each time you make a Weapon Attack with that Weapon you deal an extra d8 entity damage."
+            "description": "One Weapon you are wielding is enchanted with the Element of you Entity. Each time you make a Weapon Attack with that Weapon you deal an extra d8 entity damage. For each additional Corruption used, your weapon will deal an additional d8 entity damage."
         },
         {
             "name": "Life Steal",

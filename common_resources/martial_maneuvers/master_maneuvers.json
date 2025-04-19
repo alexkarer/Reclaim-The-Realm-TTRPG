@@ -43,23 +43,27 @@
             "description": "You dash forward with supernatural speed towards the location you want to reach, as long you would be able reach that location with your regular movement, you move there now instantly and don’t provoke any opportunity attacks on the way. Additionally no other creatures can perform a [REACTION] against your next Action unless their [AGI] or [PER] is higher than your [AGI] + [STAMINA] spent on the Maneuver"
         },
         {
-            "name": "Wall Run",
-            "tags": [ "Martial Maneuver (Advanced)", "Agile", "Movement" ],
+            "name": "Afterimage",
+            "tags": [ "Martial Maneuver (Master)", "Agile" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
-                    { "amount": 7, "attribute": "[AGI]" }
+                    { "amount": 6, "attribute": "[AGI]" }
                 ],
                 "requiredPerks": [ ],
-                "otherRequirements": [  ]
+                "otherRequirements": [ ]
             },
-            "cost": "1 [MP]",
+            "cost": "1 [AP], 3 [MP]",
             "range": "-",
             "target": "[SELF]",
-            "duration": "[INSTANT]",
-            "description": "You can move one 1.5m across a vertical Wall, provided you moved at least 4.5m in a straight line beforehand. If you end your movement running on a wall you will fall down. You can wall run continuesly for up to [AGI] [MP] after which you need to start again."
+            "duration": "[ROUND]",
+            "description": "The next time you are targeted by an [ATTACK] it targets the Afterimage of you instead and automatically misses.",
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "For each extra [STAMINA] used it works against 1 additional [ATTACk]."
+            }
         }
     ],
     "brawlManeuvers": [
@@ -71,7 +75,7 @@
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
-                    { "amount": 7, "attribute": "[STR]" }
+                    { "amount": 6, "attribute": "[STR]" }
                 ],
                 "requiredPerks": [ "" ],
                 "otherRequirements": [ "" ]
@@ -114,51 +118,47 @@
     ],
     "fortitudeManeuvers": [
         {
-            "name": "",
+            "name": "Keep Going",
             "tags": [ "Martial Maneuver (Master)", "Fortitude" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
-                    { "amount": 1, "attribute": "" }
+                    { "amount": 6, "attribute": "[CON]" }
                 ],
                 "requiredPerks": [ "" ],
                 "otherRequirements": [ "" ]
             },
-            "cost": "",
-            "range": "",
-            "target": "",
-            "duration": "",
-            "description": "",
-            "maneuverPush": {
-                "pushingExtraCost": "",
-                "pushingDescription": ""
-            }
+            "cost": "[FREE], 3 [STAMINA",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "If you would be reduced to 0 [HP] you can use this ability and instead drop to 1 [HP]."
         }
     ],
     "tacticalManeuvers": [
         {
-            "name": "",
+            "name": "Masterful prediction",
             "tags": [ "Martial Maneuver (Master)", "Tactical" ],
             "requirements": {
                 "requiredLevels": [
                     { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
                 ],
                 "requiredAttributes": [
-                    { "amount": 1, "attribute": "" }
+                    { "amount": 6, "attribute": "[INT]" }
                 ],
                 "requiredPerks": [ "" ],
                 "otherRequirements": [ "" ]
             },
-            "cost": "",
-            "range": "",
-            "target": "",
-            "duration": "",
-            "description": "",
+            "cost": "2 [AP]",
+            "range": "12m",
+            "target": "1 creature",
+            "duration": "[ROUND]",
+            "description": "Make an [INT] [MARTIAL TEST] against against [DT] equal to 10+ target [LEVEL] + target [INT]. On a success the DM has to tell you exactly what non-standard abilities it intends to perform where it intends to move. On the creautres next [TURN] it has to perform these exact abilities unless it is not able to. On a failure the DM only tells you 1 ability.",
             "maneuverPush": {
-                "pushingExtraCost": "",
-                "pushingDescription": ""
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "Make the [MARTIAL TEST] with [ADVANTAGE]."
             }
         }
     ],

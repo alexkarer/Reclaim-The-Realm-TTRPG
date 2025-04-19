@@ -12,7 +12,7 @@
                 "cost": "3 [AP], 1 [ARCANA]", "range": "-", "target": "[CONE] (4.5m)", "duration": "[INSTANT]",
                 "description": "You spray a flame in a 4.5m Cone from you, target each creature within the area with a [CON] [SPELL TEST] against the targets [DODGE] and on a success they receive 2d8 + ([SPI] / 4) * d8 fire damage [HALF].",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you deal an additional 1d8 + ([SPI] / 4) * d8 fire damage."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you deal an additional 1d8 + ([SPI] / 4) * d8 fire damage. Additionally every increase of 2 increases the Cone size by 1.5m."
             },
             {
                 "name": "Ignite",
@@ -35,10 +35,23 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "4 [AP], 3 [ARCANA]", "range": "30m", "target": "[SPHERE] 3m", "duration": "[INSTANT]",
+                "cost": "4 [AP], 4 [ARCANA]", "range": "30m", "target": "[SPHERE] 3m", "duration": "[INSTANT]",
                 "description": "You launch a small fire projectile at the designated location that you can see and without amy obstructions. It then errupts in a fiery that hits all creatures within that sphere. Make an [INT] [SPELL TEST] against the creatures [DODGE] on a success they take 6d6 + [SPI] * d6 fire damage [HALF] .",
                 "spellDifficulty": 9,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the radius increases by 1.5m and the damage by 2d6 + ([SPI] / 4) * d6."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase of 2, improve the radius increases by 1.5m and the damage by 2d6 + ([SPI] / 4) * d6."
+            },
+            {
+                "name": "Erruption",
+                "tags": [ "Spell", "[SPELL ABILITY] 3", "Elemental", "Pyromancy", "Geomancy" ],
+                "components": "V (Incantation), S, M (Rocky or Earthen Ground)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "4 [AP], 10 [ARCANA]", "range": "21m", "target": "[SPHERE] 4.5m", "duration": "3 [ROUND]",
+                "description": "Out of the ground a hole with a 4.5m Diameter errupts and a magma stream shoots out of the ground and hits all creatures inside it. Make an [INT] [SPELL TEST] against every creatures [DODGE] on a success they take 10 + [SPI] * d6 fire damage and 5 + [SPI]/2 * d6 physical damage [HALF]. For the remaining duration the Area counts as difficult Terrain and when a creature starts their [TURN] in the area or moves into the area for the first time in their [TURN] they recieve 5d6 + [SPI]/2 *d6 fire damage.",
+                "spellDifficulty": 15,
+                    "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 3 and for every increase of 3, improve the radius by 1.5m and the duration by 1 [ROUND]."
             }
         ],
         "geomancySpell": [
@@ -67,6 +80,19 @@
                 "description": "Make a [MELEE SPELL ATTACK] against the target, on a hit if the [MELEE SPELL ATTACK] exceeds or matches the Targets [TOUGHNESS] they recieve 2d12 + ([SPI] / 4) * d12 poison damage and recieve the [WEAKENED I] status effect for the duration. [HALF]",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage is increased by  1d12 + ([SPI] / 4) * d12."
+            },
+            {
+                "name": "Earthquake",
+                "tags": [ "Spell", "[SPELL ABILITY] 4", "Elemental", "Geomancy" ],
+                "components": "V (Incantation), S, M (Somethign crazy)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "6 [AP], 20 [ARCANA]", "range": "100m", "target": "[SPHERE] 100m", "duration": "[SPI] minutes",
+                "description": "TODO.",
+                "spellDifficulty": 25,
+                "upCastingTheSpell": "-"
             }
         ],
         "hydromancySpells": [
@@ -95,6 +121,19 @@
                 "description": "You create a 3m sphere ice floor at the disignated location. This now counts as difficult Terrain and additionally make a [INT] [SPELL TEST] against every creature currently on the Ice Floor against their [DODGE] on a success those creatures fall prone. Additionally all creatures starting their turn on the Ice floor recieve d6 cold damage.",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase, the sphere increases by 3m, the range by 6m and the damage by 2d6"
+            },
+            {
+                "name": "Blizzard",
+                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Hydromancy", "Aeromancy" ],
+                "components": "V (Incantation), S, M (Clouds in the sky, or fog in the air)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "4 [AP], 4 [ARCANA]", "range": "15m", "target": "[SPHERE] 6m", "duration": "[SPI] rounds",
+                "description": "You summon a raging blizzard within the target area. During the duration of the Spell the following applies. If a creature starts its turn within the Blizzard or enters it for the first time it suffers 4d6 + [SPI]/2 * d6 cold damage. The area is difficult Terrain and every creature within the Blizzard benefits from partial concealment, however every other creature is also partially concealed from them.",
+                "spellDifficulty": 9,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by two and for every increase of 2, improve the range by 3m, the radius by 1.5m and the damage by 1d6 + [SPI]/4 * d6"
             }
         ],
         "aeromancySpells": [
@@ -132,10 +171,23 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "1 [AP], 1 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "end of current turn, [CONCENTRATION] 1",
+                "cost": "1 [AP], 1 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "current [TURN], [CONCENTRATION] 1",
                 "description": "You manipulate the aircurrents and the elemental energy of the air plane around you allowing you to fly. For the duration of the spell you gain fly(1.5m ∗ ([SPI] / 2)) speed.",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "TODO"
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and the duration improves to 1 Minute, increase it by further 3 and the duration improves to 1 hour."
+            },
+            {
+                "name": "Compress",
+                "tags": [ "Spell", "[SPELL ABILITY] 2", "Elemental", "Aeromancy" ],
+                "components": "V (Incantation), S, M(air)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "4 [AP], 4 [ARCANA]", "range": "15m", "target": "[SPHERE] 7.5m", "duration": "[INSTANT]",
+                "description": "You create a vaccum at the center of your area and the air as well as loose objects and creatures within the area are sucked in towards the center. Make a [SPI] [SPELL TEST] against the [HARDNESS] of each creature. On a fail they are moved towards the center and suffer 6d6 phyiscal damage. On a fail they are only moved 1.5m towards the center and suffer no damage.",
+                "spellDifficulty": 9,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase of 2, improve the range by 3m, the radius by 1.5m and the damage by 2d6."
             }
         ]
     },
@@ -229,7 +281,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "4 [AP], 3 [ARCANA]", "range": "6m", "target": "[SPHERE] 4.5m", "duration": "[SPI]/2 rounds, [CONCENTRATION] 1",
+                "cost": "4 [AP], 4 [ARCANA]", "range": "6m", "target": "[SPHERE] 4.5m", "duration": "[SPI]/2 rounds, [CONCENTRATION] 1",
                 "description": "You bless the ground below you and create a 4.5m (3 square) radius sanctuary. Each allied creature (including yourself) that starts its turn in the sancutuary or eneters the area for the first time regains ([SPI]/2) * d6 [HP] and each evil enemy creature that starts its turn there or enters it for the first time recieves ([SPI]/2) * d6 holy damage.",
                 "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and increase the damage/heal by 1d6 and the duration by 1 [ROUND]."
@@ -261,6 +313,19 @@
                 "description": "You target a creature’s soul with a curse that you can see. Make a [SPI] [SPELL TEST] against the targets [WILLPOWER] and on success it sufferes one of the following effects of your choice: [CURSED I], [FRIGHTENED I], [WEAKENED I], [VULNURABLE I], [DEAFENED], [SILENCED]. On a fail the target is affected for just 1 [ROUND].",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target an additional unit"
+            },
+            {
+                "name": "Steal Soul",
+                "tags": [ "Spell", "[SPELL ABILITY] 4", "Cosmic", "Necromancy" ],
+                "components": "V (Curse), S, M(complicated)",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "1 hour, 25 [ARCANA]", "range": "-", "target": "1 soul", "duration": "[INSTANT]",
+                "description": "TODO: Long form Ritual, can remove soul and potentially store it somewhere. Target still lives but has lost soul",
+                "spellDifficulty": 25,
+                "upCastingTheSpell": "-"
             }
         ],
         "shadowSpell": [
@@ -371,10 +436,23 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "3 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "one willing creature", "duration": "10 minutes",
-                "description": "You cause a minor mutation within a creature and can grant them one of the following benefits: <ul><li>Quicken: Their limbs change to be more agile: the creature’s [MP] are increasd by 1 + ([SPI]/2)</li> <li>Natural armor: The target’s skin becomes harder and grows more layers to protect it and it grants physical damage resistance equal to [SPI]. Does not stack with physical damage resistance granted by other armor and is treated as armor for all other effects.</li></ul>",
+                "cost": "1 [AP], 1 [ARCANA]", "range": "6m", "target": "one willing creature", "duration": "[SPI] [ROUND], [CONCENTRATION 0]",
+                "description": "You cause a minor mutation within a creature and can grant them one of the following benefits: <ul><li>Quicken: Their limbs change to be more agile: the creature recieves the [HASTE I] status effect</li> <li>Natural armor: The target’s skin becomes harder and grows more layers to protect it and it grants physical damage resistance equal to SPI. Does not stack with physical damage resistance granted by other armor and is treated as armor for all other effects.</li></ul>",
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target one additional creature and the range increases by 1.5m"
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase of 2 you can target one additional creature and the range increases by 1.5m"
+            },
+            {
+                "name": "Quicken",
+                "tags": [ "Spell", "[SPELL ABILITY] 2", "Manipulation", "Transmutation" ],
+                "components": "V (Incantation), S",
+                "requirements": {
+                    "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
+                    "otherRequirements": [ "Max [ARCANA] > 0" ]
+                },
+                "cost": "2 [AP], 4 [ARCANA]", "range": "[MELEE RANGE]", "target": "one willing creature", "duration": "[SPI] [ROUND], [CONCENTRATION 1]",
+                "description": "You speed up all physical process of the target and it gains the [HASTE II] Status Effect.",
+                "spellDifficulty": 9,
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 4 and the target recieves the [HASTE III] status effect."
             }
         ],
         "conjurationSpells": [

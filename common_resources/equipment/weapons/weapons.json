@@ -8,12 +8,7 @@
             "weightInGram": 500,
             "type": "Simple Weapon",
             "description": [
-                {
-                    "regularText": "A small simple short blade favoured by assasin’s and those looking to conceil their weapon.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "A small simple short blade favoured by assasin’s and those looking to conceil their weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "light", "thrown(4.5/9/18)" ],
             "damage": "light [MARTIAL DAMAGE]"
@@ -26,12 +21,7 @@
             "weightInGram": 2000,
             "type": "Simple Weapon",
             "description": [
-                {
-                    "regularText": "A heavy piece of metal on a stick, not complicated and still dangerous. Can also be a hammer or a similiar bludgeonding weapon",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "A heavy piece of metal on a stick, not complicated and still dangerous. Can also be a hammer or a similiar bludgeonding weapon", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "armour-piercing" ],
             "damage": "medium [MARTIAL DAMAGE]"
@@ -44,12 +34,7 @@
             "weightInGram": 1000,
             "type": "Simple Weapon",
             "description": [
-                {
-                    "regularText": "sharp piece of metal on a stick, the favored weapon of peasents and militia.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "sharp piece of metal on a stick, the favored weapon of peasents and militia.", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "versatile" ],
             "damage": "medium [MARTIAL DAMAGE]"
@@ -62,12 +47,7 @@
             "weightInGram": 3000,
             "type": "Simple Weapon",
             "description": [
-                {
-                    "regularText": "While cumbersome to operate, it is easy to use",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "While cumbersome to operate, it is easy to use", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "two-handed", "ranged(20/40/80)", "loading(1, 2 [AP])" ],
             "damage": "2d6"
@@ -82,12 +62,7 @@
             "weightInGram": 1000,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "flexible small sword: gladius, small scimitar, etc.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "flexible small sword: gladius, small scimitar, etc.", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "light", "duelist" ],
             "damage": "light [MARTIAL DAMAGE]"
@@ -100,12 +75,7 @@
             "weightInGram": 1500,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "The classic",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "The classic", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "versatile", "duelist" ],
             "damage": "medium [MARTIAL DAMAGE]"
@@ -118,12 +88,7 @@
             "weightInGram": 2500,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "Dwarves favourite",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "Dwarves favourite", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "versatile", "armour-piercing" ],
             "damage": "medium [MARTIAL DAMAGE]"
@@ -136,12 +101,7 @@
             "weightInGram": 2000,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "versatile", "shieldbreaker" ],
             "damage": "medium [MARTIAL DAMAGE]"
@@ -154,12 +114,7 @@
             "weightInGram": 4000,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "Can be a halberd, pike, glaive",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "Can be a halberd, pike, glaive", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "two-handed", "reach" ],
             "damage": "heavy [MARTIAL DAMAGE]"
@@ -172,12 +127,7 @@
             "weightInGram": 3000,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "Big sword",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "Big sword", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "heavy", "two-handed", "duelist" ],
             "damage": "heavy [MARTIAL DAMAGE]"
@@ -190,12 +140,7 @@
             "weightInGram": 3000,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "Big hammer",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "Big hammer", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "heavy", "two-handed", "armour-piercing" ],
             "damage": "heavy [MARTIAL DAMAGE]"
@@ -208,12 +153,7 @@
             "weightInGram": 3000,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "Big Axe",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "Big Axe", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "heavy", "two-handed", "shieldbreaker" ],
             "damage": "heavy [MARTIAL DAMAGE]"
@@ -226,12 +166,7 @@
             "weightInGram": 500,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "similiar to a spear, but designed for throwing. Can also be a throwing axe",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "similiar to a spear, but designed for throwing. Can also be a throwing axe", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "thrown(9/18/36)" ],
             "damage": "medium [MARTIAL DAMAGE]"
@@ -244,12 +179,7 @@
             "weightInGram": 1500,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "the classic bow, wielded by trainend archers.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "the classic bow, wielded by trainend archers.", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "two-handed", "ranged (30/60/120)" ],
             "damage": "medium [MARTIAL DAMAGE]"
@@ -262,12 +192,7 @@
             "weightInGram": 7000,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "Large crossbow which is usually only used in siege warfare, often manned by a 2 people simaltanously. If your strength is lower than 3 the reload action requires 4 [AP]",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "Large crossbow which is usually only used in siege warfare, often manned by a 2 people simaltanously. If your strength is lower than 3 the reload action requires 4 [AP]", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "loading(1, 2 [AP])", "two-handed", "ranged(30/60/120" ],
             "damage": "2d12"
@@ -280,12 +205,7 @@
             "weightInGram": 750,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "You require one additional hand for reloading, but it can wield a light weapon or object in the hand simultaneously.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "You require one additional hand for reloading, but it can wield a light weapon or object in the hand simultaneously.", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "loading(1, 2 [AP])", "light", "ranged(6/12/24)" ],
             "damage": "1d8"
@@ -298,12 +218,7 @@
             "weightInGram": 3000,
             "type": "Advanced Weapon",
             "description": [
-                {
-                    "regularText": "A complicated piece of equipment often used stationary in defensive implacements",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                 { "regularText": "A complicated piece of equipment often used stationary in defensive implacements", "headerLine": null, "bulletPoints": null, "ability": null }
             ],
             "properties": [ "loading(5, 4 [AP])", "two-handed", "ranged(6/12/24)" ],
             "damage": "2d4"

@@ -8,12 +8,7 @@
             "weightInGram": 500,
             "type": "Wearable (Boots)",
             "description": [
-                {
-                    "regularText": "Common shoes",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Common shoes", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -24,12 +19,7 @@
             "weightInGram": 1000,
             "type": "Wearable (Boots)",
             "description": [
-                {
-                    "regularText": "The first time you need to use [STAMINA] during Travel, you can use 1 less.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "The first time you need to use [STAMINA] during Travel, you can use 1 less.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -40,24 +30,14 @@
             "weightInGram": 500,
             "type": "Wearable (Boots)",
             "description": [
-                {
-                    "regularText": "Fancy Shoes crafted of the finest Leather and decorations.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "Fancy Shoes crafted of the finest Leather and decorations.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": "Fancy Armor Set Bonus",
                     "bulletPoints": null,
                     "ability": null
                 },
-                {
-                    "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -68,24 +48,14 @@
             "weightInGram": 2000,
             "type": "Wearable (Boots)",
             "description": [
-                {
-                    "regularText": "Sabaton is a metal boot part of Armor.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "Sabaton is a metal boot part of Armor.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": "Metal Armor Set Bonus",
                     "bulletPoints": null,
                     "ability": null
                 },
-                {
-                    "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase the physical resistance by 1.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase the physical resistance by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -96,12 +66,7 @@
             "weightInGram": 1000,
             "type": "Wearable (Clothes)",
             "description": [
-                {
-                    "regularText": "Common Clothes",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Common Clothes", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -112,24 +77,14 @@
             "weightInGram": 2000,
             "type": "Wearable (Clothes)",
             "description": [
-                {
-                    "regularText": "You gain a +1 bonus to any [CHA] [ATTRIBUTE TEST] when in Settlements, assuming no armor is worn over these clothes.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "You gain a +1 bonus to any [CHA] [ATTRIBUTE TEST] when in Settlements, assuming no armor is worn over these clothes.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": "Fancy Armor Set Bonus",
                     "bulletPoints": null,
                     "ability": null
                 },
-                {
-                    "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -140,12 +95,7 @@
             "weightInGram": 1500,
             "type": "Wearable (Clothes)",
             "description": [
-                {
-                    "regularText": "Comfortable Clothes designed for long journeys.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Comfortable Clothes designed for long journeys.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -156,12 +106,7 @@
             "weightInGram": 4000,
             "type": "Wearable (Clothes)",
             "description": [
-                {
-                    "regularText": "These winter clothes will keep you comfortable in Cold Temperatures and come with a cloak that can be woarn over armor. While wearing these clothes you gain Frost Resistance 1, but you cannot wear these clothes in Temperatures over 15°.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "These winter clothes will keep you comfortable in Cold Temperatures and come with a cloak that can be woarn over armor. While wearing these clothes you gain Frost Resistance 1, but you cannot wear these clothes in Temperatures over 15°.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -172,12 +117,7 @@
             "weightInGram": 250,
             "type": "Wearable (Gloves)",
             "description": [
-                {
-                    "regularText": "Comfortable Leather Gloves",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Comfortable Leather Gloves", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -188,24 +128,14 @@
             "weightInGram": 100,
             "type": "Wearable (Gloves)",
             "description": [
-                {
-                    "regularText": "You gain a +1 bonus to any [CHA] [ATTRIBUTE TEST] when in Settlements.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "You gain a +1 bonus to any [CHA] [ATTRIBUTE TEST] when in Settlements.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": "Fancy Armor Set Bonus",
                     "bulletPoints": null,
                     "ability": null
                 },
-                {
-                    "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -216,24 +146,14 @@
             "weightInGram": 1000,
             "type": "Wearable (Gloves)",
             "description": [
-                {
-                    "regularText": "Sturdy Metal Gauntlets.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "Sturdy Metal Gauntlets.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": "Metal Armor Set Bonus",
                     "bulletPoints": null,
                     "ability": null
                 },
-                {
-                    "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase the physical resistance by 1.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase the physical resistance by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -245,11 +165,7 @@
             "type": "Wearable (Helmet)",
             "description": [
                 {
-                    "regularText": "For those who whish not to be seen.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                    "regularText": "For those who whish not to be seen.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -261,11 +177,7 @@
             "type": "Wearable (Helmet)",
             "description": [
                 {
-                    "regularText": "A finely crafted and extravagant hat.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                    "regularText": "A finely crafted and extravagant hat.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": "Fancy Armor Set Bonus",
@@ -273,11 +185,7 @@
                     "ability": null
                 },
                 {
-                    "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                    "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [ATTRIBUTE TEST] when interacting with people of high station or law-abiding people in Settlements..", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -289,11 +197,7 @@
             "type": "Wearable (Helmet)",
             "description": [
                 {
-                    "regularText": "A steel helmet comes with a Visor which still allows you to retain Vision when outside of combat.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                    "regularText": "A steel helmet comes with a Visor which still allows you to retain Vision when outside of combat.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": "Metal Armor Set Bonus",
@@ -301,11 +205,7 @@
                     "ability": null
                 },
                 {
-                    "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase the physical resistance by 1.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                    "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase the physical resistance by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         }
     ],
@@ -319,11 +219,7 @@
             "type": "Consumable (Potion)",
             "description": [
                 {
-                    "regularText": "You can use this ability to consume the Potion. Once consumed you can't consume this Potion again and you have an empty vial left over.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                    "regularText": "You can use this ability to consume the Potion. Once consumed you can't consume this Potion again and you have an empty vial left over.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": null,
@@ -349,12 +245,7 @@
             "weightInGram": 250,
             "type": "Consumable (Potion)",
             "description": [
-                {
-                    "regularText": "You can use this ability to consume the Potion. Once consumed you can't consume this Potion again and you have an empty vial left over.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "You can use this ability to consume the Potion. Once consumed you can't consume this Potion again and you have an empty vial left over.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": null,
@@ -380,12 +271,7 @@
             "weightInGram": 250,
             "type": "Consumable (Potion)",
             "description": [
-                {
-                    "regularText": "You can use this ability to consume the Potion. Once consumed you can't consume this Potion again and you have an empty vial left over.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "You can use this ability to consume the Potion. Once consumed you can't consume this Potion again and you have an empty vial left over.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": null,
@@ -411,12 +297,7 @@
             "weightInGram": 100,
             "type": "Consumable",
             "description": [
-                {
-                    "regularText": "A small piece of decently sterile cloth used to staunch wounds. Once used, it can't be used again.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "A small piece of decently sterile cloth used to staunch wounds. Once used, it can't be used again.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": null,
@@ -442,12 +323,7 @@
             "weightInGram": 250,
             "type": "Consumable",
             "description": [
-                {
-                    "regularText": "A corrosive fluid. Once used the item is consumed.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "A corrosive fluid. Once used the item is consumed.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": null,
@@ -473,12 +349,7 @@
             "weightInGram": 500,
             "type": "Consumable",
             "description": [
-                {
-                    "regularText": "A highly flammable fluid. Once used the item is consumed.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "A highly flammable fluid. Once used the item is consumed.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": null,
@@ -504,12 +375,7 @@
             "weightInGram": 250,
             "type": "Consumable",
             "description": [
-                {
-                    "regularText": "This water was blessed Good Etheral energy. Once used the item is consumed.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "This water was blessed Good Etheral energy. Once used the item is consumed.", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": null,
@@ -552,12 +418,7 @@
             "weightInGram": 2000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "A brute alternative to Thieves Tools. Using a crowbar grants a +2 to bonus any [STR] [ATTRIBUTE TEST] used to force open doors or other similiar objects.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "A brute alternative to Thieves Tools. Using a crowbar grants a +2 to bonus any [STR] [ATTRIBUTE TEST] used to force open doors or other similiar objects.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -568,12 +429,7 @@
             "weightInGram": 2000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "Useful for digging up graves.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Useful for digging up graves.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -584,12 +440,7 @@
             "weightInGram": 2000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "Rock and Stone!",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Rock and Stone!", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -600,12 +451,7 @@
             "weightInGram": 2000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "Alternative to punching Trees.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Alternative to punching Trees.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -616,12 +462,7 @@
             "weightInGram": 500,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "Thieves Tools contain various lockpicks, small files, oil and other fine instruments. These tools can be used to lock and unlock doors and disarm traps.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Thieves Tools contain various lockpicks, small files, oil and other fine instruments. These tools can be used to lock and unlock doors and disarm traps.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -632,12 +473,7 @@
             "weightInGram": 3000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "This Medi-kit contains various herbs, potions and bandages to treat wounded creatures. It has 10 uses and one use can be replenished at most towns at an apothacary for the price of 3 sc. You can use the medi-kit the following ways:",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
+                { "regularText": "This Medi-kit contains various herbs, potions and bandages to treat wounded creatures. It has 10 uses and one use can be replenished at most towns at an apothacary for the price of 3 sc. You can use the medi-kit the following ways:", "headerLine": null, "bulletPoints": null, "ability": null },
                 {
                     "regularText": null,
                     "headerLine": null,
@@ -678,12 +514,7 @@
             "weightInGram": 7000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "Smith’s Tools contains a set of prongs, hammers, files, used for shaping and manipulating metals.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Smith’s Tools contains a set of prongs, hammers, files, used for shaping and manipulating metals.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -694,12 +525,7 @@
             "weightInGram": 5000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "Alchemy Kit contains various vials and measurement instruments and various reagents and catalysts for creating potions.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Alchemy Kit contains various vials and measurement instruments and various reagents and catalysts for creating potions.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -710,12 +536,7 @@
             "weightInGram": 3000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "Jeweller’s Tools contain variour fine tools of analyzing, cutting and polishing fine gemstones and crystals.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Jeweller’s Tools contain variour fine tools of analyzing, cutting and polishing fine gemstones and crystals.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -726,12 +547,7 @@
             "weightInGram": 1000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "Tailor’s Set contains scissors, measurement tools, needles and other sewing tools to create and repair clothing.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Tailor’s Set contains scissors, measurement tools, needles and other sewing tools to create and repair clothing.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -742,12 +558,7 @@
             "weightInGram": 5000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "Carpenter’s Tools contain hammers, saws, planes, axes and other tools for woodworking.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Carpenter’s Tools contain hammers, saws, planes, axes and other tools for woodworking.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -758,12 +569,7 @@
             "weightInGram": 1000,
             "type": "Tool",
             "description": [
-                {
-                    "regularText": "This set contains a small cylinder where food can be prepared and eaten out of and additional small cooking tools and cutlery.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "This set contains a small cylinder where food can be prepared and eaten out of and additional small cooking tools and cutlery.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         }
     ],
@@ -776,12 +582,7 @@
             "weightInGram": 5000,
             "type": "Survival",
             "description": [
-                {
-                    "regularText": "A small tent that can be set up within 10 minutes and has comfortable space for 1 person and 2 persons if need be.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "A small tent that can be set up within 10 minutes and has comfortable space for 1 person and 2 persons if need be.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -792,12 +593,7 @@
             "weightInGram": 2000,
             "type": "Survival",
             "description": [
-                {
-                    "regularText": "Durable and portable bedding consisting of sewn together leather and wool. Not the most comfortable, but good enough for travel.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "Durable and portable bedding consisting of sewn together leather and wool. Not the most comfortable, but good enough for travel.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -808,12 +604,7 @@
             "weightInGram": 2500,
             "type": "Survival",
             "description": [
-                {
-                    "regularText": "This is a durable container for water made out of leather that is able to hold 2 liters of liquid.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "This is a durable container for water made out of leather that is able to hold 2 liters of liquid.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -824,12 +615,7 @@
             "weightInGram": 500,
             "type": "Survival",
             "description": [
-                {
-                    "regularText": "A ration that contains long lasting food of local variety that can last for multiple weeks or even months. One such ration is enough to sustain one medium creature for 1 day.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "A ration that contains long lasting food of local variety that can last for multiple weeks or even months. One such ration is enough to sustain one medium creature for 1 day.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -840,12 +626,7 @@
             "weightInGram": 1000,
             "type": "Survival",
             "description": [
-                {
-                    "regularText": "This set contains flintstone, steel to ignite spark and easily flammable tinder.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "This set contains flintstone, steel to ignite spark and easily flammable tinder.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -856,12 +637,7 @@
             "weightInGram": 250,
             "type": "Survival",
             "description": [
-                {
-                    "regularText": "When a torch is lit, it can shine light(6m/12m) for 1 hour. Additionally a torch can act as a weapon. It has the light property and on a hit does 1d4 fire damage instead of your [MARTIAL DAMAGE].",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "When a torch is lit, it can shine light(6m/12m) for 1 hour. Additionally a torch can act as a weapon. It has the light property and on a hit does 1d4 fire damage instead of your [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -872,12 +648,7 @@
             "weightInGram": 3000,
             "type": "Survival",
             "description": [
-                {
-                    "regularText": "A sturdy backpack with room for your essentials",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "A sturdy backpack with room for your essentials", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -888,12 +659,7 @@
             "weightInGram": 250,
             "type": "Survival",
             "description": [
-                {
-                    "regularText": "A small leather pouch where you can store your valuables.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "A small leather pouch where you can store your valuables.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         },
         {
@@ -904,12 +670,7 @@
             "weightInGram": 5000,
             "type": "Survival",
             "description": [
-                {
-                    "regularText": "A 10m long heavy rope that can reliably hold 500 kg of weight.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
+                { "regularText": "A 10m long heavy rope that can reliably hold 500 kg of weight.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         }
     ]
