@@ -202,7 +202,7 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "When suffer a point of [EXHAUSTION] you can instead make a [TOUGHNESS] [SAVE] against a [DT] 15. If this [SAVE] was successful you don’t suffer the point of [EXHAUSTION], however the [DT] to resist next time is increased by 5. When you complete a Long Rest the [DT] resets again.",
+                    "regularText": "When suffer a point of [EXHAUSTION] you can instead make a [TOUGHNESS] [SAVE] against a [DT] 10. If this [SAVE] was successful you don’t suffer the point of [EXHAUSTION], however the [DT] to resist next time is increased by 5. When you complete a Long Rest the [DT] resets again.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -210,12 +210,12 @@
             ]
         },
         {
-            "name": "Brutal",
-            "levels": [ 3 ],
+            "name": "Improved Rage",
+            "levels": [ 4,8,12 ],
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "Each time you make a [MELEE MARTIAL ATTACK] you can add your [LEVEL] to the damage.",
+                    "regularText": "You now can gain Rage on additional time per [ROUND] when making a [MARTIAL MELEE ATTACK] or recieving Damage.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null

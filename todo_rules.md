@@ -10,7 +10,8 @@ Things to change/evaluate after Playtest:
   - Damage should probably be rescaled
 - add fate points / some mechanics to reroll things
 - hybrid abilities necesarry?
-- spell casting system work?
+- does spell casting system work
+  - Should it also use martial damage system?
 - Martial Damage
 - check if game needs to be simplified
 - Weapon properties necesarry?
@@ -28,6 +29,7 @@ Things to change/evaluate after Playtest:
 - Robes?
 - change battle recovery to be less useful than resting.
 - rework the way spell abilities interact with each other.
+- Permanent Injuries should only trigger when reduced to 0 [HP] or at Deaths Door.
 ___________________________________________________________
 Future Ideas / Nice to have:
 
@@ -40,16 +42,27 @@ add activities that can be done during long rests:
 - research
 - community service
 - spend time with loved ones
-- community service.
+- Work (Tool, Medicine or smth else)
 - go undercover
 - improve relations with faction
 - religous service
 - carousing
+- entertainment
+- medical servies that speed up healing.s
 
 Massive Injuries should be split into mental and physical, additionally there should be maybe 3 damage type specific tiers.
 rule for helping othrs, roll same check, for every 5 above 10 gain +1.
 Table for when NPCs drop to 0 [HP] to determine what happens to them.
 New keyword: [SAVE LOWERS], status effect gains 1 tier lower.
+
+There should be a move resist stat that deterimes how much less you are moved.
+- Tiny: 3x
+- Small 2x
+- medium 1x
+- Large 1/2
+- Huge 1/3
+- Gargantuan 1/4
+- Titanic 1/5s
 
 add faction relations thing: 
 - should be adventure specific
@@ -108,3 +121,4 @@ add faction relations thing:
   - Increases the longer one stays in the Riftlands.
 - Add Terrain Tiers
 - when travelling, long rest can be made withotu food water but then get exhaustion which can't be recovered.
+- Travel encounters should only give 1/4 XP.

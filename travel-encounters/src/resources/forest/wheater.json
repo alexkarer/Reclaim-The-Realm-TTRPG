@@ -1,0 +1,11 @@
+{
+    "temperatureTable": [
+        { "d100Lower": 0, "d100Upper": 0, "temperature": "" }
+    ],
+    "precipitationTable": [
+        { "d100Lower": 0, "d100Upper": 0, "precipitation": "" }
+    ],
+    "specialPhenomanonTable": [
+        { "d100Lower": 0, "d100Upper": 0, "specialPhenomanon": "" }
+    ]
+}

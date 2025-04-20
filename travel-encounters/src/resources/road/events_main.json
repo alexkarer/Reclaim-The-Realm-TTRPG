@@ -1,0 +1,6 @@
+[
+    { "d100Lower": 0, "d100Upper": 0, "event": "No Encounter" },
+    { "d100Lower": 0, "d100Upper": 0, "event": "Exploration Event" },
+    { "d100Lower": 0, "d100Upper": 0, "event": "Roleplay Encounter" },
+    { "d100Lower": 0, "d100Upper": 0, "event": "Combat Encounter" }
+]

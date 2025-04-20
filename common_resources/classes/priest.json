@@ -566,11 +566,11 @@
             "name": "Certainty",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
-            "cost": "0 [AP], 2 matching AD",
+            "cost": "0 [AP], 2 or more matching AD",
             "range": "-",
             "target": "self",
-            "duration": "[INSTANT]",
-            "description": "For the next [D20 TEST] you make during your turn, don’t roll a dice, instead it is a unmodified roll of 10. When this ability is used with 3 matching AD the roll becomes a 16 and when used with 4 matching AD the roll becomes a 20."
+            "duration": "1 [TURN]",
+            "description": "For the next [D20 TEST] you make don’t roll a dice, instead it is a unmodified roll of 10. When this ability is used with 3 matching AD the roll becomes a 16 and when used with 4 matching AD the roll becomes a 20."
         },
         {
             "name": "Sanctified Shackles",
@@ -586,11 +586,11 @@
             "name": "Unyielding",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
-            "cost": "1 reaction, 3 matching AD",
+            "cost": "1 [REACTION], 3 matching AD",
             "range": "-",
             "target": "self",
             "duration": "[INSTANT]",
-            "description": "When you fail a [SAVE] you can turn add your [LEVEL] to the roll."
+            "description": "When you fail a [SAVE] you can turn add your [LEVEL] to the result."
         },
         {
             "name": "Self Restoration",
@@ -611,16 +611,6 @@
             "target": "1 creature",
             "duration": "[INSTANT]",
             "description": "After a creature made a [D20 TEST] you can use this feature and the creature must reroll the test and take the second result."
-        },
-        {
-            "name": "Blessed Cast",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE/N Alignment" ] },
-            "cost": "0 [AP], 4 unique AD",
-            "range": "-",
-            "target": "self",
-            "duration": "[INSTANT]",
-            "description": "The next spell you cast is cast as if it was cast one Spell Power higher without needing to expend extra [ARCANA] however if it is higher than your Spell Power Maximum you will still have to make a [SPELLCASTING TEST] to prevent an arcanae misshap as if you would upcast normally."
         }
     ]
 }

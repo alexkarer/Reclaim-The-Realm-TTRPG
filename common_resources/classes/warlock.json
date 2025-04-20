@@ -311,7 +311,7 @@
                 },
                 { "regularText": null, "headerLine": "Unnatural Senses", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "TODO.<br><span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "regularText": "You gain darkvision equal to ([LEVEL] m) and you can use your [SPI] instead of your [PER] for any [ATTRIBUTE TEST] that relies on your 5 senses.<br><span class=\"fw-bold\">Corruption Effect: </span>TODO",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -422,7 +422,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You immediatly gain 1 [ARCANA], 1 [STAMINA] or you regain [SPI]+[LEVEL] [HP]."
+            "description": "You immediatly gain one of 1 [ARCANA], 1 [STAMINA], [SPI]+[LEVEL] [HP]."
         },
         {
             "name": "Push beyond mortal means",
@@ -453,6 +453,66 @@
             "target": "[SELF]",
             "duration": "[INSTANT]",
             "description": "When you make [MELEE MARTIAL ATTACK] or [MELEE SPELL ATTACK] you can use this Ability. You deal an extra d8 + ([LEVEL]/4) d8 entity damage. You then regain [HP] equal to the amount of entity damage you dealt."
+        },
+        {
+            "name": "Manifest Aspect",
+            "tags": [ "Class Technique (Warlock)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "2 [AP], 2 Corruption",
+            "range": "6m",
+            "target": "Unnocpuied Space",
+            "duration": "2 + [LEVEL] [ROUND]",
+            "description": "You summon a creature of the same type as your Entity to aid you in combat. The creature has [HP] equal to 10 * your [LEVEL] and uses your [ATTACK] bonuses and deals damage as described in the Statblock. For the defenses and attributes it uses your values slightly modified as described also in the Statblock. In each of your [TURN] you can use 1 [AP] to direct the creature and use one of it's Abilities."
+        },
+        {
+            "name": "Entity Cast",
+            "tags": [ "Class Technique (Warlock)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 1+ Corruption",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "[INSTANT]",
+            "description": "When ou cas a Spell of a Discipline associated with your Entity, you can use this Ability. For each Corruption used you can choose one effect:<br>Reduce [ARCANA] cost by 2.<br>Reduce [AP] Cost by 1 (to a minimum of 1).<br>Treat your [SPI] 3 higher for the purposes of casting this Spell."
+        },
+        {
+            "name": "Partial Transformation: Body",
+            "tags": [ "Class Technique (Warlock)" ],
+            "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "1 [AP], 2 Corruption",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "1 minute",
+            "description": "Increase your [MARTIAL DAMAGE] as if your relevant Attribute was 2 higher, Increase your [HARDNESS] and [TOUGHNESS] by 3, Gain 2 extra [MP]. Only one Transformantion Class Technique can be used per [TURN]."
+        },
+        {
+            "name": "Partial Transformation: Mind",
+            "tags": [ "Class Technique (Warlock)" ],
+            "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "1 [AP], 2 Corruption",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "1 minute",
+            "description": "Increase [WILLPOWER] by 3, Gain a +3 bonus to any [SPELL TEST] and [SPELL CAST TEST]. Only one Transformantion Class Technique can be used per [TURN]."
+        },
+        {
+            "name": "Partial Transformation: Senses",
+            "tags": [ "Class Technique (Warlock)" ],
+            "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "1 [AP], 2 Corruption",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "1 minute",
+            "description": "Increase [DODGE] by 3. Gain +3 bonus to any [ATTACK], you ignore any concealment bonuses from creatures that are within [LEVEL] m. Only one Transformantion Class Technique can be used per [TURN]."
+        },
+        {
+            "name": "Full Transformation",
+            "tags": [ "Class Technique (Warlock)" ],
+            "requirements": { "requiredLevels": [ { "amount": 8, "levelType": "[LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "1 [AP], 1 Corruption",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "-",
+            "description": "Requires all 3 partial transformations to be done. Your creature type changes to match your entity (Elemental, Cosmic). Increase your [AP] by 1. You halve all damage you recieve (before any other resistances are applied). All other partial transformation bonuses remain active as long this ability lasts. Requires you to spend 1 Corruption at the start of each of your [TURN] for this ability to remain active. Only one Transformantion Class Technique can be used per [TURN]."
         }
     ]
 }

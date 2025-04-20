@@ -314,7 +314,7 @@
             "description": "During cobmat there are several situations where combatants can gain small advantages.",
             "cover": "small cover: unmodified roll (25%)1-5 will always hit cover + 2 [DODGE] and shield block, medium cover: unmodified roll (50%) 1-10 will always hit cover + 4 [DODGE] and shield block, large cover: unmodified roll (75%) 1-15 will always hit cover + 6 [DODGE] and shield block",
             "prone": "Any [MELEE ATTACK] has advantage against you. Any [MELEE ATTACK] made by you has [DISADVANTAGE]. Additionally you always recieve small cover against any [RANGED ATTACK], if you already have cover, cover bonus is increased as it makes sense.",
-            "flanking": "-2 [DODGE], -4 shield block",
+            "flanking": "+2 [MELEE ATTACK] against target if an allied creature is also within [MELEE RANGE] at the opposite side.",
             "highGrounnd": "+2 [RANGED ATTACK] when targeting a creature that is 3m below you.",
             "lowGround": "-2 [RANGED ATTACK] when targeting a creature that is 3m above you.",
             "concealment": "A concealed creature is a creature that is only partially or not visible to the currently acting creature. When a concealed creature is targeted by an abilitiy (aura and area effects not included) the targeter has to make a [PER] Awareness [SKILL TEST]. The [DT] is tha targets [AGI] Stealth + either 5 (partial concealment) or 15 (full concealment).<br>If a creature targets another creature it is concealed from with an [ATTACK], it recieves a +5 bonus for partial concealment or [ADVANTAGE] with a +5 bonus for full concealment."

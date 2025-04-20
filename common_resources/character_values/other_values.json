@@ -39,13 +39,13 @@
         {
             "name": "Tiny",
             "strengthBonus": -4,
-            "dodgeBonus": 6,
+            "dodgeBonus": 8,
             "otherSizeModifications": "4 Tiny creatures can fit in 1 square"
         },
         {
             "name": "Small",
             "strengthBonus": -2,
-            "dodgeBonus": 3,
+            "dodgeBonus": 4,
             "otherSizeModifications": "2 Small creatures can fit in 1 square"
         },
         {
@@ -57,25 +57,25 @@
         {
             "name": "Large",
             "strengthBonus": 2,
-            "dodgeBonus": -3,
+            "dodgeBonus": -4,
             "otherSizeModifications": "A Large creature takes up 2-4 squares."
         },
         {
             "name": "Huge",
             "strengthBonus": 4,
-            "dodgeBonus": -6,
+            "dodgeBonus": -8,
             "otherSizeModifications": "base reach now 3m 1 [MP] moves 3m, A Huge creature takes up 5-9 squares."
         },
         {
             "name": "Gargantuan",
             "strengthBonus": 6,
-            "dodgeBonus": -9,
+            "dodgeBonus": -12,
             "otherSizeModifications": "base reach now 3m, 1 [MP] moves 3m, A Gargantuan creature takes up 10-25 squares."
         },
         {
             "name": "Titanic",
             "strengthBonus": 8,
-            "dodgeBonus": -12,
+            "dodgeBonus": -16,
             "otherSizeModifications": "base reach now 4.5m, 1 [MP] moves 4.5m, A Titanic creature takes up more than 25 squares."
         }
     ]
