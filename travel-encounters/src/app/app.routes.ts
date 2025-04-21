@@ -3,7 +3,7 @@ import { TravelEncountersComponent } from './travel-encounters/travel-encounters
 
 export const routes: Routes = [
     {
-        path: '/',
+        path: '',
         component: TravelEncountersComponent
     }
 ];

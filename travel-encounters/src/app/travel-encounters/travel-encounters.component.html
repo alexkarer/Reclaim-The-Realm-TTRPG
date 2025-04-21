@@ -1,1 +1,34 @@
-<p>travel-encounters works!</p>
+<div>
+    <div class="d-flex justify-content-center mt-5">
+        <h4 class="me-2">Terrain Type</h4>
+        <div ngbDropdown class="d-inline-block me-4">
+            <button type="button" class="btn btn-outline-primary" id="dropdownTerrain" ngbDropdownToggle>{{ selectedTerrainType }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownTerrain">
+                <button ngbDropdownItem (click)="selectedTerrainType = TerrainType.ROAD">{{ TerrainType.ROAD }}</button>
+                <button ngbDropdownItem (click)="selectedTerrainType = TerrainType.GRASSLAND">{{ TerrainType.GRASSLAND }}</button>
+                <button ngbDropdownItem (click)="selectedTerrainType = TerrainType.FOREST">{{ TerrainType.FOREST }}</button>
+                <button ngbDropdownItem (click)="selectedTerrainType = TerrainType.SETTLEMENT">{{ TerrainType.SETTLEMENT }}</button>
+                <button ngbDropdownItem (click)="selectedTerrainType = TerrainType.RIFTLANDS">{{ TerrainType.RIFTLANDS }}</button>
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-success" (click)="generateTravelEncounter()">Generate</button>
+    </div>
+    <hr>
+    <div class="mt-5 container">
+        <div class="row">
+            <div class="col">
+                <span class="fw-bold fs-5">Weather: </span><span class="fs-5">{{ weather }}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="fw-bold fs-5">Travel Circumstance: </span><span  class="fs-5">{{ travelCircumstance }}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="fw-bold fs-5">Travel Event: </span><span class="fs-5">{{ travelEvent }}</span>
+            </div>
+        </div>
+    </div>
+</div>

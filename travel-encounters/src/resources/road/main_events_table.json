@@ -1,0 +1,10 @@
+{
+    "name": "Road - Events",
+    "upperLimit": 100,
+    "table": [
+        { "lower": 1, "upper": 50, "result": "-" },
+        { "lower": 51, "upper": 75, "result": "[TABLE Road - Roleplay Encounters]" },
+        { "lower": 76, "upper": 95, "result": "[TABLE Road - Exploration Events]" },
+        { "lower": 96, "upper": 100, "result": "[TABLE Road - Combat Encounters]" }
+    ]
+}

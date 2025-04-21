@@ -1,0 +1,37 @@
+{
+    "temperatureTable": {
+        "name": "Grassland - Temperature",
+        "upperLimit": 100,
+        "table": [
+            { "lower": 1, "upper": 70, "result": "Temperature is Normal for the Season" },
+            { "lower": 71, "upper": 85, "result": "Temperature is [EVAL 3d6]° colder than normal." },
+            { "lower": 86, "upper": 100, "result": "Temperature is [EVAL 3d6]° warmer than normal." }
+        ]
+    },
+    "precipitationTable": {
+        "name": "Grassland - Precipitation",
+        "upperLimit": 100,
+        "table": [
+            { "lower": 1, "upper": 60, "result": "no precipitation" },
+            { "lower": 65, "upper": 90, "result": "light rain or snowfall" },
+            { "lower": 91, "upper": 100, "result": "heavy rain or snowfall, Travel Speed reduced by 1." }
+        ]
+    },
+    "specialPhenomanonTable": {
+        "name": "Grassland - Special Phenomanon",
+        "upperLimit": 100,
+        "table": [
+            { "lower": 1, "upper": 90, "result": "No Phenomanon" },
+            { "lower": 91, "upper": 91, "result": "-" },
+            { "lower": 92, "upper": 92, "result": "-" },
+            { "lower": 93, "upper": 93, "result": "-" },
+            { "lower": 94, "upper": 94, "result": "-" },
+            { "lower": 95, "upper": 95, "result": "-" },
+            { "lower": 96, "upper": 96, "result": "-" },
+            { "lower": 97, "upper": 97, "result": "-" },
+            { "lower": 98, "upper": 98, "result": "-" },
+            { "lower": 99, "upper": 99, "result": "-" },
+            { "lower": 100, "upper": 100, "result": "-" }
+        ]
+    }
+}

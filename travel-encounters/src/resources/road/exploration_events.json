@@ -1,6 +1,9 @@
-[
-    { "d100Lower": 0, "d100Upper": 0, "event": "" },
-    { "d100Lower": 0, "d100Upper": 0, "event": "" },
-    { "d100Lower": 0, "d100Upper": 0, "event": "" },
-    { "d100Lower": 0, "d100Upper": 0, "event": "" }
-]
+{
+    "name": "Road - Exploration Events",
+    "upperLimit": 3,
+    "table": [
+        { "lower": 1, "upper": 1, "result": "A roadside tree bears carvings of names, dates, and one ominous message scratched deeper." },
+        { "lower": 2, "upper": 2, "result": "An abandoned merchant cart, still upright, sits in the grass — untouched for days" },
+        { "lower": 3, "upper": 3, "result": "A messenger pigeon huddles around a shredded scroll" }
+    ]
+}

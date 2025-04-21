@@ -8,6 +8,7 @@ Things to change/evaluate after Playtest:
   - Aoe Abilities still work as normal
   - New Reaction to Evade Attack completetly, Parry can do the same thing
   - Damage should probably be rescaled
+- consider moving attack back to the DM.
 - add fate points / some mechanics to reroll things
 - hybrid abilities necesarry?
 - does spell casting system work

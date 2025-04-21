@@ -1,0 +1,7 @@
+{
+    "name": "Riftlands - Travel Circumstances",
+    "upperLimit": 1,
+    "table": [
+        { "lower": 1, "upper": 1, "result": "TODO needs to be filled with lots of interresting stuff" }
+    ]
+}

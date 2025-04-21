@@ -1,0 +1,38 @@
+{
+    "temperatureTable": {
+        "name": "Riftlands - Temperature",
+        "upperLimit": 100,
+        "table": [
+            { "lower": 1, "upper": 70, "result": "TODO" },
+            { "lower": 71, "upper": 85, "result": "TODO" },
+            { "lower": 86, "upper": 100, "result": "TODO" }
+        ]
+    },
+    "precipitationTable": {
+        "name": "Riftlands - Precipitation",
+        "upperLimit": 100,
+        "table": [
+            { "lower": 1, "upper": 60, "result": "TODO" },
+            { "lower": 65, "upper": 90, "result": "TODO" },
+            { "lower": 91, "upper": 100, "result": "TODO" }
+        ]
+    },
+    "specialPhenomanonTable": {
+        "name": "Riftlands - Special Phenomanon",
+        "upperLimit": 100,
+        "table": [
+    
+            { "lower": 1, "upper": 20, "result": "No Phenomanon" },
+            { "lower": 91, "upper": 91, "result": "TODO" },
+            { "lower": 92, "upper": 92, "result": "TODO" },
+            { "lower": 93, "upper": 93, "result": "TODO" },
+            { "lower": 94, "upper": 94, "result": "TODO" },
+            { "lower": 95, "upper": 95, "result": "TODO" },
+            { "lower": 96, "upper": 96, "result": "TODO" },
+            { "lower": 97, "upper": 97, "result": "TODO" },
+            { "lower": 98, "upper": 98, "result": "TODO" },
+            { "lower": 99, "upper": 99, "result": "TODO" },
+            { "lower": 100, "upper": 100, "result": "TODO" }
+        ]
+    }
+}

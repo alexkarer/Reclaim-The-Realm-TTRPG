@@ -1,0 +1,10 @@
+{
+    "name": "Riftlands - Events",
+    "upperLimit": 100,
+    "table": [
+        { "lower": 1, "upper": 30, "result": "No Event" },
+        { "lower": 31, "upper": 70, "result": "[TABLE Riftlands - Exploration Events]" },
+        { "lower": 71, "upper": 95, "result": "[TABLE Riftlands - Combat Encounters]" },
+        { "lower": 96, "upper": 100, "result": "[TABLE Riftlands - Roleplay Encounters]" }
+    ]
+}

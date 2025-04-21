@@ -1,6 +1,10 @@
-[
-    { "d100Lower": 0, "d100Upper": 0, "event": "" },
-    { "d100Lower": 0, "d100Upper": 0, "event": "" },
-    { "d100Lower": 0, "d100Upper": 0, "event": "" },
-    { "d100Lower": 0, "d100Upper": 0, "event": "" }
-]
+{
+    "name": "Road - Combat Encounters",
+    "upperLimit": 3,
+    "table": [
+        { "lower": 1, "upper": 1, "result": "A merchant caravan is under attack and shouts for aid." },
+        { "lower": 2, "upper": 2, "result": "Bandits try and rob the party, they will first urge them to give up their possessions." },
+        { "lower": 3, "upper": 3, "result": "Bounty Hunters with a Bounty of the Party or one of the Party will try and capture them, dead or maybe alive." }
+    ]
+
+}

@@ -1,6 +1,10 @@
-[
-    { "d100Lower": 0, "d100Upper": 0, "event": "" },
-    { "d100Lower": 0, "d100Upper": 0, "event": "" },
-    { "d100Lower": 0, "d100Upper": 0, "event": "" },
-    { "d100Lower": 0, "d100Upper": 0, "event": "" }
-]
+{
+    "name": "Road - Roleplay Encounters",
+    "upperLimit": 4,
+    "table": [
+        { "lower": 1, "upper": 1, "result": "You meet someone you have met before." },
+        { "lower": 2, "upper": 2, "result": "You meet a Merchant whose cart is stuck in mud and is asking for help." },
+        { "lower": 3, "upper": 3, "result": "A group of bandits disguised as farmers demands a \"road tax\"." },
+        { "lower": 4, "upper": 4, "result": "Bounty Hunters come across the party and ask if they have seen any signs of their target." }
+    ]
+}

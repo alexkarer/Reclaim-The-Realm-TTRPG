@@ -1,0 +1,7 @@
+{
+    "name": "Riftlands - Roleplay Encounters",
+    "upperLimit": 1,
+    "table": [
+        { "lower": 1, "upper": 1, "result": "" }
+    ]
+}

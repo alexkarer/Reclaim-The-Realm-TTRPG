@@ -1,0 +1,10 @@
+{
+    "name": "Road - Settlement Circumstances",
+    "upperLimit": 4,
+    "table": [
+        { "lower": 0, "upper": 0, "result": "Nothing" },
+        { "lower": 0, "upper": 0, "result": "Guards are looking for someone" },
+        { "lower": 0, "upper": 0, "result": "There are festivities ongoing" },
+        { "lower": 0, "upper": 0, "result": "A merchant caravan recently arrived and there are goods for sale" }
+    ]
+}

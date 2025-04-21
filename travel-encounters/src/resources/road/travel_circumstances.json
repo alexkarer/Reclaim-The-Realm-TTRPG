@@ -1,0 +1,10 @@
+{
+    "name": "Road - Travel Circumstances",
+    "upperLimit": 1,
+    "table": [
+        { "lower": 1, "upper": 1, "result": "-" },
+        { "lower": 2, "upper": 2, "result": "" },
+        { "lower": 3, "upper": 3, "result": "" },
+        { "lower": 4, "upper": 4, "result": "" }
+    ]
+}

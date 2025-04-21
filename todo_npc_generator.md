@@ -24,3 +24,4 @@ add spellcasting test which is based on int to determine DT for save against AOE
 **Other abilities**
 - reactive move
 - parry (reduce damage by half)
+- Charge
