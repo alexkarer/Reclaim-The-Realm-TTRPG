@@ -211,6 +211,8 @@ function getCharacterValuesContentPart(keyword: string): ContentPart | undefined
             return generateGenericKeyword('[WILLPOWER]', ' A representation of how well the character can resist being mind-controlled, feeling fear or resisting other mind affecting effects. Increases with your [SPI]', 'willpower');
         case 'DR':
             return generateGenericKeyword('[DR]', 'Damage Resistance provides flat damage reduction against incoming damage', 'dr');
+        case 'FREE':
+            return generateGenericKeyword('[FREE]', 'Abilities with this Cost can be used any time and can also be used outside the actors [TURN] without consuming a [REACTION].', 'free');
         case 'AP':
             return generateGenericKeyword('[AP]', 'Action Points. Actions in combat that are not exclusively movement related such as attacking, casting spells or activating magic items require [AP] when used. The more [AP] a character has available, the more they can do during their turn.', 'ap');
         case 'MP':

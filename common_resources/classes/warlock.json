@@ -283,7 +283,7 @@
                 },
                 { "regularText": null, "headerLine": "Supernatural Strength", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "For calculating your [MARTIAL DAMAGE] you can now use ([SPI]-2) instead of your [STR].<br><span class=\"fw-bold\">Corruption Effect: </span>Increase the [MARTIAL DAMAGE] by your current Corruption, but each time you make a [MARTIAL MEELE ATTACK] or [MARTIAL RANGED ATTACK] you suffer damage equal to half your current Corruption which can't be reduced in any way.",
+                    "regularText": "For calculating your [MARTIAL DAMAGE] you can now use ([SPI]-2) instead of your [STR].<br><span class=\"fw-bold\">Corruption Effect: </span>Increase the [MARTIAL DAMAGE] by your current Corruption, but each time you make a [MEELE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] you suffer damage equal to half your current Corruption which can't be reduced in any way.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -311,7 +311,7 @@
                 },
                 { "regularText": null, "headerLine": "Unnatural Senses", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "You gain darkvision equal to ([LEVEL] m) and you can use your [SPI] instead of your [PER] for any [ATTRIBUTE TEST] that relies on your 5 senses.<br><span class=\"fw-bold\">Corruption Effect: </span>TODO",
+                    "regularText": "You gain darkvision equal to ([LEVEL] m) and you can use your [SPI] instead of your [PER] for any [ATTRIBUTE TEST] that relies on your 5 senses.<br><span class=\"fw-bold\">Corruption Effect: </span>You suffer from hallucinations, each time you make a [RANGED ATTACK] if the die is lower than half your Corruption, you hit an Illusion and it automatically misses.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -445,6 +445,16 @@
             "description": "One Weapon you are wielding is enchanted with the Element of you Entity. Each time you make a Weapon Attack with that Weapon you deal an extra d8 entity damage. For each additional Corruption used, your weapon will deal an additional d8 entity damage."
         },
         {
+            "name": "Elemental Curse",
+            "tags": [ "Class Technique (Warlock, Elemental Entity)" ],
+            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "cost": "0 [AP], 1 Corruption",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "2 + [LEVEL] [ROUND]",
+            "description": "If you hit a target with an [ATTACK] or a damaging Ability, you can use this Ability. The target suffers an additional status effect depending on your Entity.<br>Fire: [BURNING I], Earth: [POISON I], Water: [RESTRAINED I] (no DT), Air: [DISTRACTED]."
+        },
+        {
             "name": "Life Steal",
             "tags": [ "Class Technique (Warlock, Cosmic Entity)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -472,7 +482,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When ou cas a Spell of a Discipline associated with your Entity, you can use this Ability. For each Corruption used you can choose one effect:<br>Reduce [ARCANA] cost by 2.<br>Reduce [AP] Cost by 1 (to a minimum of 1).<br>Treat your [SPI] 3 higher for the purposes of casting this Spell."
+            "description": "When you cast a Spell of a Discipline associated with your Entity, you can use this Ability. For each Corruption used you can choose one effect:<br>Reduce [ARCANA] cost by 2.<br>Reduce [AP] Cost by 1 (to a minimum of 1).<br>Treat your [SPI] 3 higher for the purposes of casting this Spell."
         },
         {
             "name": "Partial Transformation: Body",

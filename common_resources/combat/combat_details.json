@@ -129,7 +129,7 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "Make a [MELEE MARTIAL ATTACK] against a creature. On a hit it recieves physical damage equal to your [MEDIUM MARTIAL DAMAGE] but you yourself additionally suffer half that damage and that damage can't be reduced in any way."
+                "description": "Make a [MELEE MARTIAL ATTACK] against a creature. On a hit it recieves physical damage equal to your medium [MARTIAL DAMAGE] but you yourself additionally suffer half that damage and that damage can't be reduced in any way."
             }
         ]
     },

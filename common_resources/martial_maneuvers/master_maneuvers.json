@@ -62,7 +62,7 @@
             "description": "The next time you are targeted by an [ATTACK] it targets the Afterimage of you instead and automatically misses.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "For each extra [STAMINA] used it works against 1 additional [ATTACk]."
+                "pushingDescription": "For each extra [STAMINA] used it works against 1 additional [ATTACK]."
             }
         }
     ],
@@ -130,7 +130,7 @@
                 "requiredPerks": [ "" ],
                 "otherRequirements": [ "" ]
             },
-            "cost": "[FREE], 3 [STAMINA",
+            "cost": "[FREE], 3 [STAMINA]",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",

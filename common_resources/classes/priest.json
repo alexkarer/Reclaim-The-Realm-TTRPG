@@ -144,7 +144,7 @@
                         "range": "6m",
                         "target": "one or more friendly creatures",
                         "duration": "1 [ROUND]",
-                        "description": "A number of friendly creatures up to half your [CHA] (rounded down, minimum 1) recieve [THP] equal to your [SPI] and they recieve [BLESS 1]"
+                        "description": "A number of friendly creatures up to half your [CHA] (rounded down, minimum 1) recieve [THP] equal to your [SPI] and they recieve [BLESS I]"
                     }
                 },
                 {
@@ -159,7 +159,7 @@
                         "range": "9m",
                         "target": "one or more creatures",
                         "duration": "1 [ROUND]",
-                        "description": "You can target up to half your [CHA] , minimum 1 (rounded down) creatures. Make a [SPELLCASTING TEST] against their [WILLPOWER] on a success they recieve unholy damage equal to your [SPI] and the [BANE 1] status effect."
+                        "description": "You can target up to half your [CHA] , minimum 1 (rounded down) creatures. Make a [SPI] [SPELL TEST] against their [WILLPOWER] on a success they recieve unholy damage equal to your [SPI] and the [BANE I] status effect."
                     }
                 }
             ]
@@ -520,7 +520,7 @@
             "range": "9m",
             "target": "evil creatures with range",
             "duration": "[INSTANT]",
-            "description": "You unleash a holy flame that deals holy damage to all evil creatures within range. Make a [SPI] [SPELLCASTING TEST] against the creature’s [DODGE] . On a success the damage is equal to a number of d8s equalt to your [LEVEL] [HALF]."
+            "description": "You unleash a holy flame that deals holy damage to all evil creatures within range. Make a [SPI] [SPELL TEST] against the creature’s [DODGE] . On a success the damage is equal to a number of d8s equalt to your [LEVEL] [HALF]."
         },
         {
             "name": "Unholy Strike",
@@ -540,7 +540,7 @@
             "range": "12m",
             "target": "[SPHERE] 3m",
             "duration": "[INSTANT]",
-            "description": "You unleash an unholy flame that deals unholy damage to all creatures within range. Make a [SPI] [SPELLCASTING TEST] against the creature’s [DODGE]. On a success the damage is equal to a number of d8s equalt to your [LEVEL] [HALF]."
+            "description": "You unleash an unholy flame that deals unholy damage to all creatures within range. Make a [SPI] [SPELL TEST] against the creature’s [DODGE]. On a success the damage is equal to a number of d8s equalt to your [LEVEL] [HALF]."
         },
         {
             "name": "Divine Clense",
@@ -550,7 +550,7 @@
             "range": "12m",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "You can remove one Tier I status effect affecting the Target. If that target is a hostile creature you have to succeed on a [INT] [SPELLCASTING TEST] against: 10 + Creature [LEVEL]. When this ability is used with 4 matching AD Tier 2 Status Effects can be removed, When used with 6 matching AD Tier 3 status effects can be removed."
+            "description": "You can remove one Tier I status effect affecting the Target. If that target is a hostile creature you have to succeed on a [SPI] [SPELL TEST] against: 10 + Creature [LEVEL]. When this ability is used with 4 matching AD Tier 2 Status Effects can be removed, When used with 6 matching AD Tier 3 status effects can be removed."
         },
         {
             "name": "Protection",
@@ -580,7 +580,7 @@
             "range": "9m",
             "target": "one creature",
             "duration": "[SPI]/2 [ROUND]",
-            "description": "Make a [SPI] [SPELLCASTING TEST] against the targets [HARDNESS] or [DODGE] (target’s choice). On a success the target is [RESTRAINED I] (Escape DC equal to 10 + [LEVEL] + [SPI]). When targeting a chaotic creature you have [ADVANTAGE] on the Test."
+            "description": "Make a [SPI] [SPELL TEST] against the targets [HARDNESS] or [DODGE] (target’s choice). On a success the target is [RESTRAINED I] (Escape DC equal to 10 + [LEVEL] + [SPI]). When targeting a chaotic creature you have [ADVANTAGE] on the Test."
         },
         {
             "name": "Unyielding",

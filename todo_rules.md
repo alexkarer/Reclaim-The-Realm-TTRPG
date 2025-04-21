@@ -28,15 +28,23 @@ Things to change/evaluate after Playtest:
 - have another look at the implementation of the martial training perks
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?
+- re-evaluate Parray
 - change battle recovery to be less useful than resting.
 - rework the way spell abilities interact with each other.
 - Permanent Injuries should only trigger when reduced to 0 [HP] or at Deaths Door.
 ___________________________________________________________
 Future Ideas / Nice to have:
 
-flanking should only work in melee.
+rename cleave so in target  that they also need to be within meele ranbge
+Cleric should be able to use holy strike with any attack
+  - Rethink cosmic interferecne
 create cheet sheet
 automatic long rest recovery button.
+
+use [DR] keyword more often
+adjust travel text since speed is constant.
+
+maybe add shocked Status effect: can't use reactions
 
 add activities that can be done during long rests:
 - crafting

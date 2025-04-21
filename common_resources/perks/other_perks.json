@@ -22,16 +22,14 @@
         "description": "Choose one Attribute: for this Attribute the requirements for Milestone Benefits are reduced by 3. This Perk can’t be applied to the same Attribute twice."
     },
     {
-        "name": "Blind Fighting",
-        "tags": [ "Martial" ],
+        "name": "Quick Planning",
+        "tags": [ "Other" ],
         "requirements": {
-            "requiredLevels": [],
-            "requiredAttributes": [
-                { "amount": 3, "attribute": "[PER]" }
-            ],
-            "requiredPerks": [],
-            "otherRequirements": [ "At least 3 Ranks in Awareness"]
+            "requiredLevels": [ ],
+            "requiredAttributes": [ { "amount": 5, "attribute": "[INT]" } ],
+            "requiredPerks": [ ],
+            "otherRequirements": []
         },
-        "description": "When selecting a target that is in concealment for an [ATTACK], you have [ADVANTAGE] on the [PER] Awareness [SKILL TEST]. Additionally if a creature with half concealment makes an [ATTACK] against you, they don't recieve any bonus. If they have full concealment, they only receive the bonus as if they had half concealment."
+        "description": "In the first [ROUND] in comat you can increase or deacrease your Initiative by 1d6 + [INT]/2."
     }
 ]

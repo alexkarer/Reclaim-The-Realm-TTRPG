@@ -3,36 +3,31 @@
         "name": "Riftlands - Temperature",
         "upperLimit": 100,
         "table": [
-            { "lower": 1, "upper": 70, "result": "TODO" },
-            { "lower": 71, "upper": 85, "result": "TODO" },
-            { "lower": 86, "upper": 100, "result": "TODO" }
+            { "lower": 1, "upper": 20, "result": "Temperature is normal for the Season" },
+            { "lower": 21, "upper": 50, "result": "Temperature is [EVAL 3d6]° colder than normal." },
+            { "lower": 51, "upper": 80, "result": "Temperature is [EVAL 3d6]° warmer than normal." },
+            { "lower": 80, "upper": 90, "result": "Temperature is [EVAL 6d6]° colder than normal potentially unbearably cold." },
+            { "lower": 91, "upper": 100, "result": "Temperature is [EVAL 6d6]° warmer than normal potentially unbearably hot." }
         ]
     },
     "precipitationTable": {
         "name": "Riftlands - Precipitation",
         "upperLimit": 100,
         "table": [
-            { "lower": 1, "upper": 60, "result": "TODO" },
-            { "lower": 65, "upper": 90, "result": "TODO" },
-            { "lower": 91, "upper": 100, "result": "TODO" }
+            { "lower": 1, "upper": 30, "result": "No precipitation" },
+            { "lower": 31, "upper": 50, "result": "harmless light rain or snowfall" },
+            { "lower": 51, "upper": 60, "result": "harmless heavy rain or snowfall, Travel Speed reduced by 1." },
+            { "lower": 61, "upper": 75, "result": "light acid rain, recieve 1 Corrisive damage each hour." },
+            { "lower": 76, "upper": 80, "result": "heaavy acid rain, recieve 1 Corrisive damage each minute." },
+            { "lower": 81, "upper": 90, "result": "cosmic storm" },
+            { "lower": 91, "upper": 100, "result": "-" }
         ]
     },
     "specialPhenomanonTable": {
         "name": "Riftlands - Special Phenomanon",
-        "upperLimit": 100,
+        "upperLimit": 1,
         "table": [
-    
-            { "lower": 1, "upper": 20, "result": "No Phenomanon" },
-            { "lower": 91, "upper": 91, "result": "TODO" },
-            { "lower": 92, "upper": 92, "result": "TODO" },
-            { "lower": 93, "upper": 93, "result": "TODO" },
-            { "lower": 94, "upper": 94, "result": "TODO" },
-            { "lower": 95, "upper": 95, "result": "TODO" },
-            { "lower": 96, "upper": 96, "result": "TODO" },
-            { "lower": 97, "upper": 97, "result": "TODO" },
-            { "lower": 98, "upper": 98, "result": "TODO" },
-            { "lower": 99, "upper": 99, "result": "TODO" },
-            { "lower": 100, "upper": 100, "result": "TODO" }
+            { "lower": 1, "upper": 1, "result": "No Phenomanon" }
         ]
     }
 }

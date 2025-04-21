@@ -144,7 +144,7 @@ function parseTableEntries(json: TableEntryJson): TableEntry {
 export const roadTables = new TerrainTables(parseWeatherTables(roadWeatherJson), parseTable(roadCircumstancesJson), parseTable(roadMainEventsJson));
 export const forestables = new TerrainTables(parseWeatherTables(roadWeatherJson), parseTable(roadCircumstancesJson), parseTable(roadMainEventsJson));
 export const grasslandTables = new TerrainTables(parseWeatherTables(roadWeatherJson), parseTable(roadCircumstancesJson), parseTable(roadMainEventsJson));
-export const riftlandsTables = new TerrainTables(parseWeatherTables(roadWeatherJson), parseTable(roadCircumstancesJson), parseTable(roadMainEventsJson));
+export const riftlandsTables = new TerrainTables(parseWeatherTables(riftlandsWeatherJson), parseTable(riftlandsCircumstancesJson), parseTable(riftlandsMainEventsJson));
 export const settlementTables = new TerrainTables(parseWeatherTables(roadWeatherJson), parseTable(roadCircumstancesJson), parseTable(roadMainEventsJson));
 
 const allTables = new Map<string, Table>();
@@ -162,21 +162,12 @@ allTables.set(roadCombatEncountersJson.name, parseTable(roadCombatEncountersJson
 allTables.set(forestWeatherJson.precipitationTable.name, parseTable(forestWeatherJson.precipitationTable));
 allTables.set(forestWeatherJson.temperatureTable.name, parseTable(forestWeatherJson.temperatureTable));
 allTables.set(forestWeatherJson.specialPhenomanonTable.name, parseTable(forestWeatherJson.specialPhenomanonTable));
-allTables.set(roadCircumstancesJson.name, parseTable(roadCircumstancesJson));
-allTables.set(roadMainEventsJson.name, parseTable(roadMainEventsJson));
-allTables.set(roadExplorationEventsJson.name, parseTable(roadExplorationEventsJson));
-allTables.set(roadRoleplayEncountersJson.name, parseTable(roadRoleplayEncountersJson));
-allTables.set(roadCombatEncountersJson.name, parseTable(roadCombatEncountersJson));
 
 // Grassland
 allTables.set(grasslandWeatherJson.precipitationTable.name, parseTable(grasslandWeatherJson.precipitationTable));
 allTables.set(grasslandWeatherJson.temperatureTable.name, parseTable(grasslandWeatherJson.temperatureTable));
 allTables.set(grasslandWeatherJson.specialPhenomanonTable.name, parseTable(grasslandWeatherJson.specialPhenomanonTable));
-allTables.set(roadCircumstancesJson.name, parseTable(roadCircumstancesJson));
-allTables.set(roadMainEventsJson.name, parseTable(roadMainEventsJson));
-allTables.set(roadExplorationEventsJson.name, parseTable(roadExplorationEventsJson));
-allTables.set(roadRoleplayEncountersJson.name, parseTable(roadRoleplayEncountersJson));
-allTables.set(roadCombatEncountersJson.name, parseTable(roadCombatEncountersJson));
+
 
 // Riftlands
 allTables.set(riftlandsWeatherJson.precipitationTable.name, parseTable(riftlandsWeatherJson.precipitationTable));
@@ -192,8 +183,3 @@ allTables.set(riftlandsCombatEncountersJson.name, parseTable(riftlandsCombatEnco
 allTables.set(settlementWeatherJson.precipitationTable.name, parseTable(settlementWeatherJson.precipitationTable));
 allTables.set(settlementWeatherJson.temperatureTable.name, parseTable(settlementWeatherJson.temperatureTable));
 allTables.set(settlementWeatherJson.specialPhenomanonTable.name, parseTable(settlementWeatherJson.specialPhenomanonTable));
-allTables.set(roadCircumstancesJson.name, parseTable(roadCircumstancesJson));
-allTables.set(roadMainEventsJson.name, parseTable(roadMainEventsJson));
-allTables.set(roadExplorationEventsJson.name, parseTable(roadExplorationEventsJson));
-allTables.set(roadRoleplayEncountersJson.name, parseTable(roadRoleplayEncountersJson));
-allTables.set(roadCombatEncountersJson.name, parseTable(roadCombatEncountersJson));

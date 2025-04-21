@@ -185,7 +185,7 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "can learn Cosmic Spells" ]
         },
-        "description": "When you cast a spell of the cosmic Discipline you can add 1 to the [SPELL CAST TEST]. Additionally during the day if you cast a light or restoration spell you can treat your [SPI] Attribute 1 higher for the purposes of casting this spell or alternatively during night necromancy and shadow spells are improved.<br>Additionally you can cast divination spells during your sleep (GM’s determines if that particular spell makes sense) while doing that you can treat your Spirit Attribute 1 higher for the purposes of casting that spell."
+        "description": "When you cast a spell of the cosmic Discipline you can add 1 to the [SPELL CAST TEST]. Additionally during the day if you cast a light or restoration spell you can treat your [SPI] Attribute 1 higher for the purposes of casting this spell or alternatively during night necromancy and shadow spells are improved.<br>Additionally you can cast divination spells during your sleep (GM determines if that particular spell makes sense) while doing that you can treat your Spirit Attribute 1 higher for the purposes of casting that spell."
     },
     {
         "name": "White mage",
@@ -341,7 +341,7 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "can learn Telekinesis or Telepathy Spells" ]
         },
-        "description": "When you cast a spell of the Telekinesis or Telepathy Discipline you can add 1 to the [SPELL CAST TEST]. TODO"
+        "description": "When you cast a spell of the Telekinesis or Telepathy Discipline you can add 1 to the [SPELL CAST TEST]. Additionally if you cast a Telekinesis or Telepathy Spell you can cast it with 1 [AP] Additional casting cost to focus on the Spell. When doing so you can treat your [SPI] 1 higher for the purposes of casting the spell."
     },
     {
         "name": "Telekinist",
@@ -380,7 +380,7 @@
             "requiredPerks": [ "Psychic" ],
             "otherRequirements": [ "" ]
         },
-        "description": "When you cast a Telepathy spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally you can telepethically communicate with your mind to a single creature within [SPI] ∗ 10 meters. You can project words, thoughts, ideas and images to that creature and it can reply with basic words."
+        "description": "When you cast a Telepathy spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally you can telepathically communicate with your mind to a single creature within [SPI] ∗ 10 meters. You can project words, thoughts, ideas and images to that creature and it can reply with basic words."
     },
     {
         "name": "Master Telepath",
@@ -393,6 +393,6 @@
             "requiredPerks": [ "Telepath" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Telepatthy Spell.<br>Additionally you are aware of all living creatures within [SPI] ∗ 3 meters, those creatures can’t hide from you unless stated otherwise and don’t gain the benefit of being unseen against you."
+        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Telepatthy Spell.<br>You can alsp increase your telepathic communication range to [SPI] * 20 meters and you can target up to [SPI] creatures at once with it.<br>Furthermore you are aware of all living creatures within [SPI] ∗ 3 meters of you, those creatures can’t hide from you unless stated otherwise and can't get the benefit of concealment against you."
     }
 ]

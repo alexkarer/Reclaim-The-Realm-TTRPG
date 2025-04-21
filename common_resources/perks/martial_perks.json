@@ -65,6 +65,19 @@
         "description": "Choose one Martial Maneuver Type, you can now also learn maneuvers of that type. If you take this Perk again the [INT] requirement increases by 2."
     },
     {
+        "name": "Blind Fighting",
+        "tags": [ "Martial" ],
+        "requirements": {
+            "requiredLevels": [],
+            "requiredAttributes": [
+                { "amount": 3, "attribute": "[PER]" }
+            ],
+            "requiredPerks": [],
+            "otherRequirements": [ "At least 3 Ranks in Awareness"]
+        },
+        "description": "When selecting a target that is in concealment for an [ATTACK], you have [ADVANTAGE] on the [PER] Awareness [SKILL TEST]. Additionally if a creature with half concealment makes an [ATTACK] against you, they don't recieve any bonus. If they have full concealment, they only receive the bonus as if they had half concealment."
+    },
+    {
         "name": "Weapon Finesse",
         "tags": [ "Martial" ],
         "requirements": {
