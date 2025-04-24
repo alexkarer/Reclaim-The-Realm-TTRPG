@@ -1,48 +1,77 @@
 ____________________________________________________________
-Things to change/evaluate after Playtest:
+### Things to evaluate after Playtest:
 
 **Big Things**
-- rethink if attacks should miss at all and dodging should just be a Reaction
-  - Every Melee Attack just Hits, additional Effects still require a roll
-  - Maybe treat ranged attacks different, or make the concealment check now rely on the attack.
-  - Aoe Abilities still work as normal
-  - New Reaction to Evade Attack completetly, Parry can do the same thing
-  - Damage should probably be rescaled
 - consider moving attack back to the DM.
 - add fate points / some mechanics to reroll things
 - hybrid abilities necesarry?
 - does spell casting system work
-  - Should it also use martial damage system?
-- Martial Damage
-- check if game needs to be simplified
-- Weapon properties necesarry?
+- The System should be focused around the Riftlands
+  - Think of a way that makes the Riftlands work
+  - It should be special and if you want to get to a specific Location it requires something special.
 
 **Minor Things**
-- properly differentiate [FREE] vs 0 [AP]
 - improve layout of character creation 
 - maybe make seperate pages for the individual headers
 - warlock: rename mystic something else
 - adjust equipment item tier
-- rename harndess to stability
 - reduce number of attribute points to 10 maybe
 - have another look at the implementation of the martial training perks
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?
-- re-evaluate Parray
-- change battle recovery to be less useful than resting.
-- rework the way spell abilities interact with each other.
-- Permanent Injuries should only trigger when reduced to 0 [HP] or at Deaths Door.
-___________________________________________________________
-Future Ideas / Nice to have:
 
-rename cleave so in target  that they also need to be within meele ranbge
-Cleric should be able to use holy strike with any attack
-  - Rethink cosmic interferecne
+____________________________________________________________
+### Planned changes after Playtest:
+
+**Bigger Mechanical Changes**
+- When making a d20 the following happens: 20->automatic hit, 1->automatic miss, attack>dodge->hit, dodge>attack->glancing blow(half damage)
+- Rescale damage, especially for NPCs to make it less lethal at 1st level, maybe NPCs only deal d6 damage.
+- Implement similar system for Spell Damage
+- Properly rework Hybrid Abilities, they deserve to stay.
+- Shields?
+
+**Smaller Mechanical Changes**
+- properly differentiate [FREE] vs 0 [AP]
+- Permanent Injuries should only trigger when reduced to 0 [HP] or at Deaths Door.
+- Spell Keywords need to be reworked
+
+**Weapon Simplification**
+- remove weapon proficency ranks
+- each weapon just has 1 unique property
+- dagger: light damage, crit lower
+- crossbow: fixed damage, ranged/reload, special things can be done with ammo
+  - Damage should improve with equipment tier
+- Bow, medium damage, ranged, special things can be done with ammo
+- versatile weapon: both one-handed and two-handed (medium/heavy damage)
+- polarm: reach
+- Great Weapon: -2 ATK, treat str 1 higher for Martial damage and attacking two-handed, disadvantage when attacking with one hand
+
+**Ability Simplifications**
+- Treat Mechanical Text and Flavour Text seperatly.
+- When possible simplify the mechanical text a lot.
+- Weapon Attack Ability Should not be referenced in other abilities but instead the equipment should have references for these.
+
+**Character Changes**
+- reduce initial attribute points (maybe 10?)
+- Remove Class Features and maybe instead have Class Perks, which can be taken instead of Perks, this includes regular class features as well as class paths.
+- Class will only have Class Core Feature which improves at level 4/8/12
+- For this the Class Core Feature needs to be special and unique (see notes below)
+- Should the Class Names Change more to match the Fantasy World?
+- Improve the Character Origins to be more in theme with the world, especially they should have motivation for going into the Riftlands.
+
+**Specific Changes**
+- Rename Hardness to Stability
+- change battle recovery to be less useful than resting.
+- Parry should turn crit->hit, hit->glancing, glancing->miss
+- use [DR] keyword more often
+- adjust travel text since speed is constant.
+- rename cleave so in target  that they also need to be within meele ranbge
+- Cleric should be able to use holy strike with any attack
+___________________________________________________________
+### Future Ideas / Nice to have:
+
 create cheet sheet
 automatic long rest recovery button.
-
-use [DR] keyword more often
-adjust travel text since speed is constant.
 
 maybe add shocked Status effect: can't use reactions
 
@@ -73,7 +102,7 @@ There should be a move resist stat that deterimes how much less you are moved.
 - Gargantuan 1/4
 - Titanic 1/5s
 
-add faction relations thing: 
+add faction relations thing (is it relevant for this game?): 
 - should be adventure specific
 - higher should give you like access to items and other benefits
 
@@ -117,17 +146,4 @@ add faction relations thing:
 - have colored abilities and more icons
 - add missing abilities
 - add linking and tooltips for abilities
-
-**Travel/Adventure**
-- More random Tables
-  - Camp Events
-  - Travel Events by Terrain
-  - Make random tables for weather and encounter similar to how in FG.
-  - Special weather and circumstances for Rift Travel: There should be a table describing the Path what kind of Path it is they take (maybe also for other events), what pheonomana they see in the distance or the sky.
-  - add some more montage tables/scenes, during travel, which might be the special weather circumstances.
-- Change riftlands modifier to only have one d6 in a SPELL CAST TEST Roll.
-- Riftlands every week has to make a Willpower or recieve Mental damage (should be a mental permanent injury table).
-  - Increases the longer one stays in the Riftlands.
-- Add Terrain Tiers
-- when travelling, long rest can be made withotu food water but then get exhaustion which can't be recovered.
-- Travel encounters should only give 1/4 XP.
+- Perktrees
