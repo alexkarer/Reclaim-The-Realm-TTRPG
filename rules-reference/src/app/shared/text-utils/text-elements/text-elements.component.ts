@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { TextElement } from '../../../../../../common_resources/shared/TextElements';
 import { DynamicContentComponent } from "../dynamic-component-rendering/dynamic-content.component";
 import { KeywordProcessorPipe } from "../keyword-processor";
@@ -11,6 +11,6 @@ import { AbilityListItemComponent } from "../../ability/ability-list/ability-lis
     styleUrl: './text-elements.component.scss'
 })
 export class TextElementsComponent {
-  @Input() textElements?: TextElement[] = [];
-  @Input() useBoldTextForHeader = false;
+  textElements = input<TextElement[]>();
+  useBoldTextForHeader = input(false);
 }

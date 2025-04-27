@@ -52,6 +52,9 @@ export class PerkSearchComponent {
       case PerkTags.OTHER: return perk.tags.find(tag => tag.toLowerCase().includes('other')) !== undefined;
       case PerkTags.SKILL: return perk.tags.find(tag => tag.toLowerCase().includes('skill')) !== undefined;
       case PerkTags.SPELL: return perk.tags.find(tag => tag.toLowerCase().includes('spell')) !== undefined;
+      case PerkTags.BARBARIAN: return perk.tags.find(tag => tag.toLowerCase().includes('barbarian')) !== undefined;
+      case PerkTags.PRIEST: return perk.tags.find(tag => tag.toLowerCase().includes('priest')) !== undefined;
+      case PerkTags.WARLOCK: return perk.tags.find(tag => tag.toLowerCase().includes('warlock')) !== undefined;
     }
   }
 
@@ -69,10 +72,10 @@ export class PerkSearchComponent {
     let text = this.currentFilterText.toLocaleLowerCase();
     return perk.name.toLocaleLowerCase().includes(text) || 
       perk.tags.find(tag => tag.toLocaleLowerCase().includes(text)) !== undefined ||
-      perk.description.toLocaleLowerCase().includes(text);
+      perk.textElements.find(t => t.regularText != null && t.regularText.toLocaleLowerCase().includes(text)) !== undefined;
   }
 }
 
 enum PerkTags {
-  ALL = 'All Perks', CRAFTING = 'Crafting Perks', DEFENSIVE = 'Defensive Perks', MARTIAL = 'Martial Perks', OTHER = 'Other Perks', SKILL = 'Skill Perks', SPELL = 'Spell Perks'
+  ALL = 'All Perks', CRAFTING = 'Crafting Perks', DEFENSIVE = 'Defensive Perks', MARTIAL = 'Martial Perks', OTHER = 'Other Perks', SKILL = 'Skill Perks', SPELL = 'Spell Perks', BARBARIAN = 'Barbarian Perks', PRIEST = 'Priest Perks', WARLOCK = 'Warlock Perks' 
 }

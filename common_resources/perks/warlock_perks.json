@@ -1,0 +1,20 @@
+[
+    {
+        "name": "PlaceHolder",
+        "tags": [ "Warlock" ],
+        "requirements": {
+            "requiredLevels": [],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Warlock Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    }
+]

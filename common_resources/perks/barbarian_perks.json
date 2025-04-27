@@ -1,0 +1,20 @@
+[
+    {
+        "name": "PlaceHolder",
+        "tags": [ "Barbarian" ],
+        "requirements": {
+            "requiredLevels": [],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Barbarian Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    }
+]

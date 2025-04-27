@@ -7,15 +7,15 @@ ____________________________________________________________
 - hybrid abilities necesarry?
 - does spell casting system work
 - The System should be focused around the Riftlands
+  - Maybe also about accumilating power which can only be found in the riftlands and most "adventurers" get lost there
+  - Find good name for adventurer.
   - Think of a way that makes the Riftlands work
   - It should be special and if you want to get to a specific Location it requires something special.
 
 **Minor Things**
 - improve layout of character creation 
 - maybe make seperate pages for the individual headers
-- warlock: rename mystic something else
 - adjust equipment item tier
-- reduce number of attribute points to 10 maybe
 - have another look at the implementation of the martial training perks
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?
@@ -34,6 +34,7 @@ ____________________________________________________________
 - properly differentiate [FREE] vs 0 [AP]
 - Permanent Injuries should only trigger when reduced to 0 [HP] or at Deaths Door.
 - Spell Keywords need to be reworked
+- Rewrite perks to have proer ability rendering/formatting
 
 **Weapon Simplification**
 - remove weapon proficency ranks
@@ -58,6 +59,8 @@ ____________________________________________________________
 - For this the Class Core Feature needs to be special and unique (see notes below)
 - Should the Class Names Change more to match the Fantasy World?
 - Improve the Character Origins to be more in theme with the world, especially they should have motivation for going into the Riftlands.
+- warlock: rename mystic something else
+- reduce number of attribute points to 10 maybe
 
 **Specific Changes**
 - Rename Hardness to Stability
@@ -105,6 +108,13 @@ There should be a move resist stat that deterimes how much less you are moved.
 add faction relations thing (is it relevant for this game?): 
 - should be adventure specific
 - higher should give you like access to items and other benefits
+
+**Feat/Accomplishments**
+Differnt way of gaining new abilities or features, the players can pick one and have to track progress until they got it, make it integratable into the riftlands and they should be achievable mostly by going to the riftlands.
+
+
+**Perks**
+- Martial Perks for each weapon
 
 **Character Creation Builder**
 - need a character wizard

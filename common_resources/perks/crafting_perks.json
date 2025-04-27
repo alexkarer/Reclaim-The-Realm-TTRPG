@@ -12,6 +12,13 @@
             "requiredPerks": [ "" ],
             "otherRequirements": [ "" ]
         },
-        "description": ""
+        "textElements": [
+            {
+                "regularText": "",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     }
 ]

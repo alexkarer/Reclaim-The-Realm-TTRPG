@@ -10,7 +10,14 @@
             "requiredPerks": [],
             "otherRequirements": []
         },
-        "description": "You gain one extra [MP] and you gain a +4 bonus to your [DODGE] against any Opportunity Attack. Additionally escaping a grapple or standing up from prone requires 2 [MP] less."
+        "textElements": [
+            {
+                "regularText": "You gain one extra [MP] and you gain a +4 bonus to your [DODGE] against any Opportunity Attack. Additionally escaping a grapple or standing up from prone requires 2 [MP] less.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Immovable",
@@ -23,7 +30,14 @@
             "requiredPerks": [],
             "otherRequirements": []
         },
-        "description": "Gain a +2 bonus to [HARDNESS] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when an ability forcefully moves you, you only move halve the distance (rounded down)."
+        "textElements": [
+            {
+                "regularText": "Gain a +2 bonus to [HARDNESS] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when an ability forcefully moves you, you only move halve the distance (rounded down).",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Quick Reflexes",
@@ -36,7 +50,14 @@
             "requiredPerks": [],
             "otherRequirements": []
         },
-        "description": "Gain a +1 bonus to [DODGE] that increases to a +2 bonus when you reach [LEVEL] 7. Additionally if you are suprised you suffer no penalties except to your Initiative."
+        "textElements": [
+            {
+                "regularText": "Gain a +2 bonus to [DODGE] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally if you are suprised you suffer no penalties except to your Initiative.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Enduring",
@@ -49,7 +70,14 @@
             "requiredPerks": [],
             "otherRequirements": []
         },
-        "description": "Gain a +2 bonus to [TOUGHNESS] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [BLINDED], [STUNNED I], [DEAFENED], [SILENCED], [POISONED], [BLEEDING I], [POISON]"
+        "textElements": [
+            {
+                "regularText": "Gain a +2 bonus to [TOUGHNESS] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [BLINDED], [STUNNED I], [DEAFENED], [SILENCED], [POISONED], [BLEEDING I], [POISON]",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Mind of Steel",
@@ -62,6 +90,13 @@
             "requiredPerks": [],
             "otherRequirements": []
         },
-        "description": "Gain a +2 bonus to [WILLPOWER] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [CHARMED] , [FRIGHTENED] , [CONFUSED]"
+        "textElements": [
+            {
+                "regularText": "Gain a +2 bonus to [WILLPOWER] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [CHARMED], [FRIGHTENED], [CONFUSED]",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     }
 ]

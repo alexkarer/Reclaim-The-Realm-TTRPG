@@ -7,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (perk of perkList; track $index) {
+        @for (perk of perkList(); track $index) {
             <tr (click)="perkDescriptionEnabled[$index] = !perkDescriptionEnabled[$index]" style="cursor: pointer">
                 <th scope="row">{{ perk?.name }}</th>
                 <td class="header-subscript">{{ perk?.requirements | requirementsPrettier }}</td>
@@ -16,7 +16,7 @@
             @if (perkDescriptionEnabled[$index]) {
                 <tr>
                     <td colspan="3">
-                        <app-dynamic-content [content]="perk?.description | keywordProcessor"></app-dynamic-content>
+                        <app-text-elements [textElements]="perk.textElements"></app-text-elements>
                     </td>
                 </tr>
             }

@@ -8,7 +8,14 @@
             "requiredPerks": [],
             "otherRequirements": [ "Martial Level Progression of 0, Rank 1 Weapon Proficiency" ]
         },
-        "description": "You learn 2 Basic Martial Maneuvers of one type of your choice."
+        "textElements": [
+            {
+                "regularText": "You learn 2 Basic Martial Maneuvers of one type of your choice.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Advanced Martial Training",
@@ -21,7 +28,14 @@
             "requiredPerks": [ "Martial Training" ],
             "otherRequirements": [ ]
         },
-        "description": "Your [MARTIAL LEVEL] increases by 1 and you can learn 1 additional Basic Martial Maneuver"
+        "textElements": [
+            {
+                "regularText": "Your [MARTIAL LEVEL] increases by 1 and you can learn 1 additional Basic Martial Maneuver",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Warrior",
@@ -34,7 +48,14 @@
             "requiredPerks": [ "Advanced Martial Training" ],
             "otherRequirements": [ "Rank 2 Weapon Proficiency" ]
         },
-        "description": "Your [MARTIAL LEVEL] increases by 1 and you can learn 1 additional Basic Martial Maneuver. Additionally you can choose a second type of Martial Maneuvers and you can now also learn Maneuvers of that type."
+        "textElements": [
+            {
+                "regularText": "Your [MARTIAL LEVEL] increases by 1 and you can learn 1 additional Basic Martial Maneuver. Additionally you can choose a second type of Martial Maneuvers and you can now also learn Maneuvers of that type.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Trained Warrior",
@@ -47,7 +68,14 @@
             "requiredPerks": [ "Warrior" ],
             "otherRequirements": [ "" ]
         },
-        "description": "Your [MARTIAL LEVEL] increases by 1 and can learn 1 additional Basic Martial Maneuver. At [LEVEL] 12 your level increases 1 further and you can now also learn 1 Advanced Martial Maneuver."
+        "textElements": [
+            {
+                "regularText": "Your [MARTIAL LEVEL] increases by 1 and can learn 1 additional Basic Martial Maneuver. At [LEVEL] 12 your level increases 1 further and you can now also learn 1 Advanced Martial Maneuver.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Versitile Warrior",
@@ -62,7 +90,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "Choose one Martial Maneuver Type, you can now also learn maneuvers of that type. If you take this Perk again the [INT] requirement increases by 2."
+        "textElements": [
+            {
+                "regularText": "Choose one Martial Maneuver Type, you can now also learn maneuvers of that type. If you take this Perk again the [INT] requirement increases by 2.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Blind Fighting",
@@ -75,7 +110,14 @@
             "requiredPerks": [],
             "otherRequirements": [ "At least 3 Ranks in Awareness"]
         },
-        "description": "When selecting a target that is in concealment for an [ATTACK], you have [ADVANTAGE] on the [PER] Awareness [SKILL TEST]. Additionally if a creature with half concealment makes an [ATTACK] against you, they don't recieve any bonus. If they have full concealment, they only receive the bonus as if they had half concealment."
+        "textElements": [
+            {
+                "regularText": "When selecting a target that is in concealment for an [ATTACK], you have [ADVANTAGE] on the [PER] Awareness [SKILL TEST]. Additionally if a creature with half concealment makes an [ATTACK] against you, they don't recieve any bonus. If they have full concealment, they only receive the bonus as if they had half concealment.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Weapon Finesse",
@@ -88,7 +130,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "When you make a Weapon Attack with a light or versatile weapon you can use half of your [AGI] instead of your [STR] for determining your Martial Damage."
+        "textElements": [
+            {
+                "regularText": "When you make a Weapon Attack with a light or versatile weapon you can use half of your [AGI] instead of your [STR] for determining your Martial Damage.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Superior Weapon Finesse",
@@ -101,7 +150,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "When you make a Weapon Attack with a light or versatile weapon you can use three-quaters of your [AGI] instead of your [STR] for determining your Martial Damage."
+        "textElements": [
+            {
+                "regularText": "When you make a Weapon Attack with a light or versatile weapon you can use three-quaters of your [AGI] instead of your [STR] for determining your Martial Damage.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Lightning Attacks",
@@ -116,7 +172,14 @@
             "requiredPerks": [ "Superior Weapon Finesse" ],
             "otherRequirements": [ ]
         },
-        "description": "After you make a Weapon Attack that is not a Lighting Attack, the next Weapon Attack can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP])."
+        "textElements": [
+            {
+                "regularText": "After you make a Weapon Attack that is not a Lighting Attack, the next Weapon Attack can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP]).",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Unrelenting",
@@ -129,20 +192,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "When a target that you can see moves out of your reach, you can use your reaction to try and prevent their escape. Make a [STR] or [AGI] [MARTIAL TEST] against the targets [DODGE] and on a Success the Targets movement is wasted. You can use this feature even if the target does not provoke an opportunity attack."
-    },
-    {
-        "name": "Graze",
-        "tags": [ "Martial" ],
-        "requirements": {
-            "requiredLevels": [
-                { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
-            ],
-            "requiredAttributes": [],
-            "requiredPerks": [ ],
-            "otherRequirements": [ ]
-        },
-        "description": "When missing a [MELEE MARTIAL ATTACK], you can still deal physical damage to the target equal to your [STR]."
+        "textElements": [
+            {
+                "regularText": "When a target that you can see moves out of your reach, you can use your reaction to try and prevent their escape. Make a [STR] or [AGI] [MARTIAL TEST] against the targets [DODGE] and on a Success the Targets movement is wasted. You can use this feature even if the target does not provoke an opportunity attack.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Momentum",
@@ -157,22 +214,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "When wielding a melee weapon that has the heavy property, your next melee attack deals extra damage for each meter you moved directly towards the target (rounded down, max 20)."
-    },
-    {
-        "name": "Improved Heavy Attack",
-        "tags": [ "Martial" ],
-        "requirements": {
-            "requiredLevels": [
-                { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
-            ],
-            "requiredAttributes": [
-                { "amount": 5, "attribute": "[STR]" }
-            ],
-            "requiredPerks": [ ],
-            "otherRequirements": [ ]
-        },
-        "description": "When making a heavy Weapon Attack instead of increasing the damage by ([STR]/4) * d12 it now does by ([STR]/3) * d12."
+        "textElements": [
+            {
+                "regularText": "Any [MARTIAL MELEE ATTACK] you make deals extra damage for every second meter you moved directly towards the target, this is calculated using the shortest path to the target.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Point blank shot",
@@ -185,23 +234,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "Rank 2 Weapon Proficiency" ]
         },
-        "description": "When making a ranged weapon Attack, when that target is within half range of the first range, you gain a +1 bonus to [ATTACK] and damage. This bonus increases to +2 when you reach [LEVEL] 7."
-    },
-    {
-        "name": "Rapid Reload",
-        "tags": [ "Martial" ],
-        "requirements": {
-            "requiredLevels": [
-                { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
-             ],
-            "requiredAttributes": [
-                { "amount": 3, "attribute": "[STR]" },
-                { "amount": 3, "attribute": "[AGI]" }
-            ],
-            "requiredPerks": [ ],
-            "otherRequirements": [ "Rank 2 Weapon Proficiency" ]
-        },
-        "description": "When reloading a weapon it now costs 1 [AP] less (can’t be less than 1 [AP])."
+        "textElements": [
+            {
+                "regularText": "When making a [MARTIAL RANGED ATTACK], when that target is within half range of the first range, you gain a +2 bonus to [ATTACK] and damage. This bonus increases to +4 when you reach [LEVEL] 7.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Careful Shot",
@@ -214,14 +254,21 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "At the start of your Turn, you can choose to reduce your [MP] to 0 and choose to make Careful Shots, during which your [DODGE] is reduced by 5, but every [RANGED ATTACK] gains a +3 bonus to the [ATTACK]."
+        "textElements": [
+            {
+                "regularText": "At the start of your [TURN], you can choose to reduce your [MP] to 0 and choose to make Careful Shots, during which your [DODGE] is reduced by 5, but every [MARTIAL RANGED ATTACK] you make during this [TURN] has [ADVANTAGE].",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Impossible Precision",
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
-                { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
+                { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
             ],
             "requiredAttributes": [
                 { "amount": 5, "attribute": "[PER]" }
@@ -229,7 +276,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "Any [RANGED MARTIAL ATTACK] you make ignores cover bonuses."
+        "textElements": [
+            {
+                "regularText": "When you make a [MARTIAL RANGED ATTACK] you treat large cover as medium cover, medium cover as small cover, small cover as no cover.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Expert Dual Wielder",
@@ -242,7 +296,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "When performing a Dual-wield attack you can now make an unlimited amount of follow-up attacks with a light weapon at -1 [AP] as long as you follow the same restrictions and always switch to a different weapon when attacking. This can not be combined with the Lightning Attack Perk."
+        "textElements": [
+            {
+                "regularText": "When performing a Dual-wield attack you can now make an unlimited amount of follow-up attacks with a light weapon at -1 [AP] as long as you follow the same restrictions and always switch to a different weapon when attacking. This can not be combined with the Lightning Attack Perk.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Flexible Dual Wielder",
@@ -255,7 +316,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "You can now use the Dual-wield attack even if one of your weapons does not have the light property, but it cannot have the two-handed property."
+        "textElements": [
+            {
+                "regularText": "You can now use the Dual-wield attack even if one of your weapons is not eligable for dual wielding, but it cannot have the two-handed property.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Master Dual Wielder",
@@ -268,7 +336,14 @@
             "requiredPerks": [ "Expert Dual Wielder" ],
             "otherRequirements": [ ]
         },
-        "description": "When performing a Dual-wield attack it is now a single 2 [AP] Ability where you make an [ATTACK] 2 times that can then also benefit from the Expert Dual Wielder Perk."
+        "textElements": [
+            {
+                "regularText": "When performing a Dual-wield attack it is now a single 2 [AP] Ability where you make an [ATTACK] 2 times that can then also benefit from the Expert Dual Wielder Perk.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Improved Critical",
@@ -281,7 +356,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "For your [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK] the required unmodified roll required for a critical hit is reduced by 1."
+        "textElements": [
+            {
+                "regularText": "For your [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK] the required unmodified roll required for a critical hit is reduced by 1.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Superior Critical",
@@ -294,7 +376,14 @@
             "requiredPerks": [ "Improved Critical" ],
             "otherRequirements": [ ]
         },
-        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK], you can re-roll all damage rolls."
+        "textElements": [
+            {
+                "regularText": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK], you can re-roll all damage rolls.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Devastating Critical",
@@ -307,7 +396,14 @@
             "requiredPerks": [ "Superior Critical" ],
             "otherRequirements": [ ]
         },
-        "description": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK], you can grant your target one of the following status effects of your choice for 1 round: [BLINDED], [SILENCED], [BLEEDING I] equal to  2d6 + [MARTIAL LEVEL], [STUNNED I], [CRIPPLED I]"
+        "textElements": [
+            {
+                "regularText": "When you score a critical hit with a [MELEE MARTIAL ATTACK] and [RANGED MARTIAL ATTACK], you can grant your target one of the following status effects of your choice for 1 round: [BLINDED], [SILENCED], [BLEEDING I], [STUNNED I], [CRIPPLED I]",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Quick-footed",
@@ -318,7 +414,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "Be able to learn Martial Maneuvers of type Agile" ]
         },
-        "description": "Any time you perform a Agile Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally ..."
+        "textElements": [
+            {
+                "regularText": "Any time you perform a Agile Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally ...",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Brawler",
@@ -329,7 +432,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "Be able to learn Martial Maneuvers of type Brawl" ]
         },
-        "description": "Any time you perform a Brawl Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally when you perform the Grapple Action you can now do it at -1 [AP]."
+        "textElements": [
+            {
+                "regularText": "Any time you perform a Brawl Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally when you perform the Grapple Action you can now do it at -1 [AP].",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Leader",
@@ -340,7 +450,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "Be able to learn Martial Maneuvers of type Leader" ]
         },
-        "description": "Any time you perform a Leader Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally when you target an "
+        "textElements": [
+            {
+                "regularText": "Any time you perform a Leader Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally when you target an ",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Bulwark",
@@ -351,7 +468,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "Be able to learn Martial Maneuvers of type Fortitude" ]
         },
-        "description": "Any time you perform a Fortitude Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally ..."
+        "textElements": [
+            {
+                "regularText": "Any time you perform a Fortitude Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally ...",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Tactician",
@@ -362,7 +486,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "Be able to learn Martial Maneuvers of type Tactical" ]
         },
-        "description": "Any time you perform a Tactical Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally ..."
+        "textElements": [
+            {
+                "regularText": "Any time you perform a Tactical Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally ...",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Favoured Weapon",
@@ -373,6 +504,13 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "Be able to learn Martial Maneuvers of type Weapon" ]
         },
-        "description": "Choose one weapon type (longsword, light-crossbow, ...) you gain a +1 bonus to any [MARTIAL TEST] made with that Weapon."
+        "textElements": [
+            {
+                "regularText": "Any time you perform a Weapon Martial Maneuver you gain a +1 bonus to any [MARTIAL TEST] you make with that maneuver. Additionally ...",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     }
 ]

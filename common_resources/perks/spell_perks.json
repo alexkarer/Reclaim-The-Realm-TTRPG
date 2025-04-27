@@ -10,7 +10,14 @@
             "requiredPerks": [],
             "otherRequirements": [ "[SPELL LEVEL] Progression of 0" ]
         },
-        "description": "Pick one spell discipline, you can now learn spells from that spell discipline. Additionally you gain 1 [ARCANA] which you can recover by spending 1 [STAMINA] at short rest or during a long rest."
+        "textElements": [
+            {
+                "regularText": "Pick one spell discipline, you can now learn spells from that spell discipline. Additionally you gain 1 [ARCANA] which you can recover by spending 1 [STAMINA] at short rest or during a long rest.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Advanced Arcane Training",
@@ -25,7 +32,14 @@
             "requiredPerks": [ "Arcane Training" ],
             "otherRequirements": [ ]
         },
-        "description": "You gain an additional [ARCANA, you can learn one additional spell and you now recover 2 [ARCANA] when you spend 1 [STAMINA] during a short rest.. Additionally for the purposes of meeting the requirements of a Perk your [SPELL LEVEL] is now 1."
+        "textElements": [
+            {
+                "regularText": "You gain an additional [ARCANA, you can learn one additional spell and you now recover 2 [ARCANA] when you spend 1 [STAMINA] during a short rest.. Additionally for the purposes of meeting the requirements of a Perk your [SPELL LEVEL] is now 1.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Caster",
@@ -40,7 +54,14 @@
             "requiredPerks": [ "Advanced Arcane Training" ],
             "otherRequirements": []
         },
-        "description": "You gain an additional [ARCANA], pick two Spell Subdisciplines of the same Discipline, you can now also learn spells of those two subdiscipline. Additionally you can learn 2 additional spells and you now recover 3 [ARCANA] when you spend 1 [STAMINA] during a short rest. "
+        "textElements": [
+            {
+                "regularText": "You gain an additional [ARCANA], pick two Spell Subdisciplines of the same Discipline, you can now also learn spells of those two subdiscipline. Additionally you can learn 2 additional spells and you now recover 3 [ARCANA] when you spend 1 [STAMINA] during a short rest.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Versitile Mage",
@@ -55,7 +76,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "Choose one Spell subdiscipline, you can now also learn spells of that discipline. If you take this Perk again the [INT] requirement increases by 2."
+        "textElements": [
+            {
+                "regularText": "Choose one Spell subdiscipline, you can now also learn spells of that discipline. If you take this Perk again the [INT] requirement increases by 2.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Elementalist",
@@ -68,7 +96,25 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "can learn elemental Spells" ]
         },
-        "description": "When you cast a spell of the elemental Discipline you can add 1 to the [SPELL CAST TEST]. Furthermore when you are in a certain Terrain you have an easier time of casting these spells and you can treat your [SPI] Attribute 1 higher for the purpeses of casting this spell.<br><span class=\"fw-bold\">Elemental Terrain</span> <span><ul><li><span class=\"fw-bold\">Fire:</span> Grassland, Desert, Vulcano</li> <li><span class=\"fw-bold\">Earth:</span> Hill, Mountain, Underground</li> <li><span class=\"fw-bold\">Water:</span> Ocean, Lakes, Coasts, Underwater, Arctic</li> <li><span class=\"fw-bold\">Air:</span> Forest, in the Air, High Mountain Peaks </li> </ul></span>"
+        "textElements": [
+            {
+                "regularText": "When you cast a spell of the elemental Discipline you can add 1 to the [SPELL CAST TEST]. Furthermore when you are in a certain Terrain you have an easier time of casting these spells and you can treat your [SPI] Attribute 1 higher for the purpeses of casting this spell.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "<span class=\"fw-bold\">Fire: </span>Grassland, Desert, Vulcano",
+                    "<span class=\"fw-bold\">Earth: </span>Hill, Mountain, Underground",
+                    "<span class=\"fw-bold\">Water: </span>Ocean, Lakes, Coasts, Underwater, Arctic",
+                    "<span class=\"fw-bold\">Air: </span>Forest, in the Air, High Mountain Peaks"
+                ],
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Pyrmonacer",
@@ -81,7 +127,29 @@
             "requiredPerks": [ "Elementalist" ],
             "otherRequirements": [ "Hydromancer Perk not selected" ]
         },
-        "description": "When you cast a Pyromancy spell, you can reroll one die during the [SPELL CAST TEST].<br> Additionally at will without any [ARCANA] Cost you can summon a flame for 1 [AP] on a body part that stays there until you extinguish it. This flame can be up to the size of your fist and is hot but doesn’t hurt you. While this flame is burning it can shine a bright light up to 6m and a dim light up to 12m. When you hit someone with an unarmored attack while the flame is present it also deals 1 extra fire damage."
+        "textElements": [
+            {
+                "regularText": "When you cast a Pyromancy spell, you can reroll one die during the [SPELL CAST TEST]. Additionally you gain access to the following Ability:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Summon Flame",
+                    "tags": [ "Pyrmoancy" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "1 [AP]",
+                    "range": "6m",
+                    "target": "anywhere",
+                    "duration": "varies",
+                    "description": "You can summon a small flame the size of your Fist, if you summon it at a body part it shines a light (3m/6m) and is hot but doesn't harm you. Alternatively you can summon it at any place within range and if the target is easily combustable it will ignite."
+                }
+            }
+        ]
     },
     {
         "name": "Master Pyrmonacer",
@@ -94,7 +162,14 @@
             "requiredPerks": [ "Pyrmonacer" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Pyromancy Spell.<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Pyromancy Spell. Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Hydromancer",
@@ -107,7 +182,14 @@
             "requiredPerks": [ "Elementalist" ],
             "otherRequirements": [ "Pyrmonacer Perk not selected" ]
         },
-        "description": "When you cast a Hydromancy spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally at will without any [ARCANA] Cost you can change the temperature of water from freezing to boiling at a rate of 1 liter per [AP] spent. You also gain the custom movement Swim(1.5m) and you can use your [SPI] instead of [STR] for Swim Tests."
+        "textElements": [
+            {
+                "regularText": "hen you cast a Hydromancy spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally at will without any [ARCANA] Cost you can change the temperature of water from freezing to boiling at a rate of 1 liter per [AP] spent. You also gain the custom movement Swim(1.5m) and you can use your [SPI] instead of [STR] for Swim Tests.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Master Hydromancer",
@@ -120,7 +202,14 @@
             "requiredPerks": [ "Hydromancer" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Hydomancy Spell.<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Hydomancy Spell. Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Aeromancer",
@@ -133,7 +222,14 @@
             "requiredPerks": [ "Elementalist" ],
             "otherRequirements": [ "Geomancer Perk not selected" ]
         },
-        "description": "When you cast an Aeromancer spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally for calculating Jump Distance and for any [ATTRIBUTE TEST] related to jumping you can use your [SPI] instead of your [STR] . Additionally when your reaction for Graceful Landing to reduce Fall Damage you can use your Spirit instead of your Agility."
+        "textElements": [
+            {
+                "regularText": "When you cast an Aeromancer spell, you can reroll one die during the [SPELL CAST TEST]. For calculating Jump Distance and for any [ATTRIBUTE TEST] related to jumping you can use your [SPI] instead of your [STR]. Additionally you can reduce any fall damage you take by [SPI]*2",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Master Aeromancer",
@@ -146,7 +242,14 @@
             "requiredPerks": [ "Aeromancer" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Aeromancy Spell.<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Aeromancy Spell.<br>Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Geomancer",
@@ -159,7 +262,14 @@
             "requiredPerks": [ "Elementalist" ],
             "otherRequirements": [ "Aeromancer Perk not selected" ]
         },
-        "description": "When you cast a Geomancer spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally while you are standing on rocky or earthen Terrain you gain tremorsense (6m), if you already have tremorsense it increases by 3m. Further when you make an [ATTRIBUTE TEST] to climb up rock or earth you can use your [SPI] instead of your [STR] ."
+        "textElements": [
+            {
+                "regularText": "When you cast a Geomancer spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally while you are standing on rocky or earthen Terrain you gain tremorsense (6m), if you already have tremorsense it increases by 3m. Further when you make an [ATTRIBUTE TEST] to climb up rock or earth you can use your [SPI] instead of your [STR].",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Master Geomancer",
@@ -172,7 +282,14 @@
             "requiredPerks": [ "Geomancer" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Geomancy Spell.<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Geomancy Spell. Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Cosmic Touched",
@@ -185,7 +302,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "can learn Cosmic Spells" ]
         },
-        "description": "When you cast a spell of the cosmic Discipline you can add 1 to the [SPELL CAST TEST]. Additionally during the day if you cast a light or restoration spell you can treat your [SPI] Attribute 1 higher for the purposes of casting this spell or alternatively during night necromancy and shadow spells are improved.<br>Additionally you can cast divination spells during your sleep (GM determines if that particular spell makes sense) while doing that you can treat your Spirit Attribute 1 higher for the purposes of casting that spell."
+        "textElements": [
+            {
+                "regularText": "When you cast a spell of the cosmic Discipline you can add 1 to the [SPELL CAST TEST]. Additionally during the day if you cast a light or restoration spell you can treat your [SPI] Attribute 1 higher for the purposes of casting this spell or alternatively during night necromancy and shadow spells are improved.<br>Additionally you can cast divination spells during your sleep (GM determines if that particular spell makes sense) while doing that you can treat your Spirit Attribute 1 higher for the purposes of casting that spell.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "White mage",
@@ -198,7 +322,14 @@
             "requiredPerks": [ "Cosmic Touched" ],
             "otherRequirements": [ "good alignment" ]
         },
-        "description": "When you cast a light or restoration spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "When you cast a light or restoration spell, you can reroll one die during the [SPELL CAST TEST]. Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Saint",
@@ -211,7 +342,14 @@
             "requiredPerks": [ "White mage" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Light or Restoration Spell.<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Light or Restoration Spell. Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Dark apostle",
@@ -224,7 +362,14 @@
             "requiredPerks": [ "Cosmic Touched" ],
             "otherRequirements": [ "evil alignment" ]
         },
-        "description": "When you cast a shadow or necromancy spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally ... TODO"
+        "textElements": [
+            {
+                "regularText": "When you cast a shadow or necromancy spell, you can reroll one die during the [SPELL CAST TEST]. Additionally ... TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Dark Lord",
@@ -237,7 +382,14 @@
             "requiredPerks": [ "Dark apostle" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Necromancy Spell.<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Necromancy Spell.<br>Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Manipulator",
@@ -250,7 +402,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "can learn either Transmutation, Conjuration, Illusion or Teleportation spells" ]
         },
-        "description": "When you cast a spell of the  Transmutation, Conjuration, Illusion or Teleportation Discipline you can add 1 to the [SPELL CAST TEST]. TODO"
+        "textElements": [
+            {
+                "regularText": "When you cast a spell of the  Transmutation, Conjuration, Illusion or Teleportation Discipline you can add 1 to the [SPELL CAST TEST]. TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Conjurer",
@@ -263,7 +422,14 @@
             "requiredPerks": [ "Manipulator" ],
             "otherRequirements": [ ]
         },
-        "description": "When you cast a Conjuration spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "When you cast a Conjuration spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Master Conjurer",
@@ -276,7 +442,14 @@
             "requiredPerks": [ "Conjurer" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Conjuration Spell.<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Conjuration Spell.<br>Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Transmuter",
@@ -289,7 +462,14 @@
             "requiredPerks": [ "Manipulator" ],
             "otherRequirements": [ ]
         },
-        "description": "When you cast a Transmutation spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "When you cast a Transmutation spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Master Transmuter",
@@ -302,7 +482,14 @@
             "requiredPerks": [ "Transmuter" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Transmutation Spell.<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Transmutation Spell.<br>Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Teleporter",
@@ -315,7 +502,14 @@
             "requiredPerks": [ "Manipulator" ],
             "otherRequirements": [ ]
         },
-        "description": "When you cast a Teleportation spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "When you cast a Teleportation spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Veilwalker",
@@ -328,7 +522,14 @@
             "requiredPerks": [ "Teleporter" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Teleportation Spell.<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Teleportation Spell.<br>Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Psychic",
@@ -341,7 +542,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "can learn Telekinesis or Telepathy Spells" ]
         },
-        "description": "When you cast a spell of the Telekinesis or Telepathy Discipline you can add 1 to the [SPELL CAST TEST]. Additionally if you cast a Telekinesis or Telepathy Spell you can cast it with 1 [AP] Additional casting cost to focus on the Spell. When doing so you can treat your [SPI] 1 higher for the purposes of casting the spell."
+        "textElements": [
+            {
+                "regularText": "When you cast a spell of the Telekinesis or Telepathy Discipline you can add 1 to the [SPELL CAST TEST]. Additionally if you cast a Telekinesis or Telepathy Spell you can cast it with 1 [AP] Additional casting cost to focus on the Spell. When doing so you can treat your [SPI] 1 higher for the purposes of casting the spell.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Telekinist",
@@ -354,7 +562,14 @@
             "requiredPerks": [ "Psychic" ],
             "otherRequirements": [ ]
         },
-        "description": "When you cast a Telekinesis spell, you can reroll one die during the [SPELL CAST TEST]. Additionally at will without an [ARCANA] Cost for 1 [AP] you can now magically move objects weighing up to [SPI] kg up to [SPI/2] meters. You need to see the object and you can't move objects other creatures are holding onto."
+        "textElements": [
+            {
+                "regularText": "When you cast a Telekinesis spell, you can reroll one die during the [SPELL CAST TEST]. Additionally at will without an [ARCANA] Cost for 1 [AP] you can now magically move objects weighing up to [SPI] kg up to [SPI/2] meters. You need to see the object and you can't move objects other creatures are holding onto.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Master Telekinist",
@@ -367,7 +582,14 @@
             "requiredPerks": [ "Telekinist" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Telekinesis Spell.<br>Additionally TODO"
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Telekinesis Spell.<br>Additionally TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Telepath",
@@ -380,7 +602,14 @@
             "requiredPerks": [ "Psychic" ],
             "otherRequirements": [ "" ]
         },
-        "description": "When you cast a Telepathy spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally you can telepathically communicate with your mind to a single creature within [SPI] ∗ 10 meters. You can project words, thoughts, ideas and images to that creature and it can reply with basic words."
+        "textElements": [
+            {
+                "regularText": "When you cast a Telepathy spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally you can telepathically communicate with your mind to a single creature within [SPI] ∗ 10 meters. You can project words, thoughts, ideas and images to that creature and it can reply with basic words.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Master Telepath",
@@ -393,6 +622,13 @@
             "requiredPerks": [ "Telepath" ],
             "otherRequirements": [ ]
         },
-        "description": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Telepatthy Spell.<br>You can alsp increase your telepathic communication range to [SPI] * 20 meters and you can target up to [SPI] creatures at once with it.<br>Furthermore you are aware of all living creatures within [SPI] ∗ 3 meters of you, those creatures can’t hide from you unless stated otherwise and can't get the benefit of concealment against you."
+        "textElements": [
+            {
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Telepatthy Spell.<br>You can alsp increase your telepathic communication range to [SPI] * 20 meters and you can target up to [SPI] creatures at once with it.<br>Furthermore you are aware of all living creatures within [SPI] ∗ 3 meters of you, those creatures can’t hide from you unless stated otherwise and can't get the benefit of concealment against you.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     }
 ]

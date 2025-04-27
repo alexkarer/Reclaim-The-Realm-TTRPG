@@ -10,7 +10,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "You gain 8 Skill Points, each time you choose this Perk again the [INT] requirement is 2 higher."
+        "textElements": [
+            {
+                "regularText": "You gain 8 Skill Points, each time you choose this Perk again the [INT] requirement is 2 higher.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Expert",
@@ -23,7 +30,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ ]
         },
-        "description": "You improve 2 skills by 2 ranks and increase the maximum rank of those skills by 2. If a lore or tool skill was chosen, the current rank and maximum rank is increased by 4 instead."
+        "textElements": [
+            {
+                "regularText": "You improve 2 skills by 2 ranks and increase the maximum rank of those skills by 2. If a lore or tool skill was chosen, the current rank and maximum rank is increased by 4 instead.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Animal Person",
@@ -34,7 +48,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Animal Handling Skill" ]
         },
-        "description": "TODO ... prob something with mounted combat"
+        "textElements": [
+            {
+                "regularText": "TODO ... prob something with mounted combat",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Athlete",
@@ -45,7 +66,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Athletics Skill" ]
         },
-        "description": "Your long jump distance increases by 0.5m for every Rank in the Athletics Skill you have, and your high jump distance by half of that. Additionally you gain the climb(1.5m) and swim(1.5m) speeds."
+        "textElements": [
+            {
+                "regularText": "Your long jump distance increases by 0.5m for every Rank in the Athletics Skill you have, and your high jump distance by half of that. Additionally you gain the climb(1.5m) and swim(1.5m) speeds.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Con Artist",
@@ -56,7 +84,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Deception Skill" ]
         },
-        "description": "Poisons, Magic or other Supernatural means can’t compell you to diverge important secrets/ information you want to withhold."
+        "textElements": [
+            {
+                "regularText": "Poisons, Magic or other Supernatural means can’t compell you to diverge important secrets/ information you want to withhold.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Detective",
@@ -67,7 +102,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Investigation Skill" ]
         },
-        "description": "You have advantage on any [D20 TEST] to resist or decipher illusions."
+        "textElements": [
+            {
+                "regularText": "You have advantage on any [D20 TEST] to resist or decipher illusions.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Bully",
@@ -78,7 +120,29 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Intimidation Skill" ]
         },
-        "description": "For 1 [AP] you can target a creature within 9m (6 squares). Make a [CHA] Intimidation [SKILL TEST] against the targets [WILLPOWER] on a success that target is [FRIGHTENED] until the end of your next turn. If the creature is a lower [LEVEL] than you, you have [ADVANTAGE] on the [SKILL TEST], if the [SKILL TEST] fails the target it is immune to this ability for 1 hour."
+        "textElements": [
+            {
+                "regularText": "You gain access to the following Ability:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Bully",
+                    "tags": [ "Skill" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "1 [AP]",
+                    "range": "9m",
+                    "target": "1 Creature",
+                    "duration": "1 [ROUND]",
+                    "description": "Make a [CHA] Intimidation [SKILL TEST] vs. [WILLPOWER], On Success: Apply [FRIGHTENED I], On failure: Target is immune to this Ability for 1 hour."
+                }
+            }
+        ]
     },
     {
         "name": "Doctor",
@@ -89,7 +153,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Medicine Skill" ]
         },
-        "description": "You have [ADVANTAGE] on any Medicine [SKILL TEST] when using a medi-kit. Additionally when you perform a long rest creatures in your party heal additional [HP] equal to your Ranks in the Medicine Skill."
+        "textElements": [
+            {
+                "regularText": "You have [ADVANTAGE] on any Medicine [SKILL TEST] when using a medi-kit. Additionally when you perform a long rest creatures in your party heal additional [HP] equal to your Ranks in the Medicine Skill.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Diplomat",
@@ -100,7 +171,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Persuasion Skill" ]
         },
-        "description": "TODO"
+        "textElements": [
+            {
+                "regularText": "TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Eagle Eye",
@@ -111,7 +189,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Awareness Skill" ]
         },
-        "description": "TODO"
+        "textElements": [
+            {
+                "regularText": "TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Infiltrator",
@@ -122,7 +207,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Stealth Skill" ]
         },
-        "description": "If you are targeted by an [RANGED ATTACK] from further than 6m away your [DODGE] is 5 higher. Additionally you are not slowed down while hidden."
+        "textElements": [
+            {
+                "regularText": "If you are targeted by an [RANGED ATTACK] 9m or further away, you gain bonus from partial concealment even if you are in plain sight. Additionally you are not slowed down while hidden.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Explorer",
@@ -133,7 +225,14 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "5 Ranks in the Survival Skill" ]
         },
-        "description": "Reduce the Speed Penalty of your party they get through Terrain modifiers by 1. (e.g. a -1 penalty to Travel speed becomes 0). You additionally ignore any additional [STAMINA] Cost, caused by Terrain."
+        "textElements": [
+            {
+                "regularText": "Reduce the Speed Penalty of your party they get through Terrain modifiers by 1. (e.g. a -1 penalty to Travel speed becomes 0). You additionally ignore any additional [STAMINA] Cost, caused by Terrain.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     },
     {
         "name": "Thief",
@@ -144,6 +243,13 @@
             "requiredPerks": [ ],
             "otherRequirements": [ "Ranks in the Thievery Skill" ]
         },
-        "description": "Picking Locks or disarming traps costs now 1 [AP] less (min 1 [AP]) and you can now also disarm magical traps by making an [INT] Thievery [SKILL TEST]."
+        "textElements": [
+            {
+                "regularText": "Picking Locks or disarming traps costs now 1 [AP] less (min 1 [AP]) and you can now also disarm magical traps by making an [INT] Thievery [SKILL TEST].",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     }
 ]

@@ -1,27 +1,5 @@
 [
     {
-        "name": "Versatile",
-        "tags": [ "Other" ],
-        "requirements": {
-            "requiredLevels": [ ],
-            "requiredAttributes": [ ],
-            "requiredPerks": [ ],
-            "otherRequirements": []
-        },
-        "description": "You can learn know one additional Class Technique, Combat Maneuver and Spell in Addition to the ones you already know. Once you reach [LEVEL] 7, you can learn an additional one for each."
-    },
-    {
-        "name": "Natural",
-        "tags": [ "Other", "repeatable" ],
-        "requirements": {
-            "requiredLevels": [ ],
-            "requiredAttributes": [ ],
-            "requiredPerks": [ ],
-            "otherRequirements": []
-        },
-        "description": "Choose one Attribute: for this Attribute the requirements for Milestone Benefits are reduced by 3. This Perk can’t be applied to the same Attribute twice."
-    },
-    {
         "name": "Quick Planning",
         "tags": [ "Other" ],
         "requirements": {
@@ -30,6 +8,13 @@
             "requiredPerks": [ ],
             "otherRequirements": []
         },
-        "description": "In the first [ROUND] in comat you can increase or deacrease your Initiative by 1d6 + [INT]/2."
+        "textElements": [
+            {
+                "regularText": "In the first [ROUND] in comat you can increase or deacrease your Initiative by 1d6 + [INT]/2.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
     }
 ]
