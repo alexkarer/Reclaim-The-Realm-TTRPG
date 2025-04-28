@@ -117,7 +117,7 @@
                 "range": "3m/6m/12m",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "You can try and use a small object like a small rock or bottle as an improvised thrown weapon. Make a [RANGED MARTIAL ATTACK] using the following range: 3m/6m/12m. On a hit the Damage is equal to your light [MARTIAL DAMAGE]."
+                "description": "You can try and use a small object like a small rock or bottle as an improvised thrown weapon. Make a [RANGED MARTIAL ATTACK] using the following range: 6m/12m/24m. On a hit the Damage is equal to your light [MARTIAL DAMAGE]."
             },
             {
                 "name": "Desperate Attack",
@@ -224,36 +224,18 @@
                 "target": "1 creature",
                 "duration": "[INSTANT]",
                 "description": "If a creature that is not under the effect of concleament leaves your melee range with a move, you can make a Melee [ATTACK] against them."
-            },
-            {
-                "name": "Graceful Landing",
-                "tags": [ ],
-                "requirements": {
-                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
-                },
-                "cost": "1 [REACTION]",
-                "range": "-",
-                "target": "[SELF]",
-                "duration": "[INSTANT]",
-                "description": "If you fall down a large height you can use your reaction to perform a landing to reduce damage. Make an [AGI] [ATTRIBUTE TEST] and reduce the damage of your landing by half of that result."
-            },
-            {
-                "name": "Parry",
-                "tags": [ "Weapon", "Melee" ],
-                "requirements": {
-                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ "Weapon" ]
-                },
-                "cost": "[REACTION]",
-                "range": "-",
-                "target": "[SELF]",
-                "duration": "[INSTANT]",
-                "description": "When you are hit by a [MELEE ATTACK] you can use this reaction. Make a Weapon [MELEE MARTIAL ATTACK] if it matches or exceeds the [MELEE ATTACK] that targeted you, the damage from the [ATTACK] is reduced by [AGI] + [MARTIAL LEVEL] if weapon is wielded one-handed, or by 2 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded two-handed."
             }
         ]
     },
     "additionalCombatRules": {
         "attack": {
-            "description": "Most offensive abilities are classified as an [ATTACK]. An [ATTACK] is a specific [D20 TEST] that targets the enemies [DODGE]. If the [ATTACK] results is equal or higher than the target's [DODGE] than that [ATTACK] is classified as a hit.",
+            "description": "Most offensive abilities are classified as an [ATTACK]. An [ATTACK] is a [D20 TEST] that has a single targtet or multiple targets and is compared against the targets' [DODGE] and can have the following results:",
+            "attackResults": [
+                { "result": "critical miss", "description": "If the unmodified roll of the [ATTACK] is a 1 then the [ATTACK] misses, no damage is dealt and no additional effects can be applied." },
+                { "result": "glancing hit", "description": "If the result of the [ATTACK] is lower than the targets [DODGE] then only halve the damage is dealt (rounded down) and no additional effects are applied." },
+                { "result": "regular hit", "description": "If the result of the [ATTACK] is equal or higher than the targets [DODGE] then the full damage is dealt (rounded down) and additional effects may be applied." },
+                { "result": "cricitcal hit", "description": "If the unmodified roll of the [ATTACK] is a 20 then the full damage is dealt and all damage rolls can be twice and additional effects ffects may be applied." }
+            ],
             "attackTypes": [
                 { "type": "[MELEE ATTACK]", "description": "An [ATTACK] that takes place in [MELEE RANGE]" },
                 { "type": "[RANGED ATTACK]", "description": "An [ATTACK] which range is limited by the ability used or weapon. Any [RANGED ATTACK] that targets a creature which is in [MELEE RANGE] with you has [DISADVANTAGE]." },
@@ -261,17 +243,14 @@
                 { "type": "[RANGED MARTIAL ATTACK]", "description": "This is a [RANGED ATTACK] as well as a [MARTIAL TEST] and it recieves a bonus equal to the [MARTIAL LEVEL] and [PER] of the Attacker to the Test." },
                 { "type": "[MELEE SPELL ATTACK]", "description": "This is a [MELEE ATTACK] as well as a [SPELL TEST] and it recieves a bonus equal to the [SPELL LEVEL] and [AGI] of the Attacker to the Test." },
                 { "type": "[RANGED SPELL ATTACK]", "description": "This is a [RANGED ATTACK] as well as a [SPELL TEST] and it recieves a bonus equal to the [SPELL LEVEL] and [PER] of the Attacker to the Test." }
-            ],
-            "criticalsDescription": "Every [ATTACK] additionally has the posibility to score a Critical Hit or Critical Miss. A critical Hit is scored by rolling a natural 20 for an [ATTACK] Test, however certain abilities might enable you additional ways to score a critical hit. A Critical Miss is scored when rolling a natural 1 for an [ATTACK] Test.<br/>Additionally Player Characters recieve cricical hits when they roll a natural 1 or a critical Miss if they roll a natural 20 for a [DODGE] [SAVE].",
-            "criticalHitEffects": "When a critical hit is scored all damage dice can be rolled twice",
-            "criticalMissEffects": "When a critical miss is scored the [ATTACK] automatically misses."
+            ]
         },
         "damage": {
             "description": "When dealing damage there are various mechanics in the game which can reduce and amplify the damage you recieve. Damage is reduced/amplifierd in the following order:",
             "damageOrder": [
                 "Damage is dealt to a target and all effects that happen when damage is dealt, happen now.",
-                "Damage is reduced by any damage resistance the target has.",
                 "Damage is reduced by any [THP] the target has.",
+                "Damage is reduced by any [DR] the target has.",
                 "The target recieves any remaining damage and their [HP] is reduced accordingly."
             ],
             "damageTypes": {
@@ -317,11 +296,11 @@
             "cover": {
                 "description": "If a creature makes a [RANGED ATTACK] against the target and there are other objects or creatures blocking parts of the target, it recieves cover bonuses. The less of the target is visible the better the cover bonus.",
                 "smallCoverKeyword": "SMALL COVER",
-                "smallCoverDescription": "If at least 25% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-5 will always miss and the target recieves +2 to [DODGE] and [SHIELD BLOCK].",
+                "smallCoverDescription": "If at least 25% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-5 will always be a critical miss and the target recieves +2 to [DODGE] and [SHIELD BLOCK].",
                 "mediumCoverKeyword": "MEDIUM COVER",
-                "mediumCoverDescription": "If at least 50% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-10 will always miss and the target recieves +4 to [DODGE] and [SHIELD BLOCK].",
+                "mediumCoverDescription": "If at least 50% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-10 will always be a critical miss and the target recieves +4 to [DODGE] and [SHIELD BLOCK].",
                 "largeCoverKeyword": "LARGE COVER",
-                "largeCoverDescription": "If at least 75% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-15 will always miss and the target recieves +6 to [DODGE] and [SHIELD BLOCK]."
+                "largeCoverDescription": "If at least 75% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-15 will always be a critical miss and the target recieves +6 to [DODGE] and [SHIELD BLOCK]."
             },
             "prone": {
                 "keyword": "PRONE",

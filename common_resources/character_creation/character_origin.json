@@ -11,9 +11,9 @@
             { "d100": "86-100", "birthLocation": "Roll on Exotic Location Table", "attributeBonus": "-" }
         ],
         "exoticBirthplaces": [
-            { "d6": "1", "exoticBirthLocation": "Elemental Plane of Fire", "bonus": "Fire Damage Resistance equal to 5 + half your [LEVEL] (rounded down)" },
+            { "d6": "1", "exoticBirthLocation": "Elemental Plane of Fire", "bonus": "[DR] Fire equal to 5 + half your [LEVEL] (rounded down)" },
             { "d6": "2", "exoticBirthLocation": "Elemental Plane of Earth", "bonus": "+2 [HP] per Level up." },
-            { "d6": "3", "exoticBirthLocation": "Elemental Plane of Water", "bonus": "Swim Speed equal to your walking speed and Frost Damage Resistance equal to 5 + half your [LEVEL] (rounded down)" },
+            { "d6": "3", "exoticBirthLocation": "Elemental Plane of Water", "bonus": "Swim Speed equal to your walking speed and [DR] Frost equal to 5 + half your [LEVEL] (rounded down)" },
             { "d6": "4", "exoticBirthLocation": "Elemental Plane of Air", "bonus": "permanent +2 [MP]" },
             { "d6": "5", "exoticBirthLocation": "Corrupted by Positive Aether Energy", "bonus": "+1 [SPI], can choose one first power Divine or Restoration spell and cast it once per day without spending [ARCANA]" },
             { "d6": "6", "exoticBirthLocation": "Corrupted by Negative Aether Energy", "bonus": "+1 [SPI], can choose one first power Necromancy or Shadow spell and cast it once per day without spending [ARCANA]" }

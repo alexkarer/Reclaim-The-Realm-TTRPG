@@ -8,11 +8,34 @@ This document contains a series of changelogs to keep track of changes happening
 
 ### Core Rules
 
+#### Attacks
+An Attacks now has 4 different results:
+- critical miss: natural 1, no damage
+- glancing hit: halve damage
+- regular hit: full damage
+- ciritcal hit: full damage + every damage dice rolled twice
+
+#### Remvoved Core Abilities
+Removed the following core abilities to simplify:
+- parry (now only martial maneuver)
+- graceful landing
+
+#### Minor Changes
+
 ### Classes
 
 ### Perks
 
 ### Martial Manuevers
+
+#### Parry (renamed from Improved Parry)
+- reworked to match new attack rules
+
+#### Inhuman Reactions (level 8 ability)
+- removed as not relevant anymore with new attack ruls
+
+#### Minor Changes
+- Cleave: made clear that both targets need to be within range
 
 ### Spells
 
@@ -28,6 +51,7 @@ This document contains a series of changelogs to keep track of changes happening
 #### Minor Changes
 - remove bold and brackets from keywords to make text less cluttered and add underline instead
 - Introduced Keywords for all circumstancal combat abilities and additionally reword circumstances to make intent more clearer
+- make use of the DR (Damage Resistance) Keyword everywhere
 
 ---
 

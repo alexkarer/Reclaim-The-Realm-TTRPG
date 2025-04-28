@@ -381,7 +381,7 @@
             },
             "cost": "3 [AP]",
             "range": "[MELEE RANGE]",
-            "target": "2 creatures that are next to each other",
+            "target": "2 creatures that are next to each other and within range",
             "duration": "[INSTANT]",
             "description": "Make a Weapon Attack with a melee Weapon that targets both targets.",
             "maneuverPush": {
@@ -424,7 +424,7 @@
             "description": "Make a Weapon Attack with a Ranged Weapon against both targets with a -2 penalty to the [ATTACK] and damage."
         },
         {
-            "name": "Improved Parry",
+            "name": "Parry",
             "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
                 "requiredLevels": [
@@ -438,7 +438,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "This is an improved version of the regular parry: When you are hit by a [MELEE ATTACK] you can use this reaction. Make a [MELEE MARTIAL ATTACK] using weapon bonuses, if it matches or exceeds the [MELEE ATTACK] that targeted you, the damage from the [ATTACK] is reduced by 2 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded one-handed, or by 3 * ([AGI] + [MARTIAL LEVEL]) if weapon is wielded two-handed.",
+            "description": "When you are hit by a [MELEE ATTACK] you can use this reaction. Make a [MELEE MARTIAL ATTACK] vs. [MELEE ATTACK] that targeted you. On success turn critical hit into regular hit, regular hit into glancing hit and glancing hit into critical miss.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can now parry any [ATTACK]."

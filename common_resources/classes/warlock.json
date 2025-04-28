@@ -140,7 +140,7 @@
                     "bulletPoints": [
                         "Your entity is an Fire Elemental, the most passionate and temperamental of elements",
                         "You can learn spells of the Pyromancy Subdiscipline.",
-                        "You gain damage resistance towards fire damage equal to 5 + [LEVEL]",
+                        "You gain [DR] fire equal to 5 + [LEVEL]",
                         "Persuasion and Intimidation become Class Skills for you.",
                         "Your entity damage type is fire."
                     ],
@@ -158,7 +158,7 @@
                     "bulletPoints": [
                         "Your entity is an Earth Elemental, the most steadfast and stubborn of elements",
                         "You can learn spells of the Geomancy Subdiscipline.",
-                        "You gain damage resistance towards poison damage equal to 5 + [LEVEL]",
+                        "You gain [DR] poison equal to 5 + [LEVEL]",
                         "You gain an additional 1 [HP] per [LEVEL].",
                         "Your entity damage type is poison."
                     ],
@@ -176,7 +176,7 @@
                     "bulletPoints": [
                         "Your entity is a Water Elemental, the most intiutive and flexible of all elements",
                         "You can learn spells of the Hydromancy Subdiscipline.",
-                        "You gain damage resistance towards frost damage equal to 5 + [LEVEL]",
+                        "You gain [DR] frost equal to 5 + [LEVEL]",
                         "You gain swimming speed equal to your walking speed and can breath underwater",
                         "Your entity damage type is frost."
                     ],
@@ -194,7 +194,7 @@
                     "bulletPoints": [
                         "Your entity is an Air Elemental, the most free spirited and uncaring of elementals",
                         "You can learn spells of the Aeromancy Subdiscipline.",
-                        "You gain damage resistance towards lightning damage equal to 5 + [LEVEL]",
+                        "You gain [DR] lightning equal to 5 + [LEVEL]",
                         "Increase your [MP] by 1.",
                         "Your entity damage type is lightning."
                     ],
@@ -225,7 +225,7 @@
                     "bulletPoints": [
                         "Your Entity is an Angel, a Saint or a former Hero.",
                         "You can learn spells of the Light and Restoration Subdisciplines.",
-                        "You gain damage resistance towards holy damage equal to 5 + [LEVEL].",
+                        "You gain [DR] holy equal to 5 + [LEVEL].",
                         "Each time you make a [D20 TEST] where you assist another creature without immediate gain for yourself instead of rolling a dice you can gain 1 Corruption and treat the roll as a 15. If your actions are especially selfless the GM might instead allow the roll to be treated as a 20 instead.",
                         "Your entity damage type is holy."
                     ],
@@ -243,7 +243,7 @@
                     "bulletPoints": [
                         "Your Entity is a Demon, a long dead Tyrant or villain.",
                         "You can learn spells of the Necromancy and Shadow Subdisciplines.",
-                        "You gain damage resistance towards unholy damage equal to 5 + [LEVEL].",
+                        "You gain [DR] unholy equal to 5 + [LEVEL].",
                         "Any time you make a [D20 TEST] instead of rolling a dice you can choose to gain 1 Corruption and turn the roll into a natural 20. However for the next [D20 TEST] you make the dice roll will be automatically a 1.",
                         "Your entity damage type is unholy."
                     ],
@@ -261,7 +261,7 @@
                     "bulletPoints": [
                         "Your Entity is an unfathomable Entity, a Cosmic Horror or a Mysterious Observer.",
                         "You can learn spells of the Divination, Necromancy, Restoration Subdisciplines.",
-                        "You gain damage resistance towards cosmic damage equal to 5 + [LEVEL]",
+                        "You gain [DR] cosmic equal to 5 + [LEVEL]",
                         "The bound entity possess unkowable knowledge. When making any [INT] [ATTRIBUTE TEST] to recall knowledge instead of rolling a dice you can immediatly succeed that [ATTRIBUTE TEST] and gain 1 Corruption.",
                         "Your entity damage type is cosmic."
                     ],
@@ -317,7 +317,7 @@
                 },
                 { "regularText": null, "headerLine": "Natural armor", "bulletPoints": null, "ability": null },
                 {
-                    "regularText": "You gain physical 2 + [LEVEL]/2 physical resistance which does not stack with armor.<br><span class=\"fw-bold\">Corruption Effect: </span>Your damage resistance works now against all damage types, however any [SAVE] you make recieves a Penalty equal to half your current Corruption.",
+                    "regularText": "You gain [DR] physical equal to 2 + [LEVEL]/2 which does not stack with armor.<br><span class=\"fw-bold\">Corruption Effect: </span>Your [DR] works now against all damage types, however any [SAVE] you make recieves a Penalty equal to half your current Corruption.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null

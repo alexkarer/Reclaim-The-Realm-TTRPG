@@ -26,20 +26,20 @@ ____________________________________________________________
 **Formatting**
 
 **Bigger Mechanical Changes**
-- When making a d20 the following happens: 20->automatic hit, 1->automatic miss, attack>dodge->hit, dodge>attack->glancing blow(half damage)
 - Rescale damage, especially for NPCs to make it less lethal at 1st level, maybe NPCs only deal d6 damage.
 - Implement similar system for Spell Damage
 - Properly rework Hybrid Abilities, they deserve to stay.
 - Shields?
+- remove unncessesarry core abilities
 
 **Smaller Mechanical Changes**
 - properly differentiate [FREE] vs 0 [AP]
 - Permanent Injuries should only trigger when reduced to 0 [HP] or at Deaths Door.
 - Spell Keywords need to be reworked
-- Rewrite perks to have proer ability rendering/formatting
+- Rewrite perks that have poor ability rendering/formatting
 
 **Ability Simplifications**
-- Treat Mechanical Text and Flavour Text seperatly.
+- Treat Mechanical Text and Flavour Text seperatly. (abilities should have the textelements for better formatting)
 - When possible simplify the mechanical text a lot.
 - Weapon Attack Ability Should not be referenced in other abilities but instead the equipment should have references for these.
 
@@ -56,11 +56,7 @@ ____________________________________________________________
 **Specific Changes**
 - Rename Hardness to Stability
 - change battle recovery to be less useful than resting.
-- Parry should turn crit->hit, hit->glancing, glancing->miss
-- use [DR] keyword more often
 - adjust travel text since speed is constant.
-- rename cleave so in target  that they also need to be within meele ranbge
-- Cleric should be able to use holy strike with any attack
 ___________________________________________________________
 ### Future Ideas / Nice to have:
 

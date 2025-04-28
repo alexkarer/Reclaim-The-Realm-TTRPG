@@ -437,7 +437,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 [AP], 1 [ARCANA]", "range": "6m", "target": "one willing creature", "duration": "[SPI] [ROUND], [CONCENTRATION 0]",
-                "description": "You cause a minor mutation within a creature and can grant them one of the following benefits: <ul><li>Quicken: Their limbs change to be more agile: the creature recieves the [HASTE I] status effect</li> <li>Natural armor: The target’s skin becomes harder and grows more layers to protect it and it grants physical damage resistance equal to SPI. Does not stack with physical damage resistance granted by other armor and is treated as armor for all other effects.</li></ul>",
+                "description": "You cause a minor mutation within a creature and can grant them one of the following benefits: <ul><li>Quicken: Their limbs change to be more agile: the creature recieves the [HASTE I] status effect</li> <li>Natural armor: The target’s skin becomes harder and grows more layers to protect it and it grants [DR] physical equal to [SPI]. Does not stack with physical [DR] granted by other armor and is treated as armor for all other effects.</li></ul>",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase of 2 you can target one additional creature and the range increases by 1.5m"
             },

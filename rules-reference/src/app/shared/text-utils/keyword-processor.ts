@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 import { Attribute, attributes } from '../../../../../common_resources/character_values/attributes/attribute';
 import { ContentPart, generateGenericKeyword } from "./text-utils";
 import statusEffectsJson from '../../../../../common_resources/combat/status_effects.json';
+import combatDetailsJson from '../../../../../common_resources/combat/combat_details.json'
 
 let combinedStatusEffects = [...statusEffectsJson.tierOneBeneficialStatusEffects];
 combinedStatusEffects.push(...statusEffectsJson.tierOneHarmfulStatusEffects);
@@ -126,17 +127,17 @@ function getGameMechanicsContentPart(keyword: string): ContentPart | undefined {
         case 'SKILL TEST':
             return generateGenericKeyword('SKILL TEST', 'A Skill Test is an [ATTRIBUTE TEST] where also ranks of a Skill can be added to the bonus.', '');
         case 'ATTACK':
-            return generateGenericKeyword('ATTACK', 'TODO', 'attack');
+            return generateGenericKeyword('ATTACK', combatDetailsJson.additionalCombatRules.attack.description, 'attack');
         case 'MELEE ATTACK':
-            return generateGenericKeyword('MELEE ATTACK', 'TODO', 'attack');
+            return generateGenericKeyword('MELEE ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[0].description, 'attack');
         case 'RANGED ATTACK':
-            return generateGenericKeyword('RANGED ATTACK', 'TODO', 'attack');
+            return generateGenericKeyword('RANGED ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[1].description, 'attack');
         case 'MARTIAL TEST':
-            return generateGenericKeyword('MARTIAL TEST', 'TODO', '');
+            return generateGenericKeyword('MARTIAL TEST', 'Tests made when performing Martial Maneuvers. A [MARTIAL TEST] is a [D20 TEST] that benefits from your [MARTIAL LEVEL] and an Attribute that is stated in the context', '');
         case 'MELEE MARTIAL ATTACK':
-            return generateGenericKeyword('MEELE MARTIAL ATTACK', 'TODO', 'attack');
+            return generateGenericKeyword('MEELE MARTIAL ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[2].description, 'attack');
         case 'RANGED MARTIAL ATTACK':
-            return generateGenericKeyword('RANGED MARTIAL ATTACK', 'TODO', 'attack');
+            return generateGenericKeyword('RANGED MARTIAL ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[3].description, 'attack');
         case 'SPELL ABILITY':
             return generateGenericKeyword('SPELL ABILITY', 'Any Ability with the [SPELL ABILITY] Tag, these Abilities also have a number associated with it, if not the nuzmber is 0.', 'spell-test');
         case 'SPELL CAST TEST':
@@ -144,9 +145,9 @@ function getGameMechanicsContentPart(keyword: string): ContentPart | undefined {
         case 'SPELL TEST':
             return generateGenericKeyword('SPELL TEST', 'Tests made when casting Spells. A [SPELL TEST] is a [D20 TEST] that benefits from your [SPELL LEVEL] and an Attribute that is stated in the context.', 'spell-test');
         case 'MELEE SPELL ATTACK':
-            return generateGenericKeyword('MELEE SPELL ATTACK', '[MELEE ATTACK], [SPELL TEST]. Certain spells require you to direct a spell towards a target in close range of you which attempts to dodge that. The Attack Bonus is [AGI] + [SPELL LEVEL]', 'melee-spell-attack');
+            return generateGenericKeyword('MELEE SPELL ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[4].description, 'melee-spell-attack');
         case 'RANGED SPELL ATTACK':
-            return generateGenericKeyword('RANGED SPELL ATTACK', '[RANGED ATTACK], [SPELL TEST]. Certain spells require you to hit targets with a magic projectile towards a target which attempts to dodge that. For these spells make an Attack Roll using your Ranged Spell Attack Bonus which is calulated the following way: [PER] + [SPELL LEVEL]', 'ranged-spell-attack');
+            return generateGenericKeyword('RANGED SPELL ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[5].description, 'ranged-spell-attack');
         case 'CONCENTRATION':
             return generateGenericKeyword('CONCENTRATION', 'Abilities with these keywords need to activly maintained by the caster. They are listed with a number which denotes how much [AP] they need to spend to maintain the ability, if they are not able to spend the [AP] the ability ends.', 'concentration-test');
         case 'CONCENTRATION TEST':

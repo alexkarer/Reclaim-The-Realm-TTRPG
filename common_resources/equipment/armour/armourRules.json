@@ -1,9 +1,9 @@
 {
-    "armourDescription": "Armour enables you to shrug off a certain amount of physical damage at the costs of slightly impeding your manoeuvrability. There are different Armour sizes available and can be split up into 4 types, the heaver the armour, the higher the damage resistance as well as the penalty to your manoeuvrability.",
+    "armourDescription": "Armour enables you to shrug off a certain amount of physical damage at the costs of slightly impeding your manoeuvrability. There are different Armour sizes available and can be split up into 4 types, the heaver the armour, the higher the [DR] as well as the penalty to your manoeuvrability.",
     "armourProperties": [
         {
             "name": "Damage Block",
-            "description": "Damage Block is the damage resistance your character gains access to. This damage resistance does not stack with any other form of physical damage resistance unless specifically stated otherwise."
+            "description": "Damage Block is the [DR] your character gains access to. This[DR] does not stack with any other form of physical [DR] unless specifically stated otherwise."
         },
         {
             "name": "Manoeuvre Penalty",

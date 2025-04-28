@@ -39,18 +39,25 @@
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="attack">Attacks</h5>
         <p class="header-subscript">Keyword: [ATTACK]</p>
         <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.description | keywordProcessor"></app-dynamic-content>
+
+        <h6 class="mb-0 mt-2" ngbScrollSpyFragment="attack">Attack Results</h6>
         <ul>
-            @for (attackType of combatDetails.additionalCombatRules.attack.attackTypes; track $index) {
+            @for (result of combatDetails.additionalCombatRules.attack.attackResults; track $index) {
                 <li>
-                    <span class="fw-bold"><app-dynamic-content [content]="attackType.type + ': ' | keywordProcessor"></app-dynamic-content></span>
-                    <app-dynamic-content [content]="attackType.description | keywordProcessor"></app-dynamic-content>
+                    <span class="fw-bold"><app-dynamic-content [content]="result.result + ': ' | keywordProcessor"></app-dynamic-content></span>
+                    <app-dynamic-content [content]="result.description | keywordProcessor"></app-dynamic-content>
                 </li>
             }
         </ul>
-        <h6 class="mb-0 mt-2">Critical Hits</h6>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.criticalsDescription | keywordProcessor"></app-dynamic-content>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.criticalHitEffects | keywordProcessor"></app-dynamic-content>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.criticalMissEffects | keywordProcessor"></app-dynamic-content>
+
+        <h6 class="mb-0 mt-2" ngbScrollSpyFragment="attack">Attack Types</h6>
+        <ul>
+            @for (type of combatDetails.additionalCombatRules.attack.attackTypes; track $index) {
+                <li>
+                    <app-dynamic-content [content]="type.type | keywordProcessor"></app-dynamic-content>
+                </li>
+            }
+        </ul>
 
         <h5 class="mb-0 mt-2">Damage</h5>
         <app-dynamic-content [content]="combatDetails.additionalCombatRules.damage.description | keywordProcessor"></app-dynamic-content>

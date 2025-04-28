@@ -4,11 +4,10 @@ import { TextElementsComponent } from "../../shared/text-utils/text-elements/tex
 import { Armour } from '../../../../../common_resources/equipment/armour/armour';
 import { Ammunition, Weapon } from '../../../../../common_resources/equipment/weapons/weapons';
 import { Shield } from '../../../../../common_resources/equipment/shields/shields';
-import { DynamicContentComponent } from "../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
 
 @Component({
   selector: 'app-equipment-list',
-  imports: [TextElementsComponent, DynamicContentComponent],
+  imports: [TextElementsComponent],
   templateUrl: './equipment-list.component.html',
   styleUrl: './equipment-list.component.scss'
 })

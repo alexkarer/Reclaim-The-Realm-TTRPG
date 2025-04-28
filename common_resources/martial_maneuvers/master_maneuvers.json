@@ -1,29 +1,6 @@
 {
     "agileManuevers": [
         {
-            "name": "Inhuman Reactions",
-            "tags": [ "Martial Maneuver (Master)", "Agile" ],
-            "requirements": {
-                "requiredLevels": [
-                    { "amount": 8, "levelType": "[MARTIAL LEVEL]" }
-                ],
-                "requiredAttributes": [
-                    { "amount": 6, "attribute": "[AGI]" }
-                ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
-            "cost": "[REACTION]",
-            "range": "-",
-            "target": "[SELF]",
-            "duration": "[INSTANT]",
-            "description": "When you are hit by an [ATTACK] that is not a critical hit, you can gain a bonus to your [DODGE] equal to your [AGI] + [MARTIAL LEVEL] against that [ATTACK] , potentially avoiding it.",
-            "maneuverPush": {
-                "pushingExtraCost": "2 [STAMINA]",
-                "pushingDescription": "You can also use this against a critical hit and turn that hit into a normal hit."
-            }
-        },
-        {
             "name": "Super Speed",
             "tags": [ "Martial Maneuver (Master)", "Agile" ],
             "requirements": {
