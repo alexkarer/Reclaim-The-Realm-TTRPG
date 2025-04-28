@@ -1,21 +1,5 @@
 <div>
     <app-dynamic-content [content]="weaponRulesJson.weaponsDescription | keywordProcessor"></app-dynamic-content>
-    <h4 class="mb-1 mt-2">Weapon Proficiency</h4>
-    <app-dynamic-content [content]="weaponRulesJson.weaponProficiencyDescription | keywordProcessor"></app-dynamic-content>
-    <ul>
-        @for (weaponRank of weaponRulesJson.weaponProficiencyRanks; track $index) {
-            <li>
-                <span class="fw-bold">{{ weaponRank.rank + ': ' }}</span>
-                <app-dynamic-content [content]="weaponRank.description | keywordProcessor"></app-dynamic-content>
-            </li>
-        }
-    </ul>
-
-    <h4 class="mb-1 mt-2" ngbScrollSpyFragment="weapon-properties">Weapon Properties</h4>
-    @for (weaponProperty of weaponRulesJson.weaponProperties; track $index) {
-        <h5 class="mt-2 mb-0">{{ weaponProperty.name }}</h5>
-        <app-dynamic-content [content]="weaponProperty.description | keywordProcessor"></app-dynamic-content>
-    }
 
     <h4 class="mb-1 mt-2">Weapon Quality</h4>
     <app-dynamic-content [content]="weaponRulesJson.weaponQuality.weaponQualityDescription | keywordProcessor"></app-dynamic-content>
@@ -41,56 +25,30 @@
     </div>
 
 
-    <h4 class="mb-1 mt-2">Simple Weapons</h4>
+    <h4 class="mb-1 mt-2">Weapons</h4>
     <div class="d-flex justify-content-center">
-        <table class="rules-table-75">
+        <table class="rules-table">
             <thead>
                 <tr>
                     <th scope="col">Weapon</th>
                     <th scope="col">Tier</th>
                     <th scope="col">Damage</th>
-                    <th scope="col">Properties</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Description</th>
                     <th scope="col">Weight</th>
                     <th scope="col">Cost</th>
                 </tr>
             </thead>
             <tbody>
-                @for (weapon of simpleWeapons; track $index) {
+                @for (w of weapons; track $index) {
                     <tr>
-                        <td>{{ weapon.name }}</td>
-                        <td>{{ weapon.tier }}</td>
-                        <td><app-dynamic-content [content]=" weapon.getPrettyDamageString() | keywordProcessor"></app-dynamic-content></td>
-                        <td><app-dynamic-content [content]="weapon.properties | weaponPropertyProcessor"></app-dynamic-content></td>
-                        <td>{{ weapon.getPrettyWeightString() }}</td>
-                        <td>{{ weapon.cost.getPrettyString() }}</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-
-    <h4 class="mb-1 mt-2">Advanced Weapons</h4>
-    <div class="d-flex justify-content-center">
-        <table class="rules-table-75">
-            <thead>
-                <tr>
-                    <th scope="col">Weapon</th>
-                    <th scope="col">Tier</th>
-                    <th scope="col">Damage</th>
-                    <th scope="col">Properties</th>
-                    <th scope="col">Weight</th>
-                    <th scope="col">Cost</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for (weapon of advancedWeapons; track $index) {
-                    <tr>
-                        <td>{{ weapon.name }}</td>
-                        <td>{{ weapon.tier }}</td>
-                        <td><app-dynamic-content [content]=" weapon.getPrettyDamageString() | keywordProcessor"></app-dynamic-content></td>
-                        <td><app-dynamic-content [content]="weapon.properties | weaponPropertyProcessor"></app-dynamic-content></td>
-                        <td>{{ weapon.getPrettyWeightString() }}</td>
-                        <td>{{ weapon.cost.getPrettyString() }}</td>
+                        <td>{{ w.name }}</td>
+                        <td>{{ w.tier }}</td>
+                        <td><app-dynamic-content [content]=" w.getPrettyDamageString() | keywordProcessor"></app-dynamic-content></td>
+                        <td>{{ w.type }}</td>
+                        <td><app-text-elements [textElements]="w.description"></app-text-elements></td>
+                        <td>{{ w.getPrettyWeightString() }}</td>
+                        <td>{{ w.cost.getPrettyString() }}</td>
                     </tr>
                 }
             </tbody>

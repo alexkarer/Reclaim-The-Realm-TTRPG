@@ -13,8 +13,7 @@
         "willpowerProficiency": 0.667,
         "mainClassAttributes": [ "[AGI]", "[INT]", "[PER]" ],
         "classSKills": [ "Deception", "Investigation", "Stealth", "Thievery", "Culture" ],
-        "skillPointsPerLevel": 6,
-        "weaponRanks": 2
+        "skillPointsPerLevel": 6
     },
     "classCoreFeature": {
         "name": "Trickery",

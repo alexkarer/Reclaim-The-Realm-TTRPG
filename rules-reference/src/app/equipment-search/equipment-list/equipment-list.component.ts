@@ -1,20 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Equipment } from '../../../../../common_resources/equipment/equipment';
 import { TextElementsComponent } from "../../shared/text-utils/text-elements/text-elements.component";
 import { Armour } from '../../../../../common_resources/equipment/armour/armour';
-import { Ammunition, Weapon, WeaponProperty } from '../../../../../common_resources/equipment/weapons/weapons';
+import { Ammunition, Weapon } from '../../../../../common_resources/equipment/weapons/weapons';
 import { Shield } from '../../../../../common_resources/equipment/shields/shields';
 import { DynamicContentComponent } from "../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
-import { WeaponPropertyProcessor } from "../../shared/text-utils/weapon-property-processor";
 
 @Component({
   selector: 'app-equipment-list',
-  imports: [TextElementsComponent, DynamicContentComponent, WeaponPropertyProcessor],
+  imports: [TextElementsComponent, DynamicContentComponent],
   templateUrl: './equipment-list.component.html',
   styleUrl: './equipment-list.component.scss'
 })
 export class EquipmentListComponent {
-  @Input() equipmentList: Equipment[] = [];
+  equipmentList = input<Equipment[]>([]);
   public equipmentDescriptionEnabled: boolean[] = [];
 
   public isArmour(item: Equipment): boolean {
@@ -31,14 +30,6 @@ export class EquipmentListComponent {
 
   public isShield(item: Equipment): boolean {
     return (item instanceof Shield);
-  }
-
-  public getWeaponProperties(item: Equipment): WeaponProperty[] {
-    if (item instanceof Weapon) {
-      return item.properties
-    }
-    console.error('Item is not a weapon: ' + item.name);
-    return [];
   }
 
   public getDamage(item: Equipment): string {

@@ -4,7 +4,7 @@ import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle } from
 import { FormsModule } from '@angular/forms';
 import { armours } from '../../../../common_resources/equipment/armour/armour';
 import { EquipmentListComponent } from "./equipment-list/equipment-list.component";
-import { advancedWeapons, ammunitions, simpleWeapons } from '../../../../common_resources/equipment/weapons/weapons';
+import { weapons, ammunitions } from '../../../../common_resources/equipment/weapons/weapons';
 import { shields } from '../../../../common_resources/equipment/shields/shields';
 import { otherItems } from '../../../../common_resources/equipment/other_items/other_items';
 
@@ -17,8 +17,7 @@ import { otherItems } from '../../../../common_resources/equipment/other_items/o
 export class EquipmentSearchComponent {
 
     public readonly allEquipment: Equipment[] = [
-        ...simpleWeapons,
-        ...advancedWeapons,
+        ...weapons,
         ...ammunitions,
         ...armours,
         ...shields,

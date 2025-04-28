@@ -38,17 +38,6 @@ ____________________________________________________________
 - Spell Keywords need to be reworked
 - Rewrite perks to have proer ability rendering/formatting
 
-**Weapon Simplification**
-- remove weapon proficency ranks
-- each weapon just has 1 unique property
-- dagger: light damage, crit lower
-- crossbow: fixed damage, ranged/reload, special things can be done with ammo
-  - Damage should improve with equipment tier
-- Bow, medium damage, ranged, special things can be done with ammo
-- versatile weapon: both one-handed and two-handed (medium/heavy damage)
-- polarm: reach
-- Great Weapon: -2 ATK, treat str 1 higher for Martial damage and attacking two-handed, disadvantage when attacking with one hand
-
 **Ability Simplifications**
 - Treat Mechanical Text and Flavour Text seperatly.
 - When possible simplify the mechanical text a lot.

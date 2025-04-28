@@ -7,8 +7,7 @@
         "defensesDescription": "The Factor with which your Defense Values increase with each [LEVEL].",
         "mainClassAttributesDescription": "Each class has 3 Main Class Attributes, which are relevant for the classes most important abilities. Additionally these abilities have a higher attribute limit and are each increased by 2 when selecting the class.",
         "classSkillsDescription": "Your class skills, these skills have their rank and rank limit increased by 2.",
-        "skillPointsDescription": "How many skill points you receive at first [LEVEL] and at each [LEVEL] increase to improve your skill ranks.",
-        "weaponRanksDescription": "The ranks of Weapon proficiency the Character gains upon selecting this class."
+        "skillPointsDescription": "How many skill points you receive at first [LEVEL] and at each [LEVEL] increase to improve your skill ranks."
     },
     "classPathDescription": "When you select this Class, you can select one class Path. This class Path includes further specialications with each having a unique twist to the class.",
 

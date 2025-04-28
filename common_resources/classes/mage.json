@@ -13,8 +13,7 @@
         "willpowerProficiency": 0.667,
         "mainClassAttributes": [ "SPI", "INT", "PER" ],
         "classSKills": [ "Investigation", "Magic", "Supernatural", "Elements" ],
-        "skillPointsPerLevel": 5,
-        "weaponRanks": 0
+        "skillPointsPerLevel": 5
     },
     "classCoreFeature": {
         "name": "Magical Charge",

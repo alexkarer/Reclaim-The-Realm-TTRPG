@@ -1,227 +1,87 @@
-{
-    "simpleWeapons": [
-        {
-            "name": "Dagger",
-            "tier": 1,
-            "craftingSkill": "Smith’s Tools",
-            "cost": "2 gc",
-            "weightInGram": 500,
-            "type": "Simple Weapon",
-            "description": [
-                { "regularText": "A small simple short blade favoured by assasin’s and those looking to conceil their weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "light", "thrown(4.5/9/18)" ],
-            "damage": "light [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Mace",
-            "tier": 1,
-            "craftingSkill": "Smith’s Tools",
-            "cost": "2 gc",
-            "weightInGram": 2000,
-            "type": "Simple Weapon",
-            "description": [
-                 { "regularText": "A heavy piece of metal on a stick, not complicated and still dangerous. Can also be a hammer or a similiar bludgeonding weapon", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "armour-piercing" ],
-            "damage": "medium [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Spear",
-            "tier": 1,
-            "craftingSkill": "Smith’s Tools, Carpenter's Tools",
-            "cost": "15 sc",
-            "weightInGram": 1000,
-            "type": "Simple Weapon",
-            "description": [
-                 { "regularText": "sharp piece of metal on a stick, the favored weapon of peasents and militia.", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "versatile" ],
-            "damage": "medium [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Crossbow",
-            "tier": 2,
-            "craftingSkill": "Carpenter’s Tool",
-            "cost": "5 gc",
-            "weightInGram": 3000,
-            "type": "Simple Weapon",
-            "description": [
-                 { "regularText": "While cumbersome to operate, it is easy to use", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "two-handed", "ranged(20/40/80)", "loading(1, 2 [AP])" ],
-            "damage": "2d6"
-        }
-    ],
-    "advancedWeapons": [
-        {
-            "name": "Shortsword",
-            "tier": 2,
-            "craftingSkill": "Smith’s Tools",
-            "cost": "5 gc",
-            "weightInGram": 1000,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "flexible small sword: gladius, small scimitar, etc.", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "light", "duelist" ],
-            "damage": "light [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Longsword",
-            "tier": 2,
-            "craftingSkill": "Smith’s Tools",
-            "cost": "10 gc",
-            "weightInGram": 1500,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "The classic", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "versatile", "duelist" ],
-            "damage": "medium [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Warhammer",
-            "tier": 2,
-            "craftingSkill": "Smith’s Tools",
-            "cost": "5 gc",
-            "weightInGram": 2500,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "Dwarves favourite", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "versatile", "armour-piercing" ],
-            "damage": "medium [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Waraxe",
-            "tier": 2,
-            "craftingSkill": "Smith’s Tools",
-            "cost": "8 gc",
-            "weightInGram": 2000,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "versatile", "shieldbreaker" ],
-            "damage": "medium [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Polarm",
-            "tier": 2,
-            "craftingSkill": "Smith’s Tools, Carpenter's Tools",
-            "cost": "10 gc",
-            "weightInGram": 4000,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "Can be a halberd, pike, glaive", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "two-handed", "reach" ],
-            "damage": "heavy [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Greatsword",
-            "tier": 2,
-            "craftingSkill": "Smith’s Tools",
-            "cost": "25 gc",
-            "weightInGram": 3000,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "Big sword", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "heavy", "two-handed", "duelist" ],
-            "damage": "heavy [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Greathammer",
-            "tier": 2,
-            "craftingSkill": "Smith’s Tools",
-            "cost": "10 gc",
-            "weightInGram": 3000,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "Big hammer", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "heavy", "two-handed", "armour-piercing" ],
-            "damage": "heavy [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Greataxe",
-            "tier": 2,
-            "craftingSkill": "Smith’s Tools",
-            "cost": "15 gc",
-            "weightInGram": 3000,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "Big Axe", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "heavy", "two-handed", "shieldbreaker" ],
-            "damage": "heavy [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Javelin",
-            "tier": 2,
-            "craftingSkill": "Smith’s Tools, Carpenter’s Tools",
-            "cost": "3 sc",
-            "weightInGram": 500,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "similiar to a spear, but designed for throwing. Can also be a throwing axe", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "thrown(9/18/36)" ],
-            "damage": "medium [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Longbow",
-            "tier": 2,
-            "craftingSkill": "Carpenter’s Tools",
-            "cost": "10 gc",
-            "weightInGram": 1500,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "the classic bow, wielded by trainend archers.", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "two-handed", "ranged (30/60/120)" ],
-            "damage": "medium [MARTIAL DAMAGE]"
-        },
-        {
-            "name": "Heavy Crossbow",
-            "tier": 2,
-            "craftingSkill": "Carpenter’s Tools",
-            "cost": "30 gc",
-            "weightInGram": 7000,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "Large crossbow which is usually only used in siege warfare, often manned by a 2 people simaltanously. If your strength is lower than 3 the reload action requires 4 [AP]", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "loading(1, 2 [AP])", "two-handed", "ranged(30/60/120" ],
-            "damage": "2d12"
-        },
-        {
-            "name": "Hand Crossbow",
-            "tier": 2,
-            "craftingSkill": "Carpenter’s Tools",
-            "cost": "15 gc",
-            "weightInGram": 750,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "You require one additional hand for reloading, but it can wield a light weapon or object in the hand simultaneously.", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "loading(1, 2 [AP])", "light", "ranged(6/12/24)" ],
-            "damage": "1d8"
-        },
-        {
-            "name": "Repeating Crossbow",
-            "tier": 3,
-            "craftingSkill": "Carpenter’s Tools",
-            "cost": "50 gc",
-            "weightInGram": 3000,
-            "type": "Advanced Weapon",
-            "description": [
-                 { "regularText": "A complicated piece of equipment often used stationary in defensive implacements", "headerLine": null, "bulletPoints": null, "ability": null }
-            ],
-            "properties": [ "loading(5, 4 [AP])", "two-handed", "ranged(6/12/24)" ],
-            "damage": "2d4"
-        }
-    ]
-}
+[
+    {
+        "name": "Dagger",
+        "tier": 1,
+        "craftingSkill": "Smith’s Tools",
+        "cost": "2 gc",
+        "weightInGram": 500,
+        "type": "Melee Weapon",
+        "description": [
+            { "regularText": "When making a [MARTIAL MELEE ATTACK] with this weapon, the unmodified roll required for scoring a critical hit is lowered by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "damage": "light [MARTIAL DAMAGE]"
+    },
+    {
+        "name": "Crossbow",
+        "tier": 2,
+        "craftingSkill": "Carpenter’s Tool",
+        "cost": "5 gc",
+        "weightInGram": 3000,
+        "type": "Ranged Weapon",
+        "description": [
+                { "regularText": "The crossbow requires two hands to wield effecively has ranges of (25/50/100) and making a Weapon Attack only costs 1 [AP] but after each [ATTACK] the Weapon has to be reloaded for 2 [AP] before one can shoot with it again. This Weapon consumes Ammunition for each [MARTIAL RANGED ATTACK] made with this Weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "properties": [ "two-handed", "ranged(20/40/80)", "loading(1, 2 [AP])" ],
+        "damage": "2d6"
+    },
+    {
+        "name": "Versatile Weapon",
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools",
+        "cost": "5 gc",
+        "weightInGram": 1500,
+        "type": "Melee Weapon",
+        "description": [
+                { "regularText": "It deals medium [MARTIAL DAMGE] when wielded with one hand but can also be wielded with two hands to deal heavy [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "damage": "medium [MARTIAL DAMAGE]"
+    },
+    {
+        "name": "Polarm",
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools, Carpenter's Tools",
+        "cost": "10 gc",
+        "weightInGram": 4000,
+        "type": "Melee Weapon",
+        "description": [
+                { "regularText": "Requires two hands to be wielded effectively. Any time you make a [MARTIAL MELEE ATTACK] with this Weapon your [MELEE RANGE] is increased by 1.5m", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "damage": "heavy [MARTIAL DAMAGE]"
+    },
+    {
+        "name": "Great Weapon",
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools",
+        "cost": "25 gc",
+        "weightInGram": 3000,
+        "type": "Melee Weapon",
+        "description": [
+                { "regularText": "Requires two hands to be wielded effectively. When making a [MARTIAL MELEE ATTACK] with this Weapon you can decrease your [ATTACK] by -2 and treat your [STR] 1 higher for the purposes of determening your [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "damage": "heavy [MARTIAL DAMAGE]"
+    },
+    {
+        "name": "Throwing Weapon",
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools, Carpenter’s Tools",
+        "cost": "3 sc",
+        "weightInGram": 500,
+        "type": "Ranged Weapon",
+        "description": [
+                { "regularText": "This weapon has a Range of (9/18/36) but can also be wielded as a Melee Weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "damage": "light [MARTIAL DAMAGE]"
+    },
+    {
+        "name": "Longbow",
+        "tier": 2,
+        "craftingSkill": "Carpenter’s Tools",
+        "cost": "10 gc",
+        "weightInGram": 1500,
+        "type": "Ranged Weapon",
+        "description": [
+                { "regularText": "This weapon has a range of (30/60/120) and requires two-hands to be wielded effectively. This Weapon consumes Ammunition for each [MARTIAL RANGED ATTACK] made with this Weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "damage": "medium [MARTIAL DAMAGE]"
+    }
+]

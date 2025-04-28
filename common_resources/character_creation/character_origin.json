@@ -25,7 +25,7 @@
             { "d10": "1", "trainingType": "Wildman", "benefits": "Surivival and Intimidation become class skills for you.", "extraStartingMoney": "0 gc" },
             { "d10": "2", "trainingType": "Farmhand", "benefits": "Animal Handling and Nature become class skills for you.", "extraStartingMoney": "3 gc" },
             { "d10": "3", "trainingType": "Assistant Hunter", "benefits": "Survival and Nature become class skills for you", "extraStartingMoney": "5 gc" },
-            { "d10": "4", "trainingType": "Militia Training", "benefits": "Athletics becomes class skill for you and your Weapon proficiency increases by one rank", "extraStartingMoney": "5 gc" },
+            { "d10": "4", "trainingType": "Militia Training", "benefits": "Athletics becomes class skill for you and your", "extraStartingMoney": "5 gc" },
             { "d10": "5", "trainingType": "Artisan Training", "benefits": "one tool skill of your choice becomes a class skill for you and it's rank is increased by 1. Additionally you start with one tier 3 item of your choice that can be crafted with your chosen tool.", "extraStartingMoney": "10 gc" },
             { "d10": "6", "trainingType": "Entertainer", "benefits": "Persuasion and Deception become Class skills for you.", "extraStartingMoney": "10 gc" },
             { "d10": "7", "trainingType": "Scholar", "benefits": "Either Medicine or 2 lore skills of your choice become a class skill for you. Additionally you learn an extra language and start the game with a book about your subject.", "extraStartingMoney": "3 gc" },

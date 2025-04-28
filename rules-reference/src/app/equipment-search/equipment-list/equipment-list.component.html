@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (equipment of equipmentList; track $index) {
+        @for (equipment of equipmentList(); track $index) {
             <tr (click)="equipmentDescriptionEnabled[$index] = !equipmentDescriptionEnabled[$index]" style="cursor: pointer">
                 <th scope="row">{{ equipment?.name }}</th>
                 <td>{{ equipment?.type }}</td>
@@ -22,7 +22,6 @@
                     <td colspan="5">
                         <p class="description my-0"><span class="fw-bold">Crafting Skills: </span> {{ equipment.craftingSkill }}</p>
                         @if (isWeapon(equipment)) {
-                            <p class="description my-0"><span class="fw-bold">Weapon properties: </span><app-dynamic-content [content]="getWeaponProperties(equipment) | weaponPropertyProcessor"></app-dynamic-content></p>
                             <p class="description my-0"><span class="fw-bold">Damage: </span>{{ getDamage(equipment) }}</p>
                         }
                         @if (isAmmunition(equipment)) {

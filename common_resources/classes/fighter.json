@@ -13,8 +13,7 @@
         "willpowerProficiency": 0.334,
         "mainClassAttributes": [ "[STR]", "[AGI]", "[PER]" ],
         "classSKills": [ "Athletics", "Awareness", "Survival" ],
-        "skillPointsPerLevel": 4,
-        "weaponRanks": 2
+        "skillPointsPerLevel": 4
     },
     "classCoreFeature": {
         "name": "Focus",

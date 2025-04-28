@@ -6,7 +6,7 @@
             "requiredLevels": [],
             "requiredAttributes": [],
             "requiredPerks": [],
-            "otherRequirements": [ "Martial Level Progression of 0, Rank 1 Weapon Proficiency" ]
+            "otherRequirements": [ "Martial Level Progression of 0" ]
         },
         "textElements": [
             {
@@ -46,7 +46,7 @@
             ],
             "requiredAttributes": [],
             "requiredPerks": [ "Advanced Martial Training" ],
-            "otherRequirements": [ "Rank 2 Weapon Proficiency" ]
+            "otherRequirements": [ ]
         },
         "textElements": [
             {
@@ -232,7 +232,7 @@
             ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
-            "otherRequirements": [ "Rank 2 Weapon Proficiency" ]
+            "otherRequirements": [ ]
         },
         "textElements": [
             {
