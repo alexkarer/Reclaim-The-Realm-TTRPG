@@ -27,11 +27,11 @@
         },
         {
             "name": "Fly (X)",
-            "description": "Creatures with Fly speed are able to soar through the air, They need to at least spend 1 [MP] each turn to move in a direction or to hover in the air to prevent falling down. If they are falling they can stop their falling by spending 4 [MP] . Additionally if a flying creature is knocked prone they immediatly drop 5 meters and only stay prone if they hit the ground."
+            "description": "Creatures with Fly speed are able to soar through the air, They need to at least spend 1 [MP] each turn to move in a direction or to hover in the air to prevent falling down. If they are falling they can stop their falling by spending 4 [MP] . Additionally if a flying creature is knocked [PRONE] they immediatly drop 5 meters and only stay [PRONE] if they hit the ground."
         },
         {
             "name": "Hover (X)",
-            "description": "Creatures with Hover speed can also fly through the air but are a lot more flexible and don’t have to spend [MP] to stay in the air and are not affected by being knocked prone."
+            "description": "Creatures with Hover speed can also fly through the air but are a lot more flexible and don’t have to spend [MP] to stay in the air and are not affected by being knocked [PRONE]."
         }
     ],
     "sizeDescription": "Most humanoids are medium [SIZE] , however certain species have different ones and certain effects might change your [SIZE] . Changing your [SIZE] affects some of your physical characteristics",

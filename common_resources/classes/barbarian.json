@@ -389,7 +389,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You make a regular Jump Move and at end of your Jump Move roll and make a [STR] [MARTIAL TEST]. Every enemy within [MELEE RANGE] of the landing is knocked prone if that roll exceeds their [HARDNESS]."
+            "description": "You make a regular Jump Move and at end of your Jump Move roll and make a [STR] [MARTIAL TEST]. Every enemy within [MELEE RANGE] of the landing is knocked [PRONE] if that roll exceeds their [HARDNESS]."
         },
         {
             "name": "Adrenaline Rush",

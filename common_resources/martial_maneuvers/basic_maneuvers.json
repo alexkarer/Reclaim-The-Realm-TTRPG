@@ -63,7 +63,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 Creature affected by [RESTRAINED I]",
             "duration": "[INSTANT]",
-            "description": "Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] on a success, the creature is now prone and [RESTRAINED II]."
+            "description": "Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] on a success, the creature is now [PRONE] and [RESTRAINED II]."
         },
         {
             "name": "Meat Shield",
@@ -97,7 +97,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 [RESTRAINED I] Creature",
             "duration": "[INSTANT]",
-            "description": "You can throw a creature you are grappling at a destination of your choice within range. Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] . On a success it flies a number of meters equal to twice your [STR] and on impact suffers physical damage equal to your [STR] which can’t be reduced by armor and the creature lands prone.<br>If on the way it collidse against another creature and it’s [DODGE] is less than the [MARTIAL TEST] they collide and both take the damage from the impact and the thrown creature lands within the nearest free space of the collided creature. Additionally if the collided creature’s [HARDNESS] is also less than the [MARTIAL TEST] , then that creature is also prone"
+            "description": "You can throw a creature you are grappling at a destination of your choice within range. Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] . On a success it flies a number of meters equal to twice your [STR] and on impact suffers physical damage equal to your [STR] which can’t be reduced by armor and the creature lands [PRONE].<br>If on the way it collidse against another creature and it’s [DODGE] is less than the [MARTIAL TEST] they collide and both take the damage from the impact and the thrown creature lands within the nearest free space of the collided creature. Additionally if the collided creature’s [HARDNESS] is also less than the [MARTIAL TEST] , then that creature is also [PRONE]"
         },
         {
             "name": "Charge",
@@ -324,7 +324,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack with a melee weapon, if thathet [ATTACK] was successful and exceeds or matches the targets [HARDNESS] you have 2 choices:<br>You knock the target prone.<br>Or you push the target a number of meters equal to your [STR] away from you.",
+            "description": "Make a Weapon Attack with a melee weapon, if thathet [ATTACK] was successful and exceeds or matches the targets [HARDNESS] you have 2 choices:<br>You knock the target [PRONE].<br>Or you push the target a number of meters equal to your [STR] away from you.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You apply both effects if the [ATTACK] exceedds the targets [HARDNESS]"

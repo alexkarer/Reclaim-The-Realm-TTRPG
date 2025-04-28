@@ -1,43 +1,43 @@
 [
     {
         "name": "Strength",
-        "keyword": "[STR]",
+        "keyword": "STR",
         "shortdescription": "Strength represents the physical strength of a character, it affects your damage with weapons, carrying capacity and jumping distance ",
         "fulldescription": "[STR] represents your physical Strength. In game, it additionally reflects your ability to wield melee weapons and damage with bows and thrown weapons, as well as your carrying capacity and jumping distance."
     },
     {
         "name": "Agility",
-        "keyword": "[AGI]",
+        "keyword": "AGI",
         "shortdescription": "Agility represents how agile, dexterous and fast the character is, it represents accuracy with melee attacks, movement and the ability to dodge incoming attacks",
         "fulldescription": "[AGI] represents additionally the Agility of a character as well as their reflexes as well as their finesse. It specifically reflects your accuracy with a melee Attacks, your movement and as your ability to dodge attacks and other threats."
     },
     {
         "name": "Constitution",
-        "keyword": "[CON]",
+        "keyword": "CON",
         "shortdescription": "Constitution represents our bodily health as well as your endurance and the ability to resist poisons.",
         "fulldescription": "[CON] represents your bodily health as well as your endurance and the ability to resist poisons or other harmful effects targeting your body.<br>Additionally every second point in [CON] increases your [HP] for each [LEVEL] you have, furthermore each second point increases your natural lifespan by 10 years. Conversely, if your [CON] value is negative, every second negative point decreases your [HP] and lifespan."
     },
     {
         "name": "Intelligence",
-        "keyword": "[INT]",
+        "keyword": "INT",
         "shortdescription": "Intelligence represents your Intelligence, it represents how many techniques you can know at the same time and how many skill points you have.",
         "fulldescription": "The [INT] Attribute represents your Intelligence and ability to reason about problems, recall information, prediction, and imagination of 3D environments, for example it represents how many techniques you can know at the same time and how many skill points you have."
     },
     {
         "name": "Spirit",
-        "keyword": "[SPI]",
+        "keyword": "SPI",
         "shortdescription": "Spirit represents how strong your connection to the elemental planes and the Aether is as well your mental fortitude and spiritual health, it most importantly affects your ability to use spells and other supernatural techniques.",
         "fulldescription": "The [SPI] Attribute represents how strong your connection to the elemental planes and the Aether is as well your mental fortitude and spiritual health, it most importantly affects your ability to use spells and other supernatural techniques."
     },
     {
         "name": "Perception",
-        "keyword": "[PER]",
+        "keyword": "PER",
         "shortdescription": "Perception represents your physical senses and the ability to perceive details and weak spots and accuracy of ranged attacks.",
         "fulldescription": "The [PER] Attribute represents your physical senses and the ability to perceive details and weak spots or even unnatural senses and your accuracy of ranged attacks."
     },
     {
         "name": "Charisma",
-        "keyword": "[CHA]",
+        "keyword": "CHA",
         "shortdescription": "Charisma represents how likeable you are and your ability to sway others for your cause.",
         "fulldescription": "The [CHA] Attribute represents how likeable you are and your ability to sway others for your cause, it additionally improves certain abilities."
     }

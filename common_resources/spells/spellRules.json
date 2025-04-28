@@ -36,7 +36,7 @@
             "spellDisciplineSpecificEffects": [
                 { "discipline": "Pyrmoancy",  "weakEffect": "You light yourself and the nearest flammable creature or object on fire, they suffer the [BURNING I] Status Effect.", "mediumEffect": "I have added here a bit of text to pad out the table to properly see if the formatting works or looks like shit", "strongEffect": "I have added here a bit of text to pad out the table to properly see if the formatting works or looks like shit" },
                 { "discipline": "Hydromancy",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
-                { "discipline": "Aeromancy",  "weakEffect": "Strong Winds appear for 1d4 [ROUND]. On Initial appearance every creature within 15m have to make a [DT] 15 [HARDNESS] [SAVE] or fall prone. While winds are here [MP] Cost of Movement Abilities is doubled.", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Aeromancy",  "weakEffect": "Strong Winds appear for 1d4 [ROUND]. On Initial appearance every creature within 15m have to make a [DT] 15 [HARDNESS] [SAVE] or be knocked [PRONE]. While winds are here [MP] Cost of Movement Abilities is doubled.", "mediumEffect": "", "strongEffect": "" },
                 { "discipline": "Geomancy",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
 
                 { "discipline": "Light",  "weakEffect": "You shine bright for 1d6 [ROUND] (18m/36m). Every creature that can see you for the first time has to make a [DT] 15 [TOUGHNESS] [SAVE] or recieve the [BLINDED] Status Effect for 1 [ROUND].", "mediumEffect": "", "strongEffect": "" },

@@ -12,7 +12,7 @@
         },
         "textElements": [
             {
-                "regularText": "You gain one extra [MP] and you gain a +4 bonus to your [DODGE] against any Opportunity Attack. Additionally escaping a grapple or standing up from prone requires 2 [MP] less.",
+                "regularText": "You gain one extra [MP] and you gain a +4 bonus to your [DODGE] against any Opportunity Attack. Additionally escaping a grapple or standing up from [PRONE] requires 2 [MP] less.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null

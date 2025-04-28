@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { NgbScrollSpyItem, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -8,7 +8,7 @@ import { NgbScrollSpyItem, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
     styleUrl: './keyword.component.scss'
 })
 export class KeywordComponent {
-  @Input() public keyword?: string
-  @Input() public toolTip?: string
-  @Input() public link?: string
+  keyword = input<string>();
+  toolTip = input<string>();
+  link = input<string>('');
 }

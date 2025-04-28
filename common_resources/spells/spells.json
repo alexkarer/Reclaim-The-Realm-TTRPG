@@ -118,7 +118,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "[SPHERE] 3m", "duration": "[SPI] rounds",
-                "description": "You create a 3m sphere ice floor at the disignated location. This now counts as difficult Terrain and additionally make a [INT] [SPELL TEST] against every creature currently on the Ice Floor against their [DODGE] on a success those creatures fall prone. Additionally all creatures starting their turn on the Ice floor recieve d6 cold damage.",
+                "description": "You create a 3m sphere ice floor at the disignated location. This now counts as difficult Terrain and additionally make a [INT] [SPELL TEST] against every creature currently on the Ice Floor against their [DODGE] on a success those creatures are knocked [PRONE]. Additionally all creatures starting their turn on the Ice floor recieve d6 cold damage.",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase, the sphere increases by 3m, the range by 6m and the damage by 2d6"
             },
@@ -131,7 +131,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "4 [AP], 4 [ARCANA]", "range": "15m", "target": "[SPHERE] 6m", "duration": "[SPI] rounds",
-                "description": "You summon a raging blizzard within the target area. During the duration of the Spell the following applies. If a creature starts its turn within the Blizzard or enters it for the first time it suffers 4d6 + [SPI]/2 * d6 cold damage. The area is difficult Terrain and every creature within the Blizzard benefits from partial concealment, however every other creature is also partially concealed from them.",
+                "description": "You summon a raging blizzard within the target area. During the duration of the Spell the following applies. If a creature starts its turn within the Blizzard or enters it for the first time it suffers 4d6 + [SPI]/2 * d6 cold damage. The area is difficult Terrain and every creature within the Blizzard benefits from [PARTIAL CONCEALMENT], however every other creature is also partially concealed from them.",
                 "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by two and for every increase of 2, improve the range by 3m, the radius by 1.5m and the damage by 1d6 + [SPI]/4 * d6"
             }
@@ -159,7 +159,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "-", "target": "[CONE] (6m)", "duration": "[INSTANT]",
-                "description": "You conjour forward a gust of wind that pushes away all enemies within a 6m cone. Make a [SPI] [SPELL TEST] against the targets [HARDNESS] if the test is successfull the targets are pushed away [SPI] m and are knocked prone.",
+                "description": "You conjour forward a gust of wind that pushes away all enemies within a 6m cone. Make a [SPI] [SPELL TEST] against the targets [HARDNESS] if the test is successfull the targets are pushed away [SPI] m and are knocked [PRONE].",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the cone increases by 3m."
             },

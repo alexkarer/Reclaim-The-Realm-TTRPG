@@ -172,7 +172,7 @@
             "range": "6m (4 squares)",
             "target": "1 [UNCONCIOUS] allied creature, or one that is at Deaths' door.",
             "duration": "[INSTANT]",
-            "description": "You convince one of your allies that their fight is not over. That ally regains [HP] equal to your [MARTIAL LEVEL] +[CHA] and if they are prone can use their [REACTION] to stand up. You can't traget creatures that can't hear you."
+            "description": "You convince one of your allies that their fight is not over. That ally regains [HP] equal to your [MARTIAL LEVEL] +[CHA] and if they are [PRONE] can use their [REACTION] to stand up. You can't traget creatures that can't hear you."
         }
     ],
     "fortitudeManeuvers": [

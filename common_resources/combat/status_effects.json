@@ -163,8 +163,8 @@
         {
             "keyword": "[BLINDED]",
             "link": "blinded",
-            "summary":  "can't see, every enemy recieves half concealment.",
-            "description": "A blinded creature fails any [PER] [ATTRIBUTE TEST] relying on sight and any enemy is under partial concealment. If the blinded creature is additionally [DEAFENED] all enemies recieve full concealment."
+            "summary":  "can't see, every enemy recieves [PARTIAL CONCEALMENT]",
+            "description": "A blinded creature fails any [PER] [ATTRIBUTE TEST] relying on sight and any enemy is under [PARTIAL CONCEALMENT]. If the blinded creature is additionally [DEAFENED] all enemies recieve [FULL CONCEALMENT]."
         },
         {
             "keyword": "[TAUNTED]",
@@ -275,8 +275,8 @@
         {
             "keyword": "[INVISIBLE I]",
             "link": "invisiblity-i",
-            "summary":  "Recieve partial concealment and stealth bonus",
-            "description": "An occluded creature recieves partial concealment bonus against any enemy and a +5 bonus to your Stealth."
+            "summary":  "Recieve [PARTIAL CONCEALMENT] and stealth bonus",
+            "description": "An occluded creature recieves [PARTIAL CONCEALMENT] bonus against any enemy and a +5 bonus to your Stealth."
         },
         {
             "keyword": "[FOCUSED]",
@@ -319,8 +319,8 @@
         {
             "keyword": "[INVISIBLE II]",
             "link": "invisiblity-ii",
-            "summary":  "Recieve full concealment and stealth bonus",
-            "description": "An invisible creature recieves full concealment bonus against any enemy and a +10 bonus to your Stealth."
+            "summary":  "Recieve [FULL CONCEALMENT] and stealth bonus",
+            "description": "An invisible creature recieves [FULL CONCEALMENT] bonus against any enemy and a +10 bonus to your Stealth."
         }
     ],
     "tierThreeBeneficialStatusEffects": [

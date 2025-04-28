@@ -29,7 +29,7 @@
                 "regularText": null,
                 "headerLine": null,
                 "bulletPoints": [
-                    "The first time during a [ROUND] you make an [ATTACK] against a target you are currently flanking or have a high ground bonus, you gain 1 Focus.",
+                    "The first time during a [ROUND] you make an [ATTACK] against a target you are currently [FLANKING] or have a high ground bonus, you gain 1 Focus.",
                     "The first time during a [ROUND] you make an opportunity Attack or a successful Parry, you gain 1 Focus.",
                     "The first time during a [ROUND] an enemy was forcefully moved by you or a friendly creature, you gain 1 Focus.",
                     "The first time during a [ROUND] an enemy recieves a harmful Status Effect, you gain 1 Focus."

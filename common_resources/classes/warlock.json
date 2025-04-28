@@ -512,7 +512,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 minute",
-            "description": "Increase [DODGE] by 3. Gain +3 bonus to any [ATTACK], you ignore any concealment bonuses from creatures that are within [LEVEL] m. Only one Transformantion Class Technique can be used per [TURN]."
+            "description": "Increase [DODGE] by 3. Gain +3 bonus to any [ATTACK], you ignore [PARTIAL CONCEALMENT] [FULL CONCEALMENT] against creatures that are within [LEVEL] m. Only one Transformantion Class Technique can be used per [TURN]."
         },
         {
             "name": "Full Transformation",

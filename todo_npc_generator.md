@@ -4,6 +4,8 @@ add spellcasting test which is based on int to determine DT for save against AOE
 
 **Add skills**
 - implement skills, see concept
+- passive awarenees
+- concealment values
 
 **Abilities**
 - add functionlity to replace dedicated status effects in description

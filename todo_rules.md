@@ -23,6 +23,8 @@ ____________________________________________________________
 ____________________________________________________________
 ### Planned changes after Playtest:
 
+**Formatting**
+
 **Bigger Mechanical Changes**
 - When making a d20 the following happens: 20->automatic hit, 1->automatic miss, attack>dodge->hit, dodge>attack->glancing blow(half damage)
 - Rescale damage, especially for NPCs to make it less lethal at 1st level, maybe NPCs only deal d6 damage.
@@ -74,9 +76,10 @@ ___________________________________________________________
 ### Future Ideas / Nice to have:
 
 create cheet sheet
-automatic long rest recovery button.
 
 maybe add shocked Status effect: can't use reactions
+
+convert custom textelements thingy to rich text format https://github.com/contentful/rich-text
 
 add activities that can be done during long rests:
 - crafting
@@ -156,4 +159,13 @@ Differnt way of gaining new abilities or features, the players can pick one and 
 - have colored abilities and more icons
 - add missing abilities
 - add linking and tooltips for abilities
-- Perktrees
+
+**Extra Things to have In new Character Sheet**
+- On all places show the formula for calculating, which is fixed but can be modified with additional values.
+- long rest button/rest values
+- concealment bonuzses
+- temp Hp
+- Perk Trees
+- Have all Abilities in the Same Place but in separate columns 
+- Show encumbermance in equipment
+- passive Awareness

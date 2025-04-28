@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { KeywordComponent } from '../keyword/keyword.component';
 import { ContentPart } from '../text-utils';
 
@@ -10,5 +10,5 @@ import { ContentPart } from '../text-utils';
     styleUrl: './dynamic-content.component.scss'
 })
 export class DynamicContentComponent {
-  @Input() content: ContentPart[] = [];
+  content = input<ContentPart[]>([]);
 }

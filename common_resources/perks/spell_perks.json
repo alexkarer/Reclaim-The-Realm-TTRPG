@@ -624,7 +624,7 @@
         },
         "textElements": [
             {
-                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Telepatthy Spell.<br>You can alsp increase your telepathic communication range to [SPI] * 20 meters and you can target up to [SPI] creatures at once with it.<br>Furthermore you are aware of all living creatures within [SPI] ∗ 3 meters of you, those creatures can’t hide from you unless stated otherwise and can't get the benefit of concealment against you.",
+                "regularText": "You can now reroll both dice during the [SPELL CAST TEST] when casting a Telepatthy Spell.<br>You can alsp increase your telepathic communication range to [SPI] * 20 meters and you can target up to [SPI] creatures at once with it.<br>Furthermore you are aware of all living creatures within [SPI] ∗ 3 meters of you, those creatures can’t hide from you unless stated otherwise and can't get the benefit of [PARTIAL CONCEALMENT] or [FULL CONCEALMENT] against you.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null

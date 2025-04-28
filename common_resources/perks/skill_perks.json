@@ -209,7 +209,7 @@
         },
         "textElements": [
             {
-                "regularText": "If you are targeted by an [RANGED ATTACK] 9m or further away, you gain bonus from partial concealment even if you are in plain sight. Additionally you are not slowed down while hidden.",
+                "regularText": "If you are targeted by an [RANGED ATTACK] 9m or further away, you gain bonus from [PARTIAL CONCEALMENT] even if you are in plain sight. Additionally you are not slowed down while hidden.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null

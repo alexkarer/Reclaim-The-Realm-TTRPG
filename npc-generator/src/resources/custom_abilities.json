@@ -61,7 +61,7 @@
         { "mainEffect": "3 * [LIGHT DAMAGE] damage", "pointCost": 3 },
         { "mainEffect": "4 * [LIGHT DAMAGE] damage", "pointCost": 4 },
         { "mainEffect": "5 * [LIGHT DAMAGE] damage", "pointCost": 5 },
-        { "mainEffect": "knock prone if failed [CUSTOM DT] [HARDNESS] [SAVE]", "pointCost": -1 },
+        { "mainEffect": "knock [PRONE] if failed [CUSTOM DT] [HARDNESS] [SAVE]", "pointCost": -1 },
         { "mainEffect": "Afflict [TIER I STATUS EFFECT] lasts [DEFAULT DURATION] [ROUND] [SAVE LOWERS]", "pointCost": -1 },
         { "mainEffect": "Afflict [TIER II STATUS EFFECT] lasts [DEFAULT DURATION] [ROUND] [SAVE LOWERS]", "pointCost": 2 },
         { "mainEffect": "Afflict [TIER III STATUS EFFECT] lasts [DEFAULT DURATION] [ROUND] [SAVE LOWERS]", "pointCost": 6 }
@@ -72,7 +72,7 @@
         { "additionalEffect": "[HEAVY DAMAGE] damage", "pointCost": 5 },
         { "additionalEffect": "pull [STR] or [SPI] m closer if failed [CUSTOM DT] [HARDNESS] [SAVE].", "pointCost": 1 },
         { "additionalEffect": "push [STR] or [SPI] m away if failed [CUSTOM DT] [HARDNESS] [SAVE]", "pointCost": 1 },
-        { "additionalEffect": "knock prone if failed [CUSTOM DT] [HARDNESS] [SAVE]", "pointCost": 2 },
+        { "additionalEffect": "knock [PRONE] if failed [CUSTOM DT] [HARDNESS] [SAVE]", "pointCost": 2 },
         { "additionalEffect": "afflict [TIER I STATUS EFFECT] if failed [CUSTOM DT] [SELECTED SAVE] lasts [DEFAULT DURATION] [ROUND] [SAVE LOWERS]", "pointCost": 2 },
         { "additionalEffect": "afflict [TIER II STATUS EFFECT] if failed [CUSTOM DT] [SELECTED SAVE] lasts [DEFAULT DURATION] [ROUND] [SAVE LOWERS]", "pointCost": 6 },
         { "additionalEffect": "the creature heals [HP] equal to half damage done", "pointCost": 2 }

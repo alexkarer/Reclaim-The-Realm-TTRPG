@@ -112,7 +112,7 @@
         },
         "textElements": [
             {
-                "regularText": "When selecting a target that is in concealment for an [ATTACK], you have [ADVANTAGE] on the [PER] Awareness [SKILL TEST]. Additionally if a creature with half concealment makes an [ATTACK] against you, they don't recieve any bonus. If they have full concealment, they only receive the bonus as if they had half concealment.",
+                "regularText": "When selecting a target that benefits from [PARTIAL CONCEALMENT] or [FULL CONCEALMENT] for an [ATTACK], you have [ADVANTAGE] on the [PER] Awareness [SKILL TEST]. Additionally if a creature with [PARTIAL CONCEALMENT] makes an [ATTACK] against you, they don't recieve any bonus. If they have [FULL CONCEALMENT], they only receive the bonus as if they had [PARTIAL CONCEALMENT].",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -278,7 +278,7 @@
         },
         "textElements": [
             {
-                "regularText": "When you make a [MARTIAL RANGED ATTACK] you treat large cover as medium cover, medium cover as small cover, small cover as no cover.",
+                "regularText": "When you make a [MARTIAL RANGED ATTACK] you treat [LARGE COVER] as [MEDIUM COVER], [MEDIUM COVER] as [SMALL COVER], [SMALL COVER]] as no cover.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
