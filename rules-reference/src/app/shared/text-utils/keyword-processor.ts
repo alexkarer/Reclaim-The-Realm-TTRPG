@@ -207,8 +207,8 @@ function getCharacterValuesContentPart(keyword: string): ContentPart | undefined
             return generateGenericKeyword('STAMINA', '[STAMINA] is your energy reserve with which you can replenish your Resources like HP and Aether and is used up when performing physically demanding tasks.', 'stamina');
         case 'ARCANA':
             return generateGenericKeyword('ARCANA', 'Your [ARCANA] represents an energy reserve you expend when drawing power from the elemental planes and the aether to cast spells.', 'arcana');
-        case 'HARDNESS':
-            return generateGenericKeyword('HARDNESS', 'A representation of the characters resistance against being forcefully moved or crushed against their will. Increases with your [STR]', 'hardness');
+        case 'STABILITY':
+            return generateGenericKeyword('STABILITY', 'A representation of the characters resistance against being forcefully moved or crushed against their will. Increases with your [STR]', 'stability');
         case 'DODGE':
             return generateGenericKeyword('DODGE', 'A representation of how good the character is at evading danger. Increases with your [AGI]', 'dodge');
         case 'TOUGHNESS':

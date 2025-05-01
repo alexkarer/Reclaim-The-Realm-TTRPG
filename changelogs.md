@@ -9,7 +9,7 @@ This document contains a series of changelogs to keep track of changes happening
 ### Core Rules
 
 #### Attacks
-An Attacks now has 4 different results:
+An Attack now has 4 different results:
 - critical miss: natural 1, no damage
 - glancing hit: halve damage
 - regular hit: full damage
@@ -85,6 +85,9 @@ Removed the following core abilities to simplify:
 #### Ability Simplification
 - Simplify Ability Descriptions and introduce helper keywords
   - [AREA EFFECT] describes ongoing effects on an area and when they happen.
+
+#### Rename Hardness to Stability
+- Renamed in all Instances
 
 #### Minor Changes
 - remove bold and brackets from keywords to make text less cluttered and add underline instead

@@ -4,11 +4,10 @@ ____________________________________________________________
 **Big Things**
 - consider moving attack back to the DM.
 - add fate points / some mechanics to reroll things
-- hybrid abilities necesarry?
 - does spell casting system work
 - The System should be focused around the Riftlands
   - Maybe also about accumilating power which can only be found in the riftlands and most "adventurers" get lost there
-  - Find good name for adventurer.
+  - Find good inworld name for adventurer (rift explorers, nah sounds shit.).
   - Think of a way that makes the Riftlands work
   - It should be special and if you want to get to a specific Location it requires something special.
 
@@ -27,7 +26,7 @@ ____________________________________________________________
 
 **Bigger Mechanical Changes**
 - Rescale damage, especially for NPCs to make it less lethal at 1st level, maybe NPCs only deal d6 damage.
-- Implement similar system for Spell Damage
+- Implement similar system for Spell Damage maybe ish
 - Properly rework Hybrid Abilities, they deserve to stay.
 - Shields?
 - remove unncessesarry core abilities
@@ -39,8 +38,6 @@ ____________________________________________________________
 
 **Ability Simplifications**
 - Treat Mechanical Text and Flavour Text seperatly. (abilities should have the textelements for better formatting)
-- When possible simplify the mechanical text a lot.
-- Weapon Attack Ability Should not be referenced in other abilities but instead the equipment should have references for these.
 
 **Character Changes**
 - reduce initial attribute points (maybe 10?)
@@ -53,7 +50,6 @@ ____________________________________________________________
 - reduce number of attribute points to 10 maybe
 
 **Specific Changes**
-- Rename Hardness to Stability
 - adjust travel text since speed is constant.
 ___________________________________________________________
 ### Future Ideas / Nice to have:

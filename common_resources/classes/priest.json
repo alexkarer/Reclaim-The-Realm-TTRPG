@@ -8,7 +8,7 @@
         "spellProficiency": 1.0,
         "knownSpellDisciplines": "Cosmic, Manipulation",
         "dodgeProficiency": 0.334,
-        "hardnessProficiency": 0.334,
+        "stabilityProficiency": 0.334,
         "toughnessProficiency": 0.334,
         "willpowerProficiency": 1.0,
         "mainClassAttributes": [ "[SPI]", "[CHA]", "[PER]" ],
@@ -338,7 +338,7 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "The Priest has exceptional faith in his believes and fears no danger. The Priest can use a half of their [SPI] for calculating [HARDNESS], [DODGE] and [TOUGHNESS] instead of [STR] [AGI] and [CON].",
+                    "regularText": "The Priest has exceptional faith in his believes and fears no danger. The Priest can use a half of their [SPI] for calculating [STABILITY], [DODGE] and [TOUGHNESS] instead of [STR] [AGI] and [CON].",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -579,7 +579,7 @@
             "range": "9m",
             "target": "one creature",
             "duration": "[SPI]/2 [ROUND]",
-            "description": "[SPI] [SPELL TEST] vs. [HARDNESS] or [DODGE] (target’s choice). On success: apply [RESTRAINED I]. If targeting a chaotic creature you have [ADVANTAGE] on the Test"
+            "description": "[SPI] [SPELL TEST] vs. [STABILITY] or [DODGE] (target’s choice). On success: apply [RESTRAINED I]. If targeting a chaotic creature you have [ADVANTAGE] on the Test"
         },
         {
             "name": "Unyielding",

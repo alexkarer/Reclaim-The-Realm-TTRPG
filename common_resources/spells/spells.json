@@ -159,7 +159,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "-", "target": "[CONE] (6m)", "duration": "[INSTANT]",
-                "description": "[SPI] [SPELL TEST] vs. [HARDNESS]. On Success: push away [SPI] m and knock [PRONE]. On fail: push away [SPI]/2 m",
+                "description": "[SPI] [SPELL TEST] vs. [STABILITY]. On Success: push away [SPI] m and knock [PRONE]. On fail: push away [SPI]/2 m",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the cone increases by 3m and the push distance on a success increases by 1m."
             },
@@ -185,7 +185,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "4 [AP], 4 [ARCANA]", "range": "15m", "target": "[SPHERE] 7.5m", "duration": "[INSTANT]",
-                "description": "[SPI] [SPELL TEST] vs. [HARDNESS]. On success: target is pushed towards the center of the area and suffers 6d6 physical damage. On fail: target pushed 1.5m towards the center.",
+                "description": "[SPI] [SPELL TEST] vs. [STABILITY]. On success: target is pushed towards the center of the area and suffers 6d6 physical damage. On fail: target pushed 1.5m towards the center.",
                 "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase of 2, improve the range by 3m, the radius by 1.5m and the damage by 2d6."
             }
@@ -409,7 +409,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 [AP], 1 [ARCANA]", "range": "12m", "target": "one target", "duration": "up to [SPI] [ROUND], [CONCENTRATION] 1",
-                "description": "You can select one object or creature that you can see weighing up to [SPI] ∗ 20 kg and magically move it, you have the following options: <ul><li>Push/Pull: You can move the target up to a distance of 2 ∗ [SPI] meters in any direction. If you target an unwilling creature or an item held by a creature: Make a [SPI] [SPELL TEST] vs. [HARDNESS]. On success: move the creature or the item it is holding is freed from the creature’s grasp. Afterwards the spell ends.</li> <li>Hover: Alternatively you can make the target hover in the air and move it [SPI] / 2 meters in any direction. While doing this for the duration of the spell each turn you can move the object again, when the spell ends the target is effected by gravity and other forces as normal. If the target is an unwilling creature: Make a [SPI] [SPELL TEST] vs. [HARDNESS]. On fail: the spell ends.</li></ul>",
+                "description": "You can select one object or creature that you can see weighing up to [SPI] ∗ 20 kg and magically move it, you have the following options: <ul><li>Push/Pull: You can move the target up to a distance of 2 ∗ [SPI] meters in any direction. If you target an unwilling creature or an item held by a creature: Make a [SPI] [SPELL TEST] vs. [STABILITY]. On success: move the creature or the item it is holding is freed from the creature’s grasp. Afterwards the spell ends.</li> <li>Hover: Alternatively you can make the target hover in the air and move it [SPI] / 2 meters in any direction. While doing this for the duration of the spell each turn you can move the object again, when the spell ends the target is effected by gravity and other forces as normal. If the target is an unwilling creature: Make a [SPI] [SPELL TEST] vs. [STABILITY]. On fail: the spell ends.</li></ul>",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the maximum object weight is doubled and the range increases by 3m."
             },
@@ -422,7 +422,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one target", "duration": "([SPI] / 2) [ROUND], [CONCENTRATION] 1",
-                "description": "Initially: [SPI] [SPELL TEST] vs. [HARDNESS]. On success: Apply [RESTRAINED I]. For duration: deal [SPI] * d6 physical damage at the start of your [TURN].",
+                "description": "Initially: [SPI] [SPELL TEST] vs. [STABILITY]. On success: Apply [RESTRAINED I]. For duration: deal [SPI] * d6 physical damage at the start of your [TURN].",
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by two and for every increase you can target an additional creature"
             }

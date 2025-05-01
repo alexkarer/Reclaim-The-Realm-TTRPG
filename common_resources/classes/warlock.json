@@ -8,7 +8,7 @@
         "spellProficiency": 0.667,
         "knownSpellDisciplines": "Manipulation",
         "dodgeProficiency": 0.334,
-        "hardnessProficiency": 0.334,
+        "stabilityProficiency": 0.334,
         "toughnessProficiency": 0.667,
         "willpowerProficiency": 0.667,
         "mainClassAttributes": [ "[SPI]", "[CON]", "[INT]" ],
@@ -491,7 +491,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 minute",
-            "description": "Increase your [MARTIAL DAMAGE] as if your relevant Attribute was 2 higher, Increase your [HARDNESS] and [TOUGHNESS] by 3, Gain 2 extra [MP]. Only one Transformantion Class Technique can be used per [TURN]."
+            "description": "Increase your [MARTIAL DAMAGE] as if your relevant Attribute was 2 higher, Increase your [STABILITY] and [TOUGHNESS] by 3, Gain 2 extra [MP]. Only one Transformantion Class Technique can be used per [TURN]."
         },
         {
             "name": "Partial Transformation: Mind",

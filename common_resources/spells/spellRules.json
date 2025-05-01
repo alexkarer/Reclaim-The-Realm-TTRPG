@@ -27,7 +27,7 @@
                 {"roll": "23-25", "effect": "Medium Effect depending on spell discipline"},
                 {"roll": "26-28", "effect": "The arcane energy causes a temporal disturbance, The spellcaster is removed from existance and appears in 1d10 [ROUND] in again, at the nearest unnocupied space."},
                 {"roll": "29-31", "effect": "You summon a [LEVEL] 8 Extraplanar Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests."},
-                {"roll": "32-34", "effect": "You open a temporary Rift to another Plane depending on your Spell Discipline. Every creature is sucked in unless they pass a [DT] 30 [HARDNESS] [SAVE]"},
+                {"roll": "32-34", "effect": "You open a temporary Rift to another Plane depending on your Spell Discipline. Every creature is sucked in unless they pass a [DT] 30 [STABILITY] [SAVE]"},
                 {"roll": "35-37", "effect": "Strong Effect depending on spell discipline"},
                 {"roll": "38-40", "effect": "Your spell gives you a violent Feedback that shatters through your body. Make a [DT] 30 [TOUGHNESS] or [WILLPOWER] [SAVE]. On a success you suffer 20d6 damage which can't be reduced in any way. On a failure you are reduced to 0 [HP], suffer 5 points of [EXHAUSTION] and suffer a permanent Injury with a +20 to the Injury Test."},
                 {"roll": "41-43", "effect": "You summon a [LEVEL] 15 Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests. Additionally this Entity is summoned by an army of weaker followers chosen by the GM."},
@@ -36,7 +36,7 @@
             "spellDisciplineSpecificEffects": [
                 { "discipline": "Pyrmoancy",  "weakEffect": "You light yourself and the nearest flammable creature or object on fire, they suffer the [BURNING I] Status Effect.", "mediumEffect": "I have added here a bit of text to pad out the table to properly see if the formatting works or looks like shit", "strongEffect": "I have added here a bit of text to pad out the table to properly see if the formatting works or looks like shit" },
                 { "discipline": "Hydromancy",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
-                { "discipline": "Aeromancy",  "weakEffect": "Strong Winds appear for 1d4 [ROUND]. On Initial appearance every creature within 15m have to make a [DT] 15 [HARDNESS] [SAVE] or be knocked [PRONE]. While winds are here [MP] Cost of Movement Abilities is doubled.", "mediumEffect": "", "strongEffect": "" },
+                { "discipline": "Aeromancy",  "weakEffect": "Strong Winds appear for 1d4 [ROUND]. On Initial appearance every creature within 15m have to make a [DT] 15 [STABILITY] [SAVE] or be knocked [PRONE]. While winds are here [MP] Cost of Movement Abilities is doubled.", "mediumEffect": "", "strongEffect": "" },
                 { "discipline": "Geomancy",  "weakEffect": "", "mediumEffect": "", "strongEffect": "" },
 
                 { "discipline": "Light",  "weakEffect": "You shine bright for 1d6 [ROUND] (18m/36m). Every creature that can see you for the first time has to make a [DT] 15 [TOUGHNESS] [SAVE] or recieve the [BLINDED] Status Effect for 1 [ROUND].", "mediumEffect": "", "strongEffect": "" },

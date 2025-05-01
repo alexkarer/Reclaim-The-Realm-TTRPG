@@ -74,7 +74,7 @@
                 "range": "-",
                 "target": "self",
                 "duration": "1 [ROUND]",
-                "description": "Only possible as the first ability used this [TURN]. You can engage or sustain a Run which lasts until the start of your next [TURN] brings the following changes:<ul><li>Every time you use the Move Ability you can move an additional 3m which must be in a straight line.</li><li>Every consecetive move can only alter the direction by 45° unless 3 [MP] are used for the Move used upon which the direction can be altered by 90°. Or alternativly 4 [MP] can be used to stop early.</li><li>During a Run [AP] can only be used for Dash, any other actions allow permissions by the GM, additionally someone running can't use Opportunity Attacks</li><li>While Running you recieve a +5 bonus to your [DODGE] and a -5 penalty to your [HARDNESS].</li></ul>"
+                "description": "Only possible as the first ability used this [TURN]. You can engage or sustain a Run which lasts until the start of your next [TURN] brings the following changes:<ul><li>Every time you use the Move Ability you can move an additional 3m which must be in a straight line.</li><li>Every consecetive move can only alter the direction by 45° unless 3 [MP] are used for the Move used upon which the direction can be altered by 90°. Or alternativly 4 [MP] can be used to stop early.</li><li>During a Run [AP] can only be used for Dash, any other actions allow permissions by the GM, additionally someone running can't use Opportunity Attacks</li><li>While Running you recieve a +5 bonus to your [DODGE] and a -5 penalty to your [STABILITY].</li></ul>"
             }
         ],
         "movingOutOfMeleeRange": "If you are within [MELEE RANGE] of a creature they are able to make an Opportunity Attack (see below) unless stated otherwise.",
@@ -158,7 +158,7 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "You make a [STR] [MARTIAL TEST]  against the targets [HARDNESS] or [DODGE] (targets choice) and on a success you can either choose to drop the target [PRONE] or push it away a number of meters equal to your [STR] (min 1.5m)"
+                "description": "You make a [STR] [MARTIAL TEST]  against the targets [STABILITY] or [DODGE] (targets choice) and on a success you can either choose to drop the target [PRONE] or push it away a number of meters equal to your [STR] (min 1.5m)"
             },
             {
                 "name": "Grapple",
@@ -170,7 +170,7 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "-d",
-                "description": "Provided you have one free hand make a [STR] [MARTIAL TEST] against the Creatures [DODGE] or [HARDNESS] (targets choice), on a success that creature is now [RESTRAINED I] by you."
+                "description": "Provided you have one free hand make a [STR] [MARTIAL TEST] against the Creatures [DODGE] or [STABILITY] (targets choice), on a success that creature is now [RESTRAINED I] by you."
             },
             {
                 "name": "Small environment interaction",

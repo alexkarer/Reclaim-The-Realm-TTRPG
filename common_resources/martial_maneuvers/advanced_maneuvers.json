@@ -17,7 +17,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature that is 2 sizes larger than you",
             "duration": "[INSTANT]",
-            "description": "You attempt to climb up on a to deal more damage effectively. Make an [AGI] or [STR] Athletics [SKILL TEST] against the target’s [DODGE]. On a success you are now mounted on top of the creature which has the following effects.:<br>One hand is always occupied with holding on to the creature<br>Any [MELEE MARTIAL ATTACK] that is not a critical miss automatically hits the target and the required roll for a critical is 1 lower.<br>ou can’t be targeted by the creature you are currently on, on it’s turn however it can attempt to shake you of by spending 1 [AP] and you have to succeed on a [HARDNESS] [SAVE] against the creature’s Melee Attack Bonus+10. On a fail you are thrown away a number of meters equal to the creatures [STR] and might recieve fall damage as a result."
+            "description": "You attempt to climb up on a to deal more damage effectively. Make an [AGI] or [STR] Athletics [SKILL TEST] against the target’s [DODGE]. On a success you are now mounted on top of the creature which has the following effects.:<br>One hand is always occupied with holding on to the creature<br>Any [MELEE MARTIAL ATTACK] that is not a critical miss automatically hits the target and the required roll for a critical is 1 lower.<br>ou can’t be targeted by the creature you are currently on, on it’s turn however it can attempt to shake you of by spending 1 [AP] and you have to succeed on a [STABILITY] [SAVE] against the creature’s Melee Attack Bonus+10. On a fail you are thrown away a number of meters equal to the creatures [STR] and might recieve fall damage as a result."
         },
         {
             "name": "Reactive Move",
@@ -271,7 +271,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack with a thrown Weapon, if [ATTACK] hits and exceeds or matches [HARDNESS] push [STR] m away. If anything is blocking movement, the blocking target recieves half damage of the [ATTACK]."
+            "description": "Make a Weapon Attack with a thrown Weapon, if [ATTACK] hits and exceeds or matches [STABILITY] push [STR] m away. If anything is blocking movement, the blocking target recieves half damage of the [ATTACK]."
         },
         {
             "name": "Shield block",

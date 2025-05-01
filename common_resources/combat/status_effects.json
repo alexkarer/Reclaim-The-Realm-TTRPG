@@ -60,13 +60,13 @@
             "keyword": "[VULNURABLE I]",
             "link": "vulnurable-i",
             "summary":  "All [SAVE] characteristics are reduced by 2 or -1d4 to any [SAVE] Test",
-            "description": "A lightly vulnurable creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are reduced by 2 or any [SAVE] Test made recieves a 1d4 penalty."
+            "description": "A lightly vulnurable creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are reduced by 2 or any [SAVE] Test made recieves a 1d4 penalty."
         },
         {
             "keyword": "[RESTRAINED I]",
             "link": "restrained-i",
             "summary":  "Can't use [MP] other than escaping, [DISADVANTAGE] on any [ATTACK] that does not target the grappler",
-            "description": "A grappled creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE] [SAVE] or [HARDNESS] [SAVE] (grappled creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] on any [ATTACK] against Targets other than the grappler."
+            "description": "A grappled creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE] [SAVE] or [STABILITY] [SAVE] (grappled creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] on any [ATTACK] against Targets other than the grappler."
         },
         {
             "keyword": "[SILENCED]",
@@ -133,8 +133,8 @@
         {
             "keyword": "[CRIPPLED II]",
             "link": "crippled-ii",
-            "summary":  "Can't use any [MP], [DODGE] and [HARDNESS] are 0.",
-            "description": "The affected creature is heavily crippled and can't use any [MP] and is unable to properly defend itself with [DODGE] and [HARDNESS] are 0 and it automatically fails any such [SAVE]."
+            "summary":  "Can't use any [MP], [DODGE] and [STABILITY] are 0.",
+            "description": "The affected creature is heavily crippled and can't use any [MP] and is unable to properly defend itself with [DODGE] and [STABILITY] are 0 and it automatically fails any such [SAVE]."
         },
         {
             "keyword": "[CURSED II]",
@@ -152,13 +152,13 @@
             "keyword": "[VULNURABLE II]",
             "link": "vulnurable-ii",
             "summary":  "All [SAVE] characteristics are reduced by 4 or -1d8 to any [SAVE] Test",
-            "description": "A vulnurable creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are reduced by 4 or any [SAVE] Test made recieves a 1d8 penalty."
+            "description": "A vulnurable creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are reduced by 4 or any [SAVE] Test made recieves a 1d8 penalty."
         },
         {
             "keyword": "[RESTRAINED II]",
             "link": "restrained-ii",
             "summary":  "Can't use [MP] other than escape, [DISADVANTAGE] for any [ATTACK] and [AGI] [ATTRIBUTE TEST], [DODGE] reduced by 5. Can't use abilities or weapons requiring 2 hands.",
-            "description": "A restreained creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE] [SAVE] or [HARDNESS] [SAVE] (restrained creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] for any [ATTACK] or [AGI] [ATTRIBUTE TEST] it makes and it's [DODGE] is reduced by 5.<br>A restrained creature can’t make attacks with two-handed weapons unless they are wielded in only one hand, additionally it can’t use any [SPELL ABILITY] that has somatic components."
+            "description": "A restreained creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE] [SAVE] or [STABILITY] [SAVE] (restrained creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] for any [ATTACK] or [AGI] [ATTRIBUTE TEST] it makes and it's [DODGE] is reduced by 5.<br>A restrained creature can’t make attacks with two-handed weapons unless they are wielded in only one hand, additionally it can’t use any [SPELL ABILITY] that has somatic components."
         },
         {
             "keyword": "[BLINDED]",
@@ -183,8 +183,8 @@
         {
             "keyword": "[STUNNED III]",
             "link": "stunned-iii",
-            "summary":  "Can't use any [REACTION], [MP] or [AP]. [DODGE] and [HARDNESS] are 0.",
-            "description": "The affected creature is paralyzed and unable to act anymore. They can't use any [REACTION], [MP] or [AP]<br>Additionally they are unable to properly defend themselves as such they can't use shields, their [DODGE] and [HARDNESS] are 0 and they automatically fail any [DODGE] or [HARDNESS] [SAVE]."
+            "summary":  "Can't use any [REACTION], [MP] or [AP]. [DODGE] and [STABILITY] are 0.",
+            "description": "The affected creature is paralyzed and unable to act anymore. They can't use any [REACTION], [MP] or [AP]<br>Additionally they are unable to properly defend themselves as such they can't use shields, their [DODGE] and [STABILITY] are 0 and they automatically fail any [DODGE] or [STABILITY] [SAVE]."
         },
         {
             "keyword": "[FRIGHTENED III]",
@@ -220,7 +220,7 @@
             "keyword": "[UNCONCIOUS]",
             "link": "unconcious",
             "summary":  "Can't use any [REACTION], [MP] or [AP], s unnaware of their sourroundings and unable to defend themselves",
-            "description": "An [UNCONCIOUS] creature can't use any [REACTION], [MP] or [AP] and is not aware of it's sourroundings as such they can't use shields, their [DODGE] and [HARDNESS] are 0 and they automatically fail any [DODGE] or [HARDNESS] [SAVE]<br>A creature that is sleeping is also [UNCONCIOUS] however a Sleeping creature will wake up as soon as it receives damage or is distrubed in other ways."
+            "description": "An [UNCONCIOUS] creature can't use any [REACTION], [MP] or [AP] and is not aware of it's sourroundings as such they can't use shields, their [DODGE] and [STABILITY] are 0 and they automatically fail any [DODGE] or [STABILITY] [SAVE]<br>A creature that is sleeping is also [UNCONCIOUS] however a Sleeping creature will wake up as soon as it receives damage or is distrubed in other ways."
         },
         {
             "keyword": "[CURSED III]",
@@ -238,7 +238,7 @@
             "keyword": "[VULNURABLE III]",
             "link": "vulnurable-iii",
             "summary":  "All [SAVE] characteristics are reduced by 6 or -1d12 to any [SAVE] Test",
-            "description": "A strongly vulnurable creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are reduced by 6 or any [SAVE] Test made recieves a 1d12 penalty."
+            "description": "A strongly vulnurable creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are reduced by 6 or any [SAVE] Test made recieves a 1d12 penalty."
         }
     ],
     "tierOneBeneficialStatusEffects": [
@@ -252,7 +252,7 @@
             "keyword": "[PROTECTION I]",
             "link": "protection-i",
             "summary":  "All [SAVE] characteristics are increased by 2 or +1d4 to any [SAVE] Test",
-            "description": "A lightly protected creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are increased by 2 or any [SAVE] Test made recieves a +1d4 bonus."
+            "description": "A lightly protected creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are increased by 2 or any [SAVE] Test made recieves a +1d4 bonus."
         },
         {
             "keyword": "[HASTE I]",
@@ -296,7 +296,7 @@
             "keyword": "[PROTECTION II]",
             "link": "protection-ii",
             "summary":  "All [SAVE] characteristics are increased by 4 or +1d8 to any [SAVE] Test",
-            "description": "A protected creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are increased by 4 or any [SAVE] Test made recieves a +1d8 bonus."
+            "description": "A protected creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are increased by 4 or any [SAVE] Test made recieves a +1d8 bonus."
         },
         {
             "keyword": "[HASTE II]",
@@ -334,7 +334,7 @@
             "keyword": "[PROTECTION III]",
             "link": "protection-iii",
             "summary":  "All [SAVE] characteristics are increased by 6 or +1d12 to any [SAVE] Test",
-            "description": "A strongly protected creature has their [DODGE], [HARDNESS], [TOUGHNESS] and [WILLPOWER] are increased by 6 or any [SAVE] Test made recieves a +1d12 bonus."
+            "description": "A strongly protected creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are increased by 6 or any [SAVE] Test made recieves a +1d12 bonus."
         },
         {
             "keyword": "[HASTE III]",

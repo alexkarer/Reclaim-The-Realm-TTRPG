@@ -8,7 +8,7 @@
         "spellProficiency": 0.0,
         "knownSpellDisciplines": null,
         "dodgeProficiency": 0.334,
-        "hardnessProficiency": 1.0,
+        "stabilityProficiency": 1.0,
         "toughnessProficiency": 1.0,
         "willpowerProficiency": 0.334,
         "mainClassAttributes": [ "[STR]", "[AGI]", "[CON]" ],
@@ -262,7 +262,7 @@
                     "bulletPoints": [
                         "<span class=\"fw-bold\">Fire: </span>The Aura increases to 4.5m and each time the Barbarian hits a creature with a [MELEE MARTIAL ATTACK] they recieve [BURNING I] for 2 turns.",
                         "<span class=\"fw-bold\">Earth: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [TOUGHNESS] they are [STUNNED I] for 1 turn.",
-                        "<span class=\"fw-bold\">Water: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [HARDNESS] they are [RESTRAINED I] by ice for 1 turn.",
+                        "<span class=\"fw-bold\">Water: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [STABILITY] they are [RESTRAINED I] by ice for 1 turn.",
                         "<span class=\"fw-bold\">Air: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] a target of their choice within the area effect is hit by a lightning strike for lightning damage equal 1d6 + Rage."
                     ],
                     "ability": null
@@ -388,7 +388,7 @@
             "range": "[MELEE RANGE]",
             "target": "all creatures",
             "duration": "[INSTANT]",
-            "description": "After you ended a Jump Move or land otherwise you can use this Ability. Make a [STR] [MARTIAL TEST] vs. [HARDNESS]. On success: knock [PRONE]."
+            "description": "After you ended a Jump Move or land otherwise you can use this Ability. Make a [STR] [MARTIAL TEST] vs. [STABILITY]. On success: knock [PRONE]."
         },
         {
             "name": "Adrenaline Rush",

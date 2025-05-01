@@ -8,7 +8,7 @@
         "spellProficiency": 0.0,
         "knownSpellDisciplines": null,
         "dodgeProficiency": 1.0,
-        "hardnessProficiency": 0.334,
+        "stabilityProficiency": 0.334,
         "toughnessProficiency": 0.334,
         "willpowerProficiency": 0.667,
         "mainClassAttributes": [ "[AGI]", "[INT]", "[PER]" ],

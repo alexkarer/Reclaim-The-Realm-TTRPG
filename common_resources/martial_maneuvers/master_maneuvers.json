@@ -61,7 +61,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 targed affected by [RESTRAINED I] caused by you",
             "duration": "[INSTANT]",
-            "description": "[STR] [MARTIAL TEST] vs [TOUGHNESS] or [HARDNESS] (targets choice). On success: recieve 5 * light [MARTIAL DAMAGE] phyiscal damage. On fail: half damage.",
+            "description": "[STR] [MARTIAL TEST] vs [TOUGHNESS] or [STABILITY] (targets choice). On success: recieve 5 * light [MARTIAL DAMAGE] phyiscal damage. On fail: half damage.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "For each 1 [STAMINA] increase the damage on a success by your light [MARTIAL DAMAGE] phyiscal damage."

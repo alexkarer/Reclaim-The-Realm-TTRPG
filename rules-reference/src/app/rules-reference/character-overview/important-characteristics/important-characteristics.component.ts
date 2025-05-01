@@ -6,7 +6,6 @@ import coreValuesJson from "../../../../../../common_resources/character_values/
 import resourcesJson from "../../../../../../common_resources/character_values/resources.json";
 import defensesJson from "../../../../../../common_resources/character_values/defenses.json";
 import otherValuesJson from "../../../../../../common_resources/character_values/other_values.json";
-import { halveArray } from '../../../shared/utils/array-utils';
 
 @Component({
     selector: 'app-important-characteristics',
@@ -32,7 +31,7 @@ export class ImportantCharacteristicsComponent {
   public readonly defensesDescription: string = defensesJson.defensesDescription;
   public readonly thresholdDescription: string = defensesJson.thresholdDescription;
   public readonly saveBonusDescription: string = defensesJson.saveDescription;
-  public readonly hardnessDescription: string = defensesJson.hardnessDescription;
+  public readonly stabilityDescription: string = defensesJson.stabilityDescription;
   public readonly dodgeDescription: string = defensesJson.dodgeDescription;
   public readonly toughnessDescription: string = defensesJson.toughnessDescription;
   public readonly willpowerDescription: string = defensesJson.willpowerDescription;

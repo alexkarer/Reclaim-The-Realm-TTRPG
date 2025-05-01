@@ -8,7 +8,7 @@
         "spellProficiency": 1.0,
         "knownSpellDisciplines": "Elemental, Manipulation",
         "dodgeProficiency": 0.667,
-        "hardnessProficiency": 0.334,
+        "stabilityProficiency": 0.334,
         "toughnessProficiency": 0.334,
         "willpowerProficiency": 0.667,
         "mainClassAttributes": [ "SPI", "INT", "PER" ],
@@ -136,7 +136,7 @@
                         "range": "12m",
                         "target": "2-4 targets",
                         "duration": "[INSTANT]",
-                        "description": "You unleash a large amount of charged elemental energy at your enemies. The energy forms into 4 instances for each element and can be directed at a different target, however opposite elements can't be directed at the same target. (fire/water, earth/air). The effect depends on the chosen element and the damage is equal to d6 for every 2nd magical Charge used:<br><span class=\"fw-bold\">Fire: </span>Make a [RANGED SPELL ATTACK] and on a hit, deal fire damage and the target recieves [BURNING II].<br><span class=\"fw-bold\">Earth: </span>Make a [RANGED SPELL ATTACK] and on a hit deal physical damage and if it exceeds the targets [HARDNESS] it is knocked [PRONE].<br><span class=\"fw-bold\">Water: </span>Make a [RANGED SPELL ATTACK] and on a hit deal physical damage and if it exceeds the targets [HARDNESS] it is knocked [SPI] meters away.<br><span class=\"fw-bold\">Air: </span>Make a [RANGED SPELL ATTACK] and on a hit, deal lightning damage and if another target is within 3m it recieves also half that damage.<br>"
+                        "description": "You unleash a large amount of charged elemental energy at your enemies. The energy forms into 4 instances for each element and can be directed at a different target, however opposite elements can't be directed at the same target. (fire/water, earth/air). The effect depends on the chosen element and the damage is equal to d6 for every 2nd magical Charge used:<br><span class=\"fw-bold\">Fire: </span>Make a [RANGED SPELL ATTACK] and on a hit, deal fire damage and the target recieves [BURNING II].<br><span class=\"fw-bold\">Earth: </span>Make a [RANGED SPELL ATTACK] and on a hit deal physical damage and if it exceeds the targets [STABILITY] it is knocked [PRONE].<br><span class=\"fw-bold\">Water: </span>Make a [RANGED SPELL ATTACK] and on a hit deal physical damage and if it exceeds the targets [STABILITY] it is knocked [SPI] meters away.<br><span class=\"fw-bold\">Air: </span>Make a [RANGED SPELL ATTACK] and on a hit, deal lightning damage and if another target is within 3m it recieves also half that damage.<br>"
                     }
                 }
             ]

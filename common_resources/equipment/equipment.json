@@ -44,7 +44,7 @@
     ],
     "carryingCapacityDescription": "Carrying capacity represent how much weight you can carry while travelling which increases with your [STR] according to the Table below. For every additional 5 kg (rounded up) you carry above your carrying limit, you suffer a cumulative Penalty to the following:",
     "exceedingCarryingCapacityPenalties": [
-        "-1 [MP]", "-1 [DODGE]", "-1 to any [STR] or [AGI] [ATTRIBUTE TEST]", "-1 to any [ATTACK] or [MARTIAL TEST]", "+1 [HARDNESS]", "+1 [STAMINA] Cost for each hour travelled"
+        "-1 [MP]", "-1 [DODGE]", "-1 to any [STR] or [AGI] [ATTRIBUTE TEST]", "-1 to any [ATTACK] or [MARTIAL TEST]", "+1 [STABILITY]", "+1 [STAMINA] Cost for each hour travelled"
     ],
     "liftPushDragDescription": "Lift/Push/Drag represents how much weight you can well lift, push, drag in short bursts, useful for moving obstacles or knocking over objects with an object interaction which increases with your [STR] according to the Table below. These unlike carrying capacity are not hard values and can be modified by circumstance or a [STR] [ATTRIBUTE TEST] determined by the GM.",
     "carryingCapacityTable": [

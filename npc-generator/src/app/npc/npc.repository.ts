@@ -41,7 +41,7 @@ const npcStore = createStore(
         primaryAttributeBoost: Attributes.STR,
         secondaryAttributeBoost: Attributes.AGI,
 
-        hardnessBonus: 0,
+        stabilityBonus: 0,
         dodgeBonus: 0,
         toughnessBonus: 0,
         willpowerBonus: 0,
@@ -108,7 +108,7 @@ export class NpcRepository {
     $rangedSpellAttack = npcStore.pipe(select(state => 10 + this.calculatePer(state) + this.getBaseStatArray(state).levels.spellLevel));
 
     $hp = npcStore.pipe(select(state => this.getBaseStatArray(state).hpBonus + state.baseHpBonus + Math.floor((state.creatureSize.hpPerLevel + state.hpPerLevelBonuses + Math.floor(this.calculateCon(state) / 2)) * state.levelConfig.level)));
-    $hardness = npcStore.pipe(select(state => 10 + this.calculateStr(state) + this.getBaseStatArray(state).defenseBonus.hardness + state.hardnessBonus));
+    $stability = npcStore.pipe(select(state => 10 + this.calculateStr(state) + this.getBaseStatArray(state).defenseBonus.stability + state.stabilityBonus));
     $dodge = npcStore.pipe(select(state => 10 + this.calculateAgi(state) + this.getBaseStatArray(state).defenseBonus.dodge + state.dodgeBonus + state.creatureSize.dodgeBonus));
     $toughness = npcStore.pipe(select(state => 10 + this.calculateCon(state) + this.getBaseStatArray(state).defenseBonus.toughness + state.toughnessBonus));
     $willpower = npcStore.pipe(select(state => 10 + this.calculateSpi(state) + this.getBaseStatArray(state).defenseBonus.willpower + state.willpowerBonus));
@@ -362,8 +362,8 @@ export class NpcRepository {
     private removeStatusEffectImmunity(statusEffectImmunity: string) {
         npcStore.update(setProp('additionalStatusEffectImmunities', sei => sei.filter(s => s !== statusEffectImmunity)));
     }
-    private updateHardnessBonus(bonus: number) {
-        npcStore.update(setProp('hardnessBonus', hardnessBonus => hardnessBonus + bonus));
+    private updateStabilityBonus(bonus: number) {
+        npcStore.update(setProp('stabilityBonus', stabilityBonus => stabilityBonus + bonus));
     }
     private updateDodgeBonus(bonus: number) {
         npcStore.update(setProp('dodgeBonus', dodgeBonus => dodgeBonus + bonus));
@@ -437,11 +437,11 @@ export class NpcRepository {
                 this.updateBaseHpBonus(20);
                 this.updateHpPerLevelBonus(2);
                 break;
-            case 'Hardness I':
-                this.updateHardnessBonus(2);
+            case 'Stability I':
+                this.updateStabilityBonus(2);
                 break;
-            case 'Hardness II':
-                this.updateHardnessBonus(2);
+            case 'Stability II':
+                this.updateStabilityBonus(2);
                 break;
             case 'Dodge I':
                 this.updateDodgeBonus(1);
@@ -570,11 +570,11 @@ export class NpcRepository {
                 this.updateBaseHpBonus(-20);
                 this.updateHpPerLevelBonus(-2);
                 break;
-            case 'Hardness I':
-                this.updateHardnessBonus(-2);
+            case 'Stability I':
+                this.updateStabilityBonus(-2);
                 break;
-            case 'Hardness II':
-                this.updateHardnessBonus(-2);
+            case 'Stability II':
+                this.updateStabilityBonus(-2);
                 break;
             case 'Dodge I':
                 this.updateDodgeBonus(-1);

@@ -63,7 +63,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 Creature affected by [RESTRAINED I]",
             "duration": "[INSTANT]",
-            "description": "[STR] [MARTIAL TEST] vs. [HARDNESS]. On success: knocked [PRONE] and apply [RESTRAINED II]."
+            "description": "[STR] [MARTIAL TEST] vs. [STABILITY]. On success: knocked [PRONE] and apply [RESTRAINED II]."
         },
         {
             "name": "Meat Shield",
@@ -80,7 +80,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 [RESTRAINED I] or [RESTRAINED II] Creature",
             "duration": "[INSTANT]",
-            "description": "If you are hit by an [ATTACK] you can use this Ability. [STR] [MARTIAL TEST] vs. [HARDNESS]. On success: [ATTACK] hits target instead.."
+            "description": "If you are hit by an [ATTACK] you can use this Ability. [STR] [MARTIAL TEST] vs. [STABILITY]. On success: [ATTACK] hits target instead.."
         },
         {
             "name": "Throw",
@@ -97,7 +97,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 [RESTRAINED I] Creature",
             "duration": "[INSTANT]",
-            "description": "[STR] [MARTIAL TEST] vs. [HARDNESS]. On success: it flies up to 2*[STR] m in a direction of your choice and recieve light [MARTIAL DAMAGE] physical and then is knocked [PPRONE]. If creature collides on the way with another creature, both creatures take damage and the target lands within 1.5m of the target."
+            "description": "[STR] [MARTIAL TEST] vs. [STABILITY]. On success: it flies up to 2*[STR] m in a direction of your choice and recieve light [MARTIAL DAMAGE] physical and then is knocked [PPRONE]. If creature collides on the way with another creature, both creatures take damage and the target lands within 1.5m of the target."
         },
         {
             "name": "Charge",
@@ -250,7 +250,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "You gain a bonus to your [HARDNESS], [DODGE], [TOUGHNESS], [WILLPOWER] and any [ATTACK] made for an [OPPORTUNITY ATTACK] equal to twice the [AP] spent."
+            "description": "You gain a bonus to your [STABILITY], [DODGE], [TOUGHNESS], [WILLPOWER] and any [ATTACK] made for an [OPPORTUNITY ATTACK] equal to twice the [AP] spent."
         },
         {
             "name": "Tag Team",
@@ -324,10 +324,10 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack with a melee weapon, if [ATTACK] hits and exceeds or matches [HARDNESS] either knock the target [PRONE] or push it [STR] meters away from you..",
+            "description": "Make a Weapon Attack with a melee weapon, if [ATTACK] hits and exceeds or matches [STABILITY] either knock the target [PRONE] or push it [STR] meters away from you..",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "You apply both effects if the [ATTACK] exceedds the targets [HARDNESS]"
+                "pushingDescription": "You apply both effects if the [ATTACK] exceedds the targets [STABILITY]"
             }
         },
         {
@@ -345,7 +345,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "2[ROUND]",
-            "description": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [HARDNESS] apply [CRIPPLED I]."
+            "description": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [STABILITY] apply [CRIPPLED I]."
         },
         {
             "name": "Deep Cut",

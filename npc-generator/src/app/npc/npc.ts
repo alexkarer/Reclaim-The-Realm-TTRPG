@@ -55,7 +55,7 @@ export type NPC = {
     secondaryAttributeBoost: Attributes
 
     // Defenses
-    hardnessBonus: number,
+    stabilityBonus: number,
     dodgeBonus: number,
     toughnessBonus: number,
     willpowerBonus: number,

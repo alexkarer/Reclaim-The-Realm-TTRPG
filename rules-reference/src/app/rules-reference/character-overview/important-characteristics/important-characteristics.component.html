@@ -3,35 +3,35 @@
     <div>
         <div class ="p-2 border bg-body-tertiary">
             <h5 class ="mb-0" ngbScrollSpyFragment="level">Level</h5>
-            <p class="header-subscript">Keyword: [LEVEL]</p>
+            <p class="header-subscript">Keyword: LEVEL</p>
             <app-dynamic-content [content]="levelDescription | keywordProcessor"></app-dynamic-content>
 
             <h6 class ="mb-0 mt-2" ngbScrollSpyFragment="martial-level">Martial Level</h6>
-            <p class="header-subscript">Keyword: [MARTIAL LEVEL]</p>
+            <p class="header-subscript">Keyword: MARTIAL LEVEL</p>
             <app-dynamic-content [content]="martialLevelDescription | keywordProcessor"></app-dynamic-content>
 
             <h6 class ="mb-0 mt-2" ngbScrollSpyFragment="spell-level">Spell Level</h6>
-            <p class="header-subscript">Keyword: [SPELL LEVEL]</p>
+            <p class="header-subscript">Keyword: SPELL LEVEL</p>
             <app-dynamic-content [content]="spellLevelDescription | keywordProcessor"></app-dynamic-content>
         </div>
         <div class ="p-2 border bg-body-tertiary mt-3">
             <h5 class ="mb-0" ngbScrollSpyFragment="xp">Experience Points</h5>
-            <p class="header-subscript">Keyword: [XP]</p>
+            <p class="header-subscript">Keyword: XP</p>
             <app-dynamic-content [content]="xpDescription | keywordProcessor"></app-dynamic-content>
         </div>
         <div class ="p-2 border bg-body-tertiary mt-3">
             <h5 class ="mb-0" ngbScrollSpyFragment="ap">Action Points</h5>
-            <p class="header-subscript">Keyword: [AP]</p>
+            <p class="header-subscript">Keyword: AP</p>
             <app-dynamic-content [content]="apDescription | keywordProcessor"></app-dynamic-content>
         </div>
         <div class ="p-2 border bg-body-tertiary mt-3">
             <h5 class ="mb-0" ngbScrollSpyFragment="mp">Movement Points</h5>
-            <p class="header-subscript">Keyword: [MP]</p>
+            <p class="header-subscript">Keyword: MP</p>
             <app-dynamic-content [content]="mpDescription | keywordProcessor"></app-dynamic-content>
         </div>
         <div class ="p-2 border bg-body-tertiary mt-3">
             <h5 class ="mb-0" ngbScrollSpyFragment="martial-damage">Martial Damage</h5>
-            <p class="header-subscript">Keyword: [MARTIAL DAMAGE]</p>
+            <p class="header-subscript">Keyword: MARTIAL DAMAGE</p>
             <app-dynamic-content [content]="martialdamageInfo.description | keywordProcessor"></app-dynamic-content>
             <ul>
                 <li>
@@ -76,28 +76,28 @@
         <div class="col-6">
             <div class ="p-2 border bg-body-tertiary mt-3">
                 <h5 class ="mb-0" ngbScrollSpyFragment="hp">HP</h5>
-                <p class="header-subscript">Keyword: [HP]</p>
+                <p class="header-subscript">Keyword: HP</p>
                 <app-dynamic-content [content]="hpDescription | keywordProcessor"></app-dynamic-content>
-                <h6 class ="mb-0 mt-1">Dropping to 0 [HP]:</h6>
+                <h6 class ="mb-0 mt-1">Dropping to 0 HP:</h6>
                 <app-dynamic-content [content]="droppingTo0HPDescription | keywordProcessor"></app-dynamic-content>
             </div>
 
             <div class ="p-2 border bg-body-tertiary mt-3">
                 <h5 class ="mb-0" ngbScrollSpyFragment="thp">Temporary HP</h5>
-                <p class="header-subscript">Keyword: [THP]</p>
+                <p class="header-subscript">Keyword: THP</p>
                 <app-dynamic-content [content]="tempHPDescription | keywordProcessor"></app-dynamic-content>
             </div>
         </div>
         <div class="col-6">
             <div class ="p-2 border bg-body-tertiary mt-3">
                 <h5 class ="mb-0" ngbScrollSpyFragment="stamina">Stamina</h5>
-                <p class="header-subscript">Keyword: [STAMINA]</p>
+                <p class="header-subscript">Keyword: STAMINA</p>
                 <app-dynamic-content [content]="staminaDescription | keywordProcessor"></app-dynamic-content>
             </div>
 
             <div class ="p-2 border bg-body-tertiary mt-3">
                 <h5 class ="mb-0" ngbScrollSpyFragment="arcana">Arcana</h5>
-                <p class="header-subscript">Keyword: [ARCANA]</p>
+                <p class="header-subscript">Keyword: ARCANA</p>
                 <app-dynamic-content [content]="arcanaDescription | keywordProcessor"></app-dynamic-content>
             </div>
         </div>
@@ -114,33 +114,33 @@
     <div class="px-3 row g-5">
         <div class="col-sm">
             <div class ="p-2 border bg-body-tertiary mt-3">
-                <h5 class ="mb-0" ngbScrollSpyFragment="hardness">Hardness</h5>
-                <p class="header-subscript">Keyword: [HARDNESS]</p>
-                <app-dynamic-content [content]="hardnessDescription | keywordProcessor"></app-dynamic-content>
+                <h5 class ="mb-0" ngbScrollSpyFragment="stability">Stability</h5>
+                <p class="header-subscript">Keyword: STABILITY</p>
+                <app-dynamic-content [content]="stabilityDescription | keywordProcessor"></app-dynamic-content>
             </div>
 
             <div class ="p-2 border bg-body-tertiary mt-3">
                 <h5 class ="mb-0" ngbScrollSpyFragment="dodge">Dodge</h5>
-                <p class="header-subscript">Keyword: [DODGE]</p>
+                <p class="header-subscript">Keyword: DODGE</p>
                 <app-dynamic-content [content]="dodgeDescription | keywordProcessor"></app-dynamic-content>
             </div>
 
             <div class ="p-2 border bg-body-tertiary mt-3">
                 <h5 class ="mb-0" ngbScrollSpyFragment="toughness">Toughness</h5>
-                <p class="header-subscript">Keyword: [TOUGHNESS]</p>
+                <p class="header-subscript">Keyword: TOUGHNESS</p>
                 <app-dynamic-content [content]="toughnessDescription | keywordProcessor"></app-dynamic-content>
             </div>
         </div>
         <div class="col-sm">
             <div class ="p-2 border bg-body-tertiary mt-3">
                 <h5 class ="mb-0" ngbScrollSpyFragment="willpower">Willpower</h5>
-                <p class="header-subscript">Keyword: [WILLPOWER]</p>
+                <p class="header-subscript">Keyword: WILLPOWER</p>
                 <app-dynamic-content [content]="willpowerDescription | keywordProcessor"></app-dynamic-content>
             </div>
 
             <div class ="p-2 border bg-body-tertiary mt-3">
                 <h5 class ="mb-0" ngbScrollSpyFragment="dr">Damage Resistance</h5>
-                <p class="header-subscript">Keyword: [DR]</p>
+                <p class="header-subscript">Keyword: DR</p>
                 <app-dynamic-content [content]="damageResistanceDescription | keywordProcessor"></app-dynamic-content>
             </div>
         </div>
@@ -213,15 +213,15 @@
         </ul>
 
         <h5 class ="mb-0 mt-3" ngbScrollSpyFragment="size">Size</h5>
-        <p class="header-subscript">Keyword: [SIZE]</p>
+        <p class="header-subscript">Keyword: SIZE</p>
         <app-dynamic-content [content]="sizeDescription | keywordProcessor"></app-dynamic-content>
         <div class="d-flex justify-content-center">
             <table class="rules-table-75">
                 <thead>
                     <tr>
                         <th scope="col">Size</th>
-                        <th scope="col">[STR] Modifier</th>
-                        <th scope="col">[DODGE] Modifier</th>
+                        <th scope="col">STR Modifier</th>
+                        <th scope="col">DODGE Modifier</th>
                         <th scope="col">Other size modifiers</th>
                     </tr>
                 </thead>
