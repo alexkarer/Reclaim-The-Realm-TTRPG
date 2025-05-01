@@ -279,7 +279,8 @@
             "description": "",
             "self": "",
             "target": "",
-            "areaEffects": "",
+            "areaEffectsKeyword": "[AREA EFFECT]",
+            "areaEffectsDescription": "Describes an ongoing effect in a designated target area that happens to a creature when it starts their [TURN] in the area or moves into the area for the first time in their [TURN].",
             "auraEffects": ""
         },
         "duration": {
@@ -287,38 +288,37 @@
             "longerDuration": ""
         },
         "helperKeywords": {
-            "half": "",
             "saveEnds": "",
             "spellAbility": ""
+        }
+    },
+    "circumstancalBonuses": {
+        "description": "During cobmat there are several situations where combatants can gain small advantages. Unlike status effects, these benefits are not universal and vary from target/attacker.",
+        "cover": {
+            "description": "If a creature makes a [RANGED ATTACK] against the target and there are other objects or creatures blocking parts of the target, it recieves cover bonuses. The less of the target is visible the better the cover bonus.",
+            "smallCoverKeyword": "SMALL COVER",
+            "smallCoverDescription": "If at least 25% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-5 will always be a critical miss and the target recieves +2 to [DODGE] and [SHIELD BLOCK].",
+            "mediumCoverKeyword": "MEDIUM COVER",
+            "mediumCoverDescription": "If at least 50% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-10 will always be a critical miss and the target recieves +4 to [DODGE] and [SHIELD BLOCK].",
+            "largeCoverKeyword": "LARGE COVER",
+            "largeCoverDescription": "If at least 75% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-15 will always be a critical miss and the target recieves +6 to [DODGE] and [SHIELD BLOCK]."
         },
-        "circumstancalBonuses": {
-            "description": "During cobmat there are several situations where combatants can gain small advantages. Unlike status effects, these benefits are not universal and vary from target/attacker.",
-            "cover": {
-                "description": "If a creature makes a [RANGED ATTACK] against the target and there are other objects or creatures blocking parts of the target, it recieves cover bonuses. The less of the target is visible the better the cover bonus.",
-                "smallCoverKeyword": "SMALL COVER",
-                "smallCoverDescription": "If at least 25% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-5 will always be a critical miss and the target recieves +2 to [DODGE] and [SHIELD BLOCK].",
-                "mediumCoverKeyword": "MEDIUM COVER",
-                "mediumCoverDescription": "If at least 50% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-10 will always be a critical miss and the target recieves +4 to [DODGE] and [SHIELD BLOCK].",
-                "largeCoverKeyword": "LARGE COVER",
-                "largeCoverDescription": "If at least 75% of the target is covered the target recieves the following bonuses: An unmodified roll on the [ATTACK] of 1-15 will always be a critical miss and the target recieves +6 to [DODGE] and [SHIELD BLOCK]."
-            },
-            "prone": {
-                "keyword": "PRONE",
-                "description": "If you are lying on the ground you are [PRONE].",
-                "pronePenaltyDescription": "While [PRONE] the Cost of the Move Ability is doubled, any [MELEE ATTACK] against you has [ADVANTAGE] and any [MELEE ATTACK] made by you has [DISADVANTAGE]. Additionally you always recieve at least [SMALL COVER] against any [RANGED ATTACK]. "
-            },
-            "flanking": {
-                "description": "If you are surrounding a target with your allies you are [FLANKING] that target. A target counts as so surrounded if at least 2 creatures hostile to the target are on opposite sides of it. If the surrounding creatures are of lower size than the target, an additional creature for each size lower is needed.",
-                "keyword": "FLANKING",
-                "flankingPenaltyDescription": "While a creature is [FLANKING] it recieves a +2 bonus to any [MELEE ATTACK] against the surrounded target."
-            },
-            "concealment": {
-                "description": "If a creature is trying to hide or obfuscated via other means it can recieves bonus from concealment. When anyone is trying to directly target a creature benefiting from Concealment with an ability (aura and area effects not included) it first has to check if it actually can percieve it. The targeter has to make a [PER] Awareness [SKILL TEST] vs. The Concealment [DT] of the Target. On a succes it can target the creature as normal. On a failure it has to choose a different target.",
-                "partialConcealmentKeyword": "PARTIAL CONCEALMENT",
-                "partialConcealmentBonusDescription": "While partially concealed the Concealment [DT] is equal 8 + Stealth Ranks. If the creature benefiting from [PARTIAL CONCEALMENT] makes an [ATTACK] it recieves a +5 bonus to that [ATTACK].",
-                "fullConcealmentKeyword": "FULL CONCEALMENT",
-                "fullConcealmentBonusDescription": "While partially concealed the Concealment [DT] is equal 15 + Stealth Ranks. If the creature benefiting from [FULL CONCEALMENT] makes an [ATTACK] it recieves [ADVANTAGE] or a +5 bonus to that [ATTACK]."
-            }
+        "prone": {
+            "keyword": "PRONE",
+            "description": "If you are lying on the ground you are [PRONE].",
+            "pronePenaltyDescription": "While [PRONE] the Cost of the Move Ability is doubled, any [MELEE ATTACK] against you has [ADVANTAGE] and any [MELEE ATTACK] made by you has [DISADVANTAGE]. Additionally you always recieve at least [SMALL COVER] against any [RANGED ATTACK]. "
+        },
+        "flanking": {
+            "description": "If you are surrounding a target with your allies you are [FLANKING] that target. A target counts as so surrounded if at least 2 creatures hostile to the target are on opposite sides of it. If the surrounding creatures are of lower size than the target, an additional creature for each size lower is needed.",
+            "keyword": "FLANKING",
+            "flankingPenaltyDescription": "While a creature is [FLANKING] it recieves a +2 bonus to any [MELEE ATTACK] against the surrounded target."
+        },
+        "concealment": {
+            "description": "If a creature is trying to hide or obfuscated via other means it can recieves bonus from concealment. When anyone is trying to directly target a creature benefiting from Concealment with an ability (aura and area effects not included) it first has to check if it actually can percieve it. The targeter has to make a [PER] Awareness [SKILL TEST] vs. The Concealment [DT] of the Target. On a succes it can target the creature as normal. On a failure it has to choose a different target.",
+            "partialConcealmentKeyword": "PARTIAL CONCEALMENT",
+            "partialConcealmentBonusDescription": "While partially concealed the Concealment [DT] is equal 8 + Stealth Ranks. If the creature benefiting from [PARTIAL CONCEALMENT] makes an [ATTACK] it recieves a +5 bonus to that [ATTACK].",
+            "fullConcealmentKeyword": "FULL CONCEALMENT",
+            "fullConcealmentBonusDescription": "While partially concealed the Concealment [DT] is equal 15 + Stealth Ranks. If the creature benefiting from [FULL CONCEALMENT] makes an [ATTACK] it recieves [ADVANTAGE] or a +5 bonus to that [ATTACK]."
         }
     }
 }

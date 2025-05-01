@@ -178,10 +178,10 @@ function getGameMechanicsContentPart(keyword: string): ContentPart | undefined {
             return generateGenericKeyword('LINE', 'listed with a length x width. It starts from the caster of the ability and extends until the lenght.', 'targets');
         case 'CONE':
             return generateGenericKeyword('CONE', 'A cone with the listed length starting from the ability caster.', 'targets');
+        case 'AREA EFFECT':
+            return generateGenericKeyword('AREA EFFECT', 'Describes an ongoing effect in a designated target area that happens to a creature when it starts their [TURN] in the area or moves into the area for the first time in their [TURN].', 'targets');
         case 'INSTANT':
             return generateGenericKeyword('INSTANT', 'Ability happens now and there are no lingering effects. The actor can not use any other abilities until all the effects of this ability have been resolved.', 'duration');
-        case 'HALF':
-            return generateGenericKeyword('HALF', 'If the related [ATTACK], [SPELL TEST] or [MARTIAL TEST] fails then the ability does still half the damage it would on a success. However no additional effects are applied unless stated otherwise.', 'targets');
         case 'SAVE ENDS':
             return generateGenericKeyword('SAVE ENDS', 'The target can repeat the [SAVE] at the end of each of their [TURN] ending all effects of the ability on a sucess', 'targets');
         default:

@@ -17,10 +17,10 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You can trigger this [REACTION] at any moment, when doing so you can interrupt any enemy or allied action and take a turn as if it was your turn, however you only 2 [AP] availible (can’t be increased in any way) and have your [MP] availible",
+            "description": "You can use this Ability at any point, when doing so you can interrupt any enemy or allied action and take a [TURN] as if it was your [TURN], however you only 2 [AP] availible (can’t be increased in any way) and have your [MP] availible",
             "maneuverPush": {
                 "pushingExtraCost": "5 [STAMINA]",
-                "pushingDescription": "You push yourself beyond limits and have a regular turn with full [AP] and [MP] however this maneuver is very taxing and after finishing it you suffer 5 points of [EXHAUSTION]."
+                "pushingDescription": "You push yourself beyond limits and have a regular [TURN] with full [AP] and [MP] however this maneuver is very taxing and after finishing it you suffer 2 points of [EXHAUSTION]."
             }
         }
     ],

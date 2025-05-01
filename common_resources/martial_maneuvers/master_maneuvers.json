@@ -17,7 +17,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You dash forward with supernatural speed towards the location you want to reach, as long you would be able reach that location with your regular movement, you move there now instantly and don’t provoke any opportunity attacks on the way. Additionally no other creatures can perform a [REACTION] against your next Action unless their [AGI] or [PER] is higher than your [AGI] + [STAMINA] spent on the Maneuver"
+            "description": "You can move towards a target location using [MP] as normal. Make a [AGI] [MARTIAL TEST] vs. [DODGE]. On sucess: until you stopped moving and performed 1 other Ability or your [TURN] ends, other creatures can't use a [REACTION] against you,. "
         },
         {
             "name": "Afterimage",
@@ -36,7 +36,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[ROUND]",
-            "description": "The next time you are targeted by an [ATTACK] it targets the Afterimage of you instead and automatically misses.",
+            "description": "The next time you are hit by an [ATTACK], it automatically misses.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "For each extra [STAMINA] used it works against 1 additional [ATTACK]."
@@ -61,10 +61,10 @@
             "range": "[MELEE RANGE]",
             "target": "1 targed affected by [RESTRAINED I] caused by you",
             "duration": "[INSTANT]",
-            "description": "Make a [STR] [MARTIAL TEST] against the creatures [TOUGHNESS] or [HARDNESS] (targets choice). On a success the target recieves 3 * heavy [MARTIAL DAMAGE] phyiscal damage. On a fail it just recieves regular heavy [MARTIAL DAMAGE] phyiscal damage",
+            "description": "[STR] [MARTIAL TEST] vs [TOUGHNESS] or [HARDNESS] (targets choice). On success: recieve 5 * light [MARTIAL DAMAGE] phyiscal damage. On fail: half damage.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "For each 1 [STAMINA] increase the damage on a success by your heavy [MARTIAL DAMAGE] phyiscal damage."
+                "pushingDescription": "For each 1 [STAMINA] increase the damage on a success by your light [MARTIAL DAMAGE] phyiscal damage."
             }
         }
     ],
@@ -132,7 +132,7 @@
             "range": "12m",
             "target": "1 creature",
             "duration": "[ROUND]",
-            "description": "Make an [INT] [MARTIAL TEST] against against [DT] equal to 10+ target [LEVEL] + target [INT]. On a success the DM has to tell you exactly what non-standard abilities it intends to perform where it intends to move. On the creautres next [TURN] it has to perform these exact abilities unless it is not able to. On a failure the DM only tells you 1 ability.",
+            "description": "[INT] [MARTIAL TEST] vs. 10 + target [LEVEL] + [INT]. On success: the GM has to tell you exactly what non-standard abilities it intends to perform and where it intends to move. On the creatures next [TURN] it has to perform these exact abilities to it's best ability. On fail: the GM only tells you 1 ability.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "Make the [MARTIAL TEST] with [ADVANTAGE]."
@@ -155,7 +155,7 @@
             "range": "[WEAPON RANGE]",
             "target": "one creature",
             "duration": "[INSTANT]",
-            "description": "Target a creature whose [LEVEL] is below yours. Make a Weapon Attack against that creature. If the [ATTACK] was a miss, it turns into a regular hit. If that [ATTACK] hits but the result is lower than the target’s [TOUGHNESS] it is a critical hit. If the [ATTACK] also matches or exceeds the creature’s [TOUGHNESS], it recieves 3 * heavy [MARTIAL DAMAGE] as physical damage.",
+            "description": "Make a Weapon Attack against [TOUGHNESS]. On hit: 5 * [MARTIAL DAMAGE] physical damage. On Success: score a critical hit.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "For each 1 [STAMINA] increase the damage on a success by your heavy [MARTIAL DAMAGE]."
@@ -172,11 +172,11 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "1 or more [AP], 2 [STAMINA]",
+            "cost": "5 [AP], 2 [STAMINA]",
             "range": "[MELEE RANGE]",
             "target": "one creature",
             "duration": "[INSTANT]",
-            "description": "You unleash a series of quick attacks against a single target. For each [AP] spent you can make A Weapon Attack."
+            "description": "Make a Weapon Attack against one target a number of times equal to your [MARTIAL LEVEL]."
         }
     ]
 }

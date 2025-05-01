@@ -36,7 +36,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "If a creature moves within 6m you can instantly move [AGI]/2 meters",
+            "description": "If a creature moves within 6m you can use this Ability and use instantly [AGI]/2 [MP].",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "For each stamina used, you can move an extra 1.5 m."
@@ -82,7 +82,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "If an ally was hit by an [ATTACK] that is not a critical hit, you can use this [REACTION] and take the hit yourself instead. Even if your [DODGE] is hgher than the [ATTACK] you are still hit, however if your Shield Block is higher than it hits your shield instead.",
+            "description": "If an ally was hit by an [ATTACK] that is not a critical hit, you can use this Ability and take the hit yourself instead. Even if your [DODGE] is hgher than the [ATTACK] you are still hit, however if your [SHIELD BLOCK] is higher than it hits your shield instead.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can also use this ability when the [ATTACK] was a critical hit."
@@ -151,9 +151,9 @@
             },
             "cost": "2 [AP]",
             "range": "9m (6 squares)",
-            "target": "allied creatures within range",
+            "target": "allied creatures within range that can hear you",
             "duration": "1 [ROUND]",
-            "description": "You inspire yourself and allies near you and boost their resolve. You and the creatures you target recieve [THP] equal to your [MARTIAL LEVEL] + [CHA], you can't target creatures with this ability that can't hear you.."
+            "description": "Gain [MARTIAL LEVEL] + [CHA] [THP]."
         },
         {
             "name": "Get Back in the Fight",
@@ -172,7 +172,7 @@
             "range": "6m (4 squares)",
             "target": "1 [UNCONCIOUS] allied creature, or one that is at Deaths' door.",
             "duration": "[INSTANT]",
-            "description": "You convince one of your allies that their fight is not over. That ally regains [HP] equal to your [MARTIAL LEVEL] +[CHA] and if they are [PRONE] can use their [REACTION] to stand up. You can't traget creatures that can't hear you."
+            "description": "Target regains [HP] equal to your [MARTIAL LEVEL] + [CHA] and target can stand up from [PRONE]."
         }
     ],
     "fortitudeManeuvers": [
@@ -191,7 +191,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "You push yourself and grant yourself an extra 2 [AP] this turn, however next turn you start with 2 [AP] less."
+            "description": "You push yourself and grant yourself an extra 2 [AP] this [TURN], however next [TURN] you start with 2 [AP] less."
         }
     ],
     "tacticalManeuvers": [
@@ -212,7 +212,7 @@
             "range": "12m (8 squares)",
             "target": "1 creature",
             "duration": "1 [ROUND]",
-            "description": "You form a plan to stop a creature from escaping, for the duration any Opportunity Attack of your alies against the target have [ADVANTAGE] and each time the target is hit by an [ATTACK] it loses 1 [MP] for it's next turn. Additionally any Disengage moves made by the target cost 1 additional [MP]."
+            "description": "You form a plan to stop a creature from escaping, for the duration any Opportunity Attack of your allies against the target have [ADVANTAGE] and each time the target is hit by an [ATTACK] it loses 1 [MP] for it's next turn. Additionally any Disengage moves made by the target cost 1 additional [MP]."
         },
         {
             "name": "Analyze Weakpoint",
@@ -231,7 +231,7 @@
             "range": "12m (8 squares)",
             "target": "1 creature",
             "duration": "[TURN]",
-            "description": "You attempt to analyze a creature Weakpoint. Make a [INT] [MARTIAL TEST] where the [DT] is 15 + the creatures [LEVEL]. On a success the next [ATTACK] that you make against this creature during your turn automatically becomes a critical hit."
+            "description": "[INT] [MARTIAL TEST] vs. 15 + target [LEVEL]. On success: next [ATTACK] against creature made by you is automatically a critical hit."
         }
     ],
     "weaponManeuvers": [
@@ -247,13 +247,13 @@
                 "otherRequirements": [ ]
             },
             "cost": "2 [AP]",
-            "range": "6m/12m/24m",
+            "range": "Ranged Weapon 6m/12m/24m",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "You can treat your shield like a thrown weapon and make a [RANGED MARTIAL ATTACK] with it and afterwards it bounces back towards you regardless if the [RANGED MARTIAL ATTACK] hits or not. The shield has a range of 6m/12m/24m and deals 1d8 + [STR] physical damage to the target on a hit.",
+            "description": "[RANGED MARTIAL ATTACK]. On hit: deal medium [MARTIAL DAMAGE] physical damage. The shield afterwards bounces back.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "If your [RANGED MARTIAL ATTACK] hits the first Target, it bounces towards another target within 4.5m of the orginal target, make a second [RANGED MARTIAL ATTACK] against that target and on a hit it recieves half the damage."
+                "pushingDescription": "If your [RANGED MARTIAL ATTACK] hits the first Target, it bounces towards another target within 4.5m of the orginal target, make a second [RANGED MARTIAL ATTACK] against that target."
             }
         },
         {
@@ -271,7 +271,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack with a thrown weapon. if the [ATTACK] was successful and exceeds or matches the targets [HARDNESS] it is pushed a number of meters equal 1 + half [STR] away from you.<br>If any target is blocking that movement, instead of crashing into it, that movement stops and the blocking target recieves half the damge from the [RANGED MARTIAL ATTACK]"
+            "description": "Make a Weapon Attack with a thrown Weapon, if [ATTACK] hits and exceeds or matches [HARDNESS] push [STR] m away. If anything is blocking movement, the blocking target recieves half damage of the [ATTACK]."
         },
         {
             "name": "Shield block",
@@ -288,11 +288,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "If you are hit by an [ATTACK] that is higher than your shield block and not a critical hit, you can use this [REACTION] and block the [ATTACK] with your shield as if it where lower than your Shield block.",
-            "maneuverPush": {
-                "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "You can also use this ability when the [ATTACK] was a critical hit."
-            }
+            "description": "When you are hit by an [ATTACK] you can use this Ability and make that [ATTACK] hit the shields instead."
         },
         {
             "name": "Parry stance",
@@ -309,10 +305,10 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "Each time you use the Parry or Improved Parry Ability without consuming a [REACTION]",
+            "description": "Each time you use the Parry Ability it doesn't use up your [REACTION]",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "Each [STAMINA] used grants you a +2 bonus to the [D20 TEST] when using the Parry or Improved Parry Ability."
+                "pushingDescription": "Each [STAMINA] used grants you a +2 bonus to the [D20 TEST] when using the Parry Ability."
             }
         }
     ]

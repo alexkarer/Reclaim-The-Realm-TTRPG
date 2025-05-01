@@ -485,9 +485,9 @@
             "name": "Holy Strike",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
-            "cost": "0 [AP], 2 AD(3-)",
+            "cost": "[FREE], 2 AD(3-)",
             "range": "-",
-            "target": "self",
+            "target": "[SELF]",
             "duration": "[INSTANT]",
             "description": "When you hit a target with an [ATTTACK] you can deal 2d6 extra holy damage. For every additional AD(3-) used, you can increase the holy damage by a further d6."
         },
@@ -497,9 +497,9 @@
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
             "cost": "0 [AP], nubmer of AD(2-) equal to spell power",
             "range": "-",
-            "target": "",
+            "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "For your next [SPELL ABILITY] that you cast, that heals you can maximize all dice heal a target."
+            "description": "For your next [SPELL ABILITY] that you cast, that heals you can maximize all dice."
         },
         {
             "name": "Rejuvination",
@@ -509,7 +509,7 @@
             "range": "6m",
             "target": "one ally that is [UNCONCIOUS]",
             "duration": "[INSTANT]",
-            "description": "You can target one ally within 6m that is [UNCONCIOUS]. That ally regains 1 [HP] and can immediatly stand up if they are able to move."
+            "description": "That ally regains 1 [HP] and can immediatly stand up from being [PRONE] if they are able to move."
         },
         {
             "name": "Holy Fire",
@@ -519,15 +519,15 @@
             "range": "9m",
             "target": "evil creatures with range",
             "duration": "[INSTANT]",
-            "description": "You unleash a holy flame that deals holy damage to all evil creatures within range. Make a [SPI] [SPELL TEST] against the creature’s [DODGE] . On a success the damage is equal to a number of d8s equalt to your [LEVEL] [HALF]."
+            "description": "[SPI] [SPELL TEST] vs. [DODGE]. On success: [SPI]*d6 holy damage. On fail: half damage."
         },
         {
             "name": "Unholy Strike",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Evil or LN/CN/N Alignment" ] },
-            "cost": "0 [AP], 2 AD(4+)",
+            "cost": "[FREE], 2 AD(4+)",
             "range": "-",
-            "target": "self",
+            "target": "[SELF]",
             "duration": "[INSTANT]",
             "description": "When you hit a target with an [ATTTACK] you can deal 2d6 extra unholy damage. For every additional AD(4+) used, you can increase the unholy damage by a further d6."
         },
@@ -539,7 +539,7 @@
             "range": "12m",
             "target": "[SPHERE] 3m",
             "duration": "[INSTANT]",
-            "description": "You unleash an unholy flame that deals unholy damage to all creatures within range. Make a [SPI] [SPELL TEST] against the creature’s [DODGE]. On a success the damage is equal to a number of d8s equalt to your [LEVEL] [HALF]."
+            "description": "[SPI] [SPELL TEST] vs. [DODGE]. On success: [SPI]*d6 unholy damage. On fail: half damage."
         },
         {
             "name": "Divine Clense",
@@ -549,25 +549,25 @@
             "range": "12m",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "You can remove one Tier I status effect affecting the Target. If that target is a hostile creature you have to succeed on a [SPI] [SPELL TEST] against: 10 + Creature [LEVEL]. When this ability is used with 4 matching AD Tier 2 Status Effects can be removed, When used with 6 matching AD Tier 3 status effects can be removed."
+            "description": "You can remove one Tier I status effect affecting the Target. When this ability is used with 4 matching AD Tier 2 Status Effects can be removed. When used with 6 matching AD Tier 3 status effects can be removed."
         },
         {
             "name": "Protection",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
-            "cost": "1 reaction, 2 matching AD",
+            "cost": "1 [REACTION], 2 matching AD",
             "range": "9m",
             "target": "1 ally",
             "duration": "[INSTANT]",
-            "description": "When an ally within 9m of the Priest recieves damage the Priest can use their reaction and reduce the damage by an amount equal to [SPI] + [LEVEL] ∗ 2."
+            "description": "If an ally within range recieves damage you can use this Ability and reduce the damage by [SPI] + [LEVEL]."
         },
         {
             "name": "Certainty",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
-            "cost": "0 [AP], 2 or more matching AD",
+            "cost": "[FREE], 2 or more matching AD",
             "range": "-",
-            "target": "self",
+            "target": "[SELF]",
             "duration": "1 [TURN]",
             "description": "For the next [D20 TEST] you make don’t roll a dice, instead it is a unmodified roll of 10. When this ability is used with 3 matching AD the roll becomes a 16 and when used with 4 matching AD the roll becomes a 20."
         },
@@ -579,7 +579,7 @@
             "range": "9m",
             "target": "one creature",
             "duration": "[SPI]/2 [ROUND]",
-            "description": "Make a [SPI] [SPELL TEST] against the targets [HARDNESS] or [DODGE] (target’s choice). On a success the target is [RESTRAINED I] (Escape DC equal to 10 + [LEVEL] + [SPI]). When targeting a chaotic creature you have [ADVANTAGE] on the Test."
+            "description": "[SPI] [SPELL TEST] vs. [HARDNESS] or [DODGE] (target’s choice). On success: apply [RESTRAINED I]. If targeting a chaotic creature you have [ADVANTAGE] on the Test"
         },
         {
             "name": "Unyielding",
@@ -587,29 +587,29 @@
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "1 [REACTION], 3 matching AD",
             "range": "-",
-            "target": "self",
+            "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you fail a [SAVE] you can turn add your [LEVEL] to the result."
+            "description": "When you fail a [SAVE] you can use this Ability and add your [LEVEL] to the result potentially turning it into a success."
         },
         {
             "name": "Self Restoration",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE/N Alignment" ] },
-            "cost": "0 [AP], two unique AD",
+            "cost": "1 [AP], two unique AD",
             "range": "-",
-            "target": "self",
+            "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "The Cleric gains [THP] equal to [SPI] + [LEVEL] ."
+            "description": "Gain [THP] equal to [SPI] + [LEVEL]."
         },
         {
             "name": "Second Chance",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE/N Alignment" ] },
-            "cost": "1 reaction, 3 unique AD",
+            "cost": "1 [REACTION], 3 unique AD",
             "range": "6m",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "After a creature made a [D20 TEST] you can use this feature and the creature must reroll the test and take the second result."
+            "description": "After a creature made a [D20 TEST] you can use this Ability and the creature must reroll the test and take the second result."
         }
     ]
 }

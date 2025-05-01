@@ -87,36 +87,39 @@
         <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.weaponRange | keywordProcessor"></app-dynamic-content>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="targets">Targets</h5>
+        <p class="header-subscript">Keyword: {{ combatDetails.additionalCombatRules.target.areaEffectsKeyword }}</p>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.target.areaEffectsDescription | keywordProcessor"></app-dynamic-content>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="duration">Duration</h5>
-
-        <h4 class="mb-0 mt-2">Circumstancal Bonuses</h4>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.description | keywordProcessor"></app-dynamic-content>
+    </div>
+    <h4 class="mb-0 mt-2">Circumstancal Bonuses</h4>
+    <div>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.description | keywordProcessor"></app-dynamic-content>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="cover">Cover</h5>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.cover.description | keywordProcessor"></app-dynamic-content>
-        <p class="header-subscript">Keyword: {{ combatDetails.additionalCombatRules.circumstancalBonuses.cover.smallCoverKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.cover.smallCoverDescription | keywordProcessor"></app-dynamic-content>
-        <p class="header-subscript">Keyword: {{ combatDetails.additionalCombatRules.circumstancalBonuses.cover.mediumCoverKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.cover.mediumCoverDescription | keywordProcessor"></app-dynamic-content>
-        <p class="header-subscript">Keyword: {{ combatDetails.additionalCombatRules.circumstancalBonuses.cover.largeCoverKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.cover.largeCoverDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.description | keywordProcessor"></app-dynamic-content>
+        <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.cover.smallCoverKeyword }}</p>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.smallCoverDescription | keywordProcessor"></app-dynamic-content>
+        <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.cover.mediumCoverKeyword }}</p>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.mediumCoverDescription | keywordProcessor"></app-dynamic-content>
+        <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.cover.largeCoverKeyword }}</p>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.largeCoverDescription | keywordProcessor"></app-dynamic-content>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="prone">Prone</h5>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.prone.description | keywordProcessor"></app-dynamic-content>
-        <p class="header-subscript">Keyword: {{ combatDetails.additionalCombatRules.circumstancalBonuses.prone.keyword }}</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.prone.pronePenaltyDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.prone.description | keywordProcessor"></app-dynamic-content>
+        <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.prone.keyword }}</p>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.prone.pronePenaltyDescription | keywordProcessor"></app-dynamic-content>
         
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="flanking">Flanking</h5>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.flanking.description | keywordProcessor"></app-dynamic-content>
-        <p class="header-subscript">Keyword: {{ combatDetails.additionalCombatRules.circumstancalBonuses.flanking.keyword }}</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.flanking.flankingPenaltyDescription| keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.flanking.description | keywordProcessor"></app-dynamic-content>
+        <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.flanking.keyword }}</p>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.flanking.flankingPenaltyDescription| keywordProcessor"></app-dynamic-content>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="concealment">Concealment</h5>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.concealment.description | keywordProcessor"></app-dynamic-content>
-        <p class="header-subscript">Keyword: {{ combatDetails.additionalCombatRules.circumstancalBonuses.concealment.partialConcealmentKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.concealment.partialConcealmentBonusDescription | keywordProcessor"></app-dynamic-content>
-        <p class="header-subscript">Keyword: {{ combatDetails.additionalCombatRules.circumstancalBonuses.concealment.fullConcealmentKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.circumstancalBonuses.concealment.fullConcealmentBonusDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.concealment.description | keywordProcessor"></app-dynamic-content>
+        <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.concealment.partialConcealmentKeyword }}</p>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.concealment.partialConcealmentBonusDescription | keywordProcessor"></app-dynamic-content>
+        <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.concealment.fullConcealmentKeyword }}</p>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.concealment.fullConcealmentBonusDescription | keywordProcessor"></app-dynamic-content>
     </div>
 </div>

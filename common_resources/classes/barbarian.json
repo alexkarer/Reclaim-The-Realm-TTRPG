@@ -324,11 +324,11 @@
             "name": "Resentful Strike",
             "tags": [ "Class Technique (Barbarian)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "1-3 Rage",
+            "cost": "[FREE], 1-3 Rage",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "After successfully making a [MELEE MARTIAL ATTACK] you deal 1d6+([LEVEL]/6) bonus physical damage per Rage spent."
+            "description": "After successfully making a [MELEE MARTIAL ATTACK] you deal 1d6+([LEVEL]/6)*d6 bonus physical damage per Rage spent."
         },
         {
             "name": "Armor of Fury",
@@ -337,8 +337,8 @@
             "cost": "1 [AP], at least 1 Rage",
             "range": "-",
             "target": "[SELF]",
-            "duration": "1 round",
-            "description": "You gain [CON]+[LEVEL] [THP] for every Rage you spend"
+            "duration": "1 [ROUND]",
+            "description": "You gain [CON]+[LEVEL] [THP] for every Rage you spend."
         },
         {
             "name": "Furious Charge",
@@ -348,7 +348,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You use the Dash Ability for 0 [AP] , every time this ability is used again in the same turn, the Rage cost is increased by 1."
+            "description": "You use the Dash Ability, every time this ability is used again in the same turn, the Rage cost is increased by 1."
         },
         {
             "name": "Walk it off",
@@ -378,17 +378,17 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "2 [ROUND]",
-            "description": "Make a [MELEE MARTIAL ATTACK] against your target, on a hit it takes ([STR]/2) * d6 physical damage. Additionally on a hit compare your [TOUGHNESS] to your target's if yours is higher the target recieves the [STUNNED I] status effect, if the target is higher you recieve the [STUNNED I] status effect. On a tie, both are [STUNNED I]."
+            "description": "[MELEE MARTIAL ATTACK] against [TOUGHNESS]. On hit: light [MARTIAL DAMAGE] physical damage. On success: apply [STUNNED I]. On fail: apply [STUNNED I] on yourself."
         },
         {
             "name": "Violent Leap",
             "tags": [ "Class Technique (Barbarian)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "4 [MP], 2 Rage",
-            "range": "-",
-            "target": "[SELF]",
+            "cost": "0 [AP], 2 Rage",
+            "range": "[MELEE RANGE]",
+            "target": "all creatures",
             "duration": "[INSTANT]",
-            "description": "You make a regular Jump Move and at end of your Jump Move roll and make a [STR] [MARTIAL TEST]. Every enemy within [MELEE RANGE] of the landing is knocked [PRONE] if that roll exceeds their [HARDNESS]."
+            "description": "After you ended a Jump Move or land otherwise you can use this Ability. Make a [STR] [MARTIAL TEST] vs. [HARDNESS]. On success: knock [PRONE]."
         },
         {
             "name": "Adrenaline Rush",
@@ -401,7 +401,7 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "3 Rage",
+            "cost": "0[AP], 3 Rage",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -422,7 +422,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature*",
             "duration": "[INSTANT]",
-            "description": "You can use this [REACTION] when you loose [HP] from a creature within [MELEE RANGE]. You can make a Weapon Attack agaisnt that creature in response dealing extra damage equal to the amount of [HP] you lost."
+            "description": "If loose [HP] from a creature within range you can loose this Ability. Make a Weapon Attack against that creature and on a hit deal extra damage equal to [HP] just lost."
         },
         {
             "name": "Primal Roar",
@@ -437,9 +437,9 @@
             },
             "cost": "3 [AP], 5 Rage",
             "range": "-",
-            "target": "[CONE] 6m",
-            "duration": "1 round",
-            "description": "Make a [CON] [MARTIAL TEST]. If that roll is higher than any creature’s [TOUGHNESS] within a 6m cone in front of you. They recieve [CON]*d6 Sonic damage and are [DEAFENED] [HALF]."
+            "target": "[CONE] 7.5m",
+            "duration": "1 [ROUND]",
+            "description": "[CON] [MARTIAL TEST] vs. [TOUGHNESS]. On success: 2*[CON]*d6 sonic damage and [DEFAENED]. On fail: half damage."
         }
     ]
 }

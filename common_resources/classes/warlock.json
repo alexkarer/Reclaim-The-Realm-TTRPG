@@ -401,17 +401,17 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you are hit by an [ATTACK] you can use this Ability and when you do so your Entity partially manifsts and Shields you from all of the Damage."
+            "description": "When you are hit by an [ATTACK] you can use this Ability and reduce the damage by 5+[LEVEL]+[SPI]"
         },
         {
             "name": "Eldrtich Blast",
             "tags": [ "Class Technique (Warlock)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "2 [AP], 1-2 Corruption",
+            "cost": "2 [AP], 1 Corruption",
             "range": "21m",
             "target": "1 Creature",
-            "duration": "2 [ROUND]",
-            "description": "Make a [RANGED SPELL ATTACK] against your target, on a hit you deal ([SPI] + [LEVEL]/2) * d6 entity damage. If you spend 1 extra Corruption when using this ability if the [ATTACK] is higher than the creatures [TOUGHNESS] it is affected by one of the following effects for 2 [ROUND]: [CURSED I], [WEAKENED I], [VULNURABLE I]."
+            "duration": "1 [ROUND]",
+            "description": "[RANGED SPELL ATTACK] against [TOUGHNESS]. On hit: (1 + [SPI]/2) * d6 entity damage. On success: apply one of the follwing: [CURSED I], [WEAKENED I], [VULNURABLE I]."
         },
         {
             "name": "Corrupted Energy Reserve",
@@ -447,7 +447,7 @@
             "name": "Elemental Curse",
             "tags": [ "Class Technique (Warlock, Elemental Entity)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "0 [AP], 1 Corruption",
+            "cost": "[FREE], 1 Corruption",
             "range": "-",
             "target": "[SELF]",
             "duration": "2 + [LEVEL] [ROUND]",
@@ -457,7 +457,7 @@
             "name": "Life Steal",
             "tags": [ "Class Technique (Warlock, Cosmic Entity)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "cost": "0 [AP], 1 Corruption",
+            "cost": "[FREE], 1 Corruption",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",

@@ -33,7 +33,6 @@ ____________________________________________________________
 - remove unncessesarry core abilities
 
 **Smaller Mechanical Changes**
-- properly differentiate [FREE] vs 0 [AP]
 - Permanent Injuries should only trigger when reduced to 0 [HP] or at Deaths Door.
 - Spell Keywords need to be reworked
 - Rewrite perks that have poor ability rendering/formatting
@@ -55,7 +54,6 @@ ____________________________________________________________
 
 **Specific Changes**
 - Rename Hardness to Stability
-- change battle recovery to be less useful than resting.
 - adjust travel text since speed is constant.
 ___________________________________________________________
 ### Future Ideas / Nice to have:
@@ -154,3 +152,18 @@ Differnt way of gaining new abilities or features, the players can pick one and 
 - Have all Abilities in the Same Place but in separate columns 
 - Show encumbermance in equipment
 - passive Awareness
+
+**Tollbox Things to Add**
+- Chase!
+  - See Phone Notes
+- low character count combat.
+  - Basically Initiative starts as Usual but that just determines who gets turn priority.
+  - [MP] can only be used if gained through ability like Dash
+  - Initiative is based upon [EAP] used during the combat (Effective AP).
+  - The combatant with lowest [EAP] gets to go first, on tie is decided based upon turn priority.
+  - The EAP you get depend on AP used and maximum AP: 3 AP = AP used * 10, 4 AP = AP used * 15, 5 AP = AP used * 12, 6 AP = AP used * 10
+    - For creatures with more AP it gets a bit wonky
+    - If getting AP through abilities, just reduce current EAP by (AP gained) * 10, If you increase your base AP each TURN, instead reduce every 60 [EAP]
+    - 10 EAP is 1 second
+    - IF AP are reduced, EAP are added instead.
+  - Not recommended if more than 3 combatants are involved

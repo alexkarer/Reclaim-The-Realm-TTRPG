@@ -63,7 +63,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 Creature affected by [RESTRAINED I]",
             "duration": "[INSTANT]",
-            "description": "Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] on a success, the creature is now [PRONE] and [RESTRAINED II]."
+            "description": "[STR] [MARTIAL TEST] vs. [HARDNESS]. On success: knocked [PRONE] and apply [RESTRAINED II]."
         },
         {
             "name": "Meat Shield",
@@ -80,7 +80,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 [RESTRAINED I] or [RESTRAINED II] Creature",
             "duration": "[INSTANT]",
-            "description": "If you are hit by an [ATTACK] you can use this Ability. Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] and on a success the [ATTACK] hits the target creature instead."
+            "description": "If you are hit by an [ATTACK] you can use this Ability. [STR] [MARTIAL TEST] vs. [HARDNESS]. On success: [ATTACK] hits target instead.."
         },
         {
             "name": "Throw",
@@ -97,7 +97,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 [RESTRAINED I] Creature",
             "duration": "[INSTANT]",
-            "description": "You can throw a creature you are grappling at a destination of your choice within range. Make a [STR] [MARTIAL TEST] against the creature’s [HARDNESS] . On a success it flies a number of meters equal to twice your [STR] and on impact suffers physical damage equal to your [STR] which can’t be reduced by armor and the creature lands [PRONE].<br>If on the way it collidse against another creature and it’s [DODGE] is less than the [MARTIAL TEST] they collide and both take the damage from the impact and the thrown creature lands within the nearest free space of the collided creature. Additionally if the collided creature’s [HARDNESS] is also less than the [MARTIAL TEST] , then that creature is also [PRONE]"
+            "description": "[STR] [MARTIAL TEST] vs. [HARDNESS]. On success: it flies up to 2*[STR] m in a direction of your choice and recieve light [MARTIAL DAMAGE] physical and then is knocked [PPRONE]. If creature collides on the way with another creature, both creatures take damage and the target lands within 1.5m of the target."
         },
         {
             "name": "Charge",
@@ -114,7 +114,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[TURN]",
-            "description": "You double the [MP] you have availible this round but you must spend it all on moving closer to your target. If you can manage to move within melee range of the target you can then make a Weapon Attack or Unarmored Attack against that target, if the [ATTACK] was successful it deals extra physical damage equal to the amount of meters moved.",
+            "description": "You double the [MP] you have availible this round but you must spend it all on moving closer to your target. If you can manage to move within melee range of the target you can then make a Weapon Attack or Unarmored Attack against that target, if the [ATTACK] was successful it deals extra physical damage equal to every second meter moved directly towards the target, this is calculated using the shortest distance..",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You triple the [MP] instead."
@@ -133,11 +133,11 @@
                 "requiredPerks": [ ],
                 "otherRequirements": [ ]
             },
-            "cost": "3 [AP]",
+            "cost": "2 [AP]",
             "range": "3m (2 squares)",
             "target": "all creatures within range",
             "duration": "1 [ROUND]",
-            "description": "You target all creatures that are within 3m of you. Make a [CHA] [MARTIAL TEST] against the targets [WILLPOWER] , on a success those targets are [TAUNTED] until the end of your next turn."
+            "description": "[CHA] [MARTIAL TEST] vs. [WILLPOWER]. On success: Apply [TAUNTED]."
         },
         {
             "name": "Challenge",
@@ -155,7 +155,7 @@
             "range": "9m",
             "target": "1 creature",
             "duration": "1 [ROUND]",
-            "description": "Choose a creature within 9m, make a [CHA] [MARTIAL TEST] against the targets [WILLPOWER], on a success they are [TAUNTED] for 1 round."
+            "description": "[CHA] [MARTIAL TEST] vs. [WILLPOWER]. On success: Apply [TAUNTED]."
         },
         {
             "name": "You can take it!",
@@ -172,7 +172,7 @@
             "range": "12m (8 squares)",
             "target": "1 allied creature",
             "duration": "1 [ROUND]",
-            "description": "You can target 1 ally within range that can hear you and that has suffered damage this or the last round. That ally recieves [THP] equal to [MARTIAL LEVEL] + [CHA] for 1 round."
+            "description": "You can target 1 ally within range that can hear you and that has suffered damage this or the last [ROUND]. That ally recieves [THP] equal to [MARTIAL LEVEL] + [CHA] for 1 round."
         },
         {
             "name": "Go Get Em!",
@@ -191,7 +191,7 @@
             "range": "12m (8 squares)",
             "target": "1 allied creature",
             "duration": "1 [ROUND]",
-            "description": "You can target 1 ally within range that can hear you. Until the start of your next turn, that ally gains 3 extra [MP] and their next [ATTACK] gains a bonus equal to their half of ([MARTIAL LEVEL] + [CHA])."
+            "description": "You can target 1 ally within range that can hear you. Until the start of your next [TURN], that ally gains [CHA] extra [MP] and their next [ATTACK] gains a bonus equal to your [MARTIAL LEVEL]."
         }
     ],
     "fortitudeManeuvers": [
@@ -210,7 +210,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You quickly recover some wounds you suffered during battle and recover 1d6 + [CON] + [MARTIAL LEVEL] [HP]."
+            "description": "If you are below half your maximum [HP], recover: 1d6 + ([CON]/3) * d6 [HP]."
         },
         {
             "name": "Pushing the Limit",
@@ -250,7 +250,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "You study your opponents and ready yourself for their actions. You gain a bonus to your [HARDNESS], [DODGE], [TOUGHNESS] and [WILLPOWER] equal to the [AP] spent. Additionally this bonus applies to the [ATTACK] of any Opportunity Attack you make."
+            "description": "You gain a bonus to your [HARDNESS], [DODGE], [TOUGHNESS], [WILLPOWER] and any [ATTACK] made for an [OPPORTUNITY ATTACK] equal to twice the [AP] spent."
         },
         {
             "name": "Tag Team",
@@ -267,7 +267,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 allied creature",
             "duration": "[INSTANT]",
-            "description": "You can swap places with a friendly creature within meele range of you, the friendly creature has to be willing to do that. This movement does not provoke an Opportunity Attack."
+            "description": "Swap places with the target. This movement does not provoke an Opportunity Attack."
         },
         {
             "name": "Prepared Position",
@@ -303,7 +303,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "2 [ROUND]",
-            "description": "Make a Weapon Attack with a melee weapon, if the [ATTACK] was successful and exceeds or matches the target’s [TOUGHNESS] it is additionally [STUNNED I] for 2 rounds",
+            "description": "Make a Weapon Attack with a melee weapon, if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [STUNNED I].",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "Instead of applying [STUNNED I], the target is [STUNNED II]."
@@ -324,7 +324,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack with a melee weapon, if thathet [ATTACK] was successful and exceeds or matches the targets [HARDNESS] you have 2 choices:<br>You knock the target [PRONE].<br>Or you push the target a number of meters equal to your [STR] away from you.",
+            "description": "Make a Weapon Attack with a melee weapon, if [ATTACK] hits and exceeds or matches [HARDNESS] either knock the target [PRONE] or push it [STR] meters away from you..",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You apply both effects if the [ATTACK] exceedds the targets [HARDNESS]"
@@ -344,8 +344,8 @@
             "cost": "3 [AP]",
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
-            "duration": "1-2 [ROUND]",
-            "description": "Make a Weapon Attack, if the [ATTACK] was successful and exceeds or matchess the targets [HARDNESS] it is now [CRIPPLED I] for 2 rounds, if it was a [RANGED MARTIAL ATTACK] the duration is 1 round."
+            "duration": "2[ROUND]",
+            "description": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [HARDNESS] apply [CRIPPLED I]."
         },
         {
             "name": "Deep Cut",
@@ -362,7 +362,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "1-2 [ROUND]",
-            "description": "Make aWeapon Attack, if the [ATTACK] was successful and exceeds or matchess the targets [HARDNESS] it is recieves the [BLEEDING I] status effect for 2 rounds, if it was a [RANGED MARTIAL ATTACK] the duration is 1 round.",
+            "description": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [BLEEDING I].",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "The target is now affected by [BLEEDING II]"
@@ -381,7 +381,7 @@
             },
             "cost": "3 [AP]",
             "range": "[MELEE RANGE]",
-            "target": "2 creatures that are next to each other and within range",
+            "target": "2 creatures that are next to each other and both within range",
             "duration": "[INSTANT]",
             "description": "Make a Weapon Attack with a melee Weapon that targets both targets.",
             "maneuverPush": {
@@ -404,7 +404,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "When you have moved at least 3m in the direction of the target you can make a Thrown Weapon Weapon Attack with the range doubled for all ranges. Additionally your [ATTACK] deals extra damage equal to number of meters moved."
+            "description": "When you have moved at least 3m in the direction of the target you can make a Thrown Weapon Weapon Attack with the range doubled for all ranges. Additionally your [ATTACK] deals extra damage eequal to every second meter moved."
         },
         {
             "name": "Multishot",
@@ -421,7 +421,7 @@
             "range": "[WEAPON RANGE]",
             "target": "2 creatures within 4.5m of each other",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack with a Ranged Weapon against both targets with a -2 penalty to the [ATTACK] and damage."
+            "description": "Make a Weapon Attack with a Ranged Weapon with a -2 penalty to the [ATTACK] and damage."
         },
         {
             "name": "Parry",
@@ -438,7 +438,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you are hit by a [MELEE ATTACK] you can use this reaction. Make a [MELEE MARTIAL ATTACK] vs. [MELEE ATTACK] that targeted you. On success turn critical hit into regular hit, regular hit into glancing hit and glancing hit into critical miss.",
+            "description": "When you are hit by a [MELEE ATTACK] you can use this Ability. Make a [MELEE MARTIAL ATTACK] vs. [MELEE ATTACK] that targeted you. On success turn critical hit into regular hit, regular hit into glancing hit and glancing hit into critical miss.",
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can now parry any [ATTACK]."
