@@ -3,7 +3,7 @@ import { Ability } from '../shared/Ability';
 import JsonSpellList from './spells.json'
 
 type JsonSpells = typeof JsonSpellList;
-type JsonSpell = typeof JsonSpellList.elementalSpells.pyromancySpells[0];
+type JsonSpell = typeof JsonSpellList.elementalSpells.pyromancySpells[0] | typeof JsonSpellList.manipulationSpells.conjurationSpells[1];
 
 export class Spell extends Ability {
     components?: string
@@ -55,6 +55,7 @@ function mapToSpell(jsonSpell: JsonSpell): Spell {
     spell.target = jsonSpell.target;
     spell.duration = jsonSpell.duration;
     spell.description = jsonSpell.description;
+    spell.flavorText = jsonSpell.flavorText;
     spell.components = jsonSpell.components;
     spell.spellDifficulty = jsonSpell.spellDifficulty;
     spell.upCastingTheSpell = jsonSpell.upCastingTheSpell;

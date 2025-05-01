@@ -103,7 +103,8 @@
                         "range": "-",
                         "target": "self",
                         "duration": "[INSTANT]",
-                        "description": "When you hit a single creature with a [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] you can use this ability. When you use this ability you can add 2d6 phyiscal damage to the damage of the [ATTACK] for each Trickery used. You can not use more than two times your [LEVEL] of Trickery for a single [ATTACK]."
+                        "description": [ { "regularText": "When you hit a single creature with a [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] you can use this ability. When you use this ability you can add 2d6 phyiscal damage to the damage of the [ATTACK] for each Trickery used. You can not use more than two times your [LEVEL] of Trickery for a single [ATTACK].", "headerLine": null, "bulletPoints": null} ],
+                        "flavorText": [ ]
                     }
                 }
             ]
@@ -288,7 +289,8 @@
             "range": "-",
             "target": "self",
             "duration": "2 [ROUND]",
-            "description": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a stunning effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [STUNNED I], 4 for [STUNNED II], 8 for [STUNNED III]."
+            "description": [ { "regularText": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a stunning effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [STUNNED I], 4 for [STUNNED II], 8 for [STUNNED III].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Crippling Sneak Attack",
@@ -298,7 +300,8 @@
             "range": "-",
             "target": "self",
             "duration": "2 [ROUND]",
-            "description": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a crippling effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [CRIPPLED  I], 4 for [CRIPPLED II]."
+            "description": [ { "regularText": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a crippling effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [CRIPPLED  I], 4 for [CRIPPLED II].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Bleeding Sneak Attack",
@@ -308,7 +311,8 @@
             "range": "-",
             "target": "self",
             "duration": "2 [ROUND]",
-            "description": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a bleeding effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [BLEEDING I], 4 for [BLEEDING II], 8 for [BLEEDING III]."
+            "description": [ { "regularText": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a bleeding effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [BLEEDING I], 4 for [BLEEDING II], 8 for [BLEEDING III].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Weakening Sneak Attack",
@@ -318,7 +322,8 @@
             "range": "-",
             "target": "self",
             "duration": "2 [ROUND]",
-            "description": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a weakaning effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [WEAKENED  I], 4 for [WEAKENED  II], 8 for [WEAKENED III]."
+            "description": [ { "regularText": "You can use this ability when you use a Sneak Attack and instead of using Trickery to deal extra damage you can use some of them to deal a weakaning effect. The target must make a [TOUGHNESS] [SAVE] and the target recieves one of the following status effects depending on the amount of Trickery used: 2 for [WEAKENED  I], 4 for [WEAKENED  II], 8 for [WEAKENED III].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Flash of Inspiration",
@@ -328,7 +333,8 @@
             "range": "-",
             "target": "self",
             "duration": "[INSTANT]",
-            "description": "After having made a [ATTRIBUTE TEST] you can use your Trickery to add to the result, potentially turing a failure into a succes. For each Trickery used you can add d6 to the result."
+            "description": [ { "regularText": "After having made a [ATTRIBUTE TEST] you can use your Trickery to add to the result, potentially turing a failure into a succes. For each Trickery used you can add d6 to the result.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Lightning Reactions",
@@ -338,7 +344,8 @@
             "range": "-",
             "target": "self",
             "duration": "[INSTANT]",
-            "description": "After having made a [DODGE] [SAVE] you can use your Trickery to add to the result, potentially turing a failure into a succes. For each Trickery used you can add d3 to the result."
+            "description": [ { "regularText": "After having made a [DODGE] [SAVE] you can use your Trickery to add to the result, potentially turing a failure into a succes. For each Trickery used you can add d3 to the result.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Quick spurt",
@@ -348,7 +355,8 @@
             "range": "-",
             "target": "self",
             "duration": "[INSTANT]",
-            "description": "When using the Dash Ability you can use this Ability and gain d3 extra [MP]."
+            "description": [ { "regularText": "When using the Dash Ability you can use this Ability and gain d3 extra [MP].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Blending In",
@@ -358,7 +366,8 @@
             "range": "-",
             "target": "self",
             "duration": "[INSTANT]",
-            "description": "When using the Hide Ability it now costs 1 [AP] less (minimum 1)."
+            "description": [ { "regularText": "When using the Hide Ability it now costs 1 [AP] less (minimum 1)", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Efficient Maneuver",
@@ -368,7 +377,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you perform a Martial Maneuver instead of it using your [STAMINA] you can alternatively spend 2 Trickery per 1 [STAMINA] cost."
+            "description": [ { "regularText": "When you perform a Martial Maneuver instead of it using your [STAMINA] you can alternatively spend 2 Trickery per 1 [STAMINA] cost.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Identify Weakspot",
@@ -378,7 +388,8 @@
             "range": "1 creature",
             "target": "12m",
             "duration": "next attack this [ROUND]",
-            "description": "You identify the weaksots of your enemy and for the next [ATTACK] the crit threashold is reduced by 1 for each Trickery and you gain a d3 bonus on the [ATTACk] for each Trickery."
+            "description": [ { "regularText": "You identify the weaksots of your enemy and for the next [ATTACK] the crit threashold is reduced by 1 for each Trickery and you gain a d3 bonus on the [ATTACk] for each Trickery.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ]
 }

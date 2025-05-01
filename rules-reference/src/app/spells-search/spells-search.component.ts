@@ -105,7 +105,9 @@ export class SpellsSearchComponent {
     let text = this.currentFilterText.toLocaleLowerCase();
     return spell.name.toLocaleLowerCase().includes(text) || 
       spell.tags.find(tag => tag.toLocaleLowerCase().includes(text)) !== undefined ||
-      spell.description.toLocaleLowerCase().includes(text) ||
+      spell.description.find(desc => desc.regularText !== null && desc.regularText.toLocaleLowerCase().includes(text)) !== undefined ||
+      spell.description.find(desc => desc.headerLine !== null && desc.headerLine.toLocaleLowerCase().includes(text)) !== undefined ||
+      spell.description.find(desc => desc.bulletPoints !== null && desc.bulletPoints.find(bp => bp.toLocaleLowerCase().includes(text))) !== undefined ||
       spell.upCastingTheSpell?.toLowerCase().includes(text);
   }
 }

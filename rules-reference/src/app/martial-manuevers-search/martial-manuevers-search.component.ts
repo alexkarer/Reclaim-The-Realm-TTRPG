@@ -138,7 +138,7 @@ export class MartialManueversSearchComponent {
     let text = this.currentFilterText.toLocaleLowerCase();
     return m.name.toLocaleLowerCase().includes(text) || 
       m.tags.find(tag => tag.toLocaleLowerCase().includes(text)) !== undefined ||
-      m.description.toLocaleLowerCase().includes(text) ||
+      m.description.find(desc => desc.regularText?.toLocaleLowerCase().includes(text)) !== undefined ||
       m.maneuverPush?.pushingDescription.toLowerCase().includes(text);
   }
 }

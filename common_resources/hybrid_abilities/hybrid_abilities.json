@@ -9,7 +9,8 @@
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
             "cost": "1 [AP], 1 [ARCANA]", "range": "-", "target": "Weapon you are holding", "duration": "[SPI] rounds, [CONCENTRATION] 0",
-            "description": "You enchant one weapon that you are currently wielding. Each [MELEE MARTIAL ATTACK] made with this weapon deals 1d6 extra fire damage."
+            "description": [ { "regularText": "You enchant one weapon that you are currently wielding. Each [MELEE MARTIAL ATTACK] made with this weapon deals 1d6 extra fire damage.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Flying Slash",
@@ -20,7 +21,8 @@
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
             "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "[LINE] (9m) or [CONE] (4.5m)", "duration":"[INSTANT]",
-            "description": "Choose if you want to make a slahs in a line or a cone. Then make a Weapon [MELEE MARTIAL ATTACK] against the targets [DODGE] on a success they take regular damage of your attack."
+            "description": [ { "regularText": "Choose if you want to make a slahs in a line or a cone. Then make a Weapon [MELEE MARTIAL ATTACK] against the targets [DODGE] on a success they take regular damage of your attack.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": []
         },
         {
             "name": "Booming Strike",
@@ -31,7 +33,8 @@
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
             "cost": "3 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "one target, [CONE] (4.5m)", "duration":"[INSTANT]",
-            "description": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], the target suffers the attack as normal but in addition regardless if your [ATTACK] succeeds or not a sonic wave is unleashed in a 4.5m Cone that starts from the target. Make a [INT] [SPELL TEST] against the [TOUGHNESS] of the creatures inside the cone. On a success they recieve ([SPI]/2) * d8 sonic damage [HALF]."
+            "description": [ { "regularText": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], the target suffers the attack as normal but in addition regardless if your [ATTACK] succeeds or not a sonic wave is unleashed in a 4.5m Cone that starts from the target. Make a [INT] [SPELL TEST] against the [TOUGHNESS] of the creatures inside the cone. On a success they recieve ([SPI]/2) * d8 sonic damage.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ],
     "cosmicHybridAbilities": [
@@ -44,7 +47,8 @@
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
             "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "one target", "duration": "1 [ROUND]",
-            "description": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], You add 1d6 + ([SPI]/2) * d6 holy damage to the [ATTACK]. If the creature hit is evil and that [ATTACK] exceeds that creatures [TOUGHNESS], it becomes additionally [BLINDED] until the end of your next turn."
+            "description": [ { "regularText": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], You add 1d6 + ([SPI]/2) * d6 holy damage to the [ATTACK]. If the creature hit is evil and that [ATTACK] exceeds that creatures [TOUGHNESS], it becomes additionally [BLINDED] until the end of your next turn.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Unholy Smite",
@@ -55,7 +59,8 @@
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
             "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "one target", "duration": "1 [ROUND]",
-            "description": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], You add 1d6 + ([SPI]/2) * d6 holy damage to the [ATTACK]. If that [ATTACK] exceeds that creatures [TOUGHNESS] it becomes additionally [CRIPPLED I] until the end of your next turn."
+            "description": [ { "regularText": "Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK], You add 1d6 + ([SPI]/2) * d6 holy damage to the [ATTACK]. If that [ATTACK] exceeds that creatures [TOUGHNESS] it becomes additionally [CRIPPLED I] until the end of your next turn.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ],
     "manipulationHybridAbilities": [
@@ -68,7 +73,8 @@
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
             "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one target, [LINE]*", "duration": "[INSTANT]",
-            "description": "You launch your weapon at an enemy with the aid of Telekinetic Force. Make a Weapon [RANGED MARTIAL ATTACK] or [RANGED SPELL ATTACK] (your choice) against the Target. On hit the target recieves damage of your regular weapon damage + [SPI] . Additionally every enemy that is on a straight line from you and your target can be hit by the Weapons return path. Make a [INT] [SPELL TEST] against their [DODGE] on a success they recieve damage equal to the weapons base damage (in case of versatile weapon, the versitile damage is used)."
+            "description": [ { "regularText": "You launch your weapon at an enemy with the aid of Telekinetic Force. Make a Weapon [RANGED MARTIAL ATTACK] or [RANGED SPELL ATTACK] (your choice) against the Target. On hit the target recieves damage of your regular weapon damage + [SPI] . Additionally every enemy that is on a straight line from you and your target can be hit by the Weapons return path. Make a [INT] [SPELL TEST] against their [DODGE] on a success they recieve damage equal to the weapons base damage (in case of versatile weapon, the versitile damage is used).", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Teleport Strike",
@@ -79,7 +85,8 @@
                 "otherRequirements": [ "[SPELL LEVEL] and [MARTIAL LEVEL] > 0" ]
             },
             "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE] + 9m", "target": "one creature", "duration": "[INSTANT]",
-            "description": "You open a temporary portal to enable your Attacks to reach greater distance or hit from betterangles. Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] against a creature. The creature hit by the [ATTACK] recieves no benefit of cover and additionally the creature is unaware of the attack even if it can see the attacker."
+            "description": [ { "regularText": "You open a temporary portal to enable your Attacks to reach greater distance or hit from betterangles. Make a Weapon or Unarmed [MELEE MARTIAL ATTACK] or [RANGED MARTIAL ATTACK] against a creature. The creature hit by the [ATTACK] recieves no benefit of cover and additionally the creature is unaware of the attack even if it can see the attacker.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ]
 }

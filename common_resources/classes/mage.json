@@ -108,7 +108,8 @@
                         "range": "-",
                         "target": "[SELF]",
                         "duration": "[INSTANT]",
-                        "description": "You gain 1 + [LEVEL] / 4 (rounded down) Magical Charge."
+                        "description": [ { "regularText": "You gain 1 + [LEVEL] / 4 (rounded down) Magical Charge.", "headerLine": null, "bulletPoints": null} ],
+                        "flavorText": [ ]
                     }
                 }
             ]
@@ -134,9 +135,18 @@
                         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                         "cost": "3 [AP], 4 + 2 * [LEVEL] Magical Charge",
                         "range": "12m",
-                        "target": "2-4 targets",
+                        "target": "1-4 targets",
                         "duration": "[INSTANT]",
-                        "description": "You unleash a large amount of charged elemental energy at your enemies. The energy forms into 4 instances for each element and can be directed at a different target, however opposite elements can't be directed at the same target. (fire/water, earth/air). The effect depends on the chosen element and the damage is equal to d6 for every 2nd magical Charge used:<br><span class=\"fw-bold\">Fire: </span>Make a [RANGED SPELL ATTACK] and on a hit, deal fire damage and the target recieves [BURNING II].<br><span class=\"fw-bold\">Earth: </span>Make a [RANGED SPELL ATTACK] and on a hit deal physical damage and if it exceeds the targets [STABILITY] it is knocked [PRONE].<br><span class=\"fw-bold\">Water: </span>Make a [RANGED SPELL ATTACK] and on a hit deal physical damage and if it exceeds the targets [STABILITY] it is knocked [SPI] meters away.<br><span class=\"fw-bold\">Air: </span>Make a [RANGED SPELL ATTACK] and on a hit, deal lightning damage and if another target is within 3m it recieves also half that damage.<br>"
+                        "description": [ 
+                            { "regularText": "You unleash the following 4 Attacks at once and the damage is equal to the Magical Charge used divided by 2.:", "headerLine": null, "bulletPoints": null},
+                            { "regularText": null, "headerLine": null, "bulletPoints": [
+                                "Fire: [RANGED SPELL ATTACK]. On hit: deal fire damage and target recieves [BURNING I].",
+                                "Earth: [RANGED SPELL ATTACK] against [TOUGHNESS]. On hit: deal phyiscal damage. On success: Apply [STUNNED I].",
+                                "Water: [RANGED SPELL ATTACK] against [STABILITY]. On hit: deal cold damage. On Success: Apply [RESTRAINED I]",
+                                "Air: [RANGED SPELL ATTACK]. On hit: deal lightning damage and anothter target within 3m recievs half that damage."
+                            ]}
+                        ],
+                        "flavorText": [ { "regularText": "You gather the powers of the 4 Elements and unleash each individually at the target(s)", "headerLine": null, "bulletPoints": null} ]
                     }
                 }
             ]
@@ -174,7 +184,8 @@
                         "range": "9m",
                         "target": "multiple targets",
                         "duration": "[INSTANT]",
-                        "description": "trigger magical mishaps for every second magical charge used, roll a d8 for each magical mishap, 1: targets yourself, 2: targets random ally, 3-8: targets enemy."
+                        "description": [ { "regularText": "trigger magical mishaps for every second magical charge used, roll a d8 for each magical mishap, 1: targets yourself, 2: targets random ally, 3-8: targets enemy.", "headerLine": null, "bulletPoints": null } ],
+                        "flavorText": [ ]
                     }
                 }
             ]
@@ -255,7 +266,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "The next Spell that you cast that has exactly one Target (and not self) affects an additional different target. The magical charge cost is equal to half the [ARCANA] Cost of the Spell. (rounded up)."
+            "description": [ { "regularText": "The next Spell that you cast that has exactly one Target (and not self) affects an additional different target. The magical charge cost is equal to half the [ARCANA] Cost of the Spell. (rounded up).", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Quickened Cast",
@@ -265,7 +277,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You can reduce the [AP] cost of the next Spell that you cast by 1 (to a minimum of 1). The magical charge cost is equal to half the [ARCANA] Cost of the Spell. (rounded up)."
+            "description": [ { "regularText": "You can reduce the [AP] cost of the next Spell that you cast by 1 (to a minimum of 1). The magical charge cost is equal to half the [ARCANA] Cost of the Spell. (rounded up)", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Efficient Cast",
@@ -275,7 +288,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You can reduce the [ARCANA] consumed by the next Spell that you cast by 1 (to a minimum of 1). For every 3 additional magical Charge used, the consumption is reduced by 1 further (still minimum of 1)."
+            "description": [ { "regularText": "You can reduce the [ARCANA] consumed by the next Spell that you cast by 1 (to a minimum of 1). For every 3 additional magical Charge used, the consumption is reduced by 1 further (still minimum of 1).", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Devestating Cast",
@@ -285,7 +299,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "The next spell that you cast has all it's damage dice maximized. The magical charge cost is equal to the [ARCANA] Cost of the Spell. (rounded up)."
+            "description": [ { "regularText": "The next spell that you cast has all it's damage dice maximized. The magical charge cost is equal to the [ARCANA] Cost of the Spell. (rounded up).", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Safe cast",
@@ -295,7 +310,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "For the next spell that you cast, you automatically succed the [SPELL CAST TEST]. The magical charge cost is equal to half the [ARCANA] Cost of the Spell. (rounded up)"
+            "description": [ { "regularText": "For the next spell that you cast, you automatically succed the [SPELL CAST TEST]. The magical charge cost is equal to half the [ARCANA] Cost of the Spell. (rounded up)", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Distrupt Spell",
@@ -305,7 +321,8 @@
             "range": "9m",
             "target": "1 creature making a [SPELL CAST TEST]",
             "duration": "[INSTANT]",
-            "description": "You attempt to distrupt other creatures attempting to cast spells. When the creature makes a [SPELL CAST TEST] subtract the magical charge cost of this ability from the result."
+            "description": [ { "regularText": "You attempt to distrupt other creatures attempting to cast spells. When the creature makes a [SPELL CAST TEST] subtract the magical charge cost of this ability from the result.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Elemental Bolt",
@@ -315,7 +332,8 @@
             "range": "18m",
             "target": "1 target",
             "duration": "[INSTANT]",
-            "description": "Hurl an elemental Bolt at an enemy. Make a [RANGED SPELL ATTACK] and on a hit deal acid, cold, fire, lightning or thunder damage (choose one) equal to 1d8 + [SPI]. For each magical charge used, the damage increases by 1d8."
+            "description": [ { "regularText": "Hurl an elemental Bolt at an enemy. Make a [RANGED SPELL ATTACK] and on a hit deal acid, cold, fire, lightning or thunder damage (choose one) equal to 1d8 + [SPI]. For each magical charge used, the damage increases by 1d8.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         }
     ]
 }

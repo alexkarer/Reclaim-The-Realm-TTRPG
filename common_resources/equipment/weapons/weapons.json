@@ -7,7 +7,7 @@
         "weightInGram": 500,
         "type": "Melee Weapon",
         "description": [
-            { "regularText": "When making a [MARTIAL MELEE ATTACK] with this weapon, the unmodified roll required for scoring a critical hit is lowered by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
+            { "regularText": "When making a [MELEE MARTIAL ATTACK] with this weapon, the unmodified roll required for scoring a critical hit is lowered by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "damage": "light [MARTIAL DAMAGE]"
     },
@@ -19,7 +19,7 @@
         "weightInGram": 3000,
         "type": "Ranged Weapon",
         "description": [
-                { "regularText": "The crossbow requires two hands to wield effecively has ranges of (25/50/100) and making a Weapon Attack only costs 1 [AP] but after each [ATTACK] the Weapon has to be reloaded for 2 [AP] before one can shoot with it again. This Weapon consumes Ammunition for each [MARTIAL RANGED ATTACK] made with this Weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
+                { "regularText": "The crossbow requires two hands to wield effecively has ranges of (25/50/100) and making a Weapon Attack only costs 1 [AP] but after each [ATTACK] the Weapon has to be reloaded for 2 [AP] before one can shoot with it again. This Weapon consumes Ammunition for each [RANGED MARTIAL ATTACK] made with this Weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "properties": [ "two-handed", "ranged(20/40/80)", "loading(1, 2 [AP])" ],
         "damage": "2d6"
@@ -32,7 +32,7 @@
         "weightInGram": 1500,
         "type": "Melee Weapon",
         "description": [
-                { "regularText": "It deals medium [MARTIAL DAMGE] when wielded with one hand but can also be wielded with two hands to deal heavy [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null }
+                { "regularText": "It deals medium [MARTIAL DAMAGE] when wielded with one hand but can also be wielded with two hands to deal heavy [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "damage": "medium [MARTIAL DAMAGE]"
     },
@@ -44,7 +44,7 @@
         "weightInGram": 4000,
         "type": "Melee Weapon",
         "description": [
-                { "regularText": "Requires two hands to be wielded effectively. Any time you make a [MARTIAL MELEE ATTACK] with this Weapon your [MELEE RANGE] is increased by 1.5m", "headerLine": null, "bulletPoints": null, "ability": null }
+                { "regularText": "Requires two hands to be wielded effectively. Any time you make a [MELEE MARTIAL ATTACK] with this Weapon your [MELEE RANGE] is increased by 1.5m", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "damage": "heavy [MARTIAL DAMAGE]"
     },
@@ -56,7 +56,7 @@
         "weightInGram": 3000,
         "type": "Melee Weapon",
         "description": [
-                { "regularText": "Requires two hands to be wielded effectively. When making a [MARTIAL MELEE ATTACK] with this Weapon you can decrease your [ATTACK] by -2 and treat your [STR] 1 higher for the purposes of determening your [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null }
+                { "regularText": "Requires two hands to be wielded effectively. When making a [MELEE MARTIAL ATTACK] with this Weapon you can decrease your [ATTACK] by -2 and treat your [STR] 1 higher for the purposes of determening your [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "damage": "heavy [MARTIAL DAMAGE]"
     },
@@ -80,7 +80,7 @@
         "weightInGram": 1500,
         "type": "Ranged Weapon",
         "description": [
-                { "regularText": "This weapon has a range of (30/60/120) and requires two-hands to be wielded effectively. This Weapon consumes Ammunition for each [MARTIAL RANGED ATTACK] made with this Weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
+                { "regularText": "This weapon has a range of (30/60/120) and requires two-hands to be wielded effectively. This Weapon consumes Ammunition for each [RANGED MARTIAL ATTACK] made with this Weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "damage": "medium [MARTIAL DAMAGE]"
     }

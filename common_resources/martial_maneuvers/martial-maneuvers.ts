@@ -5,6 +5,7 @@ import basicManeuversJson from './basic_maneuvers.json';
 import advancedManeuversJson from './advanced_maneuvers.json';
 import masterManeuversJson from './master_maneuvers.json';
 import transcendentManeuversJson from './transcendent_maneuvers.json';
+import { TextElement, TextElementWithoutAbility } from '../shared/TextElements';
 
 export class MartialManeuver extends Ability {
     maneuverPush?: {
@@ -94,7 +95,8 @@ function mapJsonMartialManeuverToType(jsonManeuver: {
         range: string;
         target: string;
         duration: string;
-        description: string;
+        description: TextElementWithoutAbility[],
+        flavorText: TextElementWithoutAbility[],
         maneuverPush?: {
             pushingExtraCost: string;
             pushingDescription: string;
@@ -110,6 +112,7 @@ function mapJsonMartialManeuverToType(jsonManeuver: {
     martialManeuver.target = jsonManeuver.target;
     martialManeuver.duration = jsonManeuver.duration;
     martialManeuver.description = jsonManeuver.description;
+    martialManeuver.flavorText = jsonManeuver.flavorText;
     martialManeuver.maneuverPush = jsonManeuver.maneuverPush;
     return martialManeuver;
 }

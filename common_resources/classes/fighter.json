@@ -110,7 +110,8 @@
                         "range": "12m",
                         "target": "1 creature",
                         "duration": "until end of combat or the creature is reduced to 0 [HP].",
-                        "description": "You designate the targeted creature as a priority target, each time you or your allies target the priority target with an ability, they gain a bonus any relevant [D20 TEST] equal to half your [INT] (rounded down). You can only have 1 priority target simultaneously. As soon as the priority target is reduced to 0 [HP], you gain Focus equal to the [LEVEL] of the creature (rounded up)."
+                        "description": [ { "regularText": "You designate the targeted creature as a priority target, each time you or your allies target the priority target with an ability, they gain a bonus any relevant [D20 TEST] equal to half your [INT] (rounded down). You can only have 1 priority target simultaneously. As soon as the priority target is reduced to 0 [HP], you gain Focus equal to the [LEVEL] of the creature (rounded up).", "headerLine": null, "bulletPoints": null } ],
+                        "flavorText": [ ]
                     }
                 }
             ]
@@ -288,7 +289,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you perform a Martial Maneuver instead of it using your [STAMINA] you can alternatively spend 2 Focus per 1 [STAMINA] cost."
+            "description": [ { "regularText": "When you perform a Martial Maneuver instead of it using your [STAMINA] you can alternatively spend 2 Focus per 1 [STAMINA] cost.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Optimal Deflection",
@@ -298,7 +300,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you are hit by an [ATTACK], you can use this Class Technique. If you are wearing a Shield, you can increase the Shield Block Test by +1 for each Focus you spend. Or alternativly you can improve the phyiscial resistance provided by the armor by 2 for each Focus you spend against that [ATTACK]."
+            "description": [ { "regularText": "When you are hit by an [ATTACK], you can use this Class Technique. If you are wearing a Shield, you can increase the Shield Block Test by +1 for each Focus you spend. Or alternativly you can improve the phyiscial resistance provided by the armor by 2 for each Focus you spend against that [ATTACK].", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Deadly Strike",
@@ -308,7 +311,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "After successfully making an [ATTACK] you can deal 1d8 bonus physical damage per Focus spent."
+            "description": [ { "regularText": "After successfully making an [ATTACK] you can deal 1d8 bonus physical damage per Focus spent.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Precision Strike",
@@ -318,7 +322,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "After making an [ATTACK] you can use this Class Technique and you can add 1d6 to the [ATTACK] roll for each Focus spent."
+            "description": [ { "regularText": "After making an [ATTACK] you can use this Class Technique and you can add 1d6 to the [ATTACK] roll for each Focus spent.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Pain Suppression",
@@ -328,7 +333,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "until the end of your [TURN]",
-            "description": "You can use this Class Technique at the start of the [TURN] even if you otherwise couldn't act, unless you are [UNCONCIOUS]. You can suppress a single Status Effect of your choice except [RESTRAINED I] and [RESTRAINED II] and it's effect will seize for the duration of the ability. If you spend 1 Focus you an suppress a Tier I status effect, 2 Focus a Tier II status effect and 3 Focus a Tier III status effect. Keep in mind you can only suppress 1 instance of a Status Effect meaning that if the same status affect has 2 instances affecting you, you will have to use this ability twice against both status effects for it to have an effect."
+            "description": [ { "regularText": "You can use this Class Technique at the start of the [TURN] even if you otherwise couldn't act, unless you are [UNCONCIOUS]. You can suppress a single Status Effect of your choice except [RESTRAINED I] and [RESTRAINED II] and it's effect will seize for the duration of the ability. If you spend 1 Focus you an suppress a Tier I status effect, 2 Focus a Tier II status effect and 3 Focus a Tier III status effect. Keep in mind you can only suppress 1 instance of a Status Effect meaning that if the same status affect has 2 instances affecting you, you will have to use this ability twice against both status effects for it to have an effect.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Combined Maneuver",
@@ -338,7 +344,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you use a Martial Maneuver that includes a Weapon Attack, you can use a different Basic Martial Maneuver as part of the same Weapon Attack.<br>(Explanation: still only 1 Weapon Attack is made however you could use crippling strike and deep cut simultaneously and if the attack is successfuly the target is bleeding and crippled at the same time)."
+            "description": [ { "regularText": "When you use a Martial Maneuver that includes a Weapon Attack, you can use a different Basic Martial Maneuver as part of the same Weapon Attack.<br>(Explanation: still only 1 Weapon Attack is made however you could use crippling strike and deep cut simultaneously and if the attack is successfuly the target is bleeding and crippled at the same time).", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Masterful Parry",
@@ -348,7 +355,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you are hit by a [MELEE ATTACK] you can use this Ability. You turn any hit into a miss."
+            "description": [ { "regularText": "When you are hit by a [MELEE ATTACK] you can use this Ability. You turn any hit into a miss.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Target Guidance",
@@ -358,7 +366,8 @@
             "range": "6m",
             "target": "1 allied creature",
             "duration": "1 [ROUND]",
-            "description": "Select 1 allied creature, each time that creature makes an [ATTACK] against your priority target, that [ATTACK] has [ADVANTAGE]."
+            "description": [ { "regularText": "Select 1 allied creature, each time that creature makes an [ATTACK] against your priority target, that [ATTACK] has [ADVANTAGE].", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Bring it Down!",
@@ -368,7 +377,8 @@
             "range": "-",
             "target": "priority target",
             "duration": "1 [ROUND]",
-            "description": "Any time an [ATTACK] hits your priority target, it recieves 1d6 + [INT] extra damage."
+            "description": [ { "regularText": "Any time an [ATTACK] hits your priority target, it recieves 1d6 + [INT] extra damage.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         }
     ]
 }

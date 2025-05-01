@@ -143,7 +143,8 @@
                         "range": "6m",
                         "target": "one or more friendly creatures",
                         "duration": "1 [ROUND]",
-                        "description": "A number of friendly creatures up to half your [CHA] (rounded down, minimum 1) recieve [THP] equal to your [SPI] and they recieve [BLESS I]"
+                        "description": [ { "regularText": "A number of friendly creatures up to half your [CHA] (rounded down, minimum 1) recieve [THP] equal to your [SPI] and they recieve [BLESS I]", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                        "flavorText": [ ]
                     }
                 },
                 {
@@ -158,7 +159,8 @@
                         "range": "9m",
                         "target": "one or more creatures",
                         "duration": "1 [ROUND]",
-                        "description": "You can target up to half your [CHA] , minimum 1 (rounded down) creatures. Make a [SPI] [SPELL TEST] against their [WILLPOWER] on a success they recieve unholy damage equal to your [SPI] and the [BANE I] status effect."
+                        "description": [ { "regularText": "You can target up to half your [CHA] , minimum 1 (rounded down) creatures. Make a [SPI] [SPELL TEST] against their [WILLPOWER] on a success they recieve unholy damage equal to your [SPI] and the [BANE I] status effect.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                        "flavorText": [ ]
                     }
                 }
             ]
@@ -252,7 +254,7 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "The Priest is able to perform minor miracles as long as they keep their faith. These miracles can’t generally be used in combat and take concentration and a clear mind to perform. They gain the following ability:",
+                    "regularText": "The Priest is able to perform minor miracles as long as they keep their faith. They gain the following ability:",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -265,11 +267,21 @@
                         "name": "Minor Miracle",
                         "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 2" ],
                         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-                        "cost": "1 minute",
+                        "cost": "3 [AP]",
                         "range": "varies",
                         "target": "varies",
                         "duration": "varies",
-                        "description": "You invoke a minor miracle, choose one of the effects below:<br>Provide tasty food and drink for up to 20 people.<br>Heal a crature up to full [HP].<br>End all Tier 1 and 2 negative status effects affecting a Crature.<br>Restore 2 Stamina to all party members.<br>Alternative Miracle effect agreed if agreed by the GM.<br><br>After usage, Miracle recovery [DT] is 25."
+                        "description": [ 
+                            { "regularText": "You invoke a minor Miracle, choose one of the effects below:", "headerLine": null, "bulletPoints": null, "ability": null },
+                            { "regularText": null, "headerLine": null, "bulletPoints": [
+                                "Provide tasty food and drink for up to 20 people. This food will expire after in 24 hours.",
+                                "Heal a creature within 5m up to full [HP].",
+                                "End all Tier 1 and 2 negative status effects affecting a Crature.",
+                                "Restore 2 [STAMINA] to all party members.",
+                                "Alternative Miracle effect agreed if agreed by the GM."
+                            ], "ability": null },
+                            { "regularText": "After usage, Miracle recovery [DT] is 25.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                        "flavorText": [ ]
                     }
                 },
                 {
@@ -364,11 +376,21 @@
                         "name": "Miracle",
                         "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 3" ],
                         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-                        "cost": "1 minute",
+                        "cost": "4 [AP]",
                         "range": "varies",
                         "target": "varies",
                         "duration": "varies",
-                        "description": "You invoke a miracle, choose one of the effects below:<br>Provide tasty food and drink for a village.<br>Heal your party to full [HP].<br>End all negative status effects affecting a Creature.<br>Restore 5 [STAMINA] to all party members.<br>Alternative Miracle effect agreed if agreed by the GM.<br><br>After usage, Miracle recovery [DT] is 50.."
+                        "description": [ 
+                            { "regularText": "You invoke a minor Miracle, choose one of the effects below:", "headerLine": null, "bulletPoints": null, "ability": null },
+                            { "regularText": null, "headerLine": null, "bulletPoints": [
+                                "Provide tasty food and drink for a village. This food will expire after in 24 hours.",
+                                "Heal 2 creatures within 5m [HP].",
+                                "End all negative status effects affecting a Creature.",
+                                "Restore 5 [STAMINA] to all party members.",
+                                "Alternative Miracle effect agreed if agreed by the GM."
+                            ], "ability": null },
+                            { "regularText": "After usage, Miracle recovery [DT] is 50.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                        "flavorText": [ ]
                     }
                 }
             ]
@@ -435,7 +457,18 @@
                         "range": "varies",
                         "target": "varies",
                         "duration": "varies",
-                        "description": "You invoke a miracle, choose one of the effects below:<br>Provide tasty food and drink for a town.<br>Restore a creature to life which has died within the last hour.<br>Restore all [STAMINA] of your party.<br>Summon a cosmic to assist you<br>Alternative Miracle effect agreed if agreed by the GM.<br><br>After usage, Miracle recovery [DT] is 100."
+                        "description": [ 
+                            { "regularText": "You invoke a minor Miracle, choose one of the effects below:", "headerLine": null, "bulletPoints": null, "ability": null },
+                            { "regularText": null, "headerLine": null, "bulletPoints": [
+                                "Provide tasty food and drink for a town. This food will expire after in 24 hours.",
+                                "Restore a creature to life which has died within the last hour.",
+                                "Heal your party to full [HP].",
+                                "Summon a cosmic to assist you.",
+                                "Restore all [STAMINA] of your party.",
+                                "Alternative Miracle effect agreed if agreed by the GM."
+                            ], "ability": null },
+                            { "regularText": "After usage, Miracle recovery [DT] is 100.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                        "flavorText": [ ]
                     }
                 }
             ]
@@ -479,7 +512,8 @@
             "range": "-",
             "target": "one ally that was targeted by a [SPELL ABILITY]",
             "duration": "[SPI]/2, min 1 [ROUND]",
-            "description": "One ally that was targeted with a [SPELL ABILITY] that you cast this turn recieves [HEALING I]."
+            "description": [ { "regularText": "One ally that was targeted with a [SPELL ABILITY] that you cast this turn recieves [HEALING I].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Holy Strike",
@@ -489,7 +523,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you hit a target with an [ATTTACK] you can deal 2d6 extra holy damage. For every additional AD(3-) used, you can increase the holy damage by a further d6."
+            "description": [ { "regularText": "When you hit a target with an [ATTTACK] you can deal 2d6 extra holy damage. For every additional AD(3-) used, you can increase the holy damage by a further d6.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Mercy of the Gods",
@@ -499,7 +534,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "For your next [SPELL ABILITY] that you cast, that heals you can maximize all dice."
+            "description": [ { "regularText": "For your next [SPELL ABILITY] that you cast, that heals you can maximize all dice.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Rejuvination",
@@ -509,7 +545,8 @@
             "range": "6m",
             "target": "one ally that is [UNCONCIOUS]",
             "duration": "[INSTANT]",
-            "description": "That ally regains 1 [HP] and can immediatly stand up from being [PRONE] if they are able to move."
+            "description": [ { "regularText": "That ally regains 1 [HP] and can immediatly stand up from being [PRONE] if they are able to move.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Holy Fire",
@@ -519,7 +556,8 @@
             "range": "9m",
             "target": "evil creatures with range",
             "duration": "[INSTANT]",
-            "description": "[SPI] [SPELL TEST] vs. [DODGE]. On success: [SPI]*d6 holy damage. On fail: half damage."
+            "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [DODGE]. On success: [SPI]*d6 holy damage. On fail: half damage.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Unholy Strike",
@@ -529,7 +567,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you hit a target with an [ATTTACK] you can deal 2d6 extra unholy damage. For every additional AD(4+) used, you can increase the unholy damage by a further d6."
+            "description": [ { "regularText": "When you hit a target with an [ATTTACK] you can deal 2d6 extra unholy damage. For every additional AD(4+) used, you can increase the unholy damage by a further d6.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Unholy Fire",
@@ -539,7 +578,8 @@
             "range": "12m",
             "target": "[SPHERE] 3m",
             "duration": "[INSTANT]",
-            "description": "[SPI] [SPELL TEST] vs. [DODGE]. On success: [SPI]*d6 unholy damage. On fail: half damage."
+            "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [DODGE]. On success: [SPI]*d6 unholy damage. On fail: half damage.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Divine Clense",
@@ -549,7 +589,8 @@
             "range": "12m",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "You can remove one Tier I status effect affecting the Target. When this ability is used with 4 matching AD Tier 2 Status Effects can be removed. When used with 6 matching AD Tier 3 status effects can be removed."
+            "description": [ { "regularText": "You can remove one Tier I status effect affecting the Target. When this ability is used with 4 matching AD Tier 2 Status Effects can be removed. When used with 6 matching AD Tier 3 status effects can be removed.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Protection",
@@ -559,7 +600,8 @@
             "range": "9m",
             "target": "1 ally",
             "duration": "[INSTANT]",
-            "description": "If an ally within range recieves damage you can use this Ability and reduce the damage by [SPI] + [LEVEL]."
+            "description": [ { "regularText": "If an ally within range recieves damage you can use this Ability and reduce the damage by [SPI] + [LEVEL].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Certainty",
@@ -569,7 +611,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [TURN]",
-            "description": "For the next [D20 TEST] you make don’t roll a dice, instead it is a unmodified roll of 10. When this ability is used with 3 matching AD the roll becomes a 16 and when used with 4 matching AD the roll becomes a 20."
+            "description": [ { "regularText": "For the next [D20 TEST] you make don’t roll a dice, instead it is a unmodified roll of 10. When this ability is used with 3 matching AD the roll becomes a 16 and when used with 4 matching AD the roll becomes a 20.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Sanctified Shackles",
@@ -579,7 +622,8 @@
             "range": "9m",
             "target": "one creature",
             "duration": "[SPI]/2 [ROUND]",
-            "description": "[SPI] [SPELL TEST] vs. [STABILITY] or [DODGE] (target’s choice). On success: apply [RESTRAINED I]. If targeting a chaotic creature you have [ADVANTAGE] on the Test"
+            "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [STABILITY] or [DODGE] (target’s choice). On success: apply [RESTRAINED I]. If targeting a chaotic creature you have [ADVANTAGE] on the Test", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Unyielding",
@@ -589,7 +633,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you fail a [SAVE] you can use this Ability and add your [LEVEL] to the result potentially turning it into a success."
+            "description": [ { "regularText": "When you fail a [SAVE] you can use this Ability and add your [LEVEL] to the result potentially turning it into a success.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Self Restoration",
@@ -599,7 +644,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "Gain [THP] equal to [SPI] + [LEVEL]."
+            "description": [ { "regularText": "Gain [THP] equal to [SPI] + [LEVEL].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Second Chance",
@@ -609,7 +655,8 @@
             "range": "6m",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "After a creature made a [D20 TEST] you can use this Ability and the creature must reroll the test and take the second result."
+            "description": [ { "regularText": "After a creature made a [D20 TEST] you can use this Ability and the creature must reroll the test and take the second result.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "flavorText": [ ]
         }
     ]
 }

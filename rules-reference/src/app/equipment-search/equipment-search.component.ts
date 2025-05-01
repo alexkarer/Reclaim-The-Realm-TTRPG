@@ -75,7 +75,7 @@ export class EquipmentSearchComponent {
                     d.bulletPoints.filter(bp => bp.toLocaleLowerCase().includes(text)).length >= 0
                 ) ||
                 d.ability?.name.toLocaleLowerCase().includes(text) ||
-                d.ability?.description.toLocaleLowerCase().includes(text)
+                d.ability?.description.find(desc => desc.regularText?.toLocaleLowerCase().includes(text)) !== undefined
             )?.length > 0;
     }
 }

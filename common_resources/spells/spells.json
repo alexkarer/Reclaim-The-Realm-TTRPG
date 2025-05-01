@@ -10,7 +10,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "-", "target": "[CONE] (4.5m)", "duration": "[INSTANT]",
-                "description": "[CON] [SPELL TEST] vs. [DODGE]. On success: recieve 2d8 + ([SPI] / 4) * d8 fire damage. On fail: half damage.",
+                "description": [ { "regularText": "[CON] [SPELL TEST] vs. [DODGE]. On success: recieve 2d8 + ([SPI] / 4) * d8 fire damage. On fail: half damage.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "Like a Fire Dragon you breath fire upon your foes", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you deal an additional 1d8 + ([SPI] / 4) * d8 fire damage. Additionally every increase of 2 increases the Cone size by 1.5m."
             },
@@ -23,7 +24,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 [AP], 1 [ARCANA]", "range": "9m", "target": "1 creature", "duration": "[SPI] [ROUND]",
-                "description": "Apply [BURNING I] to the target.",
+                "description": [ { "regularText": "Apply [BURNING I] to the target.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "The Fire Element is always eager to show itself.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 3, the target instead suffers the [BURNING II] Status Effect and if you increase it by 6, the effect becomes [BURNING III]."
             },
@@ -36,7 +38,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "4 [AP], 4 [ARCANA]", "range": "30m", "target": "[SPHERE] 3m", "duration": "[INSTANT]",
-                "description": "[INT] [SPELL TEST] vs. [DODGE]. On success: 6d6 + [SPI] * d6 fire damage. On fail: half damage",
+                "description": [ { "regularText": "[INT] [SPELL TEST] vs. [DODGE]. On success: 6d6 + [SPI] * d6 fire damage. On fail: half damage", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "A sphere of Fire errupts engulfing all within.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase of 2, improve the radius increases by 1.5m and the damage by 2d6 + ([SPI] / 4) * d6."
             },
@@ -49,7 +52,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "4 [AP], 10 [ARCANA]", "range": "21m", "target": "[SPHERE] 4.5m", "duration": "3 [ROUND]",
-                "description": "Initially: [INT] [SPELL TEST] vs. [DODGE]. On success: (10 + [SPI]) * d6 fire damage and (5 + [SPI]/2) * d6 physical damage. On fail: half damage. For remaining Duration: [AREA EFFECT] recieve 5d6 + [SPI]/2 *d6 fire damage, area counts as difficult Terrain.",
+                "description": [ { "regularText": "Initially: [INT] [SPELL TEST] vs. [DODGE]. On success: (10 + [SPI]) * d6 fire damage and (5 + [SPI]/2) * d6 physical damage. On fail: half damage. For remaining Duration: [AREA EFFECT] recieve 5d6 + [SPI]/2 *d6 fire damage, area counts as difficult Terrain.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You harness the Energy from the ground and create your miniture vulcanic erruption.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 15,
                     "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 3 and for every increase of 3, improve the radius by 1.5m and the duration by 1 [ROUND]."
             }
@@ -64,7 +68,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "[REACTION], 1 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "1 [INSTANT]",
-                "description": "When you are hit by an [ATTACK] you can use this Ability, the damage of the [ATTACK] is reduced by 2*[SPI] and no additional effects are applied.",
+                "description": [ { "regularText": "hen you are hit by an [ATTACK] you can use this Ability, the damage of the [ATTACK] is reduced by 2*[SPI] and no additional effects are applied.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You call upon the nearby stone/earth to protect you.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage is reduced 2*[SPI] further."
             },
@@ -77,7 +82,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "1 creature", "duration": "2 [ROUND]",
-                "description": "[MELEE SPELL ATTACK] vs. [TOUGHNESS]. On Hit: 2d12 + ([SPI] / 4) * d12 poison damage. On Success: Apply [WEAKENED I].",
+                "description": [ { "regularText": "[MELEE SPELL ATTACK] vs. [TOUGHNESS]. On Hit: 2d12 + ([SPI] / 4) * d12 poison damage. On Success: Apply [WEAKENED I].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage is increased by  1d12 + ([SPI] / 4) * d12."
             },
@@ -90,7 +96,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "6 [AP], 20 [ARCANA]", "range": "100m", "target": "[SPHERE] 100m", "duration": "[SPI] minutes",
-                "description": "TODO.",
+                "description": [ { "regularText": "TODO", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ],
                 "spellDifficulty": 25,
                 "upCastingTheSpell": "-"
             }
@@ -105,7 +112,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "-", "target": "[LINE] (9m x 1.5m)", "duration": "[INSTANT]",
-                "description": "[INT] [SPELL TEST] vs. [DODGE]. On success: 2d8 + ([SPI] / 4) * d8 acid damage. On fail: half damage",
+                "description": [ { "regularText": "[INT] [SPELL TEST] vs. [DODGE]. On success: 2d8 + ([SPI] / 4) * d8 acid damage. On fail: half damage", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You spray a stream of acide upon your foes.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you deal an additional 1d8 + ([SPI] / 4) * d8 acid damage."
             },
@@ -118,7 +126,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "[SPHERE] 3m", "duration": "[SPI] [ROUND]",
-                "description": "Initially: [INT] [SPELL TEST] vs. [DODGE]. On Success: knocked [PRONE]. For Duration: [AREA EFFECT] d6 cold damage, area counts as difficult Terrain.",
+                "description": [ { "regularText": "Initially: [INT] [SPELL TEST] vs. [DODGE]. On Success: knocked [PRONE]. For Duration: [AREA EFFECT] d6 cold damage, area counts as difficult Terrain.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You freeze part of a floor and make it quite difficult to traverse.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase, the sphere increases by 3m, the range by 6m and the damage by 2d6"
             },
@@ -131,7 +140,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "4 [AP], 4 [ARCANA]", "range": "15m", "target": "[SPHERE] 6m", "duration": "[SPI] [ROUND]",
-                "description": "For Duration: [AREA EFFECT]: 4d6 + [SPI]/2 * d6 cold damage, area counts as difficult Terrain and gives [PARTIAL CONCEALMENT].",
+                "description": [ { "regularText": "For Duration: [AREA EFFECT]: 4d6 + [SPI]/2 * d6 cold damage, area counts as difficult Terrain and gives [PARTIAL CONCEALMENT].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You call upon the Elements to unleash a raging Blizzard on a location.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by two and for every increase of 2, improve the range by 3m, the radius by 1.5m and the damage by 1d6 + [SPI]/4 * d6"
             }
@@ -146,7 +156,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "18m", "target": "1 creature*", "duration": "[INSTANT]",
-                "description": "[RANGED SPELL ATTACK]. On hit: 4d6 electric damage and can target a diffierent creature within 6m of target. Can repeat up to [SPI]/2 times.",
+                "description": [ { "regularText": "[RANGED SPELL ATTACK]. On hit: 4d6 electric damage and can target a diffierent creature within 6m of target. Can repeat up to [SPI]/2 times.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "Lightning arcs away from you and jumps from opponent to opponent.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase deal an additional 1d6 electric damage and bounce 1 additional time."
             },
@@ -159,7 +170,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "-", "target": "[CONE] (6m)", "duration": "[INSTANT]",
-                "description": "[SPI] [SPELL TEST] vs. [STABILITY]. On Success: push away [SPI] m and knock [PRONE]. On fail: push away [SPI]/2 m",
+                "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [STABILITY]. On Success: push away [SPI] m and knock [PRONE]. On fail: push away [SPI]/2 m", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You take a deep Breath and blow a mighty gust of Wind, aided by the Elements.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the cone increases by 3m and the push distance on a success increases by 1m."
             },
@@ -172,7 +184,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 [AP], 1 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "current [TURN], [CONCENTRATION] 1",
-                "description": "Gain fly(1.5m ∗ ([SPI] / 2)) speed.",
+                "description": [ { "regularText": "Gain fly(1.5m ∗ ([SPI] / 2)) speed", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "you manipulate the air currents and can achieve flight.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and the duration improves to 1 Minute, increase it by further 3 and the duration improves to 1 hour."
             },
@@ -185,7 +198,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "4 [AP], 4 [ARCANA]", "range": "15m", "target": "[SPHERE] 7.5m", "duration": "[INSTANT]",
-                "description": "[SPI] [SPELL TEST] vs. [STABILITY]. On success: target is pushed towards the center of the area and suffers 6d6 physical damage. On fail: target pushed 1.5m towards the center.",
+                "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [STABILITY]. On success: target is pushed towards the center of the area and suffers 6d6 physical damage. On fail: target pushed 1.5m towards the center.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You create a vaccum at the center of the sphere, causing the pressure to drop and suck in the sourrounding air.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase of 2, improve the range by 3m, the radius by 1.5m and the damage by 2d6."
             }
@@ -202,7 +216,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "30m", "target": "1 target", "duration": "1 [ROUND]",
-                "description": "[RANGED SPELL ATTACK] vs. [TOUGNESS]. On hit: 2d8 + ([SPI] / 4) * d8 holy damage. On success: [STUNNED I].",
+                "description": [ { "regularText": "[RANGED SPELL ATTACK] vs. [TOUGNESS]. On hit: 2d8 + ([SPI] / 4) * d8 holy damage. On success: [STUNNED I]", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You call upon the Light and shoot a bolt of energy at your enemies.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage by 1d8 + ([SPI] / 4) * d8."
             },
@@ -215,7 +230,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "[AURA] 6m", "target": "[SELF]", "duration": "[SPI] [ROUND], [CONCENTRATION] 1",
-                "description": "Initially: [SPI] [SPELL TEST] vs. [TOUGHNESS]. On success: ([SPI] / 2) * d6 holy damage and apply [BLINDED], [SAVE ENDS]. On fail: half damage. For Duration: light(6m/12m).",
+                "description": [ { "regularText": "Initially: [SPI] [SPELL TEST] vs. [TOUGHNESS]. On success: ([SPI] / 2) * d6 holy damage and apply [BLINDED], [SAVE ENDS]. On fail: half damage. For Duration: light(6m/12m).", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You sancitify a small relic and cause a bright glow.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can boost the bright light aura by 2m and dim light by 4m."
             },
@@ -228,7 +244,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 [AP], 1 [ARCANA]", "range": "6m", "target": "1 friendly target", "duration": "[SPI] [ROUND]",
-                "description": "Apply [PROTECTION I].",
+                "description": [ { "regularText": "Apply [PROTECTION I].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "A shimmering translucent Aura sourrounds your target and protects them.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 3, the target instead recieves the [PROTECTION II] Status Effect and if you increase it by 6, the effect becomes [PROTECTION III]."
             }
@@ -243,7 +260,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "9m", "target": "three willing creatures", "duration": "[SPI] [ROUND]",
-                "description": "Apply [BLESS I].",
+                "description": [ { "regularText": "Apply [BLESS I].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You bless distribute holy water around you magically blessing also your chosen alies.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase an additional creature can be targeted."
             },
@@ -256,7 +274,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "1 creature", "duration": "[INSTANT]",
-                "description": "Heal 2d8 + ([SPI] / 4) * d8. Or alternatively if target is undead: [MELEE SPELL ATTACK]. On Hit: 2d8 + ([SPI] / 4) * d8 holy damage.",
+                "description": [ { "regularText": "Heal 2d8 + ([SPI] / 4) * d8. Or alternatively if target is undead: [MELEE SPELL ATTACK]. On Hit: 2d8 + ([SPI] / 4) * d8 holy damage.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "Your healing touch closes wounds stems internal bleeding, repairs organs and even more. ", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the heal increases by 1d8 + ([SPI] / 4) * d8."
             },
@@ -269,7 +288,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 [AP], 1 [ARCANA]", "range": "6m", "target": "1 target", "duration": "[INSTANT]",
-                "description": "Remove one Tier 1 Status Effect affecting the target.",
+                "description": [ { "regularText": "Remove one Tier 1 Status Effect affecting the target.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "Bright energies glow around the target removign or freeing them from ailments", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 3, you can choose to remove a Tier 2 Status Effect and if you increase it by 6, you can choose to remove a Tier 3 Status Effect."
             },
@@ -282,7 +302,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "4 [AP], 4 [ARCANA]", "range": "6m", "target": "[SPHERE] 4.5m", "duration": "[SPI]/2 [ROUND], [CONCENTRATION] 1",
-                "description": "For Duration: [AREA EFFECT]: allies heal ([SPI]/2) * d6 [HP], enemies and undead recieve ([SPI]/2) * d6 holy damage.",
+                "description": [ { "regularText": "For Duration: [AREA EFFECT]: allies heal ([SPI]/2) * d6 [HP], enemies and undead recieve ([SPI]/2) * d6 holy damage.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You use holey water and sanctify an area. Which will slightly glow and heal alies and damage enemies.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and increase the damage/heal by 1d6 and the duration by 1 [ROUND]."
             }
@@ -297,7 +318,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "10 minutes, 1 [ARCANA]", "range": "3m", "target": "Corpse of a creature up to [LEVEL] 1", "duration": "24 hours",
-                "description": "You conduct an unholy Ritual binding the soul of the former inhabitant of the corpse. The corpse or skeleton becomes animate and obeys your commands. Depending on the spirit of the inhabitant they retain more of their personality. You can control an amount of undead equal to your [INT] at the same time. If the undead is reduced to 0 [HP] the spell ends early. After 24 hours the Corpse or Bones return to their former state unless you cast the spell again.",
+                "description": [ { "regularText": "You conduct an unholy Ritual binding the soul of the former inhabitant of the corpse. The corpse or skeleton becomes animate and obeys your commands. Depending on the spirit of the inhabitant they retain more of their personality. You can control an amount of undead equal to your [INT] at the same time. If the undead is reduced to 0 [HP] the spell ends early. After 24 hours the Corpse or Bones return to their former state unless you cast the spell again.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You trap a soul in a corpse, severly damaging it and tormenting it while it is entrap in your contraption, ensuring it will boey your commands withotu question.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target corpses of creatures one [LEVEL] higher."
             },
@@ -310,7 +332,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 [AP], 1 [ARCANA]", "range": "9m", "target": "1 creature", "duration": "[SPI] [ROUND]",
-                "description": "[SPI] [SPELL TEST] vs. [WILLPOWER]. On Success: apply one of: [CURSED I], [FRIGHTENED I], [WEAKENED I], [VULNURABLE I], [DEAFENED], [SILENCED]. On fail: target is affected for just 1 [ROUND].",
+                "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [WILLPOWER]. On Success: apply one of: [CURSED I], [FRIGHTENED I], [WEAKENED I], [VULNURABLE I], [DEAFENED], [SILENCED]. On fail: target is affected for just 1 [ROUND].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You pour your rage, hatred and frustration into words and condem another individual.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target an additional unit"
             },
@@ -323,7 +346,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 hour, 25 [ARCANA]", "range": "-", "target": "1 soul", "duration": "[INSTANT]",
-                "description": "TODO: Long form Ritual, can remove soul and potentially store it somewhere. Target still lives but has lost soul",
+                "description": [ { "regularText": "TODO: Long form Ritual, can remove soul and potentially store it somewhere. Target still lives but has lost soul", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ],
                 "spellDifficulty": 25,
                 "upCastingTheSpell": "-"
             }
@@ -338,7 +362,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "12m", "target": "[SPHERE] 1.5m", "duration": "[INSTANT]",
-                "description": "[INT] [SPELL TEST] vs. [DODGE]. On Success: 2d8 + ([SPI]/4) * d8 unholy damage. On fail: half damage.",
+                "description": [ { "regularText": "[INT] [SPELL TEST] vs. [DODGE]. On Success: 2d8 + ([SPI]/4) * d8 unholy damage. On fail: half damage.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You counjour fourth black flames that have a consitancy like sludge they burn upon the soul of victims wihtout heat.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can deal an additional 1d8 + ([SPI]/4) * d8 damage."
             },
@@ -351,7 +376,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "15m", "target": "[SPHERE] 4.5m", "duration": "[SPI] [ROUND], [CONCENTRATION] 0",
-                "description": "You summon dark energy from the Aether and engulf ta 4.5m sphere in complete darkness. Only magical light of a higher spell power than this can illuminate this area and even creatures with darkvision can not see in this area.",
+                "description": [ { "regularText": "You summon dark energy from the Aether and engulf ta 4.5m sphere in complete darkness. Only magical light of a higher spell power than this can illuminate this area and even creatures with darkvision can not see in this area.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You reach into the deepest fears of the living and conjour darkness around you.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increases the sphere is enlarged by 1.5m and the duration is lengthed by 10 minutes."
             }
@@ -366,7 +392,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "[REACTION], 1 [ARCANA]", "range": "4.5m", "target": "1 friendly creature", "duration": "[INSTANT]",
-                "description": "If a friendly creature fails an [D20 TEST] you can use this Ability. Increase the [D20 TEST] by your [SPI]/2.",
+                "description": [ { "regularText": "If a friendly creature fails an [D20 TEST] you can use this Ability. Increase the [D20 TEST] by your [SPI]/2.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You gain a glimpse into the immediate feature and can warn your alies or yourself.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 1 and you can increase [D20 TEST] by 1."
             },
@@ -379,7 +406,15 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "1 object", "duration": "[SPI] minutes",
-                "description": "For the duration when somone looks through the object they can see traces of magical and the associated Spell Discipline (if present) energy which includes the following:<ul><li>Magical creatures (Elemental, Cosmic, Undead) or Magical Items.</li><li>You know if a spell is currently affecting a creature or object, you don't know the exact spell, but you know the discipline.</li><li>You see if a spell was cast ther recently. Spells linger for a number of days equal to their Arcana Cost, you don't what exact spell, but you know the discipline.</li></ul>",
+                "description": [ 
+                    { "regularText": "For Duration: when looking through the object you will notice magical residue which inluds the following:", "headerLine": null, "bulletPoints": null},
+                    { "regularText": null, "headerLine": null, "bulletPoints": [
+                        "Magical creatures (Elemental, Cosmic, Undead) or Magical Items.",
+                        "You know if a spell is currently affecting a creature or object, you don't know the exact spell, but you know the discipline",
+                        "ou see if a spell was cast ther recently. Spells linger for a number of days equal to their Arcana Cost, you don't what exact spell, but you know the discipline."
+                    ]}
+                ],
+                "flavorText": [ { "regularText": "You enchant your object and see magical traces in bright shimmering colors.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,   
                 "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by the following, the Spell improves in the following ways:<ul><li>Increase by 3: You know the Specific spell (if spell at all) that was cast.</li><li>Improve by 9: You see exactly what happened when the Spell was cast at the time.</li></ul>"
             },
@@ -392,9 +427,10 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 minute, 1 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "24 hours",
-                "description": "You attempt to divine the near future and manipulate it. Roll a d20 and remember the result, at any point during the duration of the spell when you have to make a [D20 TEST] you can use this result instead. You can only benefit from one instance of this spell at a time.",
+                "description": [ { "regularText": "Roll a d20 and remember the result, at any point during the duration of the spell when you have to make a [D20 TEST] you can use this result instead. You can only benefit from one instance of this spell at a time.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You divine the near future and gain insight into it and are able to slightly alter it..", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase you can roll one additional d20 per spell power."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 3 and for every increase you can roll one additional d20 per spell power."
             }
         ]
     },
@@ -408,8 +444,15 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "1 [AP], 1 [ARCANA]", "range": "12m", "target": "one target", "duration": "up to [SPI] [ROUND], [CONCENTRATION] 1",
-                "description": "You can select one object or creature that you can see weighing up to [SPI] ∗ 20 kg and magically move it, you have the following options: <ul><li>Push/Pull: You can move the target up to a distance of 2 ∗ [SPI] meters in any direction. If you target an unwilling creature or an item held by a creature: Make a [SPI] [SPELL TEST] vs. [STABILITY]. On success: move the creature or the item it is holding is freed from the creature’s grasp. Afterwards the spell ends.</li> <li>Hover: Alternatively you can make the target hover in the air and move it [SPI] / 2 meters in any direction. While doing this for the duration of the spell each turn you can move the object again, when the spell ends the target is effected by gravity and other forces as normal. If the target is an unwilling creature: Make a [SPI] [SPELL TEST] vs. [STABILITY]. On fail: the spell ends.</li></ul>",
+                "cost": "1 [AP], 1 [ARCANA]", "range": "12m", "target": "either one medium creature or object weighing up to [SPI] * 20 kg", "duration": "up to [SPI] [ROUND], [CONCENTRATION] 1",
+                "description": [ 
+                    { "regularText": "You can magically move the target and have two options:", "headerLine": null, "bulletPoints": null},
+                    { "regularText": null, "headerLine": null, "bulletPoints": [
+                        "Push/Pull: [SPI] [SPELL TEST] vs. [STABILITY]. On success: move the target 2 * [SPI] meters in any direction. On fail: move it 1.5m. Afterwards Spell ends",
+                        "Hover: [SPI] [SPELL TEST] vs. [STABILITY]. On success: the target hovers in the air and Initially on casting and at the start of your [TURN] you can move it [SPI] / 2 meters in any direction. [SAVE ENDS]."
+                    ]}
+                ],
+                "flavorText": [ { "regularText": "You tap into the kinetic forces and manipulate them around the target.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the maximum object weight is doubled and the range increases by 3m."
             },
@@ -422,7 +465,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one target", "duration": "([SPI] / 2) [ROUND], [CONCENTRATION] 1",
-                "description": "Initially: [SPI] [SPELL TEST] vs. [STABILITY]. On success: Apply [RESTRAINED I]. For duration: deal [SPI] * d6 physical damage at the start of your [TURN].",
+                "description": [ { "regularText": "Initially: [SPI] [SPELL TEST] vs. [STABILITY]. On success: Apply [RESTRAINED I]. For duration: deal [SPI] * d6 physical damage at the start of your [TURN].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You apply a force around the target, pressuring it from all sides.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by two and for every increase you can target an additional creature"
             }
@@ -436,8 +480,16 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "1 [AP], 1 [ARCANA]", "range": "6m", "target": "one willing creature", "duration": "[SPI] [ROUND], [CONCENTRATION 0]",
-                "description": "You cause a minor mutation within a creature and can grant them one of the following benefits: <ul><li>Quicken: Their limbs change to be more agile: the creature recieves the [HASTE I] status effect</li> <li>Natural armor: The target’s skin becomes harder and grows more layers to protect it and it grants [DR] physical equal to [SPI]. Does not stack with physical [DR] granted by other armor and is treated as armor for all other effects.</li></ul>",
+                "cost": "1 [AP], 1 [ARCANA]", "range": "6m", "target": "one willing creature", "duration": "[SPI] [ROUND]",
+                "description": [ 
+                    { "regularText": "The target gains one of the following benefits", "headerLine": null, "bulletPoints": null},
+                    { "regularText": null, "headerLine": null, "bulletPoints":  [
+                        "Quicken: Apply [HASTE I].",
+                        "Natural armor: Target gains [DR] physical equal to [SPI]. Does not stack with armour.",
+                        "Enhanced Senses: Target gains darkvision([SPI] m) and has [ADVANTAGE] on any [PER] [ABILITY TEST]."
+                    ]}
+                ],
+                "flavorText": [ { "regularText": "You cause a minor mutation within a creature and can grant them enhanced abilities.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase of 2 you can target one additional creature and the range increases by 1.5m"
             },
@@ -450,7 +502,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 4 [ARCANA]", "range": "[MELEE RANGE]", "target": "one willing creature", "duration": "[SPI] [ROUND], [CONCENTRATION 1]",
-                "description": "Apply [HASTE II].",
+                "description": [ { "regularText": "Apply [HASTE II].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "You grant a supernatural speed.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by 4 and the target recieves the [HASTE III] status effect."
             }
@@ -465,7 +518,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "15m", "target": "one or multiple creatures", "duration": "[INSTANT]",
-                "description": "Deal 1 + ([SPI] / 3) * 1d6 cosmic damage three times.",
+                "description": [ { "regularText": "Deal 1 + ([SPI] / 3) * 1d6 cosmic damage three times.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "Create 3 homing projectiles that will impact on their targetn without fail.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase 1 additional magic dart is created."
             },
@@ -478,9 +532,19 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "3m", "target": "-", "duration": "[SPI] minutes",
-                "description": "You can create any tier 1 item of your choice that is not a consumable or something similar like food. The item has to fit in a [SPI] / 4 m Cube and it can’t be hazardous on it’s own like lava or poison but can be a sharp blade for instance. The item lasts for the duration and has a faint shimmer of the Aether to it making it appear as an obvious fake otherwise it shares the same properties. If a complicated item is created like a specific key for a keyhole or a inticrite mechanical device. The GM might call for a [INT] [SPELL TEST] depending on the difficulty and the casters knowledge.",
+                "description": [ 
+                    { "regularText": "You can create one tier 1 item of your choice with the following restrictions:", "headerLine": null, "bulletPoints": null},
+                    { "regularText": null, "headerLine": null, "bulletPoints": [
+                        "It can't be a consumable or something similar to food.",
+                        "The item has to fit in a [SPI] / 4 m Cube.",
+                        "It can’t be hazardous on it’s own like lava or poison but can be a sharp blade for instance",
+                        "The item lasts for the duration and has a faint shimmer of the Aether to it making it appear as an obvious fake otherwise it shares the same properties",
+                        "If a complicated item is created like a specific key for a keyhole or a inticrite mechanical device. The GM might call for a [INT] [SPELL TEST] depending on the difficulty and the casters knowledge."
+                    ]}
+                ],
+                "flavorText": [ { "regularText": "You pull energy from the Aether to temporarily hold the form of a phyiscal object.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the item level can be 1 higher and the duration is tripled."
+                "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the item tier can be 1 higher, the duration is doubled and the size of the cube is increased by 1m."
             }
         ],
         "illusionSpells": [
@@ -493,9 +557,10 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "one creature", "duration": "[SPI] * 1 minutes [CONCENTRATION] 2",
-                "description": "Apply [INVISIBLE I].",
+                "description": [ { "regularText": "Apply [INVISIBLE I].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ { "regularText": "The target is shrouded by magical mists that make them harder to percieve.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
-                "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 3, apply [INVISIBLE II] instead."
+                "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 2 and for every increase of 2 you can target an additional creature."
             },
             {
                 "name": "Illusary Image",
@@ -506,7 +571,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "3 [AP], 1 [ARCANA]", "range": "9m", "target": "-", "duration": "[SPI] minutes [CONCENTRATION] 1",
-                "description": "You create a silent unmoving illusary image of your choice that fits in a [SPI] / 2 m Cube. Make a [INT] [SPELL TEST] if other creatures are present, if your test is higher than the other creatures passive [INT] Investigation than they percieve the Illusion as real. If they later examine the Illusion and find obvious flaws in it, then they also stop percieving the Illusion as real.",
+                "description": [ { "regularText": "You create a silent unmoving illusary image of your choice that fits in a [SPI] / 2 m Cube. Make a [INT] [SPELL TEST] if other creatures are present, if your test is higher than the other creatures passive [INT] Investigation than they percieve the Illusion as real. If they later examine the Illusion and find obvious flaws in it, then they also stop percieving the Illusion as real.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, if you increase the [ARCANA] Cost and Spell Difficulty by 2 you can make the image move but it can’t be further than 21m (14 squares) away from you. If increase it by 4 you can add sound to the Illusion."
             }
@@ -521,7 +587,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 [AP], 1 [ARCANA]", "range": "3 + [SPI] m", "target": "[SELF]", "duration": "[INSTANT]",
-                "description": "Teleport to an unoccupied space up to 3 + [SPI] m away.",
+                "description": [ { "regularText": "Teleport to an unoccupied space up to 3 + [SPI] m away.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the range is doubled."
             },
@@ -534,7 +601,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "[MELEE RANGE]", "target": "one non living object", "duration": "-",
-                "description": "You can target one object weighing up to [SPI] ∗ 10 kg. and make it vanish into an extradimensional space. At any point you can cast this spell again and retrieve an item you have previously stored in your extradimensional pocket. Objects in the extradimensional space are perserved indefinete and do not wither or rot.",
+                "description": [ { "regularText": "You can target one object weighing up to [SPI] ∗ 10 kg. and make it vanish into an extradimensional space. At any point you can cast this spell again and retrieve an item you have previously stored in your extradimensional pocket. Objects in the extradimensional space are perserved indefinete and do not wither or rot.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the maximum object weight is doubled."
             },
@@ -547,7 +615,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "1 [REACTION], 3 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "[INSTANT]",
-                "description": "If you are hit by an [ATTACK] you can use this Ability. You teleport [SPI] meters in a random direction (roll d8) which causes the [ATTACK] to miss. If the space where you would land is occupied or within a wall you land in the closest free space instead.",
+                "description": [ { "regularText": "If you are hit by an [ATTACK] you can use this Ability. You teleport [SPI] meters in a random direction (roll d8) which causes the [ATTACK] to miss. If the space where you would land is occupied or within a wall you land in the closest free space instead", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ],
                 "spellDifficulty": 9,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can roll an additional d8 for the direction and choose any die for the direction you will be teleported."
             }
@@ -562,7 +631,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "12m", "target": "one sentient([INT] greater -4) creature within range", "duration": "1 [ROUND]",
-                "description": "[SPI] [SPELL TEST] vs. [WILLPOWER]. On success: 2d8 + ([SPI]/4) * d8 psychic and apply [STUNNED I]. On fail: half damage.",
+                "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [WILLPOWER]. On success: 2d8 + ([SPI]/4) * d8 psychic and apply [STUNNED I]. On fail: half damage.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage by 1d8 + ([SPI]/4) * d8."
             },
@@ -575,7 +645,8 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "3m", "target": "one entient([INT] greater -4) creature within range", "duration": "[SPI] [ROUND]",
-                "description": "[CHA] [SPELL TEST] vs. [WILLPOWER]. On Success: Apply [CHARMED II] and creature carries out given task then spell ends early. On fail: Creature refuses. Creature is not aware of mind control.",
+                "description": [ { "regularText": "[CHA] [SPELL TEST] vs. [WILLPOWER]. On Success: Apply [CHARMED II] and creature carries out given task then spell ends early. On fail: Creature refuses. Creature is not aware of mind control.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase you can target one additional creatures and the range increases by 1.5m"
             }

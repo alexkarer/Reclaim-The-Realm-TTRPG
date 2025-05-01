@@ -35,6 +35,7 @@ function mapToHybridAbility(jsonSpell: JsonHybridAbility): HybridAbility {
     hybridAbility.target = jsonSpell.target;
     hybridAbility.duration = jsonSpell.duration;
     hybridAbility.description = jsonSpell.description;
+    hybridAbility.flavorText = jsonSpell.flavorText;
     hybridAbility.components = jsonSpell.components;
     return hybridAbility;
 }

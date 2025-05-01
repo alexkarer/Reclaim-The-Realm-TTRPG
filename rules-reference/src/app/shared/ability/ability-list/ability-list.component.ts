@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Ability } from '../../../../../../common_resources/shared/Ability';
 import { AbilityListItemComponent } from "./ability-list-item/ability-list-item.component";
 
@@ -9,5 +9,5 @@ import { AbilityListItemComponent } from "./ability-list-item/ability-list-item.
     styleUrl: './ability-list.component.scss'
 })
 export class AbilityListComponent {
-  @Input() abilities: Ability[] = [];
+  abilities = input<Ability[]>([]);
 }

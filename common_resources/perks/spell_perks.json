@@ -146,7 +146,8 @@
                     "range": "6m",
                     "target": "anywhere",
                     "duration": "varies",
-                    "description": "You can summon a small flame the size of your Fist, if you summon it at a body part it shines a light (3m/6m) and is hot but doesn't harm you. Alternatively you can summon it at any place within range and if the target is easily combustable it will ignite."
+                    "description": [ { "regularText": "You can summon a small flame the size of your Fist, if you summon it at a body part it shines a light (3m/6m) and is hot but doesn't harm you. Alternatively you can summon it at any place within range and if the target is easily combustable it will ignite.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ { "regularText": "With their deepending connection to the fire plane, pyromancers develop a maniacal obsession with fire and are mesmerized by it.", "headerLine": null, "bulletPoints": null, "ability": null } ]
                 }
             }
         ]

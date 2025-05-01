@@ -17,7 +17,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you end a Jump Move at a flat surface you can chain the Jump and Jump again but only half the distance of your regular Jump distance. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. If the wall is slippy or there are other conditions that might hinder you, the GM might require you to perform a [AGI] Athletics [SKILL TEST].",
+            "description": [ { "regularText": "When you end a Jump Move at a flat surface you can chain the Jump and Jump again but only half the distance of your regular Jump distance. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. If the wall is slippy or there are other conditions that might hinder you, the GM might require you to perform a [AGI] Athletics [SKILL TEST].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "When you push this maneuver your pushing distance is not halved."
@@ -40,7 +41,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You can walk through a space an enemy unit occupies. To use this maneuver you have to stand next to the enemy you want to walk through, then enter their space and afterwards enter a free space next to the enemy, all this movement is already included in the maneuver cost and you don’t have to spend extra [MP] . Doing this however provokes an Opportunity Attack from the enemy regardless if you end your turn still inside their reach. Alternatively instead of entering a free space after entering into the enemies space you can choose to use this maneuver again.",
+            "description": [ { "regularText": "You can walk through a space an enemy unit occupies. To use this maneuver you have to stand next to the enemy you want to walk through, then enter their space and afterwards enter a free space next to the enemy, all this movement is already included in the maneuver cost and you don’t have to spend extra [MP] . Doing this however provokes an Opportunity Attack from the enemy regardless if you end your turn still inside their reach. Alternatively instead of entering a free space after entering into the enemies space you can choose to use this maneuver again.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "4 [MP]",
                 "pushingDescription": "You now don’t provoke an Opportunity Attack from the target but leaving their reach still provokes it as normal."
@@ -63,7 +65,8 @@
             "range": "[MELEE RANGE]",
             "target": "1 Creature affected by [RESTRAINED I]",
             "duration": "[INSTANT]",
-            "description": "[STR] [MARTIAL TEST] vs. [STABILITY]. On success: knocked [PRONE] and apply [RESTRAINED II]."
+            "description": [ { "regularText": "[STR] [MARTIAL TEST] vs. [STABILITY]. On success: knocked [PRONE] and apply [RESTRAINED II].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Meat Shield",
@@ -80,7 +83,8 @@
             "range": "[MELEE RANGE]",
             "target": "1 [RESTRAINED I] or [RESTRAINED II] Creature",
             "duration": "[INSTANT]",
-            "description": "If you are hit by an [ATTACK] you can use this Ability. [STR] [MARTIAL TEST] vs. [STABILITY]. On success: [ATTACK] hits target instead.."
+            "description": [ { "regularText": "If you are hit by an [ATTACK] you can use this Ability. [STR] [MARTIAL TEST] vs. [STABILITY]. On success: [ATTACK] hits target instead.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Throw",
@@ -97,7 +101,8 @@
             "range": "[MELEE RANGE]",
             "target": "1 [RESTRAINED I] Creature",
             "duration": "[INSTANT]",
-            "description": "[STR] [MARTIAL TEST] vs. [STABILITY]. On success: it flies up to 2*[STR] m in a direction of your choice and recieve light [MARTIAL DAMAGE] physical and then is knocked [PPRONE]. If creature collides on the way with another creature, both creatures take damage and the target lands within 1.5m of the target."
+            "description": [ { "regularText": "[STR] [MARTIAL TEST] vs. [STABILITY]. On success: it flies up to 2*[STR] m in a direction of your choice and recieve light [MARTIAL DAMAGE] physical and then is knocked [PRONE]. If creature collides on the way with another creature, both creatures take damage and the target lands within 1.5m of the target.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Charge",
@@ -114,7 +119,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[TURN]",
-            "description": "You double the [MP] you have availible this round but you must spend it all on moving closer to your target. If you can manage to move within melee range of the target you can then make a Weapon Attack or Unarmored Attack against that target, if the [ATTACK] was successful it deals extra physical damage equal to every second meter moved directly towards the target, this is calculated using the shortest distance..",
+            "description": [ { "regularText": "You double the [MP] you have availible this round but you must spend it all on moving closer to your target. If you can manage to move within melee range of the target you can then make a Weapon Attack or Unarmored Attack against that target, if the [ATTACK] was successful it deals extra physical damage equal to every second meter moved directly towards the target, this is calculated using the shortest distance.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You triple the [MP] instead."
@@ -137,7 +143,8 @@
             "range": "3m (2 squares)",
             "target": "all creatures within range",
             "duration": "1 [ROUND]",
-            "description": "[CHA] [MARTIAL TEST] vs. [WILLPOWER]. On success: Apply [TAUNTED]."
+            "description": [ { "regularText": "[CHA] [MARTIAL TEST] vs. [WILLPOWER]. On success: Apply [TAUNTED].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Challenge",
@@ -155,7 +162,8 @@
             "range": "9m",
             "target": "1 creature",
             "duration": "1 [ROUND]",
-            "description": "[CHA] [MARTIAL TEST] vs. [WILLPOWER]. On success: Apply [TAUNTED]."
+            "description": [ { "regularText": "[CHA] [MARTIAL TEST] vs. [WILLPOWER]. On success: Apply [TAUNTED].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "You can take it!",
@@ -172,7 +180,8 @@
             "range": "12m (8 squares)",
             "target": "1 allied creature",
             "duration": "1 [ROUND]",
-            "description": "You can target 1 ally within range that can hear you and that has suffered damage this or the last [ROUND]. That ally recieves [THP] equal to [MARTIAL LEVEL] + [CHA] for 1 round."
+            "description": [ { "regularText": "You can target 1 ally within range that can hear you and that has suffered damage this or the last [ROUND]. That ally recieves [THP] equal to [MARTIAL LEVEL] + [CHA] for 1 round.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Go Get Em!",
@@ -191,7 +200,8 @@
             "range": "12m (8 squares)",
             "target": "1 allied creature",
             "duration": "1 [ROUND]",
-            "description": "You can target 1 ally within range that can hear you. Until the start of your next [TURN], that ally gains [CHA] extra [MP] and their next [ATTACK] gains a bonus equal to your [MARTIAL LEVEL]."
+            "description": [ { "regularText": "You can target 1 ally within range that can hear you. Until the start of your next [TURN], that ally gains [CHA] extra [MP] and their next [ATTACK] gains a bonus equal to your [MARTIAL LEVEL].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ],
     "fortitudeManeuvers": [
@@ -210,7 +220,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "If you are below half your maximum [HP], recover: 1d6 + ([CON]/3) * d6 [HP]."
+            "description": [ { "regularText": "If you are below half your maximum [HP], recover: 1d6 + ([CON]/3) * d6 [HP].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Pushing the Limit",
@@ -227,7 +238,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you fail a [D20 TEST] you can add 2 to the Result potentially turning it into a Success.",
+            "description": [ { "regularText": "When you fail a [D20 TEST] you can add 2 to the Result potentially turning it into a Success.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "For each [STAMINA] used you can add further +2."
@@ -250,7 +262,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "You gain a bonus to your [STABILITY], [DODGE], [TOUGHNESS], [WILLPOWER] and any [ATTACK] made for an [OPPORTUNITY ATTACK] equal to twice the [AP] spent."
+            "description": [ { "regularText": "You gain a bonus to your [STABILITY], [DODGE], [TOUGHNESS], [WILLPOWER] and any [ATTACK] made for an Opportunity Attack equal to twice the [AP] spent.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Tag Team",
@@ -267,7 +280,8 @@
             "range": "[MELEE RANGE]",
             "target": "1 allied creature",
             "duration": "[INSTANT]",
-            "description": "Swap places with the target. This movement does not provoke an Opportunity Attack."
+            "description": [ { "regularText": "Swap places with the target. This movement does not provoke an Opportunity Attack.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Prepared Position",
@@ -284,7 +298,8 @@
             "range": "9m",
             "target": "unnocupied Space",
             "duration": "1 [ROUND]",
-            "description": "The next time an enemy enters this space any allied creature can use their [REACTION] and make a Weapon Attack against that Creature."
+            "description": [ { "regularText": "The next time an enemy enters this space any allied creature can use their [REACTION] and make a Weapon Attack against that Creature.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ],
     "weaponManeuvers": [
@@ -303,7 +318,8 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "2 [ROUND]",
-            "description": "Make a Weapon Attack with a melee weapon, if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [STUNNED I].",
+            "description": [ { "regularText": "Make a Weapon Attack with a melee weapon, if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [STUNNED I].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "Instead of applying [STUNNED I], the target is [STUNNED II]."
@@ -324,7 +340,8 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack with a melee weapon, if [ATTACK] hits and exceeds or matches [STABILITY] either knock the target [PRONE] or push it [STR] meters away from you..",
+            "description": [ { "regularText": "Make a Weapon Attack with a melee weapon, if [ATTACK] hits and exceeds or matches [STABILITY] either knock the target [PRONE] or push it [STR] meters away from you.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You apply both effects if the [ATTACK] exceedds the targets [STABILITY]"
@@ -345,7 +362,8 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "2[ROUND]",
-            "description": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [STABILITY] apply [CRIPPLED I]."
+            "description": [ { "regularText": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [STABILITY] apply [CRIPPLED I].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Deep Cut",
@@ -362,7 +380,8 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "1-2 [ROUND]",
-            "description": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [BLEEDING I].",
+            "description": [ { "regularText": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [BLEEDING I].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "The target is now affected by [BLEEDING II]"
@@ -383,7 +402,8 @@
             "range": "[MELEE RANGE]",
             "target": "2 creatures that are next to each other and both within range",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack with a melee Weapon that targets both targets.",
+            "description": [ { "regularText": "Make a Weapon Attack with a melee Weapon that targets both targets.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can now target all enemy targets within melee range as long as all targets are within 4.5m of each other."
@@ -404,7 +424,8 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "When you have moved at least 3m in the direction of the target you can make a Thrown Weapon Weapon Attack with the range doubled for all ranges. Additionally your [ATTACK] deals extra damage eequal to every second meter moved."
+            "description": [ { "regularText": "When you have moved at least 3m in the direction of the target you can make a Thrown Weapon Weapon Attack with the range doubled for all ranges. Additionally your [ATTACK] deals extra damage eequal to every second meter moved.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Multishot",
@@ -421,7 +442,8 @@
             "range": "[WEAPON RANGE]",
             "target": "2 creatures within 4.5m of each other",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack with a Ranged Weapon with a -2 penalty to the [ATTACK] and damage."
+            "description": [ { "regularText": "Make a Weapon Attack with a Ranged Weapon with a -2 penalty to the [ATTACK] and damage.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Parry",
@@ -438,7 +460,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you are hit by a [MELEE ATTACK] you can use this Ability. Make a [MELEE MARTIAL ATTACK] vs. [MELEE ATTACK] that targeted you. On success turn critical hit into regular hit, regular hit into glancing hit and glancing hit into critical miss.",
+            "description": [ { "regularText": "When you are hit by a [MELEE ATTACK] you can use this Ability. Make a [MELEE MARTIAL ATTACK] vs. [MELEE ATTACK] that targeted you. On success turn critical hit into regular hit, regular hit into glancing hit and glancing hit into critical miss.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can now parry any [ATTACK]."

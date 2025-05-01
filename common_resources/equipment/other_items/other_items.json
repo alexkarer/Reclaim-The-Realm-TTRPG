@@ -232,7 +232,8 @@
                         "range": "[MELEE]",
                         "target": "[SELF] or 1 Creature",
                         "duration": "[INSTANT]",
-                        "description": "You regain 2d6+3 [HP]. If used on another creature, this ability costs 2 [AP]"
+                        "description": [ { "regularText": "You regain 2d6+3 [HP]. If used on another creature, this ability costs 2 [AP].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                        "flavorText": [ { "regularText": "", "headerLine": null, "bulletPoints": null, "ability": null } ]
                     }
                 }
             ]
@@ -258,7 +259,8 @@
                         "range": "[MELEE]",
                         "target": "[SELF] or 1 Creature",
                         "duration": "[INSTANT]",
-                        "description": "You regain 1 [ARCANA]. If used on another creature, this ability costs 2 [AP]"
+                        "description": [ { "regularText": "You regain 1 [ARCANA]. If used on another creature, this ability costs 2 [AP].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                        "flavorText": [ { "regularText": "", "headerLine": null, "bulletPoints": null, "ability": null } ]
                     }
                 }
             ]
@@ -284,7 +286,8 @@
                         "range": "[MELEE]",
                         "target": "[SELF] or 1 Creature",
                         "duration": "[INSTANT]",
-                        "description": "You remove a [POISON I] Status Effect affecting you. If used on another creature, this ability costs 2 [AP]"
+                        "description": [ { "regularText": "You remove a [POISON I] Status Effect affecting you. If used on another creature, this ability costs 2 [AP].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                        "flavorText": [ { "regularText": "", "headerLine": null, "bulletPoints": null, "ability": null } ]
                     }
                 }
             ]
@@ -310,7 +313,8 @@
                         "range": "[MELEE]",
                         "target": "1 Creature",
                         "duration": "[INSTANT]",
-                        "description": "You remove a [BLEEDING I] Status Effect affecting the target."
+                        "description": [ { "regularText": "You remove a [BLEEDING I] Status Effect affecting the target.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                        "flavorText": [ { "regularText": "", "headerLine": null, "bulletPoints": null, "ability": null } ]
                     }
                 }
             ]
@@ -336,7 +340,8 @@
                         "range": "9m",
                         "target": "[SPHERE] 1.5m",
                         "duration": "[INSTANT]",
-                        "description": "Make a [RAGNED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets they recieve 2d6 Corrosive damage [HALF]."
+                        "description": [ { "regularText": "[RAGNED MARTIAL ATTACK]. On hit: 2d6 Corrosive damage. On failure: half damage", "headerLine": null, "bulletPoints": null } ],
+                        "flavorText": [ ]
                     }
                 }
             ]
@@ -362,7 +367,8 @@
                         "range": "9m",
                         "target": "[SPHERE] 1.5m",
                         "duration": "3 [ROUND]",
-                        "description": "Make a [RAGNED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets they are drenched in oil and when ignited recieve the [BURNING I] Status Effect until the duration is over or the oil is washed away. Additionally the target area can also be ignited and when done so the area is lit with fire and any creature that starts its [TURN] in the Area or enters it for the first time it recieves damage is if they had the [BURNING I] Status Effect."
+                        "description": [ { "regularText": "Make a [RAGNED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets they are drenched in oil and when ignited recieve the [BURNING I] Status Effect until the duration is over or the oil is washed away. Additionally the target area can also be ignited and when done so the area is lit with fire and any creature that starts its [TURN] in the Area or enters it for the first time it recieves damage is if they had the [BURNING I] Status Effect.", "headerLine": null, "bulletPoints": null } ],
+                        "flavorText": [ ]
                     }
                 }
             ]
@@ -388,7 +394,8 @@
                         "range": "9m",
                         "target": "[SPHERE] 1.5m",
                         "duration": "3 [ROUND]",
-                        "description": "Make a [RAGNED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets, undead and evil cosmic creatures receive 2d6 damage."
+                        "description": [ { "regularText": "Make a [RAGNED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets, undead and evil cosmic creatures receive 2d6 damage.", "headerLine": null, "bulletPoints": null } ],
+                        "flavorText": [ ]
                     }
                 },
                 {
@@ -403,7 +410,8 @@
                         "range": "[MELEE]",
                         "target": "[SELF] or 1 Creature",
                         "duration": "[INSTANT]",
-                        "description": "You end one [CURSED I], [WEAKENED I] or [VULNURABLE I] Status effect affecing you. If used on another creature, this ability costs 2 [AP]."
+                        "description": [ { "regularText": "You end one [CURSED I], [WEAKENED I] or [VULNURABLE I] Status effect affecing you. If used on another creature, this ability costs 2 [AP].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                        "flavorText": [ { "regularText": "", "headerLine": null, "bulletPoints": null, "ability": null } ]
                     }
                 }
             ]
@@ -486,7 +494,8 @@
                         "range": "[MELEE]",
                         "target": "1 willing creature",
                         "duration": "[INSTANT]",
-                        "description": "You can end one of [POISON I], [BLEEDING I] Status Effect affecting the creature. Make a [INT] Medicine [SKILL TEST] against [DT] 15. For a [POISON II] or [BLEADING II] Status Effect the [DT] is 20. For a [POISON III] or [BLEEDING III] the [DT] is 25."
+                        "description": [ { "regularText": "You can end one of [POISON I], [BLEEDING I] Status Effect affecting the creature. Make a [INT] Medicine [SKILL TEST] against [DT] 15. For a [POISON II] or [BLEADING II] Status Effect the [DT] is 20. For a [POISON III] or [BLEEDING III] the [DT] is 25.", "headerLine": null, "bulletPoints": null } ],
+                        "flavorText": [ ]
                     }
                 },
                 {
@@ -501,7 +510,8 @@
                         "range": "[MELEE]",
                         "target": "1 willing creature",
                         "duration": "[INSTANT]",
-                        "description": "Make an [INT] Medicine [SKILL TEST], if your result is 10 or above you heal the target for 1d6 [HP]. For every further 5 your result is higher than 10 the target heals by an additional 1d6. A creature can only benefit from this no more than once per long rest."
+                        "description": [ { "regularText": "Make an [INT] Medicine [SKILL TEST], if your result is 10 or above you heal the target for 1d6 [HP]. For every further 5 your result is higher than 10 the target heals by an additional 1d6. A creature can only benefit from this no more than once per long rest", "headerLine": null, "bulletPoints": null } ],
+                        "flavorText": [ { "regularText": "", "headerLine": null, "bulletPoints": null } ]
                     }
                 }
             ]

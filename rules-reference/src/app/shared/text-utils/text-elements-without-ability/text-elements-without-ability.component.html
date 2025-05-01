@@ -1,0 +1,19 @@
+@for (textElement of textElements(); track $index) {
+    @if (textElement.headerLine != null) {
+        @if (useBoldTextForHeader()) {
+            <p class="fw-bold mb-1 mt-1">{{ textElement.headerLine }}</p>
+        } @else {
+            <h5 class="mb-1">{{ textElement.headerLine }}</h5>
+        }
+    }
+    @if (textElement.regularText != null) {
+        <app-dynamic-content [content]="textElement.regularText | keywordProcessor"></app-dynamic-content>
+    }
+    @if (textElement.bulletPoints != null) {
+        <ul class="mt-0 mb-0">
+            @for (bulletPoint of textElement.bulletPoints; track $index) {
+                <li><app-dynamic-content [content]="bulletPoint | keywordProcessor"></app-dynamic-content></li>
+            }
+        </ul>
+    }
+}

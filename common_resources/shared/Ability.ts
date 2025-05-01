@@ -1,4 +1,5 @@
 import { Requirements } from "./AbilityRequirements";
+import { TextElement, TextElementWithoutAbility } from "./TextElements";
 
 export class Ability {
     name!: string;
@@ -8,5 +9,6 @@ export class Ability {
     range!: string;
     target!: string;
     duration!: string;
-    description!: string;
+    description!: TextElementWithoutAbility[];
+    flavorText!: TextElementWithoutAbility[];
 }

@@ -85,6 +85,8 @@ Removed the following core abilities to simplify:
 #### Ability Simplification
 - Simplify Ability Descriptions and introduce helper keywords
   - [AREA EFFECT] describes ongoing effects on an area and when they happen.
+- Seperated falvor text and mechanical ability description to make it more clear what the spell actually does.
+- Improve formatting for complex Abilities.
 
 #### Rename Hardness to Stability
 - Renamed in all Instances

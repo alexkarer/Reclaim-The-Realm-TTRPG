@@ -15,9 +15,17 @@
             },
             "cost": "3 [MP], 1 [AP]",
             "range": "[MELEE RANGE]",
-            "target": "1 creature that is 2 sizes larger than you",
+            "target": "1 creature that is at least 1 size larger than you",
             "duration": "[INSTANT]",
-            "description": "You attempt to climb up on a to deal more damage effectively. Make an [AGI] or [STR] Athletics [SKILL TEST] against the target’s [DODGE]. On a success you are now mounted on top of the creature which has the following effects.:<br>One hand is always occupied with holding on to the creature<br>Any [MELEE MARTIAL ATTACK] that is not a critical miss automatically hits the target and the required roll for a critical is 1 lower.<br>ou can’t be targeted by the creature you are currently on, on it’s turn however it can attempt to shake you of by spending 1 [AP] and you have to succeed on a [STABILITY] [SAVE] against the creature’s Melee Attack Bonus+10. On a fail you are thrown away a number of meters equal to the creatures [STR] and might recieve fall damage as a result."
+            "description": [ 
+                { "regularText": "[AGI] or [STR] Athletics [SKILL TEST] vs. [DODGE]. On success: you are now mounted on top of the creature which has the following effects:", "headerLine": null, "bulletPoints": null},
+                { "regularText": null, "headerLine": null, "bulletPoints": [
+                    "One hand is always occupied with holding on to the creature",
+                    "You have [ADVANTAGE] on any [MELEE ATTACK] against the target.",
+                    "You can’t be targeted by the creature you are currently on, on it’s turn however it can attempt to shake you of by spending 1 [AP] and you have to succeed on a [STABILITY] [SAVE] vs. 10 + creature [LEVEL]. On a fail: you are thrown away a creatures [STR] m."
+                ]} 
+            ],
+            "flavorText": [ ]
         },
         {
             "name": "Reactive Move",
@@ -36,7 +44,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "If a creature moves within 6m you can use this Ability and use instantly [AGI]/2 [MP].",
+            "description": [ { "regularText": "If a creature moves within 6m you can use this Ability and use instantly [AGI]/2 [MP].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "For each stamina used, you can move an extra 1.5 m."
@@ -59,7 +68,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT] or [TURN]",
-            "description": "Make a Move, during that move you can move vertically along moves. If at the end of your [TURN] you are not standing or holding on to anything, you are falling down.",
+            "description": [ { "regularText": "Make a Move, during that move you can move vertically along moves. If at the end of your [TURN] you are not standing or holding on to anything, you are falling down.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "If you use this Ability again during your [TURN] it only costs 1 [MP]."
@@ -82,7 +92,8 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "If an ally was hit by an [ATTACK] that is not a critical hit, you can use this Ability and take the hit yourself instead. Even if your [DODGE] is hgher than the [ATTACK] you are still hit, however if your [SHIELD BLOCK] is higher than it hits your shield instead.",
+            "description": [ { "regularText": "If an ally was hit by an [ATTACK] that is not a critical hit, you can use this Ability and take the hit yourself instead. Even if your [DODGE] is hgher than the [ATTACK] you are still hit, however if your [SHIELD BLOCK] is higher than it hits your shield instead.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "You can also use this ability when the [ATTACK] was a critical hit."
@@ -105,7 +116,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "Make a Jump Move and increase the jumping distance by an additional [STR] m for a long jump or [STR]/2 m for a high jump.",
+            "description": [ { "regularText": "Make a Jump Move and increase the jumping distance by an additional [STR] m for a long jump or [STR]/2 m for a high jump.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "Increase the distance by further [STR]/2 m for a long jump or [STR]/4 m for a high jump."
@@ -128,7 +140,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "Make a Jump Move and increase the jumping distance by an additional [STR] m for a long jump or [STR]/2 m for a high jump.",
+            "description": [ { "regularText": "Make a Jump Move and increase the jumping distance by an additional [STR] m for a long jump or [STR]/2 m for a high jump.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "Increase the distance by further [STR]/2 m for a long jump or [STR]/4 m for a high jump."
@@ -153,7 +166,8 @@
             "range": "9m (6 squares)",
             "target": "allied creatures within range that can hear you",
             "duration": "1 [ROUND]",
-            "description": "Gain [MARTIAL LEVEL] + [CHA] [THP]."
+            "description": [ { "regularText": "Gain [MARTIAL LEVEL] + [CHA] [THP].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Get Back in the Fight",
@@ -172,7 +186,8 @@
             "range": "6m (4 squares)",
             "target": "1 [UNCONCIOUS] allied creature, or one that is at Deaths' door.",
             "duration": "[INSTANT]",
-            "description": "Target regains [HP] equal to your [MARTIAL LEVEL] + [CHA] and target can stand up from [PRONE]."
+            "description": [ { "regularText": "Target regains [HP] equal to your [MARTIAL LEVEL] + [CHA] and target can stand up from [PRONE].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ],
     "fortitudeManeuvers": [
@@ -191,7 +206,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "You push yourself and grant yourself an extra 2 [AP] this [TURN], however next [TURN] you start with 2 [AP] less."
+            "description": [ { "regularText": "You push yourself and grant yourself an extra 2 [AP] this [TURN], however next [TURN] you start with 2 [AP] less.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ],
     "tacticalManeuvers": [
@@ -212,7 +228,8 @@
             "range": "12m (8 squares)",
             "target": "1 creature",
             "duration": "1 [ROUND]",
-            "description": "You form a plan to stop a creature from escaping, for the duration any Opportunity Attack of your allies against the target have [ADVANTAGE] and each time the target is hit by an [ATTACK] it loses 1 [MP] for it's next turn. Additionally any Disengage moves made by the target cost 1 additional [MP]."
+            "description": [ { "regularText": "You form a plan to stop a creature from escaping, for the duration any Opportunity Attack of your allies against the target have [ADVANTAGE] and each time the target is hit by an [ATTACK] it loses 1 [MP] for it's next turn. Additionally any Disengage moves made by the target cost 1 additional [MP].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Analyze Weakpoint",
@@ -231,7 +248,8 @@
             "range": "12m (8 squares)",
             "target": "1 creature",
             "duration": "[TURN]",
-            "description": "[INT] [MARTIAL TEST] vs. 15 + target [LEVEL]. On success: next [ATTACK] against creature made by you is automatically a critical hit."
+            "description": [ { "regularText": "[INT] [MARTIAL TEST] vs. 15 + target [LEVEL]. On success: next [ATTACK] against creature made by you is automatically a critical hit.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ],
     "weaponManeuvers": [
@@ -250,7 +268,8 @@
             "range": "Ranged Weapon 6m/12m/24m",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "[RANGED MARTIAL ATTACK]. On hit: deal medium [MARTIAL DAMAGE] physical damage. The shield afterwards bounces back.",
+            "description": [ { "regularText": "[RANGED MARTIAL ATTACK]. On hit: deal medium [MARTIAL DAMAGE] physical damage. The shield afterwards bounces back.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "If your [RANGED MARTIAL ATTACK] hits the first Target, it bounces towards another target within 4.5m of the orginal target, make a second [RANGED MARTIAL ATTACK] against that target."
@@ -271,7 +290,8 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack with a thrown Weapon, if [ATTACK] hits and exceeds or matches [STABILITY] push [STR] m away. If anything is blocking movement, the blocking target recieves half damage of the [ATTACK]."
+            "description": [ { "regularText": "Make a Weapon Attack with a thrown Weapon, if [ATTACK] hits and exceeds or matches [STABILITY] push [STR] m away. If anything is blocking movement, the blocking target recieves half damage of the [ATTACK].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Shield block",
@@ -288,7 +308,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you are hit by an [ATTACK] you can use this Ability and make that [ATTACK] hit the shields instead."
+            "description": [ { "regularText": "When you are hit by an [ATTACK] you can use this Ability and make that [ATTACK] hit the shields instead.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Parry stance",
@@ -305,7 +326,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "Each time you use the Parry Ability it doesn't use up your [REACTION]",
+            "description": [ { "regularText": "Each time you use the Parry Ability it doesn't use up your [REACTION]", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "Each [STAMINA] used grants you a +2 bonus to the [D20 TEST] when using the Parry Ability."

@@ -1,6 +1,6 @@
 <table class="table table-borderless">
     <tbody>
-        @for (ability of abilities; track $index) {
+        @for (ability of abilities(); track $index) {
             <tr>
                 <td class="p-0">
                     <app-ability-list-item [ability]="ability"></app-ability-list-item>

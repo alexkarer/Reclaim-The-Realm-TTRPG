@@ -216,7 +216,7 @@
         },
         "textElements": [
             {
-                "regularText": "Any [MARTIAL MELEE ATTACK] you make deals extra damage for every second meter you moved directly towards the target, this is calculated using the shortest path to the target.",
+                "regularText": "Any [MELEE MARTIAL ATTACK] you make deals extra damage for every second meter you moved directly towards the target, this is calculated using the shortest path to the target.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -236,7 +236,7 @@
         },
         "textElements": [
             {
-                "regularText": "When making a [MARTIAL RANGED ATTACK], when that target is within half range of the first range, you gain a +2 bonus to [ATTACK] and damage. This bonus increases to +4 when you reach [LEVEL] 7.",
+                "regularText": "When making a [RANGED MARTIAL ATTACK], when that target is within half range of the first range, you gain a +2 bonus to [ATTACK] and damage. This bonus increases to +4 when you reach [LEVEL] 7.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -256,7 +256,7 @@
         },
         "textElements": [
             {
-                "regularText": "At the start of your [TURN], you can choose to reduce your [MP] to 0 and choose to make Careful Shots, during which your [DODGE] is reduced by 5, but every [MARTIAL RANGED ATTACK] you make during this [TURN] has [ADVANTAGE].",
+                "regularText": "At the start of your [TURN], you can choose to reduce your [MP] to 0 and choose to make Careful Shots, during which your [DODGE] is reduced by 5, but every [RANGED MARTIAL ATTACK] you make during this [TURN] has [ADVANTAGE].",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -278,7 +278,7 @@
         },
         "textElements": [
             {
-                "regularText": "When you make a [MARTIAL RANGED ATTACK] you treat [LARGE COVER] as [MEDIUM COVER], [MEDIUM COVER] as [SMALL COVER], [SMALL COVER]] as no cover.",
+                "regularText": "When you make a [RANGED MARTIAL ATTACK] you treat [LARGE COVER] as [MEDIUM COVER], [MEDIUM COVER] as [SMALL COVER], [SMALL COVER]] as no cover.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null

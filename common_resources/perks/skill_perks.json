@@ -139,7 +139,8 @@
                     "range": "9m",
                     "target": "1 Creature",
                     "duration": "1 [ROUND]",
-                    "description": "Make a [CHA] Intimidation [SKILL TEST] vs. [WILLPOWER], On Success: Apply [FRIGHTENED I], On failure: Target is immune to this Ability for 1 hour."
+                    "description": [ { "regularText": "Make a [CHA] Intimidation [SKILL TEST] vs. [WILLPOWER], On Success: Apply [FRIGHTENED I], On failure: Target is immune to this Ability for 1 hour.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
                 }
             }
         ]

@@ -14,7 +14,8 @@
                 "range": "-",
                 "target": "self",
                 "duration": "[INSTANT]",
-                "description": "You move 1.5m (1 square), every second time you move diagonally during your [TURN] you have to spend an extra [MP]. Depending on your [SIZE] and other factors you might more distance."
+                "description": [ { "regularText": "You move 1.5m (1 square), every second time you move diagonally during your [TURN] you have to spend an extra [MP]. Depending on your [SIZE] and other factors you might more distance.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Jump",
@@ -26,7 +27,8 @@
                 "range": "-",
                 "target": "self",
                 "duration": "[INSTANT]",
-                "description": "You can jump up to your jumping distance. Opportunity attacks are only provoked from enemies who where in [MELEE RANGE] at the start of the Jump Move."
+                "description": [ { "regularText": "You can jump up to your jumping distance. Opportunity attacks are only provoked from enemies who where in [MELEE RANGE] at the start of the Jump Move.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Disengage",
@@ -38,7 +40,8 @@
                 "range": "-",
                 "target": "self",
                 "duration": "[INSTANT]",
-                "description": "You move 1.5m (1 square) away from an enemy without provoking an Opportunity Attack."
+                "description": [ { "regularText": "You move 1.5m (1 square) away from an enemy without provoking an Opportunity Attack.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Stand up",
@@ -50,7 +53,8 @@
                 "range": "-",
                 "target": "self",
                 "duration": "[INSTANT]",
-                "description": "You stand up from being [PRONE]."
+                "description": [ { "regularText": "You stand up from being [PRONE].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Dash",
@@ -62,7 +66,8 @@
                 "range": "-",
                 "target": "self",
                 "duration": "[INSTANT]",
-                "description": "You gain 2 + [AGI]/3 (rounded down) extra [MP] in your current [TURN]"
+                "description": [ { "regularText": "You gain 2 + [AGI]/3 (rounded down) extra [MP] in your current [TURN].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Running",
@@ -74,7 +79,16 @@
                 "range": "-",
                 "target": "self",
                 "duration": "1 [ROUND]",
-                "description": "Only possible as the first ability used this [TURN]. You can engage or sustain a Run which lasts until the start of your next [TURN] brings the following changes:<ul><li>Every time you use the Move Ability you can move an additional 3m which must be in a straight line.</li><li>Every consecetive move can only alter the direction by 45° unless 3 [MP] are used for the Move used upon which the direction can be altered by 90°. Or alternativly 4 [MP] can be used to stop early.</li><li>During a Run [AP] can only be used for Dash, any other actions allow permissions by the GM, additionally someone running can't use Opportunity Attacks</li><li>While Running you recieve a +5 bonus to your [DODGE] and a -5 penalty to your [STABILITY].</li></ul>"
+                "description": [ 
+                    { "regularText": "nly possible as the first ability used this [TURN]. You can engage or sustain a Run which lasts until the start of your next [TURN] brings the following changes:", "headerLine": null, "bulletPoints": null},
+                    { "regularText": null, "headerLine": null, "bulletPoints": [
+                        "Every time you use the Move Ability you can move an additional 3m which must be in a straight line.",
+                        "Every consecetive move can only alter the direction by 45° unless 3 [MP] are used for the Move used upon which the direction can be altered by 90°. Or alternativly 4 [MP] can be used to stop early.",
+                        "During a Run [AP] can only be used for Dash, any other actions allow permissions by the GM, additionally someone running can't use Opportunity Attacks",
+                        "While Running you recieve a +5 bonus to your [DODGE] and a -5 penalty to your [STABILITY]."
+                    ]} 
+                ],
+                "flavorText": [ ]
             }
         ],
         "movingOutOfMeleeRange": "If you are within [MELEE RANGE] of a creature they are able to make an Opportunity Attack (see below) unless stated otherwise.",
@@ -93,7 +107,8 @@
                 "range": "[WEAPON RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "Make a [MELEE MARTIAL ATTACK] against a creature using any bonuses your weapon provides. On a hit it recieves damage depending on your [MARTIAL DAMAGE] and relevant Weapon."
+                "description": [ { "regularText": "Make a [MELEE MARTIAL ATTACK] against a creature using any bonuses your weapon provides. On a hit it recieves damage depending on your [MARTIAL DAMAGE] and relevant Weapon.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Unarmored Attack",
@@ -105,7 +120,8 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "You make a [MELEE MARTIAL ATTACK] against that target, on a hit the target recieves your light [MARTIAL DAMAGE]."
+                "description": [ { "regularText": "You make a [MELEE MARTIAL ATTACK] against that target, on a hit the target recieves your light [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Improvised Missile Attack",
@@ -117,7 +133,8 @@
                 "range": "3m/6m/12m",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "You can try and use a small object like a small rock or bottle as an improvised thrown weapon. Make a [RANGED MARTIAL ATTACK] using the following range: 6m/12m/24m. On a hit the Damage is equal to your light [MARTIAL DAMAGE]."
+                "description": [ { "regularText": "You can try and use a small object like a small rock or bottle as an improvised thrown weapon. Make a [RANGED MARTIAL ATTACK] using the following range: 6m/12m/24m. On a hit the Damage is equal to your light [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Desperate Attack",
@@ -129,7 +146,8 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "Make a [MELEE MARTIAL ATTACK] against a creature. On a hit it recieves physical damage equal to your medium [MARTIAL DAMAGE] but you yourself additionally suffer half that damage and that damage can't be reduced in any way."
+                "description": [ { "regularText": "Make a [MELEE MARTIAL ATTACK] against a creature. On a hit it recieves physical damage equal to your medium [MARTIAL DAMAGE] but you yourself additionally suffer half that damage and that damage can't be reduced in any way.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             }
         ]
     },
@@ -146,7 +164,8 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 willing [UNCONCIOUS] creature",
                 "duration": "[INSTANT]",
-                "description": "You help that target back up, removing the unconcious or sleeping condition from the target and also helping it stand up from [PRONE]. If the target was unconcious as the result having dropped to 0 [HP] the target also has to spend 1 [STAMINA] to return to 1 [HP]."
+                "description": [ { "regularText": "You help that target back up, removing the unconcious or sleeping condition from the target and also helping it stand up from [PRONE]. If the target was unconcious as the result having dropped to 0 [HP] the target also has to spend 1 [STAMINA] to return to 1 [HP].", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Shove",
@@ -158,7 +177,8 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "You make a [STR] [MARTIAL TEST]  against the targets [STABILITY] or [DODGE] (targets choice) and on a success you can either choose to drop the target [PRONE] or push it away a number of meters equal to your [STR] (min 1.5m)"
+                "description": [ { "regularText": "You make a [STR] [MARTIAL TEST]  against the targets [STABILITY] or [DODGE] (targets choice) and on a success you can either choose to drop the target [PRONE] or push it away a number of meters equal to your [STR] (min 1.5m).", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Grapple",
@@ -170,7 +190,8 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "-d",
-                "description": "Provided you have one free hand make a [STR] [MARTIAL TEST] against the Creatures [DODGE] or [STABILITY] (targets choice), on a success that creature is now [RESTRAINED I] by you."
+                "description": [ { "regularText": "Provided you have one free hand make a [STR] [MARTIAL TEST] against the Creatures [DODGE] or [STABILITY] (targets choice), on a success that creature is now [RESTRAINED I] by you.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Small environment interaction",
@@ -182,7 +203,8 @@
                 "range": "[MELEE RANGE]",
                 "target": "-",
                 "duration": "[INSTANT]",
-                "description": "You make a quick interaction with the enviroment or a small object which can include the following: pick up small item, open/close a door, press a switch or pull a lever, stow and equip a weapon or item."
+                "description": [ { "regularText": "You make a quick interaction with the enviroment or a small object which can include the following: pick up small item, open/close a door, press a switch or pull a lever, stow and equip a weapon or item.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Larger environment interaction",
@@ -194,7 +216,8 @@
                 "range": "[MELEE RANGE]",
                 "target": "",
                 "duration": "[INSTANT]",
-                "description": "You make a larger or more complicated interaction with the enviroment or a object which can include the following: push heavy object, pick a lock, disarm a trap."
+                "description": [ { "regularText": "You make a larger or more complicated interaction with the enviroment or a object which can include the following: push heavy object, pick a lock, disarm a trap.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             },
             {
                 "name": "Hide",
@@ -206,7 +229,8 @@
                 "range": "-",
                 "target": "[SELF]",
                 "duration": "[INSTANT]",
-                "description": "If you are at least partially concealed from other creatures, you can use this Ability. Make a [AGI] Stealth [SKILL TEST]. If that [SKILL TEST] is higher than the passive [PER] Awareness of every hostile creature that has partial visibility on you. You gain [PARTIAL CONCEALMENT]. This stops as soon any creature gains full visiblity on you, you move faster than half your speed or you use any ability that reveals your presence to enemies."
+                "description": [ { "regularText": "If you are at least partially concealed from other creatures, you can use this Ability. Make a [AGI] Stealth [SKILL TEST]. If that [SKILL TEST] is higher than the passive [PER] Awareness of every hostile creature that has partial visibility on you. You gain [PARTIAL CONCEALMENT]. This stops as soon any creature gains full visiblity on you, you move faster than half your speed or you use any ability that reveals your presence to enemies.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             }
         ]
     },
@@ -223,7 +247,8 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": "If a creature that is not under the effect of concleament leaves your melee range with a move, you can make a Melee [ATTACK] against them."
+                "description": [ { "regularText": "If a creature that is not under the effect of concleament leaves your melee range with a move, you can make a Melee [ATTACK] against them.", "headerLine": null, "bulletPoints": null} ],
+                "flavorText": [ ]
             }
         ]
     },

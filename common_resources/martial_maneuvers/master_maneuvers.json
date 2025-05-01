@@ -17,7 +17,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You can move towards a target location using [MP] as normal. Make a [AGI] [MARTIAL TEST] vs. [DODGE]. On sucess: until you stopped moving and performed 1 other Ability or your [TURN] ends, other creatures can't use a [REACTION] against you,. "
+            "description": [ { "regularText": "You can move towards a target location using [MP] as normal. Make a [AGI] [MARTIAL TEST] vs. [DODGE]. On sucess: until you stopped moving and performed 1 other Ability or your [TURN] ends, other creatures can't use a [REACTION] against you.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Afterimage",
@@ -36,7 +37,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[ROUND]",
-            "description": "The next time you are hit by an [ATTACK], it automatically misses.",
+            "description": [ { "regularText": "The next time you are hit by an [ATTACK], it automatically misses.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "For each extra [STAMINA] used it works against 1 additional [ATTACK]."
@@ -61,7 +63,8 @@
             "range": "[MELEE RANGE]",
             "target": "1 targed affected by [RESTRAINED I] caused by you",
             "duration": "[INSTANT]",
-            "description": "[STR] [MARTIAL TEST] vs [TOUGHNESS] or [STABILITY] (targets choice). On success: recieve 5 * light [MARTIAL DAMAGE] phyiscal damage. On fail: half damage.",
+            "description": [ { "regularText": "[STR] [MARTIAL TEST] vs [TOUGHNESS] or [STABILITY] (targets choice). On success: recieve 5 * light [MARTIAL DAMAGE] phyiscal damage. On fail: half damage.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "For each 1 [STAMINA] increase the damage on a success by your light [MARTIAL DAMAGE] phyiscal damage."
@@ -86,7 +89,8 @@
             "range": "",
             "target": "",
             "duration": "",
-            "description": "",
+            "description": [ { "regularText": "", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "",
                 "pushingDescription": ""
@@ -111,7 +115,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "If you would be reduced to 0 [HP] you can use this ability and instead drop to 1 [HP]."
+            "description": [ { "regularText": "If you would be reduced to 0 [HP] you can use this ability and instead drop to 1 [HP].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ],
     "tacticalManeuvers": [
@@ -132,7 +137,8 @@
             "range": "12m",
             "target": "1 creature",
             "duration": "[ROUND]",
-            "description": "[INT] [MARTIAL TEST] vs. 10 + target [LEVEL] + [INT]. On success: the GM has to tell you exactly what non-standard abilities it intends to perform and where it intends to move. On the creatures next [TURN] it has to perform these exact abilities to it's best ability. On fail: the GM only tells you 1 ability.",
+            "description": [ { "regularText": "[INT] [MARTIAL TEST] vs. 10 + target [LEVEL] + [INT]. On success: the GM has to tell you exactly what non-standard abilities it intends to perform and where it intends to move. On the creatures next [TURN] it has to perform these exact abilities to it's best ability. On fail: the GM only tells you 1 ability.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "Make the [MARTIAL TEST] with [ADVANTAGE]."
@@ -155,7 +161,8 @@
             "range": "[WEAPON RANGE]",
             "target": "one creature",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack against [TOUGHNESS]. On hit: 5 * [MARTIAL DAMAGE] physical damage. On Success: score a critical hit.",
+            "description": [ { "regularText": "Make a Weapon Attack against [TOUGHNESS]. On hit: 5 * [MARTIAL DAMAGE] physical damage. On Success: score a critical hit.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "For each 1 [STAMINA] increase the damage on a success by your heavy [MARTIAL DAMAGE]."
@@ -176,7 +183,8 @@
             "range": "[MELEE RANGE]",
             "target": "one creature",
             "duration": "[INSTANT]",
-            "description": "Make a Weapon Attack against one target a number of times equal to your [MARTIAL LEVEL]."
+            "description": [ { "regularText": "Make a Weapon Attack against one target a number of times equal to your [MARTIAL LEVEL].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         }
     ]
 }

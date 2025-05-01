@@ -121,7 +121,7 @@ export class HybridAbilitiesSearchComponent {
     let text = this.currentFilterText.toLocaleLowerCase();
     return spell.name.toLocaleLowerCase().includes(text) || 
       spell.tags.find(tag => tag.toLocaleLowerCase().includes(text)) !== undefined ||
-      spell.description.toLocaleLowerCase().includes(text);
+      spell.description.find(desc => desc.regularText?.toLocaleLowerCase().includes(text)) !== undefined;
   }
 }
 

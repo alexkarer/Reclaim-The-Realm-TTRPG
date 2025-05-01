@@ -401,7 +401,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you are hit by an [ATTACK] you can use this Ability and reduce the damage by 5+[LEVEL]+[SPI]"
+            "description": [ { "regularText": "When you are hit by an [ATTACK] you can use this Ability and reduce the damage by 5+[LEVEL]+[SPI].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ { "regularText": "Your entity partially manifests to shield you from danger.", "headerLine": null, "bulletPoints": null} ]
         },
         {
             "name": "Eldrtich Blast",
@@ -411,7 +412,8 @@
             "range": "21m",
             "target": "1 Creature",
             "duration": "1 [ROUND]",
-            "description": "[RANGED SPELL ATTACK] against [TOUGHNESS]. On hit: (1 + [SPI]/2) * d6 entity damage. On success: apply one of the follwing: [CURSED I], [WEAKENED I], [VULNURABLE I]."
+            "description": [ { "regularText": "[RANGED SPELL ATTACK] against [TOUGHNESS]. On hit: (1 + [SPI]/2) * d6 entity damage. On success: apply one of the follwing: [CURSED I], [WEAKENED I], [VULNURABLE I].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Corrupted Energy Reserve",
@@ -421,7 +423,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You immediatly gain one of 1 [ARCANA], 1 [STAMINA], [SPI]+[LEVEL] [HP]."
+            "description": [ { "regularText": "You immediatly gain one of 1 [ARCANA], 1 [STAMINA], [SPI]+[LEVEL] [HP].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Push beyond mortal means",
@@ -431,7 +434,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You gain 2 extra [AP] this [TURN]. You can't use this ability more than once per [ROUND]."
+            "description": [ { "regularText": "You gain 2 extra [AP] this [TURN]. You can't use this ability more than once per [ROUND].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Elemental Enchantment",
@@ -441,7 +445,8 @@
             "range": "-",
             "target": "1 Weapon you are wielding",
             "duration": "2 + [LEVEL] [ROUND]",
-            "description": "One Weapon you are wielding is enchanted with the Element of you Entity. Each time you make a Weapon Attack with that Weapon you deal an extra d8 entity damage. For each additional Corruption used, your weapon will deal an additional d8 entity damage."
+            "description": [ { "regularText": "One Weapon you are wielding is enchanted with the Element of you Entity. Each time you make a Weapon Attack with that Weapon you deal an extra d8 entity damage. For each additional Corruption used, your weapon will deal an additional d8 entity damage.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Elemental Curse",
@@ -451,7 +456,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "2 + [LEVEL] [ROUND]",
-            "description": "If you hit a target with an [ATTACK] or a damaging Ability, you can use this Ability. The target suffers an additional status effect depending on your Entity.<br>Fire: [BURNING I], Earth: [POISON I], Water: [RESTRAINED I] (no DT), Air: [DISTRACTED]."
+            "description": [ { "regularText": "If you hit a target with an [ATTACK] or a damaging Ability, you can use this Ability. The target suffers an additional status effect depending on your Entity.<br>Fire: [BURNING I], Earth: [POISON I], Water: [RESTRAINED I] (no DT), Air: [DISTRACTED].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Life Steal",
@@ -461,7 +467,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you make [MELEE MARTIAL ATTACK] or [MELEE SPELL ATTACK] you can use this Ability. You deal an extra d8 + ([LEVEL]/4) d8 entity damage. You then regain [HP] equal to the amount of entity damage you dealt."
+            "description": [ { "regularText": "When you make [MELEE MARTIAL ATTACK] or [MELEE SPELL ATTACK] you can use this Ability. You deal an extra d8 + ([LEVEL]/4) d8 entity damage. You then regain [HP] equal to the amount of entity damage you dealt.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Manifest Aspect",
@@ -471,7 +478,8 @@
             "range": "6m",
             "target": "Unnocpuied Space",
             "duration": "2 + [LEVEL] [ROUND]",
-            "description": "You summon a creature of the same type as your Entity to aid you in combat. The creature has [HP] equal to 10 * your [LEVEL] and uses your [ATTACK] bonuses and deals damage as described in the Statblock. For the defenses and attributes it uses your values slightly modified as described also in the Statblock. In each of your [TURN] you can use 1 [AP] to direct the creature and use one of it's Abilities."
+            "description": [ { "regularText": "You summon a creature of the same type as your Entity to aid you in combat. The creature has [HP] equal to 10 * your [LEVEL] and uses your [ATTACK] bonuses and deals damage as described in the Statblock. For the defenses and attributes it uses your values slightly modified as described also in the Statblock. In each of your [TURN] you can use 1 [AP] to direct the creature and use one of it's Abilities.", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ]
         },
         {
             "name": "Entity Cast",
@@ -481,7 +489,15 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you cast a Spell of a Discipline associated with your Entity, you can use this Ability. For each Corruption used you can choose one effect:<br>Reduce [ARCANA] cost by 2.<br>Reduce [AP] Cost by 1 (to a minimum of 1).<br>Treat your [SPI] 3 higher for the purposes of casting this Spell."
+            "description": [ 
+                { "regularText": "When you cast a Spell of a Discipline associated with your Entity, you can use this Ability. For each Corruption used you can choose one effect. you can't choose the same effect multiple times:", "headerLine": null, "bulletPoints": null},
+                { "regularText": null, "headerLine": null, "bulletPoints": [
+                    "Reduce [ARCANA] cost by 2 (minimum of 1).",
+                    "Reduce [AP] Cost by 1 (to a minimum of 1).",
+                    "Treat your [SPI] 3 higher for the purposes of casting this Spell."
+                ]}
+            ],
+            "flavorText": [ ]
         },
         {
             "name": "Partial Transformation: Body",
@@ -491,7 +507,16 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 minute",
-            "description": "Increase your [MARTIAL DAMAGE] as if your relevant Attribute was 2 higher, Increase your [STABILITY] and [TOUGHNESS] by 3, Gain 2 extra [MP]. Only one Transformantion Class Technique can be used per [TURN]."
+            "description": [ 
+                { "regularText": "You partially transform, while Transformation is active you gain the following benefits:", "headerLine": null, "bulletPoints": null},
+                { "regularText": null, "headerLine": null, "bulletPoints": [
+                    "Increase your [MARTIAL DAMAGE] as if your relevant Attribute was 2 higher",
+                    "Increase your [STABILITY] and [TOUGHNESS] by 3",
+                    " Gain 2 extra [MP]."
+                ]},
+                { "regularText": "Only one Transformantion Class Technique can be used per [TURN].", "headerLine": null, "bulletPoints": null}
+            ],
+            "flavorText": [ ]
         },
         {
             "name": "Partial Transformation: Mind",
@@ -501,7 +526,16 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 minute",
-            "description": "Increase [WILLPOWER] by 3, Gain a +3 bonus to any [SPELL TEST] and [SPELL CAST TEST]. Only one Transformantion Class Technique can be used per [TURN]."
+            "description": [ 
+                { "regularText": "You partially transform, while Transformation is active you gain the following benefits:", "headerLine": null, "bulletPoints": null},
+                { "regularText": null, "headerLine": null, "bulletPoints": [
+                    "Increase [WILLPOWER] by 3",
+                    "Gain a +3 bonus to any [SPELL TEST] and [SPELL CAST TEST].",
+                    "Treat your [SPI] 2 higher when casting a spell.."
+                ]},
+                { "regularText": "Only one Transformantion Class Technique can be used per [TURN].", "headerLine": null, "bulletPoints": null}
+            ],
+            "flavorText": [ ]
         },
         {
             "name": "Partial Transformation: Senses",
@@ -511,7 +545,17 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 minute",
-            "description": "Increase [DODGE] by 3. Gain +3 bonus to any [ATTACK], you ignore [PARTIAL CONCEALMENT] [FULL CONCEALMENT] against creatures that are within [LEVEL] m. Only one Transformantion Class Technique can be used per [TURN]."
+            "description": [ 
+                { "regularText": "You partially transform, while Transformation is active you gain the following benefits:", "headerLine": null, "bulletPoints": null},
+                { "regularText": null, "headerLine": null, "bulletPoints": [
+                    "Increase [DODGE] by 3",
+                    "Gain +3 bonus to any [ATTACK]",
+                    "you ignore [PARTIAL CONCEALMENT] [FULL CONCEALMENT] against creatures that are within [LEVEL] m.",
+                    "All other partial transformation bonuses remain active as long this ability lasts."
+                ]},
+                { "regularText": "Only one Transformantion Class Technique can be used per [TURN].", "headerLine": null, "bulletPoints": null}
+            ],
+            "flavorText": [ ]
         },
         {
             "name": "Full Transformation",
@@ -521,7 +565,17 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "-",
-            "description": "Requires all 3 partial transformations to be done. Your creature type changes to match your entity (Elemental, Cosmic). Increase your [AP] by 1. You halve all damage you recieve (before any other resistances are applied). All other partial transformation bonuses remain active as long this ability lasts. Requires you to spend 1 Corruption at the start of each of your [TURN] for this ability to remain active. Only one Transformantion Class Technique can be used per [TURN]."
+            "description": [ 
+                { "regularText": "Requires all 3 partial transformations to be done. Once used requires you to spend 1 Corruption at the start of each of your [TURN] for this ability to remain active. While it remains active you gain the following benefits:", "headerLine": null, "bulletPoints": null},
+                { "regularText": null, "headerLine": null, "bulletPoints": [
+                    "Your creature type changes to match your entity (Elemental or Cosmic).",
+                    "Increase your [AP] by 1",
+                    "You halve all damage you recieve (before any other resistances are applied).",
+                    "All other partial transformation bonuses remain active as long this ability lasts."
+                ]},
+                { "regularText": "Only one Transformantion Class Technique can be used per [TURN]. After this transformation ends all other transformations cease to be active.", "headerLine": null, "bulletPoints": null}
+            ],
+            "flavorText": [ { "regularText": "", "headerLine": null, "bulletPoints": null} ]
         }
     ]
 }

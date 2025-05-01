@@ -214,7 +214,7 @@
             "relatedClassPath": null,
             "textElements": [
                 {
-                    "regularText": "You now can gain Rage on additional time per [ROUND] when making a [MARTIAL MELEE ATTACK] or recieving Damage.",
+                    "regularText": "You now can gain Rage on additional time per [ROUND] when making a [MELEE MARTIAL ATTACK] or recieving Damage.",
                     "headerLine": null,
                     "bulletPoints": null,
                     "ability": null
@@ -308,7 +308,7 @@
                     "regularText": null,
                     "headerLine": null,
                     "bulletPoints": [
-                        "<span class=\"fw-bold\">Fire: </span>The Aura increases to 6m and in addition to setting a target on fire after a successful [MELEE MARTIAL ATTACK] they trigger a firey explosion in a 3m radius around the target that hits every creature except you with the area. If the attack is higher than the creatures [DODGE] they take fire damage equal to 2d6 + Rage [HALF] .",
+                        "<span class=\"fw-bold\">Fire: </span>The Aura increases to 6m and in addition to setting a target on fire after a successful [MELEE MARTIAL ATTACK] they trigger a firey explosion in a 3m radius around the target that hits every creature except you with the area. If the attack is higher than the creatures [DODGE] they take fire damage equal to 2d6 + Rage.",
                         "<span class=\"fw-bold\">Earth: </span>The Aura increases to 6m and poisonous mist is additionally swirling around you decreasing the [TOUGHNESS] of enemies within the area by half your Rage.",
                         "<span class=\"fw-bold\">Water: </span>The Aura increases to 6m and a small snowstorm or maelstrom swirls around you decreasing the [DODGE] of enemies within the area by half your Rage.",
                         "<span class=\"fw-bold\">Air: </span>The Aura increases to 6m and now 3 lightning strikes appear after each [MELEE MARTIAL ATTACK] but they can’t strike the same target twice."
@@ -328,7 +328,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "After successfully making a [MELEE MARTIAL ATTACK] you deal 1d6+([LEVEL]/6)*d6 bonus physical damage per Rage spent."
+            "description": [ { "regularText": "After successfully making a [MELEE MARTIAL ATTACK] you deal 1d6+([LEVEL]/6)*d6 bonus physical damage per Rage spent.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Armor of Fury",
@@ -338,7 +339,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "1 [ROUND]",
-            "description": "You gain [CON]+[LEVEL] [THP] for every Rage you spend."
+            "description": [ { "regularText": "You gain [CON]+[LEVEL] [THP] for every Rage you spend.", "headerLine": null, "bulletPoints": null } ]
         },
         {
             "name": "Furious Charge",
@@ -348,7 +349,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You use the Dash Ability, every time this ability is used again in the same turn, the Rage cost is increased by 1."
+            "description": [ { "regularText": "You use the Dash Ability, every time this ability is used again in the same turn, the Rage cost is increased by 1.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Walk it off",
@@ -358,7 +360,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "You can remove one Tier I Status Effect effecting you. When using 2 [AP] and 4 Rage you can end a Tier II Status Effect. When using 3 [AP] and 8 Rage you can end a Tier III Status Effect."
+            "description": [ { "regularText": "You can remove one Tier I Status Effect effecting you. When using 2 [AP] and 4 Rage you can end a Tier II Status Effect. When using 3 [AP] and 8 Rage you can end a Tier III Status Effect.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Rage fueled Maneuver",
@@ -368,7 +371,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "When you perform a Martial Maneuver instead of it using your [STAMINA] you can alternatively spend 2 Rage per 1 [STAMINA] cost."
+            "description": [ { "regularText": "When you perform a Martial Maneuver instead of it using your [STAMINA] you can alternatively spend 2 Rage per 1 [STAMINA] cost.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Reckless Headbutt",
@@ -378,7 +382,8 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "2 [ROUND]",
-            "description": "[MELEE MARTIAL ATTACK] against [TOUGHNESS]. On hit: light [MARTIAL DAMAGE] physical damage. On success: apply [STUNNED I]. On fail: apply [STUNNED I] on yourself."
+            "description": [ { "regularText": "[MELEE MARTIAL ATTACK] against [TOUGHNESS]. On hit: light [MARTIAL DAMAGE] physical damage. On success: apply [STUNNED I]. On fail: apply [STUNNED I] on yourself.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Violent Leap",
@@ -388,7 +393,8 @@
             "range": "[MELEE RANGE]",
             "target": "all creatures",
             "duration": "[INSTANT]",
-            "description": "After you ended a Jump Move or land otherwise you can use this Ability. Make a [STR] [MARTIAL TEST] vs. [STABILITY]. On success: knock [PRONE]."
+            "description": [ { "regularText": "After you ended a Jump Move or land otherwise you can use this Ability. Make a [STR] [MARTIAL TEST] vs. [STABILITY]. On success: knock [PRONE].", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Adrenaline Rush",
@@ -405,7 +411,8 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": "If you kill an enemy with a [MELEE MARTIAL ATTACK] , you can use this ability to instantly gain 2 [AP]. You can only use this ability once per turn and only during your turn."
+            "description": [ { "regularText": "If you kill an enemy with a [MELEE MARTIAL ATTACK] , you can use this ability to instantly gain 2 [AP]. You can only use this ability once per turn and only during your turn.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Violent Reprisal",
@@ -422,7 +429,8 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature*",
             "duration": "[INSTANT]",
-            "description": "If loose [HP] from a creature within range you can loose this Ability. Make a Weapon Attack against that creature and on a hit deal extra damage equal to [HP] just lost."
+            "description": [ { "regularText": "If loose [HP] from a creature within range you can loose this Ability. Make a Weapon Attack against that creature and on a hit deal extra damage equal to [HP] just lost.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         },
         {
             "name": "Primal Roar",
@@ -439,7 +447,8 @@
             "range": "-",
             "target": "[CONE] 7.5m",
             "duration": "1 [ROUND]",
-            "description": "[CON] [MARTIAL TEST] vs. [TOUGHNESS]. On success: 2*[CON]*d6 sonic damage and [DEFAENED]. On fail: half damage."
+            "description": [ { "regularText": "[CON] [MARTIAL TEST] vs. [TOUGHNESS]. On success: 2*[CON]*d6 sonic damage and [DEFAENED]. On fail: half damage.", "headerLine": null, "bulletPoints": null } ],
+            "flavorText": [ ]
         }
     ]
 }
