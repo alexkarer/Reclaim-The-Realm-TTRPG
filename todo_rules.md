@@ -18,7 +18,8 @@ ____________________________________________________________
 - have another look at the implementation of the martial training perks
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?
-
+- rename class names to be more inline with the world?
+- rework origin to be more inline with in universe (consider riftlands)
 ____________________________________________________________
 ### Planned changes after Playtest:
 
@@ -29,25 +30,28 @@ ____________________________________________________________
 - Implement similar system for Spell Damage maybe ish
 - Properly rework Hybrid Abilities, they deserve to stay.
 - Shields?
-- remove unncessesarry core abilities
+- add mental damage table
 
 **Smaller Mechanical Changes**
-- Permanent Injuries should only trigger when reduced to 0 [HP] or at Deaths Door.
 - Spell Keywords need to be reworked
 - Rewrite perks that have poor ability rendering/formatting
 
 **Ability Simplifications**
-- Treat Mechanical Text and Flavour Text seperatly. (abilities should have the textelements for better formatting)
 
 **Character Changes**
-- reduce initial attribute points (maybe 10?)
 - Remove Class Features and maybe instead have Class Perks, which can be taken instead of Perks, this includes regular class features as well as class paths.
+  - For this they will need 1 additional Perk at the start probably.
 - Class will only have Class Core Feature which improves at level 4/8/12
 - For this the Class Core Feature needs to be special and unique (see notes below)
-- Should the Class Names Change more to match the Fantasy World?
-- Improve the Character Origins to be more in theme with the world, especially they should have motivation for going into the Riftlands.
 - warlock: rename mystic something else
-- reduce number of attribute points to 10 maybe
+
+**Class Changes**
+- Mage, rework the way spell keywords interact with core ability
+- Fighter:
+  - complete rework of core ability
+  - Maybe fighter only has a focus target (oath of moment style) ability and all class techniques are based of that Or maybe fighter can select different stances: Horde Breaker, Beast slayer, Tank and your class techniques change depending on that, you gain Focus 1 per Round and your stance changes how much you gain additionally.****
+- Rogue:
+  - complete rework of core ability
 
 **Specific Changes**
 - adjust travel text since speed is constant.
@@ -108,17 +112,6 @@ Differnt way of gaining new abilities or features, the players can pick one and 
 - add missing keyword descritpions
 - proper phrasing of some stuff in the combat
 
-**Classes**
-- barbarian nerf resentful strike, should be d6 bonus damage.
-  - generally rewrite lots of the barbarian rules
-- add missing stuff
-- warlock definitly still needing lots of fleshing out
-- Make class core abilities more unique:
-  - Cleric, Warlock, Barbarian and Mage I am pretty happy
-  - Fighter and Rogue need to feel more different.
-  - Maybe fighter only has a focus target (oath of moment style) ability and all class techniques are based of that Or maybe fighter can select different stances: Horde Breaker, Beast slayer, Tank and your class techniques change depending on that, you gain Focus 1 per Round and your stance changes how much you gain additionally.
-  - Rogue?
-
 **Equipment**
 - other useful items, books that give bonuses to lore checks (treats skill as 1 rank higher, can only be affected by [INT]/3 amount of books at the same time, no skill twice)
 - magic item rules
@@ -148,6 +141,8 @@ Differnt way of gaining new abilities or features, the players can pick one and 
 - Have all Abilities in the Same Place but in separate columns 
 - Show encumbermance in equipment
 - passive Awareness
+- place for permanent injury
+- easy way to record character origin
 
 **Tollbox Things to Add**
 - Chase!

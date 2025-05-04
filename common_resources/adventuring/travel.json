@@ -1,7 +1,7 @@
 {
     "overlandMovement": {
         "overlandMovementDescription": "During their adventures characters will likey have to cover large distances and depending on their characteristics they are more or less effective at travelling.",
-        "travelSpeedDescription": "Generally the party moves at a travel speed equal to the slowest party member. Generally a character moves an number of kilometers per hour equal to the Characters [MP] . But depending on how fast they want to move, the travel speed of a character is augmented the following way:",
+        "travelSpeedDescription": "The Travel speed of the party depends on the pace they are choosing but can also modified depending on the Terain they are on. The travel speed of a party can't be reduced below 1 km/h regardless of terrain and pace.",
         "travelModeTable": [
             {
                 "travelMode": "Careful Approach",
@@ -19,7 +19,7 @@
                 "additionalInformation": "+1 [STAMINA] Cost per Hour"
             }
         ],
-        "travelDurationPerDayDescription": "Travelling vast distances by foot can be very taxing for the characters. The first 4+ ([CON]/2) hours a character travels doesn't cost any [STAMINA]. Afterwards each hour travelled costs 1 [STAMINA]",
+        "travelDurationPerDayDescription": "Travelling vast distances by foot can be very taxing for the characters. The first 4 + ([CON]/2) hours a character travels doesn't cost any [STAMINA]. Afterwards each hour travelled costs 1 [STAMINA]",
         "travelDurationPerDayDescriptionExtension": "If a character is out of [STAMINA] they can alternatively still travel the distance but they gain 1 point of exhaustion. Additionally after completing a Long Rest the Travel costs resets and it starts from the beginning again."
     },
     "terrain": {
@@ -28,7 +28,7 @@
         "terrainTravelTable": [
             { "terrain": "Plains", "terrainModifiers": "-" },
             { "terrain": "Coastal", "terrainModifiers": "-" },
-            { "terrain": "Forest", "terrainModifiers": "-2 to the Travel Speed" },
+            { "terrain": "Forest", "terrainModifiers": "-1 to the Travel Speed" },
             { "terrain": "Hill", "terrainModifiers": "-1 to the Travel Speed, +1 [STAMINA] Cost per Hour travelled" },
             { "terrain": "Mountain", "terrainModifiers": "-3 to the Travel Speed, +1 [STAMINA] Cost per Hour travelled" },
             { "terrain": "Desert", "terrainModifiers": "-1 to the Travel Speed" },

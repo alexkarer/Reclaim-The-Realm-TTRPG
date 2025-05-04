@@ -22,8 +22,13 @@ Removed the following core abilities to simplify:
 
 #### Minor Changes
 - differentiate between [FREE] and 0 [AP] on every relevant ability ([FREE] can be used outside of the [TURN] where as 0 [AP] can not.)
+- reduced Charcacter Attribute points ons creation to 10.
+- only trigger deaths door when being reduced to 0 [HP].
 
 ### Classes
+
+#### Fighter & Mage &  Rogue
+- Temporarily remove until reworked
 
 #### Warlock
 - rework eldrich blast slightly
@@ -96,6 +101,7 @@ Removed the following core abilities to simplify:
 - Introduced Keywords for all circumstancal combat abilities and additionally reword circumstances to make intent more clearer
 - make use of the [DR] (Damage Resistance) Keyword everywhere
 - Add new keyword [AREA] to simplify abilities
+- Adjust Travel Text
 
 ---
 
