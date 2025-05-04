@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Skill } from '../../../../../../common_resources/skills/skill';
 
 @Component({
@@ -9,5 +9,5 @@ import { Skill } from '../../../../../../common_resources/skills/skill';
 })
 export class SkillListComponent {
 
-  @Input() public skills?: Skill[];
+  public skills = input<Skill[]>([]);
 }

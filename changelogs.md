@@ -15,10 +15,10 @@ An Attack now has 4 different results:
 - regular hit: full damage
 - ciritcal hit: full damage + every damage dice rolled twice
 
-#### Remvoved Core Abilities
-Removed the following core abilities to simplify:
+#### Remvoved Standard Abilities
+Removed the following standard abilities to simplify:
 - parry (now only martial maneuver)
-- graceful landing
+- graceful landing, too niche
 
 #### Minor Changes
 - differentiate between [FREE] and 0 [AP] on every relevant ability ([FREE] can be used outside of the [TURN] where as 0 [AP] can not.)
@@ -27,13 +27,22 @@ Removed the following core abilities to simplify:
 
 ### Classes
 
-#### Fighter & Mage &  Rogue
+### Removed Class Features
+- Classes don't have features anymore besides the Core Feature.
+- Other Class Features have noe been split up into Class Perks, spearte Perks only the Class has access to.
+
+#### Fighter & Mage & Rogue
 - Temporarily remove until reworked
 
 #### Warlock
 - rework eldrich blast slightly
+- renamed Mystic to Mutant Mage to prevent overlap with Priesat
+- Split up Mutations into separate Class Perks.
 
 ### Perks
+
+#### Class Perks
+- Added Class Perks
 
 #### Momentum
 - clarify it is only direct distance and only deal extra damage equalto every second meter moved.

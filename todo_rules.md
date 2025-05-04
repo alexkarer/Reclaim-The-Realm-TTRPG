@@ -39,11 +39,7 @@ ____________________________________________________________
 **Ability Simplifications**
 
 **Character Changes**
-- Remove Class Features and maybe instead have Class Perks, which can be taken instead of Perks, this includes regular class features as well as class paths.
-  - For this they will need 1 additional Perk at the start probably.
-- Class will only have Class Core Feature which improves at level 4/8/12
-- For this the Class Core Feature needs to be special and unique (see notes below)
-- warlock: rename mystic something else
+- Maybe extra Perks at the Start
 
 **Class Changes**
 - Mage, rework the way spell keywords interact with core ability
@@ -54,7 +50,6 @@ ____________________________________________________________
   - complete rework of core ability
 
 **Specific Changes**
-- adjust travel text since speed is constant.
 ___________________________________________________________
 ### Future Ideas / Nice to have:
 

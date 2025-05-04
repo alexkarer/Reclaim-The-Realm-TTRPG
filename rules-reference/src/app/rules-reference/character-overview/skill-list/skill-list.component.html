@@ -6,7 +6,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (skill of skills; track $index) {
+        @for (skill of skills(); track $index) {
             <tr>
                 <td>{{ skill?.name }}</td>
                 <td class="header-subscript">{{ skill?.fullDescrption }}</td>

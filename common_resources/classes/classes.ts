@@ -17,25 +17,10 @@ export class PlayerClass {
     className!: string;
     classDescription!: string;
     coreClassValues!: CoreClassValues;
-    classPathDescription!: string;
     classCoreFeature!: {
         name: string;
         textElements: TextElement[];
     };
-    classPaths!: [
-        {
-            name: string;
-            textElements: TextElement[];
-        }
-    ];
-    classFeatures!: [
-        {
-            name: string;
-            levels: number[];
-            relatedClassPath: string | null;
-            textElements: TextElement[];
-        }
-    ];
     classTechniquesDescription!: string;
     classTechniques!: Ability[];
 }
@@ -45,32 +30,11 @@ function mapPlayerClass(jsonClass: PlayerClassJson): PlayerClass {
     playerClass.className = jsonClass.className;
     playerClass.classDescription = jsonClass.classDescription;
     playerClass.coreClassValues = jsonClass.coreClassValues;
-    playerClass.classPathDescription = jsonClass.classPathDescription;
 
     playerClass.classCoreFeature = {
         name: jsonClass.classCoreFeature.name,
         textElements: jsonClass.classCoreFeature.textElements
     };
-
-    playerClass.classPaths = [jsonClass.classPaths[0]]
-    for (let i = 1; i < jsonClass.classPaths.length; i++) {
-        playerClass.classPaths.push(jsonClass.classPaths[i])
-    }
-
-    playerClass.classFeatures = [{
-            name: jsonClass.classFeatures[0].name,
-            levels: jsonClass.classFeatures[0].levels,
-            relatedClassPath: jsonClass.classFeatures[0].relatedClassPath,
-            textElements: jsonClass.classFeatures[0].textElements
-    }];
-    for (let i = 1; i < jsonClass.classFeatures.length; i++) {
-        playerClass.classFeatures.push({
-                name: jsonClass.classFeatures[i].name,
-                levels: jsonClass.classFeatures[i].levels,
-                relatedClassPath: jsonClass.classFeatures[i].relatedClassPath,
-                textElements: jsonClass.classFeatures[i].textElements
-        });
-    }
 
     playerClass.classTechniquesDescription = jsonClass.classTechniquesDescription;
     playerClass.classTechniques = jsonClass.classTechniques.map(json => mapClassTechnique(json));

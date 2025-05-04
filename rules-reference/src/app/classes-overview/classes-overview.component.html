@@ -11,17 +11,8 @@
                 <button ngbDropdownItem (click)="selectedClass = ClassNames.WARLOCK">{{ ClassNames.WARLOCK}}</button>
             </div>
         </div>
-        <div ngbDropdown class="d-inline-block mx-3">
-            <button type="button" class="btn btn-outline-primary" id="dropdown-selected-class-path" ngbDropdownToggle>{{ selectedClassPath }}</button>
-            <div ngbDropdownMenu aria-labelledby="dropdown-selected-class-path">
-                <button ngbDropdownItem (click)="selectedClassPath = 'All Classpaths'">{{ 'All Classpaths' }}</button>
-                @for (classPath of getCurrentlySelectedClass().classPaths; track $index) {
-                    <button ngbDropdownItem (click)="selectedClassPath = classPath.name">{{ classPath.name }}</button>
-                }
-            </div>
-        </div>
     </div>
 </nav>
 <div class="m-3">
-    <app-class [playerClass]="getCurrentlySelectedClass()" [classPath]="selectedClassPath"></app-class>
+    <app-class [playerClass]="getCurrentlySelectedClass()"></app-class>
 </div>

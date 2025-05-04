@@ -28,7 +28,7 @@
                 "regularText": null,
                 "headerLine": null,
                 "bulletPoints": [
-                    "For every unique negative status effect that lingers on the Barbarian at the start of the Barbarian’s [TURN] they gain 1 Rage.",
+                    "If a negative status effect affects the Barbarian at the start their [TURN], they gain Rage equal to the highest Tier Status Effect, affecting them.",
                     "The first time during a [ROUND] they target an enemy with a [MELEE MARTIAL ATTACK] or a Weapon Attack using a thrown weapon, they gain 1 Rage.",
                     "The first time during a [ROUND] the Barbarian recieves damage they gain 1 Rage.",
                     "Falling Unconcious reduces the Barbarian’s rage to 0."
@@ -55,269 +55,21 @@
                     "At the start of their next turn they have to repeat the [WILLPOWER] [SAVE] and on a success end the frenzy."
                 ],
                 "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": "Rage Improvements",
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": "At 4th, 8th and 12th [LEVEL] the Barbarian gains an additional Rage per [ROUND] when making a [MELEE MARTIAL ATTACK] or recieving Damage.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
             }
         ]
     },
-    "classPathDescription": "",
-    "classPaths": [
-        {
-            "name": "Berserker",
-            "textElements": [
-                {
-                    "regularText": "A warrior who excells when they are in a frenzy and can control it more.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Spritual Warrior",
-            "textElements": [
-                {
-                    "regularText": "deep connection to a ancestral spirit or other mystical figure that is stronger during the rage.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Elemental Touched",
-            "textElements": [
-                {
-                    "regularText": "Can harness the powers of the elements during their rage",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
-            ]
-        }
-    ],
-    "classFeatures": [
-        {
-            "name": "Resiliant",
-            "levels": [ 1, 6 ],
-            "relatedClassPath": null,
-            "textElements": [
-                {
-                    "regularText": "The Barbarian gains resistance against physical damage equal to half their [CON]. <At [LEVEL] 6 this resistance applies against all damage types except psychic.<br>Additionally the Barbarians Rage allows him to recover from recent wounds to sustain them in the fight for longer. At the start of the Barbarian’s [TURN] he regains [HP] he lost last round up to twice their current Rage.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Controlled Frenzy",
-            "levels": [ 1 ],
-            "relatedClassPath": "Berserker",
-            "textElements": [
-                {
-                    "regularText": "The Berserker excells when in a frenzy and it now has the following changes:",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
-                {
-                    "regularText": null,
-                    "headerLine": null,
-                    "bulletPoints": [
-                        "When the Barbarian’s Rage exceeds the Frenzy threshold they can choose automatically fail the [WILLPOWER] [SAVE] and enter the Frenzy.",
-                        "Instead of the closest creature, they target the closest enemy creature.",
-                        "While the Barbarian still has to perform as many [MELEE MARTIAL ATTACK] as possible against the target, they don’t have to use the Resentful Strike Class Maneuver.",
-                        "The first Class Maneuvers they perform during their turn costs 1 Rage less."
-                    ],
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Cosmic Rage",
-            "levels": [ 1 ],
-            "relatedClassPath": "Spritual Warrior",
-            "textElements": [
-                {
-                    "regularText": "When raging becomes closer to their ancesctor/persons they have close contact to. Rage effect depends on alignment.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Elemental Rage",
-            "levels": [ 1 ],
-            "relatedClassPath": "Elemental Touched",
-            "textElements": [
-                {
-                    "regularText": "This barbarian has a deep connection to an elemental plane and can manifest that element when raging. At the start of their Rage choose one Element and you gain benefits depending on the chosen element which lasts until the end of the battle.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
-                {
-                    "regularText": null,
-                    "headerLine": null,
-                    "bulletPoints": [
-                        "<span class=\"fw-bold\">Fire: </span>Enemies within 3m recieve fire damage equal to their current Rage. [AURA].",
-                        "<span class=\"fw-bold\">Earth: </span>Friendly creatures within 3m recieve [THP] equal to their current Rage. [AURA]",
-                        "<span class=\"fw-bold\">Water: </span>Enemies within 3m have their [MP] reduced equal to their Rage, however not lower than 2 [MP]",
-                        "<span class=\"fw-bold\">Air: </span>Friendly creatures 3m gain [MP] equal to half their current Rage. Additionally their long jump distance is increased by a number of meters equal to their rage and the high jump by half their rage. [AURA]"
-                    ],
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Eager",
-            "levels": [ 2 ],
-            "relatedClassPath": null,
-            "textElements": [
-                {
-                    "regularText": "You can add to half your [LEVEL] to your Initiative Bonus and additionally in the first combat round they have an 2 extra [MP] unless they are suprised.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Physical Excellence",
-            "levels": [ 2,4,6,8,10,12 ],
-            "relatedClassPath": null,
-            "textElements": [
-                {
-                    "regularText": "You can increase one of your following Attributes by 1: [STR], [AGI], [CON], [PER]",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Tireless",
-            "levels": [ 3 ],
-            "relatedClassPath": null,
-            "textElements": [
-                {
-                    "regularText": "When suffer a point of [EXHAUSTION] you can instead make a [TOUGHNESS] [SAVE] against a [DT] 10. If this [SAVE] was successful you don’t suffer the point of [EXHAUSTION], however the [DT] to resist next time is increased by 5. When you complete a Long Rest the [DT] resets again.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Improved Rage",
-            "levels": [ 4,8,12 ],
-            "relatedClassPath": null,
-            "textElements": [
-                {
-                    "regularText": "You now can gain Rage on additional time per [ROUND] when making a [MELEE MARTIAL ATTACK] or recieving Damage.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Improved Frenzy",
-            "levels": [ 5 ],
-            "relatedClassPath": "Berserker",
-            "textElements": [
-                {
-                    "regularText": "The Threshold for the Frenzy now is always 5 and doesn’t increase with your [LEVEL] anymore additionally while in a frenzy you gain the following benefits.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
-                {
-                    "regularText": null,
-                    "headerLine": null,
-                    "bulletPoints": [
-                        "The Barbarian has 1 extra [AP] per turn.",
-                        "The Barbarian recieves 1 extra Rage at the start of their turn.",
-                        "Every Class Maneuver they perform during their turn costs 1 Rage less.",
-                        "The Barbarian is immune to the [STUNNED I], [CRIPPLED I], [FRIGHTENED I], [FRIGHTENED II] and [FRIGHTENED III] status effects."
-                    ],
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Improved Elemental Rage",
-            "levels": [ 5 ],
-            "relatedClassPath": "Elemental Touched",
-            "textElements": [
-                {
-                    "regularText": "Your connection to the elements deepens now during your turn you can spend 5 Rage and 1 [AP] to can gain an additional elemental effect that is active during the duration of your Rage. However Fire and Water cannot be active at the same time as well as Earth and Air. Additionally the effect of each Element is getting stronger:",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
-                {
-                    "regularText": null,
-                    "headerLine": null,
-                    "bulletPoints": [
-                        "<span class=\"fw-bold\">Fire: </span>The Aura increases to 4.5m and each time the Barbarian hits a creature with a [MELEE MARTIAL ATTACK] they recieve [BURNING I] for 2 turns.",
-                        "<span class=\"fw-bold\">Earth: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [TOUGHNESS] they are [STUNNED I] for 1 turn.",
-                        "<span class=\"fw-bold\">Water: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] and that attack is higher than the creatures [STABILITY] they are [RESTRAINED I] by ice for 1 turn.",
-                        "<span class=\"fw-bold\">Air: </span>The Aura increases to 4.5m and each time they hit a creature with a [MELEE MARTIAL ATTACK] a target of their choice within the area effect is hit by a lightning strike for lightning damage equal 1d6 + Rage."
-                    ],
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Greater Frenzy",
-            "levels": [ 9 ],
-            "relatedClassPath": "Berserker",
-            "textElements": [
-                {
-                    "regularText": "At the start of the combat the Barbarian recieves enugh Rage to instantly trigger their frenzy, once they have done this they can’t use this ability again until the next Long Rest . Additionally while in a frenzy the Barbarian gains the following benefits",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
-                {
-                    "regularText": null,
-                    "headerLine": null,
-                    "bulletPoints": [
-                        "The Barbarian recieves 3 extra Rage at the start of their turn instead of 1.",
-                        "The [HP] they regain because of their Rage is doubled.",
-                        "The Barbarian is immune to the [STUNNED II] and [STUNNED III] status effects.",
-                        "Dropping to Deaths Door during a frenzy causes no Exhaustion (however recieving damage during Deaths Door still does)"
-                    ],
-                    "ability": null
-                }
-            ]
-        },
-        {
-            "name": "Greater Elemental Rage",
-            "levels": [ 9 ],
-            "relatedClassPath": "Elemental Touched",
-            "textElements": [
-                {
-                    "regularText": "Your connection to the elements deepens and each elements effect is improved.",
-                    "headerLine": null,
-                    "bulletPoints": null,
-                    "ability": null
-                },
-                {
-                    "regularText": null,
-                    "headerLine": null,
-                    "bulletPoints": [
-                        "<span class=\"fw-bold\">Fire: </span>The Aura increases to 6m and in addition to setting a target on fire after a successful [MELEE MARTIAL ATTACK] they trigger a firey explosion in a 3m radius around the target that hits every creature except you with the area. If the attack is higher than the creatures [DODGE] they take fire damage equal to 2d6 + Rage.",
-                        "<span class=\"fw-bold\">Earth: </span>The Aura increases to 6m and poisonous mist is additionally swirling around you decreasing the [TOUGHNESS] of enemies within the area by half your Rage.",
-                        "<span class=\"fw-bold\">Water: </span>The Aura increases to 6m and a small snowstorm or maelstrom swirls around you decreasing the [DODGE] of enemies within the area by half your Rage.",
-                        "<span class=\"fw-bold\">Air: </span>The Aura increases to 6m and now 3 lightning strikes appear after each [MELEE MARTIAL ATTACK] but they can’t strike the same target twice."
-                    ],
-                    "ability": null
-                }
-            ]
-        }
-    ],
     "classTechniquesDescription": "The Barbarian can expend his Rage to perform Class Techniques which empower can empower his attacks or allow to perform great physical feats.",
     "classTechniques": [
         {

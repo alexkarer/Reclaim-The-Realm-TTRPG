@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import { DynamicContentComponent } from '../../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 import { KeywordProcessorPipe } from '../../../../shared/text-utils/keyword-processor';
@@ -11,7 +11,7 @@ import { KeywordProcessorPipe } from '../../../../shared/text-utils/keyword-proc
 })
 export class StatusEffectComponent {
 
-  @Input() public name: string = '';
-  @Input() public description: string = ''; 
-  @Input() public link: string = '';
+  name = input<string>('');
+  description = input<string>(''); 
+  link = input<string>('');
 }

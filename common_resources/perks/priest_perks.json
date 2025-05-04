@@ -1,9 +1,87 @@
 [
     {
-        "name": "PlaceHolder",
+        "name": "Divine Blessing/Curse",
         "tags": [ "Priest" ],
         "requirements": {
-            "requiredLevels": [],
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "If you are of good allignment, you gain access to the Divine Blessing ability. If you are of evil allignment you gain the Divine Curse ability. If you are neutral, you gain access to both.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Divine Blessing",
+                    "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 0" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "6m",
+                    "target": "one or more friendly creatures",
+                    "duration": "1 [ROUND]",
+                    "description": [ { "regularText": "A number of friendly creatures up to half your [CHA] (rounded down, minimum 1) recieve [THP] equal to your [SPI] and they recieve [BLESS I]", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Unholy Curse",
+                    "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 0" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "9m",
+                    "target": "one or more creatures",
+                    "duration": "1 [ROUND]",
+                    "description": [ { "regularText": "You can target up to half your [CHA] , minimum 1 (rounded down) creatures. Make a [SPI] [SPELL TEST] against their [WILLPOWER] on a success they recieve unholy damage equal to your [SPI] and the [BANE I] status effect.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            }
+        ]
+    },
+    {
+        "name": "Warrior Priest I",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Priest Class", "not selected Zealot I or Mystic I Perks" ]
+        },
+        "textElements": [
+            {
+                "regularText": "The Warrior Priest gains the following benefits:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "You gain 2 additional [HP] per [LEVEL]",
+                    "You gain a [MARTIAL LEVEL] Progression of 1/3.",
+                    "You can learn martial maneuvers of the types Leader and Weapon."
+                ],
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Warrior Priest II",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Priest Class" ]
@@ -11,6 +89,358 @@
         "textElements": [
             {
                 "regularText": "",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Warrior Priest III",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 9, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ "Mystic II" ],
+            "otherRequirements": [ "Warrior Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Mystic I",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Priest Class", "not selected Warrior Priest I or Zealot I Perks" ]
+        },
+        "textElements": [
+            {
+                "regularText": "The Mystic gains the following benefits:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "[INT] is now a class Attribute for you (Increase attribute maximum or current).",
+                    "For the purposes of recieving certain bonuses, interacting with abilites or meeting requirements you count as having any allignment. Additionally you can't recieve penalties due to your alignment",
+                    "At the start of any battle choose one moral or idialogical alignment besiedes Neutral. You can now also recieve Aether Dice as if you had that alignment."
+                ],
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Mystic II",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 5, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Mystic III",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 9, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ "Mystic II" ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Zealot I",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Priest Class", "not selected Warrior Priest I or Mystic I Perks" ]
+        },
+        "textElements": [
+            {
+                "regularText": "TODO",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Zealot II",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 5, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Zealot III",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 9, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ "Zealot II" ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Cosmic Interference",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "The more Aether Dice you have the stronger the Aether influences the Battle.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "If you have 2 AD(1) then increase the healing of any ability you use by your [LEVEL] and increase the duration of postive Status Effects you grant by 1 [ROUND]. For each additional AD(1) increase the healing by [LEVEL]/2 and the duration by 1 further.",
+                    "If you have 2 AD(6) then increase the damage of any ability you use by your [LEVEL] and increase the duration of negative Status Effects you grant by 1 [ROUND]. For each additional AD(1) increase the damage by [LEVEL]/2 and the duration by 1 further..",
+                    "If you have 3 matching AD then you recieve a +1 bonus to any [SAVE] you make. For any further matching dice increase the bonus by 1.",
+                    "If you have 4 unique then once per [ROUND] if you make a [D20 TEST] you can adjust the result by +[LEVEL] or -[LEVEL], for every additional unique dice you can do this one additional time per [ROUND]."
+                ],
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Armour of Faith",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 6, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "The Priest has exceptional faith in his believes and fears no danger. The Priest can use a half of their [SPI] for calculating [STABILITY], [DODGE] and [TOUGHNESS] instead of [STR] [AGI] and [CON].",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Minor Miracle",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 3, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "The Priest is able to perform minor miracles as long as they keep their faith. They gain the following ability:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Minor Miracle",
+                    "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 2" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "3 [AP]",
+                    "range": "varies",
+                    "target": "varies",
+                    "duration": "varies",
+                    "description": [ 
+                        { "regularText": "You invoke a minor Miracle, choose one of the effects below:", "headerLine": null, "bulletPoints": null, "ability": null },
+                        { "regularText": null, "headerLine": null, "bulletPoints": [
+                            "Provide tasty food and drink for up to 20 people. This food will expire after in 24 hours.",
+                            "Heal a creature within 5m up to full [HP].",
+                            "End all Tier 1 and 2 negative status effects affecting a Crature.",
+                            "Restore 2 [STAMINA] to all party members.",
+                            "Alternative Miracle effect agreed if agreed by the GM."
+                        ], "ability": null },
+                        { "regularText": "After usage, Miracle recovery [DT] is 25.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            },
+            {
+                "regularText": "Each time the Priest uses a Miracle Ability they can’t do so it any more. Once at the start of each day they make a prayer and make a [DT] 25 [SPI] [ATTRIBUTE TEST] which can’t be modified in any other way, on a success they can use miracles again. They can repeat the Test each following day where they reduce the [DT] by 5 until they succeed. Alternatively if the Priest Character acts well within their believes or played well the GM may grant them the Miracle again without rolling.",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            }
+        ]
+    },
+    {
+        "name": "Miracle",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 7, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ "Minor Miracle" ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "The Priest is now able to perform greater miracles in addition to the ones he can already do:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Miracle",
+                    "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 3" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "4 [AP]",
+                    "range": "varies",
+                    "target": "varies",
+                    "duration": "varies",
+                    "description": [ 
+                        { "regularText": "You invoke a minor Miracle, choose one of the effects below:", "headerLine": null, "bulletPoints": null, "ability": null },
+                        { "regularText": null, "headerLine": null, "bulletPoints": [
+                            "Provide tasty food and drink for a village. This food will expire after in 24 hours.",
+                            "Heal 2 creatures within 5m [HP].",
+                            "End all negative status effects affecting a Creature.",
+                            "Restore 5 [STAMINA] to all party members.",
+                            "Alternative Miracle effect agreed if agreed by the GM."
+                        ], "ability": null },
+                        { "regularText": "After usage, Miracle recovery [DT] is 50.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            }
+        ]
+    },
+    {
+        "name": "Greater Miracle",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 11, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ "Miracle" ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "The Priest is now able to perform even greater miracles in addition to the ones he can already do:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Miracle",
+                    "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 3" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "1 minute",
+                    "range": "varies",
+                    "target": "varies",
+                    "duration": "varies",
+                    "description": [ 
+                        { "regularText": "You invoke a minor Miracle, choose one of the effects below:", "headerLine": null, "bulletPoints": null, "ability": null },
+                        { "regularText": null, "headerLine": null, "bulletPoints": [
+                            "Provide tasty food and drink for a town. This food will expire after in 24 hours.",
+                            "Restore a creature to life which has died within the last hour.",
+                            "Heal your party to full [HP].",
+                            "Summon a cosmic to assist you.",
+                            "Restore all [STAMINA] of your party.",
+                            "Alternative Miracle effect agreed if agreed by the GM."
+                        ], "ability": null },
+                        { "regularText": "After usage, Miracle recovery [DT] is 100.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            }
+        ]
+    },
+    {
+        "name": "Divine Intervention",
+        "tags": [ "Priest" ],
+        "requirements": {
+            "requiredLevels": [ { "amount": 12, "levelType": "[LEVEL]" } ],
+            "requiredAttributes": [],
+            "requiredPerks": [ "Greater Miracle" ],
+            "otherRequirements": [ "Priest Class" ]
+        },
+        "textElements": [
+            {
+                "regularText": "The Priest is able to perform mighty acts that rival the power of a god-like being, these can be performed regardless if they are eligble to perform a miracle or not:",
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "If the Priest died or they soul became trapped or bound they can use this ability and come back alive with their soul being returned to them. Talk with the GM on how they came back.",
+                    "They can sacrifice themselves and matyr for their allies or cause. When doing so they can’t be resurrected with their soul now being bound to the aether. For this sacriface they can alter reality in a major way they wish, examples: Forever bind an evli entity somewhere, reverse the destruction of a major city, ...."
+                ],
+                "ability": null
+            },
+            {
+                "regularText": "When performing such an act, they can’t do so again.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
