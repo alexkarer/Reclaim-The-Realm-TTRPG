@@ -4,8 +4,8 @@
     "description": "FoundryVTT Implementation of the Reclaim the Realm Ruleset",
     "version": "2.0.0",
     "compatibility": {
-      "minimum": 12,
-      "verified": 12
+      "minimum": 13,
+      "verified": 13.341
     },
     "authors": [{
       "name": "Alexander Karer",
@@ -14,13 +14,13 @@
     "esmodules": ["mysystem.mjs"],
     "styles": ["styles/system-styles.css"],
     "packs": [{
-      "name": "monsters",
+      "name": "npcs",
       "label": "My Monsters",
       "type": "Actor"
     },
     {
-      "name": "items",
-      "label": "My Items",
+      "name": "Equipment",
+      "label": "Equipment",
       "type": "Item"
     }],
     "languages": [{
@@ -30,14 +30,37 @@
     }],
     "documentTypes": {
       "Actor": {
-        "hero": { "htmlFields": ["background.biography"] },
-        "villain": { "htmlFields": ["background.biography"] },
-        "pawn": {}
+        "hero": { 
+          "htmlFields": ["background.biography"] 
+        },
+        "npc": { 
+          "htmlFields": ["background.biography"]
+        }
       },
       "Item": {
-        "weapon": {},
-        "spell": {}
-      }
+        "class": {
+          "htmlFields": [ ]
+        },
+        "spell": {
+          "htmlFields": [ ]
+        },
+        "martialManeuver": {
+          "htmlFields": [ ]
+        },
+        "classTechnique": {
+          "htmlFields": [ ]
+        },
+        "perk": {
+          "htmlFields": [ ]
+        },
+        "species": {
+          "htmlFields": [ ]
+        },
+        "equipment": {
+          "htmlFields": [ ]
+        }
+      },
+      "statusEffects": []
     },
     "socket": false,
     "initiative": "1d20",
