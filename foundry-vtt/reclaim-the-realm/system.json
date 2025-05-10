@@ -15,11 +15,11 @@
     "styles": ["styles/system-styles.css"],
     "packs": [{
       "name": "npcs",
-      "label": "My Monsters",
+      "label": "NPCs",
       "type": "Actor"
     },
     {
-      "name": "Equipment",
+      "name": "equipment",
       "label": "Equipment",
       "type": "Item"
     }],

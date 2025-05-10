@@ -199,7 +199,7 @@
             "range": "-",
             "target": "[CONE] 7.5m",
             "duration": "1 [ROUND]",
-            "description": [ { "regularText": "[CON] [MARTIAL TEST] vs. [TOUGHNESS]. On success: 2*[CON]*d6 sonic damage and [DEFAENED]. On fail: half damage.", "headerLine": null, "bulletPoints": null } ],
+            "description": [ { "regularText": "[CON] [MARTIAL TEST] vs. [TOUGHNESS]. On success: 2*[CON]*d6 sonic damage and [DEAFENED]. On fail: half damage.", "headerLine": null, "bulletPoints": null } ],
             "flavorText": [ ]
         }
     ]

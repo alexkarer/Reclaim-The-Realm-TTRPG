@@ -216,7 +216,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "2 [AP], 1 [ARCANA]", "range": "30m", "target": "1 target", "duration": "1 [ROUND]",
-                "description": [ { "regularText": "[RANGED SPELL ATTACK] vs. [TOUGNESS]. On hit: 2d8 + ([SPI] / 4) * d8 holy damage. On success: [STUNNED I]", "headerLine": null, "bulletPoints": null} ],
+                "description": [ { "regularText": "[RANGED SPELL ATTACK] vs. [TOUGHNESS]. On hit: 2d8 + ([SPI] / 4) * d8 holy damage. On success: [STUNNED I]", "headerLine": null, "bulletPoints": null} ],
                 "flavorText": [ { "regularText": "You call upon the Light and shoot a bolt of energy at your enemies.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage by 1d8 + ([SPI] / 4) * d8."
@@ -486,7 +486,7 @@
                     { "regularText": null, "headerLine": null, "bulletPoints":  [
                         "Quicken: Apply [HASTE I].",
                         "Natural armor: Target gains [DR] physical equal to [SPI]. Does not stack with armour.",
-                        "Enhanced Senses: Target gains darkvision([SPI] m) and has [ADVANTAGE] on any [PER] [ABILITY TEST]."
+                        "Enhanced Senses: Target gains darkvision([SPI] m) and has [ADVANTAGE] on any [PER] [ATTRIBUTE TEST]."
                     ]}
                 ],
                 "flavorText": [ { "regularText": "You cause a minor mutation within a creature and can grant them enhanced abilities.", "headerLine": null, "bulletPoints": null} ],
@@ -501,7 +501,7 @@
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
-                "cost": "2 [AP], 4 [ARCANA]", "range": "[MELEE RANGE]", "target": "one willing creature", "duration": "[SPI] [ROUND], [CONCENTRATION 1]",
+                "cost": "2 [AP], 4 [ARCANA]", "range": "[MELEE RANGE]", "target": "one willing creature", "duration": "[SPI] [ROUND], [CONCENTRATION] 1",
                 "description": [ { "regularText": "Apply [HASTE II].", "headerLine": null, "bulletPoints": null} ],
                 "flavorText": [ { "regularText": "You grant a supernatural speed.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 9,

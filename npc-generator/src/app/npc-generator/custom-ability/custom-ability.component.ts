@@ -18,9 +18,11 @@ export class CustomAbilityComponent {
   name: string = 'Custom Ability';
   usageCost = customAbilitiesJson.abilityUsageCosts[1];
   usageRestriction = customAbilitiesJson.abilityUsageRestriction[0];
+  targetType = customAbilitiesJson.abilityTargetTypes[0];
   targets = customAbilitiesJson.targets[0];
   targetSave = customAbilitiesJson.targetSave[0];
   dtCalculationAttribute = customAbilitiesJson.dtCalculationAttribute[0];
+  onFailureEffect = customAbilitiesJson.onFailureEffect[0];
   mainEffect = customAbilitiesJson.mainEffects[1];
   additionalEffects: (typeof customAbilitiesJson.additionalEffects[0])[] = [];
 
@@ -53,6 +55,11 @@ export class CustomAbilityComponent {
     this.triggerUpdate();
   }
 
+  handleTargetTypesUpdate(targetType: string): void {
+    this.targetType = targetType;
+    this.triggerUpdate();
+  }
+
   handleTargetsUpdate(target: typeof customAbilitiesJson.targets[0]): void {
     this.targets = target;
     this.triggerUpdate();
@@ -65,6 +72,11 @@ export class CustomAbilityComponent {
 
   handleDtCalculationAttributeUpdate(attr: string): void {
     this.dtCalculationAttribute = attr;
+    this.triggerUpdate();
+  }
+
+  handleOnFailureEffectUpdate(effect: string): void {
+    this.onFailureEffect = effect;
     this.triggerUpdate();
   }
 
@@ -81,6 +93,7 @@ export class CustomAbilityComponent {
     } else {
       this.additionalEffects = this.additionalEffects.filter(e => e.additionalEffect !== effect.additionalEffect);
     }
+    this.triggerUpdate();
   }
 
   private triggerUpdate(): void {
@@ -102,12 +115,16 @@ export class CustomAbilityComponent {
   }
 
   private getDescription(): string {
-    let rawDescription = this.targets.target + ', ' +
-      (this.targets.isAOE ? ('[DT] 10+[LEVEL]+' + this.dtCalculationAttribute + ' on fail: ' + this.targetSave + ': ') : 'on hit: ') +
-      this.mainEffect.mainEffect +
-      (this.targets.isAOE ? ' [HALF]' : '') +
+    let rawDescription = 
+      this.targetType + ' ' + 
+      (this.targetType.includes('CUSTOM DT') ? ' [SELECTED SAVE]' : '') +
+      this.targets.target +  '. ' +
+      (this.targetType.includes('ATTACK') ? 'On hit: ' : 'On success: ') +
+      this.mainEffect.mainEffect + '. ' +
       (this.additionalEffects.length === 0 ? '' : ', additionally ') +
-      this.additionalEffects.map(e => e.additionalEffect).join(' ');
+      this.additionalEffects.map(e => e.additionalEffect).join(' and ') + 
+      (this.onFailureEffect !== 'nothing' ? ('. On Failure: ' + this.onFailureEffect) : '');
+
     if (this.abilityType === 'Martial') {
       return rawDescription.replaceAll('[MELEE ATTACK]', '[MELEE MARTIAL ATTACK]')
         .replaceAll('[RANGED ATTACK]', '[RANGED MARTIAL ATTACK]')
@@ -116,7 +133,7 @@ export class CustomAbilityComponent {
         .replaceAll('[HEAVY DAMAGE]', '[HEAVY MARTIAL DAMAGE]')
         .replaceAll('[LEVEL]', '[MARTIAL LEVEL]')
         .replaceAll('[SELECTED SAVE]', this.targetSave + ' [SAVE]')
-        .replaceAll('[CUSTOM DT]', this.targetSave + ' [DT] 10+[MARTIAL LEVEL]+' + this.dtCalculationAttribute)
+        .replaceAll('[CUSTOM DT]', '[DT] 10+[MARTIAL LEVEL]+' + this.dtCalculationAttribute)
     } else {
       return rawDescription.replaceAll('[MELEE ATTACK]', '[MELEE SPELL ATTACK]')
         .replaceAll('[RANGED ATTACK]', '[RANGED SPELL ATTACK]')
@@ -125,7 +142,7 @@ export class CustomAbilityComponent {
         .replaceAll('[HEAVY DAMAGE]', '[HEAVY SPELL DAMAGE]')
         .replaceAll('[LEVEL]', '[SPELL LEVEL]')
         .replaceAll('[SELECTED SAVE]', this.targetSave + ' [SAVE]')
-        .replaceAll('[CUSTOM DT]', this.targetSave + ' [DT] 10+[SPELL LEVEL]+' + this.dtCalculationAttribute)
+        .replaceAll('[CUSTOM DT]', '[DT] 10+[SPELL LEVEL]+' + this.dtCalculationAttribute)
     }
   }
 }

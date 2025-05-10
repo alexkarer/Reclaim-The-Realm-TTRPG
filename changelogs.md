@@ -87,12 +87,20 @@ Removed the following standard abilities to simplify:
 #### Hindsight
 - simplify to work for any [D20 TEST] but decrease bonus.
 
+### Hybrid Abilities
+
+- Rewrite abilities to fit newer text
+- Add Spell Cast Difficulty and clarified that a [SPELL CAST TEST] has to be made before the cast.
+
 ### Equipment
 
 #### Simplify Weapon Changes
 - get rid of weapon proficiencies/ranks
 - get rid of all weapon properties
 - now only have 7 weapons with each having a unique property.
+
+#### Shields
+- changed shields to match the new attack syntax
 
 ### Cosmetic & Formatting
 

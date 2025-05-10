@@ -116,7 +116,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "When you hit a target with an [ATTTACK] you can deal 2d6 extra holy damage. For every additional AD(3-) used, you can increase the holy damage by a further d6.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "description": [ { "regularText": "When you hit a target with an [ATTACK] you can deal 2d6 extra holy damage. For every additional AD(3-) used, you can increase the holy damage by a further d6.", "headerLine": null, "bulletPoints": null, "ability": null } ],
             "flavorText": [ ]
         },
         {
@@ -160,7 +160,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "When you hit a target with an [ATTTACK] you can deal 2d6 extra unholy damage. For every additional AD(4+) used, you can increase the unholy damage by a further d6.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "description": [ { "regularText": "When you hit a target with an [ATTACK] you can deal 2d6 extra unholy damage. For every additional AD(4+) used, you can increase the unholy damage by a further d6.", "headerLine": null, "bulletPoints": null, "ability": null } ],
             "flavorText": [ ]
         },
         {

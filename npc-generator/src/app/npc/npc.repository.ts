@@ -135,12 +135,19 @@ export class NpcRepository {
                 .replaceAll('[RANGED MARTIAL ATTACK]', 'Attack 🏹 ' + (10 + this.calculatePer(state) + this.getBaseStatArray(state).levels.martialLevel))
                 .replaceAll('[MELEE SPELL ATTACK]', 'Attack ⚔️✨ ' + (10 + this.calculateAgi(state) + this.getBaseStatArray(state).levels.spellLevel))
                 .replaceAll('[RANGED SPELL ATTACK]', 'Attack 🏹✨ ' + (10 + this.calculatePer(state) + this.getBaseStatArray(state).levels.spellLevel))
+                .replaceAll('[LIGHT MARTIAL DAMAGE]+3', this.getLightDamage(this.calculateStr(state)+3))
+                .replaceAll('2*[LIGHT MARTIAL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateStr(state)), 2))
+                .replaceAll('3*[LIGHT MARTIAL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateStr(state)), 3))
+                .replaceAll('4*[LIGHT MARTIAL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateStr(state)), 4))
+                .replaceAll('5*[LIGHT MARTIAL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateStr(state)), 5))
                 .replaceAll('[LIGHT MARTIAL DAMAGE]', this.getLightDamage(this.calculateStr(state)))
-                .replaceAll('[MEDIUM MARTIAL DAMAGE]', this.getMediumDamage(this.calculateStr(state)))
-                .replaceAll('[HEAVY MARTIAL DAMAGE]', this.getHeavyDamage(this.calculateStr(state)))
+                .replaceAll('[LIGHT SPELL DAMAGE]+3', this.getLightDamage(this.calculateSpi(state)+3))
+                .replaceAll('2*[LIGHT SPELL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateSpi(state)), 2))
+                .replaceAll('3*[LIGHT SPELL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateSpi(state)), 3))
+                .replaceAll('4*[LIGHT SPELL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateSpi(state)), 4))
+                .replaceAll('5*[LIGHT SPELL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateSpi(state)), 5))
                 .replaceAll('[LIGHT SPELL DAMAGE]', this.getLightDamage(this.calculateSpi(state)))
-                .replaceAll('[MEDIUM SPELL DAMAGE]', this.getMediumDamage(this.calculateSpi(state)))
-                .replaceAll('[HEAVY SPELL DAMAGE]', this.getHeavyDamage(this.calculateSpi(state)))
+                .replaceAll('[LIGHT SPELL DAMAGE]', this.getLightDamage(this.calculateSpi(state)))
                 .replaceAll('[STR]', this.calculateStr(state).toString())
                 .replaceAll('[AGI]', this.calculateAgi(state).toString())
                 .replaceAll('[CON]', this.calculateCon(state).toString())
@@ -321,11 +328,25 @@ export class NpcRepository {
     private getLightDamage(str: number): string {
         return martialDamageJson.martialDamage.martialDamageTable.find(mdmg => mdmg.str === str)?.light ?? '';
     }
-    private getMediumDamage(str: number): string {
-        return martialDamageJson.martialDamage.martialDamageTable.find(mdmg => mdmg.str === str)?.medium ?? '';
-    }
-    private getHeavyDamage(str: number): string {
-        return martialDamageJson.martialDamage.martialDamageTable.find(mdmg => mdmg.str === str)?.heavy ?? '';
+
+    private multiplyD6DiceExpressions(diceExpr: string, factor: number = 1) {
+        if (diceExpr.charAt(0) == 'd') {
+            if (diceExpr.length > 2 && diceExpr.charAt(2) == '+') {
+                let constant = parseInt(diceExpr.substring(3, diceExpr.length));
+                return factor.toString() + 'd6+' + (constant * factor).toString();
+            } else {
+                return factor.toString() + 'd6';
+            }
+        } else {
+            let diceStartIndex = diceExpr.indexOf('d');
+            let diceAmount = parseInt(diceExpr.substring(0, diceStartIndex));
+            if (diceExpr.length > (diceStartIndex+2) && diceExpr.charAt(diceStartIndex+2) == '+') {
+                let constant = parseInt(diceExpr.substring(diceStartIndex+3, diceExpr.length));
+                return (diceAmount * factor).toString() + 'd6+' + (constant * factor).toString();
+            } else {
+                return (diceAmount * factor).toString() + 'd6';
+            }
+        }
     }
 
     // trait characteristics functions

@@ -1,7 +1,5 @@
 # TODO
 
-add spellcasting test which is based on int to determine DT for save against AOE.
-
 **Add skills**
 - implement skills, see concept
 - passive awarenees

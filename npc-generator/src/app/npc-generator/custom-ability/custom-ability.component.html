@@ -31,6 +31,16 @@
                 }
             </div>
         </div>
+    </div>
+    <div class="mt-2 d-flex justify-content-around">
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownAbilityTargetTypes" ngbDropdownToggle>{{ targetType }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownAbilityTargetTypes">
+                @for (targetType of customAbilityOptions.abilityTargetTypes; track $index) {
+                    <button type="button" (click)="handleTargetTypesUpdate(targetType)" ngbDropdownItem>{{ targetType }}</button>
+                }
+            </div>
+        </div>
         <div ngbDropdown class="d-inline-block">
             <button type="button" class="btn btn-outline-primary" id="dropdownAbilityTargets" ngbDropdownToggle>{{ targets.target }} ({{ targets.pointCost }})</button>
             <div ngbDropdownMenu aria-labelledby="dropdownAbilityTargets">
@@ -39,21 +49,31 @@
                 }
             </div>
         </div>
+        @if (!targetType.includes('ATTACK')) {
+            <div ngbDropdown class="d-inline-block me-2">
+                <button type="button" class="btn btn-outline-primary" id="dropdownAbilityTargetSaves" ngbDropdownToggle>{{ targetSave }}</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownAbilitTargetSaves">
+                    @for (save of customAbilityOptions.targetSave; track $index) {
+                        <button type="button" (click)="handleTargetSaveUpdate(save)" ngbDropdownItem>{{ save }}</button>
+                    }
+                </div>
+            </div>
+            <div ngbDropdown class="d-inline-block me-2">
+                <button type="button" class="btn btn-outline-primary" id="dropdownAbilityDtCalculationAttribute" ngbDropdownToggle>{{ dtCalculationAttribute }}</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownDtCalculationAttribute">
+                    @for (attr of customAbilityOptions.dtCalculationAttribute; track $index) {
+                        <button type="button" (click)="handleDtCalculationAttributeUpdate(attr)" ngbDropdownItem>{{ attr }}</button>
+                    }
+                </div>
+            </div>
+        }
     </div>
     <div class="mt-2 d-flex justify-content-around">
         <div ngbDropdown class="d-inline-block me-2">
-            <button type="button" class="btn btn-outline-primary" id="dropdownAbilityTargetSaves" ngbDropdownToggle>{{ targetSave }}</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownAbilitTargetSaves">
-                @for (save of customAbilityOptions.targetSave; track $index) {
-                    <button type="button" (click)="handleTargetSaveUpdate(save)" ngbDropdownItem>{{ save }}</button>
-                }
-            </div>
-        </div>
-        <div ngbDropdown class="d-inline-block me-2">
-            <button type="button" class="btn btn-outline-primary" id="dropdownAbilityDtCalculationAttribute" ngbDropdownToggle>{{ dtCalculationAttribute }}</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownDtCalculationAttribute">
-                @for (attr of customAbilityOptions.dtCalculationAttribute; track $index) {
-                    <button type="button" (click)="handleDtCalculationAttributeUpdate(attr)" ngbDropdownItem>{{ attr }}</button>
+            <button type="button" class="btn btn-outline-primary" id="dropdownAbilityOnFailureEffectUpdate" ngbDropdownToggle>{{ onFailureEffect }}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownAbilityOnFailureEffectUpdate">
+                @for (effect of customAbilityOptions.onFailureEffect; track $index) {
+                    <button type="button" (click)="handleOnFailureEffectUpdate(effect)" ngbDropdownItem>{{ effect }}</button>
                 }
             </div>
         </div>

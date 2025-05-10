@@ -1,9 +1,9 @@
 {
     "description": "For additional protection, you can wield a shield in a free hand and gain the ability to defend against any [ATTACK] as an alternative to use [DODGE] to evade the [ATTACK]. Everyone is able to wield shields, but the effectiveness of the shield depends on the type and the [MARTIAL LEVEL] of the Character.",
-    "shieldblockDescription": "Shield Block is a value that can be used instead of [DODGE], when you are hit by an [ATTACK], instead of making a [DODGE] [SAVE] make a [SHIELD BLOCK]. Which is a [SAVE] that is calculated using Shield Block + [MARTIAL LEVEL].",
+    "shieldblockDescription": "Shield Block is a value that can be used instead of [DODGE], when you are hit by an [ATTACK], instead of making a [DODGE] [SAVE] make a [SHIELD BLOCK]. Which is a [SAVE] that is calculated using Base Shield Block + [MARTIAL LEVEL]. However unlike a regular [ATTACK] against [DODGE] there are no galncing blows. Meaning if your [SHIELD BLOCK] is higher than their [ATTACK] all the damage is instead redirected to the Shield and if that damage exceeds the Damage Threshold of the Shield, it breaks.",
     "shieldPropertiesDescription": "Manoeuvre Penalty and Movement Penalty work like they do for armour, and they do stack with each other.",
     "shieldProperties": [
-        { "name": "Shield Block", "description": "This is the base block value used to calculate the [SHIELD BLOCK]"},
+        { "name": "Base Shield Block", "description": "This is the base block value used to calculate the [SHIELD BLOCK]"},
         { "name": "Damage Threshold", "description": "If you attempt to block an attack that exceeds the Damage Threshold, you still block the attack but the shield breaks and is rendered unusable but can be repaired."}
     ],
     "shieldQuality": {

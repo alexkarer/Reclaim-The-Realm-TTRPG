@@ -26,10 +26,7 @@ ____________________________________________________________
 **Formatting**
 
 **Bigger Mechanical Changes**
-- Rescale damage, especially for NPCs to make it less lethal at 1st level, maybe NPCs only deal d6 damage.
 - Implement similar system for Spell Damage maybe ish
-- Properly rework Hybrid Abilities, they deserve to stay.
-- Shields?
 - add mental damage table
 
 **Smaller Mechanical Changes**

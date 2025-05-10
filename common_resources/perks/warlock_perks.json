@@ -292,7 +292,7 @@
         "name": "Mutation: Supernatural Strength",
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 2, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -322,7 +322,7 @@
         "name": "Mutation: Extra Limb",
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 2, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -352,7 +352,7 @@
         "name": "Mutation: Natural Weapons",
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 2, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -382,7 +382,7 @@
         "name": "Mutation: Unnatural Senses",
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 2, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -412,7 +412,7 @@
         "name": "Mutation: Natural armor",
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 2, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -442,7 +442,7 @@
         "name": "Mutation: Regenerative Tissue",
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 2, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]

@@ -6,7 +6,8 @@ type HybridAbilitiesJson = typeof hybridAbilitiesJson
 type JsonHybridAbility = typeof hybridAbilitiesJson.elementalHybridAbilities[0];
 
 export class HybridAbility extends Ability {
-    components?: string
+    components?: string;
+    spellDifficulty?: number;
 }
 
 export type HybridAbilityCollection = {
@@ -25,17 +26,18 @@ function mapToSpellCollection(hybridAbilitiesJson: HybridAbilitiesJson): HybridA
     ];
 }
 
-function mapToHybridAbility(jsonSpell: JsonHybridAbility): HybridAbility {
+function mapToHybridAbility(jsonHA: JsonHybridAbility): HybridAbility {
     let hybridAbility = new HybridAbility();
-    hybridAbility.name = jsonSpell.name;
-    hybridAbility.tags = jsonSpell.tags;
-    hybridAbility.requirements = jsonSpell.requirements;
-    hybridAbility.cost = jsonSpell.cost;
-    hybridAbility.range = jsonSpell.range;
-    hybridAbility.target = jsonSpell.target;
-    hybridAbility.duration = jsonSpell.duration;
-    hybridAbility.description = jsonSpell.description;
-    hybridAbility.flavorText = jsonSpell.flavorText;
-    hybridAbility.components = jsonSpell.components;
+    hybridAbility.name = jsonHA.name;
+    hybridAbility.tags = jsonHA.tags;
+    hybridAbility.requirements = jsonHA.requirements;
+    hybridAbility.cost = jsonHA.cost;
+    hybridAbility.range = jsonHA.range;
+    hybridAbility.target = jsonHA.target;
+    hybridAbility.duration = jsonHA.duration;
+    hybridAbility.description = jsonHA.description;
+    hybridAbility.flavorText = jsonHA.flavorText;
+    hybridAbility.components = jsonHA.components;
+    hybridAbility.spellDifficulty = jsonHA.spellDifficulty
     return hybridAbility;
 }
