@@ -25,6 +25,10 @@ Removed the following standard abilities to simplify:
 - reduced Charcacter Attribute points ons creation to 10.
 - only trigger deaths door when being reduced to 0 [HP].
 
+### General Character Changes
+- Only 8 Attribute Points at start
+- 2 Perks and 2 Attribute Points per Level.
+
 ### Classes
 
 ### Removed Class Features

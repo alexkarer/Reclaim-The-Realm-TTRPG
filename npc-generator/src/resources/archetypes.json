@@ -163,35 +163,35 @@
             "hpBonus": 20,
             "attributes": { "str": 1, "agi": 4, "con": 1, "int": 4, "spi": 1, "per": 3, "cha": 2 },
             "defenseBonus": { "stability": 0, "dodge": 2, "toughness": 0, "willpower": 1 },
-            "npcCreationPoints": 5
+            "npcCreationPoints": 6
         },
         { 
             "levels": { "level": 3, "martialLevel": 2, "spellLevel": 2 },
             "hpBonus": 23,
             "attributes": { "str": 1, "agi": 4, "con": 2, "int": 4, "spi": 2, "per": 3, "cha": 2 },
             "defenseBonus": { "stability": 1, "dodge": 3, "toughness": 1, "willpower": 2 },
-            "npcCreationPoints": 6
+            "npcCreationPoints": 8
         },
         { 
             "levels": { "level": 4, "martialLevel": 2, "spellLevel": 2 },
             "hpBonus": 26,
             "attributes": { "str": 2, "agi": 5, "con": 2, "int": 5, "spi": 2, "per": 4, "cha": 2 },
             "defenseBonus": { "stability": 1, "dodge": 4, "toughness": 1, "willpower": 2 },
-            "npcCreationPoints": 7
+            "npcCreationPoints": 10
         },
         { 
             "levels": { "level": 5, "martialLevel": 3, "spellLevel": 3 },
             "hpBonus": 29,
             "attributes": { "str": 2, "agi": 5, "con": 2, "int": 5, "spi": 2, "per": 4, "cha": 3 },
             "defenseBonus": { "stability": 1, "dodge": 5, "toughness": 1, "willpower": 3 },
-            "npcCreationPoints": 8
+            "npcCreationPoints": 12
         },
         { 
             "levels": { "level": 6, "martialLevel": 4, "spellLevel": 4 },
             "hpBonus": 32,
             "attributes": { "str": 2, "agi": 6, "con": 3, "int": 6, "spi": 3, "per": 5, "cha": 3 },
             "defenseBonus": { "stability": 2, "dodge": 6, "toughness": 2, "willpower": 4 },
-            "npcCreationPoints": 9
+            "npcCreationPoints": 14
         }
     ]
 }

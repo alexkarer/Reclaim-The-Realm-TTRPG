@@ -37,9 +37,16 @@ ____________________________________________________________
 
 **Character Changes**
 - Maybe extra Perks at the Start
+  - Currently testing with 2 perks per level
+- Maybe more attribute points per level
+  - trying out 2 per level and starting with 8
+  - need to change text
 - For orgin, the cosmic start should include mutations
 
 **Class Changes**
+- Barbarian:
+  - rename class path perks to fit with others
+  - add perk that allows regeneration
 - Mage, rework the way spell keywords interact with core ability
 - Fighter:
   - complete rework of core ability
