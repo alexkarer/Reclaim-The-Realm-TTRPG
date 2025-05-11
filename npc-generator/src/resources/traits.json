@@ -65,6 +65,9 @@
     ],
     "creatureTypeTraits": [
         { "pointsCost": 1, "name": "Mimic", "description": "If the creature remains motionless it is undistinguishable from the object it is mimicing. But can be detected with a [DT] 25 + [LEVEL] [PER] Investigation [SKILL TEST]. Each creature that touches the Mimic gets stuck on it and recieves [RESTRAINED I] [DT] 10 + [LEVEl] + [CON]." },
-        { "pointsCost": 1, "name": "Cosmic Corrupted", "description": "The creature has been strongly corrupted by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL]" }
+        { "pointsCost": 1, "name": "Cosmic Touched", "description": "The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation." },
+        { "pointsCost": 3, "name": "Cosmic Blessed", "description": "The creature has been blessed by the Aether. Increase [SPI] by 2. Get cosmic resistance equal to 10 + [LEVEL] and recieve 2 random minor Cosmic Mutations and 1 Cosmic Blessing" },
+        { "pointsCost": 3, "name": "Cosmic Corrupted", "description": "The creature has been blessed by the Aether. Increase [SPI] by 2. Get cosmic resistance equal to 10 + [LEVEL] and recieve 3 random minor Cosmic Mutations and 1 Cosmic Corruption" },
+        { "pointsCost": 6, "name": "Cosmic Chosen", "description": "The creature has been blessed by the Aether. Increase [SPI] by 3. Get Immunity to cosmic damage and recieve 2 random minor Cosmic Mutations and 1 Cosmic Blessing and TODO" }
     ]
 }

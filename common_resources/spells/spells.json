@@ -68,7 +68,7 @@
                     "otherRequirements": [ "Max [ARCANA] > 0" ]
                 },
                 "cost": "[REACTION], 1 [ARCANA]", "range": "-", "target": "[SELF]", "duration": "1 [INSTANT]",
-                "description": [ { "regularText": "hen you are hit by an [ATTACK] you can use this Ability, the damage of the [ATTACK] is reduced by 2*[SPI] and no additional effects are applied.", "headerLine": null, "bulletPoints": null} ],
+                "description": [ { "regularText": "When you are hit by an [ATTACK] you can use this Ability, the damage of the [ATTACK] is reduced by 2*[SPI] and no additional effects are applied.", "headerLine": null, "bulletPoints": null} ],
                 "flavorText": [ { "regularText": "You call upon the nearby stone/earth to protect you.", "headerLine": null, "bulletPoints": null} ],
                 "spellDifficulty": 6,
                 "upCastingTheSpell": "When upcasting the spell, increase the [ARCANA] Cost and Spell Difficulty by one and for every increase the damage is reduced 2*[SPI] further."

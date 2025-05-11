@@ -142,7 +142,7 @@ export class CustomAbilityComponent {
         .replaceAll('[HEAVY DAMAGE]', '[HEAVY SPELL DAMAGE]')
         .replaceAll('[LEVEL]', '[SPELL LEVEL]')
         .replaceAll('[SELECTED SAVE]', this.targetSave + ' [SAVE]')
-        .replaceAll('[CUSTOM DT]', '[DT] 10+[SPELL LEVEL]+' + this.dtCalculationAttribute)
+        .replaceAll('[CUSTOM DT]', '[DT] 8+[SPELL LEVEL]+' + this.dtCalculationAttribute)
     }
   }
 }

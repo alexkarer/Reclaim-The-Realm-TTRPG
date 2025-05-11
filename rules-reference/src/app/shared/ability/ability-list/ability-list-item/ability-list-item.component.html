@@ -26,7 +26,7 @@
             <p class="description mt-2 mb-0"><span class="fw-bold">Pushing extra cost:</span> {{ getPushingExtraCost() }}</p>
             <span class="text-body-secondary"><app-dynamic-content [content]="getPushingDescription() | keywordProcessor"></app-dynamic-content></span>
         }
-        @if (isSpellAndHasUpcastingTheSpell()) {
+        @if (isSpell()) {
             <p class="content mb-0 fw-bold">Upcasting the Spell</p>
             <span class="text-body-secondary"><app-dynamic-content [content]="getUpcastingTheSpell() | keywordProcessor"></app-dynamic-content></span>
         }

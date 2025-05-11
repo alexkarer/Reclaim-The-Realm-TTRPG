@@ -37,6 +37,7 @@ ____________________________________________________________
 
 **Character Changes**
 - Maybe extra Perks at the Start
+- For orgin, the cosmic start should include mutations
 
 **Class Changes**
 - Mage, rework the way spell keywords interact with core ability
@@ -47,6 +48,7 @@ ____________________________________________________________
   - complete rework of core ability
 
 **Specific Changes**
+- move Cosmic Mutations to json files and finish them.
 ___________________________________________________________
 ### Future Ideas / Nice to have:
 
@@ -98,7 +100,7 @@ Differnt way of gaining new abilities or features, the players can pick one and 
 - need a character wizard
 
 **Missing/partially done things**
-- Finish out Adventure Section
+- Finish out Adventure Sections
 - flesh out magical misshap table
 - add missing spellcasting perk stuff
 - add missing keyword descritpions
@@ -115,6 +117,7 @@ Differnt way of gaining new abilities or features, the players can pick one and 
 **Spells**
 - more spells
 - finish out the spell discipline specific effects.
+- Spell to remove curses and riftlands mutatioons
 
 **Status Effects:**
 - Confused Condition?

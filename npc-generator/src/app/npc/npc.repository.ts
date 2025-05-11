@@ -530,9 +530,17 @@ export class NpcRepository {
                 break;
             case 'Nightvision III':
                 break;
-            case 'Cosmic Corrupted':
+            case 'Cosmic Touched':
                 this.updateSpiBonus(1);
                 this.addDamageResistance({ type: 'cosmic', value: '5 + [HALF LEVEL]'});
+                break;
+            case 'Cosmic Blessed':
+                this.updateSpiBonus(2);
+                this.addDamageResistance({ type: 'cosmic', value: '10 + [LEVEL]'});
+                break;
+            case 'Cosmic Corrupted':
+                this.updateSpiBonus(2);
+                this.addDamageResistance({ type: 'cosmic', value: '10 + [LEVEL]'});
                 break;
             default:
                 console.error('Unkown trait ' + traitName + ' unable to apply characteristics');
@@ -663,9 +671,17 @@ export class NpcRepository {
                 break;
             case 'Nightvision III':
                 break;
-            case 'Cosmic Corrupted':
+            case 'Cosmic Touched':
                 this.updateSpiBonus(-1);
                 this.removeDamageResistance({ type: 'cosmic', value: '5 + [HALF LEVEL]'});
+                break;
+            case 'Cosmic Blessed':
+                this.updateSpiBonus(-2);
+                this.removeDamageResistance({ type: 'cosmic', value: '10 + [LEVEL]'});
+                break;
+            case 'Cosmic Corrupted':
+                this.updateSpiBonus(-2);
+                this.removeDamageResistance({ type: 'cosmic', value: '10 + [LEVEL]'});
                 break;
             default:
                 console.error('Unkown trait ' + traitName + ' unable to apply characteristics');

@@ -60,14 +60,6 @@ export class AbilityListItemComponent {
     return spell.components ?? '-';
   }
 
-  public isSpellAndHasUpcastingTheSpell(): boolean {
-    if (this.ability instanceof Spell) {
-      return this.ability.upCastingTheSpell ? true : false
-    } else {
-      return false;
-    }
-  }
-
   public getUpcastingTheSpell(): string {
     let spell = this.ability() as Spell;
     return spell.upCastingTheSpell ?? '';
