@@ -1,19 +1,26 @@
 {
-    "id": "reclaim-the-realm",
-    "title": "Reclaim the Realm",
-    "description": "FoundryVTT Implementation of the Reclaim the Realm Ruleset",
-    "version": "2.0.0",
-    "compatibility": {
-      "minimum": 13,
-      "verified": 13.341
-    },
-    "authors": [{
+  "id": "reclaim-the-realm",
+  "title": "Reclaim the Realm",
+  "description": "FoundryVTT Implementation of the Reclaim the Realm Ruleset",
+  "version": "2.0.0",
+  "compatibility": {
+    "minimum": 13,
+    "verified": 13.341
+  },
+  "authors": [
+    {
       "name": "Alexander Karer",
       "url": "https://github.com/alexkarer"
-    }],
-    "esmodules": ["mysystem.mjs"],
-    "styles": ["styles/system-styles.css"],
-    "packs": [{
+    }
+  ],
+  "esmodules": [
+    "rtr.mjs"
+  ],
+  "styles": [
+    "styles/rtr-styles.css"
+  ],
+  "packs": [
+    {
       "name": "npcs",
       "label": "NPCs",
       "type": "Actor"
@@ -22,53 +29,46 @@
       "name": "equipment",
       "label": "Equipment",
       "type": "Item"
-    }],
-    "languages": [{
+    }
+  ],
+  "languages": [
+    {
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
-    }],
-    "documentTypes": {
-      "Actor": {
-        "hero": { 
-          "htmlFields": ["background.biography"] 
-        },
-        "npc": { 
-          "htmlFields": ["background.biography"]
-        }
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "player": {
+        "htmlFields": []
       },
-      "Item": {
-        "class": {
-          "htmlFields": [ ]
-        },
-        "spell": {
-          "htmlFields": [ ]
-        },
-        "martialManeuver": {
-          "htmlFields": [ ]
-        },
-        "classTechnique": {
-          "htmlFields": [ ]
-        },
-        "perk": {
-          "htmlFields": [ ]
-        },
-        "species": {
-          "htmlFields": [ ]
-        },
-        "equipment": {
-          "htmlFields": [ ]
-        }
+      "npc": {
+        "htmlFields": []
+      }
+    },
+    "Item": {
+      "spell": {
+        "htmlFields": []
       },
-      "statusEffects": []
-    },
-    "socket": false,
-    "initiative": "1d20",
-    "grid": {
-      "distance": 1.5,
-      "units": "m"
-    },
-    "primaryTokenAttribute": "resources.hp",
-    "secondaryTokenAttribute": "resources.tempHp",
-    "url": "https://github.com/alexkarer/Reclaim-The-Realm-TTRPG"
-  }
+      "martialManeuver": {
+        "htmlFields": []
+      },
+      "classTechnique": {
+        "htmlFields": []
+      },
+      "equipment": {
+        "htmlFields": []
+      }
+    }
+  },
+  "socket": false,
+  "initiative": "1d20",
+  "grid": {
+    "distance": 1.5,
+    "units": "m"
+  },
+  "primaryTokenAttribute": "resources.hp",
+  "secondaryTokenAttribute": "resources.tempHp",
+  "url": "https://github.com/alexkarer/Reclaim-The-Realm-TTRPG"
+}

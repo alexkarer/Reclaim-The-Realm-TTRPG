@@ -52,3 +52,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# FoundryVtt
+/foundry-vtt/reclaim-the-realm/packs/*
+!/foundry-vtt/reclaim-the-realm/packs/_source/
