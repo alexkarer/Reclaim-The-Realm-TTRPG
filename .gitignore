@@ -5,6 +5,7 @@
 /npc-generator/dist
 /shop-generators/dist
 /travel-encounters/dist
+/foundry-vtt/reclaim-the-realm/dist
 /dist
 /tmp
 /out-tsc
@@ -15,6 +16,7 @@
 /npc-generator/node_modules
 /shop-generators/node_modules
 /travel-encounters/node_modules
+/foundry-vtt/reclaim-the-realm/node_modules
 /node_modules
 npm-debug.log
 yarn-error.log

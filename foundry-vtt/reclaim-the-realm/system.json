@@ -13,11 +13,29 @@
       "url": "https://github.com/alexkarer"
     }
   ],
+  "url": "Replace this with a link to your public repository",
+  "readme": "README.md",
+  "bugs": "https://github.com/alexkarer/Reclaim-The-Realm-TTRPG/issues",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/reclaim-the-realm/assets/anvil-impact.png",
+      "thumbnail": "systems/reclaim-the-realm/assets/anvil-impact.png"
+    }
+  ],
   "esmodules": [
-    "rtr.mjs"
+    "module/reclaim-the-realm.mjs"
   ],
   "styles": [
-    "styles/rtr-styles.css"
+    "css/reclaim-the-realm.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
   ],
   "packs": [
     {
@@ -29,13 +47,6 @@
       "name": "equipment",
       "label": "Equipment",
       "type": "Item"
-    }
-  ],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
     }
   ],
   "documentTypes": {
@@ -62,13 +73,16 @@
       }
     }
   },
+  "packFolders": [],
   "socket": false,
+  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
+  "download": "This must link to a .zip file of the current version",
+  "background": "systems/reclaim-the-realm/assets/anvil-impact.png",
   "initiative": "1d20",
   "grid": {
     "distance": 1.5,
     "units": "m"
   },
-  "primaryTokenAttribute": "resources.hp",
-  "secondaryTokenAttribute": "resources.tempHp",
-  "url": "https://github.com/alexkarer/Reclaim-The-Realm-TTRPG"
+  "primaryTokenAttribute": "hp",
+  "secondaryTokenAttribute": "tempHp"
 }

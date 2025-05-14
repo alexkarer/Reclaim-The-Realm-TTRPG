@@ -1,17 +1,19 @@
-import BaseActorDataModel from './base-actor.mjs';
-const { HTMLField } = foundry.data.fields;
+import RtRActorBase from "./base-actor.mjs";
 
-export default class PlayerDataModel extends BaseActorDataModel {
-    static defineSchema() {
-        return {
-            ...super.defineSchema(),
-            background: new SchemaField({
-                birthplace: new HTMLField({ required: true, blank: true }),
-                earlyTraining: new HTMLField({ required: true, blank: true }),
-                lifeEvents: new HTMLField({ required: true, blank: true }),
-                definingMoment: new HTMLField({ required: true, blank: true }),
-                additionalNotes: new HTMLField({ required: true, blank: true })
-            })
-        };
-    }
+export default class RtRPlayer extends RtRActorBase {
+
+  static defineSchema() {
+    const fields = foundry.data.fields;
+    const requiredInteger = { required: true, nullable: false, integer: true };
+    const schema = super.defineSchema();
+
+    schema.xp = new fields.NumberField({ requiredInteger, min: 0, initial: 0 });
+
+    return schema;
+  }
+
+  prepareDerivedData() {
+    super.prepareDerivedData();
+    // calculate level based of xp
+  }
 }
