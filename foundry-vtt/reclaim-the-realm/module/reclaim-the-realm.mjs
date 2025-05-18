@@ -5,7 +5,6 @@ import { RtRItem } from './documents/item.mjs';
 import { RtRActorSheet } from './sheets/actor-sheet.mjs';
 import { RtRItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
-import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
 import { RTR } from './helpers/config.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
@@ -14,15 +13,24 @@ import * as models from './data/_module.mjs';
 /*  Init Hook                                   */
 /* -------------------------------------------- */
 
-Hooks.once('init', function () {
-  // Add utility classes to the global game object so that they're more easily
-  // accessible in global contexts.
-  game.reclaimtherealm = {
-    RtRActor,
-    RtRItem,
-    rollItemMacro,
-  };
+// Add key classes to the global scope so they can be more easily used
+// by downstream developers
+// globalThis.reclaim-the-realm = {
+//   documents: {
+//     RtRActor,
+//     RtRItem,
+//   },
+//   applications: {
+//     RtRActorSheet,
+//     RtRItemSheet,
+//   },
+//   utils: {
+//     rollItemMacro,
+//   },
+//   models,
+// };
 
+Hooks.once('init', function () {
   // Add custom constants for configuration.
   CONFIG.RTR = RTR;
 
@@ -31,7 +39,7 @@ Hooks.once('init', function () {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: '1d20 + max(@attributes.agi, @attributes.per)',
+    formula: '1d20 + @abilities.dex.mod',
     decimals: 2,
   };
 
@@ -42,16 +50,15 @@ Hooks.once('init', function () {
   // for the base actor/item classes - they are included
   // with the Character/NPC as part of super.defineSchema()
   CONFIG.Actor.dataModels = {
-    player: models.RtrPlayer,
-    npc: models.RtRNPC
-  }
+    character: models.RtRCharacter,
+    npc: models.RtRNPC,
+  };
   CONFIG.Item.documentClass = RtRItem;
   CONFIG.Item.dataModels = {
-    equipment: models.RtREquipment,
-    classTechnique: models.RtRClassTechnique,
-    martialManeuver: models.RtRMartialManeuver,
-    spell: models.RtRSpell
-  }
+    gear: models.RtRGear,
+    feature: models.RtRFeature,
+    spell: models.RtRSpell,
+  };
 
   // Active Effects are never copied to the Actor,
   // but will still apply to the Actor from within the Item
@@ -59,19 +66,16 @@ Hooks.once('init', function () {
   CONFIG.ActiveEffect.legacyTransferral = false;
 
   // Register sheet application classes
-  foundry.documents.collections.Actors.unregisterSheet('core', foundry.applications.sheets.ActorSheetV2);
+  foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ActorSheet);
   foundry.documents.collections.Actors.registerSheet('reclaim-the-realm', RtRActorSheet, {
     makeDefault: true,
     label: 'RTR.SheetLabels.Actor',
   });
-  foundry.documents.collections.Items.unregisterSheet('core', foundry.applications.sheets.ItemSheetV2);
+  foundry.documents.collections.Items.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
   foundry.documents.collections.Items.registerSheet('reclaim-the-realm', RtRItemSheet, {
     makeDefault: true,
     label: 'RTR.SheetLabels.Item',
   });
-
-  // Preload Handlebars templates.
-  return preloadHandlebarsTemplates();
 });
 
 /* -------------------------------------------- */
@@ -89,7 +93,7 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 
 Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
-  Hooks.on('hotbarDrop', (bar, data, slot) => createItemMacro(data, slot));
+  Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
 });
 
 /* -------------------------------------------- */
@@ -103,7 +107,7 @@ Hooks.once('ready', function () {
  * @param {number} slot     The hotbar slot to use
  * @returns {Promise}
  */
-async function createItemMacro(data, slot) {
+async function createDocMacro(data, slot) {
   // First, determine if this is a valid owned item.
   if (data.type !== 'Item') return;
   if (!data.uuid.includes('Actor.') && !data.uuid.includes('Token.')) {

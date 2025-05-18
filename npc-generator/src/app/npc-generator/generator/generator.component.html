@@ -102,37 +102,55 @@
     </div>
     <hr>
     <div class="mt-3 d-flex justify-content-around">
-        <div class="d-flex align-items-center">
-            <h5 class="me-3">Primary Attribute Boost</h5>
-            <div ngbDropdown class="d-inline-block">
-                <button type="button" class="btn btn-outline-primary" id="dropdownPrimaryAttrBoost" ngbDropdownToggle>
-                    {{ npcRepo.$primaryAttributeBoost | async }}
-                </button>
-                <div ngbDropdownMenu aria-labelledby="dropdownPrimaryAttrBoost">
-                    @for (attr of attributes; track $index) {
-                        <button type="button" (click)="npcRepo.updatePrimaryAttributeBoost(attr)" ngbDropdownItem>{{ attr }}</button>
-                    }
-                </div>
+        <div class="d-flex flex-column">
+            <h6 class="me-1">STR: {{ npcRepo.$strAttributeBoost | async }}</h6>
+            <div>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.decreaseAttributeBoost(AttributesEnum.STR)">-</button>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.increaseAttributeBoost(AttributesEnum.STR)">+</button>
             </div>
         </div>
-        <div class="d-flex align-items-center">
-            <h5 class="me-3">Secondary Attribute Boost</h5>
-            <div ngbDropdown class="d-inline-block">
-                <button type="button" class="btn btn-outline-primary" id="dropdownSecondaryAttrBoost" ngbDropdownToggle>
-                    {{ npcRepo.$secondaryAttributeBoost | async }}
-                </button>
-                <div ngbDropdownMenu aria-labelledby="dropdownSecondaryAttrBoost">
-                    @for (attr of attributes; track $index) {
-                        <button type="button" (click)="npcRepo.updateSecondaryAttributeBoost(attr)" ngbDropdownItem>{{ attr }}</button>
-                    }
-                </div>
+        <div class="d-flex flex-column">
+            <h6 class="me-1">AGI: {{ npcRepo.$agiAttributeBoost | async }}</h6>
+            <div>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.decreaseAttributeBoost(AttributesEnum.AGI)">-</button>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.increaseAttributeBoost(AttributesEnum.AGI)">+</button>
             </div>
         </div>
-        @if ((npcRepo.$primaryAttributeBoost | async) === (npcRepo.$secondaryAttributeBoost | async)) {
-            <div class="text-bg-danger ">
-                <h5>Attribute Boosts must not match!</h5>
+        <div class="d-flex flex-column">
+            <h6 class="me-1">CON: {{ npcRepo.$conAttributeBoost | async }}</h6>
+            <div>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.decreaseAttributeBoost(AttributesEnum.CON)">-</button>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.increaseAttributeBoost(AttributesEnum.CON)">+</button>
             </div>
-        }
+        </div>
+        <div class="d-flex flex-column">
+            <h6 class="me-1">INT: {{ npcRepo.$intAttributeBoost | async }}</h6>
+            <div>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.decreaseAttributeBoost(AttributesEnum.INT)">-</button>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.increaseAttributeBoost(AttributesEnum.INT)">+</button>
+            </div>
+        </div>
+        <div class="d-flex flex-column">
+            <h6 class="me-1">SPI: {{ npcRepo.$spiAttributeBoost | async }}</h6>
+            <div>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.decreaseAttributeBoost(AttributesEnum.SPI)">-</button>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.increaseAttributeBoost(AttributesEnum.SPI)">+</button>
+            </div>
+        </div>
+        <div class="d-flex flex-column">
+            <h6 class="me-1">PER: {{ npcRepo.$perAttributeBoost | async }}</h6>
+            <div>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.decreaseAttributeBoost(AttributesEnum.PER)">-</button>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.increaseAttributeBoost(AttributesEnum.PER)">+</button>
+            </div>
+        </div>
+        <div class="d-flex flex-column">
+            <h6 class="me-1">CHA: {{ npcRepo.$chaAttributeBoost | async }}</h6>
+            <div>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.decreaseAttributeBoost(AttributesEnum.CHA)">-</button>
+                <button type="button" class="btn btn-outline-primary fw-bold" (click)="npcRepo.increaseAttributeBoost(AttributesEnum.CHA)">+</button>
+            </div>
+        </div>
     </div>
     <hr>
     <div class="d-flex flex-column">

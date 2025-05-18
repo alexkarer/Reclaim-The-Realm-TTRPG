@@ -13,7 +13,14 @@
       "url": "https://github.com/alexkarer"
     }
   ],
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "html", "hbs", "json"],
+      "paths": ["css", "lang", "templates"]
+    }
+  },
   "url": "Replace this with a link to your public repository",
+  "license": "LICENSE.txt",
   "readme": "README.md",
   "bugs": "https://github.com/alexkarer/Reclaim-The-Realm-TTRPG/issues",
   "changelog": "CHANGELOG.md",
@@ -24,12 +31,8 @@
       "thumbnail": "systems/reclaim-the-realm/assets/anvil-impact.png"
     }
   ],
-  "esmodules": [
-    "module/reclaim-the-realm.mjs"
-  ],
-  "styles": [
-    "css/reclaim-the-realm.css"
-  ],
+  "esmodules": ["module/reclaim-the-realm.mjs"],
+  "styles": ["css/reclaim-the-realm.css"],
   "languages": [
     {
       "lang": "en",
@@ -51,26 +54,23 @@
   ],
   "documentTypes": {
     "Actor": {
-      "player": {
-        "htmlFields": []
-      },
-      "npc": {
-        "htmlFields": []
-      }
+        "character": {
+            "htmlFields": ["biography"]
+        },
+        "npc": {
+            "htmlFields": ["biography"]
+        }
     },
     "Item": {
-      "spell": {
-        "htmlFields": []
-      },
-      "martialManeuver": {
-        "htmlFields": []
-      },
-      "classTechnique": {
-        "htmlFields": []
-      },
-      "equipment": {
-        "htmlFields": []
-      }
+        "feature": {
+            "htmlFields": ["description"]
+        },
+        "gear": {
+            "htmlFields": ["description"]
+        },
+        "spell": {
+            "htmlFields": ["description"]
+        }
     }
   },
   "packFolders": [],
@@ -83,6 +83,6 @@
     "distance": 1.5,
     "units": "m"
   },
-  "primaryTokenAttribute": "hp",
-  "secondaryTokenAttribute": "tempHp"
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power"
 }

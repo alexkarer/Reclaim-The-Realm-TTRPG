@@ -51,8 +51,14 @@ export type NPC = {
     spiBonus: number,
     perBonus: number,
     chaBonus: number,
-    primaryAttributeBoost: Attributes,
-    secondaryAttributeBoost: Attributes
+
+    strAttributeBoost: number,
+    agiAttributeBoost: number,
+    conAttributeBoost: number,
+    intAttributeBoost: number,
+    spiAttributeBoost: number,
+    perAttributeBoost: number,
+    chaAttributeBoost: number,
 
     // Defenses
     stabilityBonus: number,

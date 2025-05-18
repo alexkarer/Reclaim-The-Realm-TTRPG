@@ -1,7 +1,29 @@
-$c-white: #fff;
-$c-black: #000;
+:root {
+  --reclaim-the-realm-c-dark: #191813;
+  --reclaim-the-realm-c-faint: #c9c7b8;
+  --reclaim-the-realm-c-beige: #b5b3a4;
+  --reclaim-the-realm-c-tan: #444444;
+  --reclaim-the-realm-c-white: #ffffff;
+  --reclaim-the-realm-c-black: #000000;
+  --reclaim-the-realm-c-groove: #eeede0;
+}
 
-$c-dark: #191813;
-$c-faint: #c9c7b8;
-$c-beige: #b5b3a4;
-$c-tan: #444;
+.theme-dark {
+  --reclaim-the-realm-c-dark: #c9c7b8;
+  --reclaim-the-realm-c-faint: #191813;
+  --reclaim-the-realm-c-beige: #444444;
+  --reclaim-the-realm-c-tan: #b5b3a4;
+  --reclaim-the-realm-c-white: #000000;
+  --reclaim-the-realm-c-black: #ffffff;
+  --reclaim-the-realm-c-groove: #11121f;
+}
+
+$c-white: var(--reclaim-the-realm-c-white);
+$c-black: var(--reclaim-the-realm-c-black);
+
+$c-dark: var(--reclaim-the-realm-c-dark);
+$c-faint: var(--reclaim-the-realm-c-faint);
+$c-beige: var(--reclaim-the-realm-c-beige);
+$c-tan: var(--reclaim-the-realm-c-tan);
+
+$c-groove: var(--reclaim-the-realm-c-groove);

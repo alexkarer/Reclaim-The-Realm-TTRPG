@@ -1,6 +1,6 @@
 {
   "name": "reclaim-the-realm",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "CSS compiler for the RtR system",
   "scripts": {
     "build": "sass src/scss/reclaim-the-realm.scss css/reclaim-the-realm.css --style=expanded --no-source-map",

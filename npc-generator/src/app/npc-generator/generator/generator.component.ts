@@ -27,7 +27,7 @@ export class GeneratorComponent {
   readonly levelNumbers = levelJson.map(lvl => lvl.level);
   readonly creatureTypes = creatureTypesJson;
   readonly creatureSizes = creatureSizesJson;
-  readonly attributes = Object.values(Attributes);
+  readonly AttributesEnum = Attributes;
   readonly traits = traitsJson;
   readonly abilities = abilitiesJson;
 

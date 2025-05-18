@@ -1,6 +1,6 @@
 {
   "RTR": {
-    "Attribute": {
+     "Attribute": {
       "Str": { "long": "Strength", "abbr": "STR" },
       "Con": { "long": "Constitution", "abbr": "CON" },
       "Agi": { "long": "Agility", "abbr": "AGI" },
@@ -9,12 +9,71 @@
       "Per": { "long": "Perception", "abbr": "PER" },
       "Cha": { "long": "Charisma", "abbr": "CHA" }
     },
+    "Ability": {
+      "Str": { "long": "Strength", "abbr": "str" },
+      "Con": { "long": "Constitution", "abbr": "con" },
+      "Dex": { "long": "Dexterity", "abbr": "dex" },
+      "Int": { "long": "Intelligence", "abbr": "int" },
+      "Wis": { "long": "Wisdom", "abbr": "wis" },
+      "Cha": { "long": "Charisma", "abbr": "cha" }
+    },
     "SheetLabels": {
       "Actor": "RtR Actor Sheet",
       "Item": "RtR Item Sheet"
     },
+    "Actor": {
+      "Tabs": {
+        "Biography": "Biography",
+        "Features": "Features",
+        "Gear": "Gear",
+        "Spells": "Spells",
+        "Effects": "Effects"
+      },
+      "base": {
+        "FIELDS": {
+          "biography": {"label": "Biography"},
+          "health": {
+            "value": {"label": "Health"},
+            "max": {"label": "Maximum Health"}
+          },
+          "power": {
+            "value": {"label": "Power"},
+            "max": {"label": "Maximum Power"}
+          }
+        }
+      },
+      "Character": {
+        "FIELDS": {
+          "attributes.level.value": {"label": "Level"}
+        }
+      },
+      "NPC": {
+        "FIELDS": {
+          "cr": {"label": "CR"}
+        },
+        "xp": {"label": "XP"}
+      }
+    },
     "Item": {
+      "Tabs": {
+        "Attributes": "Attributes",
+        "Description": "Description",
+        "Effects": "Effects"
+      },
+      "Gear": {
+        "FIELDS": {
+          "rollFormula": {"label": "Roll Formula"},
+          "numDice": {"label": "Number of Dice"},
+          "dieSize": {"label": "Die Size"},
+          "rollMod": {"label": "Roll Modifier"},
+          "quantity": {"label": "Quantity"},
+          "weight": {"label": "Weight"}
+        }
+      },
       "Spell": {
+        "FIELDS": {
+          "level": {"label": "Spell Level"}
+        },
         "SpellLVL": "Level {level} Spells",
         "AddLVL": "Add LVL {level}"
       }
@@ -27,14 +86,13 @@
       "Inactive": "Inactive Effects"
     }
   },
-
   "TYPES": {
     "Actor": {
       "character": "Character",
       "npc": "NPC"
     },
     "Item": {
-      "item": "Item",
+      "gear": "Gear",
       "feature": "Feature",
       "spell": "Spell"
     }

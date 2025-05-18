@@ -1,5 +1,7 @@
 # TODO
 
+ADd error message if attribute boost is done wrong
+
 **Add skills**
 - implement skills, see concept
 - passive awarenees

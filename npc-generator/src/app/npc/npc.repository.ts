@@ -38,8 +38,14 @@ const npcStore = createStore(
         spiBonus: 0,
         perBonus: 0,
         chaBonus: 0,
-        primaryAttributeBoost: Attributes.STR,
-        secondaryAttributeBoost: Attributes.AGI,
+
+        strAttributeBoost: 0,
+        agiAttributeBoost: 0,
+        conAttributeBoost: 0,
+        intAttributeBoost: 0,
+        spiAttributeBoost: 0,
+        perAttributeBoost: 0,
+        chaAttributeBoost: 0,
 
         stabilityBonus: 0,
         dodgeBonus: 0,
@@ -99,8 +105,14 @@ export class NpcRepository {
     $spi = npcStore.pipe(select(state => this.calculateSpi(state)));
     $per = npcStore.pipe(select(state => this.calculatePer(state)));
     $cha = npcStore.pipe(select(state => this.calculateCha(state)));
-    $primaryAttributeBoost = npcStore.pipe(select(state => state.primaryAttributeBoost));
-    $secondaryAttributeBoost = npcStore.pipe(select(state => state.secondaryAttributeBoost));
+
+    $strAttributeBoost = npcStore.pipe(select(state => state.strAttributeBoost));
+    $agiAttributeBoost = npcStore.pipe(select(state => state.agiAttributeBoost));
+    $conAttributeBoost = npcStore.pipe(select(state => state.conAttributeBoost));
+    $intAttributeBoost = npcStore.pipe(select(state => state.intAttributeBoost));
+    $spiAttributeBoost = npcStore.pipe(select(state => state.spiAttributeBoost));
+    $perAttributeBoost = npcStore.pipe(select(state => state.perAttributeBoost));
+    $chaAttributeBoost = npcStore.pipe(select(state => state.chaAttributeBoost));
 
     $meleeMartialAttack = npcStore.pipe(select(state => 10 + this.calculateAgi(state) + this.getBaseStatArray(state).levels.martialLevel));
     $rangedMartialAttack = npcStore.pipe(select(state => 10 + this.calculatePer(state) + this.getBaseStatArray(state).levels.martialLevel));
@@ -205,12 +217,56 @@ export class NpcRepository {
         npcStore.update(setProp('creatureSize', size));
     }
 
-    updatePrimaryAttributeBoost(attr: Attributes) {
-        npcStore.update(setProp('primaryAttributeBoost', attr));
+    increaseAttributeBoost(attr: Attributes) {
+        switch (attr) {
+            case Attributes.STR: 
+                npcStore.update(setProp('strAttributeBoost', boost => boost + 1));
+                break;
+            case Attributes.AGI:
+                npcStore.update(setProp('agiAttributeBoost', boost => boost + 1));
+                break;
+            case Attributes.CON:
+                npcStore.update(setProp('conAttributeBoost', boost => boost + 1));
+                break;
+            case Attributes.INT:
+                npcStore.update(setProp('intAttributeBoost', boost => boost + 1));
+                break;
+            case Attributes.SPI:
+                npcStore.update(setProp('spiAttributeBoost', boost => boost + 1));
+                break;
+            case Attributes.PER:
+                npcStore.update(setProp('perAttributeBoost', boost => boost + 1));
+                break;
+            case Attributes.CHA:
+                npcStore.update(setProp('chaAttributeBoost', boost => boost + 1));
+                break;
+        }
     }
 
-    updateSecondaryAttributeBoost(attr: Attributes) {
-        npcStore.update(setProp('secondaryAttributeBoost', attr));
+    decreaseAttributeBoost(attr: Attributes) {
+        switch (attr) {
+            case Attributes.STR: 
+                npcStore.update(setProp('strAttributeBoost', boost => boost - 1));
+                break;
+            case Attributes.AGI:
+                npcStore.update(setProp('agiAttributeBoost', boost => boost - 1));
+                break;
+            case Attributes.CON:
+                npcStore.update(setProp('conAttributeBoost', boost => boost - 1));
+                break;
+            case Attributes.INT:
+                npcStore.update(setProp('intAttributeBoost', boost => boost - 1));
+                break;
+            case Attributes.SPI:
+                npcStore.update(setProp('spiAttributeBoost', boost => boost - 1));
+                break;
+            case Attributes.PER:
+                npcStore.update(setProp('perAttributeBoost', boost => boost - 1));
+                break;
+            case Attributes.CHA:
+                npcStore.update(setProp('chaAttributeBoost', boost => boost - 1));
+                break;
+        }
     }
 
     addTrait(trait: Trait) {
@@ -258,8 +314,7 @@ export class NpcRepository {
             state.creatureType.attributeBonsuses.str +
             state.creatureSubType.attributeBonsuses.str +
             state.creatureSize.strBonus +
-            (state.primaryAttributeBoost === Attributes.STR ? 2 : 0) +
-            (state.secondaryAttributeBoost === Attributes.STR ? 1 : 0);
+            state.strAttributeBoost;
     }
 
     private calculateAgi(state: NPC): number {
@@ -267,8 +322,7 @@ export class NpcRepository {
             this.getBaseStatArray(state).attributes.agi +
             state.creatureType.attributeBonsuses.agi +
             state.creatureSubType.attributeBonsuses.agi +
-            (state.primaryAttributeBoost === Attributes.AGI ? 2 : 0) +
-            (state.secondaryAttributeBoost === Attributes.AGI ? 1 : 0);
+            state.agiAttributeBoost;
     }
 
     private calculateCon(state: NPC): number {
@@ -276,8 +330,7 @@ export class NpcRepository {
             this.getBaseStatArray(state).attributes.con +
             state.creatureType.attributeBonsuses.con +
             state.creatureSubType.attributeBonsuses.con +
-            (state.primaryAttributeBoost === Attributes.CON ? 2 : 0) +
-            (state.secondaryAttributeBoost === Attributes.CON ? 1 : 0);
+            state.conAttributeBoost;
     }
 
     private calculateInt(state: NPC): number {
@@ -285,8 +338,7 @@ export class NpcRepository {
             this.getBaseStatArray(state).attributes.int +
             state.creatureType.attributeBonsuses.int +
             state.creatureSubType.attributeBonsuses.int +
-            (state.primaryAttributeBoost === Attributes.INT ? 2 : 0) +
-            (state.secondaryAttributeBoost === Attributes.INT ? 1 : 0);
+            state.intAttributeBoost;
     }
 
     private calculateSpi(state: NPC): number {
@@ -294,8 +346,7 @@ export class NpcRepository {
             this.getBaseStatArray(state).attributes.spi +
             state.creatureType.attributeBonsuses.spi +
             state.creatureSubType.attributeBonsuses.spi +
-            (state.primaryAttributeBoost === Attributes.SPI ? 2 : 0) +
-            (state.secondaryAttributeBoost === Attributes.SPI ? 1 : 0);
+            state.spiAttributeBoost;
     }
 
     private calculatePer(state: NPC): number {
@@ -303,8 +354,7 @@ export class NpcRepository {
             this.getBaseStatArray(state).attributes.per +
             state.creatureType.attributeBonsuses.per +
             state.creatureSubType.attributeBonsuses.per +
-            (state.primaryAttributeBoost === Attributes.PER ? 2 : 0) +
-            (state.secondaryAttributeBoost === Attributes.PER ? 1 : 0);
+            state.perAttributeBoost;
     }
 
     private calculateCha(state: NPC): number {
@@ -312,8 +362,7 @@ export class NpcRepository {
             this.getBaseStatArray(state).attributes.cha +
             state.creatureType.attributeBonsuses.cha +
             state.creatureSubType.attributeBonsuses.cha +
-            (state.primaryAttributeBoost === Attributes.CHA ? 2 : 0) +
-            (state.secondaryAttributeBoost === Attributes.CHA ? 1 : 0);
+            state.chaAttributeBoost;
     }
 
     private flattenDamageResistances(state: NPC): string {
