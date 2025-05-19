@@ -4,20 +4,22 @@ export const RTR = {};
  * The set of Ability Scores used within the system.
  * @type {Object}
  */
-RTR.abilities = {
-  str: 'RTR.Ability.Str.long',
-  dex: 'RTR.Ability.Dex.long',
-  con: 'RTR.Ability.Con.long',
-  int: 'RTR.Ability.Int.long',
-  wis: 'RTR.Ability.Wis.long',
-  cha: 'RTR.Ability.Cha.long',
+RTR.attributes = {
+  str: 'RTR.Attribute.Str.long',
+  agi: 'RTR.Attribute.Agi.long',
+  con: 'RTR.Attribute.Con.long',
+  spi: 'RTR.Attribute.Spi.long',
+  int: 'RTR.Attribute.Int.long',
+  per: 'RTR.Attribute.Per.long',
+  cha: 'RTR.Attribute.Cha.long',
 };
 
-RTR.abilityAbbreviations = {
-  str: 'RTR.Ability.Str.abbr',
-  dex: 'RTR.Ability.Dex.abbr',
-  con: 'RTR.Ability.Con.abbr',
-  int: 'RTR.Ability.Int.abbr',
-  wis: 'RTR.Ability.Wis.abbr',
-  cha: 'RTR.Ability.Cha.abbr',
+RTR.attributeAbbreviations = {
+  str: 'RTR.Attribute.Str.abbr',
+  agi: 'RTR.Attribute.Agi.abbr',
+  con: 'RTR.Attribute.Con.abbr',
+  spi: 'RTR.Attribute.Spi.abbr',
+  int: 'RTR.Attribute.Int.abbr',
+  per: 'RTR.Attribute.Per.abbr',
+  cha: 'RTR.Attribute.Cha.abbr',
 };

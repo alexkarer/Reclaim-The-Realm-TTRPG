@@ -83,6 +83,6 @@
     "distance": 1.5,
     "units": "m"
   },
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power"
+  "primaryTokenAttribute": "hp",
+  "secondaryTokenAttribute": "tempHP"
 }

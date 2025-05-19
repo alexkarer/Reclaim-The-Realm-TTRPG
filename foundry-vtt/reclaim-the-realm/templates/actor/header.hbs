@@ -10,68 +10,63 @@
     width='100'
   />
   <div class='header-fields'>
-    <div class='document-name'>
+    <div class='document-name flexrow' style="margin-bottom: 1em;">
       <input
         name='name'
         type='text'
         value='{{actor.name}}'
         placeholder='Name'
       />
+      <label class='resource-label'>
+          {{localize 'RTR.Actor.Character.FIELDS.levels.level.label'}}
+      </label>
+      <div class='resource-content flexrow flex-center flex-between'>
+        <input
+          type='text'
+          name='system.levels.level'
+          value='{{system.levels.level}}'
+          data-dtype='Number'
+        />
+      </div>
     </div>
 
-    <div class='resources flex-around flexrow'>
+    <div class='resources flex-around flexrow' style="margin-bottom: 1em;">
 
       <div class='resource flex-group-center'>
-        <label for='system.health.value' class='resource-label'>
-          {{localize 'RTR.Actor.base.FIELDS.health.value.label'}}
+        <label for='system.hp.value' class='resource-label'>
+          {{localize 'RTR.Actor.base.FIELDS.hp.value.label'}}
         </label>
-        <div class='resource-content flexrow flex-center flex-between'>
-          <span id='system.health.value'>{{system.health.value}}</span>
+        <div class='resource-content flexrow flex-center'>
+          <span id='system.hp.value'>{{system.hp.value}}</span>
           <span> / </span>
-          <span id='system.health.max'>{{system.health.max}}</span>
+          <span id='system.hp.max'>{{system.hp.max}}</span>
         </div>
-        <div class='resource-content flexrow flex-center flex-between'>
+        <div class='resource-content flexrow flex-center'>
           <a data-action='decreaseHp'>&lt;</a>
-          <meter value='{{system.health.value}}' max='{{system.health.max}}'></meter>
+          <meter value='{{system.hp.value}}' max='{{system.hp.max}}'></meter>
           <a data-action='increaseHp'>&gt;</a>
         </div>
       </div>
 
-      <div class='resource flex-group-center'>
-        <label for='system.power.value' class='resource-label'>
-          {{localize 'RTR.Actor.base.FIELDS.power.value.label'}}
-        </label>
-        <div class='resource-content flexrow flex-center flex-between'>
-          <input
-            type='text'
-            name='system.power.value'
-            value='{{system.power.value}}'
-            data-dtype='Number'
-          />
-          <span> / </span>
-          <input
-            type='text'
-            name='system.power.max'
-            value='{{system.power.max}}'
-            data-dtype='Number'
-          />
+      {{#if (eq actor.type 'character')}}
+        <div class='resource flex-group-center'>
+          <label for='system.stamina.value' class='resource-label'>
+            {{localize 'RTR.Actor.base.FIELDS.stamina.value.label'}}
+          </label>
+          <div class='resource-content flexrow flex-center'>
+            <span id='system.stamina.value'>{{system.stamina.value}}</span>
+            <span> / </span>
+            <span id='system.stamina.max'>{{system.stamina.max}}</span>
+          </div>
+          <div class='resource-content flexrow flex-center'>
+            <a data-action='decreaseStamina'>&lt;</a>
+            <meter value='{{system.stamina.value}}' max='{{system.stamina.max}}'></meter>
+            <a data-action='increaseStamina'>&gt;</a>
+          </div>
         </div>
-      </div>
+      {{/if}}
 
       <div class='resource flex-group-center'>
-        {{#if (eq actor.type 'character')}}
-          <label class='resource-label'>
-            {{localize 'RTR.Actor.Character.FIELDS.attributes.level.value.label'}}
-          </label>
-          <div class='resource-content flexrow flex-center flex-between'>
-            <input
-              type='text'
-              name='system.attributes.level.value'
-              value='{{system.attributes.level.value}}'
-              data-dtype='Number'
-            />
-          </div>
-        {{/if}}
         {{#if (eq actor.type 'npc')}}
           <label class='resource-label'>
             {{localize 'RTR.Actor.NPC.FIELDS.cr.label'}} / {{localize 'RTR.Actor.NPC.xp.label'}}
@@ -96,31 +91,31 @@
       </div>
     </div>
 
-    <div class='abilities flexrow align-center'>
-        {{#each system.abilities as |ability key|}}
-          <div class='ability flexcol flex-group-center'>
-            <label
-              class='resource-label rollable flexlarge'
+    <table>
+      <thead>
+        <tr class="flex-group-center">
+          {{#each system.attributes as |attribute key|}}
+            <th
+              class='rollable'
               data-action='roll'
-              data-roll='d20+@abilities.{{key}}.mod'
-              data-label='{{localize (lookup @root.config.abilityAbbreviations key)}}'
-            >{{localize (lookup @root.config.abilityAbbreviations key)}}</label>
-            <input
-              type='text'
-              name='system.abilities.{{key}}.value'
-              value='{{ability.value}}'
-              class="ability-score"
-              data-dtype='Number'
-            />
-            <span
-              class='ability-mod rollable'
+              data-roll='d20+@attributes.{{key}}.value'
+              data-label='{{localize (lookup @root.config.attributeAbbreviations key)}}'
+            >{{localize (lookup @root.config.attributeAbbreviations key)}}</th>
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="flex-group-center">
+          {{#each system.attributes as |attribute key|}}
+            <td
+              class='rollable'
               data-action='roll'
-              data-roll='d20+@abilities.{{key}}.mod'
-              data-label='{{localize (lookup @root.config.abilities key)}}'
-            >{{numberFormat ability.mod decimals=0 sign=true}}</span>
-          </div>
-        {{/each}}
-      </div>
-    </aside>
+              data-roll='d20+@attributes.{{key}}.value'
+              data-label='{{localize (lookup @root.config.attributes key)}}'
+            >{{numberFormat attribute.value decimals=0}}</td>
+          {{/each}}
+        </tr>
+      </tbody>
+    </table>
   </div>
 </header>

@@ -271,12 +271,8 @@
 .reclaim-the-realm .resource-label {
   font-weight: bold;
 }
-.reclaim-the-realm .ability {
-  margin-bottom: 2px;
-}
-.reclaim-the-realm .ability-score,
-.reclaim-the-realm .ability-mod {
-  flex: 0 0 44px;
+.reclaim-the-realm .attribute {
+  margin-bottom: 1em;
 }
 .reclaim-the-realm .items-header {
   height: 28px;

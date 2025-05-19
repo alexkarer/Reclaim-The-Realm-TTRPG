@@ -26,7 +26,8 @@ export default class RtRNPC extends RtRActorBase {
   }
 
   getRollData() {
-    super.getRollData();
+    const data = super.getRollData();
+    return data;
   }
 
 }

@@ -29,7 +29,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
       increaseHp: this._onIncreaseHP,
-      decreaseHp: this._onDecreaseHP
+      decreaseHp: this._onDecreaseHP,
+      increaseStamina: this._onIncreaseStamina,
+      decreaseStamina: this._onDecreaseStamina
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -397,7 +399,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
 
     // Handle rolls that supply the formula directly.
     if (dataset.roll) {
-      let label = dataset.label ? `[ability] ${dataset.label}` : '';
+      let label = dataset.label ? `[attribute] ${dataset.label}` : '';
       let roll = new Roll(dataset.roll, this.actor.getRollData());
       await roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -418,13 +420,14 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onIncreaseHP(event, target) {
     event.preventDefault();
-    if (this.actor.system.health.value >= this.actor.system.health.max) {
-      console.warn('Health Already at Max');
+    if (this.actor.system.hp.value >= this.actor.system.hp.max) {
+      console.warn('HP Already at Max');
       return;
     }
   
-    this.actor.system.health.value += 1;
+    this.actor.system.hp.value += 1;
     this.render();
+    this.actor.update({ "system.hp.value": this.actor.system.hp.value });
   }
 
   /**
@@ -437,13 +440,54 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onDecreaseHP(event, target) {
     event.preventDefault();
-    if (this.actor.system.health.value <= 0) {
-      console.warn("Health can't get below 0");
+    if (this.actor.system.hp.value <= 0) {
+      console.warn("HP can't get below 0");
       return;
     }
 
-    this.actor.system.health.value -= 1;
+    this.actor.system.hp.value -= 1;
     this.render();
+    this.actor.update({ "system.hp.value": this.actor.system.hp.value });
+  }
+
+  /**
+   * Handle increasing Stamina by 1.
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onIncreaseStamina(event, target) {
+    event.preventDefault();
+    if (this.actor.system.stamina.value >= this.actor.system.stamina.max) {
+      console.warn('Stamina Already at Max');
+      return;
+    }
+  
+    this.actor.system.stamina.value += 1;
+    this.render();
+    this.actor.update({ "system.stamina.value": this.actor.system.stamina.value });
+  }
+
+  /**
+   * Handle decreasing Stamina by 1.
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onDecreaseStamina(event, target) {
+    event.preventDefault();
+    if (this.actor.system.stamina.value <= 0) {
+      console.warn("Stamina can't get below 0");
+      return;
+    }
+
+    this.actor.system.stamina.value -= 1;
+    this.render();
+    this.actor.update({ "system.stamina.value": this.actor.system.stamina.value });
   }
 
   /** Helper Functions */

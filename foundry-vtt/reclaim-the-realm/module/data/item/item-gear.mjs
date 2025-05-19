@@ -32,7 +32,7 @@ export default class RtRGear extends RtRItemBase {
       }),
       diceSize: new fields.StringField({ initial: 'd20' }),
       diceBonus: new fields.StringField({
-        initial: '+@str.mod+ceil(@lvl / 2)',
+        initial: '+@str+ceil(@lvl / 2)',
       }),
     });
 

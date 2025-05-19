@@ -9,14 +9,6 @@
       "Per": { "long": "Perception", "abbr": "PER" },
       "Cha": { "long": "Charisma", "abbr": "CHA" }
     },
-    "Ability": {
-      "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
-      "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
-      "Cha": { "long": "Charisma", "abbr": "cha" }
-    },
     "SheetLabels": {
       "Actor": "RtR Actor Sheet",
       "Item": "RtR Item Sheet"
@@ -32,13 +24,21 @@
       "base": {
         "FIELDS": {
           "biography": {"label": "Biography"},
-          "health": {
-            "value": {"label": "Health"},
-            "max": {"label": "Maximum Health"}
+          "hp": {
+            "value": {"label": "HP"},
+            "max": {"label": "Maximum HP"}
           },
-          "power": {
-            "value": {"label": "Power"},
-            "max": {"label": "Maximum Power"}
+          "tempHp": {
+            "value": {"label": "Temp HP"},
+            "max": {"label": "Maximum Temp HP"}
+          },
+          "stamina": {
+            "value": {"label": "Stamina"},
+            "max": {"label": "Maximum Stamina"}
+          },
+          "arcana": {
+            "value": {"label": "Arcana"},
+            "max": {"label": "Maximum Arcana"}
           }
         }
       },
