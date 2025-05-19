@@ -1,6 +1,6 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 
-const { api, sheets, ux } = foundry.applications;
+const { api, sheets, ux, apps } = foundry.applications;
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -28,6 +28,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       deleteDoc: this._deleteDoc,
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
+      increaseHp: this._onIncreaseHP,
+      decreaseHp: this._onDecreaseHP
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -289,7 +291,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     const { img } =
       this.document.constructor.getDefaultArtwork?.(this.document.toObject()) ??
       {};
-    const fp = new FilePicker({
+    const fp = new apps.FilePicker({
       current,
       type: 'image',
       redirectToRoot: img ? [img] : [],
@@ -406,6 +408,44 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     }
   }
 
+  /**
+   * Handle increasing HP by 1.
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onIncreaseHP(event, target) {
+    event.preventDefault();
+    if (this.actor.system.health.value >= this.actor.system.health.max) {
+      console.warn('Health Already at Max');
+      return;
+    }
+  
+    this.actor.system.health.value += 1;
+    this.render();
+  }
+
+  /**
+   * Handle decreasing HP by 1.
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onDecreaseHP(event, target) {
+    event.preventDefault();
+    if (this.actor.system.health.value <= 0) {
+      console.warn("Health can't get below 0");
+      return;
+    }
+
+    this.actor.system.health.value -= 1;
+    this.render();
+  }
+
   /** Helper Functions */
 
   /**
@@ -486,7 +526,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   async _onDrop(event) {
-    const data = TextEditor.getDragEventData(event);
+    const data = ux.TextEditor.getDragEventData(event);
     const actor = this.actor;
     const allowed = Hooks.call('dropActorSheetData', actor, this, data);
     if (allowed === false) return;

@@ -15,20 +15,20 @@ import * as models from './data/_module.mjs';
 
 // Add key classes to the global scope so they can be more easily used
 // by downstream developers
-// globalThis.reclaim-the-realm = {
-//   documents: {
-//     RtRActor,
-//     RtRItem,
-//   },
-//   applications: {
-//     RtRActorSheet,
-//     RtRItemSheet,
-//   },
-//   utils: {
-//     rollItemMacro,
-//   },
-//   models,
-// };
+globalThis.RtR = {
+  documents: {
+    RtRActor,
+    RtRItem,
+  },
+  applications: {
+    RtRActorSheet,
+    RtRItemSheet,
+  },
+  utils: {
+    rollItemMacro,
+  },
+  models,
+};
 
 Hooks.once('init', function () {
   // Add custom constants for configuration.

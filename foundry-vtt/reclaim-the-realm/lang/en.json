@@ -44,7 +44,8 @@
       },
       "Character": {
         "FIELDS": {
-          "attributes.level.value": {"label": "Level"}
+          "attributes.level.value": {"label": "Level"},
+          "levels.level": {"label": "Level"}
         }
       },
       "NPC": {

@@ -21,6 +21,12 @@ export default class RtRNPC extends RtRActorBase {
   }
 
   prepareDerivedData() {
+    super.prepareDerivedData();
     this.xp = this.cr * this.cr * 100;
   }
+
+  getRollData() {
+    super.getRollData();
+  }
+
 }

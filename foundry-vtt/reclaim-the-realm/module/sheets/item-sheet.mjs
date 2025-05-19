@@ -1,6 +1,6 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
 
-const { api, sheets, ux } = foundry.applications;
+const { api, sheets, ux, apps } = foundry.applications;
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
@@ -223,7 +223,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     const { img } =
       this.document.constructor.getDefaultArtwork?.(this.document.toObject()) ??
       {};
-    const fp = new FilePicker({
+    const fp = new apps.FilePicker({
       current,
       type: 'image',
       redirectToRoot: img ? [img] : [],
@@ -386,7 +386,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   async _onDrop(event) {
-    const data = TextEditor.getDragEventData(event);
+    const data = ux.TextEditor.getDragEventData(event);
     const item = this.item;
     const allowed = Hooks.call('dropItemSheetData', item, this, data);
     if (allowed === false) return;
