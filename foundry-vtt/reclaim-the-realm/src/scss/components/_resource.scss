@@ -2,6 +2,73 @@
   font-weight: bold;
 }
 
-.attribute {
-  margin-bottom: 1em;
+.attributes {
+  margin: 10px 0 5px;
+}
+
+.resource-group {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.resource-btn {
+  flex-shrink: 0;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+
+  &:hover,
+  &:focus {
+    color: white;
+    border-color: white;
+    background-color: lightslategray;
+    cursor: pointer;
+  }
+}
+
+.resource-gauge {
+  flex-grow: 5;
+  margin-right: 3px;
+  margin-left: 3px;
+  height: 22px;
+}
+
+.resource-guage-red::-webkit-meter-optimum-value {
+  background: red;
+}
+.resource-guage-red::-webkit-meter-suboptimum-value {
+  background: darkred;
+}
+.resource-guage-red::-webkit-meter-even-less-good-value {
+  background: darkred;
+}
+
+.resource-guage-green::-webkit-meter-optimum-value {
+  background: green;
+}
+.resource-guage-green::-webkit-meter-suboptimum-value {
+  background: darkgreen;
+}
+.resource-guage-green::-webkit-meter-even-less-good-value {
+  background: darkgreen;
+}
+
+.resource-guage-blue::-webkit-meter-optimum-value {
+  background: blue;
+}
+.resource-guage-blue::-webkit-meter-suboptimum-value {
+  background: darkblue;
+}
+.resource-guage-blue::-webkit-meter-even-less-good-value {
+  background: darkblue;
+}
+
+.resource-guage-gold::-webkit-meter-optimum-value {
+  background: goldenrod;
+}
+.resource-guage-gold::-webkit-meter-suboptimum-value {
+  background: goldenrod;
+}
+.resource-guage-gold::-webkit-meter-even-less-good-value {
+  background: goldenrod;
 }

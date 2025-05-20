@@ -238,12 +238,18 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 10px;
 }
 .reclaim-the-realm .sheet-header .profile-img {
   flex: 0 0 100px;
   height: 100px;
   margin-right: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+}
+.reclaim-the-realm .sheet-header .profile-img:hover, .reclaim-the-realm .sheet-header .profile-img:focus {
+  filter: brightness(1.25);
+  cursor: pointer;
 }
 .reclaim-the-realm .sheet-header .header-fields {
   flex: 1;
@@ -271,8 +277,66 @@
 .reclaim-the-realm .resource-label {
   font-weight: bold;
 }
-.reclaim-the-realm .attribute {
-  margin-bottom: 1em;
+.reclaim-the-realm .attributes {
+  margin: 10px 0 5px;
+}
+.reclaim-the-realm .resource-group {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.reclaim-the-realm .resource-btn {
+  flex-shrink: 0;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+}
+.reclaim-the-realm .resource-btn:hover, .reclaim-the-realm .resource-btn:focus {
+  color: white;
+  border-color: white;
+  background-color: lightslategray;
+  cursor: pointer;
+}
+.reclaim-the-realm .resource-gauge {
+  flex-grow: 5;
+  margin-right: 3px;
+  margin-left: 3px;
+  height: 22px;
+}
+.reclaim-the-realm .resource-guage-red::-webkit-meter-optimum-value {
+  background: red;
+}
+.reclaim-the-realm .resource-guage-red::-webkit-meter-suboptimum-value {
+  background: darkred;
+}
+.reclaim-the-realm .resource-guage-red::-webkit-meter-even-less-good-value {
+  background: darkred;
+}
+.reclaim-the-realm .resource-guage-green::-webkit-meter-optimum-value {
+  background: green;
+}
+.reclaim-the-realm .resource-guage-green::-webkit-meter-suboptimum-value {
+  background: darkgreen;
+}
+.reclaim-the-realm .resource-guage-green::-webkit-meter-even-less-good-value {
+  background: darkgreen;
+}
+.reclaim-the-realm .resource-guage-blue::-webkit-meter-optimum-value {
+  background: blue;
+}
+.reclaim-the-realm .resource-guage-blue::-webkit-meter-suboptimum-value {
+  background: darkblue;
+}
+.reclaim-the-realm .resource-guage-blue::-webkit-meter-even-less-good-value {
+  background: darkblue;
+}
+.reclaim-the-realm .resource-guage-gold::-webkit-meter-optimum-value {
+  background: goldenrod;
+}
+.reclaim-the-realm .resource-guage-gold::-webkit-meter-suboptimum-value {
+  background: goldenrod;
+}
+.reclaim-the-realm .resource-guage-gold::-webkit-meter-even-less-good-value {
+  background: goldenrod;
 }
 .reclaim-the-realm .items-header {
   height: 28px;

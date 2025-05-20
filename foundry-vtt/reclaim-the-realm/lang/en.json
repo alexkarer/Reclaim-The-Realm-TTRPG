@@ -39,20 +39,23 @@
           "arcana": {
             "value": {"label": "Arcana"},
             "max": {"label": "Maximum Arcana"}
+          },
+          "levels": {
+            "level": {"label": "Level"},
+            "martialLevel": {"label": "Martial Level"},
+            "spellLevel": {"label": "Spell Level"}
           }
         }
       },
       "Character": {
         "FIELDS": {
-          "attributes.level.value": {"label": "Level"},
-          "levels.level": {"label": "Level"}
+          "xp": {"label": "XP"}
         }
       },
       "NPC": {
         "FIELDS": {
-          "cr": {"label": "CR"}
-        },
-        "xp": {"label": "XP"}
+          "xpReward": {"label": "XP Reward"}
+        }
       }
     },
     "Item": {

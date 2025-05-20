@@ -31,7 +31,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       increaseHp: this._onIncreaseHP,
       decreaseHp: this._onDecreaseHP,
       increaseStamina: this._onIncreaseStamina,
-      decreaseStamina: this._onDecreaseStamina
+      decreaseStamina: this._onDecreaseStamina,
+      increaseArcana: this._onIncreaseArcana,
+      decreaseArcana: this._onDecreaseArcana
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -488,6 +490,46 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     this.actor.system.stamina.value -= 1;
     this.render();
     this.actor.update({ "system.stamina.value": this.actor.system.stamina.value });
+  }
+
+  /**
+   * Handle increasing Arcana by 1.
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onIncreaseArcana(event, target) {
+    event.preventDefault();
+    if (this.actor.system.arcana.value >= this.actor.system.arcana.max) {
+      console.warn('Arcana Already at Max');
+      return;
+    }
+  
+    this.actor.system.arcana.value += 1;
+    this.render();
+    this.actor.update({ "system.arcana.value": this.actor.system.arcana.value });
+  }
+
+  /**
+   * Handle decreasing Arcana by 1.
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onDecreaseArcana(event, target) {
+    event.preventDefault();
+    if (this.actor.system.arcana.value <= 0) {
+      console.warn("Arcana can't get below 0");
+      return;
+    }
+
+    this.actor.system.arcana.value -= 1;
+    this.render();
+    this.actor.update({ "system.arcana.value": this.actor.system.arcana.value });
   }
 
   /** Helper Functions */

@@ -6,16 +6,11 @@
 >
   <section class='grid grid-3col'>
     <aside class='sidebar'>
-      {{! The grid classes are defined in scss/global/_grid.scss. To use,
-          use both the "grid" and "grid-Ncol" class where "N" can be any number
-          from 1 to 12 and will create that number of columns.  }}
       <div class='attributes flexcol'>
         {{#each system.attributes as |attribute key|}}
           <div class='attribute flexrow flex-group-center'>
             <label
-              class='resource-label rollable flexlarge align-left'
-              data-action='roll'
-              data-roll='d20+@attributes.{{key}}.mod'
+              class='resource-label flexlarge align-left'
               data-label='{{localize (lookup @root.config.attributes key)}}'
             >{{localize (lookup @root.config.attributes key)}}</label>
             <input
