@@ -11,6 +11,7 @@ export default class RtRActorBase extends foundry.abstract
       value: new fields.NumberField({ ...requiredInteger, initial: 10, min: 1 }),
       max: new fields.NumberField({ ...requiredInteger, initial: 10 }),
     });
+    schema.tempHp = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
     schema.biography = new fields.HTMLField();
 
     schema.levels = new fields.SchemaField({

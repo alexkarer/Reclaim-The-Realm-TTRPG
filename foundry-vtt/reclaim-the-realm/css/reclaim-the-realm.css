@@ -19,6 +19,30 @@
   --reclaim-the-realm-c-groove: #11121f;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 /* Global styles */
 .window-app {
   font-family: "Roboto", sans-serif;
@@ -301,6 +325,10 @@
   margin-right: 3px;
   margin-left: 3px;
   height: 22px;
+}
+.reclaim-the-realm .resource-label-level {
+  font-size: 1rem;
+  font-weight: bold;
 }
 .reclaim-the-realm .resource-guage-red::-webkit-meter-optimum-value {
   background: red;

@@ -28,10 +28,7 @@
             "value": {"label": "HP"},
             "max": {"label": "Maximum HP"}
           },
-          "tempHp": {
-            "value": {"label": "Temp HP"},
-            "max": {"label": "Maximum Temp HP"}
-          },
+          "tempHp": {"label": "THP"},
           "stamina": {
             "value": {"label": "Stamina"},
             "max": {"label": "Maximum Stamina"}

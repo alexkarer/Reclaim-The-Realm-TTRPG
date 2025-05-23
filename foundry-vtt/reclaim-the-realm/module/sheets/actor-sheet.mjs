@@ -30,6 +30,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       roll: this._onRoll,
       increaseHp: this._onIncreaseHP,
       decreaseHp: this._onDecreaseHP,
+      increaseTempHp: this._onIncreaseTempHP,
+      decreaseTempHp: this._onDecreaseTempHP,
       increaseStamina: this._onIncreaseStamina,
       decreaseStamina: this._onDecreaseStamina,
       increaseArcana: this._onIncreaseArcana,

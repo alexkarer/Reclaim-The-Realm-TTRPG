@@ -33,6 +33,11 @@
   height: 22px;
 }
 
+.resource-label-level {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .resource-guage-red::-webkit-meter-optimum-value {
   background: red;
 }
