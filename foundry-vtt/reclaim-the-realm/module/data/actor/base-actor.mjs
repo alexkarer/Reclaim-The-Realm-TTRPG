@@ -13,6 +13,7 @@ export default class RtRActorBase extends foundry.abstract
     });
     schema.tempHp = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
     schema.biography = new fields.HTMLField();
+    schema.alignment = new fields.StringField({blank: false, initial: 'lawful good', choices: ['unaligned', 'lawful good', 'lawful neutral', 'lawful evil', 'neutral good', 'true neutral', 'neutral evil', 'chaotic good', 'chaotic neutral', 'chaotic evil']});
 
     schema.levels = new fields.SchemaField({
       level: new fields.NumberField({ required: true, nullable: false, integer: false, initial: 1, min: 0.125 }),

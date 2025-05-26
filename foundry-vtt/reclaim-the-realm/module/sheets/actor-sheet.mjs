@@ -19,7 +19,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     classes: ['reclaim-the-realm', 'actor'],
     position: {
       width: 600,
-      height: 600,
+      height: 800,
     },
     actions: {
       onEditImage: this._onEditImage,
@@ -30,8 +30,6 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       roll: this._onRoll,
       increaseHp: this._onIncreaseHP,
       decreaseHp: this._onDecreaseHP,
-      increaseTempHp: this._onIncreaseTempHP,
-      decreaseTempHp: this._onDecreaseTempHP,
       increaseStamina: this._onIncreaseStamina,
       decreaseStamina: this._onDecreaseStamina,
       increaseArcana: this._onIncreaseArcana,
@@ -67,7 +65,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     },
     effects: {
       template: 'systems/reclaim-the-realm/templates/actor/effects.hbs',
-    },
+    }
   };
 
   /** @override */

@@ -1,4 +1,5 @@
 import RtRActorBase from './base-actor.mjs';
+import { calculateXPMilestonesAndLevel } from '../../helpers/character-helper.mjs';
 
 export default class RtRCharacter extends RtRActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -44,23 +45,13 @@ export default class RtRCharacter extends RtRActorBase {
   }
 
   _calculateLevelAndXp() {
-    /*
-    TODO: import json
-    let levelReq = progressionJson.levelRequirementsAndBonuses.filter(lvl => this.xp >= lvl.xp).slice(-2);
-    if (levelReq.length === 0) {
-        console.error('Error: not able to find level with xp', this.xp);
-        return;
-    }
+    const progression = calculateXPMilestonesAndLevel(this.xp.total);
+    this.levels.level = progression.level;
+    this.xp.prevMilestone = progression.xpPrevMilestone;
+    this.xp.nextMilestone = progression.xpNextMilestone;
+  }
 
-    if (levelReq.length === 1) {
-      this.levels.level = levelReq[0].level;
-      this.xp.prevMilestone = 0;
-      this.xp.nextMilestone = levelReq[0].xp;
-      return;
-    }
-    this.levels.level = levelReq[1].level;
-    this.xp.prevMilestone = levelReq[0].xp;
-    this.xp.nextMilestone = levelReq[1].xp;
-    */
+  _calculateRollBonuses() {
+    
   }
 }
