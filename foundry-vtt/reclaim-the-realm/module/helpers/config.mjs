@@ -23,3 +23,29 @@ RTR.attributeAbbreviations = {
   per: 'RTR.Attribute.Per.abbr',
   cha: 'RTR.Attribute.Cha.abbr',
 };
+
+RTR.skills = {
+  animalHandling:  'RTR.Skills.AnimalHandling.name',
+  athletics:       'RTR.Skills.Athletics.name',
+  deception:       'RTR.Skills.Deception.name',
+  investigation:   'RTR.Skills.Investigation.name',
+  intimidation:    'RTR.Skills.Intimidation.name',
+  medicine:        'RTR.Skills.Medicine.name',
+  persuasion:      'RTR.Skills.Persuasion.name',
+  awareness:       'RTR.Skills.Awareness.name',
+  stealth:         'RTR.Skills.Stealth.name',
+  survival:        'RTR.Skills.Survival.name',
+  thievery:        'RTR.Skills.Thievery.name',
+
+  culture:         'RTR.Skills.Culture.name',
+  geography:       'RTR.Skills.Geography.name',
+  elements:        'RTR.Skills.Elements.name',
+  nature:          'RTR.Skills.Nature.name',
+  supernatural:    'RTR.Skills.Supernatural.name',
+
+  smithTools:      'RTR.Skills.SmithTools.name',
+  alchemyKit:      'RTR.Skills.AlchemyKit.name',
+  jewellersTools:  'RTR.Skills.JewellersTools.name',
+  tailorsSet:      'RTR.Skills.TailorsSet.name',
+  carpentersTools: 'RTR.Skills.CarpentersTools.name',
+};

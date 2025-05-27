@@ -9,6 +9,31 @@
       "Per": { "long": "Perception", "abbr": "PER" },
       "Cha": { "long": "Charisma", "abbr": "CHA" }
     },
+    "Skills": {
+      "AnimalHandling":  { "name": "Animal Handling", "description": "" },
+      "Athletics":       { "name": "Athletics", "description": "" },
+      "Deception":       { "name": "Deception", "description": "" },
+      "Investigation":   { "name": "Investigation", "description": "" },
+      "Intimidation":    { "name": "Intimidation", "description": "" },
+      "Medicine":        { "name": "Medicine", "description": "" },
+      "Persuasion":      { "name": "Persuasion", "description": "" },
+      "Awareness":       { "name": "Awareness", "description": "" },
+      "Stealth":         { "name": "Stealth", "description": "" },
+      "Survival":        { "name": "Survival", "description": "" },
+      "Thievery":        { "name": "Thievery", "description": "" },
+
+      "Culture":         { "name": "Culture", "description": "" },
+      "Geography":       { "name": "Geography", "description": "" },
+      "Elements":        { "name": "Elements", "description": "" },
+      "Nature":          { "name": "Nature", "description": "" },
+      "Supernatural":    { "name": "Supernatural", "description": "" },
+
+      "SmithTools":      { "name": "Smith Tools", "description": "" },
+      "AlchemyKit":      { "name": "Alchemy Kit", "description": "" },
+      "JewellersTools":  { "name": "Jeweller's Tools", "description": "" },
+      "TailorsSet":      { "name": "Tailor's Set", "description": "" },
+      "CarpentersTools": { "name": "Carpenters Tools", "description": "" }
+    },
     "SheetLabels": {
       "Actor": "RtR Actor Sheet",
       "Item": "RtR Item Sheet"
@@ -19,7 +44,8 @@
         "Features": "Features",
         "Gear": "Gear",
         "Spells": "Spells",
-        "Effects": "Effects"
+        "Effects": "Effects",
+        "Skills": "Skills"
       },
       "base": {
         "FIELDS": {

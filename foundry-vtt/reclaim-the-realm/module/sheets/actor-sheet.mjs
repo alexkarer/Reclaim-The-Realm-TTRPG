@@ -65,7 +65,11 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     },
     effects: {
       template: 'systems/reclaim-the-realm/templates/actor/effects.hbs',
+    },
+    skills: {
+      template: 'systems/reclaim-the-realm/templates/actor/skills.hbs',
     }
+    // TODO Tabs: Overview, Data, Perks, Abilities, Skills, Gear 
   };
 
   /** @override */
@@ -78,10 +82,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('features', 'gear', 'spells', 'effects');
+        options.parts.push('features', 'skills', 'gear', 'spells', 'effects');
         break;
       case 'npc':
-        options.parts.push('gear', 'effects');
+        options.parts.push('gear', 'skills', 'effects');
         break;
     }
   }
@@ -120,6 +124,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     switch (partId) {
       case 'features':
       case 'spells':
+      case 'skills':
       case 'gear':
         context.tab = context.tabs[partId];
         break;
@@ -185,6 +190,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         case 'features':
           tab.id = 'features';
           tab.label += 'Features';
+          break;
+        case 'skills':
+          tab.id = 'skills';
+          tab.label += 'Skills';
           break;
         case 'gear':
           tab.id = 'gear';
@@ -392,6 +401,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     event.preventDefault();
     const dataset = target.dataset;
 
+    console.log('Roll logged: ', event);
     // Handle item rolls.
     switch (dataset.rollType) {
       case 'item':

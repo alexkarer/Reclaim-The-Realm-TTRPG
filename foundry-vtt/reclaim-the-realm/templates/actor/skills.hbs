@@ -1,0 +1,42 @@
+<section
+  class='tab skills flexcol {{tab.cssClass}}'
+  data-group='primary'
+  data-tab='skills'
+>
+    <div class='skill-container grid grid-4col'>
+        <span class='skill-header'>Skill</span>
+        <span class='skill-header'>Rank</span>
+        <span class='skill-header'>Attribute Bonus</span>
+        <span class='skill-header'>Roll</span>
+    {{#each system.skills as |skills key|}}
+        <label
+            class='resource-label flexlarge align-left'
+            data-label='{{localize (lookup @root.config.skills key)}}'
+        >{{localize (lookup @root.config.skills key)}}</label>
+        <input
+            type='text'
+            name='system.skills.{{key}}.rank'
+            value='{{skills.rank}}'
+            class=""
+            data-dtype='Number'
+        />
+        <select name='system.skills.{{key}}.attributeBonus'>
+            <option value="str">STR</option>
+            <option value="agi">AGI</option>
+            <option value="con">CON</option>
+            <option value="int">INT</option>
+            <option value="spi">SPI</option>
+            <option value="per">PER</option>
+            <option value="cha">CHA</option>
+        </select>
+        <div class='flex-group-center'>
+            <span
+                class='rollable skill-rollable'
+                data-action='roll'
+                data-roll='d20+@skills.{{key}}.rank'
+                data-label='{{localize (lookup @root.config.skills key)}}'
+            >{{numberFormat skills.rank decimals=0 sign=true}}</span>
+        </div>
+    {{/each}}
+    </div>
+</section>
