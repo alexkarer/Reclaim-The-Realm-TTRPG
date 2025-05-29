@@ -39,7 +39,7 @@ Hooks.once('init', function () {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: '1d20 + max(@attributes.agi.value + @attributes.per.value)',
+    formula: '1d20 + max(@attributes.agi + @attributes.per)',
     decimals: 2,
   };
 
@@ -84,6 +84,14 @@ Hooks.once('init', function () {
 
 Handlebars.registerHelper('divideCeil', function (value, divider) {
   return Math.ceil(value / divider);
+});
+
+Handlebars.registerHelper('add', function (x, y) {
+  return x + y;
+});
+
+Handlebars.registerHelper('compare', function (x, y) {
+  return x === y;
 });
 
 /* -------------------------------------------- */

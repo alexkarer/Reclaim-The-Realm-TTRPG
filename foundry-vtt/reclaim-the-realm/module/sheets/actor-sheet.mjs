@@ -33,7 +33,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       increaseStamina: this._onIncreaseStamina,
       decreaseStamina: this._onDecreaseStamina,
       increaseArcana: this._onIncreaseArcana,
-      decreaseArcana: this._onDecreaseArcana
+      decreaseArcana: this._onDecreaseArcana,
+      
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -278,9 +279,21 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   _onRender(context, options) {
     this.#dragDrop.forEach((d) => d.bind(this.element));
     this.#disableOverrides();
-    // You may want to add other special handling here
-    // Foundry comes with a large number of utility classes, e.g. SearchFilter
-    // That you may want to implement yourself.
+
+    // bind skill attribute Bonus Change
+    const skillAttributeBonuses = this.element.querySelectorAll('.skill-attribute-bonus')
+    for (const skillAttributeBonus of skillAttributeBonuses) {
+      skillAttributeBonus.addEventListener("change", (e) => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        const name = e.target.name;
+        const attr = e.target.value;
+        let updatePayload = {};
+        updatePayload[name]=attr;
+        this.actor.update(updatePayload);
+        this.render();
+      })
+    }
   }
 
   /**************

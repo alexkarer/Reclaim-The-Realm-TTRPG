@@ -53,7 +53,7 @@
           <img src='/icons/svg/mystery-man.svg' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.level.label'}}</span>
         </div>
-        <input type='text' disabled='true' name='system.levels.martialLevel' value='{{system.levels.martialLevel}}' data-dtype='Number'/>
+        <input type='text' disabled='true' name='system.levels.level' value='{{system.levels.level}}' data-dtype='Number'/>
       </div>
 
       <div class="flexrow">
@@ -164,7 +164,7 @@
             <th
               class='rollable'
               data-action='roll'
-              data-roll='d20+@attributes.{{key}}.value'
+              data-roll='d20+@attributes.{{key}}'
               data-label='{{localize (lookup @root.config.attributeAbbreviations key)}}'
             >{{localize (lookup @root.config.attributeAbbreviations key)}}</th>
           {{/each}}
@@ -176,9 +176,9 @@
             <td
               class='rollable'
               data-action='roll'
-              data-roll='d20+@attributes.{{key}}.value'
+              data-roll='d20+@attributes.{{key}}'
               data-label='{{localize (lookup @root.config.attributes key)}}'
-            >{{numberFormat attribute.value decimals=0}}</td>
+            >{{numberFormat attribute decimals=0}}</td>
           {{/each}}
         </tr>
       </tbody>

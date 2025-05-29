@@ -202,6 +202,11 @@
   grid-column-end: span 12;
 }
 
+.grid-item-center {
+  justify-self: center;
+  align-self: center;
+}
+
 .flex-group-center,
 .flex-group-left,
 .flex-group-right {
@@ -581,7 +586,7 @@
 }
 .reclaim-the-realm .skill-container {
   overflow-y: scroll;
-  height: 400px;
+  height: 420px;
 }
 .reclaim-the-realm .skill-header {
   font-size: 1rem;

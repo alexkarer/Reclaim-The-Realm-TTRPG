@@ -3,39 +3,61 @@
   data-group='primary'
   data-tab='skills'
 >
-    <div class='skill-container grid grid-4col'>
-        <span class='skill-header'>Skill</span>
-        <span class='skill-header'>Rank</span>
-        <span class='skill-header'>Attribute Bonus</span>
+    <div class='skill-container grid grid-7col'>
+        <span class="skill-header"></span>
+        <span class='grid-span-2 skill-header'>Skill</span>
+        <span class='grid-span-2 skill-header'>Rank / Maximum</span>
+        <span class='skill-header'>Attribute</span>
         <span class='skill-header'>Roll</span>
     {{#each system.skills as |skills key|}}
+        <div class="tooltip grid-item-center">
+            <input type="checkbox" 
+                class="system.skills.{{key}}.classSkill"
+                value='{{skills.classSkill}}'
+                data-dtype='Boolean'
+            >
+            <span class="tooltiptext">Class Skill</span>
+        </div>
         <label
-            class='resource-label flexlarge align-left'
+            class='grid-span-2 resource-label flexlarge align-left' style="align-self: center;"
             data-label='{{localize (lookup @root.config.skills key)}}'
         >{{localize (lookup @root.config.skills key)}}</label>
-        <input
-            type='text'
-            name='system.skills.{{key}}.rank'
-            value='{{skills.rank}}'
-            class=""
-            data-dtype='Number'
-        />
-        <select name='system.skills.{{key}}.attributeBonus'>
-            <option value="str">STR</option>
-            <option value="agi">AGI</option>
-            <option value="con">CON</option>
-            <option value="int">INT</option>
-            <option value="spi">SPI</option>
-            <option value="per">PER</option>
-            <option value="cha">CHA</option>
+        <div class="grid-span-2 flexrow">
+            <input
+                type='number'
+                name='system.skills.{{key}}.rank'
+                value='{{skills.rank}}'
+                class="" style="flex-grow: 3;"
+                data-dtype='Number'
+            />
+            <span style="flex-shrink: 3;margin-left: 10px;">/</span>
+            <input
+                type='number'
+                name='system.skills.{{key}}.rankMaximum'
+                value='{{skills.rankMaximum}}'
+                disabled="true"
+                class="" style="flex-grow: 3;"
+                data-dtype='Number'
+            />
+        </div>
+        <select 
+            name='system.skills.{{key}}.attrBonus' 
+            class='skill-attribute-bonus'>
+            {{#each @root.system.attributes as |attribute attrkey|}}
+                {{#if (compare attrkey skills.attrBonus)}}
+                <option value="{{attrkey}}" selected="selected">{{attrkey}}</option>
+                {{else}}
+                <option value="{{attrkey}}">{{attrkey}}</option>
+                {{/if}}
+            {{/each}}
         </select>
-        <div class='flex-group-center'>
+        <div class='grid-item-center'>
             <span
                 class='rollable skill-rollable'
                 data-action='roll'
-                data-roll='d20+@skills.{{key}}.rank'
+                data-roll='d20+@skills.{{key}}.rank+@attributes.{{skills.attrBonus}}'
                 data-label='{{localize (lookup @root.config.skills key)}}'
-            >{{numberFormat skills.rank decimals=0 sign=true}}</span>
+            >{{numberFormat (add skills.rank (lookup @root.system.attributes skills.attrBonus)) decimals=0 sign=true}}</span>
         </div>
     {{/each}}
     </div>

@@ -26,12 +26,10 @@ export default class RtRActorBase extends foundry.abstract
 
     schema.attributes = new fields.SchemaField(
       Object.keys(CONFIG.RTR.attributes).reduce((obj, attr) => {
-        obj[attr] = new fields.SchemaField({
-          value: new fields.NumberField({
-            ...requiredInteger,
-            initial: 0,
-            min: -8,
-          }),
+        obj[attr] = new fields.NumberField({
+          ...requiredInteger,
+          initial: 0,
+          min: -8,
         });
         return obj;
       }, {})
@@ -49,16 +47,17 @@ export default class RtRActorBase extends foundry.abstract
       willpower: new fields.NumberField({ ...requiredInteger, initial: 0 }),
     });
 
-    schema.attackBonuses
+    schema.attackBonuses = new fields.SchemaField({
+
+    });
 
     schema.skills = new fields.SchemaField(
       Object.keys(CONFIG.RTR.skills).reduce((obj, skill) => {
         obj[skill] = new fields.SchemaField({
-          rank: new fields.NumberField({
-            ...requiredInteger,
-            initial: 0,
-            min: 0,
-          }),
+          rank: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0}),
+          classSkill: new fields.BooleanField({ initial: false, required: true, nullable: false }),
+          rankMaximum: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0}),
+          attrBonus: new fields.StringField({blank: false, initial: 'str', choices: Object.keys(CONFIG.RTR.attributes)})
         });
         return obj;
       }, {})
@@ -69,10 +68,9 @@ export default class RtRActorBase extends foundry.abstract
 
   prepareDerivedData() {
     super.prepareDerivedData();
-    // Loop through ability scores, and add their modifiers to our sheet output.
-    for (const key in this.attributes) {
-      // Handle ability label localization.
-      this.attributes[key].label = game.i18n.localize(CONFIG.RTR.attributes[key]) ?? key;
+
+    for (const key in this.skills) {
+      this.skills[key].rankMaximum = this.levels.level + (this.skills[key].classSkill ? 2 : 0);
     }
 
     this.levels.martialLevel = Math.floor(this.levels.martialProficency * this.levels.level);
@@ -89,7 +87,7 @@ export default class RtRActorBase extends foundry.abstract
 
     if (this.attributes) {
       for (let [k, v] of Object.entries(this.attributes)) {
-        data[k] = foundry.utils.deepClone(v);
+        data[k] = v;
       }
     }
 
