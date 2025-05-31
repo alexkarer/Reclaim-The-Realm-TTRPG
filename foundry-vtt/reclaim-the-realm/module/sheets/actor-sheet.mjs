@@ -52,8 +52,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       // Foundry-provided generic template
       template: 'templates/generic/tab-navigation.hbs',
     },
-    features: {
-      template: 'systems/reclaim-the-realm/templates/actor/features.hbs',
+    data: {
+      template: 'systems/reclaim-the-realm/templates/actor/data.hbs',
     },
     biography: {
       template: 'systems/reclaim-the-realm/templates/actor/biography.hbs',
@@ -70,23 +70,23 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     skills: {
       template: 'systems/reclaim-the-realm/templates/actor/skills.hbs',
     }
-    // TODO Tabs: Overview, Data, Perks, Abilities, Skills, Gear 
+    // TODO Tabs: Overview, Perks, Abilities 
   };
 
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     // Not all parts always render
-    options.parts = ['header', 'tabs', 'biography'];
+    options.parts = ['header', 'tabs', 'biography', 'data'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('features', 'skills', 'gear', 'spells', 'effects');
+        options.parts.push('skills', 'gear', 'spells', 'effects');
         break;
       case 'npc':
-        options.parts.push('gear', 'skills', 'effects');
+        options.parts.push('skills', 'effects');
         break;
     }
   }
@@ -123,7 +123,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   /** @override */
   async _preparePartContext(partId, context) {
     switch (partId) {
-      case 'features':
+      case 'data':
       case 'spells':
       case 'skills':
       case 'gear':
@@ -188,9 +188,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
           tab.id = 'biography';
           tab.label += 'Biography';
           break;
-        case 'features':
-          tab.id = 'features';
-          tab.label += 'Features';
+        case 'data':
+          tab.id = 'data';
+          tab.label += 'Data';
           break;
         case 'skills':
           tab.id = 'skills';

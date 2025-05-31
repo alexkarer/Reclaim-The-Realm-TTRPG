@@ -47,7 +47,7 @@
       {{/if}}
     </div>
 
-    <div class='levels grid grid-3col' style="margin-bottom: 5px;">
+    <div class='levels grid grid-5col' style="margin-bottom: 5px;">
       <div class="flexrow flex-group-center">
         <div class="tooltip">
           <img src='/icons/svg/mystery-man.svg' height='24' width='24'>
@@ -70,6 +70,22 @@
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.spellLevel.label'}}</span>
         </div>
         <input type='text' disabled='true' name='system.levels.spellLevel' value='{{system.levels.spellLevel}}' data-dtype='Number'/>
+      </div>
+
+      <div class="flexrow flex-group-center">
+        <div class="tooltip">
+          <img src='/icons/svg/clockwork.svg' height='24' width='24'>
+          <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.ap.label'}}</span>
+        </div>
+        <input type='text' disabled='true' name='system.ap' value='{{system.ap}}' data-dtype='Number'/>
+      </div>
+
+      <div class="flexrow flex-group-center">
+        <div class="tooltip">
+          <img src='/icons/svg/wingfoot.svg' height='24' width='24'>
+          <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.mp.label'}}</span>
+        </div>
+        <input type='text' disabled='true' name='system.mp' value='{{system.mp}}' data-dtype='Number'/>
       </div>
     </div>
 

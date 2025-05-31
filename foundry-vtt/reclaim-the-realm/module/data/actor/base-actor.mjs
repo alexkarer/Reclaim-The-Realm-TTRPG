@@ -1,3 +1,5 @@
+import { getApForLevel } from '../../helpers/character-helper.mjs';
+
 export default class RtRActorBase extends foundry.abstract
   .TypeDataModel {
   static LOCALIZATION_PREFIXES = ["RTR.Actor.base"];
@@ -9,12 +11,23 @@ export default class RtRActorBase extends foundry.abstract
     const schema = {};
 
     schema.hp = new fields.SchemaField({
-      value: new fields.NumberField({ ...requiredInteger, initial: 10, min: 1 }),
-      max: new fields.NumberField({ ...requiredInteger, initial: 10 }),
+      value: new fields.NumberField({ ...requiredInteger, initial: 10, min: 0 }),
+      max: new fields.NumberField({ ...requiredInteger, initial: 10, min: 1 }),
     });
     schema.tempHp = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+
+    schema.ap = new fields.NumberField({ ...requiredInteger, initial: 3 });
+    schema.mp = new fields.NumberField({ ...requiredInteger, initial: 6 });
+
     schema.biography = new fields.HTMLField();
     schema.alignment = new fields.StringField({blank: false, initial: 'lawful good', choices: ['unaligned', 'lawful good', 'lawful neutral', 'lawful evil', 'neutral good', 'true neutral', 'neutral evil', 'chaotic good', 'chaotic neutral', 'chaotic evil']});
+    schema.species = new fields.StringField();
+
+    schema.data = new fields.SchemaField({
+      hpPerLevel: new fields.NumberField({ ...requiredInteger, initial: 6, min: 1 }),
+    });
+
+    schema.exhaustion = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
 
     schema.levels = new fields.SchemaField({
       level: new fields.NumberField({ ...requiredFloatingNumber, initial: 1, min: 0.125 }),
@@ -48,7 +61,10 @@ export default class RtRActorBase extends foundry.abstract
     });
 
     schema.attackBonuses = new fields.SchemaField({
-
+      meleeMartialAttack: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+      rangedMartialAttack: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+      meleeSpellAttack: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+      rangedSpellAttack: new fields.NumberField({ ...requiredInteger, initial: 0 }),
     });
 
     schema.skills = new fields.SchemaField(
@@ -76,10 +92,18 @@ export default class RtRActorBase extends foundry.abstract
     this.levels.martialLevel = Math.floor(this.levels.martialProficency * this.levels.level);
     this.levels.spellLevel = Math.floor(this.levels.spellProficency * this.levels.level);
 
-    this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str;
-    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi;
-    this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con;
-    this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi;
+    this.ap = getApForLevel(this.levels.level);
+    this.mp = 6 + Math.floor(this.attributes.agi / 3);
+
+    this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str - this.exhaustion;
+    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi - this.exhaustion;
+    this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con - this.exhaustion;
+    this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi - this.exhaustion;
+
+    this.attackBonuses.meleeMartialAttack = this.levels.martialLevel + this.attributes.agi - this.exhaustion;
+    this.attackBonuses.rangedMartialAttack = this.levels.martialLevel + this.attributes.per - this.exhaustion;
+    this.attackBonuses.meleeSpellAttack = this.levels.spellLevel + this.attributes.agi - this.exhaustion;
+    this.attackBonuses.rangedSpellAttack = this.levels.spellLevel + this.attributes.per - this.exhaustion;
   }
 
   getRollData() {
@@ -103,6 +127,11 @@ export default class RtRActorBase extends foundry.abstract
     data.dodge = this.defenses.dodge;
     data.toughness = this.defenses.toughness;
     data.willpower = this.defenses.willpower;
+
+    data.meleeMartialAttack = this.attackBonuses.meleeMartialAttack;
+    data.rangedMartialAttack = this.attackBonuses.rangedMartialAttack;
+    data.meleeSpellAttack = this.attackBonuses.meleeSpellAttack;
+    data.rangedSpellAttack = this.attackBonuses.rangedSpellAttack;
 
     return data;
   }

@@ -17,6 +17,14 @@
     <div class='flex-group-center'>
       <label class='resource-label' for="system.alignment">Alignment:</label>
       <input type='text' disabled='true' name='system.alignment' value='{{system.alignment}}'/>
+      <br>
+      <label class='resource-label' for="system.species">Species:</label>
+      <input type='text' name='system.species' value='{{system.species}}'/>
+      {{#if (eq actor.type 'character')}}
+      <br>
+      <label class='resource-label' for="system.class">Class:</label>
+      <input type='text' name='system.class' value='{{system.class}}'/>
+      {{/if}}
     </div>
   </div>
 </section>

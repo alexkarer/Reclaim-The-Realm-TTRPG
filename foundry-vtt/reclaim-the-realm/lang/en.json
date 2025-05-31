@@ -41,7 +41,7 @@
     "Actor": {
       "Tabs": {
         "Biography": "Biography",
-        "Features": "Features",
+        "Data": "Data",
         "Gear": "Gear",
         "Spells": "Spells",
         "Effects": "Effects",
@@ -55,6 +55,8 @@
             "max": {"label": "Maximum HP"}
           },
           "tempHp": {"label": "THP"},
+          "ap": {"label": "Action Points"},
+          "mp": {"label": "Movement Points"},
           "stamina": {
             "value": {"label": "Stamina"},
             "max": {"label": "Maximum Stamina"}

@@ -51,3 +51,21 @@ export function calculateXPMilestonesAndLevel(currentXp) {
     }
     return progression;
 }
+
+export function getApForLevel(level) {
+    if (level < 1) {
+        return 2;
+    } else if (level < 4) {
+        return 3;
+    } else if (level < 8) {
+        return 4;
+    } else if (level < 12) {
+        return 5;
+    } else if (level < 16) {
+        return 6;
+    } else if (level < 20) {
+        return 7;
+    } else if (level >= 20) {
+        return 8;
+    }
+}

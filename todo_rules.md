@@ -15,7 +15,8 @@ ____________________________________________________________
 - improve layout of character creation 
 - maybe make seperate pages for the individual headers
 - adjust equipment item tier
-- have another look at the implementation of the martial training perks
+- have another look at the implementation of the martial training perks and spell training perks
+  - should cost 2 perk points and have text that refunds them after completion.
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?
 - rename class names to be more inline with the world?
@@ -58,8 +59,6 @@ ____________________________________________________________
 - move Cosmic Mutations to json files and finish them.
 ___________________________________________________________
 ### Future Ideas / Nice to have:
-
-create cheet sheet
 
 maybe add shocked Status effect: can't use reactions
 
@@ -133,18 +132,6 @@ Differnt way of gaining new abilities or features, the players can pick one and 
 - have colored abilities and more icons
 - add missing abilities
 - add linking and tooltips for abilities
-
-**Extra Things to have In new Character Sheet**
-- On all places show the formula for calculating, which is fixed but can be modified with additional values.
-- long rest button/rest values
-- concealment bonuzses
-- temp Hp
-- Perk Trees
-- Have all Abilities in the Same Place but in separate columns 
-- Show encumbermance in equipment
-- passive Awareness
-- place for permanent injury
-- easy way to record character origin
 
 **Tollbox Things to Add**
 - Chase!

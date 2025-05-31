@@ -12,6 +12,8 @@ export default class RtRCharacter extends RtRActorBase {
     const requiredInteger = { required: true, nullable: false, integer: true };
     const schema = super.defineSchema();
 
+    schema.class = new fields.StringField();
+
     schema.stamina = new fields.SchemaField({
       value: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       max: new fields.NumberField({ ...requiredInteger, initial: 0 }),
@@ -34,6 +36,7 @@ export default class RtRCharacter extends RtRActorBase {
   prepareDerivedData() {
     super.prepareDerivedData();
 
+    this.hp.max = (this.data.hpPerLevel + Math.floor(this.attributes.con / 2)) * this.levels.level;
     this.stamina.max = Math.max(this.attributes.con + Math.floor(this.levels.level + this.levels.martialLevel), 1);
     this.arcana.max = Math.floor(3 * this.levels.spellLevel);
     this._calculateLevelAndXp();
