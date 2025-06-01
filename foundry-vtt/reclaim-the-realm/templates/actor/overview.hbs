@@ -1,9 +1,21 @@
 {{! Overview Tab }}
 <section class='tab overview {{tab.cssClass}}' data-group='primary' data-tab='overview'>
-  <div class="flexcol">
-    <h6 style="margin-top: 5px;">Levels</h6>
-    <div class='grid grid-5col'>
-      <div class="flexrow flex-group-center">
+  <div class='grid grid-5col'>
+
+    <div class="grid-span-3">
+      <h6 class="headline">Biography</h6>
+      {{#if editable}}
+      <prose-mirror name="system.biography" data-document-u-u-i-d="{{actor.uuid}}" value="{{system.biography}}"
+        collaborate="true" toggled="true">
+        {{{enrichedBiography}}}
+      </prose-mirror>
+      {{else}} {{{enrichedBiography}}}
+      {{/if}}
+    </div>
+
+    <div class="flexcol">
+      <h6 class="headline">Levels</h6>
+      <div class="flexrow" style="margin-bottom: 5px;">
         <div class="tooltip">
           <img src='/icons/svg/mystery-man.svg' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.level.label'}}</span>
@@ -12,7 +24,7 @@
           data-dtype='Number' />
       </div>
 
-      <div class="flexrow">
+      <div class="flexrow" style="margin-bottom: 5px;">
         <div class="tooltip">
           <img src='/icons/svg/sword.svg' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.martialLevel.label'}}</span>
@@ -21,7 +33,7 @@
           data-dtype='Number' />
       </div>
 
-      <div class="flexrow flex-group-center">
+      <div class="flexrow" style="margin-bottom: 5px;">
         <div class="tooltip">
           <img src='/icons/svg/mage-shield.svg' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.spellLevel.label'}}</span>
@@ -30,7 +42,7 @@
           data-dtype='Number' />
       </div>
 
-      <div class="flexrow flex-group-center">
+      <div class="flexrow" style="margin-bottom: 5px;">
         <div class="tooltip">
           <img src='/icons/svg/clockwork.svg' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.ap.label'}}</span>
@@ -38,7 +50,7 @@
         <input type='text' disabled='true' name='system.ap' value='{{system.ap}}' data-dtype='Number' />
       </div>
 
-      <div class="flexrow flex-group-center">
+      <div class="flexrow">
         <div class="tooltip">
           <img src='/icons/svg/wingfoot.svg' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.mp.label'}}</span>
@@ -47,128 +59,96 @@
       </div>
     </div>
 
-    <h6 class="headline" style="margin-bottom: 5px;">Defenses</h6>
-    <div class='flexrow'>
-      <div class="flex-group-right">
+    <div class="flexcol">
+      <h6 class="headline">Defenses</h6>
+
+      <div class="flexrow bordered-characteristic">
         <div class="tooltip">
           <img src='/icons/magic/control/buff-strength-muscle-damage-red.webp' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.stability.label'}}</span>
         </div>
+        <div class="rollable-container">
+          <img src="/icons/svg/d20-grey.svg" alt="d20" height='28' width='28'>
+          <span class="rollable-text-centered" data-action='roll' data-roll='d20 + @stability - @exh'
+            name='system.defenses.stability' data-label='system.defenses.stability' data-dtype='Number'>{{numberFormat
+            system.defenses.stability decimals=0 }}</span>
+        </div>
       </div>
-      <span
-        class='rollable rollable-defense'
-        data-action='roll'
-        data-roll='d20 + @stability - @exh'
-        name='system.defenses.stability'
-        data-label='system.defenses.stability'
-        data-dtype='Number'
-      >{{numberFormat system.defenses.stability decimals=0 sign=true}}
-      </span>
 
-      <div class="flex-group-right">
+      <div class="flexrow bordered-characteristic">
         <div class="tooltip">
           <img src='/icons/skills/movement/figure-running-gray.webp' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.dodge.label'}}</span>
         </div>
+        <div class="rollable-container">
+          <img src="/icons/svg/d20-grey.svg" alt="d20" height='28' width='28'>
+          <span class="rollable-text-centered" data-action='roll' data-roll='d20 + @dodge - @exh'
+            name='system.defenses.dodge' data-label='system.defenses.dodge' data-dtype='Number'>{{numberFormat
+            system.defenses.dodge decimals=0 }}</span>
+        </div>
       </div>
-      <span
-        class='rollable rollable-defense'
-        data-action='roll'
-        data-roll='d20 + @dodge - @exh'
-        name='system.defenses.dodge'
-        data-label='system.defenses.dodge'
-        data-dtype='Number'
-      >{{numberFormat system.defenses.dodge decimals=0 sign=true}}
-      </span>
 
-      <div class="flex-group-right">
+      <div class="flexrow bordered-characteristic">
         <div class="tooltip">
           <img src='/icons/skills/wounds/injury-body-pain-gray.webp' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.toughness.label'}}</span>
         </div>
+        <div class="rollable-container">
+          <img src="/icons/svg/d20-grey.svg" alt="d20" height='28' width='28'>
+          <span class="rollable-text-centered" data-action='roll' data-roll='d20 + @toughness - @exh'
+            name='system.defenses.toughness' data-label='system.defenses.toughness' data-dtype='Number'>{{numberFormat
+            system.defenses.toughness decimals=0 }}</span>
+        </div>
       </div>
-      <span
-        class='rollable rollable-defense'
-        data-action='roll'
-        data-roll='d20 + @toughness - @exh'
-        name='system.defenses.toughness'
-        data-label='system.defenses.toughness'
-        data-dtype='Number'
-      >{{numberFormat system.defenses.toughness decimals=0 sign=true}}
-      </span>
 
-      <div class="flex-group-right">
+      <div class="flexrow bordered-characteristic">
         <div class="tooltip">
           <img src='/icons/commodities/biological/organ-brain-pink.webp' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.willpower.label'}}</span>
         </div>
+        <div class="rollable-container">
+          <img src="/icons/svg/d20-grey.svg" alt="d20" height='28' width='28'>
+          <span class="rollable-text-centered" data-action='roll' data-roll='d20 + @willpower - @exh'
+            name='system.defenses.willpower' data-label='system.defenses.willpower' data-dtype='Number'>{{numberFormat
+            system.defenses.willpower decimals=0 }}</span>
+        </div>
       </div>
-      <span
-        class='rollable rollable-defense'
-        data-action='roll'
-        data-roll='d20 + @willpower - @exh'
-        name='system.defenses.willpower'
-        data-label='system.defenses.willpower'
-        data-dtype='Number'
-      >{{numberFormat system.defenses.willpower decimals=0 sign=true}}
-      </span>
 
-      <div class="flex-group-right">
+      <div class="flexrow bordered-characteristic">
         <div class="tooltip">
           <img src='/icons/svg/shield.svg' height='24' width='24'>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.shieldBlock.label'}}</span>
         </div>
-      </div>
-      <span
-        class='rollable rollable-defense'
-        data-action='roll'
-        data-roll='d20 + @shieldBlock - @exh'
-        name='system.defenses.shieldBlock'
-        data-label='system.defenses.shieldBlock'
-        data-dtype='Number'
-      >{{numberFormat system.defenses.shieldBlock decimals=0 sign=true}}/{{numberFormat system.defenses.shieldBlockThreshold decimals=0}}
-      </span>
-    </div>
-    <div class="flexrow">
-      <span>Resistances: </span>
-      <input type='text' name='system.defenses.resistances' value='{{system.defenses.resistances}}'/>
-    </div>
-
-    <h6 class="headline">Creature Info</h6>
-    {{#if (eq actor.type 'character')}}
-    <div class="grid grid-3col" style="margin-bottom: 5px;">
-      <div class="flexrow">
-        <label class='resource-label' for="system.alignment">Alignment:</label>
-        <input type='text' name='system.alignment' value='{{system.alignment}}' />
-      </div>
-      <div class="flexrow">
-        <label class='resource-label' for="system.species">Species:</label>
-        <input type='text' name='system.species' value='{{system.species}}' />
-      </div>
-      <div class="flexrow">
-        <label class='resource-label' for="system.class">Class:</label>
-        <input type='text' name='system.class' value='{{system.class}}' />
+        <span class='rollable rollable-defense' data-action='roll' data-roll='d20 + @shieldBlock - @exh'
+          name='system.defenses.shieldBlock' data-label='system.defenses.shieldBlock' data-dtype='Number'>{{numberFormat
+          system.defenses.shieldBlock decimals=0 sign=true}}/{{numberFormat system.defenses.shieldBlockThreshold
+          decimals=0}}
+        </span>
       </div>
     </div>
-    {{/if}}
-    {{#if (eq actor.type 'npc')}}
-    <div class="" style="margin-bottom: 5px;">
-      <div class="flexrow">
-        <label class='resource-label' for="system.alignment">Alignment:</label>
-        <input type='text' name='system.alignment' value='{{system.alignment}}' />
-      </div>
-    </div>
-    {{/if}}
   </div>
   <hr>
-  <div>
-    <h5>Biography</h5>
-    {{#if editable}}
-    <prose-mirror name="system.biography" data-document-u-u-i-d="{{actor.uuid}}" value="{{system.biography}}"
-      collaborate="true" toggled="true">
-      {{{enrichedBiography}}}
-    </prose-mirror>
-    {{else}} {{{enrichedBiography}}}
+  <h6 class="headline">Creature Infos</h6>
+  <div class="flexrow" style="margin-bottom: 5px;">
+    <div>
+      <label class='resource-label' for="system.defenses.resistances">Resistances:</label>
+      <input class="grid-span-5" type='text' id='system.defenses.resistances' value='{{system.defenses.resistances}}' />
+    </div>
+  </div>
+  <div class="flexrow" style="margin-bottom: 5px;">
+    <div>
+      <label class='resource-label' for="system.alignment">Alignment:</label>
+      <input type='text' id='system.alignment' value='{{system.alignment}}' />
+    </div>
+    {{#if (eq actor.type 'character')}}
+    <div style="margin-left: 10px;">
+      <label class='resource-label' for="system.species">Species:</label>
+      <input type='text' id='system.species' value='{{system.species}}' />
+    </div>
+    <div style="margin-left: 10px;">
+      <label class='resource-label' for="system.class">Class:</label>
+      <input type='text' id='system.class' value='{{system.class}}' />
+    </div>
     {{/if}}
   </div>
 </section>

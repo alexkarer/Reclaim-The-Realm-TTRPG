@@ -10,3 +10,27 @@
     cursor: pointer;
   }
 }
+
+.rollable-container {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  display: flex;
+
+  &:hover,
+  &:focus {
+    filter: brightness(1.25);
+    cursor: pointer;
+  }
+}
+
+.rollable-text-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-weight: bold;
+}

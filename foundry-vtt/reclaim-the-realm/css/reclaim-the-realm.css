@@ -54,6 +54,28 @@
   cursor: pointer;
 }
 
+.rollable-container {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  display: flex;
+}
+.rollable-container:hover, .rollable-container:focus {
+  filter: brightness(1.25);
+  cursor: pointer;
+}
+
+.rollable-text-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-weight: bold;
+}
+
 .grid,
 .grid-2col {
   display: grid;
@@ -635,12 +657,9 @@
 .reclaim-the-realm .headline {
   margin-top: 0px;
 }
-.reclaim-the-realm .rollable-defense {
-  border-radius: 7px;
+.reclaim-the-realm .bordered-characteristic {
+  border-radius: 3px;
   border-width: 1px;
-  padding: 2px;
+  padding: 3px;
   border-style: solid;
-  text-align: center;
-  margin-left: 5px;
-  margin-right: 10px;
 }

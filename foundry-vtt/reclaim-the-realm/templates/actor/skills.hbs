@@ -74,6 +74,7 @@
                 class="" style="flex-grow: 5;"
                 disabled="true"
             />
+            {{#if (eq actor.type 'character')}}
             <input
                 type="button"
                 value="+"
@@ -83,6 +84,7 @@
                 name='system.skills.{{key}}.rank' 
                 data-action='increaseSkillRank'
             >
+            {{/if}}
         </div>
         <select 
             name='system.skills.{{key}}.attrBonus' 
@@ -96,23 +98,25 @@
             {{/each}}
         </select>
         {{#if (eq @root.actor.type 'character')}}
-        <div class='grid-item-center'>
-            <span
-                class='rollable skill-rollable'
+        <div class="rollable-container">
+            <img src="/icons/svg/d20-grey.svg" alt="d20" height='28' width='28'>
+            <span 
+                class="rollable-text-centered"
                 data-action='roll'
                 data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}} - @exh'
                 data-label='{{localize (lookup @root.config.skills key)}}'
-            >{{numberFormat (add skills.rank (lookup @root.system.attributes skills.attrBonus)) decimals=0 sign=true}}</span>
+            >{{numberFormat (add skills.rank (lookup @root.system.attributes skills.attrBonus)) decimals=0}}</span>
         </div>
         {{/if}}
         {{#if (eq @root.actor.type 'npc')}}
-        <div class='grid-item-center'>
-            <span
-                class='rollable skill-rollable'
+        <div class="rollable-container">
+            <img src="/icons/svg/d20-grey.svg" alt="d20" height='28' width='28'>
+            <span 
+                class="rollable-text-centered"
                 data-action='roll'
                 data-roll='d20+@skills.{{key}}.rank+@attributes.{{skills.attrBonus}}'
                 data-label='{{localize (lookup @root.config.skills key)}}'
-            >{{numberFormat (add skills.rank (lookup @root.system.attributes skills.attrBonus)) decimals=0 sign=true}}</span>
+            >{{numberFormat (add skills.rank (lookup @root.system.attributes skills.attrBonus)) decimals=0}}</span>
         </div>
         {{/if}}
     {{/each}}
