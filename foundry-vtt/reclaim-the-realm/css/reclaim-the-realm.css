@@ -586,7 +586,7 @@
 }
 .reclaim-the-realm .skill-container {
   overflow-y: scroll;
-  height: 420px;
+  height: 400px;
 }
 .reclaim-the-realm .skill-header {
   font-size: 1rem;
@@ -594,4 +594,53 @@
 }
 .reclaim-the-realm .skill-rollable {
   font-weight: bold;
+}
+.reclaim-the-realm .class-skill {
+  color: yellow;
+}
+.reclaim-the-realm .increase-rank-btn {
+  margin-left: 5px;
+  flex-shrink: 5;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  color: green;
+  background-color: black;
+  text-align: center;
+}
+.reclaim-the-realm .increase-rank-btn:disabled {
+  color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.reclaim-the-realm .increase-rank-btn:not(:disabled):hover, .reclaim-the-realm .increase-rank-btn:not(:disabled):focus {
+  color: lightgreen;
+  border-color: lightgreen;
+  background-color: darkslategray;
+  cursor: pointer;
+}
+.reclaim-the-realm .reset-skills-btn {
+  background-color: red;
+  border-color: darkred;
+  color: lightgray;
+}
+.reclaim-the-realm .reset-skills-btn:hover, .reclaim-the-realm .reset-skills-btn:focus {
+  color: white;
+  border-color: red;
+  background-color: lightcoral;
+  cursor: pointer;
+}
+.reclaim-the-realm .headline {
+  margin-top: 0px;
+}
+.reclaim-the-realm .rollable-defense {
+  border-radius: 7px;
+  border-width: 1px;
+  padding: 2px;
+  border-style: solid;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 10px;
 }

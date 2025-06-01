@@ -14,6 +14,8 @@ export default class RtRCharacter extends RtRActorBase {
 
     schema.class = new fields.StringField();
 
+    schema.exhaustion = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+
     schema.stamina = new fields.SchemaField({
       value: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       max: new fields.NumberField({ ...requiredInteger, initial: 0 }),
@@ -30,20 +32,29 @@ export default class RtRCharacter extends RtRActorBase {
       nextMilestone: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
     });
 
+    schema.skillPoints = new fields.SchemaField({
+        skillPointsPerLevel: new fields.NumberField({ ...requiredInteger, initial: 3, min: 0 }),
+        additionalSkillPoints: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+        totalSkillPoints: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+        usedSkillPoints: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+    });
+
     return schema;
   }
 
   prepareDerivedData() {
     super.prepareDerivedData();
 
-    this.hp.max = (this.data.hpPerLevel + Math.floor(this.attributes.con / 2)) * this.levels.level;
+    this.hp.max = (this.data.hpPerLevel + Math.floor(this.attributes.con / 2)) * this.levels.level + this.data.additionalHp;
     this.stamina.max = Math.max(this.attributes.con + Math.floor(this.levels.level + this.levels.martialLevel), 1);
     this.arcana.max = Math.floor(3 * this.levels.spellLevel);
     this._calculateLevelAndXp();
+    this._calculateSkillPoints();
   }
 
   getRollData() {
     const data = super.getRollData();
+    data.exh = this.exhaustion;
     return data;
   }
 
@@ -54,7 +65,13 @@ export default class RtRCharacter extends RtRActorBase {
     this.xp.nextMilestone = progression.xpNextMilestone;
   }
 
-  _calculateRollBonuses() {
-    
+  _calculateSkillPoints() {
+    this.skillPoints.totalSkillPoints = (this.skillPoints.skillPointsPerLevel + Math.floor(this.attributes.int / 2)) * this.levels.level + this.skillPoints.additionalSkillPoints;
+    this.skillPoints.usedSkillPoints = 0;
+    if (this.skills) {
+      for (let [k, v] of Object.entries(this.skills)) {
+        this.skillPoints.usedSkillPoints += (v.rank + (v.classSkill ? -2 : 0));
+      }
+    }
   }
 }

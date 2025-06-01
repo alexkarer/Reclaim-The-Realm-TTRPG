@@ -40,7 +40,7 @@
     },
     "Actor": {
       "Tabs": {
-        "Biography": "Biography",
+        "Overview": "Overview",
         "Data": "Data",
         "Gear": "Gear",
         "Spells": "Spells",
@@ -69,6 +69,13 @@
             "level": {"label": "Level"},
             "martialLevel": {"label": "Martial Level"},
             "spellLevel": {"label": "Spell Level"}
+          },
+          "defenses": {
+            "stability": {"label": "Stability"},
+            "dodge": {"label": "Dodge"},
+            "toughness": {"label": "Toughness"},
+            "willpower": {"label": "Willpower"},
+            "shieldBlock": {"label": "Shield Block"}
           }
         }
       },

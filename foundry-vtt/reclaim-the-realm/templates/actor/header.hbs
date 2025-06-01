@@ -47,48 +47,6 @@
       {{/if}}
     </div>
 
-    <div class='levels grid grid-5col' style="margin-bottom: 5px;">
-      <div class="flexrow flex-group-center">
-        <div class="tooltip">
-          <img src='/icons/svg/mystery-man.svg' height='24' width='24'>
-          <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.level.label'}}</span>
-        </div>
-        <input type='text' disabled='true' name='system.levels.level' value='{{system.levels.level}}' data-dtype='Number'/>
-      </div>
-
-      <div class="flexrow">
-        <div class="tooltip">
-          <img src='/icons/svg/sword.svg' height='24' width='24'>
-          <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.martialLevel.label'}}</span>
-        </div>
-        <input type='text' disabled='true' name='system.levels.martialLevel' value='{{system.levels.martialLevel}}' data-dtype='Number'/>
-      </div>
-
-      <div class="flexrow flex-group-center">
-        <div class="tooltip">
-          <img src='/icons/svg/mage-shield.svg' height='24' width='24'>
-          <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.spellLevel.label'}}</span>
-        </div>
-        <input type='text' disabled='true' name='system.levels.spellLevel' value='{{system.levels.spellLevel}}' data-dtype='Number'/>
-      </div>
-
-      <div class="flexrow flex-group-center">
-        <div class="tooltip">
-          <img src='/icons/svg/clockwork.svg' height='24' width='24'>
-          <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.ap.label'}}</span>
-        </div>
-        <input type='text' disabled='true' name='system.ap' value='{{system.ap}}' data-dtype='Number'/>
-      </div>
-
-      <div class="flexrow flex-group-center">
-        <div class="tooltip">
-          <img src='/icons/svg/wingfoot.svg' height='24' width='24'>
-          <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.mp.label'}}</span>
-        </div>
-        <input type='text' disabled='true' name='system.mp' value='{{system.mp}}' data-dtype='Number'/>
-      </div>
-    </div>
-
     <div class='resources flex-around flexrow' style="margin-bottom: 5px;">
 
       <div class='resource-group flex-group-center' style="flex-grow: 3;">
@@ -180,7 +138,7 @@
             <th
               class='rollable'
               data-action='roll'
-              data-roll='d20+@attributes.{{key}}'
+              data-roll='d20 + @attributes.{{key}} - @exh'
               data-label='{{localize (lookup @root.config.attributeAbbreviations key)}}'
             >{{localize (lookup @root.config.attributeAbbreviations key)}}</th>
           {{/each}}
@@ -192,7 +150,7 @@
             <td
               class='rollable'
               data-action='roll'
-              data-roll='d20+@attributes.{{key}}'
+              data-roll='d20 + @attributes.{{key}} - @exh'
               data-label='{{localize (lookup @root.config.attributes key)}}'
             >{{numberFormat attribute decimals=0}}</td>
           {{/each}}

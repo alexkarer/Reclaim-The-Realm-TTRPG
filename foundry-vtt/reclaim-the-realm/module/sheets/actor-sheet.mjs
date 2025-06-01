@@ -34,7 +34,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       decreaseStamina: this._onDecreaseStamina,
       increaseArcana: this._onIncreaseArcana,
       decreaseArcana: this._onDecreaseArcana,
-      
+      resetSkillPoints: this._onResetSkillRanks,
+      setAsClassSKill: this._onSetAsClassSKill,
+      increaseSkillRank: this._onIncreaseSkillRank
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -55,8 +57,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     data: {
       template: 'systems/reclaim-the-realm/templates/actor/data.hbs',
     },
-    biography: {
-      template: 'systems/reclaim-the-realm/templates/actor/biography.hbs',
+    overview: {
+      template: 'systems/reclaim-the-realm/templates/actor/overview.hbs',
     },
     gear: {
       template: 'systems/reclaim-the-realm/templates/actor/gear.hbs',
@@ -77,7 +79,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     // Not all parts always render
-    options.parts = ['header', 'tabs', 'biography', 'data'];
+    options.parts = ['header', 'tabs', 'overview', 'data'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     // Control which parts show based on document subtype
@@ -129,9 +131,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       case 'gear':
         context.tab = context.tabs[partId];
         break;
-      case 'biography':
+      case 'overview':
         context.tab = context.tabs[partId];
-        // Enrich biography info for display
+        // Enrich overview info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
         context.enrichedBiography = await ux.TextEditor.enrichHTML(
           this.actor.system.biography,
@@ -168,7 +170,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'biography';
+    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'overview';
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: '',
@@ -184,9 +186,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         case 'header':
         case 'tabs':
           return tabs;
-        case 'biography':
-          tab.id = 'biography';
-          tab.label += 'Biography';
+        case 'overview':
+          tab.id = 'overview';
+          tab.label += 'Overview';
           break;
         case 'data':
           tab.id = 'data';
@@ -553,6 +555,75 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     this.actor.system.arcana.value -= 1;
     this.render();
     this.actor.update({ "system.arcana.value": this.actor.system.arcana.value });
+  }
+
+  /**
+   * Reset all assigned skill ranks
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onResetSkillRanks(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    Object.entries(this.actor.system.skills).forEach(s => updatePayload['system.skills.'+s[0]+'.rank'] = (s[1].classSkill ? 2 : 0));
+    this.actor.update(updatePayload);
+    this.render();
+  }
+
+  /**
+   * Handle setting or unsetting a skill as a class skill
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onSetAsClassSKill(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    const classSkillPropertyName = target.name;
+    const shouldEnable = !(target.value === "true");
+    updatePayload[classSkillPropertyName]=shouldEnable;
+
+    const skillName = target.name.split('.')[2];
+    let skill = Object.entries(this.actor.system.skills).filter(k => k[0] === skillName)[0][1];
+    if (!skill) {
+      console.error('Unable to find skill: ' + skillName);
+      return;
+    }
+    if (shouldEnable) {
+      updatePayload['system.skills.'+skillName+'.rank']=skill.rank+2
+    } else {
+      updatePayload['system.skills.'+skillName+'.rank']=skill.rank-2
+    }
+    
+    this.actor.update(updatePayload);
+    this.render();
+  }
+
+  /**
+   * Increase Rank of Skill by 1.
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onIncreaseSkillRank(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    const skillName = target.name.split('.')[2];
+    let skill = Object.entries(this.actor.system.skills).filter(k => k[0] === skillName)[0][1];
+    if (!skill) {
+      console.error('Unable to find skill: ' + skillName);
+      return;
+    }
+    updatePayload['system.skills.'+skillName+'.rank']=skill.rank+1;
+    this.actor.update(updatePayload);
+    this.render();
   }
 
   /** Helper Functions */

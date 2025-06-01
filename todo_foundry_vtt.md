@@ -1,10 +1,11 @@
 ### What is missing before playtest can continue in foundry only:
 
-- Add XP
+- Add XP Functionality
 - Configure character data
     - class values, species values, ...
 - Write down list of abilities and perks
 - Have a good way to represent NPCs
+- Add Attribute points
 
 add ITems, Abilities NPCs
 

@@ -25,9 +25,15 @@ export default class RtRActorBase extends foundry.abstract
 
     schema.data = new fields.SchemaField({
       hpPerLevel: new fields.NumberField({ ...requiredInteger, initial: 6, min: 1 }),
-    });
+      additionalHp: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
 
-    schema.exhaustion = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+      stabilityBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      dodgeBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      willpowerBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      toughnessBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+
+      movementBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+    });
 
     schema.levels = new fields.SchemaField({
       level: new fields.NumberField({ ...requiredFloatingNumber, initial: 1, min: 0.125 }),
@@ -53,11 +59,16 @@ export default class RtRActorBase extends foundry.abstract
       dodgeProficency: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0, max: 1 }),
       toughnessProficency: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0, max: 1 }),
       willpowerProficency: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0, max: 1 }),
-      
+
+      shieldBlockBase: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      shieldBlockThreshold: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      resistances: new fields.StringField(),
+    
       stability: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       dodge: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       toughness: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       willpower: new fields.NumberField({ ...requiredInteger, initial: 0 }),
+      shieldBlock: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
     });
 
     schema.attackBonuses = new fields.SchemaField({
@@ -93,17 +104,18 @@ export default class RtRActorBase extends foundry.abstract
     this.levels.spellLevel = Math.floor(this.levels.spellProficency * this.levels.level);
 
     this.ap = getApForLevel(this.levels.level);
-    this.mp = 6 + Math.floor(this.attributes.agi / 3);
+    this.mp = 6 + Math.floor(this.attributes.agi / 3) + this.data.movementBonus;
 
-    this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str - this.exhaustion;
-    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi - this.exhaustion;
-    this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con - this.exhaustion;
-    this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi - this.exhaustion;
+    this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str + this.data.stabilityBonus;
+    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi + this.data.dodgeBonus;
+    this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con + this.data.toughnessBonus;
+    this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi + this.data.willpowerBonus;
+    this.defenses.shieldBlock = this.levels.martialLevel + this.defenses.shieldBlockBase;
 
-    this.attackBonuses.meleeMartialAttack = this.levels.martialLevel + this.attributes.agi - this.exhaustion;
-    this.attackBonuses.rangedMartialAttack = this.levels.martialLevel + this.attributes.per - this.exhaustion;
-    this.attackBonuses.meleeSpellAttack = this.levels.spellLevel + this.attributes.agi - this.exhaustion;
-    this.attackBonuses.rangedSpellAttack = this.levels.spellLevel + this.attributes.per - this.exhaustion;
+    this.attackBonuses.meleeMartialAttack = this.levels.martialLevel + this.attributes.agi;
+    this.attackBonuses.rangedMartialAttack = this.levels.martialLevel + this.attributes.per;
+    this.attackBonuses.meleeSpellAttack = this.levels.spellLevel + this.attributes.agi;
+    this.attackBonuses.rangedSpellAttack = this.levels.spellLevel + this.attributes.per;
   }
 
   getRollData() {
@@ -127,6 +139,7 @@ export default class RtRActorBase extends foundry.abstract
     data.dodge = this.defenses.dodge;
     data.toughness = this.defenses.toughness;
     data.willpower = this.defenses.willpower;
+    data.shieldBlock = this.defenses.shieldBlock;
 
     data.meleeMartialAttack = this.attackBonuses.meleeMartialAttack;
     data.rangedMartialAttack = this.attackBonuses.rangedMartialAttack;

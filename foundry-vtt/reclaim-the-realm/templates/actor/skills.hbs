@@ -3,45 +3,86 @@
   data-group='primary'
   data-tab='skills'
 >
-    <div class="flexrow">
-
+    {{#if (eq actor.type 'character')}}
+    <div class="grid grid-3col">
+        <div class="flexrow">
+            <label
+              class='resource-label flexlarge align-left'
+              data-label='Total Skill Points'
+            >Total Skill Points:</label>
+            <input
+              type='number'
+              disabled='true'
+              name='system.skillPoints.totalSkillPoints'
+              value='{{system.skillPoints.totalSkillPoints}}'
+              class=""
+              data-dtype='Number'
+            />
+        </div>
+        <div class="flexrow">
+            <label
+              class='resource-label flexlarge align-left'
+              data-label='User Skill Points'
+            >Used Skill Points:</label>
+            <input
+              type='number'
+              disabled='true'
+              name='system.skillPoints.usedSkillPoints'
+              value='{{system.skillPoints.usedSkillPoints}}'
+              class=""
+              data-dtype='Number'
+            />
+        </div>
+        <div class="flex-group-center">
+            <input class="reset-skills-btn" type="button" data-action='resetSkillPoints' value='Reset Skill Points'/>
+        </div>
     </div>
+    {{/if}}
+
     <div class='skill-container grid grid-7col'>
         <span class="skill-header"></span>
         <span class='grid-span-2 skill-header'>Skill</span>
-        <span class='grid-span-2 skill-header'>Rank / Maximum</span>
+        <span class='grid-span-2 skill-header'>Rank / Max</span>
         <span class='skill-header'>Attribute</span>
         <span class='skill-header'>Roll</span>
     {{#each system.skills as |skills key|}}
         <div class="tooltip grid-item-center">
             <input type="checkbox" 
-                class="system.skills.{{key}}.classSkill"
+                name="system.skills.{{key}}.classSkill"
                 value='{{skills.classSkill}}'
+                data-action='setAsClassSKill'
                 data-dtype='Boolean'
             >
             <span class="tooltiptext">Class Skill</span>
         </div>
-        <label
-            class='grid-span-2 resource-label flexlarge align-left' style="align-self: center;"
-            data-label='{{localize (lookup @root.config.skills key)}}'
-        >{{localize (lookup @root.config.skills key)}}</label>
+        {{#if skills.classSkill}}
+            <label
+                class='class-skill grid-span-2 resource-label flexlarge align-left' style="align-self: center;"
+                data-label='{{localize (lookup @root.config.skills key)}}'
+            >{{localize (lookup @root.config.skills key)}}</label>
+        {{else}}
+            <label
+                class='grid-span-2 resource-label flexlarge align-left' style="align-self: center;"
+                data-label='{{localize (lookup @root.config.skills key)}}'
+            >{{localize (lookup @root.config.skills key)}}</label>
+        {{/if}}
         <div class="grid-span-2 flexrow">
             <input
-                type='number'
+                type='text'
                 name='system.skills.{{key}}.rank'
-                value='{{skills.rank}}'
-                class="" style="flex-grow: 3;"
-                data-dtype='Number'
-            />
-            <span style="flex-shrink: 3;margin-left: 10px;">/</span>
-            <input
-                type='number'
-                name='system.skills.{{key}}.rankMaximum'
-                value='{{skills.rankMaximum}}'
+                value='{{concat skills.rank "/" skills.rankMaximum}}'
+                class="" style="flex-grow: 5;"
                 disabled="true"
-                class="" style="flex-grow: 3;"
-                data-dtype='Number'
             />
+            <input
+                type="button"
+                value="+"
+                class="increase-rank-btn" 
+                {{disabled (eq skills.rank skills.rankMaximum)}}
+                {{disabled (eq @root.system.skillPoints.totalSkillPoints @root.system.skillPoints.usedSkillPoints)}} 
+                name='system.skills.{{key}}.rank' 
+                data-action='increaseSkillRank'
+            >
         </div>
         <select 
             name='system.skills.{{key}}.attrBonus' 
@@ -54,6 +95,17 @@
                 {{/if}}
             {{/each}}
         </select>
+        {{#if (eq @root.actor.type 'character')}}
+        <div class='grid-item-center'>
+            <span
+                class='rollable skill-rollable'
+                data-action='roll'
+                data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}} - @exh'
+                data-label='{{localize (lookup @root.config.skills key)}}'
+            >{{numberFormat (add skills.rank (lookup @root.system.attributes skills.attrBonus)) decimals=0 sign=true}}</span>
+        </div>
+        {{/if}}
+        {{#if (eq @root.actor.type 'npc')}}
         <div class='grid-item-center'>
             <span
                 class='rollable skill-rollable'
@@ -62,6 +114,7 @@
                 data-label='{{localize (lookup @root.config.skills key)}}'
             >{{numberFormat (add skills.rank (lookup @root.system.attributes skills.attrBonus)) decimals=0 sign=true}}</span>
         </div>
+        {{/if}}
     {{/each}}
     </div>
 </section>
