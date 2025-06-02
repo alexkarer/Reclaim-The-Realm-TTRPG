@@ -34,7 +34,7 @@
 
       {{#if (eq actor.type 'npc')}}
       <div class='resource flex-group-center flexrow'>
-          <label class='resource-label'>
+          <label class='bold-text'>
             {{localize 'RTR.Actor.NPC.FIELDS.xpReward.label'}}: 
           </label>
           <input
@@ -51,7 +51,7 @@
 
       <div class='resource-group flex-group-center' style="flex-grow: 3;">
         <div class="flexrow flex-group-center">
-          <label for='system.hp' class='resource-label'>
+          <label for='system.hp' class='bold-text'>
             {{localize 'RTR.Actor.base.FIELDS.hp.value.label'}}
           </label>
           <div class='resource-content'>
@@ -71,7 +71,7 @@
       </div>
 
       <div class='resource-group flex-group-center' style="flex-shrink: 3;">
-        <label for='system.tempHp' class='resource-label'>
+        <label for='system.tempHp' class='bold-text'>
           {{localize 'RTR.Actor.base.FIELDS.tempHp.label'}}
         </label>
         <input
@@ -86,7 +86,7 @@
       {{#if (eq actor.type 'character')}}
         <div class='resource-group flex-group-center' style="flex-grow: 3;">
           <div class="flexrow flex-group-center">
-            <label for='system.stamina' class='resource-label'>
+            <label for='system.stamina' class='bold-text'>
               {{localize 'RTR.Actor.base.FIELDS.stamina.value.label'}}
             </label>
             <div class='resource-content'>
@@ -109,7 +109,7 @@
       {{#if (eq actor.type 'character')}}
         <div class='resource-group flex-group-center' style="flex-grow: 3;">
           <div class="flexrow flex-group-center">
-            <label for='system.arcana' class='resource-label'>
+            <label for='system.arcana' class='bold-text'>
               {{localize 'RTR.Actor.base.FIELDS.arcana.value.label'}}
             </label>
             <div class='resource-content'>
@@ -138,7 +138,7 @@
             <th
               class='rollable'
               data-action='roll'
-              data-roll='d20 + @attributes.{{key}} - @exh'
+              data-roll='d20 + @attributes.{{key}}.value - @exh'
               data-label='{{localize (lookup @root.config.attributeAbbreviations key)}}'
             >{{localize (lookup @root.config.attributeAbbreviations key)}}</th>
           {{/each}}
@@ -150,9 +150,9 @@
             <td
               class='rollable'
               data-action='roll'
-              data-roll='d20 + @attributes.{{key}} - @exh'
+              data-roll='d20 + @attributes.{{key}}.value - @exh'
               data-label='{{localize (lookup @root.config.attributes key)}}'
-            >{{numberFormat attribute decimals=0}}</td>
+            >{{numberFormat attribute.value decimals=0}}</td>
           {{/each}}
         </tr>
       </tbody>

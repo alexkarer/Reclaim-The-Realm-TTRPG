@@ -1,0 +1,11 @@
+.increase-attribute-btn {
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+
+    &:hover,
+    &:focus {
+      filter: brightness(2);
+      cursor: pointer;
+    }
+  }

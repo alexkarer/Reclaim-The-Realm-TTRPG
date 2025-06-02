@@ -90,8 +90,16 @@ Handlebars.registerHelper('add', function (x, y) {
   return x + y;
 });
 
+Handlebars.registerHelper('subtract', function (x, y) {
+  return x - y;
+});
+
 Handlebars.registerHelper('compare', function (x, y) {
   return x === y;
+});
+
+Handlebars.registerHelper('neq', function (x, y) {
+  return x !== y;
 });
 
 /* -------------------------------------------- */

@@ -71,6 +71,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     },
     skills: {
       template: 'systems/reclaim-the-realm/templates/actor/skills.hbs',
+    },
+    perks: {
+      template: 'systems/reclaim-the-realm/templates/actor/perks.hbs'
     }
     // TODO Tabs: Overview, Perks, Abilities 
   };
@@ -85,7 +88,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('skills', 'gear', 'spells', 'effects');
+        options.parts.push('perks', 'skills', 'gear', 'spells', 'effects');
         break;
       case 'npc':
         options.parts.push('skills', 'effects');
@@ -129,6 +132,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       case 'spells':
       case 'skills':
       case 'gear':
+      case 'perks':
         context.tab = context.tabs[partId];
         break;
       case 'overview':
@@ -197,6 +201,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         case 'skills':
           tab.id = 'skills';
           tab.label += 'Skills';
+          break;
+        case 'perks':
+          tab.id = 'perks';
+          tab.label += 'Perks';
           break;
         case 'gear':
           tab.id = 'gear';

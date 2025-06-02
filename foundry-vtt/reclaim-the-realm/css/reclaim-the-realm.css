@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.bold-text {
+  font-weight: bold;
+}
+
 :root {
   --reclaim-the-realm-c-dark: #191813;
   --reclaim-the-realm-c-faint: #c9c7b8;
@@ -324,9 +328,6 @@
 }
 .reclaim-the-realm .tox .tox-edit-area {
   padding: 0 8px;
-}
-.reclaim-the-realm .resource-label {
-  font-weight: bold;
 }
 .reclaim-the-realm .attributes {
   margin: 10px 0 5px;
@@ -662,4 +663,13 @@
   border-width: 1px;
   padding: 3px;
   border-style: solid;
+}
+.reclaim-the-realm .increase-attribute-btn {
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+}
+.reclaim-the-realm .increase-attribute-btn:hover, .reclaim-the-realm .increase-attribute-btn:focus {
+  filter: brightness(1.5);
+  cursor: pointer;
 }

@@ -7,7 +7,7 @@
     <div class="grid grid-3col">
         <div class="flexrow">
             <label
-              class='resource-label flexlarge align-left'
+              class='bold-text flexlarge align-left'
               data-label='Total Skill Points'
             >Total Skill Points:</label>
             <input
@@ -21,7 +21,7 @@
         </div>
         <div class="flexrow">
             <label
-              class='resource-label flexlarge align-left'
+              class='bold-text flexlarge align-left'
               data-label='User Skill Points'
             >Used Skill Points:</label>
             <input
@@ -57,12 +57,12 @@
         </div>
         {{#if skills.classSkill}}
             <label
-                class='class-skill grid-span-2 resource-label flexlarge align-left' style="align-self: center;"
+                class='class-skill grid-span-2 bold-text flexlarge align-left' style="align-self: center;"
                 data-label='{{localize (lookup @root.config.skills key)}}'
             >{{localize (lookup @root.config.skills key)}}</label>
         {{else}}
             <label
-                class='grid-span-2 resource-label flexlarge align-left' style="align-self: center;"
+                class='grid-span-2 bold-text flexlarge align-left' style="align-self: center;"
                 data-label='{{localize (lookup @root.config.skills key)}}'
             >{{localize (lookup @root.config.skills key)}}</label>
         {{/if}}
@@ -74,7 +74,7 @@
                 class="" style="flex-grow: 5;"
                 disabled="true"
             />
-            {{#if (eq actor.type 'character')}}
+            {{#if (eq @root.actor.type 'character')}}
             <input
                 type="button"
                 value="+"
@@ -103,9 +103,9 @@
             <span 
                 class="rollable-text-centered"
                 data-action='roll'
-                data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}} - @exh'
+                data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value - @exh'
                 data-label='{{localize (lookup @root.config.skills key)}}'
-            >{{numberFormat (add skills.rank (lookup @root.system.attributes skills.attrBonus)) decimals=0}}</span>
+            >{{numberFormat (subtract (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value')) @root.system.exhaustion) decimals=0}}</span>
         </div>
         {{/if}}
         {{#if (eq @root.actor.type 'npc')}}
@@ -114,9 +114,9 @@
             <span 
                 class="rollable-text-centered"
                 data-action='roll'
-                data-roll='d20+@skills.{{key}}.rank+@attributes.{{skills.attrBonus}}'
+                data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
                 data-label='{{localize (lookup @root.config.skills key)}}'
-            >{{numberFormat (add skills.rank (lookup @root.system.attributes skills.attrBonus)) decimals=0}}</span>
+            >{{numberFormat (add skills.rank (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value'))) decimals=0}}</span>
         </div>
         {{/if}}
     {{/each}}

@@ -45,10 +45,10 @@ export default class RtRActorBase extends foundry.abstract
 
     schema.attributes = new fields.SchemaField(
       Object.keys(CONFIG.RTR.attributes).reduce((obj, attr) => {
-        obj[attr] = new fields.NumberField({
-          ...requiredInteger,
-          initial: 0,
-          min: -8,
+        obj[attr] = new fields.SchemaField({
+          value: new fields.NumberField({...requiredInteger, initial: 0, min: -8 }),
+          classAttribute: new fields.BooleanField({ initial: false, required: true, nullable: false }),
+          attributeMaximum: new fields.NumberField({ ...requiredInteger, initial: 3, min: 3 })
         });
         return obj;
       }, {})
@@ -104,18 +104,18 @@ export default class RtRActorBase extends foundry.abstract
     this.levels.spellLevel = Math.floor(this.levels.spellProficency * this.levels.level);
 
     this.ap = getApForLevel(this.levels.level);
-    this.mp = 6 + Math.floor(this.attributes.agi / 3) + this.data.movementBonus;
+    this.mp = 6 + Math.floor(this.attributes.agi.value / 3) + this.data.movementBonus;
 
-    this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str + this.data.stabilityBonus;
-    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi + this.data.dodgeBonus;
-    this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con + this.data.toughnessBonus;
-    this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi + this.data.willpowerBonus;
+    this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str.value + this.data.stabilityBonus;
+    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi.value + this.data.dodgeBonus;
+    this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con.value + this.data.toughnessBonus;
+    this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi.value + this.data.willpowerBonus;
     this.defenses.shieldBlock = this.levels.martialLevel + this.defenses.shieldBlockBase;
 
-    this.attackBonuses.meleeMartialAttack = this.levels.martialLevel + this.attributes.agi;
-    this.attackBonuses.rangedMartialAttack = this.levels.martialLevel + this.attributes.per;
-    this.attackBonuses.meleeSpellAttack = this.levels.spellLevel + this.attributes.agi;
-    this.attackBonuses.rangedSpellAttack = this.levels.spellLevel + this.attributes.per;
+    this.attackBonuses.meleeMartialAttack = this.levels.martialLevel + this.attributes.agi.value;
+    this.attackBonuses.rangedMartialAttack = this.levels.martialLevel + this.attributes.per.value;
+    this.attackBonuses.meleeSpellAttack = this.levels.spellLevel + this.attributes.agi.value;
+    this.attackBonuses.rangedSpellAttack = this.levels.spellLevel + this.attributes.per.value;
   }
 
   getRollData() {
@@ -123,7 +123,7 @@ export default class RtRActorBase extends foundry.abstract
 
     if (this.attributes) {
       for (let [k, v] of Object.entries(this.attributes)) {
-        data[k] = v;
+        data[k] = foundry.utils.deepClone(v);
       }
     }
 

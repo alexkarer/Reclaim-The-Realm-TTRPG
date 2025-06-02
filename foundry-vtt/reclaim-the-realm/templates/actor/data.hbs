@@ -4,88 +4,45 @@
   data-group='primary'
   data-tab='data'
 >
-  <section class='grid grid-3col'>
+  <!-- TODO: set as class attribute, implement increase, attribute maximum-->
+  <section class='grid grid-2col'>
     <aside class='sidebar'>
+      <h5>Attributes</h5>
+      {{#if (eq @root.actor.type 'character')}}
+      <div class='flexrow flex-between'>
+        <h6>Attribute Points</h6>
+        <h6 style="text-align: center;margin-top: 0px;">{{ subtract system.attributePoints.totalAttributePoints system.attributePoints.usedAttributePoints }}</h6>
+      </div>
+      {{/if}}
       <div class='attributes flexcol'>
         {{#each system.attributes as |attribute key|}}
           <div class='attribute flexrow flex-group-center'>
             <label
-              class='resource-label flexlarge align-left'
+              class='bold-text flexlarge align-left'
               data-label='{{localize (lookup @root.config.attributes key)}}'
             >{{localize (lookup @root.config.attributes key)}}</label>
             <input
               type='text'
-              name='system.attributes.{{key}}'
-              value='{{attribute}}'
-              class=""
+              name='system.attributes.{{key}}.value'
+              value='{{attribute.value}}'
+              {{disabled (eq @root.actor.type 'character')}}
               data-dtype='Number'
             />
+            {{#if (eq @root.actor.type 'character')}}
+            {{#if (neq (subtract root.actor.system.attributePoints.totalAttributePoints root.actor.system.attributePoints.usedAttributePoints) 0)}}
+            <img 
+              src="/icons/svg/upgrade.svg"
+              alt="upgrade"
+              class="increase-attribute-btn"
+              height='24' width='24'
+              name='system.attributes.{{key}}.upgrade' 
+              data-action='increaseAttribute'
+            >
+            {{/if}}
+            {{/if}}
           </div>
         {{/each}}
       </div>
     </aside>
-
-    {{! For the main features list, span the right two columns }}
-    <section class='main grid-span-2'>
-      <ol class='items-list'>
-        <li class='item flexrow items-header'>
-          <div class='item-name'>{{localize 'Name'}}</div>
-          <div class='item-controls'>
-            {{#if @root.editable}}
-              <a
-                class='item-control item-create'
-                title='Create item'
-                data-action='createDoc'
-                data-document-class='Item'
-                data-type='feature'
-              >
-                <i class='fas fa-plus'></i>
-                {{localize 'DOCUMENT.New' type='feature'}}
-              </a>
-            {{/if}}
-          </div>
-        </li>
-        {{#each features as |item id|}}
-          <li
-            class='item flexrow'
-            data-item-id='{{item._id}}'
-            data-drag='true'
-            data-document-class='Item'
-          >
-            <div class='item-name'>
-              <div class='item-image'>
-                <a class='rollable' data-roll-type='item' data-action='roll'>
-                  <img
-                    src='{{item.img}}'
-                    title='{{item.name}}'
-                    width='24'
-                    height='24'
-                  />
-                </a>
-              </div>
-              <div>{{item.name}}</div>
-            </div>
-            <div class='item-controls'>
-              <a
-                class='item-control item-edit'
-                title='{{localize "DOCUMENT.Update" type='feature'}}'
-                data-action='viewDoc'
-              >
-                <i class='fas fa-edit'></i>
-              </a>
-              {{#if @root.editable}}
-                <a
-                  class='item-control item-delete'
-                  title='{{localize "DOCUMENT.Delete" type='feature'}}'
-                  data-action='deleteDoc'
-                >
-                  <i class='fas fa-trash'></i>
-                </a>
-              {{/if}}
-            </div>
-          </li>
-        {{/each}}
-      </ol>
-    </section>
   </section>
 </section>

@@ -38,4 +38,8 @@ add ITems, Abilities NPCs
 
 ### Classes
 
-## Interactions_
+## Interactions
+
+## Special
+
+Keep Records, total damage, healing, etc. (check fantasygrounds example)
