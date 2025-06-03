@@ -665,11 +665,43 @@
   border-style: solid;
 }
 .reclaim-the-realm .increase-attribute-btn {
-  border-radius: 3px;
+  margin-left: 5px;
+  flex-shrink: 5;
+  border-radius: 7px;
   border-width: 1px;
   border-style: solid;
+  border-color: green;
+  color: green;
+  background-color: black;
+  text-align: center;
 }
-.reclaim-the-realm .increase-attribute-btn:hover, .reclaim-the-realm .increase-attribute-btn:focus {
-  filter: brightness(1.5);
+.reclaim-the-realm .increase-attribute-btn:disabled {
+  color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.reclaim-the-realm .increase-attribute-btn:not(:disabled):hover, .reclaim-the-realm .increase-attribute-btn:not(:disabled):focus {
+  color: lightgreen;
+  border-color: lightgreen;
+  background-color: darkslategray;
+  cursor: pointer;
+}
+.reclaim-the-realm .attribute-points {
+  text-align: center;
+  margin-top: 0px;
+}
+.reclaim-the-realm .class-attribute {
+  color: yellow;
+}
+.reclaim-the-realm .reset-attributes-btn {
+  background-color: red;
+  border-color: darkred;
+  color: lightgray;
+}
+.reclaim-the-realm .reset-attributes-btn:hover, .reclaim-the-realm .reset-attributes-btn:focus {
+  color: white;
+  border-color: red;
+  background-color: lightcoral;
   cursor: pointer;
 }

@@ -1,48 +1,61 @@
 {{! Data Tab }}
-<section
-  class='tab data {{tab.cssClass}}'
-  data-group='primary'
-  data-tab='data'
->
-  <!-- TODO: set as class attribute, implement increase, attribute maximum-->
+<section class='tab data {{tab.cssClass}}' data-group='primary' data-tab='data'>
+
   <section class='grid grid-2col'>
+
     <aside class='sidebar'>
-      <h5>Attributes</h5>
+      <div class='flexrow flex-between'>
+        <h5>Attributes</h5>
+        <div class="flex-group-center">
+            <input class="reset-attributes-btn" type="button" data-action='resetAttributes' value='Reset Attributes'/>
+        </div>
+      </div>
+
       {{#if (eq @root.actor.type 'character')}}
       <div class='flexrow flex-between'>
         <h6>Attribute Points</h6>
-        <h6 style="text-align: center;margin-top: 0px;">{{ subtract system.attributePoints.totalAttributePoints system.attributePoints.usedAttributePoints }}</h6>
+        <h6 class="attribute-points">{{ subtract system.attributePoints.totalAttributePoints
+          system.attributePoints.usedAttributePoints }}</h6>
       </div>
       {{/if}}
-      <div class='attributes flexcol'>
-        {{#each system.attributes as |attribute key|}}
-          <div class='attribute flexrow flex-group-center'>
-            <label
+
+      <div class='attributes grid grid-2col'>
+      {{#each system.attributes as |attribute key|}}
+        {{#if attribute.classAttribute}}
+             <label 
+                class='class-attribute bold-text flexlarge align-left'
+                data-label='{{localize (lookup @root.config.attributes key)}}'
+              >{{localize (lookup @root.config.attributes key)}}</label>
+        {{else}}
+            <label 
               class='bold-text flexlarge align-left'
               data-label='{{localize (lookup @root.config.attributes key)}}'
             >{{localize (lookup @root.config.attributes key)}}</label>
-            <input
-              type='text'
-              name='system.attributes.{{key}}.value'
-              value='{{attribute.value}}'
-              {{disabled (eq @root.actor.type 'character')}}
-              data-dtype='Number'
-            />
-            {{#if (eq @root.actor.type 'character')}}
-            {{#if (neq (subtract root.actor.system.attributePoints.totalAttributePoints root.actor.system.attributePoints.usedAttributePoints) 0)}}
-            <img 
-              src="/icons/svg/upgrade.svg"
-              alt="upgrade"
-              class="increase-attribute-btn"
-              height='24' width='24'
-              name='system.attributes.{{key}}.upgrade' 
-              data-action='increaseAttribute'
-            >
-            {{/if}}
-            {{/if}}
-          </div>
-        {{/each}}
+        {{/if}}
+        <div class="flexrow">
+          <input 
+            type='text'
+            name='system.attributes.{{key}}.value'
+            style="flex-grow: 5;"
+            value='{{concat attribute.value "/" attribute.attributeMaximum}}'
+            {{disabled (eq @root.actor.type 'character' )}}
+            data-dtype='Number'
+          />
+          {{#if (eq @root.actor.type 'character')}}
+          <input 
+            type="button"
+            value="+"
+            class="increase-attribute-btn"
+            {{disabled (eq attribute.value attribute.attributeMaximum)}}
+            {{disabled (eq (subtract @root.actor.system.attributePoints.totalAttributePoints @root.actor.system.attributePoints.usedAttributePoints) 0)}}
+            name='system.attribute.{{key}}.value'
+            data-action='increaseAttribute'
+          />
+          {{/if}}
+        </div>
+      {{/each}}
       </div>
     </aside>
+
   </section>
 </section>

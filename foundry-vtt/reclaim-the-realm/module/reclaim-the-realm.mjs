@@ -98,10 +98,6 @@ Handlebars.registerHelper('compare', function (x, y) {
   return x === y;
 });
 
-Handlebars.registerHelper('neq', function (x, y) {
-  return x !== y;
-});
-
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
 /* -------------------------------------------- */

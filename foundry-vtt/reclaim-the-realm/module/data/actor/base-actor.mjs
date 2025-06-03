@@ -100,6 +100,10 @@ export default class RtRActorBase extends foundry.abstract
       this.skills[key].rankMaximum = this.levels.level + (this.skills[key].classSkill ? 2 : 0);
     }
 
+    for (const key in this.attributes) {
+      this.attributes[key].attributeMaximum = 3 + (this.attributes[key].classAttribute ? 2 : 0) + Math.floor((this.levels.level - 1) * 0.5);
+    }
+
     this.levels.martialLevel = Math.floor(this.levels.martialProficency * this.levels.level);
     this.levels.spellLevel = Math.floor(this.levels.spellProficency * this.levels.level);
 

@@ -36,7 +36,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       decreaseArcana: this._onDecreaseArcana,
       resetSkillPoints: this._onResetSkillRanks,
       setAsClassSKill: this._onSetAsClassSKill,
-      increaseSkillRank: this._onIncreaseSkillRank
+      increaseSkillRank: this._onIncreaseSkillRank,
+      resetAttributes: this._onResetAttributes,
+      increaseAttribute: this._onIncreaseAttribute
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -630,6 +632,45 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
     updatePayload['system.skills.'+skillName+'.rank']=skill.rank+1;
+    this.actor.update(updatePayload);
+    this.render();
+  }
+
+  /**
+   * Reset all attributes
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onResetAttributes(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    Object.entries(this.actor.system.attributes).forEach(s => updatePayload['system.attributes.'+s[0]+'.value'] = (s[1].classAttribute ? 2 : 0));
+    this.actor.update(updatePayload);
+    this.render();
+  }
+
+  /**
+   * Increase Attribute by 1.
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onIncreaseAttribute(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    console.log(event);
+    const attributeName = target.name.split('.')[2];
+    let attribute = Object.entries(this.actor.system.attributes).filter(k => k[0] === attributeName)[0][1];
+    if (!attribute) {
+      console.error('Unable to find attribute: ' + attributeName);
+      return;
+    }
+    updatePayload['system.attributes.'+attributeName+'.value'] = attribute.value + 1;
     this.actor.update(updatePayload);
     this.render();
   }
