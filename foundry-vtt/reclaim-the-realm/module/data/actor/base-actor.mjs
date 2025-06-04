@@ -7,7 +7,7 @@ export default class RtRActorBase extends foundry.abstract
   static defineSchema() {
     const fields = foundry.data.fields;
     const requiredInteger = { required: true, nullable: false, integer: true };
-    const requiredFloatingNumber = { required: true, nullable: false, integer: false };
+    const proficiency = { choices: [0, 0.34, 0.67, 1] };
     const schema = {};
 
     schema.hp = new fields.SchemaField({
@@ -29,18 +29,18 @@ export default class RtRActorBase extends foundry.abstract
 
       stabilityBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       dodgeBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      willpowerBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       toughnessBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      willpowerBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
 
       movementBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
     });
 
     schema.levels = new fields.SchemaField({
-      level: new fields.NumberField({ ...requiredFloatingNumber, initial: 1, min: 0.125 }),
-      martialLevel: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0 }),
-      spellLevel: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0 }),
-      martialProficency: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0, max: 1 }),
-      spellProficency: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0, max: 1 }),
+      level: new fields.NumberField({ required: true, nullable: false, integer: false, initial: 1, min: 0.125 }),
+      martialLevel: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      spellLevel: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      martialProficency: new fields.AlphaField({ ...proficiency, initial: 0 }),
+      spellProficency: new fields.AlphaField({ ...proficiency, initial: 0 }),
     });
 
     schema.attributes = new fields.SchemaField(
@@ -55,10 +55,10 @@ export default class RtRActorBase extends foundry.abstract
     );
 
     schema.defenses = new fields.SchemaField({
-      stabilityProficency: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0, max: 1 }),
-      dodgeProficency: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0, max: 1 }),
-      toughnessProficency: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0, max: 1 }),
-      willpowerProficency: new fields.NumberField({ ...requiredFloatingNumber, initial: 0, min: 0, max: 1 }),
+      stabilityProficency: new fields.NumberField({ ...proficiency, initial: 0, min: 0, max: 1 }),
+      dodgeProficency: new fields.NumberField({ ...proficiency, initial: 0, min: 0, max: 1 }),
+      toughnessProficency: new fields.NumberField({ ...proficiency, initial: 0, min: 0, max: 1 }),
+      willpowerProficency: new fields.NumberField({ ...proficiency, initial: 0, min: 0, max: 1 }),
 
       shieldBlockBase: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       shieldBlockThreshold: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),

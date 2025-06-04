@@ -1,7 +1,7 @@
 {{! Data Tab }}
 <section class='tab data {{tab.cssClass}}' data-group='primary' data-tab='data'>
 
-  <section class='grid grid-2col'>
+  <section class='grid grid-2col data-container'>
 
     <aside class='sidebar'>
       <div class='flexrow flex-between'>
@@ -54,6 +54,83 @@
           {{/if}}
         </div>
       {{/each}}
+      </div>
+    </aside>
+
+    <aside>
+      <div class='flexrow flex-between'>
+        <h5>Character Data</h5>
+      </div>
+      <div class="grid grid-2col">
+        <div>
+          <label class='bold-text' for="system.data.hpPerLevel">HP Per Level:</label>
+          <input type='number' id='system.data.hpPerLevel' name='system.data.hpPerLevel' value='{{system.data.hpPerLevel}}'/>
+        </div>
+        <div >
+          <label class='bold-text' for="system.data.additionalHp">Additional HP:</label>
+          <input type='number' id='system.data.additionalHp' name='system.data.additionalHp' value='{{system.data.additionalHp}}'/>
+        </div>
+
+        <div>
+          <label class='bold-text' for="system.levels.martialProficency">Martial Level Prof.:</label>
+          <input type='number' id='system.levels.martialProficency' name='system.levels.martialProficency' value='{{system.levels.martialProficency}}'/>
+        </div>
+        <div >
+          <label class='bold-text' for="system.levels.spellProficency">Spell Level Prof.:</label>
+          <input type='number' id='system.levels.spellProficency' name='system.levels.spellProficency' value='{{system.levels.spellProficency}}'/>
+        </div>
+
+        <div>
+          <label class='bold-text' for="system.defenses.stabilityProficency">Stability Prof.:</label>
+          <input type='number' id='system.defenses.stabilityProficency' name='system.defenses.stabilityProficency' value='{{system.defenses.stabilityProficency}}'/>
+        </div>
+        <div >
+          <label class='bold-text' for="system.defenses.dodgeProficency">Dodge Prof.:</label>
+          <input type='number' id='system.defenses.dodgeProficency' name='system.defenses.dodgeProficency' value='{{system.defenses.dodgeProficency}}'/>
+        </div>
+
+        <div>
+          <label class='bold-text' for="system.defenses.toughnessProficency">Toughness Prof.:</label>
+          <input type='number' id='system.defenses.toughnessProficency' name='system.defenses.toughnessProficency' value='{{system.defenses.toughnessProficency}}'/>
+        </div>
+        <div >
+          <label class='bold-text' for="system.defenses.willpowerProficency">Willpower Prof.:</label>
+          <input type='number' id='system.defenses.willpowerProficency' name='stem.defenses.willpowerProficency' value='{{system.defenses.willpowerProficency}}'/>
+        </div>
+
+        <div>
+          <label class='bold-text' for="system.data.stabilityBonus">Stability Bonus:</label>
+          <input type='number' id='system.data.stabilityBonus' name='system.data.stabilityBonus' value='{{system.data.stabilityBonus}}'/>
+        </div>
+        <div >
+          <label class='bold-text' for="system.data.dodgeBonus">Dodge Bonus:</label>
+          <input type='number' id='system.data.dodgeBonus' name='system.data.dodgeBonus' value='{{system.data.dodgeBonus}}'/>
+        </div>
+
+        <div>
+          <label class='bold-text' for="system.data.toughnessProficency">Toughness Bonus:</label>
+          <input type='number' id='system.data.toughnessProficency' name='system.data.toughnessBonus' value='{{system.data.toughnessBonus}}'/>
+        </div>
+        <div >
+          <label class='bold-text' for="system.data.willpowerProficency">Willpower Bonus:</label>
+          <input type='number' id='system.data.willpowerProficency' name='system.data.willpowerBonus' value='{{system.data.willpowerBonus}}'/>
+        </div>
+
+        <div class='grid-span-2'>
+          <label class='bold-text' for="system.data.movementBonus">Movement Bonus:</label>
+          <input type='number' id='system.data.movementBonus' name='system.data.movementBonus' value='{{system.data.movementBonus}}'/>
+        </div>
+
+        {{#if (eq @root.actor.type 'character')}}
+        <div>
+          <label class='bold-text' for="system.skillPoints.skillPointsPerLevel">Skill Points per Level:</label>
+          <input type='number' id='system.skillPoints.skillPointsPerLevel' name='system.skillPoints.skillPointsPerLevel' value='{{system.skillPoints.skillPointsPerLevel}}'/>
+        </div>
+        <div >
+          <label class='bold-text' for="system.skillPoints.additionalSkillPoints">Additional Skill Points:</label>
+          <input type='number' id='system.skillPoints.additionalSkillPoints' name='system.skillPoints.additionalSkillPoints' value='{{system.skillPoints.additionalSkillPoints}}'/>
+        </div>
+        {{/if}}
       </div>
     </aside>
 

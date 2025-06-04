@@ -66,7 +66,8 @@
   color: white;
   display: flex;
 }
-.rollable-container:hover, .rollable-container:focus {
+
+.rollable-image:hover, .rollable-image:focus {
   filter: brightness(1.25);
   cursor: pointer;
 }
@@ -76,6 +77,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 1rem;
   color: black;
   font-weight: bold;
 }
@@ -704,4 +706,8 @@
   border-color: red;
   background-color: lightcoral;
   cursor: pointer;
+}
+.reclaim-the-realm .data-container {
+  overflow-y: scroll;
+  height: 480px;
 }

@@ -52,7 +52,7 @@ export default class RtRCharacter extends RtRActorBase {
 
     this.hp.max = (this.data.hpPerLevel + Math.floor(this.attributes.con.value / 2)) * this.levels.level + this.data.additionalHp;
     this.stamina.max = Math.max(this.attributes.con.value + Math.floor(this.levels.level + this.levels.martialLevel), 1);
-    this.arcana.max = Math.floor(3 * this.levels.spellLevel);
+    this.arcana.max = Math.floor(3 * this.levels.spellProficency * this.levels.level);
     this._calculateLevelAndXp();
     this._calculateSkillPoints();
     this._calculateAttributePoints();

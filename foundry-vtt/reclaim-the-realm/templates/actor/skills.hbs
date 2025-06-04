@@ -69,7 +69,6 @@
         <div class="grid-span-2 flexrow">
             <input
                 type='text'
-                name='system.skills.{{key}}.rank'
                 value='{{concat skills.rank "/" skills.rankMaximum}}'
                 class="" style="flex-grow: 5;"
                 disabled="true"
@@ -81,7 +80,7 @@
                 class="increase-rank-btn" 
                 {{disabled (eq skills.rank skills.rankMaximum)}}
                 {{disabled (eq @root.system.skillPoints.totalSkillPoints @root.system.skillPoints.usedSkillPoints)}} 
-                name='system.skills.{{key}}.rank' 
+                name='system.skills.{{key}}.rankIncrease' 
                 data-action='increaseSkillRank'
             >
             {{/if}}
@@ -99,24 +98,26 @@
         </select>
         {{#if (eq @root.actor.type 'character')}}
         <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" alt="d20" height='28' width='28'>
-            <span 
-                class="rollable-text-centered"
+            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
                 data-action='roll'
                 data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value - @exh'
                 data-label='{{localize (lookup @root.config.skills key)}}'
-            >{{numberFormat (subtract (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value')) @root.system.exhaustion) decimals=0}}</span>
+            >
+            <span class="rollable-text-centered">
+                {{numberFormat (subtract (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value')) @root.system.exhaustion) decimals=0}}
+            </span>
         </div>
         {{/if}}
         {{#if (eq @root.actor.type 'npc')}}
         <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" alt="d20" height='28' width='28'>
-            <span 
-                class="rollable-text-centered"
+            <img src="/icons/svg/d20-grey.svg" alt="d20" height='28' width='28'
                 data-action='roll'
                 data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
                 data-label='{{localize (lookup @root.config.skills key)}}'
-            >{{numberFormat (add skills.rank (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value'))) decimals=0}}</span>
+            >
+            <span class="rollable-text-centered">
+                {{numberFormat (add skills.rank (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value'))) decimals=0}}
+            </span>
         </div>
         {{/if}}
     {{/each}}
