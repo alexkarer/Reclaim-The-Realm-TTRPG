@@ -36,4 +36,11 @@
   font-size: 1rem;
   color: black;
   font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: whitesmoke;
+    text-shadow: 0 0 10px red;
+    cursor: pointer;
+  }
 }

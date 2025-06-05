@@ -34,6 +34,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       decreaseStamina: this._onDecreaseStamina,
       increaseArcana: this._onIncreaseArcana,
       decreaseArcana: this._onDecreaseArcana,
+      addXp: this._onAddXP,
       resetSkillPoints: this._onResetSkillRanks,
       setAsClassSKill: this._onSetAsClassSKill,
       increaseSkillRank: this._onIncreaseSkillRank,
@@ -568,6 +569,33 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   }
 
   /**
+   * Add XP
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onAddXP(event, target) {
+    event.preventDefault();
+
+    const result = await api.DialogV2.input({
+      rejectClose: false,
+      modal: true,
+      content: `<input type="number" name="xp">`,
+      ok: {
+        label: "Add XP",
+      }
+    });
+
+    if (result.xp) {
+      let xp = this.actor.system.xp.total + result.xp;
+      this.render();
+      this.actor.update({ "system.xp.total": xp });
+    }
+  }
+
+  /**
    * Reset all assigned skill ranks
    *
    * @this RtRActorSheet
@@ -578,9 +606,17 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   static async _onResetSkillRanks(event, target) {
     event.preventDefault();
     let updatePayload = {};
-    Object.entries(this.actor.system.skills).forEach(s => updatePayload['system.skills.'+s[0]+'.rank'] = (s[1].classSkill ? 2 : 0));
-    this.actor.update(updatePayload);
-    this.render();
+    const confirm = await api.DialogV2.confirm({
+      content: "Are you sure?",
+      rejectClose: false,
+      modal: true
+    });
+
+    if (confirm) {
+      Object.entries(this.actor.system.skills).forEach(s => updatePayload['system.skills.'+s[0]+'.rank'] = (s[1].classSkill ? 2 : 0));
+      this.actor.update(updatePayload);
+      this.render();
+    }
   }
 
   /**
@@ -647,9 +683,17 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   static async _onResetAttributes(event, target) {
     event.preventDefault();
     let updatePayload = {};
-    Object.entries(this.actor.system.attributes).forEach(s => updatePayload['system.attributes.'+s[0]+'.value'] = (s[1].classAttribute ? 2 : 0));
-    this.actor.update(updatePayload);
-    this.render();
+    const confirm = await api.DialogV2.confirm({
+      content: "Are you sure?",
+      rejectClose: false,
+      modal: true
+    });
+
+    if (confirm) {
+      Object.entries(this.actor.system.attributes).forEach(s => updatePayload['system.attributes.'+s[0]+'.value'] = (s[1].classAttribute ? 2 : 0));
+      this.actor.update(updatePayload);
+      this.render();
+    }
   }
 
   /**

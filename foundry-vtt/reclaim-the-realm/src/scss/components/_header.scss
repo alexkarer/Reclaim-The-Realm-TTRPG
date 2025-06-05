@@ -22,6 +22,49 @@
   }
 }
 
+.add-xp-btn {
+  margin-left: 2px;
+  margin-right: 2px;
+  flex-shrink: 7;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: goldenrod;
+  color: goldenrod;
+  background-color: black;
+  text-align: center;
+
+  &:disabled {
+    color: gray;
+    border-color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    color: lightgoldenrodyellow;
+    border-color: lightgoldenrodyellow;
+    background-color: darkslategray;
+    cursor: pointer;
+  }
+}
+
+.resource-gauge-wrapper {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.resource-gauge-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .resource-gauge {
   flex-grow: 5;
   margin-right: 3px;

@@ -1,36 +1,38 @@
 ### What is missing before playtest can continue in foundry only:
 
-- Add XP Functionality
-- Configure character data
-    - class values, species values, ...
-- Write down list of abilities and perks
+- Add Abilities
+  - Class Techniques
+  - Spells
+  - Martial Maneuvers
+  - Standard Abilities
+- Perks
+- Equipment
 - Have a good way to represent NPCs
-- Add Attribute points
 
 add ITems, Abilities NPCs
-
 
 # General TODOs/Nice to haves
 
 ## Actors
-
 - On all places show the formula for calculating, which is fixed but can be modified with additional values.
 - long rest button/rest values
-- concealment bonuzses
 - Perk Trees
 - Have all Abilities in the Same Place but in separate columns 
-- Show encumbermance in equipment
-- passive Awareness
-- place for permanent injury
-- easy way to record character origin
 
 ### Characters
+
+- easy way to record character origin
+- place for permanent injury
+- passive Awareness and stuff
+- concealment bonuzses
 
 ### NPCS
 
 ## Items
 
 ### Equipment
+
+- Show encumbermance in equipment
 
 ### Abilities
 
@@ -39,6 +41,8 @@ add ITems, Abilities NPCs
 ### Classes
 
 ## Interactions
+
+- Implemt Status Effects
 
 ## Special
 

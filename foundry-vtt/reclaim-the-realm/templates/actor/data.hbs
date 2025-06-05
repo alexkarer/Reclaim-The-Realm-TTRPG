@@ -33,15 +33,15 @@
             >{{localize (lookup @root.config.attributes key)}}</label>
         {{/if}}
         <div class="flexrow">
+          {{#if (eq @root.actor.type 'character')}}
           <input 
             type='text'
             name='system.attributes.{{key}}.value'
             style="flex-grow: 5;"
             value='{{concat attribute.value "/" attribute.attributeMaximum}}'
-            {{disabled (eq @root.actor.type 'character' )}}
+            disabled='true'
             data-dtype='Number'
           />
-          {{#if (eq @root.actor.type 'character')}}
           <input 
             type="button"
             value="+"
@@ -50,6 +50,14 @@
             {{disabled (eq (subtract @root.actor.system.attributePoints.totalAttributePoints @root.actor.system.attributePoints.usedAttributePoints) 0)}}
             name='system.attribute.{{key}}.value'
             data-action='increaseAttribute'
+          />
+          {{/if}}
+          {{#if (eq @root.actor.type 'npc')}}
+          <input 
+            type='number'
+            name='system.attributes.{{key}}.value'
+            value='{{concat attribute.value}}'
+            data-dtype='Number'
           />
           {{/if}}
         </div>

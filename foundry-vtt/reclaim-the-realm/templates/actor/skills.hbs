@@ -103,9 +103,11 @@
                 data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value - @exh'
                 data-label='{{localize (lookup @root.config.skills key)}}'
             >
-            <span class="rollable-text-centered">
-                {{numberFormat (subtract (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value')) @root.system.exhaustion) decimals=0}}
-            </span>
+            <span class="rollable-text-centered" 
+                data-action='roll'
+                data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value - @exh'
+                data-label='{{localize (lookup @root.config.skills key)}}'
+            >{{numberFormat (subtract (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value')) @root.system.exhaustion) decimals=0}}</span>
         </div>
         {{/if}}
         {{#if (eq @root.actor.type 'npc')}}
@@ -115,9 +117,11 @@
                 data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
                 data-label='{{localize (lookup @root.config.skills key)}}'
             >
-            <span class="rollable-text-centered">
-                {{numberFormat (add skills.rank (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value'))) decimals=0}}
-            </span>
+            <span class="rollable-text-centered"
+                data-action='roll'
+                data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
+                data-label='{{localize (lookup @root.config.skills key)}}'
+            >{{numberFormat (add skills.rank (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value'))) decimals=0}}</span>
         </div>
         {{/if}}
     {{/each}}

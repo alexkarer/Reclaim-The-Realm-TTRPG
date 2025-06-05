@@ -10,7 +10,7 @@
     width='100'
   />
   <div class='header-fields'>
-    <div class='document-name flexrow' style="margin-bottom: 5px;">
+    <div class='grid grid-3col' style="margin-bottom: 5px;">
       <input
         style='margin-right: 1em;'
         name='name'
@@ -20,15 +20,24 @@
       />
 
       {{#if (eq actor.type 'character')}}
-      <div class='resource flexrow'>
-        <span id='system.xp'>{{localize 'RTR.Actor.Character.FIELDS.xp.label'}}: {{system.xp.total}}/{{system.xp.nextMilestone}}</span>
-        <meter 
-          class='resource-gauge resource-guage-gold'
-          style="flex-grow: 2;"
-          value='{{system.xp.total}}'
-          min='{{system.xp.prevMilestone}}'
-          max='{{system.xp.nextMilestone}}'
-        ></meter>
+      <div class='grid-span-2 resource flexrow flex-group-center'>
+        <span>{{localize 'RTR.Actor.Character.FIELDS.xp.label'}}</span>
+        <div class="resource-gauge-wrapper" style="flex-grow: 5;">
+          <meter 
+            class='resource-gauge resource-guage-gold'
+            value='{{system.xp.total}}'
+            min='{{system.xp.prevMilestone}}'
+            max='{{system.xp.nextMilestone}}'
+          ></meter>
+          <span class="resource-gauge-text">{{system.xp.total}}/{{system.xp.nextMilestone}}</span>
+        </div>
+         <input 
+            type="button"
+            value="+"
+            class="add-xp-btn"
+            name='system.xp.increase'
+            data-action='addXp'
+          />
       </div>
       {{/if}}
 
