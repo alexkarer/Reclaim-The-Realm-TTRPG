@@ -157,9 +157,37 @@
   </div>
   {{#if (eq actor.type 'character')}}
   <hr>
-  <h6 class="headline">Resting</h6>
-  <div class="flexrow">
-    <!-- TODO -->
+  <h6 class="headline">Short Rest</h6>
+  <div class="flexrow flex-group-center">
+    <button style="margin-right: 10px" 
+      data-action='shortRestHpRecovery'
+      {{disabled (eq system.stamina.value 0)}}
+    >
+      <img src="/icons/svg/regen.svg" alt="Short Rest HP Recovery" height='16' width='16'>
+      <span>HP Recovery</span>
+    </button>
+    <button style="margin-left: 10px; margin-right: 10px" 
+      data-action='shortRestArcanaRecovery'
+      {{disabled (eq system.stamina.value 0)}}
+    >
+      <img src="/icons/magic/time/hourglass-tilted-gray.webp" alt="Short Rest Arcana Recovery" height='16' width='16'>
+      <span>Arcana Recovery</span>
+    </button>
+    <button style="margin-left: 10px;"
+      data-action='shortRestExhaustionRecovery'
+      {{disabled (eq system.stamina.value 0)}}
+      {{disabled (eq system.stamina.value 1)}}
+    >
+      <img src="/icons/magic/time/hourglass-tilted-gray.webp" alt="Short Rest Exhaustion Recovery" height='16' width='16'>
+      <span>Exhaustion Recovery</span>
+    </button>
+  </div>
+  <h6 class="headline">Long Rest</h6>
+  <div class="flexrow flex-group-center">
+    <button data-action='longRestRecovery'>
+      <img src="/icons/svg/sleep.svg" alt="Long Rest" height='16' width='16'>
+      <span>Long Rest</span>
+    </button>
   </div>
   {{/if}}
 </section>

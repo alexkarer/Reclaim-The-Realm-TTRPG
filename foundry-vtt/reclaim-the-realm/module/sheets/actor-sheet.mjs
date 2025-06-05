@@ -39,7 +39,11 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       setAsClassSKill: this._onSetAsClassSKill,
       increaseSkillRank: this._onIncreaseSkillRank,
       resetAttributes: this._onResetAttributes,
-      increaseAttribute: this._onIncreaseAttribute
+      increaseAttribute: this._onIncreaseAttribute,
+      shortRestHpRecovery: this._onShortRestHpRecovery,
+      shortRestArcanaRecovery: this._onSortRestArcanaRecovery,
+      shortRestExhaustionRecovery: this._onShortRestExhaustionRecovery,
+      longRestRecovery: this._onLongRestRecovery,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -715,6 +719,117 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
     updatePayload['system.attributes.'+attributeName+'.value'] = attribute.value + 1;
+    this.actor.update(updatePayload);
+    this.render();
+  }
+
+  /**
+   * Recover HP during a short Rest.
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onShortRestHpRecovery(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    if (this.actor.system.stamina.value === 0) {
+      console.warn("Can't perform short rest without Stamina.")
+      return;
+    }
+    
+    let dice = Math.max(1, Math.floor(this.actor.system.attributes.con.value / 3) + 1);
+    let roll = new Roll(dice + 'd6', this.actor.getRollData());
+    await roll.toMessage({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      flavor: 'Short Rest HP Recovery',
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
+
+    updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 1;
+    let newHP = Math.min(this.actor.system.hp.max, this.actor.system.hp.value + roll.total);
+    updatePayload['system.hp.value'] = newHP;
+    this.actor.update(updatePayload);
+    this.render();
+    return roll;
+  }
+
+  /**
+   * Recover Arcana during a short rest
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onSortRestArcanaRecovery(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    if (this.actor.system.stamina.value === 0) {
+      console.warn("Can't perform short rest without Stamina.")
+      return;
+    }
+    updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 1;
+    let newArcana = Math.min(this.actor.system.arcana.max, this.actor.system.arcana.value + 1 + Math.floor(this.actor.system.levels.spellLevel / 3));
+    updatePayload['system.arcana.value'] = newArcana;
+    this.actor.update(updatePayload);
+    this.render();
+  }
+
+  /**
+   * Remove Exhaustion during a short rest
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onShortRestExhaustionRecovery(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    if (this.actor.system.stamina.value === 0 || this.actor.system.stamina.value === 1) {
+      console.warn("Can't perform short rest without Stamina.")
+      return;
+    }
+    updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 2;
+    updatePayload['system.exhaustion'] = Math.max(this.actor.system.exhaustion - 1, 0);
+    this.actor.update(updatePayload);
+    this.render();
+  }
+
+  /**
+   * Recover Arcana during a short rest
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onLongRestRecovery(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+
+    const confirm = await api.DialogV2.confirm({
+      content: "Perform Long Rest?",
+      rejectClose: false,
+      modal: true
+    });
+    if (!confirm) {
+      return;
+    }
+
+    let newHP = Math.min(this.actor.system.hp.max, this.actor.system.hp.value + Math.floor(this.actor.system.hp.max / 3));
+    updatePayload['system.hp.value'] = newHP;
+
+    let newStamina = Math.min(this.actor.system.stamina.max, this.actor.system.stamina.value + Math.floor(this.actor.system.stamina.max / 3));
+    updatePayload['system.stamina.value'] = newStamina;
+
+    let newArcana = Math.min(this.actor.system.arcana.max, this.actor.system.arcana.value + Math.floor(this.actor.system.arcana.max / 3));
+    updatePayload['system.arcana.value'] = newArcana;
+
+    updatePayload['system.exhaustion'] = Math.max(this.actor.system.exhaustion - 1, 0);
+
     this.actor.update(updatePayload);
     this.render();
   }
