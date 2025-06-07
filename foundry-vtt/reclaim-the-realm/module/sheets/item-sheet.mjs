@@ -45,15 +45,15 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     description: {
       template: 'systems/reclaim-the-realm/templates/item/description.hbs',
     },
-    attributesFeature: {
+    propertiesFeature: {
       template:
-        'systems/reclaim-the-realm/templates/item/attribute-parts/feature.hbs',
+        'systems/reclaim-the-realm/templates/item/properties-parts/feature.hbs',
     },
-    attributesEquipment: {
-      template: 'systems/reclaim-the-realm/templates/item/attribute-parts/equipment.hbs',
+    propertiesEquipment: {
+      template: 'systems/reclaim-the-realm/templates/item/properties-parts/equipment.hbs',
     },
-    attributesSpell: {
-      template: 'systems/reclaim-the-realm/templates/item/attribute-parts/spell.hbs',
+    apropertiesSpell: {
+      template: 'systems/reclaim-the-realm/templates/item/properties-parts/spell.hbs',
     },
     effects: {
       template: 'systems/reclaim-the-realm/templates/item/effects.hbs',
@@ -70,13 +70,13 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'feature':
-        options.parts.push('attributesFeature', 'effects');
+        options.parts.push('propertiesFeature', 'effects');
         break;
       case 'equipment':
-        options.parts.push('attributesEquipment');
+        options.parts.push('propertiesEquipment');
         break;
       case 'spell':
-        options.parts.push('attributesSpell');
+        options.parts.push('propertiesSpell');
         break;
     }
   }
@@ -110,9 +110,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
   /** @override */
   async _preparePartContext(partId, context) {
     switch (partId) {
-      case 'attributesFeature':
-      case 'attributesEquipment':
-      case 'attributesSpell':
+      case 'propertiesFeature':
+      case 'propertiesEquipment':
+      case 'propertiesSpell':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
         break;
@@ -171,11 +171,11 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
           tab.id = 'description';
           tab.label += 'Description';
           break;
-        case 'attributesFeature':
-        case 'attributesEquipment':
-        case 'attributesSpell':
-          tab.id = 'attributes';
-          tab.label += 'Attributes';
+        case 'propertiesFeature':
+        case 'propertiesEquipment':
+        case 'propertiesSpell':
+          tab.id = 'properties';
+          tab.label += 'Properties';
           break;
         case 'effects':
           tab.id = 'effects';
@@ -197,9 +197,23 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    */
   _onRender(context, options) {
     this.#dragDrop.forEach((d) => d.bind(this.element));
-    // You may want to add other special handling here
-    // Foundry comes with a large number of utility classes, e.g. SearchFilter
-    // That you may want to implement yourself.
+
+    // bind equipment type selector
+    if (this.document.type === 'equipment') {
+      const equipmentTypeSelectors = this.element.querySelectorAll('.equipment-type-selector')
+      for (const equipmentTypeSelector of equipmentTypeSelectors) {
+        equipmentTypeSelector.addEventListener("change", (e) => {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          const name = e.target.name;
+          const equipmentType = e.target.value;
+          let updatePayload = {};
+          updatePayload[name]=equipmentType;
+          this.document.update(updatePayload)
+            .then(v => this.render());
+        })
+      }
+    }
   }
 
   /**************

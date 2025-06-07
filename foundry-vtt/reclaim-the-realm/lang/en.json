@@ -42,7 +42,8 @@
       "Wearables": "Wearables",
       "Consumables": "Consumables",
       "ToolsAndGadgets": "Tools and Gadgets",
-      "Survival": "Survival"
+      "Survival": "Survival",
+      "Commodity": "Commodity"
     },
     "SheetLabels": {
       "Actor": "RtR Actor Sheet",
@@ -106,7 +107,7 @@
     },
     "Item": {
       "Tabs": {
-        "Attributes": "Attributes",
+        "Properties": "Properties",
         "Description": "Description",
         "Effects": "Effects"
       },
@@ -127,7 +128,15 @@
             "bc": {"abbr": "bc", "label": "Bronze Coin"},
             "sc": {"abbr": "sc", "label": "Silver Coin"},
             "gc": {"abbr": "gc", "label": "Gold Coin"}
-          }
+          },
+          "damage": {"label": "Damage"},
+          "availableWeapons": {"label": "Availible Weapons"},
+          "recoverable": {"label": "Recoverable"},
+          "damageBlock": {"label": "Damage Block"},
+          "manoeuvrePenalty": {"label": "Manoeuvre Penalty"},
+          "movementPenalty": {"label": "Movement Penalty"},
+          "shieldBlock": {"label": "Shield Block"},
+          "damageThreshold": {"label": "Damage Threshold"}
         }
       },
       "Spell": {

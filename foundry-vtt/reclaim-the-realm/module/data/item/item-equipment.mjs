@@ -13,7 +13,7 @@ export default class RtREquipment extends RtRItemBase {
 
     schema.tier = new fields.NumberField({ ...requiredInteger, initial: 1, min: 1 });
     schema.craftingSkills = new fields.StringField();
-    schema.type = new fields.StringField({ choices: Object.keys(CONFIG.RTR.equipmentTypes), initial: 'weapon' });
+    schema.type = new fields.StringField({ choices: Object.keys(CONFIG.RTR.equipmentTypes), initial: 'commodity' });
 
     schema.costBc = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
 
@@ -22,6 +22,18 @@ export default class RtREquipment extends RtRItemBase {
     schema.weightKg = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
     schema.weightGramm = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
     schema.totalWeightGramm = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+
+    schema.damage = new fields.StringField();
+
+    schema.availableWeapons = new fields.StringField();
+    schema.recoverable = new fields.BooleanField({ initial: false, required: true, nullable: false });
+
+    schema.damageBlock = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+    schema.manoeuvrePenalty = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+    schema.movementPenalty = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+
+    schema.shieldBlock = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+    schema.damageThreshold = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
 
     return schema;
   }

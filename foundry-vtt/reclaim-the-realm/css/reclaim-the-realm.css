@@ -536,6 +536,18 @@
   padding-left: 5px;
   text-align: left;
 }
+.reclaim-the-realm .slim-table {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.reclaim-the-realm .slim-table th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.reclaim-the-realm .slim-table td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
 .reclaim-the-realm .effects-header {
   height: 28px;
   margin: 2px 0;

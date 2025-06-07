@@ -58,6 +58,7 @@ export class EquipmentSearchComponent {
             case EquipmentType.CONSUMBABLES: return equipment.type.toLocaleLowerCase().includes('consumable');
             case EquipmentType.TOOLS_AND_GADGETS: return equipment.type.toLocaleLowerCase().includes('tool');
             case EquipmentType.SURVIVAL: return equipment.type.toLocaleLowerCase().includes('survival');
+            case EquipmentType.COMMODITY: return equipment.type.toLocaleLowerCase().includes('commodity');
         }
     }
 
@@ -89,5 +90,6 @@ enum EquipmentType {
     WEARABLES = "Wearables",
     CONSUMBABLES = "Consumables",
     TOOLS_AND_GADGETS = "Tools and Gadgets",
-    SURVIVAL = "Survival"
+    SURVIVAL = "Survival",
+    COMMODITY = "Commodity"
 }

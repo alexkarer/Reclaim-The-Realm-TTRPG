@@ -58,5 +58,6 @@ RTR.equipmentTypes = {
   wearables: "RTR.EquipmentTypes.Wearables",
   consumables: "RTR.EquipmentTypes.Consumables",
   toolsAndGadgets: "RTR.EquipmentTypes.ToolsAndGadgets",
-  survival: "RTR.EquipmentTypes.Survival"
+  survival: "RTR.EquipmentTypes.Survival",
+  commodity: "RTR.EquipmentTypes.Commodity"
 }

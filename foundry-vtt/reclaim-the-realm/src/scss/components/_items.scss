@@ -113,3 +113,17 @@
     }
   }
 }
+
+.slim-table {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}

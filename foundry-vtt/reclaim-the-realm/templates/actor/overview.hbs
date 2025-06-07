@@ -136,22 +136,22 @@
   <div class="flexrow" style="margin-bottom: 5px;">
     <div>
       <label class='bold-text' for="system.defenses.resistances">Resistances:</label>
-      <input class="grid-span-5" type='text' id='system.defenses.resistances' value='{{system.defenses.resistances}}' />
+      <input class="grid-span-5" type='text' id='system.defenses.resistances' name='system.defenses.resistances' value='{{system.defenses.resistances}}' />
     </div>
   </div>
   <div class="flexrow" style="margin-bottom: 5px;">
     <div>
       <label class='bold-text' for="system.alignment">Alignment:</label>
-      <input type='text' id='system.alignment' value='{{system.alignment}}' />
+      <input type='text' id='system.alignment' name='system.alignment' value='{{system.alignment}}' />
     </div>
     {{#if (eq actor.type 'character')}}
     <div style="margin-left: 10px;">
       <label class='bold-text' for="system.species">Species:</label>
-      <input type='text' id='system.species' value='{{system.species}}' />
+      <input type='text' id='system.species' name='system.species' value='{{system.species}}' />
     </div>
     <div style="margin-left: 10px;">
       <label class='bold-text' for="system.class">Class:</label>
-      <input type='text' id='system.class' value='{{system.class}}' />
+      <input type='text' id='system.class' name='system.class' value='{{system.class}}' />
     </div>
     {{/if}}
   </div>

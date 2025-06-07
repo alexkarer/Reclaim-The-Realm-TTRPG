@@ -311,8 +311,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         const attr = e.target.value;
         let updatePayload = {};
         updatePayload[name]=attr;
-        this.actor.update(updatePayload);
-        this.render();
+        this.actor.update(updatePayload)
+          .then(v => this.render());
       })
     }
   }
@@ -472,9 +472,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
   
-    this.actor.system.hp.value += 1;
-    this.render();
-    this.actor.update({ "system.hp.value": this.actor.system.hp.value });
+    this.actor.update({ "system.hp.value": this.actor.system.hp.value + 1 })
+      .then(v => this.render());
   }
 
   /**
@@ -492,9 +491,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
 
-    this.actor.system.hp.value -= 1;
-    this.render();
-    this.actor.update({ "system.hp.value": this.actor.system.hp.value });
+    this.actor.update({ "system.hp.value": this.actor.system.hp.value - 1 })
+      .then(v => this.render());
   }
 
   /**
@@ -512,9 +510,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
   
-    this.actor.system.stamina.value += 1;
-    this.render();
-    this.actor.update({ "system.stamina.value": this.actor.system.stamina.value });
+    this.actor.update({ "system.stamina.value": this.actor.system.stamina.value + 1 })
+      .then(v => this.render());
   }
 
   /**
@@ -532,9 +529,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
 
-    this.actor.system.stamina.value -= 1;
-    this.render();
-    this.actor.update({ "system.stamina.value": this.actor.system.stamina.value });
+    this.actor.update({ "system.stamina.value": this.actor.system.stamina.value - 1 })
+      .then(v => this.render());
   }
 
   /**
@@ -552,9 +548,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
   
-    this.actor.system.arcana.value += 1;
-    this.render();
-    this.actor.update({ "system.arcana.value": this.actor.system.arcana.value });
+    this.actor.update({ "system.arcana.value": this.actor.system.arcana.value + 1})
+      .then(v => this.render());
   }
 
   /**
@@ -572,9 +567,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
 
-    this.actor.system.arcana.value -= 1;
-    this.render();
-    this.actor.update({ "system.arcana.value": this.actor.system.arcana.value });
+    this.actor.update({ "system.arcana.value": this.actor.system.arcana.value - 1 })
+      .then(v => this.render());
   }
 
   /**
@@ -597,10 +591,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       }
     });
 
-    if (result.xp) {
+    if (result && result.xp) {
       let xp = this.actor.system.xp.total + result.xp;
-      this.render();
-      this.actor.update({ "system.xp.total": xp });
+      this.actor.update({ "system.xp.total": xp })
+        .then(v => this.render());
     }
   }
 
@@ -623,8 +617,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
 
     if (confirm) {
       Object.entries(this.actor.system.skills).forEach(s => updatePayload['system.skills.'+s[0]+'.rank'] = (s[1].classSkill ? 2 : 0));
-      this.actor.update(updatePayload);
-      this.render();
+      this.actor.update(updatePayload)
+        .then(v => this.render());
     }
   }
 
@@ -655,8 +649,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       updatePayload['system.skills.'+skillName+'.rank']=skill.rank-2
     }
     
-    this.actor.update(updatePayload);
-    this.render();
+    this.actor.update(updatePayload)
+      .then(v => this.render());
   }
 
   /**
@@ -677,8 +671,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
     updatePayload['system.skills.'+skillName+'.rank']=skill.rank+1;
-    this.actor.update(updatePayload);
-    this.render();
+    this.actor.update(updatePayload)
+      .then(v => this.render());
   }
 
   /**
@@ -700,8 +694,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
 
     if (confirm) {
       Object.entries(this.actor.system.attributes).forEach(s => updatePayload['system.attributes.'+s[0]+'.value'] = (s[1].classAttribute ? 2 : 0));
-      this.actor.update(updatePayload);
-      this.render();
+      this.actor.update(updatePayload)
+        .then(v => this.render());
     }
   }
 
@@ -724,8 +718,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
     updatePayload['system.attributes.'+attributeName+'.value'] = attribute.value + 1;
-    this.actor.update(updatePayload);
-    this.render();
+    this.actor.update(updatePayload)
+      .then(v => this.render());
   }
 
   /**
@@ -737,6 +731,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onShortRestHpRecovery(event, target) {
+    console.log("event", event);
+    console.log("target", target);
     event.preventDefault();
     let updatePayload = {};
     if (this.actor.system.stamina.value === 0) {
@@ -755,8 +751,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 1;
     let newHP = Math.min(this.actor.system.hp.max, this.actor.system.hp.value + roll.total);
     updatePayload['system.hp.value'] = newHP;
-    this.actor.update(updatePayload);
-    this.render();
+    this.actor.update(updatePayload)
+      .then(v => this.render());
     return roll;
   }
 
@@ -778,8 +774,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 1;
     let newArcana = Math.min(this.actor.system.arcana.max, this.actor.system.arcana.value + 1 + Math.floor(this.actor.system.levels.spellLevel / 3));
     updatePayload['system.arcana.value'] = newArcana;
-    this.actor.update(updatePayload);
-    this.render();
+    this.actor.update(updatePayload)
+      .then(v => this.render());
   }
 
   /**
@@ -799,8 +795,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     }
     updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 2;
     updatePayload['system.exhaustion'] = Math.max(this.actor.system.exhaustion - 1, 0);
-    this.actor.update(updatePayload);
-    this.render();
+    this.actor.update(updatePayload)
+      .then(v => this.render());
   }
 
   /**
@@ -835,8 +831,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
 
     updatePayload['system.exhaustion'] = Math.max(this.actor.system.exhaustion - 1, 0);
 
-    this.actor.update(updatePayload);
-    this.render();
+    this.actor.update(updatePayload)
+      .then(v => this.render());
   }
 
   /** Helper Functions */

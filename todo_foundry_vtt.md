@@ -7,13 +7,16 @@
   - Standard Abilities
 - Perks
 - Equipment
-  - Add encumberance calculation
   - Add more equipment types
 - Have a good way to represent NPCs
 
 add ITems, Abilities NPCs
 
 # General TODOs/Nice to haves
+
+## Bugs:
+
+- Somehow Short rest button is triggered via ENTER Key
 
 ## Actors
 - On all places show the formula for calculating, which is fixed but can be modified with additional values.
@@ -27,6 +30,7 @@ add ITems, Abilities NPCs
 - place for permanent injury
 - passive Awareness and stuff
 - concealment bonuzses
+- CTRL increase HP by 10, shift increase HP by 5.
 
 ### NPCS
 
@@ -34,7 +38,7 @@ add ITems, Abilities NPCs
 
 ### Equipment
 
-- Show encumbermance in equipment
+- Show encumbermance in equipment and calculate
 
 ### Abilities
 
