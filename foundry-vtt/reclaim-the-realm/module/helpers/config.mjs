@@ -49,3 +49,14 @@ RTR.skills = {
   tailorsSet:      'RTR.Skills.TailorsSet.name',
   carpentersTools: 'RTR.Skills.CarpentersTools.name',
 };
+
+RTR.equipmentTypes = {
+  weapon: "RTR.EquipmentTypes.Weapon",
+  ammunitions: "RTR.EquipmentTypes.Ammunitions",
+  armour: "RTR.EquipmentTypes.Armour",
+  shields: "RTR.EquipmentTypes.Shields",
+  wearables: "RTR.EquipmentTypes.Wearables",
+  consumables: "RTR.EquipmentTypes.Consumables",
+  toolsAndGadgets: "RTR.EquipmentTypes.ToolsAndGadgets",
+  survival: "RTR.EquipmentTypes.Survival"
+}

@@ -34,6 +34,16 @@
       "TailorsSet":      { "name": "Tailor's Set", "description": "" },
       "CarpentersTools": { "name": "Carpenters Tools", "description": "" }
     },
+    "EquipmentTypes": {
+      "Weapon": "Weapon",
+      "Ammunitions": "Ammunitions",
+      "Armour": "Armour",
+      "Shields": "Shields",
+      "Wearables": "Wearables",
+      "Consumables": "Consumables",
+      "ToolsAndGadgets": "Tools and Gadgets",
+      "Survival": "Survival"
+    },
     "SheetLabels": {
       "Actor": "RtR Actor Sheet",
       "Item": "RtR Item Sheet"
@@ -43,7 +53,7 @@
         "Overview": "Overview",
         "Data": "Data",
         "Perks": "Perks",
-        "Gear": "Gear",
+        "Equipment": "Equipment",
         "Spells": "Spells",
         "Effects": "Effects",
         "Skills": "Skills"
@@ -97,19 +107,33 @@
         "Description": "Description",
         "Effects": "Effects"
       },
-      "Gear": {
+      "Equipment": {
         "FIELDS": {
-          "rollFormula": {"label": "Roll Formula"},
-          "numDice": {"label": "Number of Dice"},
-          "dieSize": {"label": "Die Size"},
-          "rollMod": {"label": "Roll Modifier"},
-          "quantity": {"label": "Quantity"},
-          "weight": {"label": "Weight"}
+          "icon": {"label": "Icon"},
+          "tier": { "label": "Tier" },
+          "type": {"label": "Type"},
+          "craftingSkills": {"label": "Crafting Skills"},
+          "quantity": {"label": "Qty"},
+          "weight": {
+            "weight": {"label": "Weight"},
+            "kg": {"label": "KG"},
+            "gramm": {"label": "Gramm"}
+          },
+          "cost": {
+            "cost": {"label": "Cost"},
+            "bc": {"abbr": "bc", "label": "Bronze Coin"},
+            "sc": {"abbr": "sc", "label": "Silver Coin"},
+            "gc": {"abbr": "gc", "label": "Gold Coin"}
+          }
         }
       },
       "Spell": {
         "FIELDS": {
-          "level": {"label": "Spell Level"}
+          "level": {"label": "Spell Level"},
+          "rollFormula": {"label": "Roll Formula"},
+          "numDice": {"label": "Number of Dice"},
+          "dieSize": {"label": "Die Size"},
+          "rollMod": {"label": "Roll Modifier"}
         },
         "SpellLVL": "Level {level} Spells",
         "AddLVL": "Add LVL {level}"
@@ -129,7 +153,7 @@
       "npc": "NPC"
     },
     "Item": {
-      "gear": "Gear",
+      "equipment": "Equipment",
       "feature": "Feature",
       "spell": "Spell"
     }

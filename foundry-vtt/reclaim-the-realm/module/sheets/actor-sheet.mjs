@@ -67,8 +67,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     overview: {
       template: 'systems/reclaim-the-realm/templates/actor/overview.hbs',
     },
-    gear: {
-      template: 'systems/reclaim-the-realm/templates/actor/gear.hbs',
+    equipment: {
+      template: 'systems/reclaim-the-realm/templates/actor/equipment.hbs',
     },
     spells: {
       template: 'systems/reclaim-the-realm/templates/actor/spells.hbs',
@@ -95,7 +95,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('perks', 'skills', 'gear', 'spells', 'effects');
+        options.parts.push('perks', 'skills', 'equipment', 'spells', 'effects');
         break;
       case 'npc':
         options.parts.push('skills', 'effects');
@@ -138,7 +138,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       case 'data':
       case 'spells':
       case 'skills':
-      case 'gear':
+      case 'equipment':
       case 'perks':
         context.tab = context.tabs[partId];
         break;
@@ -213,9 +213,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
           tab.id = 'perks';
           tab.label += 'Perks';
           break;
-        case 'gear':
-          tab.id = 'gear';
-          tab.label += 'Gear';
+        case 'equipment':
+          tab.id = 'equipment';
+          tab.label += 'Equipment';
           break;
         case 'spells':
           tab.id = 'spells';
@@ -242,7 +242,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     // You can just use `this.document.itemTypes` instead
     // if you don't need to subdivide a given type like
     // this sheet does with spells
-    const gear = [];
+    const equipment = [];
     const features = [];
     const spells = {
       0: [],
@@ -259,9 +259,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
 
     // Iterate through items, allocating to containers
     for (let i of this.document.items) {
-      // Append to gear.
-      if (i.type === 'gear') {
-        gear.push(i);
+      // Append to equipment.
+      if (i.type === 'equipment') {
+        equipment.push(i);
       }
       // Append to features.
       else if (i.type === 'feature') {
@@ -280,7 +280,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     }
 
     // Sort then assign
-    context.gear = gear.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.equipment = equipment.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.features = features.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.spells = spells;
   }
@@ -356,6 +356,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _viewDoc(event, target) {
+    console.log('target', target);
     const doc = this._getEmbeddedDocument(target);
     doc.sheet.render(true);
   }
@@ -843,7 +844,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    * @returns {Item | ActiveEffect} The embedded Item or ActiveEffect
    */
   _getEmbeddedDocument(target) {
-    const docRow = target.closest('li[data-document-class]');
+    let docRow = target.closest('li[data-document-class]');
+    if (!docRow) {
+      docRow = target.closest('tr[data-document-class]');
+    }
     if (docRow.dataset.documentClass === 'Item') {
       return this.actor.items.get(docRow.dataset.itemId);
     } else if (docRow.dataset.documentClass === 'ActiveEffect') {
@@ -889,7 +893,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   _onDragStart(event) {
-    const docRow = event.currentTarget.closest('li');
+    let docRow = event.currentTarget.closest('li');
+    if (!docRow) {
+      docRow = event.currentTarget.closest('tr');
+    }
     if ('link' in event.target.dataset) return;
 
     // Chained operation

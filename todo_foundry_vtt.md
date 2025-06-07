@@ -7,6 +7,8 @@
   - Standard Abilities
 - Perks
 - Equipment
+  - Add encumberance calculation
+  - Add more equipment types
 - Have a good way to represent NPCs
 
 add ITems, Abilities NPCs
@@ -15,9 +17,9 @@ add ITems, Abilities NPCs
 
 ## Actors
 - On all places show the formula for calculating, which is fixed but can be modified with additional values.
-- long rest button/rest values
 - Perk Trees
 - Have all Abilities in the Same Place but in separate columns 
+- Configure prototype token
 
 ### Characters
 

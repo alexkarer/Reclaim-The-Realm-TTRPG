@@ -55,7 +55,7 @@ Hooks.once('init', function () {
   };
   CONFIG.Item.documentClass = RtRItem;
   CONFIG.Item.dataModels = {
-    gear: models.RtRGear,
+    equipment: models.RtREquipment,
     feature: models.RtRFeature,
     spell: models.RtRSpell,
   };
@@ -96,6 +96,47 @@ Handlebars.registerHelper('subtract', function (x, y) {
 
 Handlebars.registerHelper('compare', function (x, y) {
   return x === y;
+});
+
+Handlebars.registerHelper('formatWeight', function (weightInGramm) {
+  if (weightInGramm < 1000) {
+    return weightInGramm + ' g';
+  }
+  let kg = Math.floor(weightInGramm / 1000);
+  let gramm = weightInGramm % 1000;
+  let dg =  Math.floor((weightInGramm % 1000) / 100);
+  let cg = weightInGramm % 100;
+  if (gramm === 0) {
+    return kg + ' kg'; 
+  } else if (dg !== 0 && cg === 0) { 
+    return kg + '.' + dg + ' kg'; 
+  } else {
+    return kg + ' kg ' + gramm + ' g';
+  }
+});
+
+Handlebars.registerHelper('formatCost', function (costInBc) {
+  let bc = costInBc % 10;
+  let sc = Math.floor((costInBc % 100) / 10);
+  let gc = Math.floor(costInBc / 100);
+  
+  if (gc === 0 && sc === 0 && bc === 0) {
+    return '-';
+  } else if (gc === 0 && sc === 0 && bc !== 0) {
+    return bc + ' bc';
+  } else if (gc === 0 && sc !== 0 && bc === 0) {
+    return sc + ' sc';
+  } else if (gc === 0 && sc !== 0 && bc !== 0) {
+    return sc + ' sc ' + bc + ' sc';
+  } else if (gc !== 0 && sc === 0 && bc === 0) {
+    return gc + ' gc';
+  } else if (gc !== 0 && sc === 0 && bc !== 0) {
+    return gc + ' gc ' + bc + ' bc';
+  } else if (gc !== 0 && sc !== 0 && bc === 0) {
+    return gc + ' gc ' + sc + ' sc';
+  } else if (gc !== 0 && sc !== 0 && bc !== 0) {
+    return gc + ' gc ' + sc + ' sc ' + bc + ' bc';
+  }
 });
 
 /* -------------------------------------------- */

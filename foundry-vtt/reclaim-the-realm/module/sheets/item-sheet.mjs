@@ -49,8 +49,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       template:
         'systems/reclaim-the-realm/templates/item/attribute-parts/feature.hbs',
     },
-    attributesGear: {
-      template: 'systems/reclaim-the-realm/templates/item/attribute-parts/gear.hbs',
+    attributesEquipment: {
+      template: 'systems/reclaim-the-realm/templates/item/attribute-parts/equipment.hbs',
     },
     attributesSpell: {
       template: 'systems/reclaim-the-realm/templates/item/attribute-parts/spell.hbs',
@@ -72,8 +72,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       case 'feature':
         options.parts.push('attributesFeature', 'effects');
         break;
-      case 'gear':
-        options.parts.push('attributesGear');
+      case 'equipment':
+        options.parts.push('attributesEquipment');
         break;
       case 'spell':
         options.parts.push('attributesSpell');
@@ -111,7 +111,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
   async _preparePartContext(partId, context) {
     switch (partId) {
       case 'attributesFeature':
-      case 'attributesGear':
+      case 'attributesEquipment':
       case 'attributesSpell':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
@@ -172,7 +172,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
           tab.label += 'Description';
           break;
         case 'attributesFeature':
-        case 'attributesGear':
+        case 'attributesEquipment':
         case 'attributesSpell':
           tab.id = 'attributes';
           tab.label += 'Attributes';
@@ -359,6 +359,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     const li = event.currentTarget;
     if ('link' in event.target.dataset) return;
 
+    console.log('Drag Start Event', event);
     let dragData = null;
 
     // Active Effect
@@ -378,7 +379,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @param {DragEvent} event       The originating DragEvent
    * @protected
    */
-  _onDragOver(event) {}
+  _onDragOver(event) {
+    console.log('Drag Over Event', event);
+  }
 
   /**
    * Callback actions which occur when a dragged element is dropped on a target.
@@ -388,6 +391,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
   async _onDrop(event) {
     const data = ux.TextEditor.getDragEventData(event);
     const item = this.item;
+    console.log('On Drop Event', event);
+
     const allowed = Hooks.call('dropItemSheetData', item, this, data);
     if (allowed === false) return;
 

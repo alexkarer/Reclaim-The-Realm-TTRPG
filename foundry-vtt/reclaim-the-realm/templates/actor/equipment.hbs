@@ -1,0 +1,69 @@
+{{! Equipment Tab }}
+<section class='tab equipment {{tab.cssClass}}' data-group='primary' data-tab='equipment'>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>{{localize 'RTR.Item.Equipment.FIELDS.type.label'}}</th>
+        <th>{{localize 'Name'}}</th>
+        <th>{{localize 'RTR.Item.Equipment.FIELDS.quantity.label'}}</th>
+        <th>{{localize 'RTR.Item.Equipment.FIELDS.weight.weight.label'}}</th>
+        <th>{{localize 'RTR.Item.Equipment.FIELDS.cost.cost.label'}}</th>
+        <th>
+          {{#if @root.editable}}
+          <a
+            class='item-control item-create'
+            title='{{localize "DOCUMENT.Create" type='Item'}}'
+            data-action='createDoc'
+            data-document-class='Item'
+            data-type='equipment'
+          >
+            <i class='fas fa-plus'></i>
+          </a>
+        {{/if}}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each equipment as |item id|}}
+      <tr data-item-id='{{item._id}}'
+        data-drag='true'
+        data-document-class='Item'
+      >
+        <td>
+            <a class='rollable' 
+              data-action='viewDoc' 
+              title='{{localize "DOCUMENT.Update" type='Equipment'}}'
+            >
+              <img src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
+            </a>
+        </td>
+        <td>{{localize (lookup @root.config.equipmentTypes item.system.type)}}</td>
+        <td>
+          <a class='rollable'
+            data-action='viewDoc' 
+            title='{{localize "DOCUMENT.Update" type='Equipment'}}'
+          >
+            {{item.name}}
+          </a>
+        </td>
+        <td>{{item.system.quantity}}</td>
+        <td>{{formatWeight item.system.totalWeightGramm}}</td>
+        <td>{{formatCost item.system.costBc}}</td>
+        <td>
+          {{#if @root.editable}}
+            <a
+              class='item-control item-delete'
+              title='{{localize "DOCUMENT.Delete" type='Equipment'}}'
+              data-action='deleteDoc'
+            >
+              <i class='fas fa-trash'></i>
+            </a>
+          {{/if}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+</section>

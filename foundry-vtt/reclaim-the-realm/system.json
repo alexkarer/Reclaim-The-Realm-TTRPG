@@ -50,6 +50,21 @@
       "name": "equipment",
       "label": "Equipment",
       "type": "Item"
+    },
+    {
+      "name": "perks",
+      "label": "Perks",
+      "type": "Item"
+    },
+    {
+      "name": "martial_maneuvers",
+      "label": "Martial Maneuvers",
+      "type": "Item"
+    },
+    {
+      "name": "spells",
+      "label": "Spells",
+      "type": "Item"
     }
   ],
   "documentTypes": {
@@ -65,7 +80,7 @@
         "feature": {
             "htmlFields": ["description"]
         },
-        "gear": {
+        "equipment": {
             "htmlFields": ["description"]
         },
         "spell": {

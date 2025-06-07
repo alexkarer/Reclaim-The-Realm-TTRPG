@@ -1,0 +1,21 @@
+{{! Attributes Tab }}
+<section class='tab attributes {{tab.cssClass}}' data-group='primary' data-tab='attributes'>
+
+  <div class='grid grid-2col'>
+    <div>
+      <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.type.label'}}</label>
+      <input type='text' name='system.type' value='{{system.type}}' data-dtype='text'/>
+    </div>
+    <div>
+      <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.tier.label'}}</label>
+      <input type='number' name='system.tier' value='{{system.tier}}' data-dtype='Number'/>
+    </div>
+    <div>
+      <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.craftingSkills.label'}}</label>
+      <input type='text' name='system.craftingSkills' value='{{system.craftingSkills}}' data-dtype='text'/>
+    </div>
+    <div>
+      <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.cost.cost.label'}} ({{localize 'RTR.Item.Equipment.FIELDS.cost.bc.abbr'}})</label>
+      <input type='number' name='system.costBc' value='{{system.costBc}}' data-dtype='Number  '/>
+    </div>
+</section>
