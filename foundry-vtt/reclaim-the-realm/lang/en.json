@@ -92,7 +92,10 @@
       },
       "Character": {
         "FIELDS": {
-          "xp": {"label": "XP"}
+          "xp": {"label": "XP"},
+          "carryingCapacity": {"label": "Carrying Capacity"},
+          "liftPushDrag": {"label": "Lift/Push/Drag"},
+          "totalCarriedWeight": {"label": "Total Carried Weight"}
         }
       },
       "NPC": {

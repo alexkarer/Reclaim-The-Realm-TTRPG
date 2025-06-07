@@ -1,69 +1,107 @@
 {{! Equipment Tab }}
 <section class='tab equipment {{tab.cssClass}}' data-group='primary' data-tab='equipment'>
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>{{localize 'RTR.Item.Equipment.FIELDS.type.label'}}</th>
-        <th>{{localize 'Name'}}</th>
-        <th>{{localize 'RTR.Item.Equipment.FIELDS.quantity.label'}}</th>
-        <th>{{localize 'RTR.Item.Equipment.FIELDS.weight.weight.label'}}</th>
-        <th>{{localize 'RTR.Item.Equipment.FIELDS.cost.cost.label'}}</th>
-        <th>
-          {{#if @root.editable}}
-          <a
-            class='item-control item-create'
-            title='{{localize "DOCUMENT.Create" type='Item'}}'
-            data-action='createDoc'
-            data-document-class='Item'
-            data-type='equipment'
-          >
-            <i class='fas fa-plus'></i>
-          </a>
-        {{/if}}
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each equipment as |item id|}}
-      <tr data-item-id='{{item._id}}'
-        data-drag='true'
-        data-document-class='Item'
-      >
-        <td>
-            <a class='rollable' 
+  <div style="margin-top: 5px;" class="flexrow">
+    <div style="margin-right: 10px;">
+      <label class='bold-text'>{{localize 'RTR.Actor.Character.FIELDS.totalCarriedWeight.label'}}</label>
+      <input type='text' disabled="true" name='system.inventory' value='{{formatWeight carriedWeightGramm}}' data-dtype='Number'/>
+    </div>
+    <div style="margin-left: 10px;margin-right: 10px;">
+      <label class='bold-text'>{{localize 'RTR.Actor.Character.FIELDS.carryingCapacity.label'}}</label>
+      <input type='text' disabled="true" name='system.inventory.carryCapacityKg' value='{{system.inventory.carryCapacityKg}} kg' data-dtype='Number'/>
+    </div>
+    <div style="margin-left: 10px;">
+      <label class='bold-text'>{{localize 'RTR.Actor.Character.FIELDS.liftPushDrag.label'}}</label>
+      <input type='text' disabled="true" name='system.inventory.liftPushDragKg' value='{{system.inventory.liftPushDragKg}} kg' data-dtype='Number'/>
+    </div>
+  </div>
+  <div class="scrollable-table-wrapper">
+    <table style="margin-top: 0; margin-bot: 0;">
+      <thead>
+        <tr>
+          <th></th>
+          <th>{{localize 'RTR.Item.Equipment.FIELDS.type.label'}}</th>
+          <th>{{localize 'Name'}}</th>
+          <th>{{localize 'RTR.Item.Equipment.FIELDS.quantity.label'}}</th>
+          <th>{{localize 'RTR.Item.Equipment.FIELDS.weight.weight.label'}}</th>
+          <th>{{localize 'RTR.Item.Equipment.FIELDS.cost.cost.label'}}</th>
+          <th>
+            {{#if @root.editable}}
+            <a
+              class='item-control item-create'
+              title='{{localize "DOCUMENT.Create" type='Item'}}'
+              data-action='createDoc'
+              data-document-class='Item'
+              data-type='equipment'
+            >
+              <i class='fas fa-plus'></i>
+            </a>
+          {{/if}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each equipment as |item id|}}
+        <tr data-item-id='{{item._id}}'
+          data-drag='true'
+          data-document-class='Item'
+        >
+          <td>
+              <a class='rollable' 
+                data-action='viewDoc' 
+                title='{{localize "DOCUMENT.Update" type='Equipment'}}'
+              >
+                <img src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
+              </a>
+          </td>
+          <td>{{localize (lookup @root.config.equipmentTypes item.system.type)}}</td>
+          <td>
+            <a class='rollable'
               data-action='viewDoc' 
               title='{{localize "DOCUMENT.Update" type='Equipment'}}'
             >
-              <img src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
+              {{item.name}}
             </a>
-        </td>
-        <td>{{localize (lookup @root.config.equipmentTypes item.system.type)}}</td>
-        <td>
-          <a class='rollable'
-            data-action='viewDoc' 
-            title='{{localize "DOCUMENT.Update" type='Equipment'}}'
-          >
-            {{item.name}}
-          </a>
-        </td>
-        <td>{{item.system.quantity}}</td>
-        <td>{{formatWeight item.system.totalWeightGramm}}</td>
-        <td>{{formatCost item.system.costBc}}</td>
-        <td>
-          {{#if @root.editable}}
-            <a
-              class='item-control item-delete'
-              title='{{localize "DOCUMENT.Delete" type='Equipment'}}'
-              data-action='deleteDoc'
-            >
-              <i class='fas fa-trash'></i>
-            </a>
-          {{/if}}
-        </td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
-
+          </td>
+          <td>{{item.system.quantity}}</td>
+          <td>{{formatWeight item.system.totalWeightGramm}}</td>
+          <td>{{formatCost item.system.costBc}}</td>
+          <td>
+            {{#if @root.editable}}
+              <a
+                class='item-control item-delete'
+                title='{{localize "DOCUMENT.Delete" type='Equipment'}}'
+                data-action='deleteDoc'
+              >
+                <i class='fas fa-trash'></i>
+              </a>
+            {{/if}}
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <h6 style="margin-top: 10px;">Wealth</h6>
+  <div class="flexrow">
+      <div class="flexrow" style="margin-right: 10px;">
+        <div class="tooltip" style="flex-shrink: 5;">
+           <img src='/icons/commodities/currency/coins-crown-stack-gold.webp' height='24' width='24'>
+          <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.gc.label'}}</span>
+        </div>
+        <input style="flex-grow: 5;" type='number' name='system.inventory.gc' value='{{system.inventory.gc}}' data-dtype='Number'/>
+      </div>
+      <div class="flexrow" style="margin-right: 10px;margin-left: 10px;">
+        <div class="tooltip" style="flex-shrink: 5;">
+           <img src='/icons/commodities/currency/coins-shield-sword-stack-silver.webp' height='24' width='24'>
+          <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.sc.label'}}</span>
+        </div>
+        <input style="flex-grow: 5;" type='number' name='system.inventory.sc' value='{{system.inventory.sc}}' data-dtype='Number'/>
+      </div>
+      <div class="flexrow" style="margin-left: 10px;">
+        <div class="tooltip" style="flex-shrink: 5;">
+           <img src='/icons/commodities/currency/coins-wheat-stack-copper.webp' height='24' width='24'>
+          <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.bc.label'}}</span>
+        </div>
+        <input style="flex-grow: 5;" type='number' name='system.inventory.bc' value='{{system.inventory.bc}}' data-dtype='Number'/>
+      </div>
 </section>

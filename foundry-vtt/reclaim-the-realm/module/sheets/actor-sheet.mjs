@@ -281,6 +281,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
 
     // Sort then assign
     context.equipment = equipment.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.carriedWeightGramm = equipment.reduce((sum, current) => sum + current.system.quantity * current.system.totalWeightGramm, 0);
+    if (this.document.type === 'character') {
+      context.carriedWeightGramm += 5*this.actor.system.inventory.bc + 5*this.actor.system.inventory.sc + 5*this.actor.system.inventory.gc;
+    }
     context.features = features.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.spells = spells;
   }

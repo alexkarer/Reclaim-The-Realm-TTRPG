@@ -1,5 +1,5 @@
 import RtRActorBase from './base-actor.mjs';
-import { calculateXPMilestonesAndLevel } from '../../helpers/character-helper.mjs';
+import { calculateXPMilestonesAndLevel, getStrCarryLiftValues } from '../../helpers/character-helper.mjs';
 
 export default class RtRCharacter extends RtRActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -44,6 +44,14 @@ export default class RtRCharacter extends RtRActorBase {
         usedSkillPoints: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
     });
 
+    schema.inventory = new fields.SchemaField({
+      bc: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      sc: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      gc: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      carryCapacityKg: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      liftPushDragKg: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+    });
+
     return schema;
   }
 
@@ -58,6 +66,7 @@ export default class RtRCharacter extends RtRActorBase {
     this.arcana.max = Math.floor(3 * this.levels.spellProficency * this.levels.level);
     this._calculateSkillPoints();
     this._calculateAttributePoints();
+    this._calculateInventoryValues();
   }
 
   getRollData() {
@@ -91,5 +100,16 @@ export default class RtRCharacter extends RtRActorBase {
         this.attributePoints.usedAttributePoints += (v.value + (v.classAttribute ? -2 : 0));
       }
     }
+  }
+
+  _calculateInventoryValues() {
+    let ccAndLpd = getStrCarryLiftValues(this.attributes.str.value);
+    if (!ccAndLpd) {
+      console.error("Unable to calculate Carrying Capacity Lift/Push/Drag for STR: ", this.attributes.str.value);
+      return;
+    }
+
+    this.inventory.carryCapacityKg = ccAndLpd.cc;
+    this.inventory.liftPushDragKg = ccAndLpd.lpd;
   }
 }

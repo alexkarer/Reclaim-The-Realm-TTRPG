@@ -457,6 +457,13 @@
   text-align: left;
   display: flex;
 }
+.reclaim-the-realm .scrollable-table-wrapper {
+  margin-top: 10px;
+  height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
 .reclaim-the-realm .items-list {
   list-style: none;
   margin: 0;
