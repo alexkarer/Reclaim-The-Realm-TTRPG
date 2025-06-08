@@ -5,6 +5,9 @@
 ## Bugs:
 
 - Somehow Short rest button is triggered via ENTER Key
+- When adding skills, the scroll resets
+- Class SKills are bugged, remove checkbox
+- Icons get small in equipment when it spans two rows.
 
 ## Actors
 - On all places show the formula for calculating, which is fixed but can be modified with additional values.
@@ -12,6 +15,10 @@
 - Have all Abilities in the Same Place but in separate columns 
 - Configure prototype token
 - Data Section add Translation 
+- Skills: add reduce options
+  - alse clear up formatting
+
+- Handle Cearture Size
 
 ### Characters
 
@@ -22,8 +29,11 @@
 - Implement Exhaustion in a nicer way
 - Proper Implementation of Martial Damage
 - can reduce attributes to get more points
+- Show spell cast test
 
 ### NPCS
+
+- Improve Layout so you only need Data and Overview
 
 ## Items
 

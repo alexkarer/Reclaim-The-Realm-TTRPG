@@ -19,8 +19,8 @@
       <thead>
         <tr>
           <th></th>
-          <th>{{localize 'RTR.Item.Equipment.FIELDS.type.label'}}</th>
           <th>{{localize 'Name'}}</th>
+          <th>{{localize 'RTR.Item.Equipment.FIELDS.type.label'}}</th>
           <th>{{localize 'RTR.Item.Equipment.FIELDS.quantity.label'}}</th>
           <th>{{localize 'RTR.Item.Equipment.FIELDS.weight.weight.label'}}</th>
           <th>{{localize 'RTR.Item.Equipment.FIELDS.cost.cost.label'}}</th>
@@ -53,7 +53,6 @@
                 <img src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
               </a>
           </td>
-          <td>{{localize (lookup @root.config.equipmentTypes item.system.type)}}</td>
           <td>
             <a class='rollable'
               data-action='viewDoc' 
@@ -62,6 +61,7 @@
               {{item.name}}
             </a>
           </td>
+          <td>{{localize (lookup @root.config.equipmentTypes item.system.type)}}</td>
           <td>{{item.system.quantity}}</td>
           <td>{{formatWeight item.system.totalWeightGramm}}</td>
           <td>{{formatCost item.system.costBc}}</td>

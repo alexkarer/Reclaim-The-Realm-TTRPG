@@ -64,6 +64,8 @@ export default class RtRCharacter extends RtRActorBase {
       heavy: new fields.StringField(),
     });
 
+    schema.classResource = new fields.StringField();
+
     return schema;
   }
 
@@ -107,7 +109,7 @@ export default class RtRCharacter extends RtRActorBase {
   }
 
   _calculateAttributePoints() {
-    this.attributePoints.totalAttributePoints = (2 * (this.levels.level - 1)) + 10 + 14;
+    this.attributePoints.totalAttributePoints = (2 * (this.levels.level - 1)) + 8 + 14;
     this.attributePoints.usedAttributePoints = 0;
     if (this.attributes) {
       for (let [k, v] of Object.entries(this.attributes)) {
