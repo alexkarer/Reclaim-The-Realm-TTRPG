@@ -130,3 +130,64 @@ export function getStrCarryLiftValues(str) {
             return {cc: 75000, lpd: 5000000};
     }
 }
+
+export function getMartialDamage(str) {
+    switch(str) {
+        case -6:
+            return {light: 'd2', medium: 'd4', heavy: 'd6'};
+        case -5:
+            return {light: 'd2', medium: 'd4', heavy: 'd6'};
+        case -4:
+            return {light: 'd3', medium: 'd6', heavy: 'd8'};
+        case -3:
+            return {light: 'd3', medium: 'd6', heavy: 'd8'};
+        case -2:
+            return {light: 'd4', medium: 'd8', heavy: 'd10'};
+        case -1:
+            return {light: 'd4', medium: 'd8', heavy: 'd10'};
+        case 0:
+            return {light: 'd6', medium: 'd10', heavy: 'd12'};
+        case 1:
+            return {light: 'd6', medium: 'd10+1', heavy: 'd12+1'};
+        case 2:
+            return {light: 'd6+1', medium: 'd10+2', heavy: 'd12+2'};
+        case 3:
+            return {light: 'd6+2', medium: 'd10+3', heavy: 'd12+3'};
+        case 4:
+            return {light: 'd6+3', medium: 'd10+4', heavy: 'd12+5'};
+        case 5:
+            return {light: '2d6', medium: '2d10', heavy: '2d12'};
+        case 6:
+            return {light: '2d6+1', medium: '2d10+2', heavy: '2d12+3'};
+        case 7:
+            return {light: '2d6+2', medium: '2d10+4', heavy: '2d12+5'};
+        case 8:
+            return {light: '3d6', medium: '3d10', heavy: '3d12'};
+        case 9:
+            return {light: '3d6+2', medium: '3d10+3', heavy: '3d12+4'};
+        case 10:
+            return {light: '4d6', medium: '4d10', heavy: '4d12'};
+        case 11:
+            return {light: '5d6', medium: '5d10', heavy: '5d12'};
+        case 12:
+            return {light: '6d6', medium: '6d10', heavy: '6d12'};
+        case 13:
+            return {light: '7d6', medium: '7d10', heavy: '7d12'};
+        case 14:
+            return {light: '8d6', medium: '8d10', heavy: '8d12'};
+        case 15:
+            return {light: '9d6', medium: '9d10', heavy: '9d12'};
+        case 16:
+            return {light: '10d6', medium: '10d10', heavy: '10d12'};
+        case 17:
+            return {light: '12d6', medium: '12d10', heavy: '12d12'};
+        case 18:
+            return {light: '14d6', medium: '14d10', heavy: '14d12'};
+        case 19:
+            return {light: '16d6', medium: '16d10', heavy: '16d12'};
+        case 20:
+            return {light: '18d6', medium: '18d10', heavy: '18d12'};
+        case 21:
+            return {light: '20d6', medium: '20d10', heavy: '20d12'};
+    }
+}

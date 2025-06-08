@@ -1,12 +1,4 @@
 ### What is missing before playtest can continue in foundry only:
-
-- Add Abilities
-  - Attack Bonuses and other Important Stuff.
-  - Provide List of Abilities
-- Implement Perks
-  - Basic Perk List
-  - Perk Cost and Poitns (should be easy)
-
 - NPC
   - change HP directly
   - change Level Directly
@@ -30,7 +22,9 @@
 - place for permanent injury
 - passive Awareness and stuff
 - concealment bonuzses
-- CTRL increase HP by 10, shift increase HP by 5.
+- Implement Exhaustion in a nicer way
+- Proper Implementation of Martial Damage
+- can reduce attributes to get more points
 
 ### NPCS
 
@@ -46,6 +40,7 @@
 
 ### Abilities
 
+- Better formatting in List with Icons
 - Add better Data formatting for Cost and Tags
 - Automatic checking of requirements
 

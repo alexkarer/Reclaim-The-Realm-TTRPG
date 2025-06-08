@@ -146,6 +146,10 @@
 
         {{#if (eq @root.actor.type 'character')}}
         <div>
+          <label for="system.exhaustion">Exhuastion:</label>
+          <input class='compact-input' type='number' id='system.exhaustion' name='system.exhaustion' value='{{system.exhaustion}}'/>
+        </div>
+        <div>
           <label for="system.skillPoints.skillPointsPerLevel">Skill Points per Level:</label>
           <input class='compact-input' type='number' id='system.skillPoints.skillPointsPerLevel' name='system.skillPoints.skillPointsPerLevel' value='{{system.skillPoints.skillPointsPerLevel}}'/>
         </div>

@@ -100,7 +100,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         options.parts.push('perks', 'skills', 'equipment', 'abilities', 'effects');
         break;
       case 'npc':
-        options.parts.push('skills', 'abilities', 'effects');
+        options.parts.push('perks', 'skills', 'abilities', 'effects');
         break;
     }
   }
@@ -246,40 +246,28 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     // this sheet does with spells
     const equipment = [];
     const perks = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: [],
-    };
+    const abilities = [];
+    const classTechniques = [];
+    const martialManeuvers = [];
+    const spells = [];
 
     // Iterate through items, allocating to containers
     for (let i of this.document.items) {
-      // Append to equipment.
       if (i.type === 'equipment') {
         equipment.push(i);
-      }
-      // Append to perks.
-      else if (i.type === 'perk') {
+      } else if (i.type === 'perk') {
         perks.push(i);
-      }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        if (i.system.spellLevel != undefined) {
-          spells[i.system.spellLevel].push(i);
-        }
+      } else if (i.type === 'ability') {
+        abilities.push(i);
+      } else if (i.type === 'classTechnique') {
+        classTechniques.push(i);
+      } else if (i.type === 'martialManeuver') {
+        martialManeuvers.push(i);
+      } else if (i.type === 'spell') {
+        spells.push(i);
       }
     }
 
-    for (const s of Object.values(spells)) {
-      s.sort((a, b) => (a.sort || 0) - (b.sort || 0));
-    }
 
     // Sort then assign
     context.equipment = equipment.sort((a, b) => (a.sort || 0) - (b.sort || 0));
@@ -291,7 +279,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     context.totalPerks = perks.length;
     context.perks = perks.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 
-    context.spells = spells;
+    context.abilities = abilities.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.classTechniques = classTechniques.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.martialManeuvers = martialManeuvers.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.spells = spells.sort((a, b) => (a.sort || 0) - (b.sort || 0));
   }
 
   /**

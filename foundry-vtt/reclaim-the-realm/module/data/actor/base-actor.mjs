@@ -81,6 +81,8 @@ export default class RtRActorBase extends foundry.abstract
       rangedSpellAttack: new fields.NumberField({ ...requiredInteger, initial: 0 }),
     });
 
+
+
     schema.skills = new fields.SchemaField(
       Object.keys(CONFIG.RTR.skills).reduce((obj, skill) => {
         obj[skill] = new fields.SchemaField({

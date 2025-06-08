@@ -1,5 +1,5 @@
 import RtRActorBase from './base-actor.mjs';
-import { calculateXPMilestonesAndLevel, getStrCarryLiftValues } from '../../helpers/character-helper.mjs';
+import { calculateXPMilestonesAndLevel, getStrCarryLiftValues, getMartialDamage } from '../../helpers/character-helper.mjs';
 
 export default class RtRCharacter extends RtRActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -52,6 +52,18 @@ export default class RtRCharacter extends RtRActorBase {
       liftPushDragKg: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
     });
 
+    schema.knownAbilities = new fields.SchemaField({
+      knownClassTechniques: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      knownMartialManeuvers: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      knownSpells: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+    });
+
+    schema.martialDamage = new fields.SchemaField({
+      light: new fields.StringField(),
+      medium: new fields.StringField(),
+      heavy: new fields.StringField(),
+    });
+
     return schema;
   }
 
@@ -67,6 +79,8 @@ export default class RtRCharacter extends RtRActorBase {
     this._calculateSkillPoints();
     this._calculateAttributePoints();
     this._calculateInventoryValues();
+    this._claclulateKnownAbilities();
+    this._calculateMartialDamage();
   }
 
   getRollData() {
@@ -111,5 +125,22 @@ export default class RtRCharacter extends RtRActorBase {
 
     this.inventory.carryCapacityKg = ccAndLpd.cc;
     this.inventory.liftPushDragKg = ccAndLpd.lpd;
+  }
+
+  _claclulateKnownAbilities() {
+    this.knownAbilities.knownClassTechniques = 2 + Math.floor(this.levels.level / 2) + Math.floor(this.attributes.int.value / 2);
+    this.knownAbilities.knownMartialManeuvers = 2 + Math.floor(this.levels.martialLevel / 2) + Math.floor(this.attributes.int.value / 2);
+    this.knownAbilities.knownSpells = 2 + Math.floor(this.levels.spellLevel / 2) + Math.floor(this.attributes.int.value / 2);
+  }
+
+  _calculateMartialDamage() {
+    let md = getMartialDamage(this.attributes.str.value);
+    if (!md) {
+      console.error("Unable to calculate Martial Damage for STR: ", this.attributes.str.value);
+      return;
+    }
+    this.martialDamage.light = md.light;
+    this.martialDamage.medium = md.medium;
+    this.martialDamage.heavy = md.heavy;
   }
 }
