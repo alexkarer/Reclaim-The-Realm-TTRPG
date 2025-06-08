@@ -191,3 +191,55 @@ export function getMartialDamage(str) {
             return {light: '20d6', medium: '20d10', heavy: '20d12'};
     }
 }
+
+export function calculateXPReward(level) {
+    switch(level) {
+        case 0.125:
+            return 6;
+        case 0.25:
+            return 12;
+        case 0.5:
+            return 25;
+        case 1:
+            return 50;
+        case 2:
+            return 100;
+        case 3:
+            return 200;
+        case 4:
+            return 400;
+        case 5:
+            return 800;
+        case 6:
+            return 1400;
+        case 7:
+            return 2500;
+        case 8:
+            return 4000;
+        case 9:
+            return 6000;
+        case 10:
+            return 9000;
+        case 11:
+            return 13000;
+        case 12:
+            return 20000;
+        case 13:
+            return 30000;
+        case 14:
+            return 42000;
+        case 15:
+            return 55000;
+        case 16:
+            return 70000;
+        case 17:
+            return 90000;
+        case 18:
+            return 120000;
+        case 19:
+            return 160000;
+        case 20:
+            return 220000;
+    }
+    return 0;
+}

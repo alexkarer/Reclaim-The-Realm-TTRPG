@@ -39,7 +39,7 @@ export default class RtRActorBase extends foundry.abstract
     });
 
     schema.levels = new fields.SchemaField({
-      level: new fields.NumberField({ required: true, nullable: false, integer: false, initial: 1, min: 0.125 }),
+      level: new fields.NumberField({ required: true, nullable: false, initial: 1, min: 0.125 }),
       martialLevel: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       spellLevel: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       martialProficency: new fields.AlphaField({ ...proficiency, initial: 0 }),
@@ -49,7 +49,7 @@ export default class RtRActorBase extends foundry.abstract
     schema.attributes = new fields.SchemaField(
       Object.keys(CONFIG.RTR.attributes).reduce((obj, attr) => {
         obj[attr] = new fields.SchemaField({
-          value: new fields.NumberField({...requiredInteger, initial: 0, min: -8 }),
+          value: new fields.NumberField({...requiredInteger, initial: -2, min: -8 }),
           classAttribute: new fields.BooleanField({ initial: false, required: true, nullable: false }),
           attributeMaximum: new fields.NumberField({ ...requiredInteger, initial: 3, min: 3 })
         });

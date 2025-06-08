@@ -1,7 +1,4 @@
 ### What is missing before playtest can continue in foundry only:
-- NPC
-  - change HP directly
-  - change Level Directly
 
 # General TODOs/Nice to haves
 
@@ -61,3 +58,4 @@
 ## Special
 
 Keep Records, total damage, healing, etc. (check fantasygrounds example)
+Use JSOn common_resources

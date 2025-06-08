@@ -158,6 +158,17 @@
           <input class='compact-input' type='number' id='system.skillPoints.additionalSkillPoints' name='system.skillPoints.additionalSkillPoints' value='{{system.skillPoints.additionalSkillPoints}}'/>
         </div>
         {{/if}}
+
+        {{#if (eq @root.actor.type 'npc')}}
+        <div>
+          <label for="system.npcLevel">Level</label>
+          <input class='compact-input' type='number' id='system.npcLevel' name='system.npcLevel' value='{{system.npcLevel}}'/>
+        </div>
+        <div>
+          <label for="system.hp.max">HP</label>
+          <input class='compact-input' type='number' id='system.hp.max' name='system.hp.max' value='{{system.hp.max}}'/>
+        </div>
+        {{/if}}
       </div>
     </aside>
 

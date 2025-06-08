@@ -735,7 +735,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     });
 
     if (confirm) {
-      Object.entries(this.actor.system.attributes).forEach(s => updatePayload['system.attributes.'+s[0]+'.value'] = (s[1].classAttribute ? 2 : 0));
+      Object.entries(this.actor.system.attributes).forEach(s => updatePayload['system.attributes.'+s[0]+'.value'] = (s[1].classAttribute ? 0 : -2));
       this.actor.update(updatePayload)
         .then(v => this.render());
     }

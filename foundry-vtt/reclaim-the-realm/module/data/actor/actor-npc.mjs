@@ -1,4 +1,5 @@
 import RtRActorBase from './base-actor.mjs';
+import { calculateXPReward } from '../../helpers/character-helper.mjs';
 
 export default class RtRNPC extends RtRActorBase {
   static LOCALIZATION_PREFIXES = [
@@ -11,12 +12,15 @@ export default class RtRNPC extends RtRActorBase {
     const requiredInteger = { required: true, nullable: false, integer: true };
     const schema = super.defineSchema();
 
+    schema.npcLevel = new fields.NumberField({ required: true, nullable: false, initial: 1, min: 0.125 });
+
     return schema;
   }
 
   prepareDerivedData() {
+    this.levels.level = this.npcLevel;
     super.prepareDerivedData();
-    this.xpReward = this.levels.level * 100;
+    this.xpReward = calculateXPReward(this.levels.level);
   }
 
   getRollData() {

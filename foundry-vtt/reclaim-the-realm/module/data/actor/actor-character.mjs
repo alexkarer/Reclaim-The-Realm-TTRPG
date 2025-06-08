@@ -107,11 +107,11 @@ export default class RtRCharacter extends RtRActorBase {
   }
 
   _calculateAttributePoints() {
-    this.attributePoints.totalAttributePoints = 2 * (this.levels.level - 1) + 10;
+    this.attributePoints.totalAttributePoints = (2 * (this.levels.level - 1)) + 10 + 14;
     this.attributePoints.usedAttributePoints = 0;
     if (this.attributes) {
       for (let [k, v] of Object.entries(this.attributes)) {
-        this.attributePoints.usedAttributePoints += (v.value + (v.classAttribute ? -2 : 0));
+        this.attributePoints.usedAttributePoints += ((v.value + (v.classAttribute ? -2 : 0)) + 2);
       }
     }
   }
