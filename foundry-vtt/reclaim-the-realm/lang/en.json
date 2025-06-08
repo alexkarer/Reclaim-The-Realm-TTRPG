@@ -55,7 +55,7 @@
         "Data": "Data",
         "Perks": "Perks",
         "Equipment": "Equipment",
-        "Spells": "Spells",
+        "Abilities": "Abilities",
         "Effects": "Effects",
         "Skills": "Skills"
       },
@@ -109,7 +109,11 @@
       "Tabs": {
         "Properties": "Properties",
         "Description": "Description",
-        "Effects": "Effects"
+        "Effects": "Effects",
+        "Ability": "Ability",
+        "ClassTechnique": "Class Technique",
+        "MartialManeuver": "Martial Maneuver",
+        "Spell": "Spell"
       },
       "Equipment": {
         "FIELDS": {
@@ -139,9 +143,24 @@
           "damageThreshold": {"label": "Damage Threshold"}
         }
       },
+      "Ability": {
+        "FIELDS": {
+          "tags": {"label": "Tags"},
+          "requirements": {"label": "Requirements"},
+          "usageCost": {"label": "Usage Cost"},
+          "range": {"label": "Range"},
+          "targets": {"label": "Target(s)"},
+          "duration": {"label": "Duration"}
+        }
+      },
+      "ClassTechnique": {
+        "FIELDS": {
+        }
+      },
       "Spell": {
         "FIELDS": {
-          "level": {"label": "Spell Level"},
+          "spellDifficulty": {"label": "Spell Difficulty"},
+          "components": {"label": "Spell Components"},
           "rollFormula": {"label": "Roll Formula"},
           "numDice": {"label": "Number of Dice"},
           "dieSize": {"label": "Die Size"},
@@ -149,6 +168,10 @@
         },
         "SpellLVL": "Level {level} Spells",
         "AddLVL": "Add LVL {level}"
+      },
+      "MartialManeuver": {
+        "FIELDS": {
+        }
       }
     },
     "Effect": {
@@ -167,6 +190,9 @@
     "Item": {
       "equipment": "Equipment",
       "feature": "Feature",
+      "ability": "Ability",
+      "classTechnique": "Class Technique",
+      "martialManeuver": "Martial Maneuver",
       "spell": "Spell"
     }
   }

@@ -83,6 +83,15 @@
         "equipment": {
             "htmlFields": ["description"]
         },
+        "ability": {
+            "htmlFields": ["description"]
+        },
+        "classTechnique": {
+            "htmlFields": ["description"]
+        },
+        "martialManeuver": {
+            "htmlFields": ["description"]
+        },
         "spell": {
             "htmlFields": ["description"]
         }

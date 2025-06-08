@@ -1,0 +1,31 @@
+{{! Ability Tab }}
+<section class='tab {{tab.cssClass}}' data-group='primary' data-tab='ability'>
+    <div class="compact-grid grid-3col">
+        <span>{{localize 'RTR.Item.Ability.FIELDS.tags.label'}}</span>
+        <input class="compact-input grid-span-2" type='text' name='system.tags' value='{{system.tags}}' data-dtype='text'/>
+
+        <span>{{localize 'RTR.Item.Ability.FIELDS.requirements.label'}}</span>
+        <span class="compact-input grid-span-2">TODO</span>
+
+        <span>{{localize 'RTR.Item.Ability.FIELDS.usageCost.label'}}</span>
+        <input class="compact-input grid-span-2" type='text' name='system.rawStringCost' value='{{system.tagrawStringCosts}}' data-dtype='text'/>
+
+        <span>{{localize 'RTR.Item.Ability.FIELDS.range.label'}}</span>
+        <input class="compact-input grid-span-2" type='text' name='system.range' value='{{system.range}}' data-dtype='text'/>
+
+        <span>{{localize 'RTR.Item.Ability.FIELDS.targets.label'}}</span>
+        <input class="compact-input grid-span-2" type='text' name='system.targets' value='{{system.targets}}' data-dtype='text'/>
+
+        <span>{{localize 'RTR.Item.Ability.FIELDS.duration.label'}}</span>
+        <input class="compact-input grid-span-2" type='text' name='system.duration' value='{{system.duration}}' data-dtype='text'/>
+    </div>
+    <h6 style="margin-top: 5px;">Description</h6>
+    {{! Editors must receive enriched text data from getData to properly handle rolls, UUID links, etc. }}
+    {{#if editable}}
+    <prose-mirror style="height: 150px;" name="system.description" data-document-u-u-i-d="{{item.uuid}}"
+        value="{{system.description}}" collaborate="true" toggled="true">
+        {{{enrichedDescription}}}
+    </prose-mirror>
+    {{else}} {{{enrichedDescription}}}
+    {{/if}}
+</section>

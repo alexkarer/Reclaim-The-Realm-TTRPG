@@ -144,24 +144,42 @@
       <thead>
         <tr class="flex-group-center">
           {{#each system.attributes as |attribute key|}}
+            {{#if (eq key 'agi')}}
+            <th
+              class='rollable'
+              data-action='roll'
+              data-roll='d20 + @attributes.{{key}}.value - @exh - @manoeuvrePenalty'
+              data-label='{{localize (lookup @root.config.attributeAbbreviations key)}}'
+            >{{localize (lookup @root.config.attributeAbbreviations key)}}</th>
+            {{else}}
             <th
               class='rollable'
               data-action='roll'
               data-roll='d20 + @attributes.{{key}}.value - @exh'
               data-label='{{localize (lookup @root.config.attributeAbbreviations key)}}'
             >{{localize (lookup @root.config.attributeAbbreviations key)}}</th>
+            {{/if}}
           {{/each}}
         </tr>
       </thead>
       <tbody>
         <tr class="flex-group-center">
           {{#each system.attributes as |attribute key|}}
+            {{#if (eq key 'agi')}}
+            <td
+              class='rollable'
+              data-action='roll'
+              data-roll='d20 + @attributes.{{key}}.value - @exh - @manoeuvrePenalty'
+              data-label='{{localize (lookup @root.config.attributes key)}}'
+            >{{numberFormat attribute.value decimals=0}}</td>
+            {{else}}
             <td
               class='rollable'
               data-action='roll'
               data-roll='d20 + @attributes.{{key}}.value - @exh'
               data-label='{{localize (lookup @root.config.attributes key)}}'
             >{{numberFormat attribute.value decimals=0}}</td>
+            {{/if}}
           {{/each}}
         </tr>
       </tbody>

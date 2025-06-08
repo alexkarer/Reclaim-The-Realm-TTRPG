@@ -33,6 +33,9 @@ export default class RtRActorBase extends foundry.abstract
       willpowerBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
 
       movementBonus: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+
+      manoeuvrePenalty: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      movementPenalty: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
     });
 
     schema.levels = new fields.SchemaField({
@@ -108,10 +111,10 @@ export default class RtRActorBase extends foundry.abstract
     this.levels.spellLevel = Math.floor(this.levels.spellProficency * this.levels.level);
 
     this.ap = getApForLevel(this.levels.level);
-    this.mp = 6 + Math.floor(this.attributes.agi.value / 3) + this.data.movementBonus;
+    this.mp = 6 + Math.floor(this.attributes.agi.value / 3) + this.data.movementBonus - this.data.movementPenalty;
 
     this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str.value + this.data.stabilityBonus;
-    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi.value + this.data.dodgeBonus;
+    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi.value + this.data.dodgeBonus - this.data.manoeuvrePenalty;
     this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con.value + this.data.toughnessBonus;
     this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi.value + this.data.willpowerBonus;
     this.defenses.shieldBlock = this.levels.martialLevel + this.defenses.shieldBlockBase;
@@ -138,6 +141,7 @@ export default class RtRActorBase extends foundry.abstract
     }
 
     data.level = this.levels.level;
+    data.manoeuvrePenalty = this.data.manoeuvrePenalty;
 
     data.stability = this.defenses.stability;
     data.dodge = this.defenses.dodge;

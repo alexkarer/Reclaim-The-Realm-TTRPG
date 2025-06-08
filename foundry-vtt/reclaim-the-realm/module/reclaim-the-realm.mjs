@@ -57,7 +57,10 @@ Hooks.once('init', function () {
   CONFIG.Item.dataModels = {
     equipment: models.RtREquipment,
     feature: models.RtRFeature,
+    ability: models.RtRAbility,
+    classTechnique: models.RtRClassTechnique,
     spell: models.RtRSpell,
+    martialManeuver: models.RtRMartialManeuver,
   };
 
   // Active Effects are never copied to the Actor,
@@ -96,6 +99,10 @@ Handlebars.registerHelper('subtract', function (x, y) {
 
 Handlebars.registerHelper('compare', function (x, y) {
   return x === y;
+});
+
+Handlebars.registerHelper('neq', function (x, y) {
+  return x !== y;
 });
 
 Handlebars.registerHelper('formatWeight', function (weightInGramm) {

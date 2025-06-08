@@ -97,6 +97,13 @@
   padding: 0;
 }
 
+.compact-grid {
+  display: grid;
+  gap: 1px;
+  margin: 5px 0;
+  padding: 0;
+}
+
 .grid-3col {
   grid-column: span 3/span 3;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -292,6 +299,10 @@
 /* Styles limited to reclaim-the-realm sheets */
 .reclaim-the-realm .item-form {
   font-family: "Roboto", sans-serif;
+}
+.reclaim-the-realm .compact-input {
+  height: 20px;
+  font-size: 0.8rem;
 }
 .reclaim-the-realm .sheet-header {
   flex: 0 auto;
@@ -761,4 +772,10 @@
 .reclaim-the-realm .data-container {
   overflow-y: scroll;
   height: 480px;
+}
+.reclaim-the-realm .abilities-container {
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
 }

@@ -52,8 +52,11 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     propertiesEquipment: {
       template: 'systems/reclaim-the-realm/templates/item/properties-parts/equipment.hbs',
     },
-    apropertiesSpell: {
-      template: 'systems/reclaim-the-realm/templates/item/properties-parts/spell.hbs',
+    ability: {
+      template: 'systems/reclaim-the-realm/templates/item/ability.hbs',
+    },
+    spell: {
+      template: 'systems/reclaim-the-realm/templates/item/spell.hbs',
     },
     effects: {
       template: 'systems/reclaim-the-realm/templates/item/effects.hbs',
@@ -64,19 +67,24 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     // Not all parts always render
-    options.parts = ['header', 'tabs', 'description'];
+    options.parts = ['header', 'tabs'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'feature':
-        options.parts.push('propertiesFeature', 'effects');
+        options.parts.push('description', 'propertiesFeature', 'effects');
         break;
       case 'equipment':
-        options.parts.push('propertiesEquipment');
+        options.parts.push('description', 'propertiesEquipment');
+        break;
+      case 'ability':
+      case 'classTechnique':
+      case 'martialManeuver':
+        options.parts.push('ability');
         break;
       case 'spell':
-        options.parts.push('propertiesSpell');
+        options.parts.push('spell');
         break;
     }
   }
@@ -112,9 +120,25 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     switch (partId) {
       case 'propertiesFeature':
       case 'propertiesEquipment':
-      case 'propertiesSpell':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
+        break;
+      case 'ability':
+      case 'spell':
+        context.tab = context.tabs[partId];
+        // Enrich description info for display
+        // Enrichment turns text like `[[/r 1d20]]` into buttons
+        context.enrichedDescription = await ux.TextEditor.enrichHTML(
+          this.item.system.description,
+          {
+            // Whether to show secret blocks in the finished html
+            secrets: this.document.isOwner,
+            // Data to fill in for inline rolls
+            rollData: this.item.getRollData(),
+            // Relative UUID resolution
+            relativeTo: this.item,
+          }
+        );
         break;
       case 'description':
         context.tab = context.tabs[partId];
@@ -151,7 +175,15 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'description';
+    if (!this.tabGroups[tabGroup]) {
+      if (this.document.type === 'ability' || this.document.type === 'martialManeuver' || this.document.type === 'classTechnique') {
+        this.tabGroups[tabGroup] = 'ability';
+      } else if (this.document.type === 'spell') {
+        this.tabGroups[tabGroup] = 'spell';
+      } else {
+        this.tabGroups[tabGroup] = 'description';
+      }
+    }
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: '',
@@ -173,9 +205,16 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
           break;
         case 'propertiesFeature':
         case 'propertiesEquipment':
-        case 'propertiesSpell':
           tab.id = 'properties';
           tab.label += 'Properties';
+          break;
+        case 'ability':
+          tab.id = 'ability';
+          tab.label += 'Ability';
+          break;
+        case 'spell':
+          tab.id = 'spell';
+          tab.label += 'Spell';
           break;
         case 'effects':
           tab.id = 'effects';

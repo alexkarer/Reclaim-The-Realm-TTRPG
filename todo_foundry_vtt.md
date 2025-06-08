@@ -1,16 +1,15 @@
 ### What is missing before playtest can continue in foundry only:
 
-- Add Abilities
-  - Class Techniques
-  - Spells
-  - Martial Maneuvers
-  - Standard Abilities
-- Perks
-- Equipment
-  - Add more equipment types
-- Have a good way to represent NPCs
+- Configure default prototype token
 
-add ITems, Abilities NPCs
+- Add Abilities
+  - Attack Bonuses and other Important Stuff.
+  - Provide List of Abilities
+- Perks
+
+- NPC
+  - change HP directly
+  - change Level Directly
 
 # General TODOs/Nice to haves
 
@@ -23,6 +22,7 @@ add ITems, Abilities NPCs
 - Perk Trees
 - Have all Abilities in the Same Place but in separate columns 
 - Configure prototype token
+- Data Section add Translation 
 
 ### Characters
 
@@ -39,8 +39,15 @@ add ITems, Abilities NPCs
 ### Equipment
 
 - Show encumbermance in equipment and calculate
+- Automatically update character based on items
+  - Weapon - Create ability
+  - Armour - Update Values
+- Create Functionality to "equip" items.
 
 ### Abilities
+
+- Add better Data formatting for Cost and Tags
+- Automatic checking of requirements
 
 ### Perks
 

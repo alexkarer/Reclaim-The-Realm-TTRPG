@@ -4,6 +4,12 @@ This document contains a series of changelogs to keep track of changes happening
 
 ---
 
+## RtR 2.1.0
+
+### Equipment
+- Added new type Commodity
+- Reworked carrying capacity table and lift push drag calculation to reduce values a bit.
+
 ## RtR 1.0.0 -> 2.0.0
 
 ### Core Rules

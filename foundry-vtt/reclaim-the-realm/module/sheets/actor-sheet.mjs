@@ -70,8 +70,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     equipment: {
       template: 'systems/reclaim-the-realm/templates/actor/equipment.hbs',
     },
-    spells: {
-      template: 'systems/reclaim-the-realm/templates/actor/spells.hbs',
+    abilities: {
+      template: 'systems/reclaim-the-realm/templates/actor/abilities.hbs',
     },
     effects: {
       template: 'systems/reclaim-the-realm/templates/actor/effects.hbs',
@@ -95,10 +95,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('perks', 'skills', 'equipment', 'spells', 'effects');
+        options.parts.push('perks', 'skills', 'equipment', 'abilities', 'effects');
         break;
       case 'npc':
-        options.parts.push('skills', 'effects');
+        options.parts.push('skills', 'abilities', 'effects');
         break;
     }
   }
@@ -136,7 +136,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   async _preparePartContext(partId, context) {
     switch (partId) {
       case 'data':
-      case 'spells':
+      case 'abilities':
       case 'skills':
       case 'equipment':
       case 'perks':
@@ -217,9 +217,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
           tab.id = 'equipment';
           tab.label += 'Equipment';
           break;
-        case 'spells':
-          tab.id = 'spells';
-          tab.label += 'Spells';
+        case 'abilities':
+          tab.id = 'abilities';
+          tab.label += 'Abilities';
           break;
         case 'effects':
           tab.id = 'effects';
@@ -467,13 +467,15 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onIncreaseHP(event, target) {
     event.preventDefault();
-    if (this.actor.system.hp.value >= this.actor.system.hp.max) {
-      console.warn('HP Already at Max');
-      return;
+    let newHp;
+    if (event.ctrlKey) {
+      newHp = Math.min(this.actor.system.hp.max, this.actor.system.hp.value + 10);
+    } else if (event.shiftKey) {
+      newHp = Math.min(this.actor.system.hp.max, this.actor.system.hp.value + 5);
+    } else {
+      newHp = Math.min(this.actor.system.hp.max, this.actor.system.hp.value + 1);
     }
-  
-    this.actor.update({ "system.hp.value": this.actor.system.hp.value + 1 })
-      .then(v => this.render());
+    this.actor.update({ "system.hp.value": newHp }).then(v => this.render());
   }
 
   /**
@@ -486,13 +488,15 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onDecreaseHP(event, target) {
     event.preventDefault();
-    if (this.actor.system.hp.value <= 0) {
-      console.warn("HP can't get below 0");
-      return;
+    let newHp;
+    if (event.ctrlKey) {
+      newHp = Math.max(0, this.actor.system.hp.value - 10);
+    } else if (event.shiftKey) {
+      newHp = Math.max(0, this.actor.system.hp.value - 5);
+    } else {
+      newHp = Math.max(0, this.actor.system.hp.value - 1);
     }
-
-    this.actor.update({ "system.hp.value": this.actor.system.hp.value - 1 })
-      .then(v => this.render());
+    this.actor.update({ "system.hp.value": newHp }).then(v => this.render());
   }
 
   /**
@@ -505,13 +509,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onIncreaseStamina(event, target) {
     event.preventDefault();
-    if (this.actor.system.stamina.value >= this.actor.system.stamina.max) {
-      console.warn('Stamina Already at Max');
-      return;
-    }
-  
-    this.actor.update({ "system.stamina.value": this.actor.system.stamina.value + 1 })
-      .then(v => this.render());
+    let newStamina = Math.min(this.actor.system.stamina.max, this.actor.system.stamina.value + 1);
+    this.actor.update({ "system.stamina.value": newStamina }).then(v => this.render());
   }
 
   /**
@@ -524,13 +523,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onDecreaseStamina(event, target) {
     event.preventDefault();
-    if (this.actor.system.stamina.value <= 0) {
-      console.warn("Stamina can't get below 0");
-      return;
-    }
-
-    this.actor.update({ "system.stamina.value": this.actor.system.stamina.value - 1 })
-      .then(v => this.render());
+    let newStamina = Math.max(0, this.actor.system.stamina.value - 1);
+    this.actor.update({ "system.stamina.value": newStamina }).then(v => this.render());
   }
 
   /**
@@ -543,13 +537,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onIncreaseArcana(event, target) {
     event.preventDefault();
-    if (this.actor.system.arcana.value >= this.actor.system.arcana.max) {
-      console.warn('Arcana Already at Max');
-      return;
-    }
-  
-    this.actor.update({ "system.arcana.value": this.actor.system.arcana.value + 1})
-      .then(v => this.render());
+    let newArcana = Math.min(this.actor.system.arcana.max, this.actor.system.arcana.value + 1);
+    this.actor.update({ "system.arcana.value": newArcana }).then(v => this.render());
   }
 
   /**
@@ -562,13 +551,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onDecreaseArcana(event, target) {
     event.preventDefault();
-    if (this.actor.system.arcana.value <= 0) {
-      console.warn("Arcana can't get below 0");
-      return;
-    }
-
-    this.actor.update({ "system.arcana.value": this.actor.system.arcana.value - 1 })
-      .then(v => this.render());
+    let newArcana = Math.max(0, this.actor.system.arcana.value - 1);
+    this.actor.update({ "system.arcana.value": newArcana }).then(v => this.render());
   }
 
   /**
