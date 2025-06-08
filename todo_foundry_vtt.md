@@ -1,11 +1,11 @@
 ### What is missing before playtest can continue in foundry only:
 
-- Configure default prototype token
-
 - Add Abilities
   - Attack Bonuses and other Important Stuff.
   - Provide List of Abilities
-- Perks
+- Implement Perks
+  - Basic Perk List
+  - Perk Cost and Poitns (should be easy)
 
 - NPC
   - change HP directly
@@ -51,7 +51,13 @@
 
 ### Perks
 
+- Interactive Perk Tree
+- Proper Requirements Checking
+- Check How many Perks there are and availible Perks
+
 ### Classes
+
+- Actually Implement Character Classes
 
 ## Interactions
 

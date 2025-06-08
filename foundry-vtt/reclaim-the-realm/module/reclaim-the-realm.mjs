@@ -56,7 +56,7 @@ Hooks.once('init', function () {
   CONFIG.Item.documentClass = RtRItem;
   CONFIG.Item.dataModels = {
     equipment: models.RtREquipment,
-    feature: models.RtRFeature,
+    perk: models.RtRPerk,
     ability: models.RtRAbility,
     classTechnique: models.RtRClassTechnique,
     spell: models.RtRSpell,

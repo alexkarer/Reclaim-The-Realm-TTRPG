@@ -45,9 +45,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     description: {
       template: 'systems/reclaim-the-realm/templates/item/description.hbs',
     },
-    propertiesFeature: {
-      template:
-        'systems/reclaim-the-realm/templates/item/properties-parts/feature.hbs',
+    perk: {
+      template: 'systems/reclaim-the-realm/templates/item/perk.hbs',
     },
     propertiesEquipment: {
       template: 'systems/reclaim-the-realm/templates/item/properties-parts/equipment.hbs',
@@ -72,8 +71,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     if (this.document.limited) return;
     // Control which parts show based on document subtype
     switch (this.document.type) {
-      case 'feature':
-        options.parts.push('description', 'propertiesFeature', 'effects');
+      case 'perk':
+        options.parts.push('perk',);
         break;
       case 'equipment':
         options.parts.push('description', 'propertiesEquipment');
@@ -118,28 +117,13 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
   /** @override */
   async _preparePartContext(partId, context) {
     switch (partId) {
-      case 'propertiesFeature':
       case 'propertiesEquipment':
         // Necessary for preserving active tab on re-render
         context.tab = context.tabs[partId];
         break;
+      case 'perk':
       case 'ability':
       case 'spell':
-        context.tab = context.tabs[partId];
-        // Enrich description info for display
-        // Enrichment turns text like `[[/r 1d20]]` into buttons
-        context.enrichedDescription = await ux.TextEditor.enrichHTML(
-          this.item.system.description,
-          {
-            // Whether to show secret blocks in the finished html
-            secrets: this.document.isOwner,
-            // Data to fill in for inline rolls
-            rollData: this.item.getRollData(),
-            // Relative UUID resolution
-            relativeTo: this.item,
-          }
-        );
-        break;
       case 'description':
         context.tab = context.tabs[partId];
         // Enrich description info for display
@@ -180,6 +164,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         this.tabGroups[tabGroup] = 'ability';
       } else if (this.document.type === 'spell') {
         this.tabGroups[tabGroup] = 'spell';
+      } else if (this.document.type === 'perk') {
+        this.tabGroups[tabGroup] = 'perk';
       } else {
         this.tabGroups[tabGroup] = 'description';
       }
@@ -203,7 +189,6 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
           tab.id = 'description';
           tab.label += 'Description';
           break;
-        case 'propertiesFeature':
         case 'propertiesEquipment':
           tab.id = 'properties';
           tab.label += 'Properties';
@@ -215,6 +200,10 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         case 'spell':
           tab.id = 'spell';
           tab.label += 'Spell';
+          break;
+        case 'perk':
+          tab.id = 'perk';
+          tab.label += 'Perk';
           break;
         case 'effects':
           tab.id = 'effects';

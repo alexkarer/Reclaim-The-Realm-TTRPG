@@ -6,7 +6,7 @@ export { default as RtRNPC } from './actor/actor-npc.mjs';
 // Export Items
 export { default as RtRItemBase } from './item/base-item.mjs';
 export { default as RtREquipment } from './item/item-equipment.mjs';
-export { default as RtRFeature } from './item/item-feature.mjs';
+export { default as RtRPerk } from './item/item-perk.mjs';
 export { default as RtRAbility } from './item/item-ability.mjs';
 export { default as RtRClassTechnique } from './item/item-class-technique.mjs';
 export { default as RtRSpell } from './item/item-spell.mjs';

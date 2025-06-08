@@ -42,5 +42,14 @@
         </div>
       </div>
     {{/if}}
+    {{#if (eq item.type 'perk')}}
+      <div class="compact-grid grid-3col">
+        <span>{{localize 'RTR.Item.Perk.FIELDS.tags.label'}}</span>
+        <input class="compact-input grid-span-2" type='text' name='system.tags' value='{{system.tags}}' data-dtype='text'/>
+
+        <span>{{localize 'RTR.Item.Perk.FIELDS.requirements.label'}}</span>
+        <input class="compact-input grid-span-2" type='text' name='system.requirements' value='{{system.requirements}}' data-dtype='text'/>
+      </div>
+    {{/if}}
   </div>
 </header>

@@ -44,27 +44,79 @@
     {
       "name": "npcs",
       "label": "NPCs",
-      "type": "Actor"
+      "type": "Actor",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "NONE",
+          "TRUSTED": "NONE",
+          "ASSISTANT": "OBSERVER"
+      }
     },
     {
       "name": "equipment",
       "label": "Equipment",
-      "type": "Item"
+      "type": "Item",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "TRUSTED": "OBSERVER",
+          "ASSISTANT": "OBSERVER"
+      }
     },
     {
       "name": "perks",
       "label": "Perks",
-      "type": "Item"
+      "type": "Item",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "TRUSTED": "OBSERVER",
+          "ASSISTANT": "OBSERVER"
+      }
+    },
+    {
+      "name": "coreAbilities",
+      "label": "Core Abilities",
+      "type": "Item",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "TRUSTED": "OBSERVER",
+          "ASSISTANT": "OBSERVER"
+      }
+    },
+    {
+      "name": "classTechniques",
+      "label": "Class Techniques",
+      "type": "Item",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "TRUSTED": "OBSERVER",
+          "ASSISTANT": "OBSERVER"
+      }
     },
     {
       "name": "martial_maneuvers",
       "label": "Martial Maneuvers",
-      "type": "Item"
+      "type": "Item",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "TRUSTED": "OBSERVER",
+          "ASSISTANT": "OBSERVER"
+      }
     },
     {
       "name": "spells",
       "label": "Spells",
-      "type": "Item"
+      "type": "Item",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "TRUSTED": "OBSERVER",
+          "ASSISTANT": "OBSERVER"
+      }
     }
   ],
   "documentTypes": {
@@ -77,7 +129,7 @@
         }
     },
     "Item": {
-        "feature": {
+        "perk": {
             "htmlFields": ["description"]
         },
         "equipment": {

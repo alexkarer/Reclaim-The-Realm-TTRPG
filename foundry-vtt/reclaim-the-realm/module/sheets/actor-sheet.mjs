@@ -38,6 +38,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       resetSkillPoints: this._onResetSkillRanks,
       setAsClassSKill: this._onSetAsClassSKill,
       increaseSkillRank: this._onIncreaseSkillRank,
+      setClassSkill: this._onSetClassSkill,
+      unSetClassSkill: this._onUnSetClassSkill,
       resetAttributes: this._onResetAttributes,
       increaseAttribute: this._onIncreaseAttribute,
       shortRestHpRecovery: this._onShortRestHpRecovery,
@@ -243,7 +245,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     // if you don't need to subdivide a given type like
     // this sheet does with spells
     const equipment = [];
-    const features = [];
+    const perks = [];
     const spells = {
       0: [],
       1: [],
@@ -263,9 +265,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       if (i.type === 'equipment') {
         equipment.push(i);
       }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
+      // Append to perks.
+      else if (i.type === 'perk') {
+        perks.push(i);
       }
       // Append to spells.
       else if (i.type === 'spell') {
@@ -285,7 +287,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     if (this.document.type === 'character') {
       context.carriedWeightGramm += 5*this.actor.system.inventory.bc + 5*this.actor.system.inventory.sc + 5*this.actor.system.inventory.gc;
     }
-    context.features = features.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+
+    context.totalPerks = perks.length;
+    context.perks = perks.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+
     context.spells = spells;
   }
 
@@ -617,6 +622,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   static async _onSetAsClassSKill(event, target) {
     event.preventDefault();
     let updatePayload = {};
+    console.log("Target, ", target);
+    console.log("Target name ", target.name);
     const classSkillPropertyName = target.name;
     const shouldEnable = !(target.value === "true");
     updatePayload[classSkillPropertyName]=shouldEnable;
@@ -657,6 +664,66 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     updatePayload['system.skills.'+skillName+'.rank']=skill.rank+1;
     this.actor.update(updatePayload)
       .then(v => this.render());
+  }
+
+  /**
+   * Set an Attribute as a Class Skill
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onSetClassSkill(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+
+    const attributeName = target.name.split('.')[2];
+    let attribute = Object.entries(this.actor.system.attributes).filter(k => k[0] === attributeName)[0][1];
+    if (!attribute) {
+      console.error('Unable to find attribute: ' + attributeName);
+      return;
+    }
+
+    if (attribute.classAttribute === true) {
+      return;
+    }
+
+    updatePayload['system.attributes.'+attributeName+'.value'] = attribute.value + 2;
+    updatePayload['system.attributes.'+attributeName+'.classAttribute'] = true;
+    updatePayload['system.attributes.'+attributeName+'.attributeMaximum'] = attribute.attributeMaximum;
+    
+    this.actor.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Unset an Attribute as a Class Skill
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onUnSetClassSkill(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+
+    const attributeName = target.name.split('.')[2];
+    let attribute = Object.entries(this.actor.system.attributes).filter(k => k[0] === attributeName)[0][1];
+    if (!attribute) {
+      console.error('Unable to find attribute: ' + attributeName);
+      return;
+    }
+
+    if (attribute.classAttribute === false) {
+      return;
+    }
+
+    updatePayload['system.attributes.' + attributeName + '.value'] = attribute.value - 2;
+    updatePayload['system.attributes.' + attributeName + '.classAttribute'] = false;
+    updatePayload['system.attributes.' + attributeName + '.attributeMaximum'] = attribute.attributeMaximum - 2;
+    
+    this.actor.update(updatePayload).then(v => this.render());
   }
 
   /**

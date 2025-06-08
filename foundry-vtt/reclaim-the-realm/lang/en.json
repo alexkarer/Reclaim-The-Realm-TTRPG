@@ -113,7 +113,8 @@
         "Ability": "Ability",
         "ClassTechnique": "Class Technique",
         "MartialManeuver": "Martial Maneuver",
-        "Spell": "Spell"
+        "Spell": "Spell",
+        "Perk": "Perk"
       },
       "Equipment": {
         "FIELDS": {
@@ -172,6 +173,12 @@
       "MartialManeuver": {
         "FIELDS": {
         }
+      },
+      "Perk": {
+        "FIELDS": {
+          "tags": {"label": "Tags"},
+          "requirements": {"label": "Requirements"}
+        }
       }
     },
     "Effect": {
@@ -189,7 +196,7 @@
     },
     "Item": {
       "equipment": "Equipment",
-      "feature": "Feature",
+      "perk": "Perk",
       "ability": "Ability",
       "classTechnique": "Class Technique",
       "martialManeuver": "Martial Maneuver",
