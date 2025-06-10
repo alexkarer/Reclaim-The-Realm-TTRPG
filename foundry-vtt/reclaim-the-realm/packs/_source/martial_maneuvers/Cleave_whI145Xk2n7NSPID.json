@@ -1,0 +1,54 @@
+{
+  "folder": null,
+  "name": "Cleave",
+  "type": "martialManeuver",
+  "_id": "whI145Xk2n7NSPID",
+  "img": "icons/skills/melee/strike-sword-steel-yellow.webp",
+  "system": {
+    "description": "<p>Make a <em>Weapon Attack</em> with a melee Weapon that targets both targets.</p><p><strong>Pushing extra cost</strong>: 1 <strong>STAMINA</strong></p><p>You can now target all enemy targets within melee range as long as all targets are within 4.5m of each other.</p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "3 AP"
+    },
+    "tags": "Martial Maneuver (Basic); Weapon; Melee",
+    "range": "MELEE RANGE",
+    "targets": "2 creatures that are next to each other and both within range",
+    "duration": "INSTANT"
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.344",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749381093609,
+    "modifiedTime": 1749381093609,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "_key": "!items!whI145Xk2n7NSPID"
+}

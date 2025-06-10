@@ -57,6 +57,4 @@ Thumbs.db
 
 # FoundryVtt
 /foundry-vtt/reclaim-the-realm/packs/*
-/foundry-vtt/reclaim-the-realm/common_resources
-/foundry-vtt/reclaim-the-realm/common_resources/*
 !/foundry-vtt/reclaim-the-realm/packs/_source/

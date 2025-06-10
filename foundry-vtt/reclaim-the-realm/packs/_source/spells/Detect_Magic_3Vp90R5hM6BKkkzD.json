@@ -1,0 +1,61 @@
+{
+  "folder": null,
+  "name": "Detect Magic",
+  "type": "spell",
+  "_id": "3Vp90R5hM6BKkkzD",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+  "system": {
+    "description": "<p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">For Duration: when looking through the object you will notice magical residue which inluds the following:</span></span></p><ul class=\"mt-0 mb-0\" style=\"box-sizing:border-box;padding-left:2rem;margin-top:0px !important;margin-bottom:0px !important\"><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Magical creatures (Elemental, Cosmic, Undead) or Magical Items.</span></span></p></li><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You know if a spell is currently affecting a creature or object, you don't know the exact spell, but you know the discipline</span></span></p></li><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">ou see if a spell was cast ther recently. Spells linger for a number of days equal to their Arcana Cost, you don't what exact spell, but you know the discipline.</span></span></p></li></ul><p class=\"content mb-0 fw-bold\" style=\"box-sizing:border-box;margin-top:0px;margin-bottom:0px !important;font-weight:700 !important;color:rgb(222, 226, 230);font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';font-size:16px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;letter-spacing:normal;orphans:2;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;text-align:start\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><strong>Upcasting the Spell</strong></span></p><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">When upcasting the spell, if you increase the </span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">ARCANA</span></a></span><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"> Cost and Spell Difficulty by the following, the Spell improves in the following ways:</span></span></p><ul style=\"box-sizing:border-box;padding-left:2rem;margin-top:0px;margin-bottom:1rem\"><li style=\"box-sizing:border-box\"><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Increase by 3: You know the Specific spell (if spell at all) that was cast.</span></span></li><li style=\"box-sizing:border-box\"><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Improve by 9: You see exactly what happened when the Spell was cast at the time.</span></span></li></ul><p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><br style=\"box-sizing:border-box;color:rgb(222, 226, 230);font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';font-size:16px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal;text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial\" /></span><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><em>You enchant your object and see magical traces in bright shimmering colors.</em></span></span></p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "3 AP, 1 ARCANA"
+    },
+    "spellDifficulty": 6,
+    "roll": {
+      "diceNum": 1,
+      "diceSize": "d20",
+      "diceBonus": "+@str+ceil(@lvl / 2)"
+    },
+    "tags": "Spell; SPELL ABILITY 1; Cosmic; Divination",
+    "range": "MELEE RANGE",
+    "targets": "1 object",
+    "duration": "SPI minutes",
+    "components": "V (Prayer), S, M(transperant or reflective object)"
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.344",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749384908036,
+    "modifiedTime": 1749384908036,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "_key": "!items!3Vp90R5hM6BKkkzD"
+}

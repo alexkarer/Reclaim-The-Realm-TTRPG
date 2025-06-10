@@ -1,5 +1,4 @@
 import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
-
 const { api, sheets, ux, apps } = foundry.applications;
 
 /**
@@ -356,7 +355,6 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _viewDoc(event, target) {
-    console.log('target', target);
     const doc = this._getEmbeddedDocument(target);
     doc.sheet.render(true);
   }
@@ -613,8 +611,6 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   static async _onSetAsClassSKill(event, target) {
     event.preventDefault();
     let updatePayload = {};
-    console.log("Target, ", target);
-    console.log("Target name ", target.name);
     const classSkillPropertyName = target.name;
     const shouldEnable = !(target.value === "true");
     updatePayload[classSkillPropertyName]=shouldEnable;
@@ -752,7 +748,6 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   static async _onIncreaseAttribute(event, target) {
     event.preventDefault();
     let updatePayload = {};
-    console.log(event);
     const attributeName = target.name.split('.')[2];
     let attribute = Object.entries(this.actor.system.attributes).filter(k => k[0] === attributeName)[0][1];
     if (!attribute) {
@@ -773,12 +768,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onShortRestHpRecovery(event, target) {
-    console.log("event", event);
-    console.log("target", target);
     event.preventDefault();
     let updatePayload = {};
     if (this.actor.system.stamina.value === 0) {
-      console.warn("Can't perform short rest without Stamina.")
+      console.warn("Can't perform short rest without Stamina.");
       return;
     }
     

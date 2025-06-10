@@ -51,5 +51,14 @@
         <input class="compact-input grid-span-2" type='text' name='system.requirements' value='{{system.requirements}}' data-dtype='text'/>
       </div>
     {{/if}}
+    {{#if (isOneOf4 item.type 'ability' 'classTechnique' 'martialManeuver' 'spell')}}
+      <div class="compact-grid grid-4col">
+        <span>{{localize 'RTR.Item.Ability.FIELDS.tags.label'}}</span>
+        <input class="compact-input grid-span-3" type='text' name='system.tags' value='{{system.tags}}' data-dtype='text'/>
+
+        <span>{{localize 'RTR.Item.Ability.FIELDS.requirements.label'}}</span>
+        <input class="compact-input grid-span-3" type='text' disabled='true' name='todo' value='TODO' data-dtype='text'/>
+      </div>
+    {{/if}}
   </div>
 </header>

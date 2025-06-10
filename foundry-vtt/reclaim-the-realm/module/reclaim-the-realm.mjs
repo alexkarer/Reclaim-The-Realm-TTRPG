@@ -104,6 +104,9 @@ Handlebars.registerHelper('compare', function (x, y) {
 Handlebars.registerHelper('neq', function (x, y) {
   return x !== y;
 });
+Handlebars.registerHelper('isOneOf4', function (match, arg1, arg2, arg3, arg4) {
+  return match === arg1 || match === arg2 || match === arg3 || match === arg4;
+});
 
 Handlebars.registerHelper('formatWeight', function (weightInGramm) {
   if (weightInGramm < 1000) {

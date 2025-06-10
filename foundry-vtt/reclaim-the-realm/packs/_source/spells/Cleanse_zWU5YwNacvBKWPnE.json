@@ -1,0 +1,61 @@
+{
+  "folder": null,
+  "name": "Cleanse",
+  "type": "spell",
+  "_id": "zWU5YwNacvBKWPnE",
+  "img": "icons/magic/life/ankh-gold-blue.webp",
+  "system": {
+    "description": "<p>Remove one Tier 1 Status Effect affecting the target.</p><p><strong>Upcasting the Spell</strong></p><p>When upcasting the spell, if you increase the ARCANA Cost and Spell Difficulty by 3, you can choose to remove a Tier 2 Status Effect and if you increase it by 6, you can choose to remove a Tier 3 Status Effect.</p><p><em>Bright energies glow around the target removign or freeing them from ailments</em></p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "1 AP, 1 ARCANA"
+    },
+    "spellDifficulty": 6,
+    "roll": {
+      "diceNum": 1,
+      "diceSize": "d20",
+      "diceBonus": "+@str+ceil(@lvl / 2)"
+    },
+    "tags": "Spell; SPELL ABILITY 1; Cosmic; Restoration",
+    "range": "5m",
+    "targets": "1 target",
+    "duration": "INSTANT",
+    "components": "V (Prayer)"
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.344",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749384908036,
+    "modifiedTime": 1749384908036,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "_key": "!items!zWU5YwNacvBKWPnE"
+}

@@ -3,8 +3,12 @@
   "version": "3.0.0",
   "description": "CSS compiler for the RtR system",
   "scripts": {
-    "build": "sass src/scss/reclaim-the-realm.scss css/reclaim-the-realm.css --style=expanded --no-source-map",
-    "watch": "sass src/scss/reclaim-the-realm.scss css/reclaim-the-realm.css --style=expanded --source-map --watch"
+    "build": "npm run build:css && npm run build:pack",
+    "watch": "sass src/scss/reclaim-the-realm.scss css/reclaim-the-realm.css --style=expanded --source-map --watch",
+    "build:css": "sass src/scss/reclaim-the-realm.scss css/reclaim-the-realm.css --style=expanded --no-source-map",
+    "build:pack": "fvtt package pack \"classTechniques\" --in \"./packs/_source/classTechnique\" && fvtt package pack \"coreAbilities\" --in \"./packs/_source/coreAbilities\" && fvtt package pack \"equipment\" --in \"./packs/_source/equipment\" && fvtt package pack \"martial_maneuvers\" --in \"./packs/_source/martial_maneuvers\" && fvtt package pack \"npcs\" --in \"./packs/_source/npcs\" && fvtt package pack \"perks\" --in \"./packs/_source/perks\" && fvtt package pack \"spells\" --in \"./packs/_source/spells\"",
+    "build:unpack": "fvtt package unpack \"classTechniques\" --out \"./packs/_source/classTechnique\" && fvtt package unpack \"coreAbilities\" --out \"./packs/_source/coreAbilities\" && fvtt package unpack \"equipment\" --out \"./packs/_source/equipment\" && fvtt package unpack \"martial_maneuvers\" --out \"./packs/_source/martial_maneuvers\" && fvtt package unpack \"npcs\" --out \"./packs/_source/npcs\" && fvtt package unpack \"perks\" --out \"./packs/_source/perks\" && fvtt package unpack \"spells\" --out \"./packs/_source/spells\"",
+    "postinstall": "npm run build:css && npm run build:pack && fvtt package workon \"reclaim-the-realm\" --type \"System\""
   },
   "browserslist": [
     "last 3 versions"
@@ -13,6 +17,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.1.0",
     "sass": "^1.53.0"
   }
 }
