@@ -48,3 +48,13 @@
   justify-content: center;
   text-align: center;
 }
+
+.align-self-center {
+  justify-self: center;
+  text-align: center;
+}
+
+.align-self-right {
+  justify-self: flex-end;
+  text-align: right;
+}

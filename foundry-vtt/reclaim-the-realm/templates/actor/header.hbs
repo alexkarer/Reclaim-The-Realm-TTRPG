@@ -68,14 +68,14 @@
           </div>
         </div>
         <div class='resource-content flexrow flex-center'>
-          <a class="resource-btn" data-action='decreaseHp'>-</a>
+          <a class="resource-btn" data-action='decreaseHp' title='{{localize 'RTR.Actor.base.TOOLTIPS.decreaseHp.label'}}'>-</a>
           <meter 
             class='resource-gauge resource-guage-red'
             value='{{system.hp.value}}'
             max='{{system.hp.max}}'
             low='{{divideCeil system.hp.max 5}}'
           ></meter>
-          <a class="resource-btn" data-action='increaseHp'>+</a>
+          <a class="resource-btn" data-action='increaseHp' title='{{localize 'RTR.Actor.base.TOOLTIPS.increaseHp.label'}}'>+</a>
         </div>
       </div>
 
@@ -103,14 +103,14 @@
             </div>
           </div>
           <div class='resource-content flexrow flex-center'>
-            <a class="resource-btn" data-action='decreaseStamina'>-</a>
+            <a class="resource-btn" data-action='decreaseStamina' title='{{localize 'RTR.Actor.Character.TOOLTIPS.decreaseStamina.label'}}'>-</a>
             <meter
                 class='resource-gauge resource-guage-green'
                 value='{{system.stamina.value}}'
                 max='{{system.stamina.max}}'
                 low='{{divideCeil system.stamina.max 5}}'
             ></meter>
-            <a class="resource-btn" data-action='increaseStamina'>+</a>
+            <a class="resource-btn" data-action='increaseStamina' title='{{localize 'RTR.Actor.Character.TOOLTIPS.increaseStamina.label'}}'>+</a>
           </div>
         </div>
       {{/if}}
@@ -126,14 +126,14 @@
             </div>
           </div>
           <div class='resource-content flexrow flex-center'>
-            <a class="resource-btn" data-action='decreaseArcana'>-</a>
+            <a class="resource-btn" data-action='decreaseArcana' title='{{localize 'RTR.Actor.Character.TOOLTIPS.decreaseArcana.label'}}'>-</a>
             <meter
               class='resource-gauge resource-guage-blue'
               value='{{system.arcana.value}}'
               max='{{system.arcana.max}}'
               low='{{divideCeil system.arcana.max 5}}'
             ></meter>
-            <a class="resource-btn" data-action='increaseArcana'>+</a>
+            <a class="resource-btn" data-action='increaseArcana' title='{{localize 'RTR.Actor.Character.TOOLTIPS.increaseArcana.label'}}'>+</a>
           </div>
         </div>
       {{/if}}

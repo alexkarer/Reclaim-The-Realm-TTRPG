@@ -35,16 +35,20 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       decreaseArcana: this._onDecreaseArcana,
       addXp: this._onAddXP,
       resetSkillPoints: this._onResetSkillRanks,
-      setAsClassSKill: this._onSetAsClassSKill,
+      setAsClassSkill: this._onSetAsClassSKill,
+      unSetAsClassSkill: this._unSetAsClassSkill,
       increaseSkillRank: this._onIncreaseSkillRank,
-      setClassSkill: this._onSetClassSkill,
-      unSetClassSkill: this._onUnSetClassSkill,
+      decreaseSkillRank: this._onDecreaseSkillRank,
+      setClassAttribute: this._onSetClassAttribute,
+      unSetClassAttribute: this._onUnSetClassAttribute,
       resetAttributes: this._onResetAttributes,
       increaseAttribute: this._onIncreaseAttribute,
       shortRestHpRecovery: this._onShortRestHpRecovery,
       shortRestArcanaRecovery: this._onSortRestArcanaRecovery,
       shortRestExhaustionRecovery: this._onShortRestExhaustionRecovery,
       longRestRecovery: this._onLongRestRecovery,
+      unlockSkillsEdit: this._onUnlockSkillsEdit,
+      lockSkillsEdit: this._onLockSkillsEdit,
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -83,7 +87,6 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     perks: {
       template: 'systems/reclaim-the-realm/templates/actor/perks.hbs'
     }
-    // TODO Tabs: Overview, Perks, Abilities 
   };
 
   /** @override */
@@ -563,7 +566,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     const result = await api.DialogV2.input({
       rejectClose: false,
       modal: true,
-      content: `<input type="number" name="xp">`,
+      content: `<input type="number" value="0" name="xp">`,
+      window: { title: "Add XP" },
       ok: {
         label: "Add XP",
       }
@@ -589,6 +593,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     let updatePayload = {};
     const confirm = await api.DialogV2.confirm({
       content: "Are you sure?",
+      window: { title: "Reset Skill Ranks", icon: "fa-solid fa-triangle-exclamation" },
       rejectClose: false,
       modal: true
     });
@@ -601,7 +606,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   }
 
   /**
-   * Handle setting or unsetting a skill as a class skill
+   * Set a Skill as a Class SKill
    *
    * @this RtRActorSheet
    * @param {PointerEvent} event   The originating click event
@@ -611,9 +616,6 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   static async _onSetAsClassSKill(event, target) {
     event.preventDefault();
     let updatePayload = {};
-    const classSkillPropertyName = target.name;
-    const shouldEnable = !(target.value === "true");
-    updatePayload[classSkillPropertyName]=shouldEnable;
 
     const skillName = target.name.split('.')[2];
     let skill = Object.entries(this.actor.system.skills).filter(k => k[0] === skillName)[0][1];
@@ -621,14 +623,36 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       console.error('Unable to find skill: ' + skillName);
       return;
     }
-    if (shouldEnable) {
-      updatePayload['system.skills.'+skillName+'.rank']=skill.rank+2
-    } else {
-      updatePayload['system.skills.'+skillName+'.rank']=skill.rank-2
-    }
+
+    updatePayload['system.skills.'+skillName+'.classSkill']=true;
+    updatePayload['system.skills.'+skillName+'.rank']=skill.rank+2
     
-    this.actor.update(updatePayload)
-      .then(v => this.render());
+    this.actor.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * unset a Skill as a Class SKill
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _unSetAsClassSkill(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+
+    const skillName = target.name.split('.')[2];
+    let skill = Object.entries(this.actor.system.skills).filter(k => k[0] === skillName)[0][1];
+    if (!skill) {
+      console.error('Unable to find skill: ' + skillName);
+      return;
+    }
+
+    updatePayload['system.skills.'+skillName+'.classSkill']=false;
+    updatePayload['system.skills.'+skillName+'.rank']=skill.rank-2
+    
+    this.actor.update(updatePayload).then(v => this.render());
   }
 
   /**
@@ -649,19 +673,39 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
     updatePayload['system.skills.'+skillName+'.rank']=skill.rank+1;
-    this.actor.update(updatePayload)
-      .then(v => this.render());
+    this.actor.update(updatePayload).then(v => this.render());
   }
 
   /**
-   * Set an Attribute as a Class Skill
+   * Decrease Rank of Skill by 1.
    *
    * @this RtRActorSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @protected
    */
-  static async _onSetClassSkill(event, target) {
+  static async _onDecreaseSkillRank(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    const skillName = target.name.split('.')[2];
+    let skill = Object.entries(this.actor.system.skills).filter(k => k[0] === skillName)[0][1];
+    if (!skill) {
+      console.error('Unable to find skill: ' + skillName);
+      return;
+    }
+    updatePayload['system.skills.'+skillName+'.rank']=skill.rank-1;
+    this.actor.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Set an Attribute as a Class Attribute
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onSetClassAttribute(event, target) {
     event.preventDefault();
     let updatePayload = {};
 
@@ -684,14 +728,14 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   }
 
   /**
-   * Unset an Attribute as a Class Skill
+   * Unset an Attribute as a Class Attribute
    *
    * @this RtRActorSheet
    * @param {PointerEvent} event   The originating click event
    * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
    * @protected
    */
-  static async _onUnSetClassSkill(event, target) {
+  static async _onUnSetClassAttribute(event, target) {
     event.preventDefault();
     let updatePayload = {};
 
@@ -726,6 +770,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     let updatePayload = {};
     const confirm = await api.DialogV2.confirm({
       content: "Are you sure?",
+      window: { title: "Reset Attributes", icon: "fa-solid fa-triangle-exclamation" },
       rejectClose: false,
       modal: true
     });
@@ -755,8 +800,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       return;
     }
     updatePayload['system.attributes.'+attributeName+'.value'] = attribute.value + 1;
-    this.actor.update(updatePayload)
-      .then(v => this.render());
+    this.actor.update(updatePayload).then(v => this.render());
   }
 
   /**
@@ -786,8 +830,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 1;
     let newHP = Math.min(this.actor.system.hp.max, this.actor.system.hp.value + roll.total);
     updatePayload['system.hp.value'] = newHP;
-    this.actor.update(updatePayload)
-      .then(v => this.render());
+    this.actor.update(updatePayload).then(v => this.render());
     return roll;
   }
 
@@ -809,8 +852,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 1;
     let newArcana = Math.min(this.actor.system.arcana.max, this.actor.system.arcana.value + 1 + Math.floor(this.actor.system.levels.spellLevel / 3));
     updatePayload['system.arcana.value'] = newArcana;
-    this.actor.update(updatePayload)
-      .then(v => this.render());
+    this.actor.update(updatePayload).then(v => this.render());
   }
 
   /**
@@ -830,8 +872,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     }
     updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 2;
     updatePayload['system.exhaustion'] = Math.max(this.actor.system.exhaustion - 1, 0);
-    this.actor.update(updatePayload)
-      .then(v => this.render());
+    this.actor.update(updatePayload).then(v => this.render());
   }
 
   /**
@@ -866,8 +907,41 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
 
     updatePayload['system.exhaustion'] = Math.max(this.actor.system.exhaustion - 1, 0);
 
-    this.actor.update(updatePayload)
-      .then(v => this.render());
+    this.actor.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Unlocks Skills for editing
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onUnlockSkillsEdit(event, target) {
+    event.preventDefault();
+    if (!this.isEditable) {
+      console.error("No Edit permission for " + this.name);
+      return;
+    }
+    let updatePayload = {};
+    updatePayload['system.editLockers.skillsEditLocked'] = false; 
+    this.actor.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Lock Skills for editing
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onLockSkillsEdit(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    updatePayload['system.editLockers.skillsEditLocked'] = true; 
+    this.actor.update(updatePayload).then(v => this.render());
   }
 
   /** Helper Functions */

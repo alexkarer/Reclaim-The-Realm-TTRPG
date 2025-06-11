@@ -10,6 +10,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
   sheets.ItemSheetV2
 ) {
   constructor(options = {}) {
+    //options.window = {resizable: true}; TODO check how to make it better
     super(options);
     this.#dragDrop = this.#createDragDropHandlers();
   }

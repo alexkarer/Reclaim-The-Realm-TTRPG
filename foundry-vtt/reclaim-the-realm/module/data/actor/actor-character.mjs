@@ -66,6 +66,11 @@ export default class RtRCharacter extends RtRActorBase {
 
     schema.classResource = new fields.StringField();
 
+    schema.editLockers = new fields.SchemaField({
+      dataEditLocked: new fields.BooleanField({ initial: true, required: true, nullable: false }),
+      skillsEditLocked: new fields.BooleanField({ initial: true, required: true, nullable: false }),
+    });
+
     return schema;
   }
 

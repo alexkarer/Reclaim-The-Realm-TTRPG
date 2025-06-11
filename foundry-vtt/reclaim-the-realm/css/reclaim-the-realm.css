@@ -296,6 +296,16 @@
   text-align: center;
 }
 
+.align-self-center {
+  justify-self: center;
+  text-align: center;
+}
+
+.align-self-right {
+  justify-self: flex-end;
+  text-align: right;
+}
+
 /* Styles limited to reclaim-the-realm sheets */
 .reclaim-the-realm .item-form {
   font-family: "Roboto", sans-serif;
@@ -349,6 +359,14 @@
 }
 .reclaim-the-realm .attributes {
   margin: 10px 0 5px;
+}
+.reclaim-the-realm .attributes th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.reclaim-the-realm .attributes td {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .reclaim-the-realm .resource-group {
   margin-right: 5px;
@@ -468,9 +486,9 @@
   text-align: left;
   display: flex;
 }
-.reclaim-the-realm .scrollable-table-wrapper {
+.reclaim-the-realm .equipment-scrollable-table-wrapper {
   margin-top: 10px;
-  height: 350px;
+  height: 390px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
@@ -554,10 +572,21 @@
 .reclaim-the-realm .slim-table th {
   padding-top: 6px;
   padding-bottom: 6px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .reclaim-the-realm .slim-table td {
   padding-top: 2px;
   padding-bottom: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.reclaim-the-realm .clickable-table-row:hover, .reclaim-the-realm .clickable-table-row:focus {
+  filter: brightness(1.5);
+  cursor: pointer;
 }
 .reclaim-the-realm .effects-header {
   height: 28px;
@@ -673,7 +702,7 @@
 }
 .reclaim-the-realm .skill-container {
   overflow-y: scroll;
-  height: 400px;
+  height: 450px;
 }
 .reclaim-the-realm .skill-header {
   font-size: 1rem;
@@ -686,13 +715,13 @@
   color: yellow;
 }
 .reclaim-the-realm .increase-rank-btn {
-  margin-left: 5px;
-  flex-shrink: 5;
+  border-color: green;
+  color: green;
+  margin-right: 3px;
+  margin-left: 3px;
   border-radius: 7px;
   border-width: 1px;
   border-style: solid;
-  border-color: green;
-  color: green;
   background-color: black;
   text-align: center;
 }
@@ -705,6 +734,29 @@
 .reclaim-the-realm .increase-rank-btn:not(:disabled):hover, .reclaim-the-realm .increase-rank-btn:not(:disabled):focus {
   color: lightgreen;
   border-color: lightgreen;
+  background-color: darkslategray;
+  cursor: pointer;
+}
+.reclaim-the-realm .decrease-rank-btn {
+  border-color: red;
+  color: red;
+  margin-right: 3px;
+  margin-left: 3px;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: black;
+  text-align: center;
+}
+.reclaim-the-realm .decrease-rank-btn:disabled {
+  color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.reclaim-the-realm .decrease-rank-btn:not(:disabled):hover, .reclaim-the-realm .decrease-rank-btn:not(:disabled):focus {
+  color: lightcoral;
+  border-color: lightcoral;
   background-color: darkslategray;
   cursor: pointer;
 }
@@ -774,7 +826,7 @@
   height: 480px;
 }
 .reclaim-the-realm .abilities-container {
-  height: 500px;
+  height: 520px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;

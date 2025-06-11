@@ -26,16 +26,18 @@
         {{#if attribute.classAttribute}}
              <a 
                 class='class-attribute rollable bold-text align-left'
-                name='system.attributes.{{key}}.setClassSkill'
+                name='system.attributes.{{key}}.unSetClassAttribute'
+                title="{{localize 'RTR.Actor.Character.TOOLTIPS.unSetAsClassAttribute.label'}}"
                 data-label='{{localize (lookup @root.config.attributes key)}}'
-                data-action='unSetClassSkill'
+                data-action='unSetClassAttribute'
               >{{localize (lookup @root.config.attributes key)}}</a>
         {{else}}
             <a 
               class='rollable bold-text align-left'
-              name='system.attributes.{{key}}.unsetClassSkill'
+              name='system.attributes.{{key}}.setClassAttribute'
+              title="{{localize 'RTR.Actor.Character.TOOLTIPS.setAsClassAttribute.label'}}"
               data-label='{{localize (lookup @root.config.attributes key)}}'
-              data-action='setClassSkill'
+              data-action='setClassAttribute'
             >{{localize (lookup @root.config.attributes key)}}</a>
         {{/if}}
         <div class="flexrow">

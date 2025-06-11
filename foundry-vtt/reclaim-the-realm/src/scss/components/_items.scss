@@ -24,9 +24,9 @@
 // Items Lists
 // -----------------------------------------
 
-.scrollable-table-wrapper {
+.equipment-scrollable-table-wrapper {
   margin-top: 10px;
-  height: 350px;
+  height: 390px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
@@ -121,9 +121,24 @@
   th {
     padding-top: 6px;
     padding-bottom: 6px;
+    padding-right: 5px;
+    padding-left: 5px;
   }
   td {
     padding-top: 2px;
     padding-bottom: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.clickable-table-row {
+  &:hover,
+  &:focus {
+    filter: brightness(1.5);
+    cursor: pointer;
   }
 }

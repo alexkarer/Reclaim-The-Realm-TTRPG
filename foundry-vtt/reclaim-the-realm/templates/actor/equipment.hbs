@@ -14,7 +14,7 @@
       <input type='text' disabled="true" name='system.inventory.liftPushDragKg' value='{{system.inventory.liftPushDragKg}} kg' data-dtype='Number'/>
     </div>
   </div>
-  <div class="scrollable-table-wrapper">
+  <div class="equipment-scrollable-table-wrapper">
     <table class="slim-table">
       <thead>
         <tr>
@@ -41,26 +41,17 @@
       </thead>
       <tbody>
         {{#each equipment as |item id|}}
-        <tr data-item-id='{{item._id}}'
+        <tr 
+          class='clickable-table-row'
+          data-action='viewDoc' 
+          data-item-id='{{item._id}}'
           data-drag='true'
           data-document-class='Item'
         >
           <td>
-              <a class='rollable' 
-                data-action='viewDoc' 
-                title='{{localize "DOCUMENT.Update" type='Equipment'}}'
-              >
-                <img src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
-              </a>
+            <img src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
           </td>
-          <td>
-            <a class='rollable'
-              data-action='viewDoc' 
-              title='{{localize "DOCUMENT.Update" type='Equipment'}}'
-            >
-              {{item.name}}
-            </a>
-          </td>
+          <td style="max-width: 180px;">{{item.name}}</td>
           <td>{{localize (lookup @root.config.equipmentTypes item.system.type)}}</td>
           <td>{{item.system.quantity}}</td>
           <td>{{formatWeight item.system.totalWeightGramm}}</td>
@@ -83,25 +74,27 @@
   </div>
   <h6 style="margin-top: 10px;">Wealth</h6>
   <div class="flexrow">
-      <div class="flexrow" style="margin-right: 10px;">
-        <div class="tooltip" style="flex-shrink: 5;">
-           <img src='/icons/commodities/currency/coins-crown-stack-gold.webp' height='24' width='24'>
-          <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.gc.label'}}</span>
+      <div class="tooltip" style="margin-right: 10px;">
+        <div class="flexrow">
+          <img style="margin-right: 5px;" src='/icons/commodities/currency/coins-crown-stack-gold.webp' height='24' width='24'>
+          <input style="flex-grow: 5;" type='number' name='system.inventory.gc' value='{{system.inventory.gc}}' data-dtype='Number'/>
         </div>
-        <input style="flex-grow: 5;" type='number' name='system.inventory.gc' value='{{system.inventory.gc}}' data-dtype='Number'/>
+        <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.gc.label'}}</span>
       </div>
-      <div class="flexrow" style="margin-right: 10px;margin-left: 10px;">
-        <div class="tooltip" style="flex-shrink: 5;">
-           <img src='/icons/commodities/currency/coins-shield-sword-stack-silver.webp' height='24' width='24'>
-          <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.sc.label'}}</span>
+
+      <div class="tooltip" style="margin-right: 10px;margin-left: 10px;">
+        <div class="flexrow">
+          <img style="margin-right: 5px;"src='/icons/commodities/currency/coins-shield-sword-stack-silver.webp' height='24' width='24'>
+          <input style="flex-grow: 5;" type='number' name='system.inventory.sc' value='{{system.inventory.sc}}' data-dtype='Number'/>
         </div>
-        <input style="flex-grow: 5;" type='number' name='system.inventory.sc' value='{{system.inventory.sc}}' data-dtype='Number'/>
+        <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.sc.label'}}</span>
       </div>
-      <div class="flexrow" style="margin-left: 10px;">
-        <div class="tooltip" style="flex-shrink: 5;">
-           <img src='/icons/commodities/currency/coins-wheat-stack-copper.webp' height='24' width='24'>
-          <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.bc.label'}}</span>
+      
+      <div class="tooltip" style="margin-left: 10px;">
+        <div class="flexrow">
+          <img style="margin-right: 5px;" src='/icons/commodities/currency/coins-wheat-stack-copper.webp' height='24' width='24'>
+          <input style="flex-grow: 5;" type='number' name='system.inventory.bc' value='{{system.inventory.bc}}' data-dtype='Number'/>
         </div>
-        <input style="flex-grow: 5;" type='number' name='system.inventory.bc' value='{{system.inventory.bc}}' data-dtype='Number'/>
+        <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.bc.label'}}</span>
       </div>
 </section>

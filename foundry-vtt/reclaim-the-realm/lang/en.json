@@ -22,17 +22,17 @@
       "Survival":        { "name": "Survival", "description": "" },
       "Thievery":        { "name": "Thievery", "description": "" },
 
-      "Culture":         { "name": "Culture", "description": "" },
-      "Geography":       { "name": "Geography", "description": "" },
-      "Elements":        { "name": "Elements", "description": "" },
-      "Nature":          { "name": "Nature", "description": "" },
-      "Supernatural":    { "name": "Supernatural", "description": "" },
+      "Culture":         { "name": "Lore (Culture)", "description": "" },
+      "Geography":       { "name": "Lore (Geography)", "description": "" },
+      "Elements":        { "name": "Lore (Elements)", "description": "" },
+      "Nature":          { "name": "Lore (Nature)", "description": "" },
+      "Supernatural":    { "name": "Lore (Supernatural)", "description": "" },
 
-      "SmithTools":      { "name": "Smith Tools", "description": "" },
-      "AlchemyKit":      { "name": "Alchemy Kit", "description": "" },
-      "JewellersTools":  { "name": "Jeweller's Tools", "description": "" },
-      "TailorsSet":      { "name": "Tailor's Set", "description": "" },
-      "CarpentersTools": { "name": "Carpenters Tools", "description": "" }
+      "SmithTools":      { "name": "Tool (Smith Tools)", "description": "" },
+      "AlchemyKit":      { "name": "Tool (Alchemy Kit)", "description": "" },
+      "JewellersTools":  { "name": "Tool (Jeweller's Tools)", "description": "" },
+      "TailorsSet":      { "name": "Tool (Tailor's Set)", "description": "" },
+      "CarpentersTools": { "name": "Tool (Carpenters Tools)", "description": "" }
     },
     "EquipmentTypes": {
       "Weapon": "Weapon",
@@ -89,6 +89,10 @@
             "willpower": {"label": "Willpower"},
             "shieldBlock": {"label": "Shield Block"}
           }
+        },
+        "TOOLTIPS": {
+          "increaseHp": {"label": "Increase HP, Shift: +5, CTRL: +10"},
+          "decreaseHp": {"label": "Decrease HP, Shift: +5, CTRL: +10"}
         }
       },
       "Character": {
@@ -97,6 +101,16 @@
           "carryingCapacity": {"label": "Carrying Capacity"},
           "liftPushDrag": {"label": "Lift/Push/Drag"},
           "totalCarriedWeight": {"label": "Total Carried Weight"}
+        },
+        "TOOLTIPS": {
+          "setAsClassSkill": { "label": "Set as Class Skill" },
+          "unSetAsClassSkill": { "label": "Unset as Class Skill" },
+          "setAsClassAttribute": { "label": "Set as Class Attribute" },
+          "unSetAsClassAttribute": { "label": "Unset as Class Attribute" },
+          "increaseStamina": {"label": "Increase Stamina"},
+          "decreaseStamina": {"label": "Decrease Stamina"},
+          "increaseArcana": {"label": "Increase Arcana"},
+          "decreaseArcana": {"label": "Decrease Arcana"}
         }
       },
       "NPC": {

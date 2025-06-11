@@ -4,90 +4,104 @@
   data-tab='skills'
 >
     {{#if (eq actor.type 'character')}}
-    <div class="grid grid-3col">
-        <div class="flexrow">
-            <label
-              class='bold-text flexlarge align-left'
-              data-label='Total Skill Points'
-            >Total Skill Points:</label>
+    <div class="grid grid-4col">
+        <div class="tooltip">
             <input
-              type='number'
-              disabled='true'
-              name='system.skillPoints.totalSkillPoints'
-              value='{{system.skillPoints.totalSkillPoints}}'
-              class=""
-              data-dtype='Number'
+                type='number'
+                disabled='true'
+                name='system.skillPoints.usedSkillPoints'
+                value='{{system.skillPoints.usedSkillPoints}}'
+                class=""
+                data-dtype='Number'
             />
+            <span class="tooltiptext">Used Skill Points:</span>
         </div>
-        <div class="flexrow">
-            <label
-              class='bold-text flexlarge align-left'
-              data-label='User Skill Points'
-            >Used Skill Points:</label>
+        <div class="tooltip">
             <input
-              type='number'
-              disabled='true'
-              name='system.skillPoints.usedSkillPoints'
-              value='{{system.skillPoints.usedSkillPoints}}'
-              class=""
-              data-dtype='Number'
+                type='number'
+                disabled='true'
+                name='system.skillPoints.totalSkillPoints'
+                value='{{system.skillPoints.totalSkillPoints}}'
+                class=""
+                data-dtype='Number'
             />
+            <span class="tooltiptext">Total Skill Points:</span>
         </div>
-        <div class="flex-group-center">
-            <input class="reset-skills-btn" type="button" data-action='resetSkillPoints' value='Reset Skill Points'/>
+        <div>
+            {{#if (not system.editLockers.skillsEditLocked)}}
+                <input class="reset-skills-btn" type="button" data-action='resetSkillPoints' value='Reset Skill Points'/>
+            {{/if}}
+        </div>
+        <div class="align-self-right">
+            {{#if system.editLockers.skillsEditLocked}}
+                <button type="button" class="icon toggle" data-action='unlockSkillsEdit' {{disabled (not editable)}}><i class="fa-solid fa-pen-to-square"></i></button>
+            {{else}}
+                <button type="button" class="icon toggle" data-action='lockSkillsEdit'><i class="fa-solid fa-xmark"></i></button>
+            {{/if}}
         </div>
     </div>
     {{/if}}
 
-    <div class='skill-container grid grid-7col'>
-        <span class="skill-header"></span>
+    <div class='skill-container compact-grid grid-7col'>
         <span class='grid-span-2 skill-header'>Skill</span>
-        <span class='grid-span-2 skill-header'>Rank / Max</span>
-        <span class='skill-header'>Attribute</span>
+        <span class='align-self-center grid-span-2 skill-header'>Rank / Max</span>
+        <span></span>
         <span class='skill-header'>Roll</span>
     {{#each system.skills as |skills key|}}
-        <div class="tooltip grid-item-center">
-            <input type="checkbox" 
-                name="system.skills.{{key}}.classSkill"
-                value='{{skills.classSkill}}'
-                data-action='setAsClassSKill'
-                data-dtype='Boolean'
-            >
-            <span class="tooltiptext">Class Skill</span>
-        </div>
+        {{#if (eq key 'culture')}}
+            <hr class='grid-span-7'>
+        {{/if}}
+        {{#if (eq key 'smithTools')}}
+            <hr class='grid-span-7'>
+        {{/if}}
         {{#if skills.classSkill}}
-            <label
+            <a 
                 class='class-skill grid-span-2 bold-text flexlarge align-left' style="align-self: center;"
+                name='system.attributes.{{key}}.unSetAsClassSkill'
+                title="{{localize 'RTR.Actor.Character.TOOLTIPS.unSetAsClassSkill.label'}}"
                 data-label='{{localize (lookup @root.config.skills key)}}'
-            >{{localize (lookup @root.config.skills key)}}</label>
+                data-action='unSetAsClassSkill'
+                {{disabled @root.system.editLockers.skillsEditLocked}}
+              >{{localize (lookup @root.config.skills key)}}</a>
         {{else}}
-            <label
+            <a 
                 class='grid-span-2 bold-text flexlarge align-left' style="align-self: center;"
+                name='system.attributes.{{key}}.setAsClassSkill'
+                title="{{localize 'RTR.Actor.Character.TOOLTIPS.setAsClassSkill.label'}}"
                 data-label='{{localize (lookup @root.config.skills key)}}'
-            >{{localize (lookup @root.config.skills key)}}</label>
+                data-action='setAsClassSkill'
+                {{disabled @root.system.editLockers.skillsEditLocked}}
+              >{{localize (lookup @root.config.skills key)}}</a>
         {{/if}}
         <div class="grid-span-2 flexrow">
-            <input
-                type='text'
-                value='{{concat skills.rank "/" skills.rankMaximum}}'
-                class="" style="flex-grow: 5;"
-                disabled="true"
-            />
+            <span class="align-self-center">{{skills.rank}} / {{skills.rankMaximum}}</span>
+        </div>
+        <div class="flexrow flex-group-center">
             {{#if (eq @root.actor.type 'character')}}
-            <input
+            {{#if (not @root.system.editLockers.skillsEditLocked)}}
+            <input 
                 type="button"
                 value="+"
-                class="increase-rank-btn" 
+                class="increase-rank-btn"
                 {{disabled (eq skills.rank skills.rankMaximum)}}
                 {{disabled (eq @root.system.skillPoints.totalSkillPoints @root.system.skillPoints.usedSkillPoints)}} 
                 name='system.skills.{{key}}.rankIncrease' 
                 data-action='increaseSkillRank'
-            >
+            />
+            <input 
+                type="button"
+                value="-"
+                class="decrease-rank-btn"
+                {{disabled (or (eq skills.rank 0) (and (eq skills.rank 2) skills.classSkill))}}
+                name='system.skills.{{key}}.rankDecrease' 
+                data-action='decreaseSkillRank'
+            />
+            {{/if}}
             {{/if}}
         </div>
         <select 
             name='system.skills.{{key}}.attrBonus' 
-            class='skill-attribute-bonus'>
+            class='compact-input skill-attribute-bonus'>
             {{#each @root.system.attributes as |attribute attrkey|}}
                 {{#if (compare attrkey skills.attrBonus)}}
                 <option value="{{attrkey}}" selected="selected">{{attrkey}}</option>
@@ -112,7 +126,7 @@
         {{/if}}
         {{#if (eq @root.actor.type 'npc')}}
         <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" alt="d20" height='28' width='28'
+            <img src="/icons/svg/d20-grey.svg" alt="d20" height='20' width='20'
                 data-action='roll'
                 data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
                 data-label='{{localize (lookup @root.config.skills key)}}'
