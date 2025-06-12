@@ -3,6 +3,8 @@
 - Add edit lock on Data section similar to whats implemented in skills
 - Rework Abilities Tables to make whole "row"clickable maybe
 - Define and user proper data structure for abilities before creating them to avoid lots of headaches later on.
+- Show amount of perks that can be selected
+- Roll with advantage or disadanvtage function (mb with hotkeys)
 
 # General TODOs/Nice to have
 
@@ -18,6 +20,7 @@
 - Configure prototype token
 - Data Section add Translation 
 - On close automatically lock editing.
+- Add Notifications if there is something todo (e.g. learn new ability, add attribute pooitns, assign skill ranks)
 
 - Handle Cearture Size
 
@@ -43,6 +46,7 @@
 ## Items
 
 - Generally try if autosizing is easy
+- Add color depending on type and subtypes (e.g. pyromancy spells red, martial perks red, spell perks blue, etc.)
 
 ### Equipment
 
