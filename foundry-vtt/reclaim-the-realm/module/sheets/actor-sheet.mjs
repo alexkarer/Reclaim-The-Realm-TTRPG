@@ -49,6 +49,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       longRestRecovery: this._onLongRestRecovery,
       unlockSkillsEdit: this._onUnlockSkillsEdit,
       lockSkillsEdit: this._onLockSkillsEdit,
+      unlockDataEdit: this._onUnlockDataEdit,
+      lockDataEdit: this._onLockDataEdit
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -941,6 +943,40 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     event.preventDefault();
     let updatePayload = {};
     updatePayload['system.editLockers.skillsEditLocked'] = true; 
+    this.actor.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Unlocks Data for editing
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onUnlockDataEdit(event, target) {
+    event.preventDefault();
+    if (!this.isEditable) {
+      console.error("No Edit permission for " + this.name);
+      return;
+    }
+    let updatePayload = {};
+    updatePayload['system.editLockers.dataEditLocked'] = false; 
+    this.actor.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Lock Data for editing
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onLockDataEdit(event, target) {
+    event.preventDefault();
+    let updatePayload = {};
+    updatePayload['system.editLockers.dataEditLocked'] = true; 
     this.actor.update(updatePayload).then(v => this.render());
   }
 

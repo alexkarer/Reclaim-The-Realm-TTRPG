@@ -28,9 +28,9 @@
             <span class="tooltiptext">Total Skill Points:</span>
         </div>
         <div>
-            {{#if (not system.editLockers.skillsEditLocked)}}
+            {{#unless system.editLockers.skillsEditLocked}}
                 <input class="reset-skills-btn" type="button" data-action='resetSkillPoints' value='Reset Skill Points'/>
-            {{/if}}
+            {{/unless}}
         </div>
         <div class="align-self-right">
             {{#if system.editLockers.skillsEditLocked}}
@@ -78,7 +78,7 @@
         </div>
         <div class="flexrow flex-group-center">
             {{#if (eq @root.actor.type 'character')}}
-            {{#if (not @root.system.editLockers.skillsEditLocked)}}
+            {{#unless @root.system.editLockers.skillsEditLocked}}
             <input 
                 type="button"
                 value="+"
@@ -96,7 +96,7 @@
                 name='system.skills.{{key}}.rankDecrease' 
                 data-action='decreaseSkillRank'
             />
-            {{/if}}
+            {{/unless}}
             {{/if}}
         </div>
         <select 

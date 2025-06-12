@@ -1,6 +1,5 @@
 ### Immidiate TODOS
 
-- Add edit lock on Data section similar to whats implemented in skills
 - Rework Abilities Tables to make whole "row"clickable maybe
 - Define and user proper data structure for abilities before creating them to avoid lots of headaches later on.
 - Show amount of perks that can be selected
