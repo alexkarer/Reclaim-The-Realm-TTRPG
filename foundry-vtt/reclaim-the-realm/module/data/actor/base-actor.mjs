@@ -8,6 +8,7 @@ export default class RtRActorBase extends foundry.abstract
     const fields = foundry.data.fields;
     const requiredInteger = { required: true, nullable: false, integer: true };
     const proficiency = { choices: [0, 0.34, 0.67, 1] };
+    const requiredStringField = { required: true, nullable: false, blank: false };
     const schema = {};
 
     schema.hp = new fields.SchemaField({
@@ -65,7 +66,6 @@ export default class RtRActorBase extends foundry.abstract
 
       shieldBlockBase: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       shieldBlockThreshold: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      resistances: new fields.StringField(),
     
       stability: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       dodge: new fields.NumberField({ ...requiredInteger, initial: 0 }),
@@ -73,6 +73,12 @@ export default class RtRActorBase extends foundry.abstract
       willpower: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       shieldBlock: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
     });
+
+    schema.resistances = new fields.ArrayField(
+      new fields.SchemaField({
+        damageType: new fields.StringField({...requiredStringField, choices: Objects.keys(CONFIG.RTR.)})
+      })
+    ),
 
     schema.attackBonuses = new fields.SchemaField({
       meleeMartialAttack: new fields.NumberField({ ...requiredInteger, initial: 0 }),
@@ -89,7 +95,7 @@ export default class RtRActorBase extends foundry.abstract
           rank: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0}),
           classSkill: new fields.BooleanField({ initial: false, required: true, nullable: false }),
           rankMaximum: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0}),
-          attrBonus: new fields.StringField({blank: false, initial: 'str', choices: Object.keys(CONFIG.RTR.attributes)})
+          attrBonus: new fields.StringField({...requiredStringField, initial: 'str', choices: Object.keys(CONFIG.RTR.attributes)})
         });
         return obj;
       }, {})

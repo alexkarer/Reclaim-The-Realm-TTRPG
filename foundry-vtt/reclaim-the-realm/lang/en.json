@@ -45,6 +45,19 @@
       "Survival": "Survival",
       "Commodity": "Commodity"
     },
+    "DamageTypes": {
+      "Phyiscial": "Phyiscial",
+      "Fire": "Fire",
+      "Frost": "Frost",
+      "Corrosive": "Corrosive",
+      "Sonic": "Sonic",
+      "Electric": "Electric",
+      "Poison": "Poison",
+      "Psychic": "Psychic",
+      "Cosmic": "Cosmic",
+      "Holy": "Holy",
+      "Unholy": "Unholy"
+    },
     "SheetLabels": {
       "Actor": "RtR Actor Sheet",
       "Item": "RtR Item Sheet"
@@ -121,7 +134,7 @@
     },
     "Item": {
       "Tabs": {
-        "Properties": "Properties",
+        "Equipment": "Equipment",
         "Description": "Description",
         "Effects": "Effects",
         "Ability": "Ability",

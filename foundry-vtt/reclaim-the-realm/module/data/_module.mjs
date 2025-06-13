@@ -11,3 +11,4 @@ export { default as RtRAbility } from './item/item-ability.mjs';
 export { default as RtRClassTechnique } from './item/item-class-technique.mjs';
 export { default as RtRSpell } from './item/item-spell.mjs';
 export { default as RtRMartialManeuver } from './item/item-martial-maneuver.mjs';
+export { default as RtRSpecies } from './item/item-species.mjs';

@@ -49,8 +49,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     perk: {
       template: 'systems/reclaim-the-realm/templates/item/perk.hbs',
     },
-    propertiesEquipment: {
-      template: 'systems/reclaim-the-realm/templates/item/properties-parts/equipment.hbs',
+    equipment: {
+      template: 'systems/reclaim-the-realm/templates/item/equipment.hbs',
     },
     ability: {
       template: 'systems/reclaim-the-realm/templates/item/ability.hbs',
@@ -76,7 +76,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         options.parts.push('perk',);
         break;
       case 'equipment':
-        options.parts.push('description', 'propertiesEquipment');
+        options.parts.push('equipment');
         break;
       case 'ability':
       case 'classTechnique':
@@ -118,10 +118,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
   /** @override */
   async _preparePartContext(partId, context) {
     switch (partId) {
-      case 'propertiesEquipment':
-        // Necessary for preserving active tab on re-render
-        context.tab = context.tabs[partId];
-        break;
+      case 'equipment':
       case 'perk':
       case 'ability':
       case 'spell':
@@ -167,6 +164,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         this.tabGroups[tabGroup] = 'spell';
       } else if (this.document.type === 'perk') {
         this.tabGroups[tabGroup] = 'perk';
+      } else if (this.document.type === 'equipment') {
+        this.tabGroups[tabGroup] = 'equipment';
       } else {
         this.tabGroups[tabGroup] = 'description';
       }
@@ -190,9 +189,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
           tab.id = 'description';
           tab.label += 'Description';
           break;
-        case 'propertiesEquipment':
-          tab.id = 'properties';
-          tab.label += 'Properties';
+        case 'equipment':
+          tab.id = 'equipment';
+          tab.label += 'Equipment';
           break;
         case 'ability':
           tab.id = 'ability';

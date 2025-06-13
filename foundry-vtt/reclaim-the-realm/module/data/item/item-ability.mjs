@@ -26,6 +26,13 @@ export default class RtRAbility extends RtRItemBase {
       minimumPer: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       minimumCha: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
 
+      skillRankRequirements: new fields.ArrayField(
+        new fields.SchemaField({
+          skill: new fields.StringField({ required: true, nullable: false, blank: false}),
+          rank: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+        })
+      ),
+
       otherRequirements: new fields.StringField()
     });
 

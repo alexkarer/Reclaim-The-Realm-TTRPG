@@ -61,3 +61,17 @@ RTR.equipmentTypes = {
   survival: "RTR.EquipmentTypes.Survival",
   commodity: "RTR.EquipmentTypes.Commodity"
 }
+
+RTR.damageTypes = {
+  Phyiscial": "RTR.DamageTypes.Phyiscial",
+  Fire": "Fire",
+  "Frost": "Frost",
+  "Corrosive": "Corrosive",
+  "Sonic": "Sonic",
+  "Electric": "Electric",
+  "Poison": "Poison",
+  "Psychic": "Psychic",
+  "Cosmic": "Cosmic",
+  "Holy": "Holy",
+  "Unholy": "Unholy"
+}
