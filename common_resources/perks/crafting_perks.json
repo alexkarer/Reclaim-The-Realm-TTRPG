@@ -1,6 +1,7 @@
 [
     {
         "name": "PlaceHolder",
+        "perkPoints": 1,
         "tags": [ "Crafting" ],
         "requirements": {
             "requiredLevels": [

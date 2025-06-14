@@ -9,7 +9,7 @@
     <tbody>
         @for (perk of perkList(); track $index) {
             <tr (click)="perkDescriptionEnabled[$index] = !perkDescriptionEnabled[$index]" style="cursor: pointer">
-                <th scope="row">{{ perk?.name }}</th>
+                <th scope="row">{{ perk?.name + ' (' + perk?.perkPoints + ')' }}</th>
                 <td class="header-subscript">{{ perk?.requirements | requirementsPrettier }}</td>
                 <td class="header-subscript">{{ perk?.tags?.join(', ') }}</td>
             </tr>

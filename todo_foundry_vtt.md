@@ -2,8 +2,6 @@
 
 - Rework Abilities Tables to make whole "row"clickable maybe
 - Define and user proper data structure for abilities before creating them to avoid lots of headaches later on.
-- Show amount of perks that can be selected
-- ability text should be rezizable and the text should dynamically scale with min height.
 - Roll with advantage or disadanvtage function (mb with hotkeys)
 
 # General TODOs/Nice to have
@@ -33,6 +31,7 @@
 - Implement Exhaustion in a nicer way
 - Proper Implementation of Martial Damage
 - Show spell cast test
+- Implement Errors in case too many Abilities or Perks are added.
 
 ### NPCS
 

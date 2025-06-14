@@ -1,6 +1,7 @@
 [
     {
         "name": "Controlled Frenzy",
+        "perkPoints": 2,
         "tags": [ "Barbarian" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -30,6 +31,7 @@
     },
     {
         "name": "Improved Frenzy",
+        "perkPoints": 2,
         "tags": [ "Barbarian" ],
         "requirements": {
             "requiredLevels": [ { "amount": 5, "levelType": "[LEVEL]" } ],
@@ -59,6 +61,7 @@
     },
     {
         "name": "Greater Frenzy",
+        "perkPoints": 2,
         "tags": [ "Barbarian" ],
         "requirements": {
             "requiredLevels": [ { "amount": 9, "levelType": "[LEVEL]" } ],
@@ -88,6 +91,7 @@
     },
     {
         "name": "Elemental Rage",
+        "perkPoints": 2,
         "tags": [ "Barbarian" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -117,6 +121,7 @@
     },
     {
         "name": "Improved Elemental Rage",
+        "perkPoints": 2,
         "tags": [ "Barbarian" ],
         "requirements": {
             "requiredLevels": [ { "amount": 5, "levelType": "[LEVEL]" } ],
@@ -146,6 +151,7 @@
     },
     {
         "name": "Greater Elemental Rage",
+        "perkPoints": 2,
         "tags": [ "Barbarian" ],
         "requirements": {
             "requiredLevels": [ { "amount": 9, "levelType": "[LEVEL]" } ],
@@ -175,6 +181,7 @@
     },
     {
         "name": "Cosmic Rage",
+        "perkPoints": 2,
         "tags": [ "Barbarian" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -193,6 +200,7 @@
     },
     {
         "name": "Resiliant",
+        "perkPoints": 1,
         "tags": [ "Barbarian" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -211,6 +219,7 @@
     },
     {
         "name": "Greater Resiliency",
+        "perkPoints": 2,
         "tags": [ "Barbarian" ],
         "requirements": {
             "requiredLevels": [ { "amount": 7, "levelType": "[LEVEL]" } ],
@@ -229,6 +238,7 @@
     },
     {
         "name": "Eager",
+        "perkPoints": 1,
         "tags": [ "Barbarian" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],

@@ -1,6 +1,7 @@
 [
     {
         "name": "Mobile",
+        "perkPoints": 1,
         "tags": [ "Defensive" ],
         "requirements": {
             "requiredLevels": [],
@@ -21,6 +22,7 @@
     },
     {
         "name": "Immovable",
+        "perkPoints": 1,
         "tags": [ "Defensive" ],
         "requirements": {
             "requiredLevels": [],
@@ -41,6 +43,7 @@
     },
     {
         "name": "Quick Reflexes",
+        "perkPoints": 1,
         "tags": [ "Defensive" ],
         "requirements": {
             "requiredLevels": [],
@@ -61,6 +64,7 @@
     },
     {
         "name": "Enduring",
+        "perkPoints": 1,
         "tags": [ "Defensive" ],
         "requirements": {
             "requiredLevels": [],
@@ -81,6 +85,7 @@
     },
     {
         "name": "Mind of Steel",
+        "perkPoints": 1,
         "tags": [ "Defensive" ],
         "requirements": {
             "requiredLevels": [],

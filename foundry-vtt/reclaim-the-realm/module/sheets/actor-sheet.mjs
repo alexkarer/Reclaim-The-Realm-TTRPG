@@ -283,7 +283,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       context.carriedWeightGramm += 5*this.actor.system.inventory.bc + 5*this.actor.system.inventory.sc + 5*this.actor.system.inventory.gc;
     }
 
-    context.totalPerks = perks.length;
+    context.totalPerkPointsUsed = perks.reduce((sum, current) => sum + current.system.perkPointsCost, 0);
+    console.log('totalPerkPointsUsed', context.totalPerkPointsUsed);
     context.perks = perks.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 
     context.abilities = abilities.sort((a, b) => (a.sort || 0) - (b.sort || 0));

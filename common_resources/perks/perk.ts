@@ -34,6 +34,7 @@ export const allPerks: Perk[] = [
 
 export type Perk = {
     name: string;
+    perkPoints: number,
     tags: string[];
     requirements: Requirements;
     textElements: TextElement[];

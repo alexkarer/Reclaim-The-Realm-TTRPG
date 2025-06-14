@@ -207,6 +207,14 @@
           <label for="system.skillPoints.additionalSkillPoints">Extra Skill Points:</label>
           <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.skillPoints.additionalSkillPoints' name='system.skillPoints.additionalSkillPoints' value='{{system.skillPoints.additionalSkillPoints}}'/>
         </div>
+        <div>
+          <label for="system.attributePoints.additionalAttributePoints">Extra Attr. Points:</label>
+          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.attributePoints.additionalAttributePoints' name='system.attributePoints.additionalAttributePoints' value='{{system.attributePoints.additionalAttributePoints}}'/>
+        </div>
+        <div >
+          <label for="system.perks.additionalPerkPoints">Additional Perks:</label>
+          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.perks.additionalPerkPoints' name='system.perks.additionalPerkPoints' value='{{system.perks.additionalPerkPoints}}'/>
+        </div>
         {{/if}}
       </div>
     </aside>

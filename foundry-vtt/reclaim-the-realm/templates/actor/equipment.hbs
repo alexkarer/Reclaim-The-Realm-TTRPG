@@ -41,13 +41,7 @@
       </thead>
       <tbody>
         {{#each equipment as |item id|}}
-        <tr 
-          class='clickable-table-row'
-          data-action='viewDoc' 
-          data-item-id='{{item._id}}'
-          data-drag='true'
-          data-document-class='Item'
-        >
+        <tr class='clickable-table-row' data-action='viewDoc'  data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
           <td>
             <img src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
           </td>

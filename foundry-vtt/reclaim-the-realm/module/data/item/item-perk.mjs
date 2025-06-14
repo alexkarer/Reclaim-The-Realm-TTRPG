@@ -12,6 +12,8 @@ export default class RtRPerk extends RtRItemBase {
     const schema = super.defineSchema();
 
     schema.tags = new fields.StringField();
+
+    schema.perkPointsCost = new fields.NumberField({ ...requiredInteger, initial: 1, min: 0 }),
     
     schema.requirements = new fields.SchemaField({
       minimumLevel: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),

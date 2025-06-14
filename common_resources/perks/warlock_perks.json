@@ -1,6 +1,7 @@
 [
     {
         "name": "Mutant Warrior",
+        "perkPoints": 2,
         "tags": [ "Warlock" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -29,6 +30,7 @@
     },
     {
         "name": "Mutant Mage",
+        "perkPoints": 2,
         "tags": [ "Warlock" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -56,6 +58,7 @@
     },
     {
         "name": "Elemental Entity I",
+        "perkPoints": 2,
         "tags": [ "Warlock" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -146,6 +149,7 @@
     },
     {
         "name": "Elemental Entity II",
+        "perkPoints": 2,
         "tags": [ "Warlock" ],
         "requirements": {
             "requiredLevels": [ { "amount": 5, "levelType": "[LEVEL]" } ],
@@ -164,6 +168,7 @@
     },
     {
         "name": "Elemental Entity III",
+        "perkPoints": 2,
         "tags": [ "Warlock" ],
         "requirements": {
             "requiredLevels": [ { "amount": 9, "levelType": "[LEVEL]" } ],
@@ -182,6 +187,7 @@
     },
     {
         "name": "Cosmic Entity I",
+        "perkPoints": 2,
         "tags": [ "Warlock" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -254,6 +260,7 @@
     },
     {
         "name": "Cosmic Entity II",
+        "perkPoints": 2,
         "tags": [ "Warlock" ],
         "requirements": {
             "requiredLevels": [ { "amount": 5, "levelType": "[LEVEL]" } ],
@@ -272,6 +279,7 @@
     },
     {
         "name": "Cosmic Entity III",
+        "perkPoints": 2,
         "tags": [ "Warlock" ],
         "requirements": {
             "requiredLevels": [ { "amount": 9, "levelType": "[LEVEL]" } ],
@@ -290,6 +298,7 @@
     },
     {
         "name": "Mutation: Supernatural Strength",
+        "perkPoints": 1,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -320,6 +329,7 @@
     },
     {
         "name": "Mutation: Extra Limb",
+        "perkPoints": 1,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -350,6 +360,7 @@
     },
     {
         "name": "Mutation: Natural Weapons",
+        "perkPoints": 1,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -380,6 +391,7 @@
     },
     {
         "name": "Mutation: Unnatural Senses",
+        "perkPoints": 1,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -410,6 +422,7 @@
     },
     {
         "name": "Mutation: Natural armor",
+        "perkPoints": 1,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -440,6 +453,7 @@
     },
     {
         "name": "Mutation: Regenerative Tissue",
+        "perkPoints": 1,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -470,6 +484,7 @@
     },
     {
         "name": "Mutation: Wings",
+        "perkPoints": 1,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
             "requiredLevels": [ { "amount": 8, "levelType": "[LEVEL]" } ],

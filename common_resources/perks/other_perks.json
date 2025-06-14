@@ -1,6 +1,7 @@
 [
     {
         "name": "Quick Planning",
+        "perkPoints": 1,
         "tags": [ "Other" ],
         "requirements": {
             "requiredLevels": [ ],

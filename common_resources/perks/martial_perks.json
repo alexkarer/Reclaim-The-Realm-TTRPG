@@ -1,6 +1,7 @@
 [
     {
         "name": "Martial Training",
+        "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [],
@@ -19,6 +20,7 @@
     },
     {
         "name": "Advanced Martial Training",
+        "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -39,6 +41,7 @@
     },
     {
         "name": "Warrior",
+        "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -59,6 +62,7 @@
     },
     {
         "name": "Trained Warrior",
+        "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -79,6 +83,7 @@
     },
     {
         "name": "Versitile Warrior",
+        "perkPoints": 1,
         "tags": [ "Martial", "repeatable" ],
         "requirements": {
             "requiredLevels": [
@@ -101,6 +106,7 @@
     },
     {
         "name": "Blind Fighting",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [],
@@ -121,6 +127,7 @@
     },
     {
         "name": "Weapon Finesse",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -141,6 +148,7 @@
     },
     {
         "name": "Superior Weapon Finesse",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -161,6 +169,7 @@
     },
     {
         "name": "Lightning Attacks",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -183,6 +192,7 @@
     },
     {
         "name": "Unrelenting",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -203,6 +213,7 @@
     },
     {
         "name": "Momentum",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -225,6 +236,7 @@
     },
     {
         "name": "Point blank shot",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -245,6 +257,7 @@
     },
     {
         "name": "Careful Shot",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -265,6 +278,7 @@
     },
     {
         "name": "Impossible Precision",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -287,6 +301,7 @@
     },
     {
         "name": "Expert Dual Wielder",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -307,6 +322,7 @@
     },
     {
         "name": "Flexible Dual Wielder",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -327,6 +343,7 @@
     },
     {
         "name": "Master Dual Wielder",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -347,6 +364,7 @@
     },
     {
         "name": "Improved Critical",
+        "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [ 
@@ -367,6 +385,7 @@
     },
     {
         "name": "Superior Critical",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [ 
@@ -387,6 +406,7 @@
     },
     {
         "name": "Devastating Critical",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -407,6 +427,7 @@
     },
     {
         "name": "Quick-footed",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [ ],
@@ -425,6 +446,7 @@
     },
     {
         "name": "Brawler",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [ ],
@@ -443,6 +465,7 @@
     },
     {
         "name": "Leader",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [ ],
@@ -461,6 +484,7 @@
     },
     {
         "name": "Bulwark",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [ ],
@@ -479,6 +503,7 @@
     },
     {
         "name": "Tactician",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [ ],
@@ -497,6 +522,7 @@
     },
     {
         "name": "Favoured Weapon",
+        "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [ ],

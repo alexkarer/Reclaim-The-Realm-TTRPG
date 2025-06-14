@@ -1,6 +1,7 @@
 [
     {
         "name": "Divine Blessing/Curse",
+        "perkPoints": 1,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -51,6 +52,7 @@
     },
     {
         "name": "Warrior Priest I",
+        "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -79,6 +81,7 @@
     },
     {
         "name": "Warrior Priest II",
+        "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -97,6 +100,7 @@
     },
     {
         "name": "Warrior Priest III",
+        "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 9, "levelType": "[LEVEL]" } ],
@@ -115,6 +119,7 @@
     },
     {
         "name": "Mystic I",
+        "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -143,6 +148,7 @@
     },
     {
         "name": "Mystic II",
+        "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 5, "levelType": "[LEVEL]" } ],
@@ -161,6 +167,7 @@
     },
     {
         "name": "Mystic III",
+        "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 9, "levelType": "[LEVEL]" } ],
@@ -179,6 +186,7 @@
     },
     {
         "name": "Zealot I",
+        "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -197,6 +205,7 @@
     },
     {
         "name": "Zealot II",
+        "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 5, "levelType": "[LEVEL]" } ],
@@ -215,6 +224,7 @@
     },
     {
         "name": "Zealot III",
+        "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 9, "levelType": "[LEVEL]" } ],
@@ -233,6 +243,7 @@
     },
     {
         "name": "Cosmic Interference",
+        "perkPoints": 1,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
@@ -262,6 +273,7 @@
     },
     {
         "name": "Armour of Faith",
+        "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 6, "levelType": "[LEVEL]" } ],
@@ -280,6 +292,7 @@
     },
     {
         "name": "Minor Miracle",
+        "perkPoints": 1,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 3, "levelType": "[LEVEL]" } ],
@@ -329,6 +342,7 @@
     },
     {
         "name": "Miracle",
+        "perkPoints": 1,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 7, "levelType": "[LEVEL]" } ],
@@ -356,7 +370,7 @@
                     "target": "varies",
                     "duration": "varies",
                     "description": [ 
-                        { "regularText": "You invoke a minor Miracle, choose one of the effects below:", "headerLine": null, "bulletPoints": null, "ability": null },
+                        { "regularText": "You invoke a Miracle, choose one of the effects below:", "headerLine": null, "bulletPoints": null, "ability": null },
                         { "regularText": null, "headerLine": null, "bulletPoints": [
                             "Provide tasty food and drink for a village. This food will expire after in 24 hours.",
                             "Heal 2 creatures within 5m [HP].",
@@ -372,6 +386,7 @@
     },
     {
         "name": "Greater Miracle",
+        "perkPoints": 1,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 11, "levelType": "[LEVEL]" } ],
@@ -399,7 +414,7 @@
                     "target": "varies",
                     "duration": "varies",
                     "description": [ 
-                        { "regularText": "You invoke a minor Miracle, choose one of the effects below:", "headerLine": null, "bulletPoints": null, "ability": null },
+                        { "regularText": "You invoke a greater Miracle, choose one of the effects below:", "headerLine": null, "bulletPoints": null, "ability": null },
                         { "regularText": null, "headerLine": null, "bulletPoints": [
                             "Provide tasty food and drink for a town. This food will expire after in 24 hours.",
                             "Restore a creature to life which has died within the last hour.",
@@ -416,6 +431,7 @@
     },
     {
         "name": "Divine Intervention",
+        "perkPoints": 1,
         "tags": [ "Priest" ],
         "requirements": {
             "requiredLevels": [ { "amount": 12, "levelType": "[LEVEL]" } ],

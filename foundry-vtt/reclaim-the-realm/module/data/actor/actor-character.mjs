@@ -34,7 +34,8 @@ export default class RtRCharacter extends RtRActorBase {
 
     schema.attributePoints = new fields.SchemaField({
       totalAttributePoints: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      usedAttributePoints: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+      usedAttributePoints: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      additionalAttributePoints: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
     });
 
     schema.skillPoints = new fields.SchemaField({
@@ -56,6 +57,11 @@ export default class RtRCharacter extends RtRActorBase {
       knownClassTechniques: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       knownMartialManeuvers: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       knownSpells: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+    });
+
+    schema.perks = new fields.SchemaField({
+      additionalPerkPoints: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      totalPerkPoints: new fields.NumberField({ ...requiredInteger, initial: 2, min: 2 }),
     });
 
     schema.martialDamage = new fields.SchemaField({
@@ -86,7 +92,7 @@ export default class RtRCharacter extends RtRActorBase {
     this._calculateSkillPoints();
     this._calculateAttributePoints();
     this._calculateInventoryValues();
-    this._claclulateKnownAbilities();
+    this._caclulateKnownAbilitiesAndPerks();
     this._calculateMartialDamage();
   }
 
@@ -114,7 +120,7 @@ export default class RtRCharacter extends RtRActorBase {
   }
 
   _calculateAttributePoints() {
-    this.attributePoints.totalAttributePoints = (2 * (this.levels.level - 1)) + 8 + 14;
+    this.attributePoints.totalAttributePoints = (2 * (this.levels.level - 1)) + 8 + 14 + this.attributePoints.additionalAttributePoints; 
     this.attributePoints.usedAttributePoints = 0;
     if (this.attributes) {
       for (let [k, v] of Object.entries(this.attributes)) {
@@ -134,10 +140,11 @@ export default class RtRCharacter extends RtRActorBase {
     this.inventory.liftPushDragKg = ccAndLpd.lpd;
   }
 
-  _claclulateKnownAbilities() {
+  _caclulateKnownAbilitiesAndPerks() {
     this.knownAbilities.knownClassTechniques = 2 + Math.floor(this.levels.level / 2) + Math.floor(this.attributes.int.value / 2);
     this.knownAbilities.knownMartialManeuvers = 2 + Math.floor(this.levels.martialLevel / 2) + Math.floor(this.attributes.int.value / 2);
     this.knownAbilities.knownSpells = 2 + Math.floor(this.levels.spellLevel / 2) + Math.floor(this.attributes.int.value / 2);
+    this.perks.totalPerkPoints = this.levels.level * 2 + this.perks.additionalPerkPoints;
   }
 
   _calculateMartialDamage() {

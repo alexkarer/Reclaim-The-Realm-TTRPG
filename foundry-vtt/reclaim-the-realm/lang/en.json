@@ -203,7 +203,8 @@
       "Perk": {
         "FIELDS": {
           "tags": {"label": "Tags"},
-          "requirements": {"label": "Requirements"}
+          "requirements": {"label": "Requirements"},
+          "perkPointsCost": {"label": "Perk Points Cost"}
         }
       },
       "Species": {

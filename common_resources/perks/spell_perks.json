@@ -1,6 +1,7 @@
 [
     {
         "name": "Arcane Training",
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [],
@@ -21,6 +22,7 @@
     },
     {
         "name": "Advanced Arcane Training",
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -43,6 +45,7 @@
     },
     {
         "name": "Caster",
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -65,6 +68,7 @@
     },
     {
         "name": "Versitile Mage",
+        "perkPoints": 1,
         "tags": [ "Spell", "repeatable" ],
         "requirements": {
             "requiredLevels": [
@@ -87,6 +91,7 @@
     },
     {
         "name": "Elementalist",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -118,6 +123,7 @@
     },
     {
         "name": "Pyrmonacer",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -154,6 +160,7 @@
     },
     {
         "name": "Master Pyrmonacer",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -174,6 +181,7 @@
     },
     {
         "name": "Hydromancer",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -194,6 +202,7 @@
     },
     {
         "name": "Master Hydromancer",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -214,6 +223,7 @@
     },
     {
         "name": "Aeromancer",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -234,6 +244,7 @@
     },
     {
         "name": "Master Aeromancer",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -254,6 +265,7 @@
     },
     {
         "name": "Geomancer",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -274,6 +286,7 @@
     },
     {
         "name": "Master Geomancer",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -294,6 +307,7 @@
     },
     {
         "name": "Cosmic Touched",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -314,6 +328,7 @@
     },
     {
         "name": "White mage",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -334,6 +349,7 @@
     },
     {
         "name": "Saint",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -354,6 +370,7 @@
     },
     {
         "name": "Dark apostle",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -374,6 +391,7 @@
     },
     {
         "name": "Dark Lord",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -394,6 +412,7 @@
     },
     {
         "name": "Manipulator",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -414,6 +433,7 @@
     },
     {
         "name": "Conjurer",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -434,6 +454,7 @@
     },
     {
         "name": "Master Conjurer",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -454,6 +475,7 @@
     },
     {
         "name": "Transmuter",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -474,6 +496,7 @@
     },
     {
         "name": "Master Transmuter",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -494,6 +517,7 @@
     },
     {
         "name": "Teleporter",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -514,6 +538,7 @@
     },
     {
         "name": "Veilwalker",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -534,6 +559,7 @@
     },
     {
         "name": "Psychic",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -554,6 +580,7 @@
     },
     {
         "name": "Telekinist",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -574,6 +601,7 @@
     },
     {
         "name": "Master Telekinist",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -594,6 +622,7 @@
     },
     {
         "name": "Telepath",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -614,6 +643,7 @@
     },
     {
         "name": "Master Telepath",
+        "perkPoints": 1,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [

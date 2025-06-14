@@ -1,42 +1,53 @@
 {{! Perk Tab }}
 <section class='tab perks {{tab.cssClass}}' data-group='primary' data-tab='perks'>
-    {{! For the main Perk list, span the right two columns }}
-    <ol class='items-list'>
-        <li class='item flexrow items-header'>
-            <div class='item-name'>{{localize 'Name'}}</div>
-            <div class='item-controls'>
-                {{#if @root.editable}}
-                <a class='item-control item-create' title='Create item' data-action='createDoc'
-                    data-document-class='Item' data-type='perk'>
-                    <i class='fas fa-plus'></i>
-                    {{localize 'DOCUMENT.New' type='perk'}}
-                </a>
-                {{/if}}
-            </div>
-        </li>
-        {{#each perks as |item id|}}
-        <li class='item flexrow' data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
-            <div class='item-name'>
-                <div class='item-image'>
-                    <a class='rollable' data-roll-type='item' data-action='roll'>
-                        <img src='{{item.img}}' title='{{item.name}}' width='24' height='24' />
-                    </a>
-                </div>
-                <div>{{item.name}}</div>
-            </div>
-            <div class='item-controls'>
-                <a class='item-control item-edit' title='{{localize "DOCUMENT.Update" type='perk'}}'
-                    data-action='viewDoc'>
-                    <i class='fas fa-edit'></i>
-                </a>
-                {{#if @root.editable}}
-                <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='perk'}}'
-                    data-action='deleteDoc'>
-                    <i class='fas fa-trash'></i>
-                </a>
-                {{/if}}
-            </div>
-        </li>
-        {{/each}}
-    </ol>
+    {{#if (eq @root.actor.type 'character')}}
+      <div style="margin-top: 15px;" class='flexrow flex-between'>
+        <h6>Available Perk Points</h6>
+        <h6 class="attribute-points">{{ subtract system.perks.totalPerkPoints totalPerkPointsUsed }}</h6>
+      </div>
+    {{/if}}
+    <div class="perk-scrollable-table-wrapper ">
+        <table class="regular-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>{{localize 'Name'}}</th>
+                    <th>{{localize 'RTR.Item.Perk.FIELDS.tags.label'}}</th>
+                    {{#if @root.editable}}
+                    <th>
+                        <a 
+                            class='item-control item-create'
+                            title='{{localize 'DOCUMENT.New' type='perk'}}'
+                            data-action='createDoc'
+                            data-document-class='Item' data-type='perk'>
+                            <i class='fas fa-plus'></i>
+                        </a>
+                    </th>
+                    {{/if}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each perks as |item id|}}
+                <tr class='clickable-table-row' data-action='viewDoc'  data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
+                    <td>
+                        <img src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
+                    </td>
+                    <td style="max-width: 200px;">{{item.name}} ({{item.system.perkPointsCost}})</td>
+                    <td style="max-width: 200px;">{{item.system.tags}}</td>
+                    {{#if @root.editable}}
+                    <td>
+                        <a
+                            class='item-control item-delete'
+                            title='{{localize "DOCUMENT.Delete" type='perk'}}'
+                            data-action='deleteDoc'
+                        >
+                            <i class='fas fa-trash'></i>
+                        </a>
+                    </td>
+                    {{/if}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
 </section>

@@ -4,6 +4,15 @@ This document contains a series of changelogs to keep track of changes happening
 
 ---
 
+## RtR 2.2.0
+
+### General Character Changes
+- Instead of taking 2 Perks Per Level, instead 2 Perk Points
+
+### Perks
+- Added Perk Points which denote the cost of taking a perk
+- Most Perks cost 1 but some Perks cost 2.
+
 ## RtR 2.1.0
 
 ### Equipment

@@ -33,6 +33,10 @@ export default class RtRAbility extends RtRItemBase {
         })
       ),
 
+      requiredPerks: new fields.ArrayField(
+        new fields.StringField({ required: true, nullable: false, blank: false})
+      ),
+
       otherRequirements: new fields.StringField()
     });
 
