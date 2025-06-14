@@ -5,10 +5,12 @@
   "system": {
     "description": "<p>You gain one extra <strong>MP</strong> and you gain a +4 bonus to your <strong>DODGE</strong> against any <em>Opportunity Attack</em>. Additionally escaping a grapple or standing up from <strong>PRONE</strong> requires 2 <strong>MP</strong> less.</p>",
     "tags": "Defensive",
-    "requirements": "3 AGI"
+    "requirements": {
+      "otherRequirements": "3 AGI"
+    }
   },
   "effects": [],
-  "folder": null,
+  "folder": "GfjdP2BKFm8Tftpq",
   "ownership": {
     "default": 0,
     "OLKSfPDHiy1Xf9SG": 3
@@ -18,14 +20,14 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.344",
+    "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749372441042,
-    "modifiedTime": 1749372441042,
+    "modifiedTime": 1749940480925,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_id": "cl4ZBAlpwOhAEsnR",
-  "sort": 0,
+  "sort": 100000,
   "_key": "!items!cl4ZBAlpwOhAEsnR"
 }

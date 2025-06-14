@@ -1,5 +1,5 @@
 {
-  "folder": null,
+  "folder": "E2i9FJ8e7H6phw31",
   "name": "Weapon Attack",
   "type": "ability",
   "_id": "nPSo7OSVz75AJslD",
@@ -38,13 +38,13 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.344",
+    "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1749384902160,
+    "modifiedTime": 1749941080741,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
-  "sort": 0,
+  "sort": 100000,
   "ownership": {
     "default": 0,
     "OLKSfPDHiy1Xf9SG": 3
