@@ -1,0 +1,23 @@
+{
+  "type": "Item",
+  "folder": "t0VnJWfkiuEEEiVJ",
+  "name": "Teleportation",
+  "color": "#9e11bb",
+  "sorting": "a",
+  "_id": "t3xyhbxSotvZx6yD",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749920841260,
+    "modifiedTime": 1749920841260,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!folders!t3xyhbxSotvZx6yD"
+}

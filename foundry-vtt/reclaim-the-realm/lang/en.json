@@ -141,7 +141,8 @@
         "ClassTechnique": "Class Technique",
         "MartialManeuver": "Martial Maneuver",
         "Spell": "Spell",
-        "Perk": "Perk"
+        "Perk": "Perk",
+        "Species": "Species"
       },
       "Equipment": {
         "FIELDS": {
@@ -204,6 +205,14 @@
           "tags": {"label": "Tags"},
           "requirements": {"label": "Requirements"}
         }
+      },
+      "Species": {
+        "FIELDS": {
+          "size": {"label": "Size"},
+          "height": {"label": "Height"},
+          "weight": {"label": "Weight"},
+          "startingHPBonus": {"label": "Starting HP Bonus"}
+        }
       }
     },
     "Effect": {
@@ -225,7 +234,8 @@
       "ability": "Ability",
       "classTechnique": "Class Technique",
       "martialManeuver": "Martial Maneuver",
-      "spell": "Spell"
+      "spell": "Spell",
+      "species": "Species"
     }
   }
 }

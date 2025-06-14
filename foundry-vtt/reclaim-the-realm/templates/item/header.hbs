@@ -60,5 +60,9 @@
         <input class="compact-input grid-span-3" type='text' disabled='true' name='todo' value='TODO' data-dtype='text'/>
       </div>
     {{/if}}
+    {{#if (eq item.type 'species')}}
+      <span>{{localize 'RTR.Item.Species.FIELDS.startingHPBonus.label'}}</span>
+      <input class="compact-input grid-span-3" type='number' name='system.startingBonusHP' value='{{system.startingBonusHP}}' data-dtype='number'/>
+    {{/if}}
   </div>
 </header>

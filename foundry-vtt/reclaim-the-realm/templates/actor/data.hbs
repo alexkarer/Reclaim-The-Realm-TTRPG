@@ -77,6 +77,28 @@
         </div>
       {{/each}}
       </div>
+
+      {{#if (eq @root.actor.type 'character')}}
+        <h6>{{localize "TYPES.Item.species"}}</h6>
+        {{#if (exists species)}}
+        <div class="species-container flexrow" data-item-id='{{species._id}}' data-drag='true' data-document-class='Item'>
+            <div class='item-image'>
+              <a class='rollable' data-action='viewDoc'>
+                  <img src='{{species.img}}' title='{{species.name}}' width='24' height='24' />
+              </a>
+            </div>
+            <span class='rollable' data-action='viewDoc'>{{species.name}}</span>
+            {{#unless system.editLockers.dataEditLocked}}
+              <a class='align-self-right item-control item-delete' title='{{localize "DOCUMENT.Delete" type='species'}}'
+                  data-action='deleteDoc'>
+                  <i class='fas fa-trash'></i>
+              </a>
+            {{/unless}}
+        </div>
+        {{else}}
+        <span>No Species Set!</span>
+        {{/if}}
+      {{/if}}
     </aside>
 
     <aside>

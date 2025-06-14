@@ -22,7 +22,6 @@ export default class RtRActorBase extends foundry.abstract
 
     schema.biography = new fields.HTMLField();
     schema.alignment = new fields.StringField({blank: false, initial: 'lawful good', choices: ['unaligned', 'lawful good', 'lawful neutral', 'lawful evil', 'neutral good', 'true neutral', 'neutral evil', 'chaotic good', 'chaotic neutral', 'chaotic evil']});
-    schema.species = new fields.StringField();
 
     schema.data = new fields.SchemaField({
       hpPerLevel: new fields.NumberField({ ...requiredInteger, initial: 6, min: 1 }),
@@ -76,7 +75,8 @@ export default class RtRActorBase extends foundry.abstract
 
     schema.resistances = new fields.ArrayField(
       new fields.SchemaField({
-        damageType: new fields.StringField({...requiredStringField, choices: Objects.keys(CONFIG.RTR.)})
+        damageType: new fields.StringField({...requiredStringField, choices: Object.keys(CONFIG.RTR.damageTypes)}),
+        value: new fields.NumberField({ ...requiredInteger, min: 1}), 
       })
     ),
 
@@ -86,8 +86,6 @@ export default class RtRActorBase extends foundry.abstract
       meleeSpellAttack: new fields.NumberField({ ...requiredInteger, initial: 0 }),
       rangedSpellAttack: new fields.NumberField({ ...requiredInteger, initial: 0 }),
     });
-
-
 
     schema.skills = new fields.SchemaField(
       Object.keys(CONFIG.RTR.skills).reduce((obj, skill) => {

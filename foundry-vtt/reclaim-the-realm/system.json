@@ -117,6 +117,17 @@
           "TRUSTED": "OBSERVER",
           "ASSISTANT": "OBSERVER"
       }
+    },
+    {
+      "name": "species",
+      "label": "Species",
+      "type": "Item",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "TRUSTED": "OBSERVER",
+          "ASSISTANT": "OBSERVER"
+      }
     }
   ],
   "documentTypes": {
@@ -145,6 +156,9 @@
             "htmlFields": ["description"]
         },
         "spell": {
+            "htmlFields": ["description"]
+        },
+        "species": {
             "htmlFields": ["description"]
         }
     }

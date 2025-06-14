@@ -63,15 +63,15 @@ RTR.equipmentTypes = {
 }
 
 RTR.damageTypes = {
-  Phyiscial": "RTR.DamageTypes.Phyiscial",
-  Fire": "Fire",
-  "Frost": "Frost",
-  "Corrosive": "Corrosive",
-  "Sonic": "Sonic",
-  "Electric": "Electric",
-  "Poison": "Poison",
-  "Psychic": "Psychic",
-  "Cosmic": "Cosmic",
-  "Holy": "Holy",
-  "Unholy": "Unholy"
+  Phyiscial: "RTR.DamageTypes.Phyiscial",
+  Fire: "RTR.DamageTypes.Fire",
+  Frost: "RTR.DamageTypes.Frost",
+  Corrosive: "RTR.DamageTypes.Corrosive",
+  Sonic: "RTR.DamageTypes.Sonic",
+  Electric: "RTR.DamageTypes.Electric",
+  Poison: "RTR.DamageTypes.Poison",
+  Psychic: "RTR.DamageTypes.Psychic",
+  Cosmic: "RTR.DamageTypes.Cosmic",
+  Holy: "RTR.DamageTypes.Holy",
+  Unholy: "RTR.DamageTypes.Unholy"
 }

@@ -61,6 +61,7 @@ Hooks.once('init', function () {
     classTechnique: models.RtRClassTechnique,
     spell: models.RtRSpell,
     martialManeuver: models.RtRMartialManeuver,
+    species: models.RtRSpecies
   };
 
   // Active Effects are never copied to the Actor,
@@ -116,6 +117,11 @@ Handlebars.registerHelper('and', function (x, y) {
 Handlebars.registerHelper('or', function (x, y) {
   return x || y;
 });
+
+Handlebars.registerHelper('exists', function (x) {
+  return x !== undefined;
+});
+
 
 Handlebars.registerHelper('isOneOf4', function (match, arg1, arg2, arg3, arg4) {
   return match === arg1 || match === arg2 || match === arg3 || match === arg4;

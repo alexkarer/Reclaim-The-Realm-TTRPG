@@ -254,6 +254,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     const classTechniques = [];
     const martialManeuvers = [];
     const spells = [];
+    let species = undefined;
 
     // Iterate through items, allocating to containers
     for (let i of this.document.items) {
@@ -269,6 +270,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         martialManeuvers.push(i);
       } else if (i.type === 'spell') {
         spells.push(i);
+      } else if (i.type === 'species') {
+        species = i;
       }
     }
 
@@ -287,6 +290,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     context.classTechniques = classTechniques.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.martialManeuvers = martialManeuvers.sort((a, b) => (a.sort || 0) - (b.sort || 0));
     context.spells = spells.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+
+    context.species = species;
   }
 
   /**
@@ -993,6 +998,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     if (!docRow) {
       docRow = target.closest('tr[data-document-class]');
     }
+    if (!docRow) {
+      docRow = target.closest('div[data-document-class]');
+    }
     if (docRow.dataset.documentClass === 'Item') {
       return this.actor.items.get(docRow.dataset.itemId);
     } else if (docRow.dataset.documentClass === 'ActiveEffect') {
@@ -1183,7 +1191,16 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    */
   async _onDropItem(event, data) {
     if (!this.actor.isOwner) return false;
+
     const item = await Item.implementation.fromDropData(data);
+
+    if (item.type === 'species') {
+      let existingSpecies = this.document.items.find(i => i.type === 'species');
+      if (existingSpecies !== undefined) {
+        console.log('Overriding existing Species ' + existingSpecies.name + ' with ' + item.name);
+        await existingSpecies.delete();
+      }
+    }
 
     // Handle item sorting within the same Actor
     if (this.actor.uuid === item.parent?.uuid)

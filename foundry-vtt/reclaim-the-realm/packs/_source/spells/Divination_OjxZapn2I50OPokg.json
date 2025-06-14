@@ -1,0 +1,23 @@
+{
+  "type": "Item",
+  "folder": "dJS7rmVjn3woPP2I",
+  "name": "Divination",
+  "color": "#b065d2",
+  "sorting": "a",
+  "_id": "OjxZapn2I50OPokg",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749920841260,
+    "modifiedTime": 1749920841260,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!folders!OjxZapn2I50OPokg"
+}

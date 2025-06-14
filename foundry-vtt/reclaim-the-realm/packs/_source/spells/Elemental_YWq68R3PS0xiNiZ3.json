@@ -1,0 +1,23 @@
+{
+  "type": "Item",
+  "folder": null,
+  "name": "Elemental",
+  "color": null,
+  "sorting": "a",
+  "_id": "YWq68R3PS0xiNiZ3",
+  "description": "",
+  "sort": 600000,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749920841260,
+    "modifiedTime": 1749920841260,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!folders!YWq68R3PS0xiNiZ3"
+}

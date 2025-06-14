@@ -1,5 +1,5 @@
 {
-  "folder": null,
+  "folder": "D3MpHQvknf1zMubk",
   "name": "Mind Assault",
   "type": "spell",
   "_id": "kryrSjVrg7FqCLjR",
@@ -16,7 +16,8 @@
       "minimumInt": 0,
       "minimumSpi": 0,
       "minimumPer": 0,
-      "minimumCha": 0
+      "minimumCha": 0,
+      "skillRankRequirements": []
     },
     "usageCost": {
       "apCost": 0,
@@ -45,11 +46,10 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.344",
+    "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1749384908036,
-    "modifiedTime": 1749384908036,
+    "modifiedTime": 1749920841304,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 0,

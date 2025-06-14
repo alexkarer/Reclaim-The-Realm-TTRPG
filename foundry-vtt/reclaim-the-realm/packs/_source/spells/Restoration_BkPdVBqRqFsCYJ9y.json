@@ -1,0 +1,23 @@
+{
+  "type": "Item",
+  "folder": "dJS7rmVjn3woPP2I",
+  "name": "Restoration",
+  "color": "#7ed37f",
+  "sorting": "a",
+  "_id": "BkPdVBqRqFsCYJ9y",
+  "description": "",
+  "sort": 100000,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749920841260,
+    "modifiedTime": 1749920841260,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!folders!BkPdVBqRqFsCYJ9y"
+}

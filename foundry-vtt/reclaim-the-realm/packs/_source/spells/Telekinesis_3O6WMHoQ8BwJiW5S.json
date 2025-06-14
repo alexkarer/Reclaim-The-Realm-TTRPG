@@ -1,0 +1,23 @@
+{
+  "type": "Item",
+  "folder": "t0VnJWfkiuEEEiVJ",
+  "name": "Telekinesis",
+  "color": "#110eb9",
+  "sorting": "a",
+  "_id": "3O6WMHoQ8BwJiW5S",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749920841260,
+    "modifiedTime": 1749920841260,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!folders!3O6WMHoQ8BwJiW5S"
+}

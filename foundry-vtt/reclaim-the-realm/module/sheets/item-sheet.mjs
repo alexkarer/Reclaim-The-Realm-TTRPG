@@ -10,7 +10,6 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
   sheets.ItemSheetV2
 ) {
   constructor(options = {}) {
-    //options.window = {resizable: true}; TODO check how to make it better
     super(options);
     this.#dragDrop = this.#createDragDropHandlers();
   }
@@ -18,6 +17,12 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
   /** @override */
   static DEFAULT_OPTIONS = {
     classes: ['reclaim-the-realm', 'item'],
+    position: {
+      width: 480,
+    },
+    window: {
+      resizable: true
+    },
     actions: {
       onEditImage: this._onEditImage,
       viewDoc: this._viewEffect,
@@ -61,6 +66,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     effects: {
       template: 'systems/reclaim-the-realm/templates/item/effects.hbs',
     },
+    species: {
+      template: 'systems/reclaim-the-realm/templates/item/species.hbs',
+    },
   };
 
   /** @override */
@@ -85,6 +93,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'spell':
         options.parts.push('spell');
+        break;
+      case 'species':
+        options.parts.push('species');
         break;
     }
   }
@@ -123,6 +134,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       case 'ability':
       case 'spell':
       case 'description':
+      case 'species':
         context.tab = context.tabs[partId];
         // Enrich description info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
@@ -166,6 +178,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         this.tabGroups[tabGroup] = 'perk';
       } else if (this.document.type === 'equipment') {
         this.tabGroups[tabGroup] = 'equipment';
+      } else if (this.document.type === 'species') {
+        this.tabGroups[tabGroup] = 'species';
       } else {
         this.tabGroups[tabGroup] = 'description';
       }
@@ -208,6 +222,10 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         case 'effects':
           tab.id = 'effects';
           tab.label += 'Effects';
+          break;
+        case 'species':
+          tab.id = 'species';
+          tab.label += 'Species';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
