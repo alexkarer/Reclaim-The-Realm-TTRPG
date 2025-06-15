@@ -1,0 +1,47 @@
+{
+  "folder": "HLDHbv7giGhmwdki",
+  "name": "Cosmic Entity I",
+  "type": "perk",
+  "_id": "QaiWo1roD078CykT",
+  "img": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp",
+  "system": {
+    "description": "<p>When picking a Cosmic Entity choose one cosmic type. Each Entity comes with it's dedicated entity damage type which is relevant for class techniques later.</p><h6>Angelic Elemental</h6><p>Your Entity is an Angel, a Saint or a former Hero.</p><p>You can learn spells of the Light and Restoration Subdisciplines.</p><p>You gain DR holy equal to 5 + <strong><span style=\"text-decoration:underline\">LEVEL</span></strong></p><p>Each time you make a <strong><span style=\"text-decoration:underline\">D20 TEST</span></strong> where you assist another creature without immediate gain for yourself instead of rolling a dice you can gain 1 Corruption and treat the roll as a 15. If your actions are especially selfless the GM might instead allow the roll to be treated as a 20 instead.</p><p>Your entity damage type is holy.</p><h6>Demonic Elemental</h6><p>Your Entity is a Demon, a long dead Tyrant or villain.</p><p>You can learn spells of the Necromancy and Shadow Subdisciplines.</p><p>You gain DR unholy equal to 5 + <strong><span style=\"text-decoration:underline\">LEVEL</span></strong></p><p>Any time you make a <strong><span style=\"text-decoration:underline\">D20 TEST</span></strong> instead of rolling a dice you can choose to gain 1 Corruption and turn the roll into a natural 20. However for the next <strong><span style=\"text-decoration:underline\">D20 TEST</span></strong> you make the dice roll will be automatically a 1.</p><p>Your entity damage type is unholy.</p><h6>Eldrtich Elemental</h6><ul><li><p>Your Entity is an unfathomable Entity, a Cosmic Horror or a Mysterious Observer.</p></li><li><p>You can learn spells of the Divination, Necromancy, Restoration Subdisciplines.</p></li><li><p>You gain DR cosmic equal to 5 + <strong><span style=\"text-decoration:underline\">LEVEL</span></strong></p></li><li><p>The bound entity possess unkowable knowledge. When making any <strong><span style=\"text-decoration:underline\">INT ATTRIBUTE TEST</span></strong> to recall knowledge instead of rolling a dice you can immediatly succeed that <strong><span style=\"text-decoration:underline\">ATTRIBUTE TEST</span></strong> and gain 1 Corruption.</p></li><li><p>Your entity damage type is cosmic.</p></li></ul>",
+    "perkPointsCost": 0,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "Warlock Class, not selected Elemental Entity Perk"
+    },
+    "tags": "Warlock"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749996410987,
+    "modifiedTime": 1749998671727,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!QaiWo1roD078CykT"
+}

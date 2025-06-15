@@ -1,0 +1,47 @@
+{
+  "folder": "2X8qoRsIZKBFVE34",
+  "name": "Doctor",
+  "type": "perk",
+  "_id": "bVrn5n7R3wi6r3Tu",
+  "img": "systems/reclaim-the-realm/assets/icons/perks/caduceus.svg",
+  "system": {
+    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You have <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">ADVANTAGE</span></a> on any Medicine <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">SKILL TEST</span></a> when using a medi-kit. Additionally when you perform a long rest creatures in your party heal additional <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">HP</span></a> equal to your Ranks in the Medicine Skill.</span></p>",
+    "perkPointsCost": 1,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "5 Ranks in the Medicine Skill"
+    },
+    "tags": "Skill"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749987847049,
+    "modifiedTime": 1749988184676,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!bVrn5n7R3wi6r3Tu"
+}

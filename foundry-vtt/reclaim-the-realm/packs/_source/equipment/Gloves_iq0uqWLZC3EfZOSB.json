@@ -1,0 +1,22 @@
+{
+  "type": "Item",
+  "folder": "fQ66EsoKg9QJ7qad",
+  "name": "Gloves",
+  "color": null,
+  "sorting": "a",
+  "_id": "iq0uqWLZC3EfZOSB",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG",
+    "modifiedTime": 1749989457917
+  },
+  "_key": "!folders!iq0uqWLZC3EfZOSB"
+}

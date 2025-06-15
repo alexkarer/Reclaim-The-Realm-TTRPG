@@ -4,7 +4,7 @@
         "perkPoints": 2,
         "tags": [ "Warlock" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Warlock Class", "not selected Mutant Mage Perk" ]
@@ -33,7 +33,7 @@
         "perkPoints": 2,
         "tags": [ "Warlock" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Warlock Class", "not selected Mutant Warrior Perk" ]
@@ -58,10 +58,10 @@
     },
     {
         "name": "Elemental Entity I",
-        "perkPoints": 2,
+        "perkPoints": 0,
         "tags": [ "Warlock" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Warlock Class", "not selected Cosmic Entity Perk" ]
@@ -187,10 +187,10 @@
     },
     {
         "name": "Cosmic Entity I",
-        "perkPoints": 2,
+        "perkPoints": 0,
         "tags": [ "Warlock" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Warlock Class", "not selected Elemental Entity Perk" ]
@@ -298,10 +298,10 @@
     },
     {
         "name": "Mutation: Supernatural Strength",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -332,7 +332,7 @@
         "perkPoints": 1,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -360,10 +360,10 @@
     },
     {
         "name": "Mutation: Natural Weapons",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -394,7 +394,7 @@
         "perkPoints": 1,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -422,10 +422,10 @@
     },
     {
         "name": "Mutation: Natural armor",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -453,10 +453,10 @@
     },
     {
         "name": "Mutation: Regenerative Tissue",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [],
             "otherRequirements": [ "Warlock Class" ]
@@ -484,7 +484,7 @@
     },
     {
         "name": "Mutation: Wings",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Warlock", "Mutation" ],
         "requirements": {
             "requiredLevels": [ { "amount": 8, "levelType": "[LEVEL]" } ],

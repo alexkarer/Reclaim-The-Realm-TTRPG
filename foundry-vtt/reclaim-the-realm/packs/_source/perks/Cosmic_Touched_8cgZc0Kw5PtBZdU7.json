@@ -1,0 +1,47 @@
+{
+  "folder": "Bd21CPKehyrUiGon",
+  "name": "Cosmic Touched",
+  "type": "perk",
+  "_id": "8cgZc0Kw5PtBZdU7",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "description": "<p>When you cast a spell of the cosmic Discipline you can add 1 to the <strong><span style=\"text-decoration:underline\">SPELL CAST TEST</span></strong>. Additionally during the day if you cast a light or restoration spell you can treat your <strong><span style=\"text-decoration:underline\">SPI</span></strong> Attribute 1 higher for the purposes of casting this spell or alternatively during night necromancy and shadow spells are improved.</p><p>Additionally you can cast divination spells during your sleep (GM determines if that particular spell makes sense) while doing that you can treat your Spirit Attribute 1 higher for the purposes of casting that spell.</p>",
+    "perkPointsCost": 1,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "1 [SPELL LEVEL], can learn Cosmic Spells"
+    },
+    "tags": "Spell"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749995668807,
+    "modifiedTime": 1749995761356,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!8cgZc0Kw5PtBZdU7"
+}

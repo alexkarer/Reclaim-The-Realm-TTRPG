@@ -1,6 +1,6 @@
 [
     {
-        "name": "Martial Training",
+        "name": "Martial Training I",
         "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
@@ -11,7 +11,7 @@
         },
         "textElements": [
             {
-                "regularText": "You learn 2 Basic Martial Maneuvers of one type of your choice.",
+                "regularText": "You gain 1/6th Martial Level Progression and select one Martial Maneuver Type, you are now able to learn Martial Maneuvers of that type.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -19,28 +19,7 @@
         ]
     },
     {
-        "name": "Advanced Martial Training",
-        "perkPoints": 2,
-        "tags": [ "Martial" ],
-        "requirements": {
-            "requiredLevels": [
-                { "amount": 3, "levelType": "[LEVEL]" }
-            ],
-            "requiredAttributes": [],
-            "requiredPerks": [ "Martial Training" ],
-            "otherRequirements": [ ]
-        },
-        "textElements": [
-            {
-                "regularText": "Your [MARTIAL LEVEL] increases by 1 and you can learn 1 additional Basic Martial Maneuver",
-                "headerLine": null,
-                "bulletPoints": null,
-                "ability": null
-            }
-        ]
-    },
-    {
-        "name": "Warrior",
+        "name": "Martial Training II",
         "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
@@ -48,12 +27,12 @@
                 { "amount": 6, "levelType": "[LEVEL]" }
             ],
             "requiredAttributes": [],
-            "requiredPerks": [ "Advanced Martial Training" ],
+            "requiredPerks": [ "Martial Training I" ],
             "otherRequirements": [ ]
         },
         "textElements": [
             {
-                "regularText": "Your [MARTIAL LEVEL] increases by 1 and you can learn 1 additional Basic Martial Maneuver. Additionally you can choose a second type of Martial Maneuvers and you can now also learn Maneuvers of that type.",
+                "regularText": "Select two Martial Maneuver types. You are now able to learn Martial Maneuvers of that type.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -61,20 +40,20 @@
         ]
     },
     {
-        "name": "Trained Warrior",
+        "name": "Martial Training III",
         "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
-                { "amount": 9, "levelType": "[LEVEL]" }
+                { "amount": 12, "levelType": "[LEVEL]" }
             ],
             "requiredAttributes": [],
-            "requiredPerks": [ "Warrior" ],
-            "otherRequirements": [ "" ]
+            "requiredPerks": [ "Martial Training II" ],
+            "otherRequirements": [ ]
         },
         "textElements": [
             {
-                "regularText": "Your [MARTIAL LEVEL] increases by 1 and can learn 1 additional Basic Martial Maneuver. At [LEVEL] 12 your level increases 1 further and you can now also learn 1 Advanced Martial Maneuver.",
+                "regularText": "You are now eligable to learn Advanced Martial Maneuvers even though you do not meet the [MARTIAL LEVEL] Requirements. Additionally you can learn 2 extra Martial Maneuvers.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -126,8 +105,8 @@
         ]
     },
     {
-        "name": "Weapon Finesse",
-        "perkPoints": 1,
+        "name": "Weapon Finesse I",
+        "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -147,15 +126,15 @@
         ]
     },
     {
-        "name": "Superior Weapon Finesse",
-        "perkPoints": 1,
+        "name": "Weapon Finesse II",
+        "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
                 { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
             ],
             "requiredAttributes": [],
-            "requiredPerks": [ ],
+            "requiredPerks": [ "Weapon Finesse I" ],
             "otherRequirements": [ ]
         },
         "textElements": [
@@ -169,7 +148,7 @@
     },
     {
         "name": "Lightning Attacks",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
             "requiredLevels": [
@@ -178,7 +157,7 @@
             "requiredAttributes": [
                 { "amount": 7, "attribute": "[AGI]" }
             ],
-            "requiredPerks": [ "Superior Weapon Finesse" ],
+            "requiredPerks": [ "Weapon Finesse II" ],
             "otherRequirements": [ ]
         },
         "textElements": [
@@ -300,7 +279,7 @@
         ]
     },
     {
-        "name": "Expert Dual Wielder",
+        "name": "Dual Wielding I",
         "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
@@ -329,7 +308,7 @@
                 { "amount": 6, "levelType": "[MARTIAL LEVEL]" }
             ],
             "requiredAttributes": [ ],
-            "requiredPerks": [ ],
+            "requiredPerks": [ "Dual Wielding I" ],
             "otherRequirements": [ ]
         },
         "textElements": [
@@ -342,7 +321,7 @@
         ]
     },
     {
-        "name": "Master Dual Wielder",
+        "name": "Dual Wielding II",
         "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
@@ -350,7 +329,7 @@
                 { "amount": 9, "levelType": "[MARTIAL LEVEL]" }
             ],
             "requiredAttributes": [ ],
-            "requiredPerks": [ "Expert Dual Wielder" ],
+            "requiredPerks": [ "Dual Wielding I" ],
             "otherRequirements": [ ]
         },
         "textElements": [
@@ -363,7 +342,7 @@
         ]
     },
     {
-        "name": "Improved Critical",
+        "name": "Improved Critical I",
         "perkPoints": 2,
         "tags": [ "Martial" ],
         "requirements": {
@@ -384,7 +363,7 @@
         ]
     },
     {
-        "name": "Superior Critical",
+        "name": "Improved Critical II",
         "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
@@ -392,7 +371,7 @@
                 { "amount": 6, "levelType": "[MARTIAL LEVEL]" }
              ],
             "requiredAttributes": [ ],
-            "requiredPerks": [ "Improved Critical" ],
+            "requiredPerks": [ "Improved Critical I" ],
             "otherRequirements": [ ]
         },
         "textElements": [
@@ -405,7 +384,7 @@
         ]
     },
     {
-        "name": "Devastating Critical",
+        "name": "Improved Critical III",
         "perkPoints": 1,
         "tags": [ "Martial" ],
         "requirements": {
@@ -413,7 +392,7 @@
                 { "amount": 9, "levelType": "[MARTIAL LEVEL]" }
             ],
             "requiredAttributes": [ ],
-            "requiredPerks": [ "Superior Critical" ],
+            "requiredPerks": [ "Improved Critical II" ],
             "otherRequirements": [ ]
         },
         "textElements": [

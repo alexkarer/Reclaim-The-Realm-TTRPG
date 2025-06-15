@@ -12,6 +12,15 @@ This document contains a series of changelogs to keep track of changes happening
 ### Perks
 - Added Perk Points which denote the cost of taking a perk
 - Most Perks cost 1 but some Perks cost 2.
+- Rename Barbarian Class Perks to match naming convention of other classes 
+- Remove Level 1 Requirements as they are redundant.
+- rename other perks that depend on other as well to make it more clear (e.g. Weapon Finesse)
+
+#### Rework Martial and Arcana Training Perks
+- Perks give now 1/6th spell/martial proficiency 
+
+### Martial Maneuvers
+- Now reworded Basic Martial Maneuvers so that you can take them as long you have >0 Martial Level Proficiency (As originally intended).
 
 ## RtR 2.1.0
 

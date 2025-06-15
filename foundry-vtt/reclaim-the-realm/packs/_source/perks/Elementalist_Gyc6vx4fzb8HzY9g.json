@@ -1,0 +1,47 @@
+{
+  "folder": "Bd21CPKehyrUiGon",
+  "name": "Elementalist",
+  "type": "perk",
+  "_id": "Gyc6vx4fzb8HzY9g",
+  "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+  "system": {
+    "description": "<p>When you cast a spell of the elemental Discipline you can add 1 to the <strong>SPELL CAST TEST</strong>. Furthermore when you are in a certain Terrain you have an easier time of casting these spells and you can treat your <strong>SPI</strong> Attribute 1 higher for the purpeses of casting this spell.</p><ul><li><p><strong>Fire</strong>: Grassland, Desert, Vulcano</p></li><li><p><strong>Earth</strong>: Hill, Mountain, Underground</p></li><li><p><strong>Water</strong>: Ocean, Lakes, Coasts, Underwater, Arctic</p></li><li><p><strong>Air</strong>: Forest, in the Air, High Mountain Peaks</p></li></ul>",
+    "perkPointsCost": 1,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "1 [SPELL LEVEL], can learn elemental Spells"
+    },
+    "tags": "Spell"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749990888776,
+    "modifiedTime": 1749990926468,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!Gyc6vx4fzb8HzY9g"
+}

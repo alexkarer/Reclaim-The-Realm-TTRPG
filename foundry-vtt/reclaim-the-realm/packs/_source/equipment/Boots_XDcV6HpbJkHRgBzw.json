@@ -1,0 +1,21 @@
+{
+  "type": "Item",
+  "folder": "fQ66EsoKg9QJ7qad",
+  "name": "Boots",
+  "color": null,
+  "sorting": "a",
+  "_id": "XDcV6HpbJkHRgBzw",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!XDcV6HpbJkHRgBzw"
+}

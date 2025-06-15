@@ -1,0 +1,44 @@
+{
+  "folder": "7nQpOQ3rOFCmzMBD",
+  "name": "Versatile Weapon (Sword)",
+  "type": "equipment",
+  "_id": "ZKH3kvOXZMB7vUBL",
+  "img": "icons/weapons/swords/sword-guard.webp",
+  "system": {
+    "description": "<p>It deals medium <strong>MARTIAL DAMAGE</strong> when wielded with one hand but can also be wielded with two hands to deal heavy <strong>MARTIAL DAMAGE</strong></p>",
+    "tier": 2,
+    "type": "weapon",
+    "costBc": 500,
+    "quantity": 1,
+    "weightKg": 1,
+    "weightGramm": 500,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith's Tools",
+    "damage": "medium MARTIAL DAMAGE"
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749381088122,
+    "modifiedTime": 1749989481165,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "_key": "!items!ZKH3kvOXZMB7vUBL"
+}

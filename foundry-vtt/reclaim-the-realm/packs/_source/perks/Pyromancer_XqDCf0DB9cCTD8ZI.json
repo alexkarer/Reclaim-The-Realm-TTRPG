@@ -1,0 +1,47 @@
+{
+  "folder": "Bd21CPKehyrUiGon",
+  "name": "Pyromancer",
+  "type": "perk",
+  "_id": "XqDCf0DB9cCTD8ZI",
+  "img": "icons/magic/fire/elemental-fire-humanoid.webp",
+  "system": {
+    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">When you cast a Pyromancy spell, you can reroll one die during the <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">SPELL CAST TEST</span></a>. Additionally you gain access to the Summon Flame Ability:</span></p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.6B3jocpOZNAp2r0O]{Summon Flame}</p>",
+    "perkPointsCost": 2,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "3 [SPELL LEVEL], Perk:Elementalist, Hydromancer Perk not selected"
+    },
+    "tags": "Spell"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749990940796,
+    "modifiedTime": 1749991406033,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!XqDCf0DB9cCTD8ZI"
+}

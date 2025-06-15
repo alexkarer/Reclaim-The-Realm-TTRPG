@@ -4,14 +4,10 @@
             "name": "Wall Jump",
             "tags": [ "Martial Maneuver (Basic)", "Agile", "Movement" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
-                "requiredAttributes": [
-                    { "amount": 3, "attribute": "AGI" }
-                ],
+                "requiredLevels": [],
+                "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ "3 ranks in the Athletics Skill" ]
+                "otherRequirements": [ "Martial Level Progression > 0", "3 ranks in the Athletics Skill" ]
             },
             "cost": "3 [MP] or [REACTION]",
             "range": "-",
@@ -28,14 +24,12 @@
             "name": "Pass Through",
             "tags": [ "Martial Maneuver (Basic)", "Agile", "Movement" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [
                     { "amount": 3, "attribute": "[AGI]" }
                 ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [ "Martial Level Progression > 0" ]
             },
             "cost": "4 [MP]",
             "range": "-",
@@ -54,12 +48,10 @@
             "name": "Pin Down",
             "tags": [ "Martial Maneuver (Basic)", "Brawl" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "1 [AP]",
             "range": "[MELEE RANGE]",
@@ -72,12 +64,10 @@
             "name": "Meat Shield",
             "tags": [ "Martial Maneuver (Basic)", "Brawl" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "[REACTION]",
             "range": "[MELEE RANGE]",
@@ -90,12 +80,10 @@
             "name": "Throw",
             "tags": [ "Martial Maneuver (Basic)", "Brawl" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "2 [AP]",
             "range": "[MELEE RANGE]",
@@ -108,12 +96,10 @@
             "name": "Charge",
             "tags": [ "Martial Maneuver (Basic)", "Brawl", "Melee" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "3 [AP]",
             "range": "-",
@@ -132,12 +118,10 @@
             "name": "Taunt",
             "tags": [ "Martial Maneuver (Basic, Leader), Charm" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "2 [AP]",
             "range": "3m (2 squares)",
@@ -150,13 +134,11 @@
             "name": "Challenge",
             "tags": [ "Martial Maneuver (Basic, Leader), Charm" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [
                 ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "1 [AP]",
             "range": "9m",
@@ -169,12 +151,10 @@
             "name": "You can take it!",
             "tags": [ "Martial Maneuver (Basic)", "Leader" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "1 [AP]",
             "range": "12m (8 squares)",
@@ -187,14 +167,12 @@
             "name": "Go Get Em!",
             "tags": [ "Martial Maneuver (Basic)", "Leader" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [
                     { "amount": 2, "attribute": "[CHA]" }
                 ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "1 [AP]",
             "range": "12m (8 squares)",
@@ -209,12 +187,10 @@
             "name": "Battle Recovery",
             "tags": [ "Martial Maneuver (Basic, Fortitude), Heal" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "1 [AP], 1 [STAMINA]",
             "range": "-",
@@ -227,12 +203,10 @@
             "name": "Pushing the Limit",
             "tags": [ "Martial Maneuver (Basic)", "Fortitude" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "[FREE], 1 [STAMINA]",
             "range": "-",
@@ -251,12 +225,10 @@
             "name": "Anticipate",
             "tags": [ "Martial Maneuver (Basic)", "Tactical" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "1 or more [AP]",
             "range": "-",
@@ -269,12 +241,10 @@
             "name": "Tag Team",
             "tags": [ "Martial Maneuver (Basic)", "Tactical" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "3 [MP]",
             "range": "[MELEE RANGE]",
@@ -287,12 +257,10 @@
             "name": "Prepared Position",
             "tags": [ "Martial Maneuver (Basic)", "Tactical" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "2 [AP]",
             "range": "9m",
@@ -307,12 +275,10 @@
             "name": "Bash",
             "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "3 [AP]",
             "range": "[MELEE RANGE]",
@@ -329,12 +295,10 @@
             "name": "Pushing Attack",
             "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "3 [AP]",
             "range": "[MELEE RANGE]",
@@ -351,12 +315,10 @@
             "name": "Crippling Strike",
             "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee", "Ranged" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [],
                 "requiredPerks": [ ],
-                "otherRequirements": []
+                "otherRequirements": [ "Martial Level Progression > 0" ]
             },
             "cost": "3 [AP]",
             "range": "[WEAPON RANGE]",
@@ -369,12 +331,10 @@
             "name": "Deep Cut",
             "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee", "Ranged" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [],
                 "requiredPerks": [ ],
-                "otherRequirements": []
+                "otherRequirements": [ "Martial Level Progression > 0" ]
             },
             "cost": "3 [AP]",
             "range": "[WEAPON RANGE]",
@@ -391,12 +351,10 @@
             "name": "Cleave",
             "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "3 [AP]",
             "range": "[MELEE RANGE]",
@@ -413,12 +371,10 @@
             "name": "Running Throw",
             "tags": [ "Martial Maneuver (Basic)", "Weapon", "Ranged" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "3 [AP]",
             "range": "[WEAPON RANGE]",
@@ -431,12 +387,10 @@
             "name": "Multishot",
             "tags": [ "Martial Maneuver (Basic)", "Weapon", "Ranged" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "3 [AP]",
             "range": "[WEAPON RANGE]",
@@ -449,12 +403,10 @@
             "name": "Parry",
             "tags": [ "Martial Maneuver (Basic)", "Weapon", "Melee" ],
             "requirements": {
-                "requiredLevels": [
-                    { "amount": 1, "levelType": "[MARTIAL LEVEL]" }
-                ],
+                "requiredLevels": [],
                 "requiredAttributes": [ ],
                 "requiredPerks": [ ],
-                "otherRequirements": [ ]
+                "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "[REACTION]",
             "range": "-",

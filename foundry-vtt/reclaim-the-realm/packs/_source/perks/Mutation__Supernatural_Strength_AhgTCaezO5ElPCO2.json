@@ -1,0 +1,47 @@
+{
+  "folder": "HLDHbv7giGhmwdki",
+  "name": "Mutation: Supernatural Strength",
+  "type": "perk",
+  "_id": "AhgTCaezO5ElPCO2",
+  "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+  "system": {
+    "description": "<p>For calculating your <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong> you can now use (<strong><span style=\"text-decoration:underline\">SPI</span></strong>-2) instead of your <strong><span style=\"text-decoration:underline\">STR</span></strong></p><h6>Corruption Effect:</h6><p>Increase the <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong> by your current Corruption, but each time you make a or <strong><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></strong> you suffer damage equal to half your current Corruption which can't be reduced in any way</p>",
+    "perkPointsCost": 2,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "Warlock Class"
+    },
+    "tags": "Warlock, Mutation"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749996606624,
+    "modifiedTime": 1749998757011,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!AhgTCaezO5ElPCO2"
+}

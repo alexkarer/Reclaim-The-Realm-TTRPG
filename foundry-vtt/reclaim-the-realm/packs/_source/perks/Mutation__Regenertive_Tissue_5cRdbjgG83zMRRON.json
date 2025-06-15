@@ -1,0 +1,47 @@
+{
+  "folder": "HLDHbv7giGhmwdki",
+  "name": "Mutation: Regenertive Tissue",
+  "type": "perk",
+  "_id": "5cRdbjgG83zMRRON",
+  "img": "icons/skills/wounds/injury-stitched-flesh-red.webp",
+  "system": {
+    "description": "<p>Each time you gain Corruption you heal for <strong><span style=\"text-decoration:underline\">LEVEL</span></strong> + <strong><span style=\"text-decoration:underline\">SPI</span></strong> for each Corruption agained.</p><h6>Corruption Effect:</h6><p>You heal an additional amount equal to your current Corruption but each time you heal. Make a <strong><span style=\"text-decoration:underline\">TOUGHNESS SAVE</span></strong> against a <strong><span style=\"text-decoration:underline\">DT</span></strong> of 10 + Corruption. On a fail you suffer 1 Level of <strong><span style=\"text-decoration:underline\">EXHAUSTION</span></strong></p>",
+    "perkPointsCost": 2,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "Warlock Class"
+    },
+    "tags": "Warlock, Mutation"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749998574083,
+    "modifiedTime": 1749998754338,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!5cRdbjgG83zMRRON"
+}

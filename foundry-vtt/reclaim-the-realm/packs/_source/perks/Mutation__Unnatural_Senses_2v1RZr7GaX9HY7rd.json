@@ -1,0 +1,47 @@
+{
+  "folder": "HLDHbv7giGhmwdki",
+  "name": "Mutation: Unnatural Senses",
+  "type": "perk",
+  "_id": "2v1RZr7GaX9HY7rd",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-large-teal.webp",
+  "system": {
+    "description": "<p>You gain darkvision equal to (<strong><span style=\"text-decoration:underline\">LEVEL</span></strong> m) and you can use your <strong><span style=\"text-decoration:underline\">SPI</span></strong> instead of your <strong><span style=\"text-decoration:underline\">PER</span></strong> for any <strong><span style=\"text-decoration:underline\">ATTRIBUTE TEST</span></strong> that relies on your senses.</p><h6>Corruption Effect:</h6><p>You suffer from hallucinations, each time you make a <strong><span style=\"text-decoration:underline\">RANGED ATTACK</span></strong> if the die is lower than half your Corruption, you hit an Illusion and it automatically misses.</p>",
+    "perkPointsCost": 1,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "Warlock Class"
+    },
+    "tags": "Warlock, Mutation"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749997069690,
+    "modifiedTime": 1749998759754,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!2v1RZr7GaX9HY7rd"
+}

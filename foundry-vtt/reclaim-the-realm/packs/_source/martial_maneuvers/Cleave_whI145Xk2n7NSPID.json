@@ -1,5 +1,5 @@
 {
-  "folder": null,
+  "folder": "UQfl6J5bwp3XepPc",
   "name": "Cleave",
   "type": "martialManeuver",
   "_id": "whI145Xk2n7NSPID",
@@ -38,14 +38,14 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.344",
+    "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749381093609,
-    "modifiedTime": 1749381093609,
+    "modifiedTime": 1749989326117,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
-  "sort": 0,
+  "sort": 100000,
   "ownership": {
     "default": 0,
     "OLKSfPDHiy1Xf9SG": 3

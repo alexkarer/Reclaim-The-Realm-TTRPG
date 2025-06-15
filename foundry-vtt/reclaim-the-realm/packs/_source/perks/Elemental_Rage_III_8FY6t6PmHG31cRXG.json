@@ -1,0 +1,47 @@
+{
+  "folder": "4Nobzc03H98pfdOi",
+  "name": "Elemental Rage III",
+  "type": "perk",
+  "_id": "8FY6t6PmHG31cRXG",
+  "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+  "system": {
+    "description": "<p>Your connection to the elements deepens and each elements effect is improved.</p><ul><li><p><strong>Fire</strong>: The Aura increases to 6m and in addition to setting a target on fire after a successful <strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong> they trigger a firey explosion in a 3m radius around the target that hits every creature except you with the area. If the attack is higher than the creatures <strong><span style=\"text-decoration:underline\">DODGE</span></strong> they take fire damage equal to 2d6 + Rage.</p></li><li><p><strong>Earth</strong>: The Aura increases to 6m and poisonous mist is additionally swirling around you decreasing the <strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong> of enemies within the area by half your Rage.</p></li><li><p><strong>Water</strong>: The Aura increases to 6m and a small snowstorm or maelstrom swirls around you decreasing the <strong><span style=\"text-decoration:underline\">DODGE</span></strong> of enemies within the area by half your Rage.</p></li><li><p><strong>Air</strong>: The Aura increases to 6m and now 3 lightning strikes appear after each <strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong> but they can’t strike the same target twice.</p></li></ul>",
+    "perkPointsCost": 2,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "09 [LEVEL], Perk:Elemental Rage II, Barbarian Class"
+    },
+    "tags": "Barbarian"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749984558945,
+    "modifiedTime": 1749995429920,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!8FY6t6PmHG31cRXG"
+}

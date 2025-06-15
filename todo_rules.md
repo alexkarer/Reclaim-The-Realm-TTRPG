@@ -15,8 +15,6 @@ ____________________________________________________________
 - improve layout of character creation 
 - maybe make seperate pages for the individual headers
 - adjust equipment item tier
-- have another look at the implementation of the martial training perks and spell training perks
-  - should cost 2 perk points and have text that refunds them after completion.
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?
 - rename class names to be more inline with the world?
@@ -37,8 +35,6 @@ ____________________________________________________________
 **Ability Simplifications**
 
 **Character Changes**
-- Maybe extra Perks at the Start
-  - Currently testing with 2 perks per level
 - Maybe more attribute points per level
   - trying out 2 per level and starting with 8
   - need to change text

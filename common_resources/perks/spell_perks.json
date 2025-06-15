@@ -1,6 +1,6 @@
 [
     {
-        "name": "Arcane Training",
+        "name": "Arcane Training I",
         "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
@@ -21,22 +21,22 @@
         ]
     },
     {
-        "name": "Advanced Arcane Training",
+        "name": "Arcane Training II",
         "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
-                { "amount": 4, "levelType": "[LEVEL]" }
+                { "amount": 6, "levelType": "[LEVEL]" }
             ],
             "requiredAttributes": [
                 { "amount": 3, "attribute": "[SPI]" }
             ],
-            "requiredPerks": [ "Arcane Training" ],
+            "requiredPerks": [ "Arcane Training I" ],
             "otherRequirements": [ ]
         },
         "textElements": [
             {
-                "regularText": "You gain an additional [ARCANA, you can learn one additional spell and you now recover 2 [ARCANA] when you spend 1 [STAMINA] during a short rest.. Additionally for the purposes of meeting the requirements of a Perk your [SPELL LEVEL] is now 1.",
+                "regularText": "You gain 1/6th Spell Level Progression and select two additional Spell Subdisciplines. You can now learn spells from that spell discipline. However, you do not increase your [ARCANA] anymore from the Arcane Training benefit.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -44,22 +44,22 @@
         ]
     },
     {
-        "name": "Caster",
+        "name": "Arcane Training III",
         "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
-                { "amount": 8, "levelType": "[LEVEL]" }
+                { "amount": 12, "levelType": "[LEVEL]" }
             ],
             "requiredAttributes": [
                 { "amount": 4, "attribute": "[SPI]" }
             ],
-            "requiredPerks": [ "Advanced Arcane Training" ],
+            "requiredPerks": [ "Arcane Training II" ],
             "otherRequirements": []
         },
         "textElements": [
             {
-                "regularText": "You gain an additional [ARCANA], pick two Spell Subdisciplines of the same Discipline, you can now also learn spells of those two subdiscipline. Additionally you can learn 2 additional spells and you now recover 3 [ARCANA] when you spend 1 [STAMINA] during a short rest.",
+                "regularText": "You can select two additional Spell Subdisciplines. You can now learn spells from that spell subdiscipline. Additionally you gain a +2 bonus to any [SPELL CAST TEST] you make.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -68,7 +68,7 @@
     },
     {
         "name": "Versitile Mage",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell", "repeatable" ],
         "requirements": {
             "requiredLevels": [
@@ -123,7 +123,7 @@
     },
     {
         "name": "Pyrmonacer",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -160,7 +160,7 @@
     },
     {
         "name": "Master Pyrmonacer",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -181,7 +181,7 @@
     },
     {
         "name": "Hydromancer",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -193,16 +193,25 @@
         },
         "textElements": [
             {
-                "regularText": "hen you cast a Hydromancy spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally at will without any [ARCANA] Cost you can change the temperature of water from freezing to boiling at a rate of 1 liter per [AP] spent. You also gain the custom movement Swim(1.5m) and you can use your [SPI] instead of [STR] for Swim Tests.",
+                "regularText": "When you cast a Hydromancy spell, you can reroll one die during the [SPELL CAST TEST]. Additionally you gain the following benefits:",
                 "headerLine": null,
                 "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "At will without any [ARCANA] Cost you can change the temperature of water from freezing to boiling at a rate of 1 liter per [AP] spent.",
+                    "You gain the Swim(1.5m) movement and you can use your [SPI] instead of [STR] for Swim Tests."
+                ],
                 "ability": null
             }
         ]
     },
     {
         "name": "Master Hydromancer",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -223,7 +232,7 @@
     },
     {
         "name": "Aeromancer",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -235,16 +244,25 @@
         },
         "textElements": [
             {
-                "regularText": "When you cast an Aeromancer spell, you can reroll one die during the [SPELL CAST TEST]. For calculating Jump Distance and for any [ATTRIBUTE TEST] related to jumping you can use your [SPI] instead of your [STR]. Additionally you can reduce any fall damage you take by [SPI]*2",
+                "regularText": "When you cast an Aeromancer spell, you can reroll one die during the [SPELL CAST TEST]. Additionally you gain the following Benefits:",
                 "headerLine": null,
                 "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "For calculating Jump Distance and for any [ATTRIBUTE TEST] related to jumping you can use your [SPI] instead of your [STR]",
+                    "You can reduce any fall damage you take by [SPI]*2"
+                ],
                 "ability": null
             }
         ]
     },
     {
         "name": "Master Aeromancer",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -265,7 +283,7 @@
     },
     {
         "name": "Geomancer",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -277,16 +295,25 @@
         },
         "textElements": [
             {
-                "regularText": "When you cast a Geomancer spell, you can reroll one die during the [SPELL CAST TEST].<br>Additionally while you are standing on rocky or earthen Terrain you gain tremorsense (6m), if you already have tremorsense it increases by 3m. Further when you make an [ATTRIBUTE TEST] to climb up rock or earth you can use your [SPI] instead of your [STR].",
+                "regularText": "When you cast a Geomancer spell, you can reroll one die during the [SPELL CAST TEST]. Additionally you gain the following Benefits:",
                 "headerLine": null,
                 "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "While you are standing on rocky or earthen Terrain you gain tremorsense (6m), if you already have tremorsense it increases by 3m.",
+                    "When you make an [ATTRIBUTE TEST] to climb up rock or earth you can use your [SPI] instead of your [STR]."
+                ],
                 "ability": null
             }
         ]
     },
     {
         "name": "Master Geomancer",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -328,7 +355,7 @@
     },
     {
         "name": "White mage",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -349,7 +376,7 @@
     },
     {
         "name": "Saint",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -370,7 +397,7 @@
     },
     {
         "name": "Dark apostle",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -391,7 +418,7 @@
     },
     {
         "name": "Dark Lord",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -433,7 +460,7 @@
     },
     {
         "name": "Conjurer",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -454,7 +481,7 @@
     },
     {
         "name": "Master Conjurer",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -475,7 +502,7 @@
     },
     {
         "name": "Transmuter",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -496,7 +523,7 @@
     },
     {
         "name": "Master Transmuter",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -517,7 +544,7 @@
     },
     {
         "name": "Teleporter",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -538,7 +565,7 @@
     },
     {
         "name": "Veilwalker",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -571,7 +598,7 @@
         },
         "textElements": [
             {
-                "regularText": "When you cast a spell of the Telekinesis or Telepathy Discipline you can add 1 to the [SPELL CAST TEST]. Additionally if you cast a Telekinesis or Telepathy Spell you can cast it with 1 [AP] Additional casting cost to focus on the Spell. When doing so you can treat your [SPI] 1 higher for the purposes of casting the spell.",
+                "regularText": "When you cast a spell of the Telekinesis or Telepathy Discipline you can add 1 to the [SPELL CAST TEST].<br>Additionally if you cast a Telekinesis or Telepathy Spell you can cast it with 1 [AP] Additional casting cost to focus on the Spell. When doing so you can treat your [SPI] 1 higher for the purposes of casting the spell.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -580,7 +607,7 @@
     },
     {
         "name": "Telekinist",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -601,7 +628,7 @@
     },
     {
         "name": "Master Telekinist",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -622,7 +649,7 @@
     },
     {
         "name": "Telepath",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [
@@ -643,7 +670,7 @@
     },
     {
         "name": "Master Telepath",
-        "perkPoints": 1,
+        "perkPoints": 2,
         "tags": [ "Spell" ],
         "requirements": {
             "requiredLevels": [

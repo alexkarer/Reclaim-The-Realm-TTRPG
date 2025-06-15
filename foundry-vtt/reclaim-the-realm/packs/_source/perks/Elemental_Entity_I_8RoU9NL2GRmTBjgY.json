@@ -1,0 +1,47 @@
+{
+  "folder": "HLDHbv7giGhmwdki",
+  "name": "Elemental Entity I",
+  "type": "perk",
+  "_id": "8RoU9NL2GRmTBjgY",
+  "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+  "system": {
+    "description": "<p>When picking an Elemental Entity choose one elemental type. Each Entity comes with it's dedicated entity damage type which is relevant for class techniques later.</p><h6>Fire Elemental</h6><ul><li><p>Your entity is an Fire Elemental, the most passionate and temperamental of elements</p></li><li><p>You can learn spells of the Pyromancy Subdiscipline.</p></li><li><p>You gain <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DR</span></strong></span> fire equal to 5 + <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">LEVEL</span></strong></span></p></li><li><p>Persuasion and Intimidation become Class Skills for you.</p></li><li><p>Your entity damage type is fire.</p></li></ul><h6>Earth Elemental</h6><ul><li><p>Your entity is an Earth Elemental, the most steadfast and stubborn of elements</p></li><li><p>You can learn spells of the Geomancy Subdiscipline.</p></li><li><p>You gain <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DR</span></strong></span> poison equal to 5 + <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">LEVEL</span></strong></span></p></li><li><p>You gain an additional 1 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">HP</span></strong></span> per <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">LEVEL</span></strong></span></p></li><li><p>Your entity damage type is poison.</p></li></ul><h6>Water Elemental</h6><ul><li><p>Your entity is a Water Elemental, the most intiutive and flexible of all elements</p></li><li><p>You can learn spells of the Hydromancy Subdiscipline.</p></li><li><p>You gain <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DR</span></strong></span> frost equal to 5 + <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">LEVEL</span></strong></span></p></li><li><p>You gain swimming speed equal to your walking speed and can breath underwater</p></li><li><p>Your entity damage type is frost.</p></li></ul><h6>Air Elemental</h6><ul><li><p>Your entity is an Air Elemental, the most free spirited and uncaring of elementals</p></li><li><p>You can learn spells of the Aeromancy Subdiscipline.</p></li><li><p>You gain <span style=\"text-decoration:underline\"><span style=\"text-decoration:underline\">DR</span></span> lightning equal to 5 + <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">LEVEL</span></strong></span></p></li><li><p>Increase your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MP</span></strong></span> by 1.</p></li><li><p>Your entity damage type is lightning.</p></li></ul>",
+    "perkPointsCost": 0,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "Warlock Class, not selected Cosmic Entity Perk"
+    },
+    "tags": "Warlock"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749996269340,
+    "modifiedTime": 1749998664718,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!8RoU9NL2GRmTBjgY"
+}

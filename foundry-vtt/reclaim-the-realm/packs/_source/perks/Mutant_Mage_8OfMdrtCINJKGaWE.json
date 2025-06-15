@@ -1,0 +1,47 @@
+{
+  "folder": "HLDHbv7giGhmwdki",
+  "name": "Mutant Mage",
+  "type": "perk",
+  "_id": "8OfMdrtCINJKGaWE",
+  "img": "icons/magic/unholy/silhouette-light-fire-blue.webp",
+  "system": {
+    "description": "<p>You gain the following benefits</p><ul><li><p>Gain an extra 1/3 Spell Level Progression (to a total of 1).</p></li><li><p>If you have a Cosmic Host, you now can learn Spells of the Elemental Discipline, if you have an Elemental Host you can now learn Spells of the Cosmic Discipline</p></li></ul>",
+    "perkPointsCost": 2,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "Warlock Class, not selected Mutant Warrior Perk"
+    },
+    "tags": "Warlock"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749996226241,
+    "modifiedTime": 1749996258699,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!8OfMdrtCINJKGaWE"
+}

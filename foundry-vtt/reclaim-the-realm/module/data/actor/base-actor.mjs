@@ -7,7 +7,7 @@ export default class RtRActorBase extends foundry.abstract
   static defineSchema() {
     const fields = foundry.data.fields;
     const requiredInteger = { required: true, nullable: false, integer: true };
-    const proficiency = { choices: [0, 0.34, 0.67, 1] };
+    const proficiency = { choices: [0, 0.17, 0.34, 0.67, 1] };
     const requiredStringField = { required: true, nullable: false, blank: false };
     const schema = {};
 

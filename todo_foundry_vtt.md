@@ -13,14 +13,13 @@
 ## Actors
 
 - On all places show the formula for calculating, which is fixed but can be modified with additional values.
-- Perk Trees
-- Have all Abilities in the Same Place but in separate columns 
 - Configure prototype token
 - Data Section add Translation 
 - On close automatically lock editing.
 - Add Notifications if there is something todo (e.g. learn new ability, add attribute pooitns, assign skill ranks)
 
 - Handle Cearture Size
+- Add Icons to skill
 
 ### Characters
 
@@ -32,6 +31,7 @@
 - Proper Implementation of Martial Damage
 - Show spell cast test
 - Implement Errors in case too many Abilities or Perks are added.
+- - Perk Trees
 
 ### NPCS
 

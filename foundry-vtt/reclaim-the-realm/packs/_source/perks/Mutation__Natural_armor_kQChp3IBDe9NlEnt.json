@@ -1,0 +1,47 @@
+{
+  "folder": "HLDHbv7giGhmwdki",
+  "name": "Mutation: Natural armor",
+  "type": "perk",
+  "_id": "kQChp3IBDe9NlEnt",
+  "img": "icons/magic/defensive/armor-stone-skin.webp",
+  "system": {
+    "description": "<p>You gain <strong><span style=\"text-decoration:underline\">DR</span></strong> physical equal to 2 + <strong><span style=\"text-decoration:underline\">LEVEL</span></strong>/2 which does not stack with armor.</p><h6>Corruption Effect:</h6><p>Your <strong><span style=\"text-decoration:underline\">DR</span></strong> works now against all damage types, however any <strong><span style=\"text-decoration:underline\">SAVE</span></strong> you make recieves a Penalty equal to half your current Corruption.</p>",
+    "perkPointsCost": 2,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "Warlock Class"
+    },
+    "tags": "Warlock, Mutation"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749998450732,
+    "modifiedTime": 1749998752348,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!kQChp3IBDe9NlEnt"
+}

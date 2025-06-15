@@ -1,0 +1,47 @@
+{
+  "folder": "HLDHbv7giGhmwdki",
+  "name": "Mutation: Wings",
+  "type": "perk",
+  "_id": "xfTQXewVd5z05sRD",
+  "img": "icons/creatures/abilities/wing-batlike-purple-blue.webp",
+  "system": {
+    "description": "<p>You gain Wings based on your entity which grant you the magical capability to fly and you gain special Movement fly(3m).</p><h6>Corruption Effect:</h6><p>Your Wings become harder to control, you now gain fly(6m) but each time you Move using your fly speed you have to move the maximum distance.</p>",
+    "perkPointsCost": 2,
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": [],
+      "requiredNotSelectedPerks": [],
+      "otherRequirements": "8 LEVEL, Warlock Class"
+    },
+    "tags": "Warlock, Mutation"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749998683526,
+    "modifiedTime": 1749998738948,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!xfTQXewVd5z05sRD"
+}

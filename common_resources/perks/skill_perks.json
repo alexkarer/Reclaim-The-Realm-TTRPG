@@ -110,7 +110,7 @@
         },
         "textElements": [
             {
-                "regularText": "You have advantage on any [D20 TEST] to resist or decipher illusions.",
+                "regularText": "You have advantage on any [D20 TEST] to resist or decipher illusions. Additionally once per day when you make an Investigation [SKILL TEST] regardless what your dice result you can request the GM to give you one clue related to what you are trying to find out.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -203,7 +203,7 @@
         },
         "textElements": [
             {
-                "regularText": "TODO",
+                "regularText": "You have advantage on any [PER] Awareness [SKILL TEST] made to target targets benefiting from [PARTIAL CONCEALMENT] or [FULL CONCEALMENT].",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -256,7 +256,7 @@
             "requiredLevels": [ ],
             "requiredAttributes": [ ],
             "requiredPerks": [ ],
-            "otherRequirements": [ "Ranks in the Thievery Skill" ]
+            "otherRequirements": [ "5 Ranks in the Thievery Skill" ]
         },
         "textElements": [
             {

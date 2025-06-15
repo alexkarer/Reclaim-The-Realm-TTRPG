@@ -4,7 +4,7 @@
         "perkPoints": 1,
         "tags": [ "Priest" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Priest Class" ]
@@ -55,7 +55,7 @@
         "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Priest Class", "not selected Zealot I or Mystic I Perks" ]
@@ -84,7 +84,7 @@
         "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Priest Class" ]
@@ -122,7 +122,7 @@
         "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Priest Class", "not selected Warrior Priest I or Zealot I Perks" ]
@@ -189,7 +189,7 @@
         "perkPoints": 2,
         "tags": [ "Priest" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Priest Class", "not selected Warrior Priest I or Mystic I Perks" ]
@@ -246,7 +246,7 @@
         "perkPoints": 1,
         "tags": [ "Priest" ],
         "requirements": {
-            "requiredLevels": [ { "amount": 1, "levelType": "[LEVEL]" } ],
+            "requiredLevels": [ ],
             "requiredAttributes": [],
             "requiredPerks": [ ],
             "otherRequirements": [ "Priest Class" ]
