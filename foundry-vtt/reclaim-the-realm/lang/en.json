@@ -179,7 +179,8 @@
           "usageCost": {"label": "Usage Cost"},
           "range": {"label": "Range"},
           "targets": {"label": "Target(s)"},
-          "duration": {"label": "Duration"}
+          "duration": {"label": "Duration"},
+          "formula": { "label": "Custom Roll Formula" }
         }
       },
       "ClassTechnique": {

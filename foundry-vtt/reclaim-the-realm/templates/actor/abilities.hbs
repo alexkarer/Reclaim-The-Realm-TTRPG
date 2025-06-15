@@ -4,260 +4,330 @@
   <div class="abilities-container">
     {{#if (eq actor.type 'character')}}
       <h5 style="margin-top: 10px;">Class Techniques</h5>
+
       <div style="margin-top: 5px;" class="flexrow">
+
         <div class="tooltip" style="margin-right: 5px;">
           <input type='number' disabled="true" name='system.knownAbilities.knownClassTechniques' value='{{system.knownAbilities.knownClassTechniques}}' data-dtype='Number'/>
           <span class="tooltiptext">Known Class Techniques</span>
         </div>
+
         <div class="tooltip" style="margin-left: 5px;">
           <input type='text' name='system.classResource' value='{{system.classResource}}' data-dtype='Text'/>
           <span class="tooltiptext">Class Resource Tracker</span>
         </div>
+
       </div>
-      <ol class='items-list'>
-        <li class='item flexrow items-header'>
-          <div class='item-name'>{{localize 'Name'}}</div>
-          <div class='item-controls'>
+
+      <table class="slim-table" style="margin-top: 5px;">
+        <thead>
+          <tr>
+            <th></th>
+            <th>{{localize 'Name'}}</th>
+            <th>{{localize 'RTR.Item.Ability.FIELDS.usageCost.label'}}</th>
+            <th>{{localize 'Roll'}}</th>
             {{#if @root.editable}}
-            <a class='item-control item-create' title='{{localize "DOCUMENT.Create" type='classTechnique'}}'
-              data-action='createDoc' data-document-class='Item' data-type='classTechnique'>
-              <i class='fas fa-plus'></i>
-            </a>
-            {{/if}}
-          </div>
-        </li>
-        {{#each classTechniques as |item id|}}
-        <li class='item flexrow' data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
-          <div class='item-name flexrow'>
-            <div class='item-image'>
-              <a class='rollable' data-roll-type='item' data-action='viewDoc'>
-                <img src='{{item.img}}' title='{{item.name}}' width='24' height='24' />
+            <th>
+              <a class='item-control item-create' title='{{localize "DOCUMENT.Create" type='spell'}}'
+                data-action='createDoc' data-document-class='Item' data-type='classTechnique'>
+                <i class='fas fa-plus'></i>
               </a>
-            </div>
-            <div class="rollable" data-action='viewDoc'>{{item.name}}</div>
-          </div>
-          <div>
-            <span class="rollable" data-action='viewDoc'>{{item.system.usageCost.rawStringCost}}</span>
-          </div>
-          <div class='item-controls'>
-            {{#if @root.editable}}
-            <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='classTechnique'}}'
-              data-action='deleteDoc'>
-              <i class='fas fa-trash'></i>
-            </a>
+            </th>
             {{/if}}
-          </div>
-        </li>
-        {{/each}}
-      </ol>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each classTechniques as |item id|}}
+          <tr data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
+            <td>
+              <img class="rollable" data-action='viewDoc' src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
+            </td>
+            <td style="max-width: 180px;" class="rollable" data-action='viewDoc'>{{item.name}}</td>
+            <td class="rollable" data-action='viewDoc'>{{item.system.usageCost.rawStringCost}}</td>
+            <td>
+              <img class='rollable-image' data-roll-type='item' data-action='roll' src='/systems/reclaim-the-realm/assets/icons/actor/rolling-dices.svg' width='24' height='24'/>
+            </td>
+            {{#if @root.editable}}
+            <td>
+              <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='classTechnique'}}' data-action='deleteDoc'>
+                <i class='fas fa-trash'></i>
+              </a>
+            </td>
+            {{/if}}
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
   
       <!-- MARTIAL MANEUVERS -->
         <hr>
         <h5 style="margin-top: 0px;">Martial Maneuvers</h5>
+
+        <div style="margin-top: 5px;" class="grid grid-4col">
+          <label>Known Martial Maneuver Types:</label>
+          <input class="grid-span-3" type='text' name='system.knownAbilities.knownMartialManeuversTypes' value='{{system.knownAbilities.knownMartialManeuversTypes}}' data-dtype='text'/>
+        </div>
+
         <div style="margin-top: 5px;" class="flexrow">
+
           <div style="margin-right: 5px;" class="tooltip">
             <input type='number' disabled="true" name='system.knownAbilities.knownMartialManeuvers' value='{{system.knownAbilities.knownMartialManeuvers}}' data-dtype='Number'/>
             <span class="tooltiptext">Known Martial Maneuvers</span>
           </div>
-          <div style="margin-left: 5px;margin-right: 5px;">
-            <div class="tooltip rollable-container">
-              <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
-                  data-action='roll'
-                  data-roll='d20 + @meleeMartialAttack - @exhh'
-                  data-label='Meele Martial Attack'
-              >
-              <span class="rollable-text-centered" 
-                  data-action='roll'
-                  data-roll='d20 + @meleeMartialAttack - @exh'
-                  data-label='Meele Martial Attack'
-              >{{numberFormat (subtract system.attackBonuses.meleeMartialAttack @root.system.exhaustion) decimals=0}}</span>
-              <span class="tooltiptext">Meele Martial Attack Bonus</span>
+
+          <div class="ability-characteristic tooltip">
+            <div class="flexrow">
+              <img src="/systems/reclaim-the-realm/assets/icons/actor/saber-slash.svg" alt="Meele Martial Attack Bonus" height='28' width='28'>
+              <div class="rollable-container">
+                <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
+                  data-action='roll' data-roll='d20 + @meleeMartialAttack - @exhh' data-label='Meele Martial Attack'
+                >
+                <span class="rollable-text-centered" 
+                  data-action='roll' data-roll='d20 + @meleeMartialAttack - @exh' data-label='Meele Martial Attack'
+                >{{numberFormat (subtract system.attackBonuses.meleeMartialAttack @root.system.exhaustion) decimals=0}}</span>
+              </div>
             </div>
+            <span class="tooltiptext">Meele Martial Attack Bonus</span>
           </div>
-          <div style="margin-left: 5px;margin-right: 5px;">
-            <div class="tooltip rollable-container">
-              <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
-                  data-action='roll'
-                  data-roll='d20 + @rangedMartialAttack - @exhh'
-                  data-label='Ranged Martial Attack'
-              >
-              <span class="rollable-text-centered" 
-                  data-action='roll'
-                  data-roll='d20 + @rangedMartialAttack - @exh'
-                  data-label='Ranged Martial Attack'
-              >{{numberFormat (subtract system.attackBonuses.rangedMartialAttack @root.system.exhaustion) decimals=0}}</span>
-              <span class="tooltiptext">Ranged Martial Attack Bonus</span>
+
+          <div class="ability-characteristic tooltip">
+            <div class="flexrow">
+              <img src="/systems/reclaim-the-realm/assets/icons/actor/high-shot.svg" alt="Ranged Martial Attack Bonus" height='28' width='28'>
+              <div class="rollable-container">
+                <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
+                    data-action='roll' data-roll='d20 + @rangedMartialAttack - @exhh' data-label='Ranged Martial Attack'
+                >
+                <span class="rollable-text-centered" data-action='roll'data-roll='d20 + @rangedMartialAttack - @exh'data-label='Ranged Martial Attack'>
+                  {{numberFormat (subtract system.attackBonuses.rangedMartialAttack @root.system.exhaustion) decimals=0}}
+                </span>
+              </div>
             </div>
+            <span class="tooltiptext">Ranged Martial Attack Bonus</span>
           </div>
-          <div class="tooltip" style="margin-left: 5px;margin-right: 5px;">
-            <input type='text' disabled="true" name='system.martialDamage.light' value='{{system.martialDamage.light}}' data-dtype='text'/>
+
+          <div class="ability-characteristic tooltip">
+            <div class="flexrow">
+              <img src="/systems/reclaim-the-realm/assets/icons/actor/plain-dagger.svg" alt="Light Martial Damage" height='28' width='28'>
+              <span class="align-self-center rollable" data-action='roll' data-roll='@lightMartialDamage' data-label='Light Martial Damage'>
+                 {{system.martialDamage.light}}
+              </span>
+            </div>
             <span class="tooltiptext">Light Martial Damage</span>
           </div>
-          <div class="tooltip" style="margin-left: 5px;margin-right: 5px;">
-            <input type='text' disabled="true" name='system.martialDamage.medium' value='{{system.martialDamage.medium}}' data-dtype='text'/>
+
+          <div class="ability-characteristic tooltip">
+            <div class="flexrow">
+              <img src="/systems/reclaim-the-realm/assets/icons/actor/broadsword.svg" alt="Medium Martial Damage" height='28' width='28'>
+              <span class="align-self-center rollable" data-action='roll' data-roll='@mediumMartialDamage' data-label='Medium Martial Damage'>
+                 {{system.martialDamage.medium}}
+              </span>
+            </div>
             <span class="tooltiptext">Medium Martial Damage</span>
           </div>
-          <div class="tooltip" style="margin-right: 5px;">
-            <input type='text' disabled="true" name='system.martialDamage.heavy' value='{{system.martialDamage.heavy}}' data-dtype='text'/>
+
+          <div class="ability-characteristic tooltip">
+            <div class="flexrow">
+              <img src="/systems/reclaim-the-realm/assets/icons/actor/battle-axe.svg" alt="Heavy Martial Damage" height='28' width='28'>
+              <span class="align-self-center rollable" data-action='roll' data-roll='@heavyMartialDamage' data-label='Heavy Martial Damage'>
+                 {{system.martialDamage.heavy}}
+              </span>
+            </div>
             <span class="tooltiptext">Heavy Martial Damage</span>
           </div>
+
         </div>
       {{#if (neq system.levels.martialProficency 0)}}
-        <ol class='items-list'>
-          <li class='item flexrow items-header'>
-            <div class='item-name'>{{localize 'Name'}}</div>
-            <div class='item-controls'>
+        <table class="slim-table" style="margin-top: 5px;">
+          <thead>
+            <tr>
+              <th></th>
+              <th>{{localize 'Name'}}</th>
+              <th>{{localize 'RTR.Item.Ability.FIELDS.usageCost.label'}}</th>
+              <th>{{localize 'Roll'}}</th>
               {{#if @root.editable}}
-              <a class='item-control item-create' title='{{localize "DOCUMENT.Create" type='martialManeuver'}}'
-                data-action='createDoc' data-document-class='Item' data-type='martialManeuver'>
-                <i class='fas fa-plus'></i>
-              </a>
-              {{/if}}
-            </div>
-          </li>
-          {{#each martialManeuvers as |item id|}}
-          <li class='item flexrow' data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
-            <div class='item-name flexrow'>
-              <div class='item-image'>
-                <a class='rollable' data-roll-type='item' data-action='viewDoc'>
-                  <img src='{{item.img}}' title='{{item.name}}' width='24' height='24' />
+              <th>
+                <a class='item-control item-create' title='{{localize "DOCUMENT.Create" type='spell'}}'
+                  data-action='createDoc' data-document-class='Item' data-type='martialManeuver'>
+                  <i class='fas fa-plus'></i>
                 </a>
-              </div>
-              <div class="rollable" data-action='viewDoc'>{{item.name}}</div>
-            </div>
-            <div>
-              <span class="rollable" data-action='viewDoc'>{{item.system.usageCost.rawStringCost}}</span>
-            </div>
-            <div class='item-controls'>
-              {{#if @root.editable}}
-              <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='martialManeuver'}}'
-                data-action='deleteDoc'>
-                <i class='fas fa-trash'></i>
-              </a>
+              </th>
               {{/if}}
-            </div>
-          </li>
-          {{/each}}
-        </ol>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each martialManeuvers as |item id|}}
+            <tr data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
+              <td>
+                <img class="rollable" data-action='viewDoc' src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
+              </td>
+              <td style="max-width: 180px;" class="rollable" data-action='viewDoc'>{{item.name}}</td>
+              <td class="rollable" data-action='viewDoc'>{{item.system.usageCost.rawStringCost}}</td>
+              <td>
+                <img class='rollable-image' data-roll-type='item' data-action='roll' src='/systems/reclaim-the-realm/assets/icons/actor/rolling-dices.svg' width='24' height='24'/>
+              </td>
+              {{#if @root.editable}}
+              <td>
+                <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='martialManeuver'}}' data-action='deleteDoc'>
+                  <i class='fas fa-trash'></i>
+                </a>
+              </td>
+              {{/if}}
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
       {{/if}}
 
       <!-- SPELLS -->
       {{#if (neq system.levels.spellProficency 0)}}
         <hr>
         <h5 style="margin-top: 0px;">Spells</h5>
+
+        <div style="margin-top: 5px;" class="grid grid-4col">
+          <label>Known Spell Disciplines:</label>
+          <input type='text' class="grid-span-3" name='system.knownAbilities.knownSpellDisciplines' value='{{system.knownAbilities.knownSpellDisciplines}}' data-dtype='text'/>
+        </div>
+
         <div style="margin-top: 5px;" class="flexrow">
+
           <div class="tooltip" style="margin-right: 10px;">
             <input type='number' disabled="true" name='system.knownAbilities.knownSpells' value='{{system.knownAbilities.knownSpells}}' data-dtype='Number'/>
             <span class="tooltiptext">Known Spells</span>
           </div>
-          <div style="margin-left: 10px;margin-right: 10px;">
-            <div class="tooltip rollable-container">
-              <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
-                  data-action='roll'
-                  data-roll='d20 + @meleeSpellAttack - @exhh'
-                  data-label='Meele Spell Attack'
-              >
-              <span class="rollable-text-centered" 
-                  data-action='roll'
-                  data-roll='d20 + @meleeSpellAttack - @exh'
-                  data-label='Meele Spell Attack'
-              >{{numberFormat (subtract system.attackBonuses.meleeSpellAttack @root.system.exhaustion) decimals=0}}</span>
-              <span class="tooltiptext">Meele Spell Attack Bonus</span>
-            </div>
-          </div>
-          <div style="margin-left: 10px;">
-            <div class="tooltip rollable-container">
-              <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
-                  data-action='roll'
-                  data-roll='d20 + @rangedSpellAttack - @exhh'
-                  data-label='Ranged Spell Attack'
-              >
-              <span class="rollable-text-centered" 
-                  data-action='roll'
-                  data-roll='d20 + @rangedSpellAttack - @exh'
-                  data-label='Ranged Spell Attack'
-              >{{numberFormat (subtract system.attackBonuses.rangedSpellAttack @root.system.exhaustion) decimals=0}}</span>
-              <span class="tooltiptext">Ranged Spell Attack Bonus</span>
-            </div>
-          </div>
-        </div>
-        <ol class='items-list'>
-          <li class='item flexrow items-header'>
-            <div class='item-name'>{{localize 'Name'}}</div>
-            <div class='item-controls'>
-              {{#if @root.editable}}
-              <a class='item-control item-create' title='{{localize "DOCUMENT.Create" type='spell'}}'
-                data-action='createDoc' data-document-class='Item' data-type='spell'>
-                <i class='fas fa-plus'></i>
-              </a>
-              {{/if}}
-            </div>
-          </li>
-          {{#each spells as |item id|}}
-          <li class='item flexrow' data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
-            <div class='item-name flexrow'>
-              <div class='item-image'>
-                <a class='rollable' data-action='viewDoc'>
-                  <img src='{{item.img}}' title='{{item.name}}' width='24' height='24' />
-                </a>
+
+          <div class="ability-characteristic tooltip">
+            <div class="flexrow">
+              <img src="/systems/reclaim-the-realm/assets/icons/actor/sparkles.svg" alt="Spell Cast Test" height='28' width='28'>
+              <div class="rollable-container">
+                <img src="/icons/svg/d6-grey.svg" class="rollable-image" alt="2d6" height='28' width='28'
+                  data-action='roll' data-roll='2d6+@spellCastBonus' data-label='Spell Cast Test'
+                >
+                <span class="rollable-text-centered" data-action='roll' data-roll='2d6+@spellCastBonus' data-label='Spell Cast Test'>
+                  {{numberFormat system.levels.spellLevel decimals=0}}
+                </span>
               </div>
-              <div class="rollable" data-action='viewDoc'>{{item.name}} ({{item.system.spellDifficulty}})</div>
             </div>
-            <div>
-              <span class="rollable" data-action='viewDoc'>{{item.system.usageCost.rawStringCost}}</span>
+            <span class="tooltiptext">Spell Cast Test</span>
+          </div>
+
+          <div class="ability-characteristic tooltip">
+            <div class="flexrow">
+              <img src="/systems/reclaim-the-realm/assets/icons/actor/fire-spell-cast.svg" alt="Meele Spell Attack" height='28' width='28'>
+              <div class="rollable-container">
+                <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
+                    data-action='roll' data-roll='d20 + @meleeSpellAttack - @exhh' data-label='Meele Spell Attack'
+                >
+                <span class="rollable-text-centered" data-action='roll'data-roll='d20 + @meleeSpellAttack - @exh'data-label='Meele Spell Attack'>
+                  {{numberFormat (subtract system.attackBonuses.meleeSpellAttack @root.system.exhaustion) decimals=0}}
+                </span>
+              </div>
             </div>
-            <div class='item-controls'>
+            <span class="tooltiptext">Meele Spell Attack Bonus</span>
+          </div>
+
+          <div class="ability-characteristic tooltip">
+            <div class="flexrow">
+              <img src="/systems/reclaim-the-realm/assets/icons/actor/ringed-beam.svg" alt="Ranged Spell Attack" height='28' width='28'>
+              <div class="rollable-container">
+                <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
+                    data-action='roll' data-roll='d20 + @rangedSpellAttack - @exhh' data-label='Ranged Spell Attack'
+                >
+                <span class="rollable-text-centered"  data-action='roll' data-roll='d20 + @rangedSpellAttack - @exh' data-label='Ranged Spell Attack'>
+                  {{numberFormat (subtract system.attackBonuses.rangedSpellAttack @root.system.exhaustion) decimals=0}}
+                </span>
+              </div>
+            </div>
+            <span class="tooltiptext">Ranged Spell Attack Bonus</span>
+          </div>
+
+        </div>
+        <table class="slim-table" style="margin-top: 5px;">
+          <thead>
+            <tr>
+              <th></th>
+              <th>{{localize 'Name'}}</th>
+              <th>{{localize 'RTR.Item.Ability.FIELDS.usageCost.label'}}</th>
+              <th>Cast</th>
+              <th>{{localize 'Roll'}}</th>
               {{#if @root.editable}}
-              <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='spell'}}'
-                data-action='deleteDoc'>
-                <i class='fas fa-trash'></i>
-              </a>
+              <th>
+                <a class='item-control item-create' title='{{localize "DOCUMENT.Create" type='spell'}}'
+                  data-action='createDoc' data-document-class='Item' data-type='spell'>
+                  <i class='fas fa-plus'></i>
+                </a>
+              </th>
               {{/if}}
-            </div>
-          </li>
-          {{/each}}
-        </ol>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each spells as |item id|}}
+            <tr data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
+              <td>
+                <img class='rollable' data-action='viewDoc' src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
+              </td>
+              <td style='max-width: 150px;' class="rollable" data-action='viewDoc'>{{item.name}} ({{item.system.spellDifficulty}})</td>
+              <td style='max-width: 150px;' class="rollable" data-action='viewDoc'>{{item.system.usageCost.rawStringCost}}</td>
+              <td>
+                <img class='rollable-image' data-action='castSpell' src='/systems/reclaim-the-realm/assets/icons/actor/sparkles.svg' width='24' height='24'/>
+              </td>
+              <td>
+                <img class='rollable-image' data-roll-type='item' data-action='roll' src='/systems/reclaim-the-realm/assets/icons/actor/rolling-dices.svg' width='24' height='24'/>
+              </td>
+              {{#if @root.editable}}
+              <td>
+                <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='spell'}}' data-action='deleteDoc'>
+                  <i class='fas fa-trash'></i>
+                </a>
+              </td>
+              {{/if}}
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
       {{/if}}
     {{/if}}
 
     <!-- CORE ABILITIES -->
     <hr>
     <h5 style="margin-top: 0px;">Core Abilities</h5>
-    <ol class='items-list'>
-      <li class='item flexrow items-header'>
-        <div class='item-name'>{{localize 'Name'}}</div>
-        <div class='item-controls'>
+    <table class="slim-table" style="margin-top: 5px;">
+      <thead>
+        <tr>
+          <th></th>
+          <th>{{localize 'Name'}}</th>
+          <th>{{localize 'RTR.Item.Ability.FIELDS.usageCost.label'}}</th>
+          <th>{{localize 'Roll'}}</th>
           {{#if @root.editable}}
-          <a class='item-control item-create' title='{{localize "DOCUMENT.Create" type=' ability'}}'
-            data-action='createDoc' data-document-class='Item' data-type='ability'>
-            <i class='fas fa-plus'></i>
-          </a>
-          {{/if}}
-        </div>
-      </li>
-      {{#each abilities as |item id|}}
-      <li class='item flexrow' data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
-        <div class='item-name flexrow'>
-          <div class='item-image'>
-            <a class='rollable' data-action='viewDoc'>
-              <img src='{{item.img}}' title='{{item.name}}' width='24' height='24' />
+          <th>
+            <a class='item-control item-create' title='{{localize "DOCUMENT.Create" type='spell'}}'
+              data-action='createDoc' data-document-class='Item' data-type='ability'>
+              <i class='fas fa-plus'></i>
             </a>
-          </div>
-          <div class="rollable" data-action='viewDoc'>{{item.name}}</div>
-        </div>
-        <div>
-          <span class="rollable" data-action='viewDoc'>{{item.system.usageCost.rawStringCost}}</span>
-        </div>
-        <div class='item-controls'>
-          {{#if @root.editable}}
-          <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='ability'}}'
-            data-action='deleteDoc'>
-            <i class='fas fa-trash'></i>
-          </a>
+          </th>
           {{/if}}
-        </div>
-      </li>
-      {{/each}}
-    </ol>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each abilities as |item id|}}
+        <tr data-item-id='{{item._id}}' data-drag='true' data-document-class='Item'>
+          <td>
+            <img class="rollable" data-action='viewDoc' src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
+          </td>
+          <td style="max-width: 180px;" class="rollable" data-action='viewDoc'>{{item.name}}</td>
+          <td class="rollable" data-action='viewDoc'>{{item.system.usageCost.rawStringCost}}</td>
+          <td>
+            <img class='rollable-image' data-roll-type='item' data-action='roll' src='/systems/reclaim-the-realm/assets/icons/actor/rolling-dices.svg' width='24' height='24'/>
+          </td>
+          {{#if @root.editable}}
+          <td>
+            <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='ability'}}' data-action='deleteDoc'>
+              <i class='fas fa-trash'></i>
+            </a>
+          </td>
+          {{/if}}
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
   </div>
 </section>

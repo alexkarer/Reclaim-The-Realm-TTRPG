@@ -56,7 +56,9 @@ export default class RtRCharacter extends RtRActorBase {
     schema.knownAbilities = new fields.SchemaField({
       knownClassTechniques: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       knownMartialManeuvers: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      knownSpells: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+      knownMartialManeuversTypes: new fields.StringField(),
+      knownSpells: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      knownSpellDisciplines: new fields.StringField()
     });
 
     schema.perks = new fields.SchemaField({
@@ -99,6 +101,10 @@ export default class RtRCharacter extends RtRActorBase {
   getRollData() {
     const data = super.getRollData();
     data.exh = this.exhaustion;
+    data.spellCastBonus = this.levels.spellLevel;
+    data.lightMartialDamage = this.martialDamage.light;
+    data.mediumMartialDamage = this.martialDamage.medium;
+    data.heavyMartialDamage = this.martialDamage.heavy;
     return data;
   }
 

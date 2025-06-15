@@ -44,6 +44,7 @@ export class RtRItem extends Item {
 
     // If there's no roll data, send a chat message.
     if (!this.system.formula) {
+      // renderChatMessageHTML 
       ChatMessage.create({
         speaker: speaker,
         rollMode: rollMode,

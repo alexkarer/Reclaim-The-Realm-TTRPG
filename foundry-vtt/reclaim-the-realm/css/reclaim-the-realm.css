@@ -467,25 +467,6 @@
 .reclaim-the-realm .resource-guage-gold::-webkit-meter-even-less-good-value {
   background: goldenrod;
 }
-.reclaim-the-realm .items-header {
-  height: 28px;
-  margin: 2px 0;
-  padding: 0;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.05);
-  border: 2px groove var(--reclaim-the-realm-c-groove);
-  font-weight: bold;
-}
-.reclaim-the-realm .items-header > * {
-  font-size: 14px;
-  text-align: center;
-}
-.reclaim-the-realm .items-header .item-name {
-  font-weight: bold;
-  padding-left: 5px;
-  text-align: left;
-  display: flex;
-}
 .reclaim-the-realm .equipment-scrollable-table-wrapper {
   margin-top: 10px;
   height: 390px;
@@ -499,78 +480,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
-}
-.reclaim-the-realm .items-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  color: var(--reclaim-the-realm-c-tan);
-}
-.reclaim-the-realm .items-list .item-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.reclaim-the-realm .items-list .item-name {
-  flex: 2;
-  margin: 0;
-  overflow: hidden;
-  font-size: 13px;
-  text-align: left;
-  align-items: center;
-  display: flex;
-}
-.reclaim-the-realm .items-list .item-name h3, .reclaim-the-realm .items-list .item-name h4 {
-  margin: 0;
-  white-space: nowrap;
-  overflow-x: hidden;
-}
-.reclaim-the-realm .items-list .item-controls {
-  display: flex;
-  flex: 0 0 100px;
-  justify-content: flex-end;
-}
-.reclaim-the-realm .items-list .item-controls a {
-  font-size: 12px;
-  text-align: center;
-  margin: 0 6px;
-}
-.reclaim-the-realm .items-list .item {
-  align-items: center;
-  padding: 0 2px;
-  border-bottom: 1px solid var(--reclaim-the-realm-c-faint);
-}
-.reclaim-the-realm .items-list .item:last-child {
-  border-bottom: none;
-}
-.reclaim-the-realm .items-list .item .item-name {
-  color: var(--reclaim-the-realm-c-dark);
-}
-.reclaim-the-realm .items-list .item .item-name .item-image {
-  flex: 0 0 30px;
-  height: 30px;
-  background-size: 30px;
-  border: none;
-  margin-right: 5px;
-}
-.reclaim-the-realm .items-list .items-header {
-  height: 28px;
-  margin: 2px 0;
-  padding: 0;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.05);
-  border: 2px groove var(--reclaim-the-realm-c-groove);
-  font-weight: bold;
-}
-.reclaim-the-realm .items-list .items-header > * {
-  font-size: 12px;
-  text-align: center;
-}
-.reclaim-the-realm .items-list .items-header .item-name {
-  padding-left: 5px;
-  text-align: left;
 }
 .reclaim-the-realm .regular-table td {
   text-overflow: ellipsis;
@@ -848,4 +757,11 @@
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
+}
+.reclaim-the-realm .ability-characteristic {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 2px;
 }

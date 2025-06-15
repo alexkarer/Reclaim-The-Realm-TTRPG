@@ -55,6 +55,9 @@ export default class RtRAbility extends RtRItemBase {
     schema.targets = new fields.StringField();
     schema.duration = new fields.StringField();
 
+    // formula that can be used for custom Rolls
+    schema.formula = new fields.StringField({ blank: true });
+
     return schema;
   }
 

@@ -50,7 +50,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       unlockSkillsEdit: this._onUnlockSkillsEdit,
       lockSkillsEdit: this._onLockSkillsEdit,
       unlockDataEdit: this._onUnlockDataEdit,
-      lockDataEdit: this._onLockDataEdit
+      lockDataEdit: this._onLockDataEdit,
+      castSpell: this._castSpell
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -284,7 +285,6 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     }
 
     context.totalPerkPointsUsed = perks.reduce((sum, current) => sum + current.system.perkPointsCost, 0);
-    console.log('totalPerkPointsUsed', context.totalPerkPointsUsed);
     context.perks = perks.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 
     context.abilities = abilities.sort((a, b) => (a.sort || 0) - (b.sort || 0));
@@ -441,7 +441,6 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     event.preventDefault();
     const dataset = target.dataset;
 
-    console.log('Roll logged: ', event);
     // Handle item rolls.
     switch (dataset.rollType) {
       case 'item':
@@ -985,6 +984,52 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     updatePayload['system.editLockers.dataEditLocked'] = true; 
     this.actor.update(updatePayload).then(v => this.render());
   }
+
+  /**
+   * Cast a Spell
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _castSpell(event, target) {
+    event.preventDefault();
+    
+    const spell = this._getEmbeddedDocument(target);
+    if(!spell) {
+      console.error("Spell not found", event, target);
+    }
+
+    let spellDifficulty = spell.system.spellDifficulty;
+    let label = `Casting Spell ${spell.name}`
+    let roll = new Roll('2d6+@spellCastBonus', this.actor.getRollData())
+    let speaker = ChatMessage.getSpeaker({ actor: this.actor });
+
+    await roll.toMessage({
+      speaker: speaker,
+      flavor: label,
+      rollMode: game.settings.get('core', 'rollMode'),
+    }).then(result => {
+      let text = '';
+      let doubleOnes = (result.rolls[0].terms[0].results[0].result === 1) && (result.rolls[0].terms[0].results[1].result === 1);
+      if ((result.rolls[0].total >= spellDifficulty) && !doubleOnes) {
+        text = `<span style="color:green">Spell ${spell.name} was successfuly cast</span>`;
+      } else if (result.rolls[0].total >= (spellDifficulty - 5)) {
+        text = `<span style="color:yellow">Spell ${spell.name} was cast with mishap</span>`;
+      } else {
+        text = `<span style="color:red">Spell ${spell.name} Cast was unsuccessful and mishap occurs</span>`;
+      }
+
+      ChatMessage.create({
+        speaker: speaker,
+        content: text
+      });
+
+    });
+    return roll;
+  }
+
 
   /** Helper Functions */
 

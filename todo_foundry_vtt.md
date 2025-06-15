@@ -1,6 +1,6 @@
 ### Immidiate TODOS
 
-- Rework Abilities Tables to make whole "row"clickable maybe
+- Implemement Class with Class Core Abilities.
 - Define and user proper data structure for abilities before creating them to avoid lots of headaches later on.
 - Roll with advantage or disadanvtage function (mb with hotkeys)
 
@@ -57,7 +57,6 @@
 
 ### Abilities
 
-- Better formatting in List with Icons
 - Add better Data formatting for Cost and Tags
 - Automatic checking of requirements
 
