@@ -746,11 +746,15 @@
   overflow-y: scroll;
   height: 480px;
 }
-.reclaim-the-realm .species-container {
+.reclaim-the-realm .class-species-container {
   padding: 5px;
   border-radius: 3px;
   border-style: solid;
   border-width: 1px;
+}
+.reclaim-the-realm .class-species-text {
+  font-size: 1rem;
+  font-weight: bold;
 }
 .reclaim-the-realm .abilities-container {
   height: 520px;
@@ -764,4 +768,8 @@
   border-style: solid;
   border-width: 1px;
   padding: 2px;
+}
+.reclaim-the-realm .class-core-feature {
+  font-size: 1rem;
+  font-weight: bold;
 }

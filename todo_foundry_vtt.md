@@ -3,6 +3,7 @@
 - Implemement Class with Class Core Abilities.
 - Define and user proper data structure for abilities before creating them to avoid lots of headaches later on.
 - Roll with advantage or disadanvtage function (mb with hotkeys)
+- Proper NPC Layout
 
 # General TODOs/Nice to have
 
@@ -28,8 +29,6 @@
 - passive Awareness and stuff
 - concealment bonuzses
 - Implement Exhaustion in a nicer way
-- Proper Implementation of Martial Damage
-- Show spell cast test
 - Implement Errors in case too many Abilities or Perks are added.
 - - Perk Trees
 
@@ -44,7 +43,6 @@
 
 ## Items
 
-- Generally try if autosizing is easy
 - Add color depending on type and subtypes (e.g. pyromancy spells red, martial perks red, spell perks blue, etc.)
 
 ### Equipment
@@ -64,7 +62,11 @@
 
 - Interactive Perk Tree
 - Proper Requirements Checking
-- Check How many Perks there are and availible Perks
+
+### Tables
+
+- Injury Table
+- Spell Misshap Table
 
 ### Classes
 

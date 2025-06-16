@@ -38,7 +38,8 @@
     "range": "-",
     "targets": "CONE (4.5m)",
     "duration": "INSTANT",
-    "components": "V (Incantation), M (Mouth, nostrils or similar)"
+    "components": "V (Incantation), M (Mouth, nostrils or similar)",
+    "formula": "(2 + floor(@attributes.spi.value / 4))d8[fire]"
   },
   "effects": [],
   "flags": {},
@@ -49,7 +50,7 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1749920841304,
+    "modifiedTime": 1750021883866,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 0,

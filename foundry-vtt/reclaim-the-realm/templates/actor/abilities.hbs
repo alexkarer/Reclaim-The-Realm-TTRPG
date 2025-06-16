@@ -5,6 +5,21 @@
     {{#if (eq actor.type 'character')}}
       <h5 style="margin-top: 10px;">Class Techniques</h5>
 
+      {{#if (exists playerClass)}}
+        <div style="position: relative;" class="class-species-container flexrow" data-item-id='{{playerClass._id}}' data-document-class='Item'>
+          <div class='item-image'>
+            <a class='rollable' data-action='viewDoc'>
+                <img src='{{playerClass.img}}' title='{{playerClass.system.classCoreFeatureName}}' width='24' height='24' />
+            </a>
+          </div>
+          <span style="position: absolute; left: 50%; transform: translate(-50%, 0);" class='class-core-feature rollable' data-action='viewDoc'>
+            {{ localize 'RTR.Item.Class.FIELDS.classCoreFeature.label' }}: {{playerClass.system.classCoreFeatureName}}
+          </span>
+        </div>
+      {{else}}
+      <span>No Class Set!</span>
+      {{/if}}
+
       <div style="margin-top: 5px;" class="flexrow">
 
         <div class="tooltip" style="margin-right: 5px;">

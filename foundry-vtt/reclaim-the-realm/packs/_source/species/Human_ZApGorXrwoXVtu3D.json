@@ -1,0 +1,35 @@
+{
+  "name": "Human",
+  "type": "species",
+  "_id": "ZApGorXrwoXVtu3D",
+  "img": "icons/creatures/eyes/human-single-blue.webp",
+  "system": {
+    "description": "<h6>Traits</h6><ul><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">They gain one additional skill point per </span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">LEVEL</span></a></span></p></li><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Increase one Attribute of your choice by 1.</span></span></p></li><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You can choose one additional Perk.</span></span></p></li></ul><h6>Description</h6><p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Humans are the unique since they only started to emerge during the unification of the elemental planes in the material plane and did not form during or before the elemental turmoil. They are a very communal species and require social interaction in their lives. They are the most versatile of all people and also have a strong drive to make a name for themselves and achieve something in their lives.</span></p>",
+    "startingBonusHP": 8,
+    "physicalCharacteristics": {
+      "size": "Medium",
+      "height": "140 cm + 6d12 cm",
+      "weight": "40kg + 6d12 kg"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749927186746,
+    "modifiedTime": 1749927322167,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!ZApGorXrwoXVtu3D"
+}

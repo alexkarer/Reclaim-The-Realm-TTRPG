@@ -1,0 +1,35 @@
+{
+  "name": "Elf",
+  "type": "species",
+  "_id": "X0vNl5VjUHCjdH4E",
+  "img": "systems/reclaim-the-realm/assets/icons/species/elf-helmet.png",
+  "system": {
+    "description": "<h6>Traits</h6><ul><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Increase your </span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">MP</span></a></span><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"> by one.</span></span></p></li><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You gain 6 Additional Skill Points at first </span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">LEVEL</span></a></span><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"> and know one additional language</span></span></p></li><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You can tap into the wisdom of your past lives, after meditating for 10 minutes you can recieve a +10 bonus to a </span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">SKILL TEST</span></a></span><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"> to gain knowledge something.</span></span></p></li></ul><h6>Description</h6><p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Elves originate form the Elemental Plane of Air after evolving from the advanced AIr Elementals. Their ability to live there was limited since they are not able to fly innatly and thus most of them migrated towards the Material Plane when it formed. They are remarkable for their slender and tall physique and are the first people to master the ethereal plane and have built a strong connection. Which has evolved them to the point everytime a new elf is born instead of creating a new soul, a soul of a previous dead elf inhabits them and merges with their.</span></p>",
+    "startingBonusHP": 6,
+    "physicalCharacteristics": {
+      "size": "Medium",
+      "height": "170 cm + 4d12 cm",
+      "weight": "40kg + 4d12 kg"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749927675234,
+    "modifiedTime": 1749927731695,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!X0vNl5VjUHCjdH4E"
+}

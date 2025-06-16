@@ -69,6 +69,12 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     species: {
       template: 'systems/reclaim-the-realm/templates/item/species.hbs',
     },
+    classcorefeature: {
+      template: 'systems/reclaim-the-realm/templates/item/class-core-feature.hbs',
+    },
+    classcorevalues: {
+      template: 'systems/reclaim-the-realm/templates/item/class-core-values.hbs',
+    },
   };
 
   /** @override */
@@ -96,6 +102,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'species':
         options.parts.push('species');
+        break;
+      case 'class':
+        options.parts.push('classcorefeature', 'classcorevalues');
         break;
     }
   }
@@ -135,6 +144,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       case 'spell':
       case 'description':
       case 'species':
+      case 'classcorefeature':
         context.tab = context.tabs[partId];
         // Enrich description info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
@@ -149,6 +159,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
             relativeTo: this.item,
           }
         );
+        break;
+      case 'classcorevalues':
+        context.tab = context.tabs[partId];
         break;
       case 'effects':
         context.tab = context.tabs[partId];
@@ -180,6 +193,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         this.tabGroups[tabGroup] = 'equipment';
       } else if (this.document.type === 'species') {
         this.tabGroups[tabGroup] = 'species';
+      } else if (this.document.type === 'class') {
+        this.tabGroups[tabGroup] = 'classcorefeature';
       } else {
         this.tabGroups[tabGroup] = 'description';
       }
@@ -226,6 +241,14 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         case 'species':
           tab.id = 'species';
           tab.label += 'Species';
+          break;
+        case 'classcorefeature':
+          tab.id = 'classcorefeature';
+          tab.label += 'ClassCoreFeature';
+          break;
+        case 'classcorevalues':
+          tab.id = 'classcorevalues';
+          tab.label += 'ClassCoreValues';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';

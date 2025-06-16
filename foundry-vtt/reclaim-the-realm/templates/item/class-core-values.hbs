@@ -1,0 +1,47 @@
+{{! Class Core Values Tab }}
+<section class='tab attributes {{tab.cssClass}}' data-group='primary' data-tab='classcorevalues'>
+
+  <div class='grid grid-3col'>
+    <label>{{localize 'RTR.Item.Class.FIELDS.classCoreFeatureName.label'}}</label>
+    <input class="grid-span-2" type='text' name='system.classCoreFeatureName' value='{{system.classCoreFeatureName}}' data-dtype='text'/>
+
+    <!-- Main abilities -->
+    <label>{{localize 'RTR.Item.Class.FIELDS.hpPerLevel.label'}}</label>
+    <input class="grid-span-2" type='number' name='system.hpPerLevel' value='{{system.hpPerLevel}}' data-dtype='number'/>
+
+    <label>{{localize 'RTR.Item.Class.FIELDS.martialLevelProgression.label'}}</label>
+    <input class="grid-span-2" type='number' name='system.martialLevelProgression' value='{{system.martialLevelProgression}}' data-dtype='number'/>
+
+    <label>{{localize 'RTR.Item.Class.FIELDS.knownMartialManeuverTypes.label'}}</label>
+    <input class="grid-span-2" type='text' name='system.knownMartialManeuverTypes' value='{{system.knownMartialManeuverTypes}}' data-dtype='text'/>
+
+    <label>{{localize 'RTR.Item.Class.FIELDS.spellLevelProgression.label'}}</label>
+    <input class="grid-span-2" type='number' name='system.spellLevelProgression' value='{{system.spellLevelProgression}}' data-dtype='number'/>
+
+    <label>{{localize 'RTR.Item.Class.FIELDS.knownSpellDisciplines.label'}}</label>
+    <input class="grid-span-2" type='text' name='system.knownSpellDisciplines' value='{{system.knownSpellDisciplines}}' data-dtype='text'/>
+    
+    <!-- Defenses -->
+    <label>{{localize 'RTR.Item.Class.FIELDS.stabilityProficiency.label'}}</label>
+    <input class="grid-span-2" type='number' name='system.stabilityProficiency' value='{{system.stabilityProficiency}}' data-dtype='number'/>
+
+    <label>{{localize 'RTR.Item.Class.FIELDS.dodgeProficiency.label'}}</label>
+    <input class="grid-span-2" type='number' name='system.dodgeProficiency' value='{{system.dodgeProficiency}}' data-dtype='number'/>
+
+    <label>{{localize 'RTR.Item.Class.FIELDS.toughnessProficiency.label'}}</label>
+    <input class="grid-span-2" type='number' name='system.toughnessProficiency' value='{{system.toughnessProficiency}}' data-dtype='number'/>
+
+    <label>{{localize 'RTR.Item.Class.FIELDS.willpowerProficiency.label'}}</label>
+    <input class="grid-span-2" type='number' name='system.willpowerProficiency' value='{{system.willpowerProficiency}}' data-dtype='number'/>
+
+    <!-- Class Attributes, Class Skills -->
+    <label>{{localize 'RTR.Item.Class.FIELDS.classAttributes.label'}}</label>
+    <input class="grid-span-2" type='text' name='system.classAttributesString' value='{{system.classAttributesString}}' data-dtype='text'/>
+
+    <label>{{localize 'RTR.Item.Class.FIELDS.classSkills.label'}}</label>
+    <input class="grid-span-2" type='text' name='system.classSkillsString' value='{{system.classSkillsString}}' data-dtype='text'/>
+
+    <label>{{localize 'RTR.Item.Class.FIELDS.skillPointsPerLevel.label'}}</label>
+    <input class="grid-span-2" type='number' name='system.skillPointsPerLevel' value='{{system.skillPointsPerLevel}}' data-dtype='number'/>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+{
+  "name": "Warlock",
+  "type": "class",
+  "_id": "koeWAhUCeZIliznI",
+  "img": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp",
+  "system": {
+    "description": "<p>A Warlock harbours an extraplanar Entity and the Warlock is the conduit from which the power can Manifest in Realspace. Although the Warlock can accomplish great things it comes at the risk of his own safety. <strong>Corruption</strong> can build up when using abilities and is denoted by a number, using <strong>Corruption</strong> abilites causes the Warlock to gain <strong>Corruption</strong> and they can only be reduced the following ways:</p><ul><li><p>During a short rest the Warlock can spend 1 <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">STAMINA</span></strong></span> and reduce the corruption by 2.</p></li><li><p>When finishing a long rest, if the Warlock has Corrpution above 0 they have to make a <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">WILLPOWER SAVE</span></strong></span> with <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">DT</span></strong></span> equal to 10 + <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">LEVEL</span></strong></span>. On a success they recover Corruption equal to their <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">LEVEL</span></strong></span>, on failure the Warlock suffers nightmares.</p></li></ul><h5>Corruption Effects</h5><p>As <strong>Corruption</strong> increases the entity manifests in different ways and changes the host. The higher your <strong>corruption</strong> the more notable the changes. Generally as your <strong>corruption</strong> increases the Hosts personality slightly alters and becomes more alligned with the entity and generally more irretable. But there are also gameplay effects to consider which are the following:</p><ul><li><p>If <strong>Corruption</strong> is less than 5: No Effect.</p></li><li><p>If <strong>Corruption</strong> is 5 or higher: Select a random Mutation of yours, that Mutation's Corruption effect is now active.</p></li><li><p>If <strong>Corruption</strong> is 8 or higher: Select a second random Mutation of yours, that Mutation's Corruption effect is now active.</p></li><li><p>Continue corrupting mutations at 11, 14, 17, 20, ... Until you don't have any non-corrupted Mutations anymore.</p></li><li><p>If you reach a new Milestone and don't have any non-corrupted Mutations left. You take (<strong>Corruption </strong>/ 2) * d6 damage (which can't be reduced) each time you gain <strong>Corruption</strong>.</p></li></ul>",
+    "classCoreFeatureName": "Corruption",
+    "hpPerLevel": 6,
+    "martialLevelProgression": 0.34,
+    "spellLevelProgression": 0.67,
+    "stabilityProficiency": 0.34,
+    "dodgeProficiency": 0.34,
+    "toughnessProficiency": 0.67,
+    "willpowerProficiency": 0.67,
+    "classAttributes": [],
+    "classSkills": [],
+    "classAttributesString": "SPI, CON, INT",
+    "classSkillsString": "Deception, Stealth, Culture, Supernatural",
+    "skillPointsPerLevel": 5,
+    "knownMartialManeuverTypes": "Weapon",
+    "knownSpellDisciplines": "Manipulation"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750109746824,
+    "modifiedTime": 1750111067666,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!koeWAhUCeZIliznI"
+}

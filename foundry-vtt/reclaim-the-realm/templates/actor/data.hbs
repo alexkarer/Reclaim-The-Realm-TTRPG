@@ -81,13 +81,13 @@
       {{#if (eq @root.actor.type 'character')}}
         <h6>{{localize "TYPES.Item.species"}}</h6>
         {{#if (exists species)}}
-        <div class="species-container flexrow" data-item-id='{{species._id}}' data-drag='true' data-document-class='Item'>
+        <div class="class-species-container flexrow" data-item-id='{{species._id}}' data-drag='true' data-document-class='Item'>
             <div class='item-image'>
               <a class='rollable' data-action='viewDoc'>
                   <img src='{{species.img}}' title='{{species.name}}' width='24' height='24' />
               </a>
             </div>
-            <span class='rollable' data-action='viewDoc'>{{species.name}}</span>
+            <span class='class-species-text rollable' data-action='viewDoc'>{{species.name}}</span>
             {{#unless system.editLockers.dataEditLocked}}
               <a class='align-self-right item-control item-delete' title='{{localize "DOCUMENT.Delete" type='species'}}'
                   data-action='deleteDoc'>
@@ -97,6 +97,26 @@
         </div>
         {{else}}
         <span>No Species Set!</span>
+        {{/if}}
+
+        <h6 style="margin-top: 5px;">{{localize "TYPES.Item.class"}}</h6>
+        {{#if (exists playerClass)}}
+        <div class="class-species-container flexrow" data-item-id='{{playerClass._id}}' data-drag='true' data-document-class='Item'>
+            <div class='item-image'>
+              <a class='rollable' data-action='viewDoc'>
+                  <img src='{{playerClass.img}}' title='{{playerClass.name}}' width='24' height='24' />
+              </a>
+            </div>
+            <span class='class-species-text rollable' data-action='viewDoc'>{{playerClass.name}}</span>
+            {{#unless system.editLockers.dataEditLocked}}
+              <a class='align-self-right item-control item-delete' title='{{localize "DOCUMENT.Delete" type='playerClass'}}'
+                  data-action='deleteDoc'>
+                  <i class='fas fa-trash'></i>
+              </a>
+            {{/unless}}
+        </div>
+        {{else}}
+        <span>No Class Set!</span>
         {{/if}}
       {{/if}}
     </aside>

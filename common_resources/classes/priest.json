@@ -28,7 +28,7 @@
                 "regularText": null,
                 "headerLine": null,
                 "bulletPoints": [
-                    "At the start of each of the Priest’s turn he receives ona Aether dice of random value.",
+                    "At the start of each of the Priest’s [TURN] he receives ona Aether dice of random value.",
                     "Falling Unconcious removes all current Aether Dice."
                 ],
                 "ability": null
@@ -52,7 +52,7 @@
                     "<span class=\"fw-bold\">Good: </span>The first time during a [ROUND] you heal an ally or grant a positive status effect, you gain one Aether Dice equal to d3.",
                     "<span class=\"fw-bold\">Evil: </span>The first time during a [ROUND] you damage an enemy or inflict a negative status effect on them you gain one Aether Dice equal d3+3." ,
                     "<span class=\"fw-bold\">Lawful: </span>The first time during a [ROUND] you succeed a [SAVE] or remove a status effect from a creature you gain one Aether Dice you already have, if you have none none you can choose one.",
-                    "<span class=\"fw-bold\">Chaotic: </span>The first time during a [ROUND] you turn a [D20 TEST] from a failure to a success or from a success to a failure, you gain a random aether dice.",
+                    "<span class=\"fw-bold\">Chaotic: </span>The first time during a [ROUND] you turn a [D20 TEST] from a failure to a success or from a success to a failure, you gain a random Aether Dice.",
                     "<span class=\"fw-bold\">Partial Neutral: </span>You can trigger the ability of your other allignment twice per [ROUND].",
                     "<span class=\"fw-bold\">True Neutral: </span>You gain an additional Aether Dice at the start of your Turn."
                 ],

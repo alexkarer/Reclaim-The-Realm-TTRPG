@@ -1,5 +1,5 @@
 {
-  "folder": null,
+  "folder": "xrEA9AYbgjT94cAi",
   "name": "Holy Strike",
   "type": "classTechnique",
   "_id": "5xEsgeK2iAv31dCK",
@@ -38,14 +38,14 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.344",
+    "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749381078618,
-    "modifiedTime": 1749381078618,
+    "modifiedTime": 1750022140220,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
-  "sort": 0,
+  "sort": 100000,
   "ownership": {
     "default": 0,
     "OLKSfPDHiy1Xf9SG": 3

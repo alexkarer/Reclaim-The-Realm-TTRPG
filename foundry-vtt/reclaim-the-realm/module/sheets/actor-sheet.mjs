@@ -256,6 +256,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     const martialManeuvers = [];
     const spells = [];
     let species = undefined;
+    let playerClass = undefined;
 
     // Iterate through items, allocating to containers
     for (let i of this.document.items) {
@@ -273,6 +274,8 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         spells.push(i);
       } else if (i.type === 'species') {
         species = i;
+      } else if (i.type === 'class') {
+        playerClass = i;
       }
     }
 
@@ -293,6 +296,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     context.spells = spells.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 
     context.species = species;
+    context.playerClass = playerClass;
   }
 
   /**
@@ -1240,13 +1244,22 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
 
     const item = await Item.implementation.fromDropData(data);
 
+    if (!this._isItemAllowedForActorType(this.actor.type, item.type)) return false;
+
     if (item.type === 'species') {
       let existingSpecies = this.document.items.find(i => i.type === 'species');
       if (existingSpecies !== undefined) {
         console.log('Overriding existing Species ' + existingSpecies.name + ' with ' + item.name);
         await existingSpecies.delete();
       }
+    } else if (item.type === 'class') {
+      let existingClass = this.document.items.find(i => i.type === 'class');
+      if (existingClass !== undefined) {
+        console.log('Overriding existing Class ' + existingClass.name + ' with ' + item.name);
+        await existingClass.delete();
+      }
     }
+
 
     // Handle item sorting within the same Actor
     if (this.actor.uuid === item.parent?.uuid)
@@ -1255,6 +1268,27 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     // Create the owned item
     return this._onDropItemCreate(item, event);
   }
+
+  _isItemAllowedForActorType(actorType, itemType) {
+    if (actorType === 'character') {
+      return true;
+    } else if (actorType === 'npc') {
+      if (
+        itemType === 'species' ||
+        itemType === 'class' ||
+        itemType === 'martialManeuver' ||
+        itemType === 'spell' ||
+        itemType === 'classTechnique'
+      ) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      console.error(`Unkown Actor Type: ${actorType}`);
+      return false;
+    }
+  } 
 
   /**
    * Handle dropping of a Folder on an Actor Sheet.
@@ -1395,5 +1429,18 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         input.disabled = true;
       }
     }
+  }
+
+  /**
+   * Lock edit lockers upon close
+   * @param options
+   * @protected
+   * @override
+   */
+  _onClose(options) {
+    let updatePayload = {};
+    updatePayload['system.editLockers.skillsEditLocked'] = true; 
+    updatePayload['system.editLockers.dataEditLocked'] = true; 
+    this.actor.update(updatePayload);
   }
 }

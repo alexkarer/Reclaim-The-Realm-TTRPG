@@ -42,7 +42,7 @@
                 "ability": null
             },
             {
-                "regularText": "When the Barbarians Rage exceeds 4+[LEVEL] they risk entering a frenzy. If at the start of their turn their Rage is higher than their Rage Limit they can make a [WILLPOWER] [SAVE], where the [DT] is equal to 5 + their current Rage. On a fail they enter a frenzy which has the following effects:",
+                "regularText": "When the Barbarians Rage exceeds 4+[LEVEL] they risk entering a frenzy. If at the start of their [TURN] their Rage is higher than their Rage Limit they can make a [WILLPOWER] [SAVE], where the [DT] is equal to 5 + their current Rage. On a fail they enter a frenzy which has the following effects:",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -51,7 +51,7 @@
                 "regularText": null,
                 "headerLine": null,
                 "bulletPoints": [
-                    "At the start of the Barbarian’s Turn they have to move to the nearest creature (roll on a tie) and make as many [MELEE MARTIAL ATTACK] as possible against that creature. Each attack has to use the resentful strike class maneuver (even if you don’t know it).",
+                    "At the start of the Barbarian’s Turn they have to move to the nearest creature (roll on a tie) and make as many [MELEE MARTIAL ATTACK] as possible against that creature. Each [ATTACK]] has to use the Resentful Strike Class Technique (even if you don’t know it).",
                     "At the start of their next turn they have to repeat the [WILLPOWER] [SAVE] and on a success end the frenzy."
                 ],
                 "ability": null

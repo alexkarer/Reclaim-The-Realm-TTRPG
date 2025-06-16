@@ -1,0 +1,35 @@
+{
+  "name": "Dwarf",
+  "type": "species",
+  "_id": "HAnCLSdbYv4RjCjq",
+  "img": "systems/reclaim-the-realm/assets/icons/species/dwarf-helmet.png",
+  "system": {
+    "description": "<h6>Traits</h6><ul><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You gain poison resistance equal to 5 + half your </span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">LEVEL</span></a></span><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"> (rounded down).</span></span></p></li><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You ignore extra </span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">STAMINA</span></a></span><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"> Cost when travelling on hill or mountain terrain and you have </span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">ADVANTAGE</span></a></span><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"> on any Geography or Survival </span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">SKILL TEST</span></a></span><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"> in those Terrains.</span></span></p></li><li style=\"box-sizing:border-box\"><p><span class=\"description\" style=\"box-sizing:border-box;line-height:1.25 !important\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">In the dark instead of seeing just in a 1.5m radius, you can see in a 4.5m radius.</span></span></p></li></ul><h6>Description</h6><p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Dwarves originally formed in the Elemental Plane of Earth as an evolution of advanced earth elementals. A sizeable amount of dwarves still remain there, however most of them migrated to the Material Plane eventually. Their connections still remain strong and they mostly reside in mountanous regions where the connection the their native plane is the strongest. They have a very strict society and strongly adhere to the codes of their clan or society. Thus they are very suspecious of people outside their communities, however once you earn they trust they will welcome you as their own.</span></p>",
+    "startingBonusHP": 10,
+    "physicalCharacteristics": {
+      "size": "Medium",
+      "height": "100 cm + 5d12 cm",
+      "weight": "40 kg + 5d12 kg"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1749927406597,
+    "modifiedTime": 1749927646314,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!HAnCLSdbYv4RjCjq"
+}

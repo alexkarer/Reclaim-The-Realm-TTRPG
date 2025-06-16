@@ -142,7 +142,9 @@
         "MartialManeuver": "Martial Maneuver",
         "Spell": "Spell",
         "Perk": "Perk",
-        "Species": "Species"
+        "Species": "Species",
+        "ClassCoreValues": "Class Core Values",
+        "ClassCoreFeature": "Class Core Feature"
       },
       "Equipment": {
         "FIELDS": {
@@ -215,6 +217,24 @@
           "weight": {"label": "Weight"},
           "startingHPBonus": {"label": "Starting HP Bonus"}
         }
+      },
+      "Class": {
+        "FIELDS": {
+          "classCoreFeature": {"label": "Class Core Feature"},
+          "classCoreFeatureName": {"label": "Class Core Feature Name"},
+          "hpPerLevel": {"label": "HP per Level"},
+          "martialLevelProgression": {"label": "Martial Level Progression"},
+          "knownMartialManeuverTypes": {"label": "Known Martial Maneuvery Types"},
+          "spellLevelProgression": {"label": "Spell Level Progression"},
+          "knownSpellDisciplines": {"label": "Known Spell Disciplines"},
+          "stabilityProficiency": {"label": "Stability Proficiency"},
+          "dodgeProficiency": {"label": "Dodge Proficiency"},
+          "toughnessProficiency": {"label": "Toughness Proficiency"},
+          "willpowerProficiency": {"label": "Willpower Proficiency"},
+          "classAttributes": {"label": "Class Attributes"},
+          "classSkills": {"label": "Class Skills"},
+          "skillPointsPerLevel": {"label": "Skill points per Level"}
+        }
       }
     },
     "Effect": {
@@ -237,7 +257,8 @@
       "classTechnique": "Class Technique",
       "martialManeuver": "Martial Maneuver",
       "spell": "Spell",
-      "species": "Species"
+      "species": "Species",
+      "class": "Class"
     }
   }
 }

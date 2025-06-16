@@ -9,6 +9,18 @@ This document contains a series of changelogs to keep track of changes happening
 ### General Character Changes
 - Instead of taking 2 Perks Per Level, instead 2 Perk Points
 
+### Classes
+
+#### Barbarian
+- Minor wording fixups in class core feature.
+
+#### Priest
+- Minor wording fixups in class core feature.
+
+#### Warlock
+- Minor wording fixups in class core feature.
+- Also make corruption effects more clear and change how it works if you have too much Corruption.
+
 ### Perks
 - Added Perk Points which denote the cost of taking a perk
 - Most Perks cost 1 but some Perks cost 2.

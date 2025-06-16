@@ -40,9 +40,21 @@
                 "ability": null
             },
             {
-                "regularText": "As corruption increases the entity manifests in different ways and changes the host. The higher your corruption the more notable the changes. Generally as your corruption increases the Hosts personality slightly alters and becomes more alligned with the entity and generally more irretable. But there are also gameplay effects to consider which are the following:<br>If your Corruption is below 5 nothing changes. As soon as your corruption increases to 5 and every increase of 3 afterwards a random non-corrupted Mutation of yours becomes corrupted. If you don't have any mutations yet or there are no non-corrutped mutations left for each additional Corruption you now gain, you gain 1 Level of Exhaustion which can't be removed by any means other than reducing Corruption. If your Corruption is reduced below the Mutation thresholds the mutation become non corrupted again.",
+                "regularText": "As corruption increases the entity manifests in different ways and changes the host. The higher your corruption the more notable the changes. Generally as your corruption increases the Hosts personality slightly alters and becomes more alligned with the entity and generally more irretable. But there are also gameplay effects to consider which are the following:",
                 "headerLine": null,
                 "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "If Corruption is less than 5: No Effect.",
+                    "If Corruption is 5 or higher: Select a random Mutation of yours, that Mutation's Corruption effect is now active.",
+                    "If Corruption is 8 or higher: Select a second random Mutation of yours, that Mutation's Corruption effect is now active.",
+                    "Continue corrupting mutations at 11, 14, 17, 20, ... Until you don't have any non-corrupted Mutations anymore.",
+                    "If you reach a new Milestone and don't have any non-corrupted Mutations left. You take (Corruption / 2) * d6 damage (which can't be reduced in any way) each time you gain Corruption."
+                ],
                 "ability": null
             }
         ]

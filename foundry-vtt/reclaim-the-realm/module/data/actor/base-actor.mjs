@@ -58,10 +58,10 @@ export default class RtRActorBase extends foundry.abstract
     );
 
     schema.defenses = new fields.SchemaField({
-      stabilityProficency: new fields.NumberField({ ...proficiency, initial: 0, min: 0, max: 1 }),
-      dodgeProficency: new fields.NumberField({ ...proficiency, initial: 0, min: 0, max: 1 }),
-      toughnessProficency: new fields.NumberField({ ...proficiency, initial: 0, min: 0, max: 1 }),
-      willpowerProficency: new fields.NumberField({ ...proficiency, initial: 0, min: 0, max: 1 }),
+      stabilityProficency: new fields.AlphaField({ ...proficiency, initial: 0 }),
+      dodgeProficency: new fields.AlphaField({ ...proficiency, initial: 0 }),
+      toughnessProficency: new fields.AlphaField({ ...proficiency, initial: 0 }),
+      willpowerProficency: new fields.AlphaField({ ...proficiency, initial: 0 }),
 
       shieldBlockBase: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       shieldBlockThreshold: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),

@@ -61,7 +61,8 @@ Hooks.once('init', function () {
     classTechnique: models.RtRClassTechnique,
     spell: models.RtRSpell,
     martialManeuver: models.RtRMartialManeuver,
-    species: models.RtRSpecies
+    species: models.RtRSpecies,
+    class: models.RtRClass
   };
 
   // Active Effects are never copied to the Actor,

@@ -1,0 +1,44 @@
+{
+  "name": "Barbarian",
+  "type": "class",
+  "_id": "ieBnhLBgqTZwCdw7",
+  "img": "icons/creatures/abilities/mouth-teeth-human.webp",
+  "system": {
+    "description": "<p>At the start of the Battle the Barbarian enters into a controlled <strong>Rage</strong> that builds up during the Fight and allows him to shrug of certain amount of damage and unleash it against his enemies. However the Barbarian needs to remain discipline while raging if he builds up too much he might go into an uncontrollable frenzy.</p><p><strong>Rage</strong> builds up during the fight and is denoted by a number, at the start of combat the Barbarian’s <strong>Rage</strong> is 0. The Barbarian gains <strong>Rage</strong> via the following things:</p><ul><li><p>If a negative status effect affects the Barbarian at the start their <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">TURN</span></strong></span>, they gain <strong>Rage</strong> equal to the highest Tier Status Effect, affecting them.</p></li><li><p>The first time during a <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">ROUND</span></strong></span> they target an enemy with a <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">MEELE MARTIAL ATTACK</span></strong></span> or a <em>Weapon Attack</em> using a thrown weapon, they gain 1 <strong>Rage</strong>.</p></li><li><p>The first time during a <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">ROUND</span></strong></span> the Barbarian recieves damage they gain 1 <strong>Rage</strong>.</p></li><li><p>Falling Unconcious reduces the Barbarian’s <strong>Rage</strong> to 0.</p></li></ul><h5>Entering a frenzy</h5><p>When the Barbarians <strong>Rage</strong> exceeds 4+<span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">LEVEL</span></strong></span> they risk entering a frenzy. If at the start of their turn their Rage is higher than their <strong>Rage</strong> Limit they can make a <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">WILLPOWER SAVE</span></strong></span>, where the <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">DT</span></strong></span> is equal to 5 + their current <strong>Rage</strong>. On a fail they enter a frenzy which has the following effects:</p><ul><li><p>At the start of the Barbarian’s <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">TURN</span></strong></span> they have to move to the nearest creature (roll on a tie) and make as many <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">MEELE MARTIAL ATTACK</span></strong></span> as possible against that creature. Each <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">ATTACK</span></strong></span> has to use the <em>Resentful Strike</em> Class Technique (even if you don’t know it).</p></li><li><p>At the start of their next turn they have to repeat the <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">WILLPOWER</span></strong></span> <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">SAVE</span></strong></span> and on a success end the frenzy.</p></li></ul><h5>Rage Improvements</h5><p>At 4th, 8th and 12th <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">LEVEL</span></strong></span> the Barbarian can earn <strong>Rage</strong> an additional time per <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">ROUND</span></strong></span> when making a <span style=\"text-decoration: underline;\"><strong><span style=\"text-decoration: underline;\">MEELE MARTIAL ATTACK</span></strong></span> or recieving Damage.</p>",
+    "classCoreFeatureName": "Rage",
+    "hpPerLevel": 10,
+    "martialLevelProgression": 1,
+    "spellLevelProgression": 0,
+    "stabilityProficiency": 1,
+    "dodgeProficiency": 0.34,
+    "toughnessProficiency": 1,
+    "willpowerProficiency": 0.34,
+    "classAttributes": [],
+    "classSkills": [],
+    "classAttributesString": "STR, AGI, CON",
+    "classSkillsString": "Athletics, Intimidation, Survival",
+    "skillPointsPerLevel": 4,
+    "knownMartialManeuverTypes": "Brawl, Fortitude, Weapon, Leader",
+    "knownSpellDisciplines": "-"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750105187620,
+    "modifiedTime": 1750105712230,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!ieBnhLBgqTZwCdw7"
+}
