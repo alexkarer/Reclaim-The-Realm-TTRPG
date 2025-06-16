@@ -1,0 +1,57 @@
+{
+  "folder": "EnKycLM94OdTRcxY",
+  "name": "Eldritch Blast",
+  "type": "classTechnique",
+  "_id": "cu01YHSkdYhwE4LV",
+  "img": "icons/magic/unholy/beam-ringed-impact-purple.webp",
+  "system": {
+    "description": "<p><span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">RANGED SPELL ATTACK</span></strong></span> against <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong></span>. On hit: (1 + <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SPI</span></strong></span>/2) * d10 entity damage. On success: apply one of the follwing: <strong>[CURSED I]</strong>, <strong>[WEAKENED I]</strong>, <strong>[VULNURABLE I]</strong></p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "2 AP, 1 Corruption"
+    },
+    "tags": "Class Technique (Warlock)",
+    "range": "21m",
+    "targets": "1 Creature",
+    "duration": "1 ROUND",
+    "formula": "(1 + floor(@attributes.spi.value/2))d10[entity damage]"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750115007671,
+    "modifiedTime": 1750115268872,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!cu01YHSkdYhwE4LV"
+}

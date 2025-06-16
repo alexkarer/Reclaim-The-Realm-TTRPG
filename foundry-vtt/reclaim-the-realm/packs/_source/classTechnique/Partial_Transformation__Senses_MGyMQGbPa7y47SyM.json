@@ -1,0 +1,57 @@
+{
+  "folder": "EnKycLM94OdTRcxY",
+  "name": "Partial Transformation: Senses",
+  "type": "classTechnique",
+  "_id": "MGyMQGbPa7y47SyM",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-large-teal.webp",
+  "system": {
+    "description": "<p>You partially transform, while Transformation is active you gain the following benefits:</p><ul><li><p>Increase <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DODGE</span></strong></span> by 3</p></li><li><p>Gain +3 bonus to any <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">ATTACK</span></strong></span></p></li><li><p>The required Roll for scoring a critical hit is reduced by 1</p></li><li><p>you ignore <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">PARTIAL CONCEALMENT</span></strong></span> <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">FULL CONCEALMENT</span></strong></span> against creatures that are within <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">LEVEL</span></strong></span> m and you have <strong><span style=\"text-decoration:underline\">ADVANTAGE</span></strong> on any Awarness <strong><span style=\"text-decoration:underline\">SKILL TEST</span></strong>.</p></li></ul><p>Only one Transformantion Class Technique can be used per <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TURN</span></strong></span></p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "1 AP, 2 Corruption"
+    },
+    "tags": "Class Technique (Warlock)",
+    "range": "-",
+    "targets": "SELF",
+    "duration": "1 minute",
+    "formula": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750116193496,
+    "modifiedTime": 1750116419233,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!MGyMQGbPa7y47SyM"
+}

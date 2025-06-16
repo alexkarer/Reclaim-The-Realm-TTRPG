@@ -16,10 +16,12 @@ This document contains a series of changelogs to keep track of changes happening
 
 #### Priest
 - Minor wording fixups in class core feature.
+- Increased Holy Fire and Unholy Fire damage
 
 #### Warlock
 - Minor wording fixups in class core feature.
 - Also make corruption effects more clear and change how it works if you have too much Corruption.
+- Increased Eldritch blast damage (be happy marco)
 
 ### Perks
 - Added Perk Points which denote the cost of taking a perk

@@ -147,6 +147,8 @@ export default class RtRActorBase extends foundry.abstract
     }
 
     data.level = this.levels.level;
+    data.martialLevel = this.levels.martialLevel;
+    data.spellLevel = this.levels.spellLevel;
     data.manoeuvrePenalty = this.data.manoeuvrePenalty;
 
     data.stability = this.defenses.stability;

@@ -13,10 +13,10 @@
 
 ## Actors
 
+- Change Biography to either be in separate Tab or at the bottom of the Overview.
 - On all places show the formula for calculating, which is fixed but can be modified with additional values.
 - Configure prototype token
 - Data Section add Translation 
-- On close automatically lock editing.
 - Add Notifications if there is something todo (e.g. learn new ability, add attribute pooitns, assign skill ranks)
 
 - Handle Cearture Size

@@ -123,7 +123,7 @@
             "name": "Mercy of the Gods",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
-            "cost": "0 [AP], nubmer of AD(2-) equal to spell power",
+            "cost": "0 [AP], number of AD(2-) equal to spell ability level + 1",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
@@ -149,7 +149,7 @@
             "range": "9m",
             "target": "evil creatures with range",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [DODGE]. On success: [SPI]*d6 holy damage. On fail: half damage.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [DODGE]. On success: 2*[SPI]*d6 holy damage. On fail: half damage.", "headerLine": null, "bulletPoints": null, "ability": null } ],
             "flavorText": [ ]
         },
         {
@@ -171,11 +171,11 @@
             "range": "12m",
             "target": "[SPHERE] 3m",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [DODGE]. On success: [SPI]*d6 unholy damage. On fail: half damage.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "description": [ { "regularText": "[SPI] [SPELL TEST] vs. [DODGE]. On success: 2*[SPI]*d6 unholy damage. On fail: half damage.", "headerLine": null, "bulletPoints": null, "ability": null } ],
             "flavorText": [ ]
         },
         {
-            "name": "Divine Clense",
+            "name": "Divine Cleanse",
             "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "1 [AP], 2 matching AD",

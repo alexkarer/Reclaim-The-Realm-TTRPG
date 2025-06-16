@@ -1,0 +1,57 @@
+{
+  "folder": "xrEA9AYbgjT94cAi",
+  "name": "Holy Fire",
+  "type": "classTechnique",
+  "_id": "BN2jw9zNVfMAIPun",
+  "img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
+  "system": {
+    "description": "<p><span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SPI SPELL TEST</span></strong></span> vs. <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DODGE</span></strong></span>. On success: 2*<span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SPI</span></strong></span>*d6 holy damage. On fail: half damage.</p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "3 AP, 3 AD(-1)"
+    },
+    "tags": "Class Technique (Priest); SPELL ABILITY 2",
+    "range": "9m",
+    "targets": "evil creatures",
+    "duration": "INSTANT",
+    "formula": "(2*@attributes.spi.value)d6[holy]"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750113748710,
+    "modifiedTime": 1750113919340,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!BN2jw9zNVfMAIPun"
+}

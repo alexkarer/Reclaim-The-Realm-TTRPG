@@ -1,0 +1,57 @@
+{
+  "folder": "EnKycLM94OdTRcxY",
+  "name": "Full Transformation",
+  "type": "classTechnique",
+  "_id": "Fd6AnFZqI9183MHJ",
+  "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
+  "system": {
+    "description": "<p>Requires all 3 partial transformations to be done. Once used requires you to spend 1 <strong>Corruption</strong> at the start of each of your <strong><span style=\"text-decoration:underline\">TURN</span></strong> for this ability to remain active. While it remains active you gain the following benefits:</p><ul><li><p>Your creature type changes to match your entity (Elemental or Cosmic).</p></li><li><p>Increase your <strong><span style=\"text-decoration:underline\">AP</span></strong> by 1</p></li><li><p>You halve all damage you recieve (before any other resistances are applied).</p></li><li><p>All other partial transformation bonuses remain active as long this ability lasts.</p></li></ul><p>Only one Transformantion Class Technique can be used per <strong><span style=\"text-decoration:underline\">TURN</span></strong>. After this transformation ends all other transformations cease to be active.</p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "1 AP, 1 Corruption"
+    },
+    "tags": "Class Technique (Warlock)",
+    "range": "-",
+    "targets": "SELF",
+    "duration": "-",
+    "formula": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750116435743,
+    "modifiedTime": 1750116566991,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!Fd6AnFZqI9183MHJ"
+}

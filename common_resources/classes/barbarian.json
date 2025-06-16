@@ -51,7 +51,7 @@
                 "regularText": null,
                 "headerLine": null,
                 "bulletPoints": [
-                    "At the start of the Barbarian’s Turn they have to move to the nearest creature (roll on a tie) and make as many [MELEE MARTIAL ATTACK] as possible against that creature. Each [ATTACK]] has to use the Resentful Strike Class Technique (even if you don’t know it).",
+                    "At the start of the Barbarian’s [TURN] they have to move to the nearest creature (roll on a tie) and make as many [MELEE MARTIAL ATTACK] as possible against that creature. Each [ATTACK]] has to use the Resentful Strike Class Technique (even if you don’t know it).",
                     "At the start of their next turn they have to repeat the [WILLPOWER] [SAVE] and on a success end the frenzy."
                 ],
                 "ability": null

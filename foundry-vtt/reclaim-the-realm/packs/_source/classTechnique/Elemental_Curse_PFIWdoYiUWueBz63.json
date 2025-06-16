@@ -1,0 +1,57 @@
+{
+  "folder": "EnKycLM94OdTRcxY",
+  "name": "Elemental Curse",
+  "type": "classTechnique",
+  "_id": "PFIWdoYiUWueBz63",
+  "img": "icons/magic/fire/flame-burning-eye.webp",
+  "system": {
+    "description": "<p>If you hit a target with an <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> or a damaging Ability, you can use this Ability. The target suffers an additional status effect depending on your Entity.</p><ul><li><p><strong>Fire</strong>: [BURNING I],</p></li><li><p><strong>Earth</strong>: [POISON I],</p></li><li><p><strong>Water</strong>: [RESTRAINED I] (no <strong><span style=\"text-decoration:underline\">DT</span></strong>), </p></li><li><p><strong>Air</strong>: [DISTRACTED]</p></li></ul>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "FREE, 1 Corruption"
+    },
+    "tags": "Class Technique (Warlock, Elemental Entity)",
+    "range": "-",
+    "targets": "SELF",
+    "duration": "2 + LEVEL ROUND",
+    "formula": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750115575137,
+    "modifiedTime": 1750115659831,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!PFIWdoYiUWueBz63"
+}

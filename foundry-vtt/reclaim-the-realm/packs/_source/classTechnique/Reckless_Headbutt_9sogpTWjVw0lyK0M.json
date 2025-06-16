@@ -1,0 +1,57 @@
+{
+  "folder": "1VH8O6s9gYQMwVj4",
+  "name": "Reckless Headbutt",
+  "type": "classTechnique",
+  "_id": "9sogpTWjVw0lyK0M",
+  "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+  "system": {
+    "description": "<p><strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong> against <strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong>. On hit: light <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong> physical damage. On success: apply [STUNNED I]. On fail: apply [STUNNED I] on yourself.</p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "1 AP, 2 Rage"
+    },
+    "tags": "Class Technique (Barbarian)",
+    "range": "MELEE RANGE",
+    "targets": "1 creature",
+    "duration": "2 ROUND",
+    "formula": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750112537467,
+    "modifiedTime": 1750112688870,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!9sogpTWjVw0lyK0M"
+}

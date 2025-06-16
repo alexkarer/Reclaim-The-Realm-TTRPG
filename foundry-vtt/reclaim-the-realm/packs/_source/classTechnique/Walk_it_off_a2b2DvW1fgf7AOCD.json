@@ -1,0 +1,57 @@
+{
+  "folder": "1VH8O6s9gYQMwVj4",
+  "name": "Walk it off",
+  "type": "classTechnique",
+  "_id": "a2b2DvW1fgf7AOCD",
+  "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
+  "system": {
+    "description": "<p>You can remove one Tier I Status Effect effecting you. When using 2 <strong><span style=\"text-decoration:underline\">AP</span></strong> and 4 <strong>Rage</strong> you can end a Tier II Status Effect. When using 3 <strong><span style=\"text-decoration:underline\">AP</span></strong> and 8 <strong>Rage</strong> you can end a Tier III Status Effect.</p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "1 AP, 1 or more Rage"
+    },
+    "tags": "Class Technique (Barbarian)",
+    "range": "-",
+    "targets": "SELF",
+    "duration": "INSTANT",
+    "formula": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750112421439,
+    "modifiedTime": 1750112634623,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!a2b2DvW1fgf7AOCD"
+}

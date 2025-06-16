@@ -1,0 +1,57 @@
+{
+  "folder": "1VH8O6s9gYQMwVj4",
+  "name": "Violent Leap",
+  "type": "classTechnique",
+  "_id": "ie81t5PgwWfhNCHm",
+  "img": "icons/creatures/abilities/cougar-pounce-stalk-black.webp",
+  "system": {
+    "description": "<p>After you ended a Jump Move or land otherwise you can use this Ability. Make a <strong><span style=\"text-decoration:underline\">STR MARTIAL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">STABILITY</span></strong>. On success: knock <strong><span style=\"text-decoration:underline\">PRONE</span></strong></p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "0 AP, 2 Rage"
+    },
+    "tags": "Class Technique (Barbarian)",
+    "range": "MELEE RANGE",
+    "targets": "all creatures",
+    "duration": "INSTANT",
+    "formula": "d20+@martialLevel + @attributes.str.value - @exh"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750112712932,
+    "modifiedTime": 1750112866747,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!items!ie81t5PgwWfhNCHm"
+}

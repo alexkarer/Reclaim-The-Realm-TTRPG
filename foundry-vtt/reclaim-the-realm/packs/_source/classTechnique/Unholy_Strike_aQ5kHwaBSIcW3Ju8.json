@@ -1,11 +1,11 @@
 {
   "folder": "xrEA9AYbgjT94cAi",
-  "name": "Holy Strike",
+  "name": "Unholy Strike",
   "type": "classTechnique",
-  "_id": "5xEsgeK2iAv31dCK",
-  "img": "icons/skills/melee/strike-sword-slashing-red.webp",
+  "_id": "aQ5kHwaBSIcW3Ju8",
+  "img": "icons/magic/unholy/projectile-spear-glow-pink.webp",
   "system": {
-    "description": "<p>When you hit a target with an <strong>ATTACK</strong> you can deal 2d6 extra holy damage. For every additional AD(3-) used, you can increase the holy damage by a further d6.</p>",
+    "description": "<p>When you hit a target with an <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> you can deal 2d6 extra unholy damage. For every additional <strong>AD</strong>(4+) used, you can increase the unholy damage by a further d6.</p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -16,7 +16,9 @@
       "minimumInt": 0,
       "minimumSpi": 0,
       "minimumPer": 0,
-      "minimumCha": 0
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
     },
     "usageCost": {
       "apCost": 0,
@@ -25,15 +27,20 @@
       "arcanaCost": 0,
       "staminaCost": 0,
       "otherResourceCost": 0,
-      "rawStringCost": "FREE, 2 AD(3-)"
+      "rawStringCost": "FREE, 2 AD(4+)"
     },
     "tags": "Class Technique (Priest); SPELL ABILITY 1",
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": "2d6[holy]"
+    "formula": "2d6[unholy]"
   },
   "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
   "flags": {},
   "_stats": {
     "compendiumSource": null,
@@ -42,14 +49,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1749381078618,
-    "modifiedTime": 1750113262830,
+    "createdTime": 1750113953843,
+    "modifiedTime": 1750114032885,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
-  "sort": 100000,
-  "ownership": {
-    "default": 0,
-    "OLKSfPDHiy1Xf9SG": 3
-  },
-  "_key": "!items!5xEsgeK2iAv31dCK"
+  "_key": "!items!aQ5kHwaBSIcW3Ju8"
 }

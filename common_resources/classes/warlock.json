@@ -80,7 +80,7 @@
             "range": "21m",
             "target": "1 Creature",
             "duration": "1 [ROUND]",
-            "description": [ { "regularText": "[RANGED SPELL ATTACK] against [TOUGHNESS]. On hit: (1 + [SPI]/2) * d6 entity damage. On success: apply one of the follwing: [CURSED I], [WEAKENED I], [VULNURABLE I].", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "[RANGED SPELL ATTACK] against [TOUGHNESS]. On hit: (1 + [SPI]/2) * d10 entity damage. On success: apply one of the follwing: [CURSED I], [WEAKENED I], [VULNURABLE I].", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ]
         },
         {
@@ -199,7 +199,7 @@
                 { "regularText": null, "headerLine": null, "bulletPoints": [
                     "Increase [WILLPOWER] by 3",
                     "Gain a +3 bonus to any [SPELL TEST] and [SPELL CAST TEST].",
-                    "Treat your [SPI] 2 higher when casting a spell.."
+                    "Treat your [SPI] 2 higher when casting a spell."
                 ]},
                 { "regularText": "Only one Transformantion Class Technique can be used per [TURN].", "headerLine": null, "bulletPoints": null}
             ],
@@ -218,8 +218,8 @@
                 { "regularText": null, "headerLine": null, "bulletPoints": [
                     "Increase [DODGE] by 3",
                     "Gain +3 bonus to any [ATTACK]",
-                    "you ignore [PARTIAL CONCEALMENT] [FULL CONCEALMENT] against creatures that are within [LEVEL] m.",
-                    "All other partial transformation bonuses remain active as long this ability lasts."
+                    "The required Roll for scoring a critical hit is reduced by 1.",
+                    "You ignore [PARTIAL CONCEALMENT] [FULL CONCEALMENT] against creatures that are within [LEVEL] m and you have [ADVANTAGE] on any Awareness [SKILL TEST]."
                 ]},
                 { "regularText": "Only one Transformantion Class Technique can be used per [TURN].", "headerLine": null, "bulletPoints": null}
             ],
