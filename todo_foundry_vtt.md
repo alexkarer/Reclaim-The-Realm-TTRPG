@@ -32,6 +32,7 @@
 
 ### NPCS
 
+- Overview Tab: change from bonus in save to passive values
 - Description Tab: HTML Field that shows lore and stuff
 - Skills: needs possibility to set skil lranks manaullys
 

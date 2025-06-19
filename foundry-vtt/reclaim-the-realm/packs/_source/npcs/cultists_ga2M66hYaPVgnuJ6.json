@@ -1,12 +1,12 @@
 {
-  "type": "Item",
+  "type": "Actor",
   "folder": null,
-  "name": "Tactical",
-  "color": "#000a94",
+  "name": "cultists",
+  "color": null,
   "sorting": "a",
-  "_id": "bzYx8iqI0M6G1Caa",
+  "_id": "ga2M66hYaPVgnuJ6",
   "description": "",
-  "sort": 400000,
+  "sort": 0,
   "flags": {},
   "_stats": {
     "compendiumSource": null,
@@ -15,9 +15,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1749989311725,
-    "modifiedTime": 1750349175257,
+    "createdTime": 1750349489158,
+    "modifiedTime": 1750349489158,
     "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
-  "_key": "!folders!bzYx8iqI0M6G1Caa"
+  "_key": "!folders!ga2M66hYaPVgnuJ6"
 }

@@ -30,7 +30,8 @@
     "tags": "Hybrid Ability; Spell(1); Manipulation; Telekinesis; V, S, M (Weapon)",
     "range": "-",
     "targets": "LINE (12m)",
-    "duration": "INSTANT"
+    "duration": "INSTANT",
+    "formula": "d20+@spellLevel + @attributes.agi.value - @exh"
   },
   "effects": [],
   "flags": {},
@@ -38,12 +39,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.344",
+    "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749384902172,
-    "modifiedTime": 1749384902172,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750348673165,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "sort": 0,
   "ownership": {

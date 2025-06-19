@@ -6,7 +6,7 @@
   "sorting": "a",
   "_id": "1HdubXxFWyDTXLIy",
   "description": "",
-  "sort": 0,
+  "sort": 100000,
   "flags": {},
   "_stats": {
     "compendiumSource": null,
@@ -16,8 +16,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749989261309,
-    "modifiedTime": 1749989261309,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750349175257,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!folders!1HdubXxFWyDTXLIy"
 }

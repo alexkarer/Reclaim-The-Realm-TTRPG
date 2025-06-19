@@ -1,0 +1,57 @@
+{
+  "folder": "UQfl6J5bwp3XepPc",
+  "name": "Parry",
+  "type": "martialManeuver",
+  "_id": "GAA1NbVSykFloafU",
+  "img": "icons/skills/melee/swords-parry-block-blue.webp",
+  "system": {
+    "description": "<p>When you are hit by a <strong><span style=\"text-decoration:underline\">MELEE ATTACK</span></strong> you can use this Ability. Make a <strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong> vs. <strong><span style=\"text-decoration:underline\">MELEE ATTACK</span></strong> that targeted you. On success turn critical hit into regular hit, regular hit into glancing hit and glancing hit into critical miss.</p><h6>Pushing extra cost: 1 <strong><span style=\"text-decoration:underline\">STAMINA</span></strong></h6><p>You can now parry any <strong><span style=\"text-decoration:underline\">ATTACK</span></strong></p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "REACTION"
+    },
+    "tags": "Martial Maneuver (Basic); Weapon; Melee",
+    "range": "-",
+    "targets": "SELF",
+    "duration": "INSTANT",
+    "formula": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750349215543,
+    "modifiedTime": 1750349300135,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!GAA1NbVSykFloafU"
+}

@@ -38,7 +38,8 @@
     "range": "12m",
     "targets": "one sentient(INT greater -4) creature within range",
     "duration": "1 ROUND",
-    "components": "V (Scream)"
+    "components": "V (Scream)",
+    "formula": "(2 + floor(@attributes.spi.value / 4))d8[psychic]"
   },
   "effects": [],
   "flags": {},
@@ -49,8 +50,8 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1749920841304,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750340429973,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "sort": 0,
   "ownership": {
