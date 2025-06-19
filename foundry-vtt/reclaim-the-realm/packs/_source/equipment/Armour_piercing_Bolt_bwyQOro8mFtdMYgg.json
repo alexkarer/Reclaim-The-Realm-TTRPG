@@ -1,0 +1,44 @@
+{
+  "folder": "BqDc915f4H39xu4G",
+  "name": "Armour-piercing Bolt",
+  "type": "equipment",
+  "_id": "bwyQOro8mFtdMYgg",
+  "img": "icons/weapons/ammunition/arrows-barbed-white.webp",
+  "system": {
+    "description": "<p>Any <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> made using this bolt have the armour-piercing property, can be recovered after firing if the shot was not a critical miss.</p>",
+    "tier": 2,
+    "type": "ammunitions",
+    "costBc": 30,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Carpenter’s Tools",
+    "availableWeapons": "Crossbows"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750352648606,
+    "modifiedTime": 1750352717302,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!bwyQOro8mFtdMYgg"
+}

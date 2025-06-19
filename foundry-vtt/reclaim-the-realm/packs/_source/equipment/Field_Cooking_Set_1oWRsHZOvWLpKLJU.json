@@ -1,0 +1,43 @@
+{
+  "folder": "7CpC2SgyAbik8RbY",
+  "name": "Field Cooking Set",
+  "type": "equipment",
+  "_id": "1oWRsHZOvWLpKLJU",
+  "img": "icons/tools/cooking/can.webp",
+  "system": {
+    "description": "<p>This set contains a small cylinder where food can be prepared and eaten out of and additional small cooking tools and cutlery.</p>",
+    "tier": 1,
+    "type": "toolsAndGadgets",
+    "costBc": 20,
+    "quantity": 1,
+    "weightKg": 1,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith’s Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750360557963,
+    "modifiedTime": 1750360597500,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!1oWRsHZOvWLpKLJU"
+}

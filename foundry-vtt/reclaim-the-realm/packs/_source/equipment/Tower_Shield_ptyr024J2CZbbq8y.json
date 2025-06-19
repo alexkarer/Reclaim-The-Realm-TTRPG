@@ -1,0 +1,43 @@
+{
+  "folder": "ErtjmGVJzIfjlKNl",
+  "name": "Tower Shield",
+  "type": "equipment",
+  "_id": "ptyr024J2CZbbq8y",
+  "img": "icons/equipment/shield/wardoor-wooden-boss-brown.webp",
+  "system": {
+    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">large tower shield that blocks completely one side</span></p>",
+    "tier": 2,
+    "type": "shields",
+    "costBc": 10000,
+    "quantity": 1,
+    "weightKg": 6,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 3,
+    "movementPenalty": 1,
+    "shieldBlock": 6,
+    "damageThreshold": 0,
+    "craftingSkills": "mith's Tools, Carpenter's Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750354212199,
+    "modifiedTime": 1750354298748,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!ptyr024J2CZbbq8y"
+}

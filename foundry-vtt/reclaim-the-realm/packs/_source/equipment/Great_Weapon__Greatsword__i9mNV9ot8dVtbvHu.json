@@ -1,0 +1,44 @@
+{
+  "folder": "7nQpOQ3rOFCmzMBD",
+  "name": "Great Weapon (Greatsword)",
+  "type": "equipment",
+  "_id": "i9mNV9ot8dVtbvHu",
+  "img": "icons/weapons/swords/greatsword-guard-gem-blue.webp",
+  "system": {
+    "description": "<p>Requires two hands to be wielded effectively. When making a <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong></span> with this Weapon you can decrease your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">ATTACK</span></strong></span> by -2 and treat your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">STR</span></strong></span> 1 higher for the purposes of determening your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong></span></p>",
+    "tier": 2,
+    "type": "weapon",
+    "costBc": 2500,
+    "quantity": 1,
+    "weightKg": 3,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith’s Tools",
+    "damage": "heavy MARTIAL DAMAGE"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750351024379,
+    "modifiedTime": 1750351274708,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!i9mNV9ot8dVtbvHu"
+}

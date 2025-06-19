@@ -1,0 +1,43 @@
+{
+  "folder": "Td1S01P8fBLHP1mz",
+  "name": "Holy Water",
+  "type": "equipment",
+  "_id": "CDduXq63yYx7kH68",
+  "img": "icons/magic/holy/chalice-glowing-gold-water.webp",
+  "system": {
+    "description": "<p>This water was blessed Good Etheral energy. Once used the item is consumed.</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.dJahj7JdZ5V4f4du]{Throw Holy Water}</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.3nLx5LpkoGplQbGj]{Consume Holy Water}</p>",
+    "tier": 2,
+    "type": "consumables",
+    "costBc": 1500,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 250,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Lore (Supernatural)"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750364377656,
+    "modifiedTime": 1750364691381,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!CDduXq63yYx7kH68"
+}

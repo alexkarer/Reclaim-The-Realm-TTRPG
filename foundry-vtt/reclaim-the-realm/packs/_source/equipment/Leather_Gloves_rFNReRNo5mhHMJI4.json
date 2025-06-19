@@ -1,0 +1,43 @@
+{
+  "folder": "iq0uqWLZC3EfZOSB",
+  "name": "Leather Gloves",
+  "type": "equipment",
+  "_id": "rFNReRNo5mhHMJI4",
+  "img": "icons/equipment/hand/gauntlet-tooled-leather-brown.webp",
+  "system": {
+    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Comfortable Leather Gloves</span></p>",
+    "tier": 1,
+    "type": "wearables",
+    "costBc": 20,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 250,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Tailor's Set"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750355724653,
+    "modifiedTime": 1750355800530,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!rFNReRNo5mhHMJI4"
+}

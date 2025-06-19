@@ -36,6 +36,10 @@ This document contains a series of changelogs to keep track of changes happening
 ### Martial Maneuvers
 - Now reworded Basic Martial Maneuvers so that you can take them as long you have >0 Martial Level Proficiency (As originally intended).
 
+### Equipment
+- Fix various wrong keywords
+- added empty flask item
+
 ## RtR 2.1.0
 
 ### Equipment

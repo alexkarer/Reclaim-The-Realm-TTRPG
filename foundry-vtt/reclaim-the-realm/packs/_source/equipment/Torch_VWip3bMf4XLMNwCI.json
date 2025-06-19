@@ -1,0 +1,43 @@
+{
+  "folder": "gTsaXbJU4mCDzNlE",
+  "name": "Torch",
+  "type": "equipment",
+  "_id": "VWip3bMf4XLMNwCI",
+  "img": "icons/sundries/lights/torch-black.webp",
+  "system": {
+    "description": "<p>When a torch is lit, it can shine light(6m/12m) for 1 hour. Additionally a torch can act as a weapon. It has the light property and on a hit does 1d4 fire damage instead of your <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong></p>",
+    "tier": 1,
+    "type": "toolsAndGadgets",
+    "costBc": 2,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 250,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Carpenter's Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750361595705,
+    "modifiedTime": 1750361677050,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!VWip3bMf4XLMNwCI"
+}

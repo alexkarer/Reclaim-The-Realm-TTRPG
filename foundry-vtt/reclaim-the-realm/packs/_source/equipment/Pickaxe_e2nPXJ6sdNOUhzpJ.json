@@ -1,0 +1,43 @@
+{
+  "folder": "7CpC2SgyAbik8RbY",
+  "name": "Pickaxe",
+  "type": "equipment",
+  "_id": "e2nPXJ6sdNOUhzpJ",
+  "img": "icons/tools/hand/pickaxe-steel-white.webp",
+  "system": {
+    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Rock and Stone!</span></p>",
+    "tier": 1,
+    "type": "wearables",
+    "costBc": 50,
+    "quantity": 1,
+    "weightKg": 2,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith’s Tools or Carpenter’s Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750356999492,
+    "modifiedTime": 1750357039175,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!e2nPXJ6sdNOUhzpJ"
+}

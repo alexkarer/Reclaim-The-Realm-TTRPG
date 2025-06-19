@@ -1,0 +1,44 @@
+{
+  "folder": "BqDc915f4H39xu4G",
+  "name": "Armour-piercing Arrow",
+  "type": "equipment",
+  "_id": "khsh08yBkLmdlELZ",
+  "img": "icons/weapons/ammunition/arrows-barbed-white.webp",
+  "system": {
+    "description": "<p>Any <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> made using this arrow have the armour-piercing property, can be recovered after firing if the shot was not a critical miss.</p>",
+    "tier": 2,
+    "type": "ammunitions",
+    "costBc": 30,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 30,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Carpenter’s Tools",
+    "availableWeapons": "Bows"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750352068990,
+    "modifiedTime": 1750352600068,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!khsh08yBkLmdlELZ"
+}

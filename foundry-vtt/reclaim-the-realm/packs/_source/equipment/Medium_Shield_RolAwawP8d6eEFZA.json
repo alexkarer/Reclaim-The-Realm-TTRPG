@@ -1,0 +1,43 @@
+{
+  "folder": "ErtjmGVJzIfjlKNl",
+  "name": "Medium Shield",
+  "type": "equipment",
+  "_id": "RolAwawP8d6eEFZA",
+  "img": "icons/equipment/shield/kite-wooden-boss-steel-red.webp",
+  "system": {
+    "description": "<p>can be in form of a round-, heater or kiteshield</p>",
+    "tier": 2,
+    "type": "shields",
+    "costBc": 500,
+    "quantity": 1,
+    "weightKg": 2,
+    "weightGramm": 500,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 1,
+    "movementPenalty": 0,
+    "shieldBlock": 4,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith's Tools, Carpenter's Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750354097127,
+    "modifiedTime": 1750354191853,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!RolAwawP8d6eEFZA"
+}

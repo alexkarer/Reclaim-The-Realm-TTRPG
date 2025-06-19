@@ -54,7 +54,7 @@
         { "pointsCost": 1, "name": "Deadly I", "description": "Increase Crit Threshold by 1." },
         { "pointsCost": 3, "name": "Deadly II", "description": "Increase Crit Threshold by 1." },
         { "pointsCost": 5, "name": "Deadly III", "description": "Increase Crit Threshold by 1." },
-        { "pointsCost": 2, "name": "Tag Team", "description": "If another creature with the same trait is within [MELEE] of a target, then the creature has [DISADVANTAGE] on any [DODGE] [SAVE] or [SHIELD BLOCK]" },
+        { "pointsCost": 2, "name": "Tag Team", "description": "If another creature with the same trait is within [MELEE RANGE] of a target, then the creature has [DISADVANTAGE] on any [DODGE] [SAVE] or [SHIELD BLOCK]" },
         { "pointsCost": 2, "name": "REGENERATION I", "description": "At the start of the Creatures [TURN] it regenerates d6 [HP]." },
         { "pointsCost": 4, "name": "REGENERATION II", "description": "At the start of the Creatures [TURN] it regenerates 10 [HP]." },
         { "pointsCost": 6, "name": "REGENERATION III", "description": "At the start of the Creatures [TURN] it regenerates 20 [HP]." },

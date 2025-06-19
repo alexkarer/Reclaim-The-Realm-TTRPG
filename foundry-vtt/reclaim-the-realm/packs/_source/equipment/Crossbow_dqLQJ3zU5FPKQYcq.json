@@ -1,0 +1,44 @@
+{
+  "folder": "7nQpOQ3rOFCmzMBD",
+  "name": "Crossbow",
+  "type": "equipment",
+  "_id": "dqLQJ3zU5FPKQYcq",
+  "img": "icons/weapons/crossbows/crossbow-blue.webp",
+  "system": {
+    "description": "<p>The crossbow requires two hands to wield effecively has ranges of (25/50/100) and making a <em>Weapon Attack</em> only costs 1 <strong><span style=\"text-decoration:underline\">AP</span></strong> but after each <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> the Weapon has to be reloaded for 2 <strong><span style=\"text-decoration:underline\">AP</span></strong> before one can shoot with it again. This Weapon consumes Ammunition for each <strong><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></strong> made with this Weapon.</p>",
+    "tier": 2,
+    "type": "weapon",
+    "costBc": 500,
+    "quantity": 1,
+    "weightKg": 3,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Carpenter's Tools",
+    "damage": "2d6"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750350590175,
+    "modifiedTime": 1750350778680,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!dqLQJ3zU5FPKQYcq"
+}

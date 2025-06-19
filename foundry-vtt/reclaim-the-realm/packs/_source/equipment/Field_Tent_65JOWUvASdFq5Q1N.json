@@ -1,0 +1,43 @@
+{
+  "folder": "gTsaXbJU4mCDzNlE",
+  "name": "Field Tent",
+  "type": "equipment",
+  "_id": "65JOWUvASdFq5Q1N",
+  "img": "icons/environment/settlement/tent.webp",
+  "system": {
+    "description": "<p>A small tent that can be set up within 10 minutes and has comfortable space for 1 person and 2 persons if need be.</p>",
+    "tier": 1,
+    "type": "survival",
+    "costBc": 100,
+    "quantity": 1,
+    "weightKg": 5,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Tailor’s Set or Carptenter's Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750360823884,
+    "modifiedTime": 1750360912614,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!65JOWUvASdFq5Q1N"
+}

@@ -1,0 +1,43 @@
+{
+  "folder": "iq0uqWLZC3EfZOSB",
+  "name": "Silk Gloves",
+  "type": "equipment",
+  "_id": "gNCawddFixPokqLm",
+  "img": "icons/equipment/hand/glove-leather-blue-gold.webp",
+  "system": {
+    "description": "<p>You gain a +1 bonus to any <strong><span style=\"text-decoration:underline\">CHA ATTRIBUTE TEST</span></strong> when in Settlements.</p><h6>Fancy Armor Set Bonus</h6><p>If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain <strong><span style=\"text-decoration:underline\">ADVANTAGE</span></strong> on any <strong><span style=\"text-decoration:underline\">CHA ATTRIBUTE TEST</span></strong> when interacting with people of high station or law-abiding people in Settlements.</p>",
+    "tier": 3,
+    "type": "wearables",
+    "costBc": 500,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 100,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Tailor's Set"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750355839526,
+    "modifiedTime": 1750355942041,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!gNCawddFixPokqLm"
+}

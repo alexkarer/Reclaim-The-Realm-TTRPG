@@ -1,0 +1,43 @@
+{
+  "folder": "7CpC2SgyAbik8RbY",
+  "name": "Medi-kit",
+  "type": "equipment",
+  "_id": "nqcDehFiEiIE8tGK",
+  "img": "icons/tools/cooking/mortar-herbs-yellow.webp",
+  "system": {
+    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">This Medi-kit contains various herbs, potions and bandages to treat wounded creatures. It has 10 uses and one use can be replenished at most towns at an apothacary for the price of 3 sc. You can use the medi-kit the following ways:</span></p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.ModmbQmRrsBsibnr]{Medi-kit: Emergancy Treatment}</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.Xfn2hks8oee3XW7m]{Medi-kit: Field Treatment}</p><p></p><p></p>",
+    "tier": 3,
+    "type": "toolsAndGadgets",
+    "costBc": 1000,
+    "quantity": 1,
+    "weightKg": 3,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Medicine"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750357286845,
+    "modifiedTime": 1750360014338,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!nqcDehFiEiIE8tGK"
+}

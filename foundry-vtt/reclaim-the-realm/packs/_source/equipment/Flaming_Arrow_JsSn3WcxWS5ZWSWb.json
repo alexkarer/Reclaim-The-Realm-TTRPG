@@ -1,0 +1,44 @@
+{
+  "folder": "BqDc915f4H39xu4G",
+  "name": "Flaming Arrow",
+  "type": "equipment",
+  "_id": "JsSn3WcxWS5ZWSWb",
+  "img": "icons/weapons/ammunition/arrow-broadhead-glowing-orange.webp",
+  "system": {
+    "description": "<p>Before firing the user must spent 1 <strong><span style=\"text-decoration:underline\">AP</span></strong> to light the arrow on fire. On a hit the target receives [<strong><span style=\"text-decoration:underline\">BURNING I</span></strong>] and [<strong><span style=\"text-decoration:underline\">DISTRACTED</span></strong>]. The target can remove these conditions by making a <strong><span style=\"text-decoration:underline\">DT</span></strong> (10+Item Tier) <strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong> <strong><span style=\"text-decoration:underline\">SAVE</span></strong> for 1 <strong><span style=\"text-decoration:underline\">AP</span></strong> to remove the arrow. The arrow can not be recovered after firing.</p>",
+    "tier": 3,
+    "type": "ammunitions",
+    "costBc": 200,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 50,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Carpenter’s Tools, Alchemy Kit",
+    "availableWeapons": "Bows"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750352184711,
+    "modifiedTime": 1750352608797,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!JsSn3WcxWS5ZWSWb"
+}

@@ -1,0 +1,43 @@
+{
+  "folder": "gTsaXbJU4mCDzNlE",
+  "name": "Ration",
+  "type": "equipment",
+  "_id": "e6FvtVGMeo021FSP",
+  "img": "icons/consumables/grains/bread-loaf-wheat-brown.webp",
+  "system": {
+    "description": "<p>A ration that contains long lasting food of local variety that can last for multiple weeks or even months. One such ration is enough to sustain one medium creature for 1 day.</p>",
+    "tier": 1,
+    "type": "consumables",
+    "costBc": 3,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 500,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Survival or Lore(Nature)"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750361066607,
+    "modifiedTime": 1750361254882,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!e6FvtVGMeo021FSP"
+}

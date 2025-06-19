@@ -1,0 +1,44 @@
+{
+  "folder": "7nQpOQ3rOFCmzMBD",
+  "name": "Versatile Weapon (Axe)",
+  "type": "equipment",
+  "_id": "CAMZz8HDJW83JPqj",
+  "img": "icons/weapons/axes/axe-battle-black.webp",
+  "system": {
+    "description": "<p>It deals medium <strong>MARTIAL DAMAGE</strong> when wielded with one hand but can also be wielded with two hands to deal heavy <strong>MARTIAL DAMAGE</strong></p>",
+    "tier": 2,
+    "type": "weapon",
+    "costBc": 500,
+    "quantity": 1,
+    "weightKg": 1,
+    "weightGramm": 500,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith's Tools",
+    "damage": "medium MARTIAL DAMAGE"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750350861623,
+    "modifiedTime": 1750350898962,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!CAMZz8HDJW83JPqj"
+}

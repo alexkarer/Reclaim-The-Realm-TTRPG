@@ -1,0 +1,44 @@
+{
+  "folder": "7nQpOQ3rOFCmzMBD",
+  "name": "Dagger",
+  "type": "equipment",
+  "_id": "tjgmfw0YFnb34L7o",
+  "img": "icons/weapons/daggers/dagger-straight-blue.webp",
+  "system": {
+    "description": "<p>When making a <strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong> with this weapon, the unmodified roll required for scoring a critical hit is lowered by 1.</p>",
+    "tier": 1,
+    "type": "weapon",
+    "costBc": 200,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 500,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith’s Tools",
+    "damage": "light MARTIAL DAMAGE"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750350427963,
+    "modifiedTime": 1750350789770,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!tjgmfw0YFnb34L7o"
+}

@@ -1,0 +1,44 @@
+{
+  "folder": "7nQpOQ3rOFCmzMBD",
+  "name": "Polarm",
+  "type": "equipment",
+  "_id": "mMpGdTtKPhBJp36N",
+  "img": "icons/weapons/polearms/pike-flared-brown.webp",
+  "system": {
+    "description": "<p>Requires two hands to be wielded effectively. Any time you make a <strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong> with this Weapon your <strong><span style=\"text-decoration:underline\">MELEE RANGE</span></strong> is increased by 1.5m</p>",
+    "tier": 2,
+    "type": "weapon",
+    "costBc": 1000,
+    "quantity": 1,
+    "weightKg": 4,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith’s Tools, Carpenter's Tools",
+    "damage": "heavy MARTIAL DAMAGE"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750350723878,
+    "modifiedTime": 1750350826994,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!mMpGdTtKPhBJp36N"
+}

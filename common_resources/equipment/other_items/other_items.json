@@ -190,7 +190,7 @@
         },
         {
             "name": "Steel Helmet",
-            "tier": 1,
+            "tier": 3,
             "craftingSkill": "Smith's Tools",
             "cost": "10 gc",
             "weightInGram": 1000,
@@ -229,7 +229,7 @@
                         "tags": [ "Item" ],
                         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                         "cost": "1-2 [AP]",
-                        "range": "[MELEE]",
+                        "range": "[MELEE RANGE]",
                         "target": "[SELF] or 1 Creature",
                         "duration": "[INSTANT]",
                         "description": [ { "regularText": "You regain 2d6+3 [HP]. If used on another creature, this ability costs 2 [AP].", "headerLine": null, "bulletPoints": null, "ability": null } ],
@@ -256,7 +256,7 @@
                         "tags": [ "Item" ],
                         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                         "cost": "1-2 [AP]",
-                        "range": "[MELEE]",
+                        "range": "[MELEE RANGE]",
                         "target": "[SELF] or 1 Creature",
                         "duration": "[INSTANT]",
                         "description": [ { "regularText": "You regain 1 [ARCANA]. If used on another creature, this ability costs 2 [AP].", "headerLine": null, "bulletPoints": null, "ability": null } ],
@@ -283,7 +283,7 @@
                         "tags": [ "Item" ],
                         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                         "cost": "1-2 [AP]",
-                        "range": "[MELEE]",
+                        "range": "[MELEE RANGE]",
                         "target": "[SELF] or 1 Creature",
                         "duration": "[INSTANT]",
                         "description": [ { "regularText": "You remove a [POISON I] Status Effect affecting you. If used on another creature, this ability costs 2 [AP].", "headerLine": null, "bulletPoints": null, "ability": null } ],
@@ -310,7 +310,7 @@
                         "tags": [ "Item" ],
                         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                         "cost": "2 [AP]",
-                        "range": "[MELEE]",
+                        "range": "[MELEE RANGE]",
                         "target": "1 Creature",
                         "duration": "[INSTANT]",
                         "description": [ { "regularText": "You remove a [BLEEDING I] Status Effect affecting the target.", "headerLine": null, "bulletPoints": null, "ability": null } ],
@@ -340,7 +340,7 @@
                         "range": "9m",
                         "target": "[SPHERE] 1.5m",
                         "duration": "[INSTANT]",
-                        "description": [ { "regularText": "[RAGNED MARTIAL ATTACK]. On hit: 2d6 Corrosive damage. On failure: half damage", "headerLine": null, "bulletPoints": null } ],
+                        "description": [ { "regularText": "[RANGED MARTIAL ATTACK]. On hit: 2d6 Corrosive damage.", "headerLine": null, "bulletPoints": null } ],
                         "flavorText": [ ]
                     }
                 }
@@ -367,7 +367,7 @@
                         "range": "9m",
                         "target": "[SPHERE] 1.5m",
                         "duration": "3 [ROUND]",
-                        "description": [ { "regularText": "Make a [RAGNED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets they are drenched in oil and when ignited recieve the [BURNING I] Status Effect until the duration is over or the oil is washed away. Additionally the target area can also be ignited and when done so the area is lit with fire and any creature that starts its [TURN] in the Area or enters it for the first time it recieves damage is if they had the [BURNING I] Status Effect.", "headerLine": null, "bulletPoints": null } ],
+                        "description": [ { "regularText": "Make a [RANGED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets they are drenched in oil and when ignited recieve the [BURNING I] Status Effect until the duration is over or the oil is washed away. Additionally the target area can also be ignited and when done so the area is lit with fire and any creature that starts its [TURN] in the Area or enters it for the first time it recieves damage is if they had the [BURNING I] Status Effect.", "headerLine": null, "bulletPoints": null } ],
                         "flavorText": [ ]
                     }
                 }
@@ -394,7 +394,7 @@
                         "range": "9m",
                         "target": "[SPHERE] 1.5m",
                         "duration": "3 [ROUND]",
-                        "description": [ { "regularText": "Make a [RAGNED MARTIAL ATTACK] if it exceeds the [DODGE] of the targets, undead and evil cosmic creatures receive 2d6 damage.", "headerLine": null, "bulletPoints": null } ],
+                        "description": [ { "regularText": "[RANGED MARTIAL ATTACK]. On hit: undead and evil cosmic creatures receive 2d6 holy damage.", "headerLine": null, "bulletPoints": null } ],
                         "flavorText": [ ]
                     }
                 },
@@ -407,7 +407,7 @@
                         "tags": [ "Item" ],
                         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                         "cost": "1-2 [AP]",
-                        "range": "[MELEE]",
+                        "range": "[MELEE RANGE]",
                         "target": "[SELF] or 1 Creature",
                         "duration": "[INSTANT]",
                         "description": [ { "regularText": "You end one [CURSED I], [WEAKENED I] or [VULNURABLE I] Status effect affecing you. If used on another creature, this ability costs 2 [AP].", "headerLine": null, "bulletPoints": null, "ability": null } ],
@@ -491,10 +491,10 @@
                         "tags": [ "Item" ],
                         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "1 Rank in Medicine" ] },
                         "cost": "2 [AP], 1 Medi-kit use",
-                        "range": "[MELEE]",
+                        "range": "[MELEE RANGE]",
                         "target": "1 willing creature",
                         "duration": "[INSTANT]",
-                        "description": [ { "regularText": "You can end one of [POISON I], [BLEEDING I] Status Effect affecting the creature. Make a [INT] Medicine [SKILL TEST] against [DT] 15. For a [POISON II] or [BLEADING II] Status Effect the [DT] is 20. For a [POISON III] or [BLEEDING III] the [DT] is 25.", "headerLine": null, "bulletPoints": null } ],
+                        "description": [ { "regularText": "You can end one of [POISON I], [BLEEDING I] Status Effect affecting the creature. Make a [INT] Medicine [SKILL TEST] against [DT] 15. For a [POISON II] or [BLEEDING II] Status Effect the [DT] is 20. For a [POISON III] or [BLEEDING III] the [DT] is 25.", "headerLine": null, "bulletPoints": null } ],
                         "flavorText": [ ]
                     }
                 },
@@ -507,7 +507,7 @@
                         "tags": [ "Item" ],
                         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "1 Rank in Medicine" ] },
                         "cost": "5 minutes, 1 Medi-kit use",
-                        "range": "[MELEE]",
+                        "range": "[MELEE RANGE]",
                         "target": "1 willing creature",
                         "duration": "[INSTANT]",
                         "description": [ { "regularText": "Make an [INT] Medicine [SKILL TEST], if your result is 10 or above you heal the target for 1d6 [HP]. For every further 5 your result is higher than 10 the target heals by an additional 1d6. A creature can only benefit from this no more than once per long rest", "headerLine": null, "bulletPoints": null } ],
@@ -681,6 +681,17 @@
             "type": "Survival",
             "description": [
                 { "regularText": "A 10m long heavy rope that can reliably hold 500 kg of weight.", "headerLine": null, "bulletPoints": null, "ability": null }
+            ]
+        },
+        {
+            "name": "Empty Vial",
+            "tier": 1,
+            "craftingSkill": "",
+            "cost": "1 gc",
+            "weightInGram": 100,
+            "type": "Commodity",
+            "description": [
+                { "regularText": "Empty Vial.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
         }
     ]

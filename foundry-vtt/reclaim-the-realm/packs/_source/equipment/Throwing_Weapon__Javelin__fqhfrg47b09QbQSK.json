@@ -1,0 +1,44 @@
+{
+  "folder": "7nQpOQ3rOFCmzMBD",
+  "name": "Throwing Weapon (Javelin)",
+  "type": "equipment",
+  "_id": "fqhfrg47b09QbQSK",
+  "img": "icons/weapons/polearms/javelin.webp",
+  "system": {
+    "description": "<p>This weapon has a Range of (9/18/36) but can also be wielded as a Melee Weapon.</p>",
+    "tier": 2,
+    "type": "weapon",
+    "costBc": 30,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 500,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith’s Tools, Carpenter’s Tools",
+    "damage": "light MARTIAL DAMAGE"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750351309677,
+    "modifiedTime": 1750351484753,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!fqhfrg47b09QbQSK"
+}

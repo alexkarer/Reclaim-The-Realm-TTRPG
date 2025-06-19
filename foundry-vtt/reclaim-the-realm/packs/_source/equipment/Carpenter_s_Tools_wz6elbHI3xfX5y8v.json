@@ -1,0 +1,43 @@
+{
+  "folder": "7CpC2SgyAbik8RbY",
+  "name": "Carpenter’s Tools",
+  "type": "equipment",
+  "_id": "wz6elbHI3xfX5y8v",
+  "img": "icons/tools/hand/hammer-simple-stone.webp",
+  "system": {
+    "description": "<p>Carpenter’s Tools contain hammers, saws, planes, axes and other tools for woodworking.</p>",
+    "tier": 2,
+    "type": "toolsAndGadgets",
+    "costBc": 500,
+    "quantity": 1,
+    "weightKg": 5,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith’s Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750360478627,
+    "modifiedTime": 1750360536780,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!wz6elbHI3xfX5y8v"
+}

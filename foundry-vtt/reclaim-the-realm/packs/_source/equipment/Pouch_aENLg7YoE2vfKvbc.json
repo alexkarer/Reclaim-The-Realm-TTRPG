@@ -1,0 +1,43 @@
+{
+  "folder": "gTsaXbJU4mCDzNlE",
+  "name": "Pouch",
+  "type": "equipment",
+  "_id": "aENLg7YoE2vfKvbc",
+  "img": "icons/containers/bags/coinpouch-simple-leather-silver-brown.webp",
+  "system": {
+    "description": "<p>A small leather pouch where you can store your valuables.</p>",
+    "tier": 1,
+    "type": "survival",
+    "costBc": 8,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 250,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Tailor’s Set"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750361817817,
+    "modifiedTime": 1750361856322,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!aENLg7YoE2vfKvbc"
+}

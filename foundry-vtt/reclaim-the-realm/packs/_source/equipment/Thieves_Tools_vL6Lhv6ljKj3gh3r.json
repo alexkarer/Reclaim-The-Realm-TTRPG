@@ -1,0 +1,43 @@
+{
+  "folder": "7CpC2SgyAbik8RbY",
+  "name": "Thieves Tools",
+  "type": "equipment",
+  "_id": "vL6Lhv6ljKj3gh3r",
+  "img": "icons/tools/hand/lockpicks-steel-grey.webp",
+  "system": {
+    "description": "<p>Thieves Tools contain various lockpicks, small files, oil and other fine instruments. These tools can be used to lock and unlock doors and disarm traps.</p>",
+    "tier": 3,
+    "type": "toolsAndGadgets",
+    "costBc": 500,
+    "quantity": 1,
+    "weightKg": 0,
+    "weightGramm": 500,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith’s Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750357190474,
+    "modifiedTime": 1750357259318,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!vL6Lhv6ljKj3gh3r"
+}

@@ -1,0 +1,43 @@
+{
+  "folder": "ErtjmGVJzIfjlKNl",
+  "name": "Small shield",
+  "type": "equipment",
+  "_id": "76aaMDVdQ9NMPap6",
+  "img": "icons/equipment/shield/buckler-wooden-boss.webp",
+  "system": {
+    "description": "<p>small shield like a buckler</p>",
+    "tier": 1,
+    "type": "shields",
+    "costBc": 2000,
+    "quantity": 1,
+    "weightKg": 1,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 2,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith's Tools, Carpenter's Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750353973519,
+    "modifiedTime": 1750354070579,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!76aaMDVdQ9NMPap6"
+}

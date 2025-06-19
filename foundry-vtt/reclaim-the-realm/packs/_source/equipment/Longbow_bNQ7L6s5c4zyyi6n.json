@@ -1,0 +1,44 @@
+{
+  "folder": "7nQpOQ3rOFCmzMBD",
+  "name": "Longbow",
+  "type": "equipment",
+  "_id": "bNQ7L6s5c4zyyi6n",
+  "img": "icons/weapons/bows/longbow-leather-green.webp",
+  "system": {
+    "description": "<p>This weapon has a range of (30/60/120) and requires two-hands to be wielded effectively. This Weapon consumes Ammunition for each <strong><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></strong> made with this Weapon.</p>",
+    "tier": 2,
+    "type": "weapon",
+    "costBc": 1000,
+    "quantity": 1,
+    "weightKg": 1,
+    "weightGramm": 500,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Carpenter’s Tools",
+    "damage": "medium MARTIAL DAMAGE"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750351794890,
+    "modifiedTime": 1750351892825,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!bNQ7L6s5c4zyyi6n"
+}

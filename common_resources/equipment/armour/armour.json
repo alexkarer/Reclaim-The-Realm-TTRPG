@@ -18,7 +18,7 @@
         "tier": 3,
         "craftingSkill": "Smith’s Tools",
         "cost": "50 gc",
-        "weightInGram": 1500,
+        "weightInGram": 15000,
         "type": "Armour",
         "description": [
              { "regularText":"Chain mail with additional cloth padding and light metal plates at critical areas, or some type of lamellar armour.", "headerLine": null, "bulletPoints": null, "ability": null }

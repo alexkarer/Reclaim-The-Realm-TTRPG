@@ -1,0 +1,43 @@
+{
+  "folder": "7CpC2SgyAbik8RbY",
+  "name": "Tailor’s Set",
+  "type": "equipment",
+  "_id": "NqWeAbT7kQcvd0bL",
+  "img": "icons/tools/hand/needle-grey.webp",
+  "system": {
+    "description": "<p>Tailor’s Set contains scissors, measurement tools, needles and other sewing tools to create and repair clothing.</p>",
+    "tier": 3,
+    "type": "toolsAndGadgets",
+    "costBc": 500,
+    "quantity": 1,
+    "weightKg": 1,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 0,
+    "manoeuvrePenalty": 0,
+    "movementPenalty": 0,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith’s Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750360389798,
+    "modifiedTime": 1750360455703,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!NqWeAbT7kQcvd0bL"
+}

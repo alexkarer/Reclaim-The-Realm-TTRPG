@@ -1,0 +1,43 @@
+{
+  "folder": "Wtbo0hi29GRdu6zv",
+  "name": "Heavy Armour",
+  "type": "equipment",
+  "_id": "2clhuNANRhvZQl2F",
+  "img": "icons/equipment/chest/breastplate-cuirass-steel-grey.webp",
+  "system": {
+    "description": "<p>Steel Plates which protect the body all around with a chain mail vest underneath</p>",
+    "tier": 5,
+    "type": "armour",
+    "costBc": 20000,
+    "quantity": 1,
+    "weightKg": 30,
+    "weightGramm": 0,
+    "totalWeightGramm": 0,
+    "recoverable": false,
+    "damageBlock": 4,
+    "manoeuvrePenalty": 5,
+    "movementPenalty": 1,
+    "shieldBlock": 0,
+    "damageThreshold": 0,
+    "craftingSkills": "Smith’s Tools"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750353284931,
+    "modifiedTime": 1750353617356,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!2clhuNANRhvZQl2F"
+}
