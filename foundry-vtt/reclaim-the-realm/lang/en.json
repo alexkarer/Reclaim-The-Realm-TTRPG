@@ -144,7 +144,8 @@
         "Perk": "Perk",
         "Species": "Species",
         "ClassCoreValues": "Class Core Values",
-        "ClassCoreFeature": "Class Core Feature"
+        "ClassCoreFeature": "Class Core Feature",
+        "Trait": "Trait"
       },
       "Equipment": {
         "FIELDS": {
@@ -235,6 +236,14 @@
           "classSkills": {"label": "Class Skills"},
           "skillPointsPerLevel": {"label": "Skill points per Level"}
         }
+      },
+      "NpcAbility": {
+        "FIELDS": {
+        }
+      },
+      "NpcTrait": {
+        "FIELDS": {
+        }
       }
     },
     "Effect": {
@@ -258,7 +267,9 @@
       "martialManeuver": "Martial Maneuver",
       "spell": "Spell",
       "species": "Species",
-      "class": "Class"
+      "class": "Class",
+      "npcTrait": "NPC Trait",
+      "npcAbility": "NPC Ability"
     }
   }
 }

@@ -2,8 +2,7 @@ import RtRAbility from './item-ability.mjs';
 
 export default class RtRSpell extends RtRAbility {
   static LOCALIZATION_PREFIXES = [
-    'RTR.Item.base',
-    'RTR.Item.Ability',
+    ...super.LOCALIZATION_PREFIXES,
     'RTR.Item.Spell',
   ];
 

@@ -64,5 +64,9 @@
       <span>{{localize 'RTR.Item.Species.FIELDS.startingHPBonus.label'}}</span>
       <input class="compact-input grid-span-3" type='number' name='system.startingBonusHP' value='{{system.startingBonusHP}}' data-dtype='number'/>
     {{/if}}
+    {{#if (or (eq item.type 'npcTrait') (eq item.type 'npcAbility'))}}
+      <span>Summary</span>
+      <input class="compact-input grid-span-3" type='text' name='system.summary' value='{{system.summary}}' data-dtype='text'/>
+    {{/if}}
   </div>
 </header>

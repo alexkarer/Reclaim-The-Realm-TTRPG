@@ -75,6 +75,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     classcorevalues: {
       template: 'systems/reclaim-the-realm/templates/item/class-core-values.hbs',
     },
+    npctrait: {
+      template: 'systems/reclaim-the-realm/templates/item/npc-trait.hbs',
+    }
   };
 
   /** @override */
@@ -93,6 +96,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         options.parts.push('equipment');
         break;
       case 'ability':
+      case 'npcAbility':
       case 'classTechnique':
       case 'martialManeuver':
         options.parts.push('ability');
@@ -105,6 +109,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'class':
         options.parts.push('classcorefeature', 'classcorevalues');
+        break;
+      case 'npcTrait':
+        options.parts.push('npctrait');
         break;
     }
   }
@@ -145,6 +152,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       case 'description':
       case 'species':
       case 'classcorefeature':
+      case 'npctrait':
         context.tab = context.tabs[partId];
         // Enrich description info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
@@ -183,7 +191,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
     if (!this.tabGroups[tabGroup]) {
-      if (this.document.type === 'ability' || this.document.type === 'martialManeuver' || this.document.type === 'classTechnique') {
+      if (this.document.type === 'ability' || this.document.type === 'martialManeuver' || this.document.type === 'classTechnique' || this.document.type === 'npcAbility') {
         this.tabGroups[tabGroup] = 'ability';
       } else if (this.document.type === 'spell') {
         this.tabGroups[tabGroup] = 'spell';
@@ -195,6 +203,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         this.tabGroups[tabGroup] = 'species';
       } else if (this.document.type === 'class') {
         this.tabGroups[tabGroup] = 'classcorefeature';
+      } else if (this.document.type === 'npcTrait') {
+        this.tabGroups[tabGroup] = 'npctrait';
       } else {
         this.tabGroups[tabGroup] = 'description';
       }
@@ -249,6 +259,10 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         case 'classcorevalues':
           tab.id = 'classcorevalues';
           tab.label += 'ClassCoreValues';
+          break;
+        case 'npctrait':
+          tab.id = 'npctrait';
+          tab.label += 'Trait';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';

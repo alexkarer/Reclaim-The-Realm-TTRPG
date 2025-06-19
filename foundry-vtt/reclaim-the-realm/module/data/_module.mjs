@@ -13,3 +13,5 @@ export { default as RtRSpell } from './item/item-spell.mjs';
 export { default as RtRMartialManeuver } from './item/item-martial-maneuver.mjs';
 export { default as RtRSpecies } from './item/item-species.mjs';
 export { default as RtRClass } from './item/item-class.mjs';
+export { default as RtRNpcAbility } from './item/item-npc-ability.mjs';
+export { default as RtRNpcTrait } from './item/item-npc-trait.mjs';

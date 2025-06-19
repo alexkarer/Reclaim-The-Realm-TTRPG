@@ -701,6 +701,12 @@
   padding: 3px;
   border-style: solid;
 }
+.reclaim-the-realm .npc-overview-container {
+  height: 520px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
 .reclaim-the-realm .increase-attribute-btn {
   margin-left: 5px;
   flex-shrink: 5;

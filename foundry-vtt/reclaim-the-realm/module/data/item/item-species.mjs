@@ -2,7 +2,7 @@ import RtRItemBase from './base-item.mjs';
 
 export default class RtRSpecies extends RtRItemBase {
   static LOCALIZATION_PREFIXES = [
-    'RTR.Item.base',
+    ...super.LOCALIZATION_PREFIXES,
     'RTR.Item.Species',
   ];
 

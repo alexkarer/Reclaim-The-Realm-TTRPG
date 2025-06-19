@@ -78,7 +78,9 @@ export default class RtRActorBase extends foundry.abstract
         damageType: new fields.StringField({...requiredStringField, choices: Object.keys(CONFIG.RTR.damageTypes)}),
         value: new fields.NumberField({ ...requiredInteger, min: 1}), 
       })
-    ),
+    );
+    // use this for now, but should eventually migrate
+    schema.resistancesString = new fields.StringField();
 
     schema.attackBonuses = new fields.SchemaField({
       meleeMartialAttack: new fields.NumberField({ ...requiredInteger, initial: 0 }),

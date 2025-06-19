@@ -1,9 +1,7 @@
 ### Immidiate TODOS
 
-- Implemement Class with Class Core Abilities.
 - Define and user proper data structure for abilities before creating them to avoid lots of headaches later on.
 - Roll with advantage or disadanvtage function (mb with hotkeys)
-- Proper NPC Layout
 
 # General TODOs/Nice to have
 
@@ -34,12 +32,8 @@
 
 ### NPCS
 
-- Improve Layout, show only 4 Tabs:
-  - Overview: include abilities tratis, important stats, should be the only view needed in combat
-  - Description: HTML Field that shows lore and stuff
-  - Skills: simplfied view compared to characters
-  - Effects: 
-  - Data: 
+- Description Tab: HTML Field that shows lore and stuff
+- Skills: needs possibility to set skil lranks manaullys
 
 ## Items
 

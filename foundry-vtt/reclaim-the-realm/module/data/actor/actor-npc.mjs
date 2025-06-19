@@ -14,6 +14,10 @@ export default class RtRNPC extends RtRActorBase {
 
     schema.npcLevel = new fields.NumberField({ required: true, nullable: false, initial: 1, min: 0.125 });
 
+    // use it this way for now, but should eventually migrate
+    schema.immunitiesString = new fields.StringField();
+    schema.statusEffectImmunityString = new fields.StringField();
+
     return schema;
   }
 

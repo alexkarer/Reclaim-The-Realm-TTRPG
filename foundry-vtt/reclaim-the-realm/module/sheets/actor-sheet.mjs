@@ -72,8 +72,11 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     data: {
       template: 'systems/reclaim-the-realm/templates/actor/data.hbs',
     },
-    overview: {
-      template: 'systems/reclaim-the-realm/templates/actor/overview.hbs',
+    characteroverview: {
+      template: 'systems/reclaim-the-realm/templates/actor/character-overview.hbs',
+    },
+    npcoverview: {
+      template: 'systems/reclaim-the-realm/templates/actor/npc-overview.hbs',
     },
     equipment: {
       template: 'systems/reclaim-the-realm/templates/actor/equipment.hbs',
@@ -96,16 +99,16 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     // Not all parts always render
-    options.parts = ['header', 'tabs', 'overview', 'data'];
+    options.parts = ['header', 'tabs'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('perks', 'skills', 'equipment', 'abilities', 'effects');
+        options.parts.push('characteroverview', 'data', 'perks', 'skills', 'equipment', 'abilities', 'effects');
         break;
       case 'npc':
-        options.parts.push('perks', 'skills', 'abilities', 'effects');
+        options.parts.push('npcoverview', 'data', 'skills', 'effects');
         break;
     }
   }
@@ -147,9 +150,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       case 'skills':
       case 'equipment':
       case 'perks':
+      case 'npcoverview':
         context.tab = context.tabs[partId];
         break;
-      case 'overview':
+      case 'characteroverview':
         context.tab = context.tabs[partId];
         // Enrich overview info for display
         // Enrichment turns text like `[[/r 1d20]]` into buttons
@@ -188,7 +192,13 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     // If you have sub-tabs this is necessary to change
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
-    if (!this.tabGroups[tabGroup]) this.tabGroups[tabGroup] = 'overview';
+    if (!this.tabGroups[tabGroup]) {
+      if (this.actor.type === 'character') {
+        this.tabGroups[tabGroup] = 'characteroverview';
+      } else if (this.actor.type === 'npc') {
+        this.tabGroups[tabGroup] = 'npcoverview';
+      }
+    }
     return parts.reduce((tabs, partId) => {
       const tab = {
         cssClass: '',
@@ -204,8 +214,12 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         case 'header':
         case 'tabs':
           return tabs;
-        case 'overview':
-          tab.id = 'overview';
+        case 'characteroverview':
+          tab.id = 'characteroverview';
+          tab.label += 'Overview';
+          break;
+        case 'npcoverview':
+          tab.id = 'npcoverview';
           tab.label += 'Overview';
           break;
         case 'data':
@@ -258,6 +272,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
     let species = undefined;
     let playerClass = undefined;
 
+    const npcTraits = [];
+    const npcAbilities = [];
+
     // Iterate through items, allocating to containers
     for (let i of this.document.items) {
       if (i.type === 'equipment') {
@@ -276,6 +293,10 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         species = i;
       } else if (i.type === 'class') {
         playerClass = i;
+      } else if (i.type === 'npcTrait') {
+        npcTraits.push(i);
+      } else if (i.type === 'npcAbility') {
+        npcAbilities.push(i);
       }
     }
 
@@ -297,6 +318,9 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
 
     context.species = species;
     context.playerClass = playerClass;
+
+    context.npcTraits = npcTraits.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+    context.npcAbilities = npcAbilities.sort((a, b) => (a.sort || 0) - (b.sort || 0));
   }
 
   /**
@@ -1271,14 +1295,21 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
 
   _isItemAllowedForActorType(actorType, itemType) {
     if (actorType === 'character') {
-      return true;
+      if (itemType === 'npcTrait' || itemType === 'npcAbility') {
+        return false;
+      } else {
+        return true;
+      }
     } else if (actorType === 'npc') {
       if (
         itemType === 'species' ||
         itemType === 'class' ||
         itemType === 'martialManeuver' ||
         itemType === 'spell' ||
-        itemType === 'classTechnique'
+        itemType === 'classTechnique' ||
+        itemType === 'ability' ||
+        itemType === 'perk' ||
+        itemType === 'equipment'
       ) {
         return false;
       } else {

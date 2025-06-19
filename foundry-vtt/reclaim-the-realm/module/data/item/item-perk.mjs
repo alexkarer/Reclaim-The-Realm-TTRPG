@@ -2,7 +2,7 @@ import RtRItemBase from './base-item.mjs';
 
 export default class RtRPerk extends RtRItemBase {
   static LOCALIZATION_PREFIXES = [
-    'RTR.Item.base',
+    ...super.LOCALIZATION_PREFIXES,
     'RTR.Item.Perk',
   ];
 
@@ -14,7 +14,7 @@ export default class RtRPerk extends RtRItemBase {
     schema.tags = new fields.StringField();
 
     schema.perkPointsCost = new fields.NumberField({ ...requiredInteger, initial: 1, min: 0 }),
-    
+
     schema.requirements = new fields.SchemaField({
       minimumLevel: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       minimumMartialLevel: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
