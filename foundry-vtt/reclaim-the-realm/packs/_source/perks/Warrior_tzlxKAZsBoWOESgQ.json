@@ -5,7 +5,7 @@
   "_id": "tzlxKAZsBoWOESgQ",
   "img": "icons/skills/melee/weapons-crossed-swords-teal.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You are now eligable to learn Advanced Martial Maneuvers even though you do not meet the </span><span style=\"text-decoration:underline\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">MARTIAL LEVEL</span></a></span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"> Requirements. Additionally you can learn 2 extra Martial Maneuvers.</span></p>",
+    "description": "<p>You are now eligable to learn Advanced Martial Maneuvers even though you do not meet the <strong><span style=\"text-decoration:underline\">MARTIAL LEVEL</span></strong> Requirements. Additionally you can learn 2 extra Martial Maneuvers.</p>",
     "perkPointsCost": 2,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749985467752,
-    "modifiedTime": 1749985538193,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420705532,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!tzlxKAZsBoWOESgQ"
 }

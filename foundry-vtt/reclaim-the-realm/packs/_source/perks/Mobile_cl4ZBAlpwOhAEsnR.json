@@ -3,7 +3,7 @@
   "type": "perk",
   "img": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp",
   "system": {
-    "description": "<p>You gain one extra <strong>MP</strong> and you gain a +4 bonus to your <strong>DODGE</strong> against any <em>Opportunity Attack</em>. Additionally escaping a grapple or standing up from <strong>PRONE</strong> requires 2 <strong>MP</strong> less.</p>",
+    "description": "<p>You gain one extra <strong><span style=\"text-decoration:underline\">MP</span></strong> and you gain a +4 bonus to your <strong><span style=\"text-decoration:underline\">DODGE</span></strong> against any <em>Opportunity Attack</em>. Additionally escaping a grapple or standing up from <strong><span style=\"text-decoration:underline\">PRONE</span></strong> requires 2 <strong><span style=\"text-decoration:underline\">MP</span></strong> less.</p>",
     "tags": "Defensive",
     "requirements": {
       "otherRequirements": "3 AGI"
@@ -24,8 +24,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749372441042,
-    "modifiedTime": 1749940480925,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420135881,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_id": "cl4ZBAlpwOhAEsnR",
   "sort": 100000,

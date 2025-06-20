@@ -5,7 +5,7 @@
   "_id": "1JrNQAhNRnPDbEL6",
   "img": "icons/commodities/biological/organ-brain-pink.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Gain a +2 bonus to <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">WILLPOWER</span></a> that increases to a +4 bonus when you reach <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">LEVEL</span></a> 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): , ,</span></p>",
+    "description": "<p>Gain a +2 bonus to <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">WILLPOWER</span></strong></span> that increases to a +4 bonus when you reach <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">LEVEL</span></strong></span> 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [<strong>FRIGHTENED</strong> I], [<strong>FRIGHTENED II</strong>], [<strong>FRIGHTENED III]</strong>, [<strong>CHARMED I</strong>], [<strong>CHARMED II</strong>], [<strong>CHARMED III</strong>].</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749942466440,
-    "modifiedTime": 1749942515835,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420464788,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!1JrNQAhNRnPDbEL6"
 }

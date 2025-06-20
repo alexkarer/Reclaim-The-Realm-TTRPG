@@ -5,7 +5,7 @@
   "_id": "zWU5YwNacvBKWPnE",
   "img": "icons/magic/life/ankh-gold-blue.webp",
   "system": {
-    "description": "<p>Remove one Tier 1 Status Effect affecting the target.</p><p><strong>Upcasting the Spell</strong></p><p>When upcasting the spell, if you increase the ARCANA Cost and Spell Difficulty by 3, you can choose to remove a Tier 2 Status Effect and if you increase it by 6, you can choose to remove a Tier 3 Status Effect.</p><p><em>Bright energies glow around the target removign or freeing them from ailments</em></p>",
+    "description": "<p>Remove one Tier 1 Status Effect affecting the target.</p><p><strong>Upcasting the Spell</strong></p><p>When upcasting the spell, if you increase the <strong><span style=\"text-decoration:underline\">ARCANA</span></strong> Cost and Spell Difficulty by 3, you can choose to remove a Tier 2 Status Effect and if you increase it by 6, you can choose to remove a Tier 3 Status Effect.</p><p><em>Bright energies glow around the target removign or freeing them from ailments</em></p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -38,7 +38,8 @@
     "range": "5m",
     "targets": "1 target",
     "duration": "INSTANT",
-    "components": "V (Prayer)"
+    "components": "V (Prayer)",
+    "formula": ""
   },
   "effects": [],
   "flags": {},
@@ -49,8 +50,8 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1749920841304,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750421237334,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "sort": 0,
   "ownership": {

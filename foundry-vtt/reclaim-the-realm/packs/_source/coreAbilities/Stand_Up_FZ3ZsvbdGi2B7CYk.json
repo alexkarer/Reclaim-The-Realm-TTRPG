@@ -1,0 +1,57 @@
+{
+  "folder": "toXxSBIuDULnTFQk",
+  "name": "Stand Up",
+  "type": "ability",
+  "_id": "FZ3ZsvbdGi2B7CYk",
+  "img": "systems/reclaim-the-realm/assets/icons/abilities/falling.svg",
+  "system": {
+    "description": "<p>You stand up from being <strong><span style=\"text-decoration:underline\">PRONE</span></strong>.</p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "5 MP"
+    },
+    "tags": "Movement",
+    "range": "-",
+    "targets": "SELF",
+    "duration": "INSTANT",
+    "formula": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750417950872,
+    "modifiedTime": 1750417978171,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!FZ3ZsvbdGi2B7CYk"
+}

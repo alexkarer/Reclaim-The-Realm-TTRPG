@@ -97,7 +97,7 @@
         },
         "textElements": [
             {
-                "regularText": "Gain a +2 bonus to [WILLPOWER] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [CHARMED], [FRIGHTENED], [CONFUSED]",
+                "regularText": "Gain a +2 bonus to [WILLPOWER] that increases to a +4 bonus when you reach [LEVEL] 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [FRIGHTENED I], [FRIGHTENED II], [FRIGHTENED III], [CHARMED I], [CHARMED II], [CHARMED III].",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null

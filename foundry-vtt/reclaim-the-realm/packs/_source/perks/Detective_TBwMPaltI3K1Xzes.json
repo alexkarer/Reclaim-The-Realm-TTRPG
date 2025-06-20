@@ -5,7 +5,7 @@
   "_id": "TBwMPaltI3K1Xzes",
   "img": "icons/skills/trades/academics-investigation-puzzles.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You have advantage on any </span><span style=\"text-decoration:underline\"><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"><a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">D20 TEST</span></a></span></span><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\"> to resist or decipher illusions. Additionally once per day when you make an Investigation <strong>SKILL TEST</strong> regardless what your dice result you can request the GM to give you one clue related to what you are trying to find out.</span></p>",
+    "description": "<p>You have advantage on any <strong><span style=\"text-decoration:underline\">D20 TEST</span></strong> to resist or decipher illusions. Additionally once per day when you make an Investigation <strong><span style=\"text-decoration:underline\">SKILL TEST</span></strong> regardless what your dice result you can request the GM to give you one clue related to what you are trying to find out.</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987590606,
-    "modifiedTime": 1749989003640,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750421003280,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!TBwMPaltI3K1Xzes"
 }

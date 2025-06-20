@@ -5,7 +5,7 @@
   "_id": "d0bhfKAf6M3VHlj2",
   "img": "icons/equipment/head/hood-purple-mask.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">If you are targeted by an <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">RANGED ATTACK</span></a> 9m or further away, you gain bonus from <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">PARTIAL CONCEALMENT</span></a> even if you are in plain sight. Additionally you are not slowed down while hidden.</span></p>",
+    "description": "<p>If you are targeted by an <strong><span style=\"text-decoration:underline\">RANGED ATTACK</span></strong> 9m or further away, you gain bonus from <strong><span style=\"text-decoration:underline\">PARTIAL CONCEALMENT</span></strong> even if you are in plain sight. Additionally you are not slowed down while hidden.</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749988370394,
-    "modifiedTime": 1749988454074,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750421073934,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!d0bhfKAf6M3VHlj2"
 }

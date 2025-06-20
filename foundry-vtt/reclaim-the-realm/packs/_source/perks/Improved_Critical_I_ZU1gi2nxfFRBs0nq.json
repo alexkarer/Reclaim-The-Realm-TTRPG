@@ -5,7 +5,7 @@
   "_id": "ZU1gi2nxfFRBs0nq",
   "img": "icons/skills/targeting/target-strike-triple-blue.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">For your <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgba(139, 185, 254, 0.5);text-decoration:underline;--bs-link-color-rgb:139, 185, 254;cursor:pointer;--bs-link-opacity:.5\"><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></a> and <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></a> the required unmodified roll required for a critical hit is reduced by 1.</span></p>",
+    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">For your <strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong> and <strong><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></strong> the required unmodified roll required for a critical hit is reduced by 1.</span></p>",
     "perkPointsCost": 2,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749986651500,
-    "modifiedTime": 1749986725858,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420481339,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!ZU1gi2nxfFRBs0nq"
 }

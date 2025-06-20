@@ -5,7 +5,7 @@
   "_id": "ceRo9k2GMc6X1kVI",
   "img": "icons/skills/melee/weapons-crossed-swords-black-gray.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Select two Martial Maneuver types. You are now able to learn Martial Maneuvers of that type.</span></p>",
+    "description": "<p>Select two Martial Maneuver types. You are now able to learn Martial Maneuvers of that type.</p>",
     "perkPointsCost": 2,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749985436329,
-    "modifiedTime": 1749985483796,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420621409,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!ceRo9k2GMc6X1kVI"
 }

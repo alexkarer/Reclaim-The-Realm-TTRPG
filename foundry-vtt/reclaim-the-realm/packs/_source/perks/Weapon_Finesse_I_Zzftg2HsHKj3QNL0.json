@@ -5,7 +5,7 @@
   "_id": "Zzftg2HsHKj3QNL0",
   "img": "icons/skills/melee/strike-dagger-poison-dripping-green.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">When you make a Weapon Attack with a light or versatile weapon you can use half of your <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">AGI</span></a> instead of your <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">STR</span></a> for determining your Martial Damage.</span></p>",
+    "description": "<p>When you make a <em>Weapon Attack</em> with a light or versatile weapon you can use half of your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">AGI</span></strong></span> instead of your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">STR</span></strong></span> for determining your <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong>.</p>",
     "perkPointsCost": 2,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749985690942,
-    "modifiedTime": 1749986087750,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420773111,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!Zzftg2HsHKj3QNL0"
 }

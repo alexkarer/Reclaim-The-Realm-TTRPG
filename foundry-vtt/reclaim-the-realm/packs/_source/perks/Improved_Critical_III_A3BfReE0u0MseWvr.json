@@ -5,7 +5,7 @@
   "_id": "A3BfReE0u0MseWvr",
   "img": "icons/skills/targeting/target-strike-triple-blue.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">When you score a critical hit with a <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></a> and <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></a>, you can grant your target one of the following status effects of your choice for 1 round: <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">[BLINDED]</span></a>, <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">[SILENCED]</span></a>, <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">[BLEEDING I]</span></a>, <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">[STUNNED I]</span></a>, <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">[CRIPPLED I]</span></a></span></p>",
+    "description": "<p>When you score a critical hit with a <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong></span> and <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></strong></span>, you can grant your target one of the following status effects of your choice for 1 round: [<strong>BLINDED</strong>], [<strong>SILENCED</strong>], [<strong>BLEEDING I</strong>], [<strong>STUNNED I</strong>], [<strong>CRIPPLED I</strong>].</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749986776825,
-    "modifiedTime": 1749986791474,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420562927,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!A3BfReE0u0MseWvr"
 }

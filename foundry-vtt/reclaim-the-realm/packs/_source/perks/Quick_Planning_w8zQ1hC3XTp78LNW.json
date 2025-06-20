@@ -5,7 +5,7 @@
   "_id": "w8zQ1hC3XTp78LNW",
   "img": "icons/commodities/biological/organ-brain-pink.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">In the first <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">ROUND</span></a> in comat you can increase or deacrease your Initiative by 1d6 + <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">INT</span></a>/2.</span></p>",
+    "description": "<p>In the first <strong><span style=\"text-decoration:underline\">ROUND</span></strong> in comat you can increase or deacrease your Initiative by 1d6 + <strong><span style=\"text-decoration:underline\">INT</span></strong>/2.</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987135538,
-    "modifiedTime": 1749987180405,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420785879,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!w8zQ1hC3XTp78LNW"
 }

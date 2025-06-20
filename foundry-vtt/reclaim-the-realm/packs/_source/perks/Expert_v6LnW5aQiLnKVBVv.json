@@ -5,7 +5,7 @@
   "_id": "v6LnW5aQiLnKVBVv",
   "img": "icons/skills/trades/academics-book-study-purple.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You improve 2 skills by 2 ranks and increase the maximum rank of those skills by 2. If a lore or tool skill was chosen, the current rank and maximum rank is increased by 4 instead.</span></p>",
+    "description": "<p>You improve 2 skills by 2 ranks and increase the maximum rank of those skills by 2. If a lore or tool skill was chosen, the current rank and maximum rank is increased by 4 instead.</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987313085,
-    "modifiedTime": 1749987331076,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750421053119,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!v6LnW5aQiLnKVBVv"
 }

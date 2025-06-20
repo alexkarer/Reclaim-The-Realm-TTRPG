@@ -5,7 +5,7 @@
   "_id": "WzjW0C6U5gf2yo1T",
   "img": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp",
   "system": {
-    "description": "<p>Apply <strong>[BLESS I]</strong></p><p><strong>Upcasting the Spell</strong></p><p>When upcasting the spell, increase the ARCANA Cost and Spell Difficulty by one and for every increase an additional creature can be targeted.</p><p><em>You bless distribute holy water around you magically blessing also your chosen alies.</em></p>",
+    "description": "<p>Apply <strong>[BLESS I]</strong></p><p><strong>Upcasting the Spell</strong></p><p>When upcasting the spell, increase the <strong><span style=\"text-decoration:underline\">ARCANA</span></strong> Cost and Spell Difficulty by one and for every increase an additional creature can be targeted.</p><p><em>You bless distribute holy water around you magically blessing also your chosen alies.</em></p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -38,7 +38,8 @@
     "range": "9m",
     "targets": "three willing creatures",
     "duration": "SPI ROUND",
-    "components": "V (Prayer), S, M (a springling of holy water)"
+    "components": "V (Prayer), S, M (a springling of holy water)",
+    "formula": ""
   },
   "effects": [],
   "flags": {},
@@ -49,8 +50,8 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1749920841304,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750421227394,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "sort": 0,
   "ownership": {

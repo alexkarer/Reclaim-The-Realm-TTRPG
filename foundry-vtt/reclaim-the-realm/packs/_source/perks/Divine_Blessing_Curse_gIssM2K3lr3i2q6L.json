@@ -5,7 +5,7 @@
   "_id": "gIssM2K3lr3i2q6L",
   "img": "icons/magic/holy/prayer-hands-glowing-yellow-green.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">If you are of good allignment, you gain access to the Divine Blessing ability. If you are of evil allignment you gain the Divine Curse ability. If you are neutral, you gain access to both.</span></p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.AJXgMfX2rDqb5XyB]{Divine Blessing}</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.Qu1j0aGYWT5Fjspv]{Unholy Curse}</p>",
+    "description": "<p>If you are of good allignment, you gain access to the Divine Blessing ability. If you are of evil allignment you gain the Divine Curse ability. If you are neutral, you gain access to both.</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.AJXgMfX2rDqb5XyB]{Divine Blessing}</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.Qu1j0aGYWT5Fjspv]{Unholy Curse}</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749941192090,
-    "modifiedTime": 1750008132415,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420873537,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!gIssM2K3lr3i2q6L"
 }

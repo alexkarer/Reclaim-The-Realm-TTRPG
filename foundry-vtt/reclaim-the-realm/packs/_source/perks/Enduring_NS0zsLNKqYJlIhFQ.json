@@ -5,7 +5,7 @@
   "_id": "NS0zsLNKqYJlIhFQ",
   "img": "icons/skills/wounds/injury-body-pain-gray.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Gain a +2 bonus to <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">TOUGHNESS</span></a> that increases to a +4 bonus when you reach <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">LEVEL</span></a> 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">[BLINDED]</span></a>, <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">[STUNNED I]</span></a>, <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">[DEAFENED]</span></a>, <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">[SILENCED]</span></a>, , <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">[BLEEDING I]</span></a>,</span></p>",
+    "description": "<p>Gain a +2 bonus to <strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong> that increases to a +4 bonus when you reach <strong><span style=\"text-decoration:underline\">LEVEL</span></strong> 7. Additionally when any of the following Status Effect is applied to you, the duration is halved (rounded up): [<strong>BLINDED</strong>], [<strong>STUNNED I]</strong>, [<strong>DEAFENED</strong>], [<strong>SILENCED</strong>], [<strong>BLEEDING I</strong>],</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749942430084,
-    "modifiedTime": 1749942458261,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420049065,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!NS0zsLNKqYJlIhFQ"
 }

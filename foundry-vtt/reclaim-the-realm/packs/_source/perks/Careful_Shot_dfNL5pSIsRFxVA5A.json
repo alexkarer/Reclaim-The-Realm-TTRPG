@@ -5,7 +5,7 @@
   "_id": "dfNL5pSIsRFxVA5A",
   "img": "icons/skills/ranged/person-archery-bow-attack-orange.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">At the start of your <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">TURN</span></a>, you can choose to reduce your <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">MP</span></a> to 0 and choose to make Careful Shots, during which your <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">DODGE</span></a> is reduced by 5, but every <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></a> you make during this <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">TURN</span></a> has <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">ADVANTAGE</span></a></span></p>",
+    "description": "<p>At the start of your <strong><span style=\"text-decoration:underline\">TURN</span></strong>, you can choose to reduce your <strong><span style=\"text-decoration:underline\">MP</span></strong> to 0 and choose to make Careful Shots, during which your <strong><span style=\"text-decoration:underline\">DODGE</span></strong> is reduced by 5, but every <strong><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></strong> you make during this <strong><span style=\"text-decoration:underline\">TURN</span></strong> has <strong><span style=\"text-decoration:underline\">ADVANTAGE</span></strong>.</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749986439392,
-    "modifiedTime": 1749986465535,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750419967476,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!dfNL5pSIsRFxVA5A"
 }

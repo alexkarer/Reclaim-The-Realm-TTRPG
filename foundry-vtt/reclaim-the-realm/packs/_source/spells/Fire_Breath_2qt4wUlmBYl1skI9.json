@@ -5,7 +5,7 @@
   "_id": "2qt4wUlmBYl1skI9",
   "img": "icons/magic/fire/blast-jet-stream-embers-orange.webp",
   "system": {
-    "description": "<p><strong>CON SPELL TEST</strong> vs. <strong>DODGE</strong>. On success: recieve 2d8 + (<strong>SPI</strong> / 4) * d8 fire damage. On fail: half damage.</p><p><strong>Upcasting the Spell</strong></p><p>When upcasting the spell, increase the ARCANA Cost and Spell Difficulty by one and for every increase you deal an additional 1d8 + (<strong>SPI</strong> / 4) * d8 fire damage. Additionally every increase of 2 increases the Cone size by 1.5m.</p><p><em>Like a Fire Dragon you breath fire upon your foes</em></p>",
+    "description": "<p><span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">CON SPELL TEST</span></strong></span> vs. <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DODGE</span></strong></span>. On success: recieve 2d8 + (<span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SPI</span></strong></span> / 4) * d8 fire damage. On fail: half damage.</p><p><strong>Upcasting the Spell</strong></p><p>When upcasting the spell, increase the <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">ARCANA</span></strong></span> Cost and Spell Difficulty by one and for every increase you deal an additional 1d8 + (<span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SPI</span></strong></span> / 4) * d8 fire damage. Additionally every increase of 2 increases the Cone size by 1.5m.</p><p><em>Like a Fire Dragon you breath fire upon your foes</em></p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -50,8 +50,8 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1750021883866,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750421306783,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "sort": 0,
   "ownership": {

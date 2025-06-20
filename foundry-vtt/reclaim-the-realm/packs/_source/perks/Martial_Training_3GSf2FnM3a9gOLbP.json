@@ -5,7 +5,7 @@
   "_id": "3GSf2FnM3a9gOLbP",
   "img": "icons/skills/melee/weapons-crossed-swords-black.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You gain 1/6th Martial Level Progression and select one Martial Maneuver Type, you are now able to learn Martial Maneuvers of that type.</span></p>",
+    "description": "<p>You gain 1/6th Martial Level Progression and select one Martial Maneuver Type, you are now able to learn Martial Maneuvers of that type.</p>",
     "perkPointsCost": 2,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749985374746,
-    "modifiedTime": 1749985423610,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420603578,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!3GSf2FnM3a9gOLbP"
 }

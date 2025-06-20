@@ -5,7 +5,7 @@
   "_id": "bVrn5n7R3wi6r3Tu",
   "img": "systems/reclaim-the-realm/assets/icons/perks/caduceus.svg",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You have <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">ADVANTAGE</span></a> on any Medicine <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">SKILL TEST</span></a> when using a medi-kit. Additionally when you perform a long rest creatures in your party heal additional <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">HP</span></a> equal to your Ranks in the Medicine Skill.</span></p>",
+    "description": "<p>You have <strong><span style=\"text-decoration:underline\">ADVANTAGE</span></strong> on any Medicine <strong><span style=\"text-decoration:underline\">SKILL TEST</span></strong> when using a medi-kit. Additionally when you perform a long rest creatures in your party heal additional <strong><span style=\"text-decoration:underline\">HP</span></strong> equal to your Ranks in the Medicine Skill.</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987847049,
-    "modifiedTime": 1749988184676,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750421019526,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!bVrn5n7R3wi6r3Tu"
 }

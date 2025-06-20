@@ -5,7 +5,7 @@
   "_id": "jCJ13TzRRQ40MtXB",
   "img": "icons/skills/melee/weapons-crossed-poleaxes-white.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You can now use the Dual-wield attack even if one of your weapons is not eligable for dual wielding, but it cannot have the two-handed property.</span></p>",
+    "description": "<p>You can now use the Dual-wield attack even if one of your weapons is not eligable for dual wielding, but it cannot have the two-handed property.</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749986611361,
-    "modifiedTime": 1749986637360,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420611882,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!jCJ13TzRRQ40MtXB"
 }

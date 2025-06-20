@@ -1,11 +1,11 @@
 {
-  "folder": "E2i9FJ8e7H6phw31",
+  "folder": "7YEnVdgigsXnzSSp",
   "name": "Weapon Attack",
   "type": "ability",
   "_id": "nPSo7OSVz75AJslD",
   "img": "icons/skills/melee/strike-sword-gray.webp",
   "system": {
-    "description": "<p>Make a <strong>MEELE MARTIAL ATTACK</strong> against a creature using any bonuses your weapon provides. On a hit it recieves damage depending on your <strong>MARTIAL DAMAGE</strong> and relevant Weapon.</p>",
+    "description": "<p>Make a <strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong> against a creature using any bonuses your weapon provides. On a hit it recieves damage depending on your <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong> and relevant Weapon.</p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -30,7 +30,8 @@
     "tags": "Weapon; Attack",
     "range": "WEAPON RANGE",
     "targets": "1 creature",
-    "duration": "INSTANT"
+    "duration": "INSTANT",
+    "formula": ""
   },
   "effects": [],
   "flags": {},
@@ -41,8 +42,8 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1749941080741,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750419846961,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "sort": 100000,
   "ownership": {

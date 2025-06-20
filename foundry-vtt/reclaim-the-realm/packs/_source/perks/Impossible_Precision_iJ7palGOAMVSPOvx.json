@@ -5,7 +5,7 @@
   "_id": "iJ7palGOAMVSPOvx",
   "img": "icons/skills/ranged/target-bullseye-arrow-green.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">When you make a <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></a> you treat <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">LARGE COVER</span></a> as <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">MEDIUM COVER</span></a>, <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">MEDIUM COVER</span></a> as <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">SMALL COVER</span></a>, <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">SMALL COVER</span></a>] as no cover.</span></p>",
+    "description": "<p>When you make a <strong><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></strong> you treat:</p><ul><li><p><strong><span style=\"text-decoration:underline\">LARGE COVER</span></strong> as <strong><span style=\"text-decoration:underline\">MEDIUM COVER</span></strong></p></li><li><p><strong><span style=\"text-decoration:underline\">MEDIUM COVER</span></strong> as <strong><span style=\"text-decoration:underline\">SMALL COVER</span></strong></p></li><li><p><strong><span style=\"text-decoration:underline\">SMALL COVER</span></strong> as no cover.</p></li></ul>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749986485880,
-    "modifiedTime": 1749986513508,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420247567,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!iJ7palGOAMVSPOvx"
 }

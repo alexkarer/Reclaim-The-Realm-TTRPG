@@ -5,7 +5,7 @@
   "_id": "XBPI0k8JKt11pAmX",
   "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
-    "description": "<p>The more Aether Dice you have the stronger the Aether influences the Battle.</p><ul><li><p>If you have 2 AD(1) then increase the healing of any ability you use by your LEVEL and increase the duration of postive Status Effects you grant by 1 ROUND. For each additional AD(1) increase the healing by LEVEL/2 and the duration by 1 further.</p></li><li><p>If you have 2 AD(6) then increase the damage of any ability you use by your LEVEL and increase the duration of negative Status Effects you grant by 1 ROUND. For each additional AD(1) increase the damage by LEVEL/2 and the duration by 1 further..</p></li><li><p>If you have 3 matching AD then you recieve a +1 bonus to any SAVE you make. For any further matching dice increase the bonus by 1.</p></li><li><p>If you have 4 unique then once per ROUND if you make a D20 TEST you can adjust the result by +LEVEL or -LEVEL, for every additional unique dice you can do this one additional time per ROUND</p></li></ul>",
+    "description": "<p>The more Aether Dice you have the stronger the Aether influences the Battle.</p><ul><li><p>If you have 2 <strong>AD</strong>(1) then increase the healing of any ability you use by your <strong><span style=\"text-decoration:underline\">LEVEL</span></strong> and increase the duration of postive Status Effects you grant by 1 <strong><span style=\"text-decoration:underline\">ROUND</span></strong>. For each additional <strong>AD</strong>(1) increase the healing by <strong><span style=\"text-decoration:underline\">LEVEL</span></strong>/2 and the duration by 1 further.</p></li><li><p>If you have 2 <strong>AD</strong>(6) then increase the damage of any ability you use by your <strong><span style=\"text-decoration:underline\">LEVEL</span></strong> and increase the duration of negative Status Effects you grant by 1 <strong><span style=\"text-decoration:underline\">ROUND</span></strong>. For each additional <strong>AD</strong>(1) increase the damage by <strong><span style=\"text-decoration:underline\">LEVEL</span></strong>/2 and the duration by 1 further..</p></li><li><p>If you have 3 matching <strong><span style=\"text-decoration:underline\">AD</span></strong> then you recieve a +1 bonus to any <strong><span style=\"text-decoration:underline\">SAVE</span></strong> you make. For any further matching dice increase the bonus by 1.</p></li><li><p>If you have 4 unique then once per <strong><span style=\"text-decoration:underline\">ROUND</span></strong> if you make a <strong><span style=\"text-decoration:underline\">D20 TEST</span></strong> you can adjust the result by +<strong><span style=\"text-decoration:underline\">LEVEL</span></strong> or -<strong><span style=\"text-decoration:underline\">LEVEL</span></strong>, for every additional unique dice you can do this one additional time per <strong><span style=\"text-decoration:underline\">ROUND</span></strong></p></li></ul>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749940758246,
-    "modifiedTime": 1749940920769,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420851350,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!XBPI0k8JKt11pAmX"
 }

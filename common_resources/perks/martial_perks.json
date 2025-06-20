@@ -271,9 +271,19 @@
         },
         "textElements": [
             {
-                "regularText": "When you make a [RANGED MARTIAL ATTACK] you treat [LARGE COVER] as [MEDIUM COVER], [MEDIUM COVER] as [SMALL COVER], [SMALL COVER]] as no cover.",
+                "regularText": "When you make a [RANGED MARTIAL ATTACK] you treat:.",
                 "headerLine": null,
                 "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": [
+                    "[LARGE COVER] as [MEDIUM COVER]",
+                    "[MEDIUM COVER] as [SMALL COVER]",
+                    "[SMALL COVER]] as no cover"
+                ],
                 "ability": null
             }
         ]

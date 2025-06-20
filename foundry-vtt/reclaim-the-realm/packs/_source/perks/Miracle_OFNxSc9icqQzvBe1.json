@@ -5,7 +5,7 @@
   "_id": "OFNxSc9icqQzvBe1",
   "img": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">The Priest is now able to perform greater miracles in addition to the ones he can already do and gains access to the Miracle Ability.</span></p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.8mmASbvdqQmV9uCJ]{Miracle}</p>",
+    "description": "<p>The Priest is now able to perform greater miracles in addition to the ones he can already do and gains access to the Miracle Ability.</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.8mmASbvdqQmV9uCJ]{Miracle}</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749941466256,
-    "modifiedTime": 1749987816297,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420945238,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!OFNxSc9icqQzvBe1"
 }

@@ -5,7 +5,7 @@
   "_id": "b0uvmXcC6QPzGqnx",
   "img": "icons/skills/trades/academics-book-study-purple.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You gain 8 Skill Points, each time you choose this Perk again the <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">INT</span></a> requirement is 2 higher.</span></p>",
+    "description": "<p>You gain 8 Skill Points, each time you choose this Perk again the <strong><span style=\"text-decoration:underline\">INT</span></strong> requirement is 2 higher.</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987215030,
-    "modifiedTime": 1749987300116,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750421086803,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!b0uvmXcC6QPzGqnx"
 }

@@ -5,7 +5,7 @@
   "_id": "ewi0nTlL60KCct62",
   "img": "icons/magic/holy/yin-yang-balance-symbol.webp",
   "system": {
-    "description": "<p>The Mystic gains the following benefits:</p><ul><li><p>INT is now a class Attribute for you (Increase attribute maximum or current).</p></li><li><p>For the purposes of recieving certain bonuses, interacting with abilites or meeting requirements you count as having any allignment. Additionally you can't recieve penalties due to your alignment</p></li><li><p>At the start of any battle choose one moral or idialogical alignment besiedes Neutral. You can now also recieve Aether Dice as if you had that alignment.</p></li></ul>",
+    "description": "<p>The Mystic gains the following benefits:</p><ul><li><p><strong><span style=\"text-decoration:underline\">INT</span></strong> is now a class Attribute for you (Increase attribute maximum or current).</p></li><li><p>For the purposes of recieving certain bonuses, interacting with abilites or meeting requirements you count as having any allignment. Additionally you can't recieve penalties due to your alignment</p></li><li><p>At the start of any battle choose one moral or idialogical alignment besiedes Neutral. You can now also recieve Aether Dice as if you had that alignment.</p></li></ul>",
     "perkPointsCost": 2,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749940350888,
-    "modifiedTime": 1749940640447,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420957592,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!ewi0nTlL60KCct62"
 }

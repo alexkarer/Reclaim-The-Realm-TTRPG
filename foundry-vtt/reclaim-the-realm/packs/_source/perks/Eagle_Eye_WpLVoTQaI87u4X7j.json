@@ -5,7 +5,7 @@
   "_id": "WpLVoTQaI87u4X7j",
   "img": "icons/creatures/birds/corvid-watchful-glowing-green.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">You have advantage on any <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">PER</span></a> Awareness <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">SKILL TEST</span></a> made to target targets benefiting from <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">PARTIAL CONCEALMENT</span></a> or <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">FULL CONCEALMENT</span></a></span></p>",
+    "description": "<p>You have advantage on any <strong><span style=\"text-decoration:underline\">PER</span></strong> Awareness <strong><span style=\"text-decoration:underline\">SKILL TEST</span></strong> made to target targets benefiting from <strong><span style=\"text-decoration:underline\">PARTIAL CONCEALMENT</span></strong> or <strong><span style=\"text-decoration:underline\">FULL CONCEALMENT</span></strong>.</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749989079527,
-    "modifiedTime": 1749989160598,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750421042660,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!WpLVoTQaI87u4X7j"
 }

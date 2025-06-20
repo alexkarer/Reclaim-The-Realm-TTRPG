@@ -1,0 +1,21 @@
+{
+  "type": "Item",
+  "folder": "E2i9FJ8e7H6phw31",
+  "name": "Movement Abilities",
+  "color": null,
+  "sorting": "a",
+  "_id": "toXxSBIuDULnTFQk",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!toXxSBIuDULnTFQk"
+}

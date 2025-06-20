@@ -5,7 +5,7 @@
   "_id": "NdJxneHvA0qgasbW",
   "img": "icons/equipment/chest/breastplate-helmet-metal.webp",
   "system": {
-    "description": "<p>The Warrior Priest gains the following benefits:</p><ul><li><p>You gain 2 additional <strong>HP</strong> per <strong>LEVEL</strong></p></li><li><p>You gain a <strong>MARTIAL LEVEL</strong> Progression of 1/3.</p></li><li><p>You can learn martial maneuvers of the types Leader and Weapon.</p></li></ul>",
+    "description": "<p>The Warrior Priest gains the following benefits:</p><ul><li><p>You gain 2 additional <strong><span style=\"text-decoration:underline\">HP</span></strong> per <strong><span style=\"text-decoration:underline\">LEVEL</span></strong></p></li><li><p>You gain a <strong><span style=\"text-decoration:underline\">MARTIAL LEVEL</span></strong> Progression of 1/3.</p></li><li><p>You can learn martial maneuvers of the types Leader and Weapon.</p></li></ul>",
     "perkPointsCost": 2,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749979621198,
-    "modifiedTime": 1749979860551,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420968791,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!NdJxneHvA0qgasbW"
 }

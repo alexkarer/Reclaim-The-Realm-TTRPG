@@ -5,7 +5,7 @@
   "_id": "14JkKLRtLNGHa5PY",
   "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Gain a +2 bonus to <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">STABILITY</span></a> that increases to a +4 bonus when you reach <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">LEVEL</span></a> 7. Additionally when an ability forcefully moves you, you only move halve the distance (rounded down).</span></p>",
+    "description": "<p>Gain a +2 bonus to <strong><span style=\"text-decoration:underline\">STABILITY</span></strong> that increases to a +4 bonus when you reach <strong><span style=\"text-decoration:underline\">LEVEL</span></strong> 7. Additionally when an ability forcefully moves you, you only move halve the distance (rounded down).</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749942211916,
-    "modifiedTime": 1749942353844,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420059138,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!14JkKLRtLNGHa5PY"
 }

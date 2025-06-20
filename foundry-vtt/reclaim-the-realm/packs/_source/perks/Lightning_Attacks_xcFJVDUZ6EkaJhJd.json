@@ -5,7 +5,7 @@
   "_id": "xcFJVDUZ6EkaJhJd",
   "img": "icons/skills/melee/blade-tips-triple-steel.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">After you make a Weapon Attack that is not a Lighting Attack, the next Weapon Attack can be a lightning Attack and is made at 1 <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">AP</span></a> less (min of 1 <a class=\"link-opacity-50-hover\" style=\"box-sizing:border-box;color:rgb(110, 168, 254);text-decoration:underline;cursor:pointer\"><span style=\"text-decoration:underline\">AP</span></a>).</span></p>",
+    "description": "<p>After you make a <em>Weapon Attack</em> that is not a <em>Lighting Attack</em>, the next <em>Weapon Attack</em> can be a <em>lightning Attack</em> and is made at 1 <strong><span style=\"text-decoration:underline\">AP</span></strong> less (min of 1 <strong><span style=\"text-decoration:underline\">AP</span></strong>).</p>",
     "perkPointsCost": 2,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749986128828,
-    "modifiedTime": 1749986244887,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420592899,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!xcFJVDUZ6EkaJhJd"
 }

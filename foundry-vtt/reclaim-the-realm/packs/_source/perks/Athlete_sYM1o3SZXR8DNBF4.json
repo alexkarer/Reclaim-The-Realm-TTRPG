@@ -5,7 +5,7 @@
   "_id": "sYM1o3SZXR8DNBF4",
   "img": "icons/skills/movement/figure-running-gray.webp",
   "system": {
-    "description": "<p><span style=\"font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'\">Your long jump distance increases by 0.5m for every Rank in the Athletics Skill you have, and your high jump distance by half of that. Additionally you gain the climb(1.5m) and swim(1.5m) speeds.</span></p>",
+    "description": "<p>Your long jump distance increases by 0.5m for every Rank in the Athletics Skill you have, and your high jump distance by half of that. Additionally you gain the climb(1.5m) and swim(1.5m) speeds.</p>",
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
@@ -40,8 +40,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987344585,
-    "modifiedTime": 1749987364879,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1750420981607,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!sYM1o3SZXR8DNBF4"
 }
