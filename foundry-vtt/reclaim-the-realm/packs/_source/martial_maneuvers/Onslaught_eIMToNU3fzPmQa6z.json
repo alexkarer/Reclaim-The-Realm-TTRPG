@@ -1,11 +1,11 @@
 {
-  "folder": "anmXDGJKGB1iu6Rn",
-  "name": "Bully",
-  "type": "ability",
-  "_id": "sdg5n2DqyQLYz1Nj",
-  "img": "icons/skills/social/intimidation-impressing.webp",
+  "folder": "nOXteQ04pMH6O5UD",
+  "name": "Onslaught",
+  "type": "martialManeuver",
+  "_id": "eIMToNU3fzPmQa6z",
+  "img": "icons/skills/melee/blade-tips-triple-bent-white.webp",
   "system": {
-    "description": "<p>Make a <strong><span style=\"text-decoration:underline\">CHA</span></strong> Intimidation <strong><span style=\"text-decoration:underline\">SKILL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">WILLPOWER</span></strong>, On Success: Apply [<strong>FRIGHTENED I</strong>], On failure: Target is immune to this Ability for 1 hour.</p>",
+    "description": "<p>Make a <em>Weapon Attack</em> against one target a number of times equal to your <strong><span style=\"text-decoration:underline\">MARTIAL LEVEL</span></strong>.</p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -27,19 +27,19 @@
       "arcanaCost": 0,
       "staminaCost": 0,
       "otherResourceCost": 0,
-      "rawStringCost": "1 AP"
+      "rawStringCost": "5 AP, 2 STAMINA"
     },
-    "tags": "Skill",
-    "range": "9m",
-    "targets": "1 Creature",
-    "duration": "1 ROUND",
+    "tags": "Martial Maneuver (Master); Weapon",
+    "range": "MELEE RANGE",
+    "targets": "one creature",
+    "duration": "INSTANT",
     "formula": ""
   },
   "effects": [],
   "sort": 0,
   "ownership": {
     "default": 0,
-    "OLKSfPDHiy1Xf9SG": 3
+    "dMcHPOGHbwLGpLCS": 3
   },
   "flags": {},
   "_stats": {
@@ -49,9 +49,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1749987694954,
-    "modifiedTime": 1750453001462,
+    "createdTime": 1750460290760,
+    "modifiedTime": 1750460362449,
     "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
-  "_key": "!items!sdg5n2DqyQLYz1Nj"
+  "_key": "!items!eIMToNU3fzPmQa6z"
 }

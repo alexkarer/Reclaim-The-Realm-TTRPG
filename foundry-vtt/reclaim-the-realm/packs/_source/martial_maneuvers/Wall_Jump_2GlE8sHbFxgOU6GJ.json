@@ -1,0 +1,57 @@
+{
+  "folder": "DwqhplIwkMrW5Srw",
+  "name": "Wall Jump",
+  "type": "martialManeuver",
+  "_id": "2GlE8sHbFxgOU6GJ",
+  "img": "systems/reclaim-the-realm/assets/icons/abilities/jump-across.svg",
+  "system": {
+    "description": "<p>When you end a Jump Move at a flat surface you can chain the Jump and Jump again but only half the distance of your regular Jump distance. If you don’t have at least 3 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MP</span></strong></span> or a reaction availible in your current turn you can’t perform another wall jump. If the wall is slippy or there are other conditions that might hinder you, the GM might require you to perform a <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">AGI</span></strong></span> Athletics <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SKILL TEST</span></strong></span></p><h6>Pushing extra cost: 1 [STAMINA]</h6><p>When you push this maneuver your pushing distance is not halved.</p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "3 MP or Reaction"
+    },
+    "tags": "Martial Maneuver (Basic); Agile",
+    "range": "-",
+    "targets": "SELF",
+    "duration": "INSTANT",
+    "formula": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750423811812,
+    "modifiedTime": 1750423841640,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!2GlE8sHbFxgOU6GJ"
+}

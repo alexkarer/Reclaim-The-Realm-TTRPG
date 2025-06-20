@@ -1,0 +1,57 @@
+{
+  "folder": "fQ2i13xMQzCjCvPm",
+  "name": "Break Neck",
+  "type": "martialManeuver",
+  "_id": "Ae30mREJKdVov8O8",
+  "img": "icons/skills/wounds/bone-broken-knee-beam.webp",
+  "system": {
+    "description": "<p><strong><span style=\"text-decoration:underline\">STR MARTIAL TEST</span></strong> vs <strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong> or <strong><span style=\"text-decoration:underline\">STABILITY</span></strong> (targets choice). On success: recieve 5 * light <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong> phyiscal damage. On fail: half damage.</p><h6>Pushing extra cost: 1 [STAMINA]</h6><p>For each 1 <strong><span style=\"text-decoration:underline\">STAMINA</span></strong> increase the damage on a success by your light <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong> phyiscal damage.</p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "4 AP, 1 STAMINA"
+    },
+    "tags": "Martial Maneuver (Master); Brawl",
+    "range": "MELEE RANGE",
+    "targets": "1 targed affected by [RESTRAINED I] caused by you",
+    "duration": "INSTANT",
+    "formula": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750455374843,
+    "modifiedTime": 1750455492362,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!Ae30mREJKdVov8O8"
+}

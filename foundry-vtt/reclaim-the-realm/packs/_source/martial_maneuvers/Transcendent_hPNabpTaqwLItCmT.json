@@ -1,0 +1,21 @@
+{
+  "type": "Item",
+  "folder": "1SU2nGN8R2ZoBdbV",
+  "name": "Transcendent",
+  "color": null,
+  "sorting": "a",
+  "_id": "hPNabpTaqwLItCmT",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!hPNabpTaqwLItCmT"
+}

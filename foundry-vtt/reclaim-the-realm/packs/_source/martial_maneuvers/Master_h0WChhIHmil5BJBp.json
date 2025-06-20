@@ -1,0 +1,21 @@
+{
+  "type": "Item",
+  "folder": "1HdubXxFWyDTXLIy",
+  "name": "Master",
+  "color": null,
+  "sorting": "a",
+  "_id": "h0WChhIHmil5BJBp",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!h0WChhIHmil5BJBp"
+}

@@ -1,11 +1,11 @@
 {
-  "folder": "anmXDGJKGB1iu6Rn",
-  "name": "Bully",
-  "type": "ability",
-  "_id": "sdg5n2DqyQLYz1Nj",
-  "img": "icons/skills/social/intimidation-impressing.webp",
+  "folder": "WNFCJOAoUyH1gGfR",
+  "name": "Pin Down",
+  "type": "martialManeuver",
+  "_id": "1yNqsQnAYk1bcUiO",
+  "img": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
   "system": {
-    "description": "<p>Make a <strong><span style=\"text-decoration:underline\">CHA</span></strong> Intimidation <strong><span style=\"text-decoration:underline\">SKILL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">WILLPOWER</span></strong>, On Success: Apply [<strong>FRIGHTENED I</strong>], On failure: Target is immune to this Ability for 1 hour.</p>",
+    "description": "<p><strong><span style=\"text-decoration:underline\">STR MARTIAL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">STABILITY</span></strong>. On success: knocked <strong><span style=\"text-decoration:underline\">PRONE</span></strong> and apply [<strong>RESTRAINED II</strong>].</p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -29,17 +29,17 @@
       "otherResourceCost": 0,
       "rawStringCost": "1 AP"
     },
-    "tags": "Skill",
-    "range": "9m",
-    "targets": "1 Creature",
-    "duration": "1 ROUND",
-    "formula": ""
+    "tags": "Martial Maneuver (Basic); Brawl",
+    "range": "MELEE RANGE",
+    "targets": "1 Creature affected by [RESTRAINED I]",
+    "duration": "INSTANT",
+    "formula": "d20+@martialLevel + @attributes.str.value - @exh"
   },
   "effects": [],
   "sort": 0,
   "ownership": {
     "default": 0,
-    "OLKSfPDHiy1Xf9SG": 3
+    "dMcHPOGHbwLGpLCS": 3
   },
   "flags": {},
   "_stats": {
@@ -49,9 +49,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1749987694954,
-    "modifiedTime": 1750453001462,
+    "createdTime": 1750453964389,
+    "modifiedTime": 1750455255456,
     "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
-  "_key": "!items!sdg5n2DqyQLYz1Nj"
+  "_key": "!items!1yNqsQnAYk1bcUiO"
 }

@@ -1,0 +1,57 @@
+{
+  "folder": "h0WChhIHmil5BJBp",
+  "name": "Super Speed",
+  "type": "martialManeuver",
+  "_id": "SLWtlt2TBUZwHxhG",
+  "img": "icons/magic/movement/trail-streak-zigzag-yellow.webp",
+  "system": {
+    "description": "<p>You can move towards a target location using <strong><span style=\"text-decoration:underline\">MP</span></strong> as normal. Make a <strong><span style=\"text-decoration:underline\">AGI MARTIAL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">DODGE</span></strong>. On sucess: until you stopped moving and performed 1 other Ability or your <strong><span style=\"text-decoration:underline\">TURN</span></strong> ends, other creatures can't use a <strong><span style=\"text-decoration:underline\">REACTION</span></strong> against you.</p>",
+    "requirements": {
+      "minimumLevel": 0,
+      "minimumMartialLevel": 0,
+      "minimumSpellLevel": 0,
+      "minimumStr": 0,
+      "minimumAgi": 0,
+      "minimumCon": 0,
+      "minimumInt": 0,
+      "minimumSpi": 0,
+      "minimumPer": 0,
+      "minimumCha": 0,
+      "skillRankRequirements": [],
+      "requiredPerks": []
+    },
+    "usageCost": {
+      "apCost": 0,
+      "mpCost": 0,
+      "isFree": false,
+      "arcanaCost": 0,
+      "staminaCost": 0,
+      "otherResourceCost": 0,
+      "rawStringCost": "1 or more MP, 1 or more STAMINA"
+    },
+    "tags": "Martial Maneuver (Master); Agile",
+    "range": "-",
+    "targets": "enemies that want to use a REACTION",
+    "duration": "INSTANT",
+    "formula": "d20+@skills.athletics.rank + @attributes.agi.value - @exh"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "dMcHPOGHbwLGpLCS": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1750451280143,
+    "modifiedTime": 1750452398830,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+  },
+  "_key": "!items!SLWtlt2TBUZwHxhG"
+}

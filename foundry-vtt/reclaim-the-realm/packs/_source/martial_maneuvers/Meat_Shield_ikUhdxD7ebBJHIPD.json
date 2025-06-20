@@ -1,11 +1,11 @@
 {
-  "folder": "tRa2QeuDavRDqzNi",
-  "name": "Pushing the Limit",
+  "folder": "WNFCJOAoUyH1gGfR",
+  "name": "Meat Shield",
   "type": "martialManeuver",
-  "_id": "gYBlBk2SvRCBNMbl",
-  "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+  "_id": "ikUhdxD7ebBJHIPD",
+  "img": "icons/skills/melee/shield-block-bash-blue.webp",
   "system": {
-    "description": "<p>When you fail a <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">D20 TEST</span></strong></span> you can add 2 to the Result potentially turning it into a Success.</p><h6><strong>Pushing extra cost: 1 STAMINA</strong></h6><p>For each <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">STAMINA</span></strong></span> used you can add further +2.</p>",
+    "description": "<p>If you are hit by an <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> you can use this Ability. <strong><span style=\"text-decoration:underline\">STR MARTIAL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">STABILITY</span></strong>. On success: <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> hits target instead.</p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -27,16 +27,16 @@
       "arcanaCost": 0,
       "staminaCost": 0,
       "otherResourceCost": 0,
-      "rawStringCost": "FREE, 1 STAMINA"
+      "rawStringCost": "REACTION"
     },
-    "tags": "Martial Maneuver (Basic); Fortitude",
-    "range": "-",
-    "targets": "SELF",
+    "tags": "Martial Maneuver (Basic); Brawl",
+    "range": "MELEE RANGE",
+    "targets": "1 [RESTRAINED I] or [RESTRAINED II] Creature",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "d20+@martialLevel + @attributes.str.value - @exh"
   },
   "effects": [],
-  "sort": 200000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "dMcHPOGHbwLGpLCS": 3
@@ -49,9 +49,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750348705089,
-    "modifiedTime": 1750423455575,
+    "createdTime": 1750454772761,
+    "modifiedTime": 1750455243169,
     "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
-  "_key": "!items!gYBlBk2SvRCBNMbl"
+  "_key": "!items!ikUhdxD7ebBJHIPD"
 }

@@ -15,7 +15,7 @@
             },
             "cost": "1 or more [MP], 1 or more [STAMINA]",
             "range": "-",
-            "target": "[SELF]",
+            "target": "enemies that want to use a [REACTION]",
             "duration": "[INSTANT]",
             "description": [ { "regularText": "You can move towards a target location using [MP] as normal. Make a [AGI] [MARTIAL TEST] vs. [DODGE]. On sucess: until you stopped moving and performed 1 other Ability or your [TURN] ends, other creatures can't use a [REACTION] against you.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ]
@@ -161,11 +161,11 @@
             "range": "[WEAPON RANGE]",
             "target": "one creature",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "Make a Weapon Attack against [TOUGHNESS]. On hit: 5 * [MARTIAL DAMAGE] physical damage. On Success: score a critical hit.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Make a Weapon Attack against [TOUGHNESS]. On hit: 5 * light [MARTIAL DAMAGE] physical damage. On Success: score a critical hit.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "For each 1 [STAMINA] increase the damage on a success by your heavy [MARTIAL DAMAGE]."
+                "pushingDescription": "For each 1 [STAMINA] increase the damage by light [MARTIAL DAMAGE]."
             }
         },
         {

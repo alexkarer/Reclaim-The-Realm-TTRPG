@@ -1,11 +1,11 @@
 {
-  "folder": "tRa2QeuDavRDqzNi",
-  "name": "Pushing the Limit",
+  "folder": "EgRT6mMDjNZdpwCG",
+  "name": "Giant Leap",
   "type": "martialManeuver",
-  "_id": "gYBlBk2SvRCBNMbl",
-  "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+  "_id": "a3R1DBgr8unkKD7x",
+  "img": "icons/creatures/abilities/cougar-pounce-stalk-black.webp",
   "system": {
-    "description": "<p>When you fail a <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">D20 TEST</span></strong></span> you can add 2 to the Result potentially turning it into a Success.</p><h6><strong>Pushing extra cost: 1 STAMINA</strong></h6><p>For each <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">STAMINA</span></strong></span> used you can add further +2.</p>",
+    "description": "<p>Make a Jump Move and increase the jumping distance by an additional <strong><span style=\"text-decoration:underline\">STR</span></strong> m for a long jump or <strong><span style=\"text-decoration:underline\">STR</span></strong>/2 m for a high jump.</p><h6>Pushing extra cost: 1 [STAMINA]</h6><p>Increase the distance by further <strong><span style=\"text-decoration:underline\">STR</span></strong>/2 m for a long jump or <strong><span style=\"text-decoration:underline\">STR</span></strong>/4 m for a high jump.</p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -27,16 +27,16 @@
       "arcanaCost": 0,
       "staminaCost": 0,
       "otherResourceCost": 0,
-      "rawStringCost": "FREE, 1 STAMINA"
+      "rawStringCost": "6 MP"
     },
-    "tags": "Martial Maneuver (Basic); Fortitude",
+    "tags": "Martial Maneuver (Advanced); Brawl",
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
     "formula": ""
   },
   "effects": [],
-  "sort": 200000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "dMcHPOGHbwLGpLCS": 3
@@ -49,9 +49,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750348705089,
-    "modifiedTime": 1750423455575,
+    "createdTime": 1750455283192,
+    "modifiedTime": 1750455356600,
     "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
-  "_key": "!items!gYBlBk2SvRCBNMbl"
+  "_key": "!items!a3R1DBgr8unkKD7x"
 }

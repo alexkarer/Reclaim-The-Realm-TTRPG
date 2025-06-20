@@ -1,11 +1,11 @@
 {
-  "folder": "anmXDGJKGB1iu6Rn",
-  "name": "Bully",
-  "type": "ability",
-  "_id": "sdg5n2DqyQLYz1Nj",
+  "folder": "WY7DzkbumKdIxTXm",
+  "name": "Taunt",
+  "type": "martialManeuver",
+  "_id": "mSyhadSSvQWzYozc",
   "img": "icons/skills/social/intimidation-impressing.webp",
   "system": {
-    "description": "<p>Make a <strong><span style=\"text-decoration:underline\">CHA</span></strong> Intimidation <strong><span style=\"text-decoration:underline\">SKILL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">WILLPOWER</span></strong>, On Success: Apply [<strong>FRIGHTENED I</strong>], On failure: Target is immune to this Ability for 1 hour.</p>",
+    "description": "<p><strong><span style=\"text-decoration:underline\">CHA MARTIAL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">WILLPOWER</span></strong>. On success: Apply [<strong>TAUNTED</strong>]</p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -27,19 +27,19 @@
       "arcanaCost": 0,
       "staminaCost": 0,
       "otherResourceCost": 0,
-      "rawStringCost": "1 AP"
+      "rawStringCost": "2 AP"
     },
-    "tags": "Skill",
-    "range": "9m",
-    "targets": "1 Creature",
+    "tags": "Martial Maneuver (Basic); Leader",
+    "range": "3m (2 squares)",
+    "targets": "all creatures",
     "duration": "1 ROUND",
-    "formula": ""
+    "formula": "d20+@martialLevel + @attributes.cha.value - @exh"
   },
   "effects": [],
   "sort": 0,
   "ownership": {
     "default": 0,
-    "OLKSfPDHiy1Xf9SG": 3
+    "dMcHPOGHbwLGpLCS": 3
   },
   "flags": {},
   "_stats": {
@@ -49,9 +49,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1749987694954,
-    "modifiedTime": 1750453001462,
+    "createdTime": 1750456349182,
+    "modifiedTime": 1750456414383,
     "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
-  "_key": "!items!sdg5n2DqyQLYz1Nj"
+  "_key": "!items!mSyhadSSvQWzYozc"
 }

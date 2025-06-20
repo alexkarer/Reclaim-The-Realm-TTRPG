@@ -1,11 +1,11 @@
 {
-  "folder": "tRa2QeuDavRDqzNi",
-  "name": "Battle Recovery",
+  "folder": "B5ppHcelHBt20fEU",
+  "name": "Analyze Weakpoint",
   "type": "martialManeuver",
-  "_id": "KSISOsTAYwe6e1rr",
-  "img": "icons/magic/life/heart-cross-purple-orange.webp",
+  "_id": "UMxonecidgMXtuyx",
+  "img": "icons/skills/targeting/crosshair-ringed-gray.webp",
   "system": {
-    "description": "<p>If you are below half your maximum <strong><span style=\"text-decoration:underline\">HP</span></strong>, recover: 1d6 + (<strong><span style=\"text-decoration:underline\">CON</span></strong>/3) * d6 <strong><span style=\"text-decoration:underline\">HP</span></strong></p>",
+    "description": "<p><strong><span style=\"text-decoration:underline\">INT MARTIAL TEST</span></strong> vs. 15 + target <strong><span style=\"text-decoration:underline\">LEVEL</span></strong>. On success: next <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> against creature made by you is automatically a critical hit.</p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -27,16 +27,16 @@
       "arcanaCost": 0,
       "staminaCost": 0,
       "otherResourceCost": 0,
-      "rawStringCost": "1 AP, 1 STAMINA"
+      "rawStringCost": "2 AP"
     },
-    "tags": "Martial Maneuver (Basic); Fortitude",
-    "range": "-",
-    "targets": "SELF",
-    "duration": "INSTANT",
-    "formula": "(1 + floor(@attributes.con.value / 3))d6[heal]"
+    "tags": "Martial Maneuver (Advanced); Tactical",
+    "range": "12m",
+    "targets": "1 creature",
+    "duration": "TURN",
+    "formula": "d20 + @martialLevel + @attributes.int.value - @exh"
   },
   "effects": [],
-  "sort": 100000,
+  "sort": 0,
   "ownership": {
     "default": 0,
     "dMcHPOGHbwLGpLCS": 3
@@ -49,9 +49,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750348878156,
-    "modifiedTime": 1750423454328,
+    "createdTime": 1750458017108,
+    "modifiedTime": 1750458102605,
     "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
-  "_key": "!items!KSISOsTAYwe6e1rr"
+  "_key": "!items!UMxonecidgMXtuyx"
 }

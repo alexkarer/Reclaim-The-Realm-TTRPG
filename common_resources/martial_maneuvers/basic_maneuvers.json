@@ -339,7 +339,7 @@
             "cost": "3 [AP]",
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
-            "duration": "1-2 [ROUND]",
+            "duration": "2 [ROUND]",
             "description": [ { "regularText": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [BLEEDING I].", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ],
             "maneuverPush": {

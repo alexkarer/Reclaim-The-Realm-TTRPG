@@ -1,5 +1,5 @@
 {
-  "folder": "UQfl6J5bwp3XepPc",
+  "folder": "P61dOWLCWy6aUTUM",
   "name": "Parry",
   "type": "martialManeuver",
   "_id": "GAA1NbVSykFloafU",
@@ -36,7 +36,7 @@
     "formula": ""
   },
   "effects": [],
-  "sort": 0,
+  "sort": 200000,
   "ownership": {
     "default": 0,
     "dMcHPOGHbwLGpLCS": 3
@@ -50,7 +50,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750349215543,
-    "modifiedTime": 1750349300135,
+    "modifiedTime": 1750423443340,
     "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
   "_key": "!items!GAA1NbVSykFloafU"

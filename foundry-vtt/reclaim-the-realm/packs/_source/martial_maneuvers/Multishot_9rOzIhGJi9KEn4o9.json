@@ -1,11 +1,11 @@
 {
-  "folder": "anmXDGJKGB1iu6Rn",
-  "name": "Bully",
-  "type": "ability",
-  "_id": "sdg5n2DqyQLYz1Nj",
-  "img": "icons/skills/social/intimidation-impressing.webp",
+  "folder": "P61dOWLCWy6aUTUM",
+  "name": "Multishot",
+  "type": "martialManeuver",
+  "_id": "9rOzIhGJi9KEn4o9",
+  "img": "icons/skills/ranged/bow-arrows-blue.webp",
   "system": {
-    "description": "<p>Make a <strong><span style=\"text-decoration:underline\">CHA</span></strong> Intimidation <strong><span style=\"text-decoration:underline\">SKILL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">WILLPOWER</span></strong>, On Success: Apply [<strong>FRIGHTENED I</strong>], On failure: Target is immune to this Ability for 1 hour.</p>",
+    "description": "<p>Make a <em>Weapon Attack</em> with a Ranged Weapon with a -2 penalty to the <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> and damage.</p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -27,19 +27,19 @@
       "arcanaCost": 0,
       "staminaCost": 0,
       "otherResourceCost": 0,
-      "rawStringCost": "1 AP"
+      "rawStringCost": "3 AP"
     },
-    "tags": "Skill",
-    "range": "9m",
-    "targets": "1 Creature",
-    "duration": "1 ROUND",
+    "tags": "Martial Maneuver (Basic); Weapon; Melee",
+    "range": "WEAPON RANGE",
+    "targets": "2 creatures within 4.5m of each other",
+    "duration": "INSTANT",
     "formula": ""
   },
   "effects": [],
   "sort": 0,
   "ownership": {
     "default": 0,
-    "OLKSfPDHiy1Xf9SG": 3
+    "dMcHPOGHbwLGpLCS": 3
   },
   "flags": {},
   "_stats": {
@@ -49,9 +49,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1749987694954,
-    "modifiedTime": 1750453001462,
+    "createdTime": 1750459439367,
+    "modifiedTime": 1750459499243,
     "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
-  "_key": "!items!sdg5n2DqyQLYz1Nj"
+  "_key": "!items!9rOzIhGJi9KEn4o9"
 }
