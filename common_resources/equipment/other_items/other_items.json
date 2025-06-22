@@ -693,6 +693,17 @@
             "description": [
                 { "regularText": "Empty Vial.", "headerLine": null, "bulletPoints": null, "ability": null }
             ]
+        },
+        {
+            "name": "Empty Waterskin",
+            "tier": 1,
+            "craftingSkill": "Tailor’s Set",
+            "cost": "5 bc",
+            "weightInGram": 500,
+            "type": "Commodity",
+            "description": [
+                { "regularText": "This is a durable container for water made out of leather that is able to hold 2 liters of liquid.", "headerLine": null, "bulletPoints": null, "ability": null }
+            ]
         }
     ]
 }
