@@ -1,5 +1,3 @@
-import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
-
 const { api, sheets, ux, apps } = foundry.applications;
 
 /**
@@ -174,7 +172,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       case 'effects':
         context.tab = context.tabs[partId];
         // Prepare active effects for easier access
-        context.effects = prepareActiveEffectCategories(this.item.effects);
+        context.effects = this.item.effects;
         break;
     }
     return context;

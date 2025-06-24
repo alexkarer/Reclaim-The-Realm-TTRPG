@@ -1,4 +1,5 @@
-import { prepareActiveEffectCategories } from '../helpers/effects.mjs';
+import { generateFvttId } from "../utils.mjs";
+
 const { api, sheets, ux, apps } = foundry.applications;
 
 /**
@@ -52,6 +53,18 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       unlockDataEdit: this._onUnlockDataEdit,
       lockDataEdit: this._onLockDataEdit,
       castSpell: this._castSpell
+      /*
+      TODO new action toggleEffect
+
+      return this._onToggleCondition(target.closest("[data-condition-id]")?.dataset.conditionId);
+      
+      _onToggleCondition(conditionId) {
+        const existing = this.document.effects.get(staticID(`dnd5e${conditionId}`));
+        if ( existing ) return existing.delete();
+        const effect = await ActiveEffect.implementation.fromStatusEffect(conditionId);
+        return ActiveEffect.implementation.create(effect, { parent: this.document, keepId: true });
+      }
+      */
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -171,12 +184,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
         break;
       case 'effects':
         context.tab = context.tabs[partId];
-        // Prepare active effects
-        context.effects = prepareActiveEffectCategories(
-          // A generator that returns all effects stored on the actor
-          // as well as any items
-          this.actor.allApplicableEffects()
-        );
+        context.effects = this._getAllStatusEffects();
         break;
     }
     return context;
@@ -1084,6 +1092,23 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
           : this.actor.items.get(docRow?.dataset.parentId);
       return parent.effects.get(docRow?.dataset.effectId);
     } else return console.warn('Could not find document class');
+  }
+
+  /**
+   * Retrieves all status effects for display in character sheet
+   * @returns status effects
+   */
+  _getAllStatusEffects() {
+    return Object.entries(CONFIG.RTR.statusEffects).reduce((arr, [k, v]) => {
+      const id = generateFvttId(`RTR${k}`);
+      const existing = this.actor.effects.get(id);
+      arr.push({
+        id: k,
+        disabled: !existing,
+        ...v
+      });
+      return arr;
+    }, []);
   }
 
   /***************

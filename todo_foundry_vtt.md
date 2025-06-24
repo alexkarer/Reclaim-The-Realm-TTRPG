@@ -12,6 +12,8 @@
 ## Actors
 
 - Change Biography to either be in separate Tab or at the bottom of the Overview.
+  - alignmeent should be there
+  - languages should be there
 - On all places show the formula for calculating, which is fixed but can be modified with additional values.
 - Configure prototype token
 - Data Section add Translation 
@@ -28,7 +30,7 @@
 - concealment bonuzses
 - Implement Exhaustion in a nicer way
 - Implement Errors in case too many Abilities or Perks are added.
-- - Perk Trees
+- Perk Trees
 
 ### NPCS
 

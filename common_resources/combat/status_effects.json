@@ -173,7 +173,7 @@
             "description": "A taunted creature can not use any harmful ability that targets a creature other than the Taunter and can't move further away from the Taunter."
         },
         {
-            "keyword": "[DEACAYING]",
+            "keyword": "[DECAYING]",
             "link": "decaying",
             "summary":  "can't regain [HP]",
             "description": "A decaying creature can't regain any [HP] but can still recieve [THP]"

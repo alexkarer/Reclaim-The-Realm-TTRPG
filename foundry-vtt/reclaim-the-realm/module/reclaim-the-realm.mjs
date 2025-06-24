@@ -8,6 +8,7 @@ import { RtRItemSheet } from './sheets/item-sheet.mjs';
 import { RTR } from './helpers/config.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
+import { generateFvttId } from "./utils.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -39,7 +40,7 @@ Hooks.once('init', function () {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: '1d20 + max(@attributes.agi + @attributes.per)',
+    formula: '1d20 + max(@attributes.agi.value + @attributes.per.value)',
     decimals: 2,
   };
 
@@ -71,6 +72,7 @@ Hooks.once('init', function () {
   // but will still apply to the Actor from within the Item
   // if the transfer property on the Active Effect is true.
   CONFIG.ActiveEffect.legacyTransferral = false;
+  _configureStatusEffects();
 
   // Register sheet application classes
   foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ActorSheet);
@@ -83,7 +85,23 @@ Hooks.once('init', function () {
     makeDefault: true,
     label: 'RTR.SheetLabels.Item',
   });
+
 });
+
+/* -------------------------------------------- */
+/*  Init Hook Helpers                           */
+/* -------------------------------------------- */
+
+function _configureStatusEffects() {
+  CONFIG.statusEffects = [];
+  for ( const [id, {...data}] of Object.entries(CONFIG.RTR.statusEffects) ) {
+    let effect = foundry.utils.deepClone(data);
+    effect.id = id;
+    effect._id = generateFvttId(`RTR${id}`);
+    CONFIG.statusEffects.push(effect);
+    //CONFIG.specialStatusEffects[] maybe also needed
+  }
+}
 
 /* -------------------------------------------- */
 /*  Handlebars Helpers                          */

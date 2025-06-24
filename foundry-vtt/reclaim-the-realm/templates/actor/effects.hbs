@@ -4,6 +4,17 @@
   data-group='primary'
   data-tab='effects'
 >
+
+  <div class='grid grid-4col'>
+    {{#each effects as |effect id|}}
+      <div class="tooltip">
+        <img src='{{effect.img}}' height="24" width="24"/>
+        <div>{{localize effect.name}}</div>
+        <span class="tooltiptext">{{localize effect.description}}</span>
+      </div>
+    {{/each}}
+  </div>
+  <!--
   <ol class='effects-list'>
     {{#each effects as |section sid|}}
       <li
@@ -85,4 +96,5 @@
       </ol>
     {{/each}}
   </ol>
+  -->
 </section>

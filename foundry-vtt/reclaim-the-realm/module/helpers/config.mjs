@@ -75,3 +75,16 @@ RTR.damageTypes = {
   Holy: "RTR.DamageTypes.Holy",
   Unholy: "RTR.DamageTypes.Unholy"
 }
+
+RTR.statusEffects = {
+  stunned1: {
+    name: "RTR.StatusEffects.Stunned1.label",
+    img: "/icons/svg/stoned.svg",
+    description: "RTR.StatusEffects.Stunned1.description"
+  },
+  frightened1: {
+    name: "RTR.StatusEffects.Frightened1.label",
+    img: "/icons/svg/terror.svg",
+    description: "RTR.StatusEffects.Frightened1.description"
+  },
+}
