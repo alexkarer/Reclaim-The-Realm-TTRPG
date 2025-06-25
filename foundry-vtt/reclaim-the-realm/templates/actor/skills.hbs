@@ -110,34 +110,16 @@
                 {{/if}}
             {{/each}}
         </select>
-        {{#if (eq @root.actor.type 'character')}}
         <div class="rollable-container">
             <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
-                data-action='roll'
-                data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value - @exh'
-                data-label='{{localize (lookup @root.config.skills key)}}'
+                data-action='d20Test'
+                data-roll='@skillTest + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
             >
             <span class="rollable-text-centered" 
-                data-action='roll'
-                data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value - @exh'
-                data-label='{{localize (lookup @root.config.skills key)}}'
+                data-action='d20Test'
+                data-roll='@skillTest + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
             >{{numberFormat (subtract (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value')) @root.system.exhaustion) decimals=0}}</span>
         </div>
-        {{/if}}
-        {{#if (eq @root.actor.type 'npc')}}
-        <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" alt="d20" height='20' width='20'
-                data-action='roll'
-                data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
-                data-label='{{localize (lookup @root.config.skills key)}}'
-            >
-            <span class="rollable-text-centered"
-                data-action='roll'
-                data-roll='d20 + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
-                data-label='{{localize (lookup @root.config.skills key)}}'
-            >{{numberFormat (add skills.rank (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value'))) decimals=0}}</span>
-        </div>
-        {{/if}}
     {{/each}}
     </div>
 </section>

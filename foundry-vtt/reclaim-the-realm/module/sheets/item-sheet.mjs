@@ -22,11 +22,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       resizable: true
     },
     actions: {
-      onEditImage: this._onEditImage,
-      viewDoc: this._viewEffect,
-      createDoc: this._createEffect,
-      deleteDoc: this._deleteEffect,
-      toggleEffect: this._toggleEffect,
+      onEditImage: this._onEditImage
     },
     form: {
       submitOnChange: true,
@@ -60,9 +56,6 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     },
     spell: {
       template: 'systems/reclaim-the-realm/templates/item/spell.hbs',
-    },
-    effects: {
-      template: 'systems/reclaim-the-realm/templates/item/effects.hbs',
     },
     species: {
       template: 'systems/reclaim-the-realm/templates/item/species.hbs',
@@ -169,11 +162,6 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       case 'classcorevalues':
         context.tab = context.tabs[partId];
         break;
-      case 'effects':
-        context.tab = context.tabs[partId];
-        // Prepare active effects for easier access
-        context.effects = this.item.effects;
-        break;
     }
     return context;
   }
@@ -241,10 +229,6 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         case 'perk':
           tab.id = 'perk';
           tab.label += 'Perk';
-          break;
-        case 'effects':
-          tab.id = 'effects';
-          tab.label += 'Effects';
           break;
         case 'species':
           tab.id = 'species';
@@ -331,92 +315,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     return fp.browse();
   }
 
-  /**
-   * Renders an embedded document's sheet
-   *
-   * @this RtRItemSheet
-   * @param {PointerEvent} event   The originating click event
-   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-   * @protected
-   */
-  static async _viewEffect(event, target) {
-    const effect = this._getEffect(target);
-    effect.sheet.render(true);
-  }
-
-  /**
-   * Handles item deletion
-   *
-   * @this RtRItemSheet
-   * @param {PointerEvent} event   The originating click event
-   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-   * @protected
-   */
-  static async _deleteEffect(event, target) {
-    const effect = this._getEffect(target);
-    await effect.delete();
-  }
-
-  /**
-   * Handle creating a new Owned Item or ActiveEffect for the actor using initial data defined in the HTML dataset
-   *
-   * @this RtRItemSheet
-   * @param {PointerEvent} event   The originating click event
-   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-   * @private
-   */
-  static async _createEffect(event, target) {
-    // Retrieve the configured document class for ActiveEffect
-    const aeCls = getDocumentClass('ActiveEffect');
-    // Prepare the document creation data by initializing it a default name.
-    // As of v12, you can define custom Active Effect subtypes just like Item subtypes if you want
-    const effectData = {
-      name: aeCls.defaultName({
-        // defaultName handles an undefined type gracefully
-        type: target.dataset.type,
-        parent: this.item,
-      }),
-    };
-    // Loop through the dataset and add it to our effectData
-    for (const [dataKey, value] of Object.entries(target.dataset)) {
-      // These data attributes are reserved for the action handling
-      if (['action', 'documentClass'].includes(dataKey)) continue;
-      // Nested properties require dot notation in the HTML, e.g. anything with `system`
-      // An example exists in spells.hbs, with `data-system.spell-level`
-      // which turns into the dataKey 'system.spellLevel'
-      foundry.utils.setProperty(effectData, dataKey, value);
-    }
-
-    // Finally, create the embedded document!
-    await aeCls.create(effectData, { parent: this.item });
-  }
-
-  /**
-   * Determines effect parent to pass to helper
-   *
-   * @this RtRItemSheet
-   * @param {PointerEvent} event   The originating click event
-   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-   * @private
-   */
-  static async _toggleEffect(event, target) {
-    const effect = this._getEffect(target);
-    await effect.update({ disabled: !effect.disabled });
-  }
-
   /** Helper Functions */
-
-  /**
-   * Fetches the row with the data for the rendered embedded document
-   *
-   * @param {HTMLElement} target  The element with the action
-   * @returns {HTMLLIElement} The document's row
-   */
-  _getEffect(target) {
-    const li = target.closest('.effect');
-    return this.item.effects.get(li?.dataset?.effectId);
-  }
-
   /**
    *
    * DragDrop
@@ -457,12 +356,6 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     console.log('Drag Start Event', event);
     let dragData = null;
 
-    // Active Effect
-    if (li.dataset.effectId) {
-      const effect = this.item.effects.get(li.dataset.effectId);
-      dragData = effect.toDragData();
-    }
-
     if (!dragData) return;
 
     // Set data transfer
@@ -493,8 +386,6 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
 
     // Handle different data types
     switch (data.type) {
-      case 'ActiveEffect':
-        return this._onDropActiveEffect(event, data);
       case 'Actor':
         return this._onDropActor(event, data);
       case 'Item':
@@ -502,63 +393,6 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       case 'Folder':
         return this._onDropFolder(event, data);
     }
-  }
-
-  /* -------------------------------------------- */
-
-  /**
-   * Handle the dropping of ActiveEffect data onto an Actor Sheet
-   * @param {DragEvent} event                  The concluding DragEvent which contains drop data
-   * @param {object} data                      The data transfer extracted from the event
-   * @returns {Promise<ActiveEffect|boolean>}  The created ActiveEffect object or false if it couldn't be created.
-   * @protected
-   */
-  async _onDropActiveEffect(event, data) {
-    const aeCls = getDocumentClass('ActiveEffect');
-    const effect = await aeCls.fromDropData(data);
-    if (!this.item.isOwner || !effect) return false;
-
-    if (this.item.uuid === effect.parent?.uuid)
-      return this._onEffectSort(event, effect);
-    return aeCls.create(effect, { parent: this.item });
-  }
-
-  /**
-   * Sorts an Active Effect based on its surrounding attributes
-   *
-   * @param {DragEvent} event
-   * @param {ActiveEffect} effect
-   */
-  _onEffectSort(event, effect) {
-    const effects = this.item.effects;
-    const dropTarget = event.target.closest('[data-effect-id]');
-    if (!dropTarget) return;
-    const target = effects.get(dropTarget.dataset.effectId);
-
-    // Don't sort on yourself
-    if (effect.id === target.id) return;
-
-    // Identify sibling items based on adjacent HTML elements
-    const siblings = [];
-    for (let el of dropTarget.parentElement.children) {
-      const siblingId = el.dataset.effectId;
-      if (siblingId && siblingId !== effect.id)
-        siblings.push(effects.get(el.dataset.effectId));
-    }
-
-    // Perform the sort
-    const sortUpdates = SortingHelpers.performIntegerSort(effect, {
-      target,
-      siblings,
-    });
-    const updateData = sortUpdates.map((u) => {
-      const update = u.update;
-      update._id = u.target._id;
-      return update;
-    });
-
-    // Perform the update
-    return this.item.updateEmbeddedDocuments('ActiveEffect', updateData);
   }
 
   /* -------------------------------------------- */

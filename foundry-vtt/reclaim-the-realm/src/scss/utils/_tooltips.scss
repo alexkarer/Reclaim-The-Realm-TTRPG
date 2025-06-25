@@ -1,7 +1,6 @@
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; // Optional dotted underline
 
   .tooltiptext {
     visibility: hidden;
@@ -12,6 +11,10 @@
     padding: 5px 0;
     border-radius: 6px;
 
+    border-radius: 1%;
+    border-style: solid;
+    border-width: 1px;
+
     position: absolute;
     z-index: 1;
     bottom: 100%; // Position above the image
@@ -21,6 +24,37 @@
   }
 
   &:hover .tooltiptext {
+    visibility: visible;
+  }
+}
+
+.tooltip-wide {
+  position: relative;
+  display: inline-block;
+
+  .tooltiptext-wide {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+
+    border-radius: 1%;
+    border-style: solid;
+    border-width: 1px;
+
+    text-align: center;
+    padding: 7px;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; // Position above the image
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 12px;
+  }
+
+  &:hover .tooltiptext-wide {
     visibility: visible;
   }
 }

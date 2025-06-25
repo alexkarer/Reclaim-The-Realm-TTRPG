@@ -95,11 +95,11 @@
               <img src="/systems/reclaim-the-realm/assets/icons/actor/saber-slash.svg" alt="Meele Martial Attack Bonus" height='28' width='28'>
               <div class="rollable-container">
                 <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
-                  data-action='roll' data-roll='d20 + @meleeMartialAttack - @exhh' data-label='Meele Martial Attack'
+                  data-action='d20Test' data-roll='@meleeMartialAttack'
                 >
-                <span class="rollable-text-centered" 
-                  data-action='roll' data-roll='d20 + @meleeMartialAttack - @exh' data-label='Meele Martial Attack'
-                >{{numberFormat (subtract system.attackBonuses.meleeMartialAttack @root.system.exhaustion) decimals=0}}</span>
+                <span class="rollable-text-centered" data-action='d20Test' data-roll=' @meleeMartialAttack'>
+                  {{numberFormat system.attackBonuses.meleeMartialAttack decimals=0}}
+                </span>
               </div>
             </div>
             <span class="tooltiptext">Meele Martial Attack Bonus</span>
@@ -110,10 +110,10 @@
               <img src="/systems/reclaim-the-realm/assets/icons/actor/high-shot.svg" alt="Ranged Martial Attack Bonus" height='28' width='28'>
               <div class="rollable-container">
                 <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
-                    data-action='roll' data-roll='d20 + @rangedMartialAttack - @exhh' data-label='Ranged Martial Attack'
+                    data-action='d20Test' data-roll='@rangedMartialAttack'
                 >
-                <span class="rollable-text-centered" data-action='roll'data-roll='d20 + @rangedMartialAttack - @exh'data-label='Ranged Martial Attack'>
-                  {{numberFormat (subtract system.attackBonuses.rangedMartialAttack @root.system.exhaustion) decimals=0}}
+                <span class="rollable-text-centered" data-action='d20Test' data-roll='@rangedMartialAttack'>
+                  {{numberFormat system.attackBonuses.rangedMartialAttack decimals=0}}
                 </span>
               </div>
             </div>
@@ -230,10 +230,10 @@
               <img src="/systems/reclaim-the-realm/assets/icons/actor/fire-spell-cast.svg" alt="Meele Spell Attack" height='28' width='28'>
               <div class="rollable-container">
                 <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
-                    data-action='roll' data-roll='d20 + @meleeSpellAttack - @exhh' data-label='Meele Spell Attack'
+                    data-action='d20Test' data-roll='@meleeSpellAttack'
                 >
-                <span class="rollable-text-centered" data-action='roll'data-roll='d20 + @meleeSpellAttack - @exh'data-label='Meele Spell Attack'>
-                  {{numberFormat (subtract system.attackBonuses.meleeSpellAttack @root.system.exhaustion) decimals=0}}
+                <span class="rollable-text-centered" data-action='d20Test' data-roll='@meleeSpellAttack'>
+                  {{numberFormat system.attackBonuses.meleeSpellAttack decimals=0}}
                 </span>
               </div>
             </div>
@@ -245,10 +245,10 @@
               <img src="/systems/reclaim-the-realm/assets/icons/actor/ringed-beam.svg" alt="Ranged Spell Attack" height='28' width='28'>
               <div class="rollable-container">
                 <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
-                    data-action='roll' data-roll='d20 + @rangedSpellAttack - @exhh' data-label='Ranged Spell Attack'
+                    data-action='d20Test' data-roll='@rangedSpellAttack'
                 >
-                <span class="rollable-text-centered"  data-action='roll' data-roll='d20 + @rangedSpellAttack - @exh' data-label='Ranged Spell Attack'>
-                  {{numberFormat (subtract system.attackBonuses.rangedSpellAttack @root.system.exhaustion) decimals=0}}
+                <span class="rollable-text-centered"  data-action='d20Test' data-roll='@rangedSpellAttack'>
+                  {{numberFormat system.attackBonuses.rangedSpellAttack decimals=0}}
                 </span>
               </div>
             </div>

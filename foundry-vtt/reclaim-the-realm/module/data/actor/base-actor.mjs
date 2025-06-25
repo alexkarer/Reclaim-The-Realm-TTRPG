@@ -16,6 +16,7 @@ export default class RtRActorBase extends foundry.abstract
       max: new fields.NumberField({ ...requiredInteger, initial: 10, min: 1 }),
     });
     schema.tempHp = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
+    schema.exhaustion = new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 });
 
     schema.ap = new fields.NumberField({ ...requiredInteger, initial: 3 });
     schema.mp = new fields.NumberField({ ...requiredInteger, initial: 6 });
@@ -121,16 +122,16 @@ export default class RtRActorBase extends foundry.abstract
     this.ap = getApForLevel(this.levels.level);
     this.mp = 6 + Math.floor(this.attributes.agi.value / 3) + this.data.movementBonus - this.data.movementPenalty;
 
-    this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str.value + this.data.stabilityBonus;
-    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi.value + this.data.dodgeBonus - this.data.manoeuvrePenalty;
-    this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con.value + this.data.toughnessBonus;
-    this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi.value + this.data.willpowerBonus;
-    this.defenses.shieldBlock = this.levels.martialLevel + this.defenses.shieldBlockBase;
+    this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str.value + this.data.stabilityBonus - this.exhaustion;
+    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi.value + this.data.dodgeBonus - this.data.manoeuvrePenalty - this.exhaustion;
+    this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con.value + this.data.toughnessBonus - this.exhaustion;
+    this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi.value + this.data.willpowerBonus - this.exhaustion;
+    this.defenses.shieldBlock = this.levels.martialLevel + this.defenses.shieldBlockBase - this.exhaustion;
 
-    this.attackBonuses.meleeMartialAttack = this.levels.martialLevel + this.attributes.agi.value;
-    this.attackBonuses.rangedMartialAttack = this.levels.martialLevel + this.attributes.per.value;
-    this.attackBonuses.meleeSpellAttack = this.levels.spellLevel + this.attributes.agi.value;
-    this.attackBonuses.rangedSpellAttack = this.levels.spellLevel + this.attributes.per.value;
+    this.attackBonuses.meleeMartialAttack = this.levels.martialLevel + this.attributes.agi.value - this.exhaustion;
+    this.attackBonuses.rangedMartialAttack = this.levels.martialLevel + this.attributes.per.value - this.exhaustion;
+    this.attackBonuses.meleeSpellAttack = this.levels.spellLevel + this.attributes.agi.value - this.exhaustion;
+    this.attackBonuses.rangedSpellAttack = this.levels.spellLevel + this.attributes.per.value - this.exhaustion;
   }
 
   getRollData() {
@@ -149,20 +150,26 @@ export default class RtRActorBase extends foundry.abstract
     }
 
     data.level = this.levels.level;
-    data.martialLevel = this.levels.martialLevel;
-    data.spellLevel = this.levels.spellLevel;
-    data.manoeuvrePenalty = this.data.manoeuvrePenalty;
 
-    data.stability = this.defenses.stability;
-    data.dodge = this.defenses.dodge;
-    data.toughness = this.defenses.toughness;
-    data.willpower = this.defenses.willpower;
+    data.d20Test = -this.exhaustion;
+    data.attributeTest = -this.exhaustion;
+    data.skillTest = -this.exhaustion;
+
+    data.martialTest = this.levels.martialLevel - this.exhaustion;
+    data.spellTest = this.levels.spellLevel  - this.exhaustion;
+
+    data.stabilitySave = this.defenses.stability;
+    data.dodgeSave = this.defenses.dodge;
+    data.toughnessSave = this.defenses.toughness;
+    data.willpowerSave = this.defenses.willpower;
     data.shieldBlock = this.defenses.shieldBlock;
 
     data.meleeMartialAttack = this.attackBonuses.meleeMartialAttack;
     data.rangedMartialAttack = this.attackBonuses.rangedMartialAttack;
     data.meleeSpellAttack = this.attackBonuses.meleeSpellAttack;
     data.rangedSpellAttack = this.attackBonuses.rangedSpellAttack;
+
+    data.manoeuvrePenalty = this.data.manoeuvrePenalty;
 
     return data;
   }

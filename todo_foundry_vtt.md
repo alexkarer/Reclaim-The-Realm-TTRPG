@@ -1,7 +1,6 @@
 ### Immidiate TODOS
 
 - Define and user proper data structure for abilities before creating them to avoid lots of headaches later on.
-- Roll with advantage or disadanvtage function (mb with hotkeys)
 
 # General TODOs/Nice to have
 
@@ -54,6 +53,10 @@
 
 - Add better Data formatting for Cost and Tags
 - Automatic checking of requirements
+- Allow for adding actions
+    - Custom Dice Roll
+    - Custom Roll (Damage)
+    - Applying Effects
 
 ### Perks
 

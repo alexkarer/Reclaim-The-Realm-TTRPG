@@ -100,13 +100,9 @@
             <div>
               <img src='/systems/reclaim-the-realm/assets/icons/actor/weight-lifting-up.svg' height='24' width='24'>
             </div>
-            <div class="rollable-container">
-              <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='roll' data-roll='d20 + @stability'
-                name='system.defenses.stability' data-label='system.defenses.stability' data-dtype='Number'>
-              <span class="rollable-text-centered" data-action='roll' data-roll='d20 + @stability'
-                name='system.defenses.stability' data-label='system.defenses.stability' data-dtype='Number'
-              >{{numberFormat system.defenses.stability decimals=0 }}</span>
-            </div>
+            <span class='rollable-defense' name='system.defenses.stability'>
+              {{numberFormat (add 10 system.defenses.stability) decimals=0}}
+            </span>
             <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.stability.label'}}</span>
           </div>
         </div>
@@ -116,13 +112,9 @@
             <div>
               <img src='/systems/reclaim-the-realm/assets/icons/actor/dodging.svg' height='24' width='24'>
             </div>
-            <div class="rollable-container">
-              <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='roll' data-roll='d20 + @dodge'
-              name='system.defenses.dodge' data-label='system.defenses.dodge' data-dtype='Number'>
-              <span class="rollable-text-centered" data-action='roll' data-roll='d20 + @dodge'
-                name='system.defenses.dodge' data-label='system.defenses.dodge' data-dtype='Number'
-              >{{numberFormat system.defenses.dodge decimals=0 }}</span>
-            </div>
+            <span class='rollable-defense' name='system.defenses.dodge'>
+              {{numberFormat (add 10 system.defenses.dodge) decimals=0}}
+            </span>
             <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.dodge.label'}}</span>
           </div>
         </div>
@@ -132,13 +124,9 @@
             <div>
               <img src='/systems/reclaim-the-realm/assets/icons/actor/muscular-torso.svg' height='24' width='24'>
             </div>
-            <div class="rollable-container">
-              <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='roll' data-roll='d20 + @toughness'
-              name='system.defenses.toughness' data-label='system.defenses.toughness' data-dtype='Number'>
-            <span class="rollable-text-centered" data-action='roll' data-roll='d20 + @toughness'
-              name='system.defenses.toughness' data-label='system.defenses.toughness' data-dtype='Number'
-            >{{numberFormat system.defenses.toughness decimals=0 }}</span>
-            </div>
+            <span class='rollable-defense' name='system.defenses.toughness'>
+              {{numberFormat (add 10 system.defenses.toughness) decimals=0}}
+            </span>
             <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.toughness.label'}}</span>
           </div>
         </div>
@@ -148,13 +136,9 @@
             <div>
               <img src='/systems/reclaim-the-realm/assets/icons/actor/brain.svg' height='24' width='24'>
             </div>
-            <div class="rollable-container">
-              <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='roll' data-roll='d20 + @willpower'
-              name='system.defenses.willpower' data-label='system.defenses.willpower' data-dtype='Number'>
-              <span class="rollable-text-centered" data-action='roll' data-roll='d20 + @willpower'
-                name='system.defenses.willpower' data-label='system.defenses.willpower' data-dtype='Number'
-              >{{numberFormat system.defenses.willpower decimals=0 }}</span>
-            </div>
+            <span class='rollable-defense' name='system.defenses.willpower'>
+              {{numberFormat (add 10 system.defenses.willpower) decimals=0}}
+            </span>
             <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.willpower.label'}}</span>
           </div>
         </div>
@@ -164,13 +148,9 @@
             <div>
               <img src='/icons/svg/shield.svg' height='24' width='24'>
             </div>
-            <div >
-              <span class='rollable rollable-defense' data-action='roll' data-roll='d20 + @shieldBlock'
-                name='system.defenses.shieldBlock' data-label='system.defenses.shieldBlock' data-dtype='Number'>{{numberFormat
-                system.defenses.shieldBlock decimals=0 sign=true}}/{{numberFormat system.defenses.shieldBlockThreshold
-                decimals=0}}
-              </span>
-            </div>
+            <span class='rollable-defense' name='system.defenses.shieldBlock' data-dtype='Number'>
+              {{numberFormat (add 10 system.defenses.shieldBlock) decimals=0}}/{{numberFormat system.defenses.shieldBlockThreshold decimals=0}}
+            </span>
             <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.shieldBlock.label'}}</span>
           </div>
         </div>

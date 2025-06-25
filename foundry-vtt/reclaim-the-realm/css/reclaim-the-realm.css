@@ -26,7 +26,6 @@
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -36,6 +35,9 @@
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
+  border-radius: 1%;
+  border-style: solid;
+  border-width: 1px;
   position: absolute;
   z-index: 1;
   bottom: 100%;
@@ -44,6 +46,32 @@
   margin-bottom: 8px;
 }
 .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip-wide {
+  position: relative;
+  display: inline-block;
+}
+.tooltip-wide .tooltiptext-wide {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  border-radius: 1%;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  padding: 7px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 12px;
+}
+.tooltip-wide:hover .tooltiptext-wide {
   visibility: visible;
 }
 
@@ -509,117 +537,13 @@
   filter: brightness(1.5);
   cursor: pointer;
 }
-.reclaim-the-realm .effects-header {
-  height: 28px;
-  margin: 2px 0;
-  padding: 0;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.05);
-  border: 2px groove var(--reclaim-the-realm-c-groove);
-  font-weight: bold;
+.reclaim-the-realm .status-effect {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-.reclaim-the-realm .effects-header > * {
-  font-size: 14px;
-  text-align: center;
-}
-.reclaim-the-realm .effects-header .effect-name {
-  font-weight: bold;
-  padding-left: 5px;
-  text-align: left;
-  display: flex;
-}
-.reclaim-the-realm .effects-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  color: var(--reclaim-the-realm-c-tan);
-}
-.reclaim-the-realm .effects-list .effect-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.reclaim-the-realm .effects-list .effect-name {
-  flex: 2;
-  margin: 0;
-  overflow: hidden;
-  font-size: 13px;
-  text-align: left;
-  align-items: center;
-  display: flex;
-}
-.reclaim-the-realm .effects-list .effect-name h3, .reclaim-the-realm .effects-list .effect-name h4 {
-  margin: 0;
-  white-space: nowrap;
-  overflow-x: hidden;
-}
-.reclaim-the-realm .effects-list .effect-controls {
-  display: flex;
-  flex: 0 0 100px;
-  justify-content: flex-end;
-}
-.reclaim-the-realm .effects-list .effect-controls a {
-  font-size: 12px;
-  text-align: center;
-  margin: 0 6px;
-}
-.reclaim-the-realm .effects-list .effect {
-  align-items: center;
-  padding: 0 2px;
-  border-bottom: 1px solid var(--reclaim-the-realm-c-faint);
-}
-.reclaim-the-realm .effects-list .effect:last-child {
-  border-bottom: none;
-}
-.reclaim-the-realm .effects-list .effect .effect-name {
-  color: var(--reclaim-the-realm-c-dark);
-}
-.reclaim-the-realm .effects-list .effect .effect-name .effect-image {
-  flex: 0 0 30px;
-  height: 30px;
-  background-size: 30px;
-  border: none;
-  margin-right: 5px;
-}
-.reclaim-the-realm .effects-list .effect-prop {
-  text-align: center;
-  border-left: 1px solid #c9c7b8;
-  border-right: 1px solid #c9c7b8;
-  font-size: 12px;
-}
-.reclaim-the-realm .effects-list .effects-header {
-  height: 28px;
-  margin: 2px 0;
-  padding: 0;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.05);
-  border: 2px groove var(--reclaim-the-realm-c-groove);
-  font-weight: bold;
-}
-.reclaim-the-realm .effects-list .effects-header > * {
-  font-size: 12px;
-  text-align: center;
-}
-.reclaim-the-realm .effects-list .effects-header .effect-name {
-  padding-left: 5px;
-  text-align: left;
-}
-.reclaim-the-realm .effect-formula {
-  flex: 0 0 200px;
-  padding: 0 8px;
-}
-.reclaim-the-realm .effects .item .effect-source,
-.reclaim-the-realm .effects .item .effect-duration,
-.reclaim-the-realm .effects .item .effect-controls {
-  text-align: center;
-  border-left: 1px solid #c9c7b8;
-  border-right: 1px solid #c9c7b8;
-  font-size: 12px;
-}
-.reclaim-the-realm .effects .item .effect-controls {
-  border: none;
+.reclaim-the-realm .status-effect:hover, .reclaim-the-realm .status-effect:focus {
+  cursor: pointer;
+  background-color: var(--reclaim-the-realm-c-beige);
 }
 .reclaim-the-realm .skill-container {
   overflow-y: scroll;

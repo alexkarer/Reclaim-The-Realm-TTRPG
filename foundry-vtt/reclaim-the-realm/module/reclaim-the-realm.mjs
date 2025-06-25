@@ -99,7 +99,6 @@ function _configureStatusEffects() {
     effect.id = id;
     effect._id = generateFvttId(`RTR${id}`);
     CONFIG.statusEffects.push(effect);
-    //CONFIG.specialStatusEffects[] maybe also needed
   }
 }
 

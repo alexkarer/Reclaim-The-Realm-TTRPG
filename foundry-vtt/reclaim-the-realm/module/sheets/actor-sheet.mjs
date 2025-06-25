@@ -1,4 +1,5 @@
 import { generateFvttId } from "../utils.mjs";
+import { parseRollDataForType } from "../helpers/parsing-utils.mjs";
 
 const { api, sheets, ux, apps } = foundry.applications;
 
@@ -28,6 +29,7 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       deleteDoc: this._deleteDoc,
       toggleEffect: this._toggleEffect,
       roll: this._onRoll,
+      d20Test: this._onD20Test,
       increaseHp: this._onIncreaseHP,
       decreaseHp: this._onDecreaseHP,
       increaseStamina: this._onIncreaseStamina,
@@ -53,18 +55,6 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       unlockDataEdit: this._onUnlockDataEdit,
       lockDataEdit: this._onLockDataEdit,
       castSpell: this._castSpell
-      /*
-      TODO new action toggleEffect
-
-      return this._onToggleCondition(target.closest("[data-condition-id]")?.dataset.conditionId);
-      
-      _onToggleCondition(conditionId) {
-        const existing = this.document.effects.get(staticID(`dnd5e${conditionId}`));
-        if ( existing ) return existing.delete();
-        const effect = await ActiveEffect.implementation.fromStatusEffect(conditionId);
-        return ActiveEffect.implementation.create(effect, { parent: this.document, keepId: true });
-      }
-      */
     },
     // Custom property that's merged into `this.options`
     dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -461,12 +451,17 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
    * @private
    */
   static async _toggleEffect(event, target) {
-    const effect = this._getEmbeddedDocument(target);
-    await effect.update({ disabled: !effect.disabled });
+    const conditionId = target.closest("[data-condition-id]").dataset.conditionId;
+    const existing = this.document.effects.get(generateFvttId(`RTR${conditionId}`));
+
+    if ( existing ) return existing.delete();
+
+    const effect = await ActiveEffect.implementation.fromStatusEffect(conditionId);
+    return ActiveEffect.implementation.create(effect, { parent: this.document, keepId: true });
   }
 
   /**
-   * Handle clickable rolls.
+   * Handle any custom roll.
    *
    * @this RtRActorSheet
    * @param {PointerEvent} event   The originating click event
@@ -495,6 +490,39 @@ export class RtRActorSheet extends api.HandlebarsApplicationMixin(
       });
       return roll;
     }
+  }
+
+  /**
+   * Handle D20 Tests
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onD20Test(event, target) {
+    event.preventDefault();
+    const dataset = target.dataset;
+
+    const advantage = event.ctrlKey;
+    const disadvantage = event.shiftKey;
+
+    let dice = 'd20';
+    if (advantage && !disadvantage) {
+      dice = '2d20kh';
+    } if (disadvantage && !advantage) {
+      dice = '2d20kl';
+    }
+    let formula = dice + '+' + dataset.roll;
+
+    let label = parseRollDataForType(formula);
+    let roll = new Roll(formula, this.actor.getRollData());
+    await roll.toMessage({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      flavor: label,
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
+    return roll;
   }
 
   /**
