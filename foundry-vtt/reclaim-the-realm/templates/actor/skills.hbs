@@ -54,25 +54,22 @@
         {{#if (eq key 'smithTools')}}
             <hr class='grid-span-7'>
         {{/if}}
-        {{#if skills.classSkill}}
-            <a 
-                class='class-skill grid-span-2 bold-text flexlarge align-left' style="align-self: center;"
+        <a 
+            class='grid-span-2 bold-text flexlarge align-left {{#if skills.classSkill}} class-skill {{/if}}'
+            style="align-self: center;"
+            {{#if skills.classSkill}}
                 name='system.attributes.{{key}}.unSetAsClassSkill'
                 title="{{localize 'RTR.Actor.Character.TOOLTIPS.unSetAsClassSkill.label'}}"
-                data-label='{{localize (lookup @root.config.skills key)}}'
                 data-action='unSetAsClassSkill'
-                {{disabled @root.system.editLockers.skillsEditLocked}}
-              >{{localize (lookup @root.config.skills key)}}</a>
-        {{else}}
-            <a 
-                class='grid-span-2 bold-text flexlarge align-left' style="align-self: center;"
+            {{else}}
                 name='system.attributes.{{key}}.setAsClassSkill'
                 title="{{localize 'RTR.Actor.Character.TOOLTIPS.setAsClassSkill.label'}}"
-                data-label='{{localize (lookup @root.config.skills key)}}'
                 data-action='setAsClassSkill'
-                {{disabled @root.system.editLockers.skillsEditLocked}}
-              >{{localize (lookup @root.config.skills key)}}</a>
-        {{/if}}
+            {{/if}}
+            {{disabled @root.system.editLockers.skillsEditLocked}}
+        >
+            {{localize (lookup @root.config.skills key)}}
+        </a>
         <div class="grid-span-2 flexrow">
             <span class="align-self-center">{{skills.rank}} / {{skills.rankMaximum}}</span>
         </div>
@@ -113,11 +110,11 @@
         <div class="rollable-container">
             <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
                 data-action='d20Test'
-                data-roll='@skillTest + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
+                data-roll='@skillTest + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value {{#if (eq skills.attrBonus 'agi')}} - @manoeuvrePenalty{{/if}}'
             >
             <span class="rollable-text-centered" 
                 data-action='d20Test'
-                data-roll='@skillTest + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value'
+                data-roll='@skillTest + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value {{#if (eq skills.attrBonus 'agi')}} - @manoeuvrePenalty{{/if}}'
             >{{numberFormat (subtract (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value')) @root.system.exhaustion) decimals=0}}</span>
         </div>
     {{/each}}

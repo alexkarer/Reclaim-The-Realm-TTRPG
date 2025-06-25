@@ -25,25 +25,21 @@
 
       <div class='attributes grid grid-2col'>
       {{#each system.attributes as |attribute key|}}
-        {{#if attribute.classAttribute}}
-             <a 
-                class='class-attribute rollable bold-text align-left'
-                name='system.attributes.{{key}}.unSetClassAttribute'
-                title="{{localize 'RTR.Actor.Character.TOOLTIPS.unSetAsClassAttribute.label'}}"
-                data-label='{{localize (lookup @root.config.attributes key)}}'
-                data-action='unSetClassAttribute'
-                {{disabled @root.system.editLockers.dataEditLocked}}
-              >{{localize (lookup @root.config.attributes key)}}</a>
-        {{else}}
-            <a 
-              class='rollable bold-text align-left'
-              name='system.attributes.{{key}}.setClassAttribute'
-              title="{{localize 'RTR.Actor.Character.TOOLTIPS.setAsClassAttribute.label'}}"
-              data-label='{{localize (lookup @root.config.attributes key)}}'
-              data-action='setClassAttribute'
-              {{disabled @root.system.editLockers.dataEditLocked}}
-            >{{localize (lookup @root.config.attributes key)}}</a>
-        {{/if}}
+        <a 
+          class='rollable bold-text align-left {{#if attribute.classAttribute}} class-attribute {{/if}}'
+          {{#if attribute.classAttribute}}
+            name='system.attributes.{{key}}.unSetClassAttribute'
+            title="{{localize 'RTR.Actor.Character.TOOLTIPS.unSetAsClassAttribute.label'}}"
+            data-action='unSetClassAttribute'
+          {{else}}
+            name='system.attributes.{{key}}.setClassAttribute'
+            title="{{localize 'RTR.Actor.Character.TOOLTIPS.setAsClassAttribute.label'}}"
+            data-action='setClassAttribute'
+          {{/if}}
+          {{disabled @root.system.editLockers.dataEditLocked}}
+        >
+          {{localize (lookup @root.config.attributes key)}}
+        </a>
         <div class="flexrow">
           {{#if (eq @root.actor.type 'character')}}
             <input 

@@ -77,6 +77,12 @@ RTR.damageTypes = {
 }
 
 RTR.statusEffects = {
+  // needed for foundry to mark combatants as defeated
+  dead: {
+    name: "Dead",
+    img: "/icons/svg/skull.svg",
+    description: "He ded"
+  },
   stunned1: {
     name: "RTR.StatusEffects.Stunned1.label",
     img: "/icons/svg/stoned.svg",
