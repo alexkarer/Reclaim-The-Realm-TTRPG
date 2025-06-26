@@ -1,14 +1,16 @@
 {
-  "name": "Initiate",
+  "folder": "ga2M66hYaPVgnuJ6",
+  "name": "Enlightened",
   "type": "npc",
-  "_id": "dcqvsXCNRnrBXxMR",
-  "img": "npcs/Cultists/Cultist_Acolyte_Dagger_01.png",
+  "_id": "yFScecbdQqGnHHkB",
+  "img": "npcs/Cultists/Cultist_Bully_Sword_01.png",
   "system": {
     "hp": {
-      "value": 15,
-      "max": 15
+      "value": 21,
+      "max": 21
     },
     "tempHp": 0,
+    "exhaustion": 0,
     "ap": 3,
     "mp": 6,
     "biography": "",
@@ -33,22 +35,22 @@
     },
     "attributes": {
       "str": {
-        "value": 2,
+        "value": 3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "agi": {
-        "value": 2,
+        "value": 3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "con": {
-        "value": 1,
+        "value": 2,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "spi": {
-        "value": 1,
+        "value": 2,
         "classAttribute": false,
         "attributeMaximum": 3
       },
@@ -58,7 +60,7 @@
         "attributeMaximum": 3
       },
       "per": {
-        "value": 1,
+        "value": 2,
         "classAttribute": false,
         "attributeMaximum": 3
       },
@@ -216,16 +218,19 @@
         "attrBonus": "str"
       }
     },
-    "npcLevel": 0.25
+    "npcLevel": 0.5,
+    "resistancesString": "cosmic: 5;",
+    "immunitiesString": "",
+    "statusEffectImmunityString": "resist: frightened, charmed;"
   },
   "prototypeToken": {
-    "name": "Initiate",
+    "name": "Enlightened",
     "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Acolyte_Dagger_01.png",
+      "src": "npcs/Cultists/Cultist_Bully_Sword_01.png",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -316,7 +321,7 @@
     {
       "name": "Dark Devotion",
       "type": "npcTrait",
-      "_id": "rgGAhj6a7iR72IVx",
+      "_id": "lkUEFJAuaTTvirU9",
       "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
       "system": {
         "description": "<p>Status effect resistance against being charmed or firghtened</p>",
@@ -327,29 +332,29 @@
       "sort": 0,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
-        "compendiumSource": "Item.3JcLuRm8rfkz1mWe",
+        "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1750348436684,
-        "modifiedTime": 1750348436684,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1750974475448,
+        "modifiedTime": 1750974522938,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!dcqvsXCNRnrBXxMR.rgGAhj6a7iR72IVx"
+      "_key": "!actors.items!yFScecbdQqGnHHkB.lkUEFJAuaTTvirU9"
     },
     {
       "name": "Basic Attack",
       "type": "npcAbility",
-      "_id": "O2a5oBCqVTGvJWTX",
-      "img": "icons/skills/melee/strike-dagger-white-orange.webp",
+      "_id": "NYnq33cSAhszViib",
+      "img": "icons/skills/melee/strike-sword-gray.webp",
       "system": {
-        "description": "<p><span style=\"font-family: Icon, Roboto\">Attack ⚔️ 13 1.5m, 1 target. On hit: <strong>2d6</strong> damage.</span></p>",
+        "description": "<p><span style=\"font-family:Icon, Roboto\">Attack ⚔️ 14 1.5m, 1 target. On hit: <strong>2d6+1 </strong>physical damage.</span></p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -373,18 +378,18 @@
           "otherResourceCost": 0,
           "rawStringCost": "2 AP"
         },
-        "summary": "Attack ⚔️ 13 1.5m, 1 target. On hit: 2d6 damage.",
+        "summary": "Attack ⚔️ 14 1.5m, 1 target. On hit: 2d6+1 physical  damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6[physical]"
+        "formula": "2d6+1[physical]"
       },
       "effects": [],
       "folder": null,
       "sort": 0,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
@@ -394,19 +399,18 @@
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1750348452553,
-        "modifiedTime": 1750348522462,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1750974706891,
+        "modifiedTime": 1750974768236,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!dcqvsXCNRnrBXxMR.O2a5oBCqVTGvJWTX"
+      "_key": "!actors.items!yFScecbdQqGnHHkB.NYnq33cSAhszViib"
     }
   ],
   "effects": [],
-  "folder": "ga2M66hYaPVgnuJ6",
-  "sort": 100000,
+  "sort": 0,
   "ownership": {
     "default": 0,
-    "dMcHPOGHbwLGpLCS": 3
+    "OLKSfPDHiy1Xf9SG": 3
   },
   "flags": {},
   "_stats": {
@@ -416,9 +420,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750348223835,
-    "modifiedTime": 1750977869997,
+    "createdTime": 1750974341866,
+    "modifiedTime": 1750977885032,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
-  "_key": "!actors!dcqvsXCNRnrBXxMR"
+  "_key": "!actors!yFScecbdQqGnHHkB"
 }

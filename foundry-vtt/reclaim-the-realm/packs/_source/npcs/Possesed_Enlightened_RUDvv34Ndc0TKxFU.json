@@ -1,14 +1,16 @@
 {
-  "name": "Initiate",
+  "folder": "ga2M66hYaPVgnuJ6",
+  "name": "Possesed Enlightened",
   "type": "npc",
-  "_id": "dcqvsXCNRnrBXxMR",
-  "img": "npcs/Cultists/Cultist_Acolyte_Dagger_01.png",
+  "_id": "RUDvv34Ndc0TKxFU",
+  "img": "npcs/Cultists/Cultist_Possessed_01.png",
   "system": {
     "hp": {
-      "value": 15,
-      "max": 15
+      "value": 42,
+      "max": 42
     },
     "tempHp": 0,
+    "exhaustion": 0,
     "ap": 3,
     "mp": 6,
     "biography": "",
@@ -16,9 +18,9 @@
     "data": {
       "hpPerLevel": 6,
       "additionalHp": 0,
-      "stabilityBonus": 1,
+      "stabilityBonus": 0,
       "dodgeBonus": 0,
-      "toughnessBonus": 1,
+      "toughnessBonus": 0,
       "willpowerBonus": 0,
       "movementBonus": 0,
       "manoeuvrePenalty": 0,
@@ -33,46 +35,46 @@
     },
     "attributes": {
       "str": {
-        "value": 2,
+        "value": 5,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "agi": {
-        "value": 2,
+        "value": 4,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "con": {
-        "value": 1,
+        "value": 4,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "spi": {
-        "value": 1,
+        "value": 3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "int": {
-        "value": 0,
-        "classAttribute": false,
-        "attributeMaximum": 3
-      },
-      "per": {
         "value": 1,
         "classAttribute": false,
         "attributeMaximum": 3
       },
+      "per": {
+        "value": 3,
+        "classAttribute": false,
+        "attributeMaximum": 3
+      },
       "cha": {
-        "value": 0,
+        "value": 1,
         "classAttribute": false,
         "attributeMaximum": 3
       }
     },
     "defenses": {
-      "stabilityProficency": 0,
-      "dodgeProficency": 0,
-      "toughnessProficency": 0,
-      "willpowerProficency": 0,
+      "stabilityProficency": 1,
+      "dodgeProficency": 0.34,
+      "toughnessProficency": 1,
+      "willpowerProficency": 0.34,
       "shieldBlockBase": 0,
       "shieldBlockThreshold": 0,
       "stability": 0,
@@ -216,16 +218,19 @@
         "attrBonus": "str"
       }
     },
-    "npcLevel": 0.25
+    "npcLevel": 2,
+    "resistancesString": "cosmic: 12; physical: 2",
+    "immunitiesString": "",
+    "statusEffectImmunityString": ""
   },
   "prototypeToken": {
-    "name": "Initiate",
+    "name": "Possessed Enlightened",
     "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Acolyte_Dagger_01.png",
+      "src": "npcs/Cultists/Cultist_Possessed_01.png",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -314,42 +319,12 @@
   },
   "items": [
     {
-      "name": "Dark Devotion",
-      "type": "npcTrait",
-      "_id": "rgGAhj6a7iR72IVx",
-      "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
-      "system": {
-        "description": "<p>Status effect resistance against being charmed or firghtened</p>",
-        "summary": "Status effect resistance against being charmed or firghtened"
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": "Item.3JcLuRm8rfkz1mWe",
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.345",
-        "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
-        "createdTime": 1750348436684,
-        "modifiedTime": 1750348436684,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
-      },
-      "_key": "!actors.items!dcqvsXCNRnrBXxMR.rgGAhj6a7iR72IVx"
-    },
-    {
       "name": "Basic Attack",
       "type": "npcAbility",
-      "_id": "O2a5oBCqVTGvJWTX",
-      "img": "icons/skills/melee/strike-dagger-white-orange.webp",
+      "_id": "f68t2KZIcyuQlhXh",
+      "img": "icons/creatures/claws/claw-talons-yellow-red.webp",
       "system": {
-        "description": "<p><span style=\"font-family: Icon, Roboto\">Attack ⚔️ 13 1.5m, 1 target. On hit: <strong>2d6</strong> damage.</span></p>",
+        "description": "<p>Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 physical damage.</p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -373,18 +348,18 @@
           "otherResourceCost": 0,
           "rawStringCost": "2 AP"
         },
-        "summary": "Attack ⚔️ 13 1.5m, 1 target. On hit: 2d6 damage.",
+        "summary": "Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6[physical]"
+        "formula": "3d6[physical]"
       },
       "effects": [],
       "folder": null,
       "sort": 0,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
@@ -394,19 +369,132 @@
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1750348452553,
-        "modifiedTime": 1750348522462,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1750977384925,
+        "modifiedTime": 1750977493526,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!dcqvsXCNRnrBXxMR.O2a5oBCqVTGvJWTX"
+      "_key": "!actors.items!RUDvv34Ndc0TKxFU.f68t2KZIcyuQlhXh"
+    },
+    {
+      "name": "Life Steal",
+      "type": "npcAbility",
+      "_id": "6ymf3ZiLQTv82Dx3",
+      "img": "icons/creatures/claws/claw-talons-glowing-purple.webp",
+      "system": {
+        "description": "<p>Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 unholy damage. , additionally the creature heals [HP] equal to half damage done</p>",
+        "requirements": {
+          "minimumLevel": 0,
+          "minimumMartialLevel": 0,
+          "minimumSpellLevel": 0,
+          "minimumStr": 0,
+          "minimumAgi": 0,
+          "minimumCon": 0,
+          "minimumInt": 0,
+          "minimumSpi": 0,
+          "minimumPer": 0,
+          "minimumCha": 0,
+          "skillRankRequirements": [],
+          "requiredPerks": []
+        },
+        "usageCost": {
+          "apCost": 0,
+          "mpCost": 0,
+          "isFree": false,
+          "arcanaCost": 0,
+          "staminaCost": 0,
+          "otherResourceCost": 0,
+          "rawStringCost": "3 AP"
+        },
+        "summary": "Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 unholy damage. , additionally the creature heals [HP] equal to half damage done",
+        "range": "",
+        "targets": "",
+        "duration": "",
+        "formula": "3d6[unholy]"
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1750977386020,
+        "modifiedTime": 1750977488772,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!RUDvv34Ndc0TKxFU.6ymf3ZiLQTv82Dx3"
+    },
+    {
+      "name": "Teleport",
+      "type": "npcAbility",
+      "_id": "azNwSpAqmtdRCJYq",
+      "img": "icons/magic/symbols/runes-star-magenta.webp",
+      "system": {
+        "description": "<p>Teleport to an unoccupied space up to 12m away</p>",
+        "requirements": {
+          "minimumLevel": 0,
+          "minimumMartialLevel": 0,
+          "minimumSpellLevel": 0,
+          "minimumStr": 0,
+          "minimumAgi": 0,
+          "minimumCon": 0,
+          "minimumInt": 0,
+          "minimumSpi": 0,
+          "minimumPer": 0,
+          "minimumCha": 0,
+          "skillRankRequirements": [],
+          "requiredPerks": []
+        },
+        "usageCost": {
+          "apCost": 0,
+          "mpCost": 0,
+          "isFree": false,
+          "arcanaCost": 0,
+          "staminaCost": 0,
+          "otherResourceCost": 0,
+          "rawStringCost": "1 AP CD(3)"
+        },
+        "summary": "Teleport to an unoccupied space up to 12m away",
+        "range": "",
+        "targets": "",
+        "duration": "",
+        "formula": ""
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1750977386364,
+        "modifiedTime": 1750977578012,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!RUDvv34Ndc0TKxFU.azNwSpAqmtdRCJYq"
     }
   ],
   "effects": [],
-  "folder": "ga2M66hYaPVgnuJ6",
-  "sort": 100000,
+  "sort": 0,
   "ownership": {
     "default": 0,
-    "dMcHPOGHbwLGpLCS": 3
+    "OLKSfPDHiy1Xf9SG": 3
   },
   "flags": {},
   "_stats": {
@@ -416,9 +504,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750348223835,
-    "modifiedTime": 1750977869997,
+    "createdTime": 1750976619995,
+    "modifiedTime": 1750977804750,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
-  "_key": "!actors!dcqvsXCNRnrBXxMR"
+  "_key": "!actors!RUDvv34Ndc0TKxFU"
 }

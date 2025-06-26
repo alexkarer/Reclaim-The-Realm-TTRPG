@@ -590,6 +590,7 @@ export class NpcRepository {
             case 'Cosmic Corrupted':
                 this.updateSpiBonus(2);
                 this.addDamageResistance({ type: 'cosmic', value: '10 + [LEVEL]'});
+                this.addDamageResistance({ type: 'physical', value: '[LEVEL]'});
                 break;
             default:
                 console.error('Unkown trait ' + traitName + ' unable to apply characteristics');
@@ -731,6 +732,7 @@ export class NpcRepository {
             case 'Cosmic Corrupted':
                 this.updateSpiBonus(-2);
                 this.removeDamageResistance({ type: 'cosmic', value: '10 + [LEVEL]'});
+                this.removeDamageResistance({ type: 'physical', value: '[LEVEL]'});
                 break;
             default:
                 console.error('Unkown trait ' + traitName + ' unable to apply characteristics');

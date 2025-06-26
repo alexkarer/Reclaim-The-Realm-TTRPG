@@ -179,6 +179,15 @@
         </div>
 
         <div>
+          <label for="system.defenses.shieldBlockBase">Shield Block:</label>
+          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.defenses.shieldBlockBase' name='system.defenses.shieldBlockBase' value='{{system.defenses.shieldBlockBase}}'/>
+        </div>
+        <div >
+          <label for="system.defenses.shieldBlockThreshold">Shield Thresh.:</label>
+          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.defenses.shieldBlockThreshold' name='system.defenses.shieldBlockThreshold' value='{{system.defenses.shieldBlockThreshold}}'/>
+        </div>
+
+        <div>
           <label for="system.data.stabilityBonus">Stability Bonus:</label>
           <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.data.stabilityBonus' name='system.data.stabilityBonus' value='{{system.data.stabilityBonus}}'/>
         </div>

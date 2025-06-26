@@ -1,14 +1,16 @@
 {
-  "name": "Initiate",
+  "folder": "ga2M66hYaPVgnuJ6",
+  "name": "Enlightened Warrior",
   "type": "npc",
-  "_id": "dcqvsXCNRnrBXxMR",
-  "img": "npcs/Cultists/Cultist_Acolyte_Dagger_01.png",
+  "_id": "RmO6QZ8EEiN1yViV",
+  "img": "npcs/Cultists/Cultist_Brute_Axe_01.png",
   "system": {
     "hp": {
-      "value": 15,
-      "max": 15
+      "value": 29,
+      "max": 29
     },
     "tempHp": 0,
+    "exhaustion": 0,
     "ap": 3,
     "mp": 6,
     "biography": "",
@@ -16,12 +18,12 @@
     "data": {
       "hpPerLevel": 6,
       "additionalHp": 0,
-      "stabilityBonus": 1,
+      "stabilityBonus": 0,
       "dodgeBonus": 0,
-      "toughnessBonus": 1,
+      "toughnessBonus": 0,
       "willpowerBonus": 0,
       "movementBonus": 0,
-      "manoeuvrePenalty": 0,
+      "manoeuvrePenalty": 3,
       "movementPenalty": 0
     },
     "levels": {
@@ -33,22 +35,22 @@
     },
     "attributes": {
       "str": {
-        "value": 2,
+        "value": 3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "agi": {
-        "value": 2,
+        "value": 3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "con": {
-        "value": 1,
+        "value": 3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "spi": {
-        "value": 1,
+        "value": 3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
@@ -58,7 +60,7 @@
         "attributeMaximum": 3
       },
       "per": {
-        "value": 1,
+        "value": 2,
         "classAttribute": false,
         "attributeMaximum": 3
       },
@@ -69,12 +71,12 @@
       }
     },
     "defenses": {
-      "stabilityProficency": 0,
-      "dodgeProficency": 0,
-      "toughnessProficency": 0,
-      "willpowerProficency": 0,
-      "shieldBlockBase": 0,
-      "shieldBlockThreshold": 0,
+      "stabilityProficency": 1,
+      "dodgeProficency": 0.67,
+      "toughnessProficency": 1,
+      "willpowerProficency": 0.34,
+      "shieldBlockBase": 2,
+      "shieldBlockThreshold": 15,
       "stability": 0,
       "dodge": 0,
       "toughness": 0,
@@ -216,16 +218,19 @@
         "attrBonus": "str"
       }
     },
-    "npcLevel": 0.25
+    "npcLevel": 1,
+    "resistancesString": "cosmic: 5, phyiscal: 4",
+    "immunitiesString": "",
+    "statusEffectImmunityString": ""
   },
   "prototypeToken": {
-    "name": "Initiate",
-    "displayName": 50,
+    "name": "Enlightened Warrior",
+    "displayName": 40,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Acolyte_Dagger_01.png",
+      "src": "npcs/Cultists/Cultist_Brute_Axe_01.png",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -241,7 +246,7 @@
     "rotation": 0,
     "alpha": 1,
     "disposition": -1,
-    "displayBars": 30,
+    "displayBars": 20,
     "bar1": {
       "attribute": "hp"
     },
@@ -314,42 +319,42 @@
   },
   "items": [
     {
-      "name": "Dark Devotion",
+      "name": "Cosmic Touched",
       "type": "npcTrait",
-      "_id": "rgGAhj6a7iR72IVx",
-      "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+      "_id": "ItBbv7vB5pJOnAvJ",
+      "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
       "system": {
-        "description": "<p>Status effect resistance against being charmed or firghtened</p>",
-        "summary": "Status effect resistance against being charmed or firghtened"
+        "description": "<p>The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation.</p>",
+        "summary": "The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation."
       },
       "effects": [],
       "folder": null,
       "sort": 0,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
-        "compendiumSource": "Item.3JcLuRm8rfkz1mWe",
+        "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1750348436684,
-        "modifiedTime": 1750348436684,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1750974970922,
+        "modifiedTime": 1750975076585,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!dcqvsXCNRnrBXxMR.rgGAhj6a7iR72IVx"
+      "_key": "!actors.items!RmO6QZ8EEiN1yViV.ItBbv7vB5pJOnAvJ"
     },
     {
-      "name": "Basic Attack",
+      "name": "Attack",
       "type": "npcAbility",
-      "_id": "O2a5oBCqVTGvJWTX",
-      "img": "icons/skills/melee/strike-dagger-white-orange.webp",
+      "_id": "YtW4Gt2tGBhOW6bv",
+      "img": "icons/skills/melee/hand-grip-axe-strike-orange.webp",
       "system": {
-        "description": "<p><span style=\"font-family: Icon, Roboto\">Attack ⚔️ 13 1.5m, 1 target. On hit: <strong>2d6</strong> damage.</span></p>",
+        "description": "<p>Attack ⚔️ 14 1.5m, 1 target. On hit: 2d6+1 physical damage.</p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -373,18 +378,18 @@
           "otherResourceCost": 0,
           "rawStringCost": "2 AP"
         },
-        "summary": "Attack ⚔️ 13 1.5m, 1 target. On hit: 2d6 damage.",
+        "summary": "Attack ⚔️ 14 1.5m, 1 target. On hit: 2d6+1 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6[physical]"
+        "formula": "2d6+1[physical]"
       },
       "effects": [],
       "folder": null,
       "sort": 0,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
@@ -394,19 +399,189 @@
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1750348452553,
-        "modifiedTime": 1750348522462,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1750975337184,
+        "modifiedTime": 1750975396621,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!dcqvsXCNRnrBXxMR.O2a5oBCqVTGvJWTX"
+      "_key": "!actors.items!RmO6QZ8EEiN1yViV.YtW4Gt2tGBhOW6bv"
+    },
+    {
+      "name": "Cleave",
+      "type": "npcAbility",
+      "_id": "PKzVv1xJmkoHOeUj",
+      "img": "icons/skills/melee/hand-grip-axe-strike-orange.webp",
+      "system": {
+        "description": "<p>Attack ⚔️ 14 1.5m, Cleave. On hit: 2d6+1 physical damage.</p>",
+        "requirements": {
+          "minimumLevel": 0,
+          "minimumMartialLevel": 0,
+          "minimumSpellLevel": 0,
+          "minimumStr": 0,
+          "minimumAgi": 0,
+          "minimumCon": 0,
+          "minimumInt": 0,
+          "minimumSpi": 0,
+          "minimumPer": 0,
+          "minimumCha": 0,
+          "skillRankRequirements": [],
+          "requiredPerks": []
+        },
+        "usageCost": {
+          "apCost": 0,
+          "mpCost": 0,
+          "isFree": false,
+          "arcanaCost": 0,
+          "staminaCost": 0,
+          "otherResourceCost": 0,
+          "rawStringCost": "3 AP"
+        },
+        "summary": "Attack ⚔️ 14 1.5m, Cleave. On hit: 2d6+1 physical damage.",
+        "range": "",
+        "targets": "",
+        "duration": "",
+        "formula": "2d6+1[physical]"
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1750975451963,
+        "modifiedTime": 1750975502274,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!RmO6QZ8EEiN1yViV.PKzVv1xJmkoHOeUj"
+    },
+    {
+      "name": "Cursed Strike",
+      "type": "npcAbility",
+      "_id": "gt9HNgkEJwNYfgGc",
+      "img": "icons/skills/melee/strike-axe-energy-pink.webp",
+      "system": {
+        "description": "<p>Attack ⚔️ 14 1.5m, 1 target. On hit: 1d6+4 physical + 1d6 unholy damage. , additionally afflict [CURSED I] lasts 2 [ROUND] [SAVE LOWERS]</p>",
+        "requirements": {
+          "minimumLevel": 0,
+          "minimumMartialLevel": 0,
+          "minimumSpellLevel": 0,
+          "minimumStr": 0,
+          "minimumAgi": 0,
+          "minimumCon": 0,
+          "minimumInt": 0,
+          "minimumSpi": 0,
+          "minimumPer": 0,
+          "minimumCha": 0,
+          "skillRankRequirements": [],
+          "requiredPerks": []
+        },
+        "usageCost": {
+          "apCost": 0,
+          "mpCost": 0,
+          "isFree": false,
+          "arcanaCost": 0,
+          "staminaCost": 0,
+          "otherResourceCost": 0,
+          "rawStringCost": "3 AP"
+        },
+        "summary": "Attack ⚔️ 14 1.5m, 1 target. On hit: 1d6+4 physical + 1d6 unholy damage. , additionally afflict [CURSED I] lasts 2 [ROUND] [SAVE LOWERS]",
+        "range": "",
+        "targets": "",
+        "duration": "",
+        "formula": "1d6+4[physical]+1d6[unholy]"
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1750975515235,
+        "modifiedTime": 1750975561549,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!RmO6QZ8EEiN1yViV.gt9HNgkEJwNYfgGc"
+    },
+    {
+      "name": "NPC Ability",
+      "type": "npcAbility",
+      "_id": "Hd22sExH9nmnwGKP",
+      "img": "icons/magic/unholy/beam-ringed-impact-purple.webp",
+      "system": {
+        "description": "<p>Attack 🏹✨ 12 21m range, 1 target. On hit: 2d6+1 unholy damage.</p>",
+        "requirements": {
+          "minimumLevel": 0,
+          "minimumMartialLevel": 0,
+          "minimumSpellLevel": 0,
+          "minimumStr": 0,
+          "minimumAgi": 0,
+          "minimumCon": 0,
+          "minimumInt": 0,
+          "minimumSpi": 0,
+          "minimumPer": 0,
+          "minimumCha": 0,
+          "skillRankRequirements": [],
+          "requiredPerks": []
+        },
+        "usageCost": {
+          "apCost": 0,
+          "mpCost": 0,
+          "isFree": false,
+          "arcanaCost": 0,
+          "staminaCost": 0,
+          "otherResourceCost": 0,
+          "rawStringCost": "3 AP"
+        },
+        "summary": "Attack 🏹✨ 12 21m range, 1 target. On hit: 2d6+1 unholy damage.",
+        "range": "",
+        "targets": "",
+        "duration": "",
+        "formula": "2d6+1[unholy]"
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1750975594617,
+        "modifiedTime": 1750975657050,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!RmO6QZ8EEiN1yViV.Hd22sExH9nmnwGKP"
     }
   ],
   "effects": [],
-  "folder": "ga2M66hYaPVgnuJ6",
-  "sort": 100000,
+  "sort": 0,
   "ownership": {
     "default": 0,
-    "dMcHPOGHbwLGpLCS": 3
+    "OLKSfPDHiy1Xf9SG": 3
   },
   "flags": {},
   "_stats": {
@@ -416,9 +591,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750348223835,
-    "modifiedTime": 1750977869997,
+    "createdTime": 1750974861402,
+    "modifiedTime": 1750977893052,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
-  "_key": "!actors!dcqvsXCNRnrBXxMR"
+  "_key": "!actors!RmO6QZ8EEiN1yViV"
 }

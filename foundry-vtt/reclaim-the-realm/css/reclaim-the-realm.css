@@ -626,7 +626,7 @@
   border-style: solid;
 }
 .reclaim-the-realm .npc-overview-container {
-  height: 520px;
+  height: 510px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;

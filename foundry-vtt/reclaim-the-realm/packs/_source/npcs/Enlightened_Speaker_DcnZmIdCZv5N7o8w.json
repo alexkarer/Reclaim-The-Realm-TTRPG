@@ -1,14 +1,16 @@
 {
-  "name": "Initiate",
+  "folder": "ga2M66hYaPVgnuJ6",
+  "name": "Enlightened Speaker",
   "type": "npc",
-  "_id": "dcqvsXCNRnrBXxMR",
-  "img": "npcs/Cultists/Cultist_Acolyte_Dagger_01.png",
+  "_id": "DcnZmIdCZv5N7o8w",
+  "img": "npcs/Cultists/Cultist_Mage_Staff_Magic_01.png",
   "system": {
     "hp": {
-      "value": 15,
-      "max": 15
+      "value": 18,
+      "max": 18
     },
     "tempHp": 0,
+    "exhaustion": 0,
     "ap": 3,
     "mp": 6,
     "biography": "",
@@ -16,9 +18,9 @@
     "data": {
       "hpPerLevel": 6,
       "additionalHp": 0,
-      "stabilityBonus": 1,
+      "stabilityBonus": 0,
       "dodgeBonus": 0,
-      "toughnessBonus": 1,
+      "toughnessBonus": 0,
       "willpowerBonus": 0,
       "movementBonus": 0,
       "manoeuvrePenalty": 0,
@@ -28,37 +30,37 @@
       "level": 1,
       "martialLevel": 0,
       "spellLevel": 0,
-      "martialProficency": 1,
-      "spellProficency": 0
+      "martialProficency": 0,
+      "spellProficency": 1
     },
     "attributes": {
       "str": {
-        "value": 2,
-        "classAttribute": false,
-        "attributeMaximum": 3
-      },
-      "agi": {
-        "value": 2,
-        "classAttribute": false,
-        "attributeMaximum": 3
-      },
-      "con": {
-        "value": 1,
-        "classAttribute": false,
-        "attributeMaximum": 3
-      },
-      "spi": {
-        "value": 1,
-        "classAttribute": false,
-        "attributeMaximum": 3
-      },
-      "int": {
         "value": 0,
         "classAttribute": false,
         "attributeMaximum": 3
       },
+      "agi": {
+        "value": 3,
+        "classAttribute": false,
+        "attributeMaximum": 3
+      },
+      "con": {
+        "value": 0,
+        "classAttribute": false,
+        "attributeMaximum": 3
+      },
+      "spi": {
+        "value": 5,
+        "classAttribute": false,
+        "attributeMaximum": 3
+      },
+      "int": {
+        "value": 2,
+        "classAttribute": false,
+        "attributeMaximum": 3
+      },
       "per": {
-        "value": 1,
+        "value": 3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
@@ -72,7 +74,7 @@
       "stabilityProficency": 0,
       "dodgeProficency": 0,
       "toughnessProficency": 0,
-      "willpowerProficency": 0,
+      "willpowerProficency": 1,
       "shieldBlockBase": 0,
       "shieldBlockThreshold": 0,
       "stability": 0,
@@ -216,16 +218,19 @@
         "attrBonus": "str"
       }
     },
-    "npcLevel": 0.25
+    "npcLevel": 1,
+    "resistancesString": "cosmic: 5",
+    "immunitiesString": "",
+    "statusEffectImmunityString": "resist: frightened, charmed;"
   },
   "prototypeToken": {
-    "name": "Initiate",
+    "name": "Enlightened Speaker",
     "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Acolyte_Dagger_01.png",
+      "src": "npcs/Cultists/Cultist_Mage_Staff_Magic_01.png",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -316,40 +321,70 @@
     {
       "name": "Dark Devotion",
       "type": "npcTrait",
-      "_id": "rgGAhj6a7iR72IVx",
+      "_id": "GBbp4QqnCVeL2Lg4",
       "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
       "system": {
-        "description": "<p>Status effect resistance against being charmed or firghtened</p>",
-        "summary": "Status effect resistance against being charmed or firghtened"
+        "description": "<p>Status Effect Resistance against frightened, charmed</p>",
+        "summary": "Status Effect Resistance against frightened, charmed"
       },
       "effects": [],
       "folder": null,
       "sort": 0,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
-        "compendiumSource": "Item.3JcLuRm8rfkz1mWe",
+        "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1750348436684,
-        "modifiedTime": 1750348436684,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1750976353346,
+        "modifiedTime": 1750976390256,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!dcqvsXCNRnrBXxMR.rgGAhj6a7iR72IVx"
+      "_key": "!actors.items!DcnZmIdCZv5N7o8w.GBbp4QqnCVeL2Lg4"
     },
     {
-      "name": "Basic Attack",
-      "type": "npcAbility",
-      "_id": "O2a5oBCqVTGvJWTX",
-      "img": "icons/skills/melee/strike-dagger-white-orange.webp",
+      "name": "Cosmic Touched",
+      "type": "npcTrait",
+      "_id": "GhFcsflgRyrqUWFn",
+      "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
       "system": {
-        "description": "<p><span style=\"font-family: Icon, Roboto\">Attack ⚔️ 13 1.5m, 1 target. On hit: <strong>2d6</strong> damage.</span></p>",
+        "description": "<p>The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation.</p>",
+        "summary": "The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation."
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1750976354260,
+        "modifiedTime": 1750976410129,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!DcnZmIdCZv5N7o8w.GhFcsflgRyrqUWFn"
+    },
+    {
+      "name": "Dark Bolt",
+      "type": "npcAbility",
+      "_id": "2kY15hFyMutlhcR3",
+      "img": "icons/magic/unholy/beam-ringed-impact-purple.webp",
+      "system": {
+        "description": "<p>Attack 🏹✨ 14 9m range, 1 target. On hit: 2d6 unholy damage.</p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -373,18 +408,18 @@
           "otherResourceCost": 0,
           "rawStringCost": "2 AP"
         },
-        "summary": "Attack ⚔️ 13 1.5m, 1 target. On hit: 2d6 damage.",
+        "summary": "Attack 🏹✨ 14 9m range, 1 target. On hit: 2d6 unholy damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6[physical]"
+        "formula": "2d6[unholy]"
       },
       "effects": [],
       "folder": null,
       "sort": 0,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
@@ -394,19 +429,132 @@
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1750348452553,
-        "modifiedTime": 1750348522462,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1750976418899,
+        "modifiedTime": 1750976456406,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!dcqvsXCNRnrBXxMR.O2a5oBCqVTGvJWTX"
+      "_key": "!actors.items!DcnZmIdCZv5N7o8w.2kY15hFyMutlhcR3"
+    },
+    {
+      "name": "Gift of the Dark Gods",
+      "type": "npcAbility",
+      "_id": "gQIeREpDQhW6TUnr",
+      "img": "icons/magic/unholy/hand-light-green.webp",
+      "system": {
+        "description": "<p>Heal, 1.5m reach, 1 target, 2d6</p>",
+        "requirements": {
+          "minimumLevel": 0,
+          "minimumMartialLevel": 0,
+          "minimumSpellLevel": 0,
+          "minimumStr": 0,
+          "minimumAgi": 0,
+          "minimumCon": 0,
+          "minimumInt": 0,
+          "minimumSpi": 0,
+          "minimumPer": 0,
+          "minimumCha": 0,
+          "skillRankRequirements": [],
+          "requiredPerks": []
+        },
+        "usageCost": {
+          "apCost": 0,
+          "mpCost": 0,
+          "isFree": false,
+          "arcanaCost": 0,
+          "staminaCost": 0,
+          "otherResourceCost": 0,
+          "rawStringCost": "2 AP"
+        },
+        "summary": "Heal, 1.5m reach, 1 target, 2d6",
+        "range": "",
+        "targets": "",
+        "duration": "",
+        "formula": "2d6[heal]"
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1750976420388,
+        "modifiedTime": 1750976488090,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!DcnZmIdCZv5N7o8w.gQIeREpDQhW6TUnr"
+    },
+    {
+      "name": "Wrath of the Dark Gods",
+      "type": "npcAbility",
+      "_id": "qbqMqhdUvKOgPWHS",
+      "img": "icons/magic/unholy/hands-cloud-light-pink.webp",
+      "system": {
+        "description": "<p>[DT] 14 [WILLPOWER] [SAVE][SPHERE] (4.5m), 15m range. On success: 4d6 unholy damage. Additionally afflict [WEAKENED I] lasts 2 [ROUND] [SAVE LOWERS]. On Failure: halve damage</p>",
+        "requirements": {
+          "minimumLevel": 0,
+          "minimumMartialLevel": 0,
+          "minimumSpellLevel": 0,
+          "minimumStr": 0,
+          "minimumAgi": 0,
+          "minimumCon": 0,
+          "minimumInt": 0,
+          "minimumSpi": 0,
+          "minimumPer": 0,
+          "minimumCha": 0,
+          "skillRankRequirements": [],
+          "requiredPerks": []
+        },
+        "usageCost": {
+          "apCost": 0,
+          "mpCost": 0,
+          "isFree": false,
+          "arcanaCost": 0,
+          "staminaCost": 0,
+          "otherResourceCost": 0,
+          "rawStringCost": "3 AP, CD(3)"
+        },
+        "summary": "[DT] 14 [WILLPOWER] [SAVE][SPHERE] (4.5m), 15m range. On success: 4d6 unholy damage. Additionally afflict [WEAKENED I] lasts 2 [ROUND] [SAVE LOWERS]. On Failure: halve damage",
+        "range": "",
+        "targets": "",
+        "duration": "",
+        "formula": ""
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1750976420762,
+        "modifiedTime": 1750976530060,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!DcnZmIdCZv5N7o8w.qbqMqhdUvKOgPWHS"
     }
   ],
   "effects": [],
-  "folder": "ga2M66hYaPVgnuJ6",
-  "sort": 100000,
+  "sort": 0,
   "ownership": {
     "default": 0,
-    "dMcHPOGHbwLGpLCS": 3
+    "OLKSfPDHiy1Xf9SG": 3
   },
   "flags": {},
   "_stats": {
@@ -416,9 +564,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750348223835,
-    "modifiedTime": 1750977869997,
+    "createdTime": 1750976278063,
+    "modifiedTime": 1750977902932,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
-  "_key": "!actors!dcqvsXCNRnrBXxMR"
+  "_key": "!actors!DcnZmIdCZv5N7o8w"
 }
