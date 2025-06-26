@@ -85,12 +85,77 @@ RTR.statusEffects = {
   },
   stunned1: {
     name: "RTR.StatusEffects.Stunned1.label",
-    img: "/icons/svg/stoned.svg",
+    img: "/icons/svg/daze.svg",
     description: "RTR.StatusEffects.Stunned1.description"
   },
   frightened1: {
     name: "RTR.StatusEffects.Frightened1.label",
     img: "/icons/svg/terror.svg",
     description: "RTR.StatusEffects.Frightened1.description"
+  },
+  burning1: {
+    name: "RTR.StatusEffects.Burning1.label",
+    img: "/icons/svg/fire.svg",
+    description: "RTR.StatusEffects.Burning1.description"
+  },
+  bleeding1: {
+    name: "RTR.StatusEffects.Bleeding1.label",
+    img: "/icons/svg/blood.svg",
+    description: "RTR.StatusEffects.Bleeding1.description"
+  },
+  poison1: {
+    name: "RTR.StatusEffects.Poison1.label",
+    img: "/icons/svg/poison.svg",
+    description: "RTR.StatusEffects.Poison1.description"
+  },
+  charmed1: {
+    name: "RTR.StatusEffects.Frightened1.label",
+    img: "/icons/svg/cancel.svg", // TODO fix
+    description: "RTR.StatusEffects.Frightened1.description"
+  },
+  crippled1: {
+    name: "RTR.StatusEffects.Crippled1.label",
+    img: "/icons/svg/cancel.svg", // TODO fix
+    description: "RTR.StatusEffects.Crippled1.description"
+  },
+  cursed1: {
+    name: "RTR.StatusEffects.Cursed1.label",
+    img: "/icons/svg/cancel.svg", // TODO fix
+    description: "RTR.StatusEffects.Cursed1.description"
+  },
+  weakened1: {
+    name: "RTR.StatusEffects.Weakened1.label",
+    img: "/icons/svg/cancel.svg", // TODO fix
+    description: "RTR.StatusEffects.Weakened1.description"
+  },
+  vulnurable1: {
+    name: "RTR.StatusEffects.Vulnurable1.label",
+    img: "/icons/svg/cancel.svg", // TODO fix
+    description: "RTR.StatusEffects.Vulnurable1.description"
+  },
+  restrained1: {
+    name: "RTR.StatusEffects.Restrained1.label",
+    img: "/icons/svg/cancel.svg", // TODO fix
+    description: "RTR.StatusEffects.Restrained1.description"
+  },
+  silenced: {
+    name: "RTR.StatusEffects.Silenced.label",
+    img: "/icons/svg/silenced.svg",
+    description: "RTR.StatusEffects.Silenced.description"
+  },
+  deafened1: {
+    name: "RTR.StatusEffects.Deafened1.label",
+    img: "/icons/svg/deaf.svg",
+    description: "RTR.StatusEffects.Deafened1.description"
+  },
+  intoxicated: {
+    name: "RTR.StatusEffects.Intoxicated.label",
+    img: "/icons/svg/tankard.svg",
+    description: "RTR.StatusEffects.Intoxicated.description"
+  },
+  distracted: {
+    name: "RTR.StatusEffects.Distracted.label",
+    img: "/icons/svg/cancel.svg", // TODO fix
+    description: "RTR.StatusEffects.Distracted.description"
   },
 }

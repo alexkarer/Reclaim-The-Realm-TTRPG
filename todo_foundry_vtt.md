@@ -1,6 +1,5 @@
 ### Immidiate TODOS
 
-- Define and user proper data structure for abilities before creating them to avoid lots of headaches later on.
 
 # General TODOs/Nice to have
 
@@ -45,13 +44,13 @@
 
 - Show encumbermance in equipment and calculate
 - Automatically update character based on items
-  - Weapon - Create ability
-  - Armour - Update Values
 - Create Functionality to "equip" items.
+- Can embedd abilities that show up in the character sheet
 
 ### Abilities
 
-- Add better Data formatting for Cost and Tags
+- Add better Data structure for Cost and Tags
+- add possiblity to properly modify cost, tags, requirements
 - Automatic checking of requirements
 - Allow for adding actions
     - Custom Dice Roll
@@ -74,6 +73,7 @@
 
 ## Interactions
 
+- Damage Roll functionality
 - Implemt Status Effects
 
 ## Special
