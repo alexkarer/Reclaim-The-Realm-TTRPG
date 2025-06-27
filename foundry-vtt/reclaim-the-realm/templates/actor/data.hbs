@@ -240,6 +240,14 @@
           <label for="system.perks.additionalPerkPoints">Additional Perks:</label>
           <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.perks.additionalPerkPoints' name='system.perks.additionalPerkPoints' value='{{system.perks.additionalPerkPoints}}'/>
         </div>
+        <div >
+          <label for="system.martialDamage.attr">MartialDmg Attr.:</label>
+          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='text' id='system.martialDamage.attr' name='system.martialDamage.attr' value='{{system.martialDamage.attr}}'/>
+        </div>
+        <div >
+          <label for="system.martialDamage.penalty">MartialDmg Penalty:</label>
+          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='text' id='system.martialDamage.penalty' name='system.martialDamage.penalty' value='{{system.martialDamage.penalty}}'/>
+        </div>
         {{/if}}
       </div>
     </aside>

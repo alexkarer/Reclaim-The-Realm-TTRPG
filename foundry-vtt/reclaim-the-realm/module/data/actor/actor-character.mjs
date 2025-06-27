@@ -66,6 +66,8 @@ export default class RtRCharacter extends RtRActorBase {
       light: new fields.StringField(),
       medium: new fields.StringField(),
       heavy: new fields.StringField(),
+      attr: new fields.StringField({initial: 'str'}),
+      penalty: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
     });
 
     schema.classResource = new fields.StringField();
@@ -143,13 +145,32 @@ export default class RtRCharacter extends RtRActorBase {
 
   _caclulateKnownAbilitiesAndPerks() {
     this.knownAbilities.knownClassTechniques = 2 + Math.floor(this.levels.level / 2) + Math.floor(this.attributes.int.value / 2);
-    this.knownAbilities.knownMartialManeuvers = 2 + Math.floor(this.levels.martialLevel / 2) + Math.floor(this.attributes.int.value / 2);
-    this.knownAbilities.knownSpells = 2 + Math.floor(this.levels.spellLevel / 2) + Math.floor(this.attributes.int.value / 2);
+
+    if (this.levels.martialProficency === 0) {
+      this.knownAbilities.knownMartialManeuvers = 0;
+    } else {
+      this.knownAbilities.knownMartialManeuvers = 2 + Math.floor(this.levels.martialLevel / 2) + Math.floor(this.attributes.int.value / 2);
+    }
+
+    if (this.levels.spellProficency === 0) {
+      this.knownAbilities.knownSpells = 0;
+    } else {
+      this.knownAbilities.knownSpells = 2 + Math.floor(this.levels.spellLevel / 2) + Math.floor(this.attributes.int.value / 2);
+    }
+
     this.perks.totalPerkPoints = this.levels.level * 2 + this.perks.additionalPerkPoints;
   }
 
   _calculateMartialDamage() {
-    let md = getMartialDamage(this.attributes.str.value);
+    let attribute = Object.entries(this.attributes).find(([k, v]) => k === this.martialDamage.attr);
+    let attrValue = 0;
+    if (!attribute) {
+      console.error("Unable to find attribute", this.martialDamage.attr);
+    } else {
+      attrValue = attribute[1].value - this.martialDamage.penalty;
+    }
+
+    let md = getMartialDamage(attrValue);
     if (!md) {
       console.error("Unable to calculate Martial Damage for STR: ", this.attributes.str.value);
       return;
