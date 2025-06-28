@@ -1,13 +1,13 @@
 {
-  "folder": "ga2M66hYaPVgnuJ6",
-  "name": "Possesed Enlightened",
+  "folder": "kZURf2pgbFexUhRf",
+  "name": "Riftwalker",
   "type": "npc",
-  "_id": "RUDvv34Ndc0TKxFU",
-  "img": "npcs/Cultists/Cultist_Possessed_01.png",
+  "_id": "ZCfBw0DFqwnGPdQF",
+  "img": "npcs/Zombie2.png",
   "system": {
     "hp": {
-      "value": 42,
-      "max": 42
+      "value": 21,
+      "max": 21
     },
     "tempHp": 0,
     "exhaustion": 0,
@@ -18,9 +18,9 @@
     "data": {
       "hpPerLevel": 6,
       "additionalHp": 0,
-      "stabilityBonus": 0,
+      "stabilityBonus": 1,
       "dodgeBonus": 0,
-      "toughnessBonus": 0,
+      "toughnessBonus": 1,
       "willpowerBonus": 0,
       "movementBonus": 0,
       "manoeuvrePenalty": 0,
@@ -30,51 +30,51 @@
       "level": 1,
       "martialLevel": 0,
       "spellLevel": 0,
-      "martialProficency": 1,
+      "martialProficency": 0,
       "spellProficency": 0
     },
     "attributes": {
       "str": {
-        "value": 5,
+        "value": 3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "agi": {
-        "value": 4,
+        "value": 1,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "con": {
-        "value": 4,
+        "value": 2,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "spi": {
-        "value": 3,
+        "value": 1,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "int": {
-        "value": 1,
+        "value": -3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "per": {
-        "value": 3,
+        "value": 1,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "cha": {
-        "value": 1,
+        "value": -2,
         "classAttribute": false,
         "attributeMaximum": 3
       }
     },
     "defenses": {
-      "stabilityProficency": 1,
-      "dodgeProficency": 0.34,
-      "toughnessProficency": 1,
-      "willpowerProficency": 0.34,
+      "stabilityProficency": 0,
+      "dodgeProficency": 0,
+      "toughnessProficency": 0,
+      "willpowerProficency": 0,
       "shieldBlockBase": 0,
       "shieldBlockThreshold": 0,
       "stability": 0,
@@ -218,19 +218,19 @@
         "attrBonus": "str"
       }
     },
-    "npcLevel": 2,
-    "resistancesString": "cosmic: 12; physical: 2",
+    "npcLevel": 0.25,
+    "resistancesString": "cosmic: 5",
     "immunitiesString": "",
     "statusEffectImmunityString": ""
   },
   "prototypeToken": {
-    "name": "Possessed Enlightened",
+    "name": "Riftwalker",
     "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Possessed_01.png",
+      "src": "npcs/Zombie2.png",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -321,10 +321,10 @@
     {
       "name": "Basic Attack",
       "type": "npcAbility",
-      "_id": "f68t2KZIcyuQlhXh",
-      "img": "icons/creatures/claws/claw-talons-yellow-red.webp",
+      "_id": "kvSMatTdJlZM5Dvf",
+      "img": "icons/creatures/claws/claw-talons-glowing-orange.webp",
       "system": {
-        "description": "<p>Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 physical damage.</p>",
+        "description": "<p>Attack ⚔️ 12 1.5m, 1 target. On hit: 2d6+1 physical damage.</p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -348,155 +348,11 @@
           "otherResourceCost": 0,
           "rawStringCost": "2 AP"
         },
-        "summary": "Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 physical damage.",
+        "summary": "Attack ⚔️ 12 1.5m, 1 target. On hit: 2d6+1 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "3d6[physical]"
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "OLKSfPDHiy1Xf9SG": 3
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.345",
-        "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
-        "createdTime": 1750977384925,
-        "modifiedTime": 1750977493526,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
-      },
-      "_key": "!actors.items!RUDvv34Ndc0TKxFU.f68t2KZIcyuQlhXh"
-    },
-    {
-      "name": "Life Steal",
-      "type": "npcAbility",
-      "_id": "6ymf3ZiLQTv82Dx3",
-      "img": "icons/creatures/claws/claw-talons-glowing-purple.webp",
-      "system": {
-        "description": "<p>Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 unholy damage. , additionally the creature heals [HP] equal to half damage done</p>",
-        "requirements": {
-          "minimumLevel": 0,
-          "minimumMartialLevel": 0,
-          "minimumSpellLevel": 0,
-          "minimumStr": 0,
-          "minimumAgi": 0,
-          "minimumCon": 0,
-          "minimumInt": 0,
-          "minimumSpi": 0,
-          "minimumPer": 0,
-          "minimumCha": 0,
-          "skillRankRequirements": [],
-          "requiredPerks": []
-        },
-        "usageCost": {
-          "apCost": 0,
-          "mpCost": 0,
-          "isFree": false,
-          "arcanaCost": 0,
-          "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "3 AP"
-        },
-        "summary": "Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 unholy damage. , additionally the creature heals [HP] equal to half damage done",
-        "range": "",
-        "targets": "",
-        "duration": "",
-        "formula": "3d6[unholy]"
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "OLKSfPDHiy1Xf9SG": 3
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.345",
-        "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
-        "createdTime": 1750977386020,
-        "modifiedTime": 1750977488772,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
-      },
-      "_key": "!actors.items!RUDvv34Ndc0TKxFU.6ymf3ZiLQTv82Dx3"
-    },
-    {
-      "name": "Teleport",
-      "type": "npcAbility",
-      "_id": "azNwSpAqmtdRCJYq",
-      "img": "icons/magic/symbols/runes-star-magenta.webp",
-      "system": {
-        "description": "<p>Teleport to an unoccupied space up to 12m away</p>",
-        "requirements": {
-          "minimumLevel": 0,
-          "minimumMartialLevel": 0,
-          "minimumSpellLevel": 0,
-          "minimumStr": 0,
-          "minimumAgi": 0,
-          "minimumCon": 0,
-          "minimumInt": 0,
-          "minimumSpi": 0,
-          "minimumPer": 0,
-          "minimumCha": 0,
-          "skillRankRequirements": [],
-          "requiredPerks": []
-        },
-        "usageCost": {
-          "apCost": 0,
-          "mpCost": 0,
-          "isFree": false,
-          "arcanaCost": 0,
-          "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "1 AP CD(3)"
-        },
-        "summary": "Teleport to an unoccupied space up to 12m away",
-        "range": "",
-        "targets": "",
-        "duration": "",
-        "formula": ""
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "OLKSfPDHiy1Xf9SG": 3
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.345",
-        "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
-        "createdTime": 1750977386364,
-        "modifiedTime": 1750977578012,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
-      },
-      "_key": "!actors.items!RUDvv34Ndc0TKxFU.azNwSpAqmtdRCJYq"
-    },
-    {
-      "name": "Deadly Demise I",
-      "type": "npcTrait",
-      "_id": "xPZNfGYMBOOwboxD",
-      "img": "icons/svg/item-bag.svg",
-      "system": {
-        "description": "<p>When the creature dies all creautre within 3m have to make [WILLPOWER ][SAVE] or recieve 2d6 unholy damage.</p>",
-        "summary": "When the creature dies all creautre within 3m have to make [WILLPOWER ][SAVE] or recieve 2d6 unholy damage."
+        "formula": "2d6+1[physical]"
       },
       "effects": [],
       "folder": null,
@@ -513,18 +369,48 @@
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1751052343573,
-        "modifiedTime": 1751052387893,
+        "createdTime": 1751042277378,
+        "modifiedTime": 1751042316484,
         "lastModifiedBy": "dMcHPOGHbwLGpLCS"
       },
-      "_key": "!actors.items!RUDvv34Ndc0TKxFU.xPZNfGYMBOOwboxD"
+      "_key": "!actors.items!ZCfBw0DFqwnGPdQF.kvSMatTdJlZM5Dvf"
+    },
+    {
+      "name": "NPC Trait",
+      "type": "npcTrait",
+      "_id": "SlttESs9o5CW88vH",
+      "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
+      "system": {
+        "description": "<p>The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation.</p><p>This creature couldn't handle it and also recieves 1 Cosmic corruption, reduce Int.</p>",
+        "summary": "The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation.  This creature couldn't handle it and also recieves 1 Cosmic corruption, reduce Int."
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "dMcHPOGHbwLGpLCS": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751042319532,
+        "modifiedTime": 1751042374509,
+        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+      },
+      "_key": "!actors.items!ZCfBw0DFqwnGPdQF.SlttESs9o5CW88vH"
     }
   ],
   "effects": [],
   "sort": 0,
   "ownership": {
     "default": 0,
-    "OLKSfPDHiy1Xf9SG": 3
+    "dMcHPOGHbwLGpLCS": 3
   },
   "flags": {},
   "_stats": {
@@ -534,9 +420,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750976619995,
-    "modifiedTime": 1750977804750,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "createdTime": 1751041902703,
+    "modifiedTime": 1751042470939,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
-  "_key": "!actors!RUDvv34Ndc0TKxFU"
+  "_key": "!actors!ZCfBw0DFqwnGPdQF"
 }

@@ -1,5 +1,7 @@
 ### Immidiate TODOS
 
+fix Initiative (currently adds attribute)
+fix stun description
 
 # General TODOs/Nice to have
 
@@ -75,6 +77,8 @@
 
 - Damage Roll functionality
 - Implemt Status Effects
+
+- When making SKill Test, a Request Help Button
 
 ## Special
 

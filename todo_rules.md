@@ -10,6 +10,10 @@ ____________________________________________________________
   - Find good inworld name for adventurer (rift explorers, nah sounds shit.).
   - Think of a way that makes the Riftlands work
   - It should be special and if you want to get to a specific Location it requires something special.
+  - remove stamina cost from travel or rework it.
+
+rewrok injury table to have 1d4 instead of 2d3
+Will eventually add perk to heal
 
 **Minor Things**
 - improve layout of character creation 

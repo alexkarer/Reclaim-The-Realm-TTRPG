@@ -1,0 +1,21 @@
+{
+  "type": "Actor",
+  "folder": "n5enoYkhoYCdnEwp",
+  "name": "Aether",
+  "color": "#7300d1",
+  "sorting": "a",
+  "_id": "kZURf2pgbFexUhRf",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "lastModifiedBy": null
+  },
+  "_key": "!folders!kZURf2pgbFexUhRf"
+}

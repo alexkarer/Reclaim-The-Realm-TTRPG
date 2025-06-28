@@ -59,9 +59,9 @@
         { "pointsCost": 4, "name": "REGENERATION II", "description": "At the start of the Creatures [TURN] it regenerates 10 [HP]." },
         { "pointsCost": 6, "name": "REGENERATION III", "description": "At the start of the Creatures [TURN] it regenerates 20 [HP]." },
         { "pointsCost": 2, "name": "Spell Eater", "description": "Each time a [SPELL ABILITY] is used within 9m of the creature, the creature regains 1d6 + additional d6 per [SPELL ABILITY] level and the next damaging Ability deals d6 for [SPELL ABILITY] level." },
-        { "pointsCost": 1, "name": "Deadly Demise I", "description": "When the creature dies all creautre within 1.5m have to make [SAVE] or recieve 2d6 damage." },
-        { "pointsCost": 3, "name": "Deadly Demise II", "description": "When the creature dies all creautre within 3m have to make [SAVE] or recieve 4d6 damage." },
-        { "pointsCost": 5, "name": "Deadly Demise III", "description": "When the creature dies all creautre within 4.5m have to make [SAVE] or recieve 6d6 damage." }
+        { "pointsCost": 1, "name": "Deadly Demise I", "description": "When the creature dies all creautre within 3m have to make [SAVE] or recieve 2d6 damage." },
+        { "pointsCost": 3, "name": "Deadly Demise II", "description": "When the creature dies all creautre within 4.5m have to make [SAVE] or recieve 4d6 damage." },
+        { "pointsCost": 5, "name": "Deadly Demise III", "description": "When the creature dies all creautre within 6m have to make [SAVE] or recieve 6d6 damage." }
     ],
     "creatureTypeTraits": [
         { "pointsCost": 1, "name": "Mimic", "description": "If the creature remains motionless it is undistinguishable from the object it is mimicing. But can be detected with a [DT] 25 + [LEVEL] [PER] Investigation [SKILL TEST]. Each creature that touches the Mimic gets stuck on it and recieves [RESTRAINED I] [DT] 10 + [LEVEl] + [CON]." },

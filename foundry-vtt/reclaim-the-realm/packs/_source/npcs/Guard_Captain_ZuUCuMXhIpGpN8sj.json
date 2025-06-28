@@ -1,13 +1,13 @@
 {
-  "folder": "ga2M66hYaPVgnuJ6",
-  "name": "Possesed Enlightened",
+  "folder": "WEDLRXZesSbOrmw6",
+  "name": "Guard Captain",
   "type": "npc",
-  "_id": "RUDvv34Ndc0TKxFU",
-  "img": "npcs/Cultists/Cultist_Possessed_01.png",
+  "_id": "ZuUCuMXhIpGpN8sj",
+  "img": "npcs/Guards/Guard_Banner_01.png",
   "system": {
     "hp": {
-      "value": 42,
-      "max": 42
+      "value": 54,
+      "max": 54
     },
     "tempHp": 0,
     "exhaustion": 0,
@@ -23,7 +23,7 @@
       "toughnessBonus": 0,
       "willpowerBonus": 0,
       "movementBonus": 0,
-      "manoeuvrePenalty": 0,
+      "manoeuvrePenalty": 3,
       "movementPenalty": 0
     },
     "levels": {
@@ -50,7 +50,7 @@
         "attributeMaximum": 3
       },
       "spi": {
-        "value": 3,
+        "value": 0,
         "classAttribute": false,
         "attributeMaximum": 3
       },
@@ -65,7 +65,7 @@
         "attributeMaximum": 3
       },
       "cha": {
-        "value": 1,
+        "value": 2,
         "classAttribute": false,
         "attributeMaximum": 3
       }
@@ -218,19 +218,19 @@
         "attrBonus": "str"
       }
     },
-    "npcLevel": 2,
-    "resistancesString": "cosmic: 12; physical: 2",
+    "npcLevel": 3,
+    "resistancesString": "physical: 4;",
     "immunitiesString": "",
     "statusEffectImmunityString": ""
   },
   "prototypeToken": {
-    "name": "Possessed Enlightened",
+    "name": "Guard Captain",
     "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Possessed_01.png",
+      "src": "npcs/Guards/Guard_Banner_01.png",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -280,7 +280,7 @@
     },
     "sight": {
       "enabled": true,
-      "range": 1.5,
+      "range": 0,
       "angle": 360,
       "visionMode": "basic",
       "color": null,
@@ -299,7 +299,7 @@
         "ring": null,
         "background": null
       },
-      "effects": 0,
+      "effects": 1,
       "subject": {
         "scale": 1,
         "texture": null
@@ -314,17 +314,17 @@
     "movementAction": null,
     "flags": {},
     "randomImg": false,
-    "appendNumber": true,
+    "appendNumber": false,
     "prependAdjective": false
   },
   "items": [
     {
-      "name": "Basic Attack",
+      "name": "Greatsword",
       "type": "npcAbility",
-      "_id": "f68t2KZIcyuQlhXh",
-      "img": "icons/creatures/claws/claw-talons-yellow-red.webp",
+      "_id": "TEh44i6xyKq1Mcrl",
+      "img": "icons/svg/item-bag.svg",
       "system": {
-        "description": "<p>Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 physical damage.</p>",
+        "description": "<p>Attack ⚔️ 17 1.5m, 1 target. On hit: 4d6 [physical] damage.</p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -348,18 +348,18 @@
           "otherResourceCost": 0,
           "rawStringCost": "2 AP"
         },
-        "summary": "Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 physical damage.",
+        "summary": "Attack ⚔️ 17 1.5m, 1 target. On hit: 4d6 [physical] damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "3d6[physical]"
+        "formula": "4d6[physical]"
       },
       "effects": [],
       "folder": null,
       "sort": 0,
       "ownership": {
         "default": 0,
-        "OLKSfPDHiy1Xf9SG": 3
+        "dMcHPOGHbwLGpLCS": 3
       },
       "flags": {},
       "_stats": {
@@ -369,19 +369,19 @@
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1750977384925,
-        "modifiedTime": 1750977493526,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "createdTime": 1751052537234,
+        "modifiedTime": 1751052783188,
+        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
       },
-      "_key": "!actors.items!RUDvv34Ndc0TKxFU.f68t2KZIcyuQlhXh"
+      "_key": "!actors.items!ZuUCuMXhIpGpN8sj.TEh44i6xyKq1Mcrl"
     },
     {
-      "name": "Life Steal",
+      "name": "Cleave",
       "type": "npcAbility",
-      "_id": "6ymf3ZiLQTv82Dx3",
-      "img": "icons/creatures/claws/claw-talons-glowing-purple.webp",
+      "_id": "pAxJdzQLSvpegT0h",
+      "img": "icons/svg/item-bag.svg",
       "system": {
-        "description": "<p>Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 unholy damage. , additionally the creature heals [HP] equal to half damage done</p>",
+        "description": "<p>Attack ⚔️ 17 1.5m, Cleave. On hit: 4d6[physical] damage.</p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -405,18 +405,18 @@
           "otherResourceCost": 0,
           "rawStringCost": "3 AP"
         },
-        "summary": "Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 unholy damage. , additionally the creature heals [HP] equal to half damage done",
+        "summary": "Attack ⚔️ 17 1.5m, Cleave. On hit: 4d6[physical] damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "3d6[unholy]"
+        "formula": "4d6[physical]"
       },
       "effects": [],
       "folder": null,
       "sort": 0,
       "ownership": {
         "default": 0,
-        "OLKSfPDHiy1Xf9SG": 3
+        "dMcHPOGHbwLGpLCS": 3
       },
       "flags": {},
       "_stats": {
@@ -426,19 +426,19 @@
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1750977386020,
-        "modifiedTime": 1750977488772,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "createdTime": 1751052587167,
+        "modifiedTime": 1751052735441,
+        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
       },
-      "_key": "!actors.items!RUDvv34Ndc0TKxFU.6ymf3ZiLQTv82Dx3"
+      "_key": "!actors.items!ZuUCuMXhIpGpN8sj.pAxJdzQLSvpegT0h"
     },
     {
-      "name": "Teleport",
+      "name": "Javelin",
       "type": "npcAbility",
-      "_id": "azNwSpAqmtdRCJYq",
-      "img": "icons/magic/symbols/runes-star-magenta.webp",
+      "_id": "7cnZ0fg8pDsfCHJt",
+      "img": "icons/svg/item-bag.svg",
       "system": {
-        "description": "<p>Teleport to an unoccupied space up to 12m away</p>",
+        "description": "<p>Attack 🏹 16 9m range, 1 target. On hit: 3d6 [physical] damage.</p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -460,43 +460,13 @@
           "arcanaCost": 0,
           "staminaCost": 0,
           "otherResourceCost": 0,
-          "rawStringCost": "1 AP CD(3)"
+          "rawStringCost": "2 AP"
         },
-        "summary": "Teleport to an unoccupied space up to 12m away",
+        "summary": "Attack 🏹 16 9m range, 1 target. On hit: 3d6 [physical] damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": ""
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "OLKSfPDHiy1Xf9SG": 3
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.345",
-        "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
-        "createdTime": 1750977386364,
-        "modifiedTime": 1750977578012,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
-      },
-      "_key": "!actors.items!RUDvv34Ndc0TKxFU.azNwSpAqmtdRCJYq"
-    },
-    {
-      "name": "Deadly Demise I",
-      "type": "npcTrait",
-      "_id": "xPZNfGYMBOOwboxD",
-      "img": "icons/svg/item-bag.svg",
-      "system": {
-        "description": "<p>When the creature dies all creautre within 3m have to make [WILLPOWER ][SAVE] or recieve 2d6 unholy damage.</p>",
-        "summary": "When the creature dies all creautre within 3m have to make [WILLPOWER ][SAVE] or recieve 2d6 unholy damage."
+        "formula": "3d6 [physical]"
       },
       "effects": [],
       "folder": null,
@@ -513,18 +483,75 @@
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1751052343573,
-        "modifiedTime": 1751052387893,
+        "createdTime": 1751052737528,
+        "modifiedTime": 1751052767416,
         "lastModifiedBy": "dMcHPOGHbwLGpLCS"
       },
-      "_key": "!actors.items!RUDvv34Ndc0TKxFU.xPZNfGYMBOOwboxD"
+      "_key": "!actors.items!ZuUCuMXhIpGpN8sj.7cnZ0fg8pDsfCHJt"
+    },
+    {
+      "name": "Order",
+      "type": "npcAbility",
+      "_id": "ZCa0bhQZG0MbX8Ro",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p>The Guard Captain can order one LEVEL 1 or lower creature. That creature takes a [TURN] and has 3 MP and 2 AP availible.</p>",
+        "requirements": {
+          "minimumLevel": 0,
+          "minimumMartialLevel": 0,
+          "minimumSpellLevel": 0,
+          "minimumStr": 0,
+          "minimumAgi": 0,
+          "minimumCon": 0,
+          "minimumInt": 0,
+          "minimumSpi": 0,
+          "minimumPer": 0,
+          "minimumCha": 0,
+          "skillRankRequirements": [],
+          "requiredPerks": []
+        },
+        "usageCost": {
+          "apCost": 0,
+          "mpCost": 0,
+          "isFree": false,
+          "arcanaCost": 0,
+          "staminaCost": 0,
+          "otherResourceCost": 0,
+          "rawStringCost": "1 AP"
+        },
+        "summary": "The Guard Captain can order one LEVEL 1 or lower creature. That creature takes a [TURN] and has 3 MP and 2 AP availible.",
+        "range": "",
+        "targets": "",
+        "duration": "",
+        "formula": ""
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "dMcHPOGHbwLGpLCS": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751052789457,
+        "modifiedTime": 1751052869310,
+        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+      },
+      "_key": "!actors.items!ZuUCuMXhIpGpN8sj.ZCa0bhQZG0MbX8Ro"
     }
   ],
   "effects": [],
   "sort": 0,
   "ownership": {
     "default": 0,
-    "OLKSfPDHiy1Xf9SG": 3
+    "dMcHPOGHbwLGpLCS": 3
   },
   "flags": {},
   "_stats": {
@@ -534,9 +561,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750976619995,
-    "modifiedTime": 1750977804750,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "createdTime": 1751052275300,
+    "modifiedTime": 1751052480601,
+    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
   },
-  "_key": "!actors!RUDvv34Ndc0TKxFU"
+  "_key": "!actors!ZuUCuMXhIpGpN8sj"
 }
