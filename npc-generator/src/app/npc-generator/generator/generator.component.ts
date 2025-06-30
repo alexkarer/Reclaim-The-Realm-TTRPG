@@ -4,7 +4,7 @@ import { Alignment, alignments } from '../../npc/alignments';
 import { Ability, ArcheTypes, Attributes, Reaction, Trait } from '../../npc/npc';
 import { CommonModule } from '@angular/common';
 import { NpcRepository } from '../../npc/npc.repository';
-import { combineLatest, map, Observable } from 'rxjs';
+import { combineLatest, map, mergeMap, Observable } from 'rxjs';
 import { CustomAbilityComponent } from "../custom-ability/custom-ability.component"; 
 
 import levelJson from '../../../resources/levels.json';
@@ -35,6 +35,27 @@ export class GeneratorComponent {
   currentCustomAbility!: Ability;
 
   constructor(public npcRepo: NpcRepository) {}
+
+  $combinedAttributeBoost = combineLatest([
+      this.npcRepo.$strAttributeBoost, 
+      this.npcRepo.$agiAttributeBoost,
+      this.npcRepo.$conAttributeBoost,
+      this.npcRepo.$intAttributeBoost,
+      this.npcRepo.$spiAttributeBoost,
+      this.npcRepo.$perAttributeBoost,
+      this.npcRepo.$chaAttributeBoost
+    ], (str: number, agi: number, con: number, int: number, spi: number, per: number, cha: number) => str+agi+con+int+spi+per+cha
+  ).pipe(
+    map((value) => value > 3)
+  );
+
+  $strAttributeBoostAllowed = this.npcRepo.$strAttributeBoost.pipe(map((v) => v < 2));
+  $agiAttributeBoostAllowed = this.npcRepo.$agiAttributeBoost.pipe(map((v) => v < 2));
+  $conAttributeBoostAllowed = this.npcRepo.$conAttributeBoost.pipe(map((v) => v < 2));
+  $intAttributeBoostAllowed = this.npcRepo.$intAttributeBoost.pipe(map((v) => v < 2));
+  $spiAttributeBoostAllowed = this.npcRepo.$spiAttributeBoost.pipe(map((v) => v < 2));
+  $perAttributeBoostAllowed = this.npcRepo.$perAttributeBoost.pipe(map((v) => v < 2));
+  $chaAttributeBoostAllowed = this.npcRepo.$chaAttributeBoost.pipe(map((v) => v < 2));
 
   npcCreationPointsExceeded(): Observable<boolean> {
     return combineLatest({availiblePoints: this.npcRepo.$availibleNpcCreationPoints, usedPoints: this.npcRepo.$usedNpcCreationPoints})
@@ -67,13 +88,13 @@ export class GeneratorComponent {
     this.selectedArcheType = archeType;
     switch(archeType) {
       case ArcheTypes.WARRIOR:
-        this.npcRepo.updateBaseStatArray(archeTypesJson.warriorBaseStatArray);
+        this.npcRepo.updateBaseStatArray(archeTypesJson.warriorProgression);
         break;
       case ArcheTypes.SPELLCASTER:
-        this.npcRepo.updateBaseStatArray(archeTypesJson.spellCasterBaseStatArray);
+        this.npcRepo.updateBaseStatArray(archeTypesJson.spellCasterProgression);
         break;
       case ArcheTypes.EXPERT:
-        this.npcRepo.updateBaseStatArray(archeTypesJson.expertBaseStatArray);
+        this.npcRepo.updateBaseStatArray(archeTypesJson.expertProgression);
         break;
       default:
         console.error('ArcheType ' + archeType + ' not recognized!');

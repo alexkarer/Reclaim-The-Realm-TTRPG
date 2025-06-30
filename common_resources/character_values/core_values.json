@@ -38,7 +38,10 @@
             { "str": 18, "light": "14d6", "medium": "14d10", "heavy": "14d12" },
             { "str": 19, "light": "16d6", "medium": "16d10", "heavy": "16d12" },
             { "str": 20, "light": "18d6", "medium": "18d10", "heavy": "18d12" },
-            { "str": 21, "light": "20d6", "medium": "20d10", "heavy": "20d12" }
+            { "str": 21, "light": "20d6", "medium": "20d10", "heavy": "20d12" },
+            { "str": 22, "light": "23d6", "medium": "23d10", "heavy": "23d12" },
+            { "str": 23, "light": "26d6", "medium": "26d10", "heavy": "26d12" },
+            { "str": 24, "light": "29d6", "medium": "29d10", "heavy": "29d12" }
         ]
     }
 }

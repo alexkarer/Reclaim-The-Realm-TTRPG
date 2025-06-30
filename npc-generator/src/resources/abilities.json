@@ -1,14 +1,26 @@
 {
     "movementAbilities": [
         { "name": "Pounce I", "pointsCost": 1, "apCost": 0, "mpCost": 5, "description": "Jump, on landing select 1 target within [MELEE RANGE]: 10 + [MARTIAL LEVEL] + [STR] or knock [PRONE]." },
-        { "name": "Pounce II", "pointsCost": 3, "apCost": 0, "mpCost": 5, "description": "Jump, on landing select multiple targets within [MELEE RANGE]: 10 + [MARTIAL LEVEL] + [STR] or knock [PRONE]." }
-    ],
-    "reactionAbilities": [
-        { "name": "Unnatural Dodge", "pointsCost": 1, "description": "When hit by an [ATTACK] halve the damge recieved by that [ATTACK]." }
+        { "name": "Pounce II", "pointsCost": 3, "apCost": 0, "mpCost": 5, "description": "Jump, on landing select multiple targets within [MELEE RANGE]: 10 + [MARTIAL LEVEL] + [STR] or knock [PRONE]." },
+        { "name": "Teleport I, CD (3)", "pointsCost": 1, "apCost": 1, "mpCost": 0, "description": "Teleport to an unoocupied Space up to 9m away" },
+        { "name": "Teleport II, CD (2)", "pointsCost": 2, "apCost": 1, "mpCost": 0, "description": "Teleport to an unoocupied Space up to 18m away" },
+        { "name": "Teleport III", "pointsCost": 3, "apCost": 1, "mpCost": 0, "description": "Teleport to an unoocupied Space up to 18m away" }
     ],
     "otherAbilities": [
+        { "name": "", "pointsCost": 0, "apCost": 0, "mpCost": 0, "description": "" }
+    ],
+    "supportAbilities": [
         { "name": "Heal I", "pointsCost": 1, "apCost": 2, "mpCost": 0, "description": "Heal, [MEELE RANGE] reach, 1 target, [LIGHT SPELL DAMAGE]" },
         { "name": "Heal II", "pointsCost": 2, "apCost": 2, "mpCost": 0, "description": "Heal, [MEELE RANGE] reach, 1 target, [MEDIUM SPELL DAMAGE]" },
-        { "name": "Heal III", "pointsCost": 3, "apCost": 2, "mpCost": 0, "description": "Heal, [MEELE RANGE] reach, 1 target, [HEAVY SPELL DAMAGE]" }
+        { "name": "Heal III", "pointsCost": 3, "apCost": 2, "mpCost": 0, "description": "Heal, [MEELE RANGE] reach, 1 target, [HEAVY SPELL DAMAGE]" },
+        { "name": "Buff I", "pointsCost": 1, "apCost": 1, "mpCost": 0, "description": "Target 1 creature within 6m that creature recieves a beneficial Tier I Status Effect for the remaining fight as long this creature is alive." },
+        { "name": "Buff II", "pointsCost": 2, "apCost": 2, "mpCost": 0, "description": "Target 1 creature within 6m that creature recieves a beneficial Tier II Status Effect for the remaining fight as long this creature is alive." },
+        { "name": "Buff III", "pointsCost": 3, "apCost": 3, "mpCost": 0, "description": "Target 1 creature within 6m that creature recieves a beneficial Tier III Status Effect for the remaining fight as long this creature is alive." },
+        { "name": "Command I", "pointsCost": 1, "apCost": 1, "mpCost": 0, "description": "Target 1 creature lower [LEVEL] than yourself. That creature can use their [REACTION] and move 3 [MP] and make a Basic Attack" },
+        { "name": "Command II", "pointsCost": 3, "apCost": 2, "mpCost": 0, "description": "Target up to 3 creatures within 7.5m lower [LEVEL] than yourself. That creature can use their [REACTION] and move 3 [MP] and make a Basic Attack" }
+    ],
+    "reactionAbilities": [
+        { "name": "Unnatural Dodge", "pointsCost": 1, "description": "When hit by an [ATTACK] halve the damge recieved by that [ATTACK]." },
+        { "name": "Sentinel", "pointsCost": 2, "description": "When enemy moves into [MELEE RANGE], make a Basic Attack." }
     ]
 }

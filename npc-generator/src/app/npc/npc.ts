@@ -1,7 +1,7 @@
 import { Alignment } from "./alignments"
 
 import archeTypesJson from '../../resources/archetypes.json'; 
-export type BaseStatArray = typeof archeTypesJson.warriorBaseStatArray[0];
+export type ArcheTypeProgression = typeof archeTypesJson.warriorProgression | typeof archeTypesJson.spellCasterProgression | typeof archeTypesJson.expertProgression;
 
 import creatureTypesJson from '../../resources/creature_types.json'; 
 export type CreatureType = typeof creatureTypesJson[0];
@@ -29,7 +29,7 @@ export type NPC = {
 
     // Core
     levelConfig: LevelConfig,
-    archeTypeBaseStatArrays: BaseStatArray[],
+    archeTypeProgression: ArcheTypeProgression,
     creatureType: CreatureType,
     freeCreatureTrait: Trait | undefined,
     creatureSubType: CreatureSubType,

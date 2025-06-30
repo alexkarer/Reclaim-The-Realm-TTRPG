@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { createStore, select, setProp, withProps } from '@ngneat/elf';
-import { NPC, LevelConfig, BaseStatArray, CreatureType, CreatureSize, Trait, Ability, Reaction, Attributes, CreatureSubType } from './npc';
+import { NPC, LevelConfig, CreatureType, CreatureSize, Trait, Ability, Reaction, Attributes, CreatureSubType, ArcheTypeProgression } from './npc';
 import { Alignment } from './alignments';
+import * as helpers from './npc-repository-helpers';
 
 import creatureTypesJson from '../../resources/creature_types.json'; 
 import sizesJson from '../../resources/sizes.json'; 
 import levelsJson from '../../resources/levels.json';
 import archeTypesJson from '../../resources/archetypes.json'; 
 import traitsJson from '../../resources/traits.json';
-import martialDamageJson from '../../../../common_resources/character_values/core_values.json'
 
 const npcStore = createStore(
     { name: 'npc'},
@@ -18,7 +18,7 @@ const npcStore = createStore(
         alignment: Alignment.Unaligned,
 
         levelConfig: levelsJson[0],
-        archeTypeBaseStatArrays: archeTypesJson.warriorBaseStatArray,
+        archeTypeProgression: archeTypesJson.warriorProgression,
         creatureType: creatureTypesJson[0],
         creatureSubType: creatureTypesJson[0].availibleSubTypes[0],
         freeCreatureTrait: undefined,
@@ -73,7 +73,7 @@ const npcStore = createStore(
 export class NpcRepository {
     $name = npcStore.pipe(select(state => state.name === '' ? 'Name' : state.name));
     $alignment = npcStore.pipe(select(state => state.alignment));
-    $availibleNpcCreationPoints = npcStore.pipe(select(state => this.getBaseStatArray(state).npcCreationPoints + state.additionalNpcCreationPoints));
+    $availibleNpcCreationPoints = npcStore.pipe(select(state => helpers.calcualteNPCCreationPoints(state)));
     $usedNpcCreationPoints = npcStore.pipe(select(state => 
         state.creatureSize.pointsCost + 
         state.creatureType.pointsCost + 
@@ -86,8 +86,8 @@ export class NpcRepository {
 
     $level = npcStore.pipe(select(state => state.levelConfig.level));
     $xp = npcStore.pipe(select(state => state.levelConfig.XP));
-    $martialLevel = npcStore.pipe(select(state => this.getBaseStatArray(state).levels.martialLevel));
-    $spellLevel = npcStore.pipe(select(state => this.getBaseStatArray(state).levels.spellLevel));
+    $martialLevel = npcStore.pipe(select(state => helpers.calculateMartialLevel(state)));
+    $spellLevel = npcStore.pipe(select(state => helpers.calculateSpellLevel(state)));
 
     $creatureType = npcStore.pipe(select(state => state.creatureType.name));
     $avilibleSubTypes = npcStore.pipe(select(state => state.creatureType.availibleSubTypes));
@@ -95,16 +95,16 @@ export class NpcRepository {
     $creatureSize = npcStore.pipe(select(state => state.creatureSize.name));
 
     $ap = npcStore.pipe(select(state => state.levelConfig.AP));
-    $mp = npcStore.pipe(select(state => 6 + state.mpBonus + Math.floor(this.calculateAgi(state)/3)));
+    $mp = npcStore.pipe(select(state => 6 + state.mpBonus + Math.floor(helpers.calculateAgi(state)/3)));
     $specialMovement = npcStore.pipe(select(state => state.specialMovement.join(', ')));
 
-    $str = npcStore.pipe(select(state => this.calculateStr(state)));
-    $agi = npcStore.pipe(select(state => this.calculateAgi(state)));
-    $con = npcStore.pipe(select(state => this.calculateCon(state)));
-    $int = npcStore.pipe(select(state => this.calculateInt(state)));
-    $spi = npcStore.pipe(select(state => this.calculateSpi(state)));
-    $per = npcStore.pipe(select(state => this.calculatePer(state)));
-    $cha = npcStore.pipe(select(state => this.calculateCha(state)));
+    $str = npcStore.pipe(select(state => helpers.calculateStr(state)));
+    $agi = npcStore.pipe(select(state => helpers.calculateAgi(state)));
+    $con = npcStore.pipe(select(state => helpers.calculateCon(state)));
+    $int = npcStore.pipe(select(state => helpers.calculateInt(state)));
+    $spi = npcStore.pipe(select(state => helpers.calculateSpi(state)));
+    $per = npcStore.pipe(select(state => helpers.calculatePer(state)));
+    $cha = npcStore.pipe(select(state => helpers.calculateCha(state)));
 
     $strAttributeBoost = npcStore.pipe(select(state => state.strAttributeBoost));
     $agiAttributeBoost = npcStore.pipe(select(state => state.agiAttributeBoost));
@@ -114,20 +114,20 @@ export class NpcRepository {
     $perAttributeBoost = npcStore.pipe(select(state => state.perAttributeBoost));
     $chaAttributeBoost = npcStore.pipe(select(state => state.chaAttributeBoost));
 
-    $meleeMartialAttack = npcStore.pipe(select(state => 10 + this.calculateAgi(state) + this.getBaseStatArray(state).levels.martialLevel));
-    $rangedMartialAttack = npcStore.pipe(select(state => 10 + this.calculatePer(state) + this.getBaseStatArray(state).levels.martialLevel));
-    $meleeSpellAttack = npcStore.pipe(select(state => 10 + this.calculateAgi(state) + this.getBaseStatArray(state).levels.spellLevel));
-    $rangedSpellAttack = npcStore.pipe(select(state => 10 + this.calculatePer(state) + this.getBaseStatArray(state).levels.spellLevel));
+    $meleeMartialAttack = npcStore.pipe(select(state => 10 + helpers.calculateAgi(state) + helpers.calculateMartialLevel(state)));
+    $rangedMartialAttack = npcStore.pipe(select(state => 10 + helpers.calculatePer(state) + helpers.calculateMartialLevel(state)));
+    $meleeSpellAttack = npcStore.pipe(select(state => 10 + helpers.calculateAgi(state) + helpers.calculateSpellLevel(state)));
+    $rangedSpellAttack = npcStore.pipe(select(state => 10 + helpers.calculatePer(state) + helpers.calculateSpellLevel(state)));
 
-    $hp = npcStore.pipe(select(state => this.getBaseStatArray(state).hpBonus + state.baseHpBonus + Math.floor((state.creatureSize.hpPerLevel + state.hpPerLevelBonuses + Math.floor(this.calculateCon(state) / 2)) * state.levelConfig.level)));
-    $stability = npcStore.pipe(select(state => 10 + this.calculateStr(state) + this.getBaseStatArray(state).defenseBonus.stability + state.stabilityBonus));
-    $dodge = npcStore.pipe(select(state => 10 + this.calculateAgi(state) + this.getBaseStatArray(state).defenseBonus.dodge + state.dodgeBonus + state.creatureSize.dodgeBonus));
-    $toughness = npcStore.pipe(select(state => 10 + this.calculateCon(state) + this.getBaseStatArray(state).defenseBonus.toughness + state.toughnessBonus));
-    $willpower = npcStore.pipe(select(state => 10 + this.calculateSpi(state) + this.getBaseStatArray(state).defenseBonus.willpower + state.willpowerBonus));
-    $shieldBlock = npcStore.pipe(select(state =>  state.shieldBlock === 0 ? 0 : this.getBaseStatArray(state).levels.martialLevel + state.shieldBlock));
+    $hp = npcStore.pipe(select(state => helpers.calculateHp(state)));
+    $stability = npcStore.pipe(select(state => helpers.calculateStability(state)));
+    $dodge = npcStore.pipe(select(state => helpers.calculateDodge(state)));
+    $toughness = npcStore.pipe(select(state => helpers.calculateToughness(state)));
+    $willpower = npcStore.pipe(select(state => helpers.calculateWillpower(state)));
+    $shieldBlock = npcStore.pipe(select(state =>  state.shieldBlock === 0 ? 0 : helpers.calculateMartialLevel(state) + state.shieldBlock));
     $shieldThreshold = npcStore.pipe(select(state => state.shieldThreshold));
 
-    $damageResistances = npcStore.pipe(select(state => this.flattenDamageResistances(state)));
+    $damageResistances = npcStore.pipe(select(state => helpers.flattenDamageResistances(state)));
     $damageImmunities = npcStore.pipe(select(state => [...state.creatureType.damageImmunities, ...state.additionalImmunities].join(', ')));
     $statusEffectImmunties = npcStore.pipe(select(state => [...state.creatureType.statusEffectImmunities, ...state.additionalStatusEffectImmunities].join(', ')));
     $damageVulnurabilities = npcStore.pipe(select(state => [...state.creatureType.damageVulnurabilities, ...state.additionalVulnurabilities].join(', ')));
@@ -143,32 +143,32 @@ export class NpcRepository {
             mpCost: a.mpCost,
             description: a.description
                 .replaceAll('[MEELE RANGE]', state.creatureSize.meleeRange)
-                .replaceAll('[MELEE MARTIAL ATTACK]', 'Attack ⚔️ ' + (10 + this.calculateAgi(state) + this.getBaseStatArray(state).levels.martialLevel))
-                .replaceAll('[RANGED MARTIAL ATTACK]', 'Attack 🏹 ' + (10 + this.calculatePer(state) + this.getBaseStatArray(state).levels.martialLevel))
-                .replaceAll('[MELEE SPELL ATTACK]', 'Attack ⚔️✨ ' + (10 + this.calculateAgi(state) + this.getBaseStatArray(state).levels.spellLevel))
-                .replaceAll('[RANGED SPELL ATTACK]', 'Attack 🏹✨ ' + (10 + this.calculatePer(state) + this.getBaseStatArray(state).levels.spellLevel))
-                .replaceAll('[LIGHT MARTIAL DAMAGE]+3', this.getLightDamage(this.calculateStr(state)+3))
-                .replaceAll('2*[LIGHT MARTIAL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateStr(state)), 2))
-                .replaceAll('3*[LIGHT MARTIAL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateStr(state)), 3))
-                .replaceAll('4*[LIGHT MARTIAL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateStr(state)), 4))
-                .replaceAll('5*[LIGHT MARTIAL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateStr(state)), 5))
-                .replaceAll('[LIGHT MARTIAL DAMAGE]', this.getLightDamage(this.calculateStr(state)))
-                .replaceAll('[LIGHT SPELL DAMAGE]+3', this.getLightDamage(this.calculateSpi(state)+3))
-                .replaceAll('2*[LIGHT SPELL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateSpi(state)), 2))
-                .replaceAll('3*[LIGHT SPELL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateSpi(state)), 3))
-                .replaceAll('4*[LIGHT SPELL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateSpi(state)), 4))
-                .replaceAll('5*[LIGHT SPELL DAMAGE]', this.multiplyD6DiceExpressions(this.getLightDamage(this.calculateSpi(state)), 5))
-                .replaceAll('[LIGHT SPELL DAMAGE]', this.getLightDamage(this.calculateSpi(state)))
-                .replaceAll('[LIGHT SPELL DAMAGE]', this.getLightDamage(this.calculateSpi(state)))
-                .replaceAll('[STR]', this.calculateStr(state).toString())
-                .replaceAll('[AGI]', this.calculateAgi(state).toString())
-                .replaceAll('[CON]', this.calculateCon(state).toString())
-                .replaceAll('[INT]', this.calculateInt(state).toString())
-                .replaceAll('[SPI]', this.calculateSpi(state).toString())
-                .replaceAll('[PER]', this.calculatePer(state).toString())
-                .replaceAll('[CHA]', this.calculateCha(state).toString())
-                .replaceAll('[MARTIAL LEVEL]', this.getBaseStatArray(state).levels.martialLevel.toString())
-                .replaceAll('[SPELL LEVEL]', this.getBaseStatArray(state).levels.spellLevel.toString())
+                .replaceAll('[MELEE MARTIAL ATTACK]', 'Attack ⚔️ ' + (10 + helpers.calculateAgi(state) + helpers.calculateMartialLevel(state)))
+                .replaceAll('[RANGED MARTIAL ATTACK]', 'Attack 🏹 ' + (10 + helpers.calculatePer(state) + helpers.calculateMartialLevel(state)))
+                .replaceAll('[MELEE SPELL ATTACK]', 'Attack ⚔️✨ ' + (10 + helpers.calculateAgi(state) + helpers.calculateSpellLevel(state)))
+                .replaceAll('[RANGED SPELL ATTACK]', 'Attack 🏹✨ ' + (10 + helpers.calculatePer(state) + helpers.calculateSpellLevel(state)))
+                .replaceAll('[LIGHT MARTIAL DAMAGE]+3', helpers.getLightDamage(helpers.calculateStr(state)+3))
+                .replaceAll('2*[LIGHT MARTIAL DAMAGE]', helpers.multiplyD6DiceExpressions(helpers.getLightDamage(helpers.calculateStr(state)), 2))
+                .replaceAll('3*[LIGHT MARTIAL DAMAGE]', helpers.multiplyD6DiceExpressions(helpers.getLightDamage(helpers.calculateStr(state)), 3))
+                .replaceAll('4*[LIGHT MARTIAL DAMAGE]', helpers.multiplyD6DiceExpressions(helpers.getLightDamage(helpers.calculateStr(state)), 4))
+                .replaceAll('5*[LIGHT MARTIAL DAMAGE]', helpers.multiplyD6DiceExpressions(helpers.getLightDamage(helpers.calculateStr(state)), 5))
+                .replaceAll('[LIGHT MARTIAL DAMAGE]', helpers.getLightDamage(helpers.calculateStr(state)))
+                .replaceAll('[LIGHT SPELL DAMAGE]+3', helpers.getLightDamage(helpers.calculateSpi(state)+3))
+                .replaceAll('2*[LIGHT SPELL DAMAGE]', helpers.multiplyD6DiceExpressions(helpers.getLightDamage(helpers.calculateSpi(state)), 2))
+                .replaceAll('3*[LIGHT SPELL DAMAGE]', helpers.multiplyD6DiceExpressions(helpers.getLightDamage(helpers.calculateSpi(state)), 3))
+                .replaceAll('4*[LIGHT SPELL DAMAGE]', helpers.multiplyD6DiceExpressions(helpers.getLightDamage(helpers.calculateSpi(state)), 4))
+                .replaceAll('5*[LIGHT SPELL DAMAGE]', helpers.multiplyD6DiceExpressions(helpers.getLightDamage(helpers.calculateSpi(state)), 5))
+                .replaceAll('[LIGHT SPELL DAMAGE]', helpers.getLightDamage(helpers.calculateSpi(state)))
+                .replaceAll('[LIGHT SPELL DAMAGE]', helpers.getLightDamage(helpers.calculateSpi(state)))
+                .replaceAll('[STR]', helpers.calculateStr(state).toString())
+                .replaceAll('[AGI]', helpers.calculateAgi(state).toString())
+                .replaceAll('[CON]', helpers.calculateCon(state).toString())
+                .replaceAll('[INT]', helpers.calculateInt(state).toString())
+                .replaceAll('[SPI]', helpers.calculateSpi(state).toString())
+                .replaceAll('[PER]', helpers.calculatePer(state).toString())
+                .replaceAll('[CHA]', helpers.calculateCha(state).toString())
+                .replaceAll('[MARTIAL LEVEL]', helpers.calculateMartialLevel(state).toString())
+                .replaceAll('[SPELL LEVEL]', helpers.calculateSpellLevel(state).toString())
                 .replaceAll('[DEFAULT DURATION]', Math.max(2, Math.floor(state.levelConfig.level / 2)).toString())
         }))
     ));
@@ -186,8 +186,8 @@ export class NpcRepository {
         npcStore.update(setProp('levelConfig', levelConfig));
     }
 
-    updateBaseStatArray(bsas: BaseStatArray[]) {
-        npcStore.update(setProp('archeTypeBaseStatArrays', bsas));
+    updateBaseStatArray(archeTypeProgression: ArcheTypeProgression) {
+        npcStore.update(setProp('archeTypeProgression', archeTypeProgression));
     }
 
     updateCreatureType(type: CreatureType) {
@@ -301,101 +301,6 @@ export class NpcRepository {
 
     removeReaction(reaction: Reaction) {
         npcStore.update(setProp('reactions', existingReactions => existingReactions.filter(r => r.name !== reaction.name)));
-    }
-
-    private getBaseStatArray(state: NPC): BaseStatArray {
-        let bsa = state.archeTypeBaseStatArrays.find(bsa => bsa.levels.level === state.levelConfig.level);
-        return bsa ? bsa : archeTypesJson.warriorBaseStatArray[0];
-    }
-
-    private calculateStr(state: NPC): number {
-        return state.strBonus +
-            this.getBaseStatArray(state).attributes.str +
-            state.creatureType.attributeBonsuses.str +
-            state.creatureSubType.attributeBonsuses.str +
-            state.creatureSize.strBonus +
-            state.strAttributeBoost;
-    }
-
-    private calculateAgi(state: NPC): number {
-        return state.agiBonus +
-            this.getBaseStatArray(state).attributes.agi +
-            state.creatureType.attributeBonsuses.agi +
-            state.creatureSubType.attributeBonsuses.agi +
-            state.agiAttributeBoost;
-    }
-
-    private calculateCon(state: NPC): number {
-        return state.conBonus +
-            this.getBaseStatArray(state).attributes.con +
-            state.creatureType.attributeBonsuses.con +
-            state.creatureSubType.attributeBonsuses.con +
-            state.conAttributeBoost;
-    }
-
-    private calculateInt(state: NPC): number {
-        return state.intBonus +
-            this.getBaseStatArray(state).attributes.int +
-            state.creatureType.attributeBonsuses.int +
-            state.creatureSubType.attributeBonsuses.int +
-            state.intAttributeBoost;
-    }
-
-    private calculateSpi(state: NPC): number {
-        return state.spiBonus +
-            this.getBaseStatArray(state).attributes.spi +
-            state.creatureType.attributeBonsuses.spi +
-            state.creatureSubType.attributeBonsuses.spi +
-            state.spiAttributeBoost;
-    }
-
-    private calculatePer(state: NPC): number {
-        return state.perBonus + 
-            this.getBaseStatArray(state).attributes.per +
-            state.creatureType.attributeBonsuses.per +
-            state.creatureSubType.attributeBonsuses.per +
-            state.perAttributeBoost;
-    }
-
-    private calculateCha(state: NPC): number {
-        return state.chaBonus +
-            this.getBaseStatArray(state).attributes.cha +
-            state.creatureType.attributeBonsuses.cha +
-            state.creatureSubType.attributeBonsuses.cha +
-            state.chaAttributeBoost;
-    }
-
-    private flattenDamageResistances(state: NPC): string {
-        return [...state.creatureType.damageResistances, ...state.additionalResistances]
-            .map(dmgR => dmgR.type + ' ' + dmgR.value)
-            .map(str => str.replaceAll('[LEVEL]', Math.ceil(state.levelConfig.level).toString()))
-            .map(str => str.replaceAll('[HALF LEVEL]', Math.floor(state.levelConfig.level / 2).toString()))
-            .sort((s1, s2) => s1.localeCompare(s2))
-            .join(', ');
-    }
-
-    private getLightDamage(str: number): string {
-        return martialDamageJson.martialDamage.martialDamageTable.find(mdmg => mdmg.str === str)?.light ?? '';
-    }
-
-    private multiplyD6DiceExpressions(diceExpr: string, factor: number = 1) {
-        if (diceExpr.charAt(0) == 'd') {
-            if (diceExpr.length > 2 && diceExpr.charAt(2) == '+') {
-                let constant = parseInt(diceExpr.substring(3, diceExpr.length));
-                return factor.toString() + 'd6+' + (constant * factor).toString();
-            } else {
-                return factor.toString() + 'd6';
-            }
-        } else {
-            let diceStartIndex = diceExpr.indexOf('d');
-            let diceAmount = parseInt(diceExpr.substring(0, diceStartIndex));
-            if (diceExpr.length > (diceStartIndex+2) && diceExpr.charAt(diceStartIndex+2) == '+') {
-                let constant = parseInt(diceExpr.substring(diceStartIndex+3, diceExpr.length));
-                return (diceAmount * factor).toString() + 'd6+' + (constant * factor).toString();
-            } else {
-                return (diceAmount * factor).toString() + 'd6';
-            }
-        }
     }
 
     // trait characteristics functions

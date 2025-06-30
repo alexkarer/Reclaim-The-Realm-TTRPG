@@ -1,6 +1,5 @@
 # TODO
 
-Add error message if attribute boost is done wrong
 Instead of fixed Defense Bonuses, have proficiency and you can boost one proficiency of your choice by 0,34 (max 1)
 
 **Add skills**
