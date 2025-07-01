@@ -1,0 +1,51 @@
+<div class="m-1">
+        <rtr-npcgen-creature-info/>
+    <div class="mt-4 mb-0">
+        <div class="d-flex justify-content-around">
+            <div class="col">
+                <p class="text-center fw-bold fs-5 text-white">Availible NPC Creation Points: {{ npcRepo.$availibleNpcCreationPoints | async }}</p>
+            </div>
+            <div class="col">
+                <p class="text-center fw-bold fs-5" 
+                    [ngClass]="{'text-bg-danger' : npcCreationPointsExceeded() | async, 'text-bg-success' : !(npcCreationPointsExceeded() | async)}" >
+                    Used NPC Creation Points: {{ npcRepo.$usedNpcCreationPoints | async }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr class="mt-0">
+        <rtr-npcgen-creature-properties/>
+    <hr>
+        <rtr-npcgen-attribute-boost/>
+    <hr>
+        <rtr-npcgen-creature-traits/>
+    <hr>
+        <rtr-npcgen-pre-defined-abilities/>
+    <hr>
+    <div class="d-flex flex-column">
+        <h5 class="mb-3 text-center">Custom Abilities</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ability</th>
+                    <th>Cost</th>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="table-striped">
+                @for (customAbility of npcRepo.$customAbilities | async; track $index) {
+                    <tr>
+                        <td><span class="fw-bold">{{ customAbility.name }} ({{ customAbility.pointsCost }})</span></td>
+                        <td>{{ customAbility.apCost }} [AP]</td>
+                        <td>{{ customAbility.description }}</td>
+                        <td><button type="button" class="btn btn-outline-danger" (click)="npcRepo.removeCustomAbility(customAbility)">Delete</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <hr>
+        <rtr-npcgen-custom-ability (abilityChange)="currentCustomAbility = $event"/>
+        <button type="button" class="mt-2 btn btn-outline-success" (click)="handleCustomAbilityCreation()">Add Ability</button>
+    </div>
+</div>

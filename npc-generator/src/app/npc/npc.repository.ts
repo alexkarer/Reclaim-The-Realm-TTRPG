@@ -186,7 +186,7 @@ export class NpcRepository {
         npcStore.update(setProp('levelConfig', levelConfig));
     }
 
-    updateBaseStatArray(archeTypeProgression: ArcheTypeProgression) {
+    updateArcheType(archeTypeProgression: ArcheTypeProgression) {
         npcStore.update(setProp('archeTypeProgression', archeTypeProgression));
     }
 

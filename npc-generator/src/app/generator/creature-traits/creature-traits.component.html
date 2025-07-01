@@ -1,0 +1,60 @@
+<div class="d-flex flex-column">
+    <h5 class="mb-3 text-center">Traits</h5>
+    <div class="mt d-flex justify-content-around">
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownDefensiveTraits" ngbDropdownToggle>Defensive Traits</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownDefensiveTraits">
+                <div class="d-flex justify-content-center flex-column mx-2">
+                    @for (trait of traits.defensiveTraits; track $index) {
+                        <input type="checkbox" class="btn-check" [id]="'btncheck' + trait.name" autocomplete="off" (change)="handleTraitCheckBoxUpdate($event, trait)">
+                        <label class="btn btn-outline-primary my-1" [for]="'btncheck' + trait.name">{{ trait.name + ' (' + trait.pointsCost + ')' }}</label>
+                    }
+                </div>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownMovementTraits" ngbDropdownToggle>Movement Traits</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownMovementTraits">
+                <div class="d-flex justify-content-center flex-column mx-2">
+                    @for (trait of traits.movementTraits; track $index) {
+                        <input type="checkbox" class="btn-check" [id]="'btncheck' + trait.name" autocomplete="off" (change)="handleTraitCheckBoxUpdate($event, trait)">
+                        <label class="btn btn-outline-primary my-1" [for]="'btncheck' + trait.name">{{ trait.name + ' (' + trait.pointsCost + ')' }}</label>
+                    }
+                </div>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownWargerTraits" ngbDropdownToggle>Wargear Traits</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownWargerTraits">
+                <div class="d-flex justify-content-center flex-column mx-2">
+                    @for (trait of traits.wargearTraits; track $index) {
+                        <input type="checkbox" class="btn-check" [id]="'btncheck' + trait.name" autocomplete="off" (change)="handleTraitCheckBoxUpdate($event, trait)">
+                        <label class="btn btn-outline-primary my-1" [for]="'btncheck' + trait.name">{{ trait.name + ' (' + trait.pointsCost + ')' }}</label>
+                    }
+                </div>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownOtherTraits" ngbDropdownToggle>Other Traits</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownOtherTraits">
+                <div class="d-flex justify-content-center flex-column mx-2">
+                    @for (trait of traits.otherTraits; track $index) {
+                        <input type="checkbox" class="btn-check" [id]="'btncheck' + trait.name" autocomplete="off" (change)="handleTraitCheckBoxUpdate($event, trait)">
+                        <label class="btn btn-outline-primary my-1" [for]="'btncheck' + trait.name">{{ trait.name + ' (' + trait.pointsCost + ')' }}</label>
+                    }
+                </div>
+            </div>
+        </div>
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownCreatureTypeTraits" ngbDropdownToggle>Creature Type Traits</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownCreatureTypeTraits">
+                <div class="d-flex justify-content-center flex-column mx-2">
+                    @for (trait of traits.creatureTypeTraits; track $index) {
+                        <input type="checkbox" class="btn-check" [id]="'btncheck' + trait.name" autocomplete="off" (change)="handleTraitCheckBoxUpdate($event, trait)">
+                        <label class="btn btn-outline-primary my-1" [for]="'btncheck' + trait.name">{{ trait.name + ' (' + trait.pointsCost + ')' }}</label>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

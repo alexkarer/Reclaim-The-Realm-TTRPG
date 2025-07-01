@@ -1,0 +1,54 @@
+<div class="mt-3 d-flex justify-content-around">
+    <div class="d-flex align-items-center">
+        <h5 class="me-3">Archetype</h5>
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownArchetype" ngbDropdownToggle>
+                {{ selectedArcheType }}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownArchetype">
+                @for (archType of archTypes; track $index) {
+                    <button type="button" (click)="handleArcheTypeUpdate($event)" ngbDropdownItem [value]="archType">{{ archType }}</button>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <h5 class="me-3">Type</h5>
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownCreatureType" ngbDropdownToggle>
+                {{ npcRepo.$creatureType | async }}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownCreatureType">
+                @for (creatureType of creatureTypes; track $index) {
+                    <button type="button" (click)="npcRepo.updateCreatureType(creatureType)" ngbDropdownItem>{{ creatureType.name + ' (' + creatureType.pointsCost + ')' }}</button>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <h5 class="me-3">Type</h5>
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownCreatureSubType" ngbDropdownToggle>
+                {{ npcRepo.$creatureSubType | async }}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownCreatureSubType">
+                @for (subType of (npcRepo.$avilibleSubTypes | async); track $index) {
+                    <button type="button" (click)="npcRepo.updateCreatureSubType(subType)" ngbDropdownItem>{{ subType.name + ' (' + subType.pointsCost + ')' }}</button>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <h5 class="me-3">Size</h5>
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownCreatureSize" ngbDropdownToggle>
+                {{ npcRepo.$creatureSize | async }}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownCreatureSize">
+                @for (creatureSize of creatureSizes; track $index) {
+                    <button type="button" (click)="npcRepo.updateCreatureSize(creatureSize)" ngbDropdownItem>{{ creatureSize.name + ' (' + creatureSize.pointsCost + ')' }}</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>

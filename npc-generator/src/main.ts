@@ -1,8 +1,8 @@
 /// <reference types="@angular/localize" />
 
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { rtrNpcGenConfig } from './app/rtr-npcgen.config';
+import { RtRNpcGenComponent } from './app/rtr-npcgen.component';
 
-bootstrapApplication(AppComponent, appConfig)
+bootstrapApplication(RtRNpcGenComponent, rtrNpcGenConfig)
   .catch((err) => console.error(err));

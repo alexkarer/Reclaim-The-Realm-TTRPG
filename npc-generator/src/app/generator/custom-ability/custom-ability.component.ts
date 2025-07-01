@@ -5,7 +5,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import customAbilitiesJson from '../../../resources/custom_abilities.json';
 
 @Component({
-  selector: 'app-custom-ability',
+  selector: 'rtr-npcgen-custom-ability',
   imports: [NgbDropdownModule],
   templateUrl: './custom-ability.component.html',
   styleUrl: './custom-ability.component.scss'
