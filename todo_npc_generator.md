@@ -1,7 +1,5 @@
 # TODO
 
-Instead of fixed Defense Bonuses, have proficiency and you can boost one proficiency of your choice by 0,34 (max 1)
-
 **Add skills**
 - implement skills, see concept
 - passive awarenees
