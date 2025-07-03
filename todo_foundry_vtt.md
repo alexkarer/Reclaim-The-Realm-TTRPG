@@ -3,6 +3,8 @@
 fix Initiative (currently adds attribute)
 fix stun description
 
+add specific roll tests (d20Test, ATtributeTest, ...) in actor class
+
 # General TODOs/Nice to have
 
 ## Bugs:
