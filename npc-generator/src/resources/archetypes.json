@@ -196,9 +196,9 @@
             "hpFactor": 9
         },
         "npcCreatuinPoints": {
-            "npcCreationPointsQuarterLevel": 2,
-            "npcCreationPointsHalfLevel": 3,
-            "npcCreationPointsBase": 2,
+            "npcCreationPointsQuarterLevel": 3,
+            "npcCreationPointsHalfLevel": 4,
+            "npcCreationPointsBase": 3,
             "npcCreationPointsFactor": 2
         }
     }

@@ -1,0 +1,138 @@
+{
+  "folder": "01UVlFZ4oz1ds0Wg",
+  "name": "Major Cosmic Mutation",
+  "_id": "mNlHsFb1bg5C5vei",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "_id": "VRnbyN2TdxRDYU8I",
+      "name": "Deadly Demise I",
+      "img": "icons/magic/fire/explosion-fireball-small-purple-orange.webp",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751797535829,
+        "modifiedTime": 1751798609686,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": "Item.nMm0Z2kJ7WYrysQU",
+      "_key": "!tables.results!mNlHsFb1bg5C5vei.VRnbyN2TdxRDYU8I"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "_id": "ZCmVWoAI7q06Wsm8",
+      "name": "Darkvision II",
+      "img": "icons/magic/perception/eye-ringed-glow-angry-teal.webp",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751797535995,
+        "modifiedTime": 1751798626782,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": "Item.P40nyIaT7ELSViaK",
+      "_key": "!tables.results!mNlHsFb1bg5C5vei.ZCmVWoAI7q06Wsm8"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "_id": "pu2cYDRPeO1kVjhU",
+      "name": "Regeneration I",
+      "img": "icons/magic/life/cross-embers-glow-yellow-purple.webp",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751798278842,
+        "modifiedTime": 1751798639158,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": "Item.J3wDQ7FG8ju0cDhb",
+      "_key": "!tables.results!mNlHsFb1bg5C5vei.pu2cYDRPeO1kVjhU"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "_id": "NUnwpZeRdNwHNuL5",
+      "name": "Fearsome I",
+      "img": "icons/creatures/magical/spirit-poison-smoke-green.webp",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751798278984,
+        "modifiedTime": 1751798656724,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": "Item.LKFfpOdXDrFNrUKR",
+      "_key": "!tables.results!mNlHsFb1bg5C5vei.NUnwpZeRdNwHNuL5"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1751797458915,
+    "modifiedTime": 1751798665350,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "formula": "1d4",
+  "_key": "!tables!mNlHsFb1bg5C5vei"
+}

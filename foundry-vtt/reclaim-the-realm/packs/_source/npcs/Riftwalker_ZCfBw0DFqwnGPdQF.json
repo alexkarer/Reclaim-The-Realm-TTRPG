@@ -376,34 +376,34 @@
       "_key": "!actors.items!ZCfBw0DFqwnGPdQF.kvSMatTdJlZM5Dvf"
     },
     {
-      "name": "NPC Trait",
+      "name": "Cosmic Touched",
       "type": "npcTrait",
-      "_id": "SlttESs9o5CW88vH",
+      "_id": "LiB4HzOkgKBs4B1h",
       "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
       "system": {
-        "description": "<p>The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation.</p><p>This creature couldn't handle it and also recieves 1 Cosmic corruption, reduce Int.</p>",
-        "summary": "The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation.  This creature couldn't handle it and also recieves 1 Cosmic corruption, reduce Int."
+        "description": "<p>The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation.</p><p>@UUID[Compendium.reclaim-the-realm.gm-tables.RollTable.FfOl8LnFRgLUvewG]{Minor Cosmic Mutations}</p>",
+        "summary": "The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation."
       },
       "effects": [],
-      "folder": null,
-      "sort": 0,
+      "folder": "uMv1kp5JuDVkoJfG",
+      "sort": 200000,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
-        "compendiumSource": null,
+        "compendiumSource": "Compendium.reclaim-the-realm.npcs.Actor.DcnZmIdCZv5N7o8w.Item.GhFcsflgRyrqUWFn",
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1751042319532,
-        "modifiedTime": 1751042374509,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1751799259695,
+        "modifiedTime": 1751799259695,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!ZCfBw0DFqwnGPdQF.SlttESs9o5CW88vH"
+      "_key": "!actors.items!ZCfBw0DFqwnGPdQF.LiB4HzOkgKBs4B1h"
     }
   ],
   "effects": [],

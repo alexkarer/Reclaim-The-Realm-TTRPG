@@ -31,9 +31,7 @@ export type NPC = {
     levelConfig: LevelConfig,
     archeTypeProgression: ArcheTypeProgression,
     creatureType: CreatureType,
-    freeCreatureTrait: Trait | undefined,
     creatureSubType: CreatureSubType,
-    freeSubCreatureTrait: Trait | undefined,
     creatureSize: CreatureSize,
     specialMovement: string[],
 

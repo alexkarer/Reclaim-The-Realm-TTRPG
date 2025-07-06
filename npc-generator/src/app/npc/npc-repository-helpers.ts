@@ -10,7 +10,7 @@ export function calcualteNPCCreationPoints(state: NPC): number {
     } else if (state.levelConfig.level >= 1) {
         npcCreationPoints = state.archeTypeProgression.npcCreatuinPoints.npcCreationPointsBase + Math.floor(state.levelConfig.level * state.archeTypeProgression.npcCreatuinPoints.npcCreationPointsFactor);
     }
-    return npcCreationPoints;
+    return npcCreationPoints + state.additionalNpcCreationPoints;
 }
 
 export function calculateMartialLevel(state: NPC): number {
@@ -195,7 +195,7 @@ export function calculateWillpower(state: NPC): number {
 }
 
 export function flattenDamageResistances(state: NPC): string {
-    return [...state.creatureType.damageResistances, ...state.additionalResistances]
+    return [...state.creatureType.damageResistances, ...state.creatureSubType.damageResistances, ...state.additionalResistances]
         .map(dmgR => dmgR.type + ' ' + dmgR.value)
         .map(str => str.replaceAll('[LEVEL]', Math.ceil(state.levelConfig.level).toString()))
         .map(str => str.replaceAll('[HALF LEVEL]', Math.floor(state.levelConfig.level / 2).toString()))

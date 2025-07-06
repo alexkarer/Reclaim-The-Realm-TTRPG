@@ -1,0 +1,57 @@
+{
+  "folder": "01UVlFZ4oz1ds0Wg",
+  "name": "Cosmic Blessings",
+  "_id": "uuCZuab3gg1ItZyo",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "_id": "iHcsb1AwHqLFmRJQ",
+      "name": "Fly II",
+      "img": "icons/creatures/abilities/wing-batlike-purple-blue.webp",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751803726483,
+        "modifiedTime": 1751803893256,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": "Compendium.reclaim-the-realm.npc-traits.Item.PkgUZZbF3MWuzedy",
+      "_key": "!tables.results!uuCZuab3gg1ItZyo.iHcsb1AwHqLFmRJQ"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1751803722976,
+    "modifiedTime": 1751803728012,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "formula": "",
+  "_key": "!tables!uuCZuab3gg1ItZyo"
+}

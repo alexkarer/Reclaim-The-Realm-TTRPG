@@ -39,7 +39,11 @@
         { "target": "[SPHERE] (3m), 12m range", "pointCost": 4 },
         { "target": "[SPHERE] (4.5m), 15m range", "pointCost": 5 },
         { "target": "[SPHERE] (6m), 18m range", "pointCost": 6 },
-        { "target": "[SPHERE] (9m), 30m range", "pointCost": 8 }
+        { "target": "[SPHERE] (9m), 30m range", "pointCost": 8 },
+        { "target": "[AURA] (1.5m)", "pointCost": 3 },
+        { "target": "[AURA] (3m)", "pointCost": 5 },
+        { "target": "[AURA] (4.5m)", "pointCost": 6 },
+        { "target": "[AURA] (6m)", "pointCost": 7 }
     ],
     "targetSave": [
         "[STABILITY]",

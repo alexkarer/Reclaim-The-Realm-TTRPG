@@ -2,7 +2,7 @@
     "movementAbilities": [
         { "name": "Pounce I", "pointsCost": 1, "apCost": 0, "mpCost": 5, "description": "Jump, on landing select 1 target within [MELEE RANGE]: 10 + [MARTIAL LEVEL] + [STR] or knock [PRONE]." },
         { "name": "Pounce II", "pointsCost": 3, "apCost": 0, "mpCost": 5, "description": "Jump, on landing select multiple targets within [MELEE RANGE]: 10 + [MARTIAL LEVEL] + [STR] or knock [PRONE]." },
-        { "name": "Teleport I, CD (3)", "pointsCost": 1, "apCost": 1, "mpCost": 0, "description": "Teleport to an unoocupied Space up to 9m away" },
+        { "name": "Teleport I, CD (3)", "pointsCost": 1, "apCost": 1, "mpCost": 0, "description": "Teleport to an unoocupied Space up to 12m away" },
         { "name": "Teleport II, CD (2)", "pointsCost": 2, "apCost": 1, "mpCost": 0, "description": "Teleport to an unoocupied Space up to 18m away" },
         { "name": "Teleport III", "pointsCost": 3, "apCost": 1, "mpCost": 0, "description": "Teleport to an unoocupied Space up to 18m away" }
     ],
@@ -20,7 +20,7 @@
         { "name": "Command II", "pointsCost": 3, "apCost": 2, "mpCost": 0, "description": "Target up to 3 creatures within 7.5m lower [LEVEL] than yourself. That creature can use their [REACTION] and move 3 [MP] and make a Basic Attack" }
     ],
     "reactionAbilities": [
-        { "name": "Unnatural Dodge", "pointsCost": 1, "description": "When hit by an [ATTACK] halve the damge recieved by that [ATTACK]." },
+        { "name": "Unnatural Dodge", "pointsCost": 1, "description": "When hit by an [ATTACK], turn a critical hit into a hit, a regular hit into a glancing hit and a glancing hit into a miss." },
         { "name": "Sentinel", "pointsCost": 2, "description": "When enemy moves into [MELEE RANGE], make a Basic Attack." }
     ]
 }

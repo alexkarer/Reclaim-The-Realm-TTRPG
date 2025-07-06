@@ -221,7 +221,7 @@
     "npcLevel": 1,
     "resistancesString": "cosmic: 5, phyiscal: 4",
     "immunitiesString": "",
-    "statusEffectImmunityString": ""
+    "statusEffectImmunityString": "resist: frightened, charmed;"
   },
   "prototypeToken": {
     "name": "Enlightened Warrior",
@@ -318,36 +318,6 @@
     "prependAdjective": false
   },
   "items": [
-    {
-      "name": "Cosmic Touched",
-      "type": "npcTrait",
-      "_id": "ItBbv7vB5pJOnAvJ",
-      "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
-      "system": {
-        "description": "<p>The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation.</p>",
-        "summary": "The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation."
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "OLKSfPDHiy1Xf9SG": 3
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.345",
-        "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
-        "createdTime": 1750974970922,
-        "modifiedTime": 1750975076585,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
-      },
-      "_key": "!actors.items!RmO6QZ8EEiN1yViV.ItBbv7vB5pJOnAvJ"
-    },
     {
       "name": "Attack",
       "type": "npcAbility",
@@ -575,6 +545,66 @@
         "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
       "_key": "!actors.items!RmO6QZ8EEiN1yViV.Hd22sExH9nmnwGKP"
+    },
+    {
+      "name": "Cosmic Touched",
+      "type": "npcTrait",
+      "_id": "qRrtbp15Jufm56rr",
+      "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
+      "system": {
+        "description": "<p>The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation.</p><p>@UUID[Compendium.reclaim-the-realm.gm-tables.RollTable.FfOl8LnFRgLUvewG]{Minor Cosmic Mutations}</p>",
+        "summary": "The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation."
+      },
+      "effects": [],
+      "folder": "uMv1kp5JuDVkoJfG",
+      "sort": 200000,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.reclaim-the-realm.npcs.Actor.DcnZmIdCZv5N7o8w.Item.GhFcsflgRyrqUWFn",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751798723684,
+        "modifiedTime": 1751798723684,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!RmO6QZ8EEiN1yViV.qRrtbp15Jufm56rr"
+    },
+    {
+      "name": "Dark Devotion",
+      "type": "npcTrait",
+      "_id": "l6DZPgqdHs5Pbraq",
+      "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+      "system": {
+        "description": "<p>Status effect resistance against being charmed or firghtened</p>",
+        "summary": "Status effect resistance against being charmed or firghtened"
+      },
+      "effects": [],
+      "folder": "MQeNdvmUBKB4Ysgp",
+      "sort": 100000,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.reclaim-the-realm.npcs.Actor.yFScecbdQqGnHHkB.Item.lkUEFJAuaTTvirU9",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751798740078,
+        "modifiedTime": 1751798740078,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!RmO6QZ8EEiN1yViV.l6DZPgqdHs5Pbraq"
     }
   ],
   "effects": [],
@@ -592,7 +622,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750974861402,
-    "modifiedTime": 1750977893052,
+    "modifiedTime": 1751798739725,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!RmO6QZ8EEiN1yViV"

@@ -161,6 +161,17 @@
           "TRUSTED": "OBSERVER",
           "ASSISTANT": "OBSERVER"
       }
+    },
+    {
+      "name": "npc-traits",
+      "label": "Common NPC Traits",
+      "type": "Item",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "NONE",
+          "TRUSTED": "NONE",
+          "ASSISTANT": "OBSERVER"
+      }
     }
   ],
   "documentTypes": {

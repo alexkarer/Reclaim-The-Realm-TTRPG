@@ -15,7 +15,7 @@
         "damageImmunities": [],
         "damageVulnurabilities": [],
         "statusEffectImmunities": [],
-        "freeTrait": null,
+        "freeTraits": [],
         "availibleSubTypes": [
             { 
                 "name": "Human",
@@ -33,7 +33,7 @@
                 "damageImmunities": [],
                 "damageVulnurabilities": [],
                 "statusEffectImmunities": [],
-                "freeTrait": "Human Versatility"
+                "freeTraits": ["Human Versatility"]
             },
             { 
                 "name": "Elf",
@@ -51,7 +51,7 @@
                 "damageImmunities": [],
                 "damageVulnurabilities": [],
                 "statusEffectImmunities": [],
-                "freeTrait": "Elven Nimbleness"
+                "freeTraits": ["Elven Nimbleness"]
             },
             { 
                 "name": "Dwarf",
@@ -69,7 +69,7 @@
                 "damageImmunities": [],
                 "damageVulnurabilities": [],
                 "statusEffectImmunities": [],
-                "freeTrait": "Dwarven Nightvision"
+                "freeTraits": ["Dwarven Nightvision"]
             }
         ]
     },
@@ -89,7 +89,7 @@
         "damageImmunities": [],
         "damageVulnurabilities": [],
         "statusEffectImmunities": [],
-        "freeTrait": null,
+        "freeTraits": [],
         "availibleSubTypes": [
             { 
                 "name": "Animal",
@@ -107,7 +107,7 @@
                 "damageImmunities": [],
                 "damageVulnurabilities": [],
                 "statusEffectImmunities": [],
-                "freeTrait": null
+                "freeTraits": []
             },
             { 
                 "name": "Monster",
@@ -125,7 +125,7 @@
                 "damageImmunities": [],
                 "damageVulnurabilities": [],
                 "statusEffectImmunities": [],
-                "freeTrait": null
+                "freeTraits": []
             },
             { 
                 "name": "Swarm",
@@ -143,7 +143,7 @@
                 "damageImmunities": [],
                 "damageVulnurabilities": [],
                 "statusEffectImmunities": [ "all except [BURNING], [FRIGHTENED]" ],
-                "freeTrait": null
+                "freeTraits": []
             }
         ]
     },
@@ -163,26 +163,8 @@
         "damageImmunities": [ "poison"],
         "damageVulnurabilities": [ "holy" ],
         "statusEffectImmunities": [ "[POISON]", "[INTOXICATED]", "[BLESS]", "[HEALING]", "[DECAYING]" ],
-        "freeTrait": "Undead",
+        "freeTraits": ["Undead", "Undead Darkvision"],
         "availibleSubTypes": [
-            { 
-                "name": "Ghost",
-                "pointsCost": 2,
-                "attributeBonsuses": {
-                    "str": -1,
-                    "agi": 1,
-                    "con": 0,
-                    "int": 0,
-                    "spi": 1,
-                    "per": 0,
-                    "cha": 0
-                },
-                "damageResistances": [{ "type": "physical", "value": "5 + [HALF LEVEL]" }],
-                "damageImmunities": [],
-                "damageVulnurabilities": [],
-                "statusEffectImmunities": [ "[BLEEDING]", "[SILENCED]", "[DEAFENED]", "[CRIPPLED]" ],
-                "freeTrait": "Incorporeal"
-            },
             { 
                 "name": "Zombie",
                 "pointsCost": 0,
@@ -199,7 +181,7 @@
                 "damageImmunities": [],
                 "damageVulnurabilities": [],
                 "statusEffectImmunities": [ ],
-                "freeTrait": null
+                "freeTraits": []
             },
             { 
                 "name": "Skeleton",
@@ -217,7 +199,25 @@
                 "damageImmunities": [],
                 "damageVulnurabilities": [],
                 "statusEffectImmunities": [ "[BLEEDING]", "[SILENCED]", "[DEAFENED]" ],
-                "freeTrait": null
+                "freeTraits": []
+            },
+            { 
+                "name": "Ghost",
+                "pointsCost": 2,
+                "attributeBonsuses": {
+                    "str": -1,
+                    "agi": 1,
+                    "con": 0,
+                    "int": 0,
+                    "spi": 1,
+                    "per": 0,
+                    "cha": 0
+                },
+                "damageResistances": [{ "type": "physical", "value": "5 + [HALF LEVEL]" }],
+                "damageImmunities": [],
+                "damageVulnurabilities": [],
+                "statusEffectImmunities": [ "[BLEEDING]", "[SILENCED]", "[DEAFENED]", "[CRIPPLED]" ],
+                "freeTraits": ["Incorporeal"]
             }
         ]
     },
@@ -237,7 +237,7 @@
         "damageImmunities": [],
         "damageVulnurabilities": [],
         "statusEffectImmunities": [],
-        "freeTrait": "Primordial",
+        "freeTraits": ["Primordial"],
         "availibleSubTypes": [
             { 
                 "name": "Earth",
@@ -255,7 +255,7 @@
                 "damageImmunities": ["poison"],
                 "damageVulnurabilities": [],
                 "statusEffectImmunities": ["[INTOXICATED]", ["BLINDED"] ],
-                "freeTrait":  "Earth Elemental"
+                "freeTraits": ["Earth Elemental"]
             },
             { 
                 "name": "Fire",
@@ -273,7 +273,7 @@
                 "damageImmunities": ["fire"],
                 "damageVulnurabilities": ["frost"],
                 "statusEffectImmunities": [],
-                "freeTrait": "Fire Elemental"
+                "freeTraits": ["Fire Elemental"]
             },
             { 
                 "name": "Air",
@@ -291,7 +291,7 @@
                 "damageImmunities": ["lightning"],
                 "damageVulnurabilities": [],
                 "statusEffectImmunities": [ "[RESTRAINED I]", "[RESTRAINED II]"],
-                "freeTrait": "Air Elemental"
+                "freeTraits": ["Air Elemental"]
             },
             { 
                 "name": "Water",
@@ -309,7 +309,7 @@
                 "damageImmunities": ["frost", "acid"],
                 "damageVulnurabilities": ["fire"],
                 "statusEffectImmunities": [ "[RESTRAINED I]", "[RESTRAINED II]" ],
-                "freeTrait": "Water Elemental"
+                "freeTraits": ["Water Elemental"]
             }
         ]
     },
@@ -323,13 +323,13 @@
             "int": 1,
             "spi": 2,
             "per": 0,
-            "cha": 2
+            "cha": 0
         },
         "damageResistances": [ { "type": "physical", "value": "5 + [HALF LEVEL]" } ],
         "damageImmunities": [ "cosmic" ],
         "damageVulnurabilities": [],
         "statusEffectImmunities": [],
-        "freeTrait": "Immortal",
+        "freeTraits": ["Immortal", "Cosmic Darkvision"],
         "availibleSubTypes": [
             { 
                 "name": "Celestial",
@@ -341,13 +341,13 @@
                     "int": 0,
                     "spi": 0,
                     "per": 0,
-                    "cha": 0
+                    "cha": 2
                 },
                 "damageResistances": [],
                 "damageImmunities": ["holy"],
                 "damageVulnurabilities": ["unholy"],
                 "statusEffectImmunities": [ ],
-                "freeTrait": null
+                "freeTraits": []
             },
             { 
                 "name": "Demon",
@@ -359,13 +359,13 @@
                     "int": 0,
                     "spi": 0,
                     "per": 0,
-                    "cha": 0
+                    "cha": 2
                 },
                 "damageResistances": [],
                 "damageImmunities": ["unholy"],
                 "damageVulnurabilities": ["holy"],
                 "statusEffectImmunities": ["[CURSED]"],
-                "freeTrait": null
+                "freeTraits": []
             },
             { 
                 "name": "Horror",
@@ -374,16 +374,16 @@
                     "str": 0,
                     "agi": 0,
                     "con": 0,
-                    "int": 0,
+                    "int": 1,
                     "spi": 0,
                     "per": 0,
                     "cha": 0
                 },
                 "damageResistances": [],
-                "damageImmunities": ["cosmic"],
+                "damageImmunities": [],
                 "damageVulnurabilities": [],
-                "statusEffectImmunities": [ ],
-                "freeTrait": null
+                "statusEffectImmunities": [],
+                "freeTraits": []
             }
         ]
     }

@@ -11,6 +11,8 @@ import { AttributeBoostComponent } from './attribute-boost/attribute-boost.compo
 import { CreatureTraitsComponent } from './creature-traits/creature-traits.component';
 import { PreDefinedAbilitiesComponent } from './pre-defined-abilities/pre-defined-abilities.component';
 
+import creatureTypesJson from '../../resources/creature_types.json'; 
+
 @Component({
     selector: 'rtr-npcgen-generator',
     imports: [NgbDropdownModule, CommonModule, CustomAbilityComponent, CreatureInfoComponent, CreaturePropertiesComponent, AttributeBoostComponent, CreatureTraitsComponent, PreDefinedAbilitiesComponent],
@@ -21,6 +23,10 @@ export class GeneratorComponent {
   currentCustomAbility!: Ability;
 
   readonly npcRepo = inject(NpcRepository);
+
+  constructor() {
+    this.npcRepo.updateCreatureType(creatureTypesJson[0]);
+  }
 
   npcCreationPointsExceeded(): Observable<boolean> {
     return combineLatest({availiblePoints: this.npcRepo.$availibleNpcCreationPoints, usedPoints: this.npcRepo.$usedNpcCreationPoints})

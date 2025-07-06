@@ -23,6 +23,7 @@ Will eventually add perk to heal
 - Robes?
 - rename class names to be more inline with the world?
 - rework origin to be more inline with in universe (consider riftlands)
+- add toolbox as json
 ____________________________________________________________
 ### Planned changes after Playtest:
 

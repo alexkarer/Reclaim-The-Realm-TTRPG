@@ -55,7 +55,7 @@
         "attributeMaximum": 3
       },
       "int": {
-        "value": 1,
+        "value": -3,
         "classAttribute": false,
         "attributeMaximum": 3
       },
@@ -65,7 +65,7 @@
         "attributeMaximum": 3
       },
       "cha": {
-        "value": 1,
+        "value": -3,
         "classAttribute": false,
         "attributeMaximum": 3
       }
@@ -490,34 +490,34 @@
       "_key": "!actors.items!RUDvv34Ndc0TKxFU.azNwSpAqmtdRCJYq"
     },
     {
-      "name": "Deadly Demise I",
+      "folder": "uMv1kp5JuDVkoJfG",
+      "name": "Cosmic Corrupted",
       "type": "npcTrait",
-      "_id": "xPZNfGYMBOOwboxD",
-      "img": "icons/svg/item-bag.svg",
+      "_id": "hFMsRUuywIOIhvvx",
+      "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
       "system": {
-        "description": "<p>When the creature dies all creautre within 3m have to make [WILLPOWER ][SAVE] or recieve 2d6 unholy damage.</p>",
-        "summary": "When the creature dies all creautre within 3m have to make [WILLPOWER ][SAVE] or recieve 2d6 unholy damage."
+        "description": "<p>The creature has been severly corrupted by the Aether. Either through Possesion by a small demon or severe Aether exposure. Recieve 3 random minor Cosmic Mutations and 1 Cosmic Corruption</p><p>@UUID[Compendium.reclaim-the-realm.gm-tables.RollTable.FfOl8LnFRgLUvewG]{Minor Cosmic Mutations}</p><p>@UUID[Compendium.reclaim-the-realm.gm-tables.RollTable.mNlHsFb1bg5C5vei]{Major Cosmic Mutation}</p><p></p><p></p>",
+        "summary": "Recieve 3 random minor Cosmic Mutations and 1 Cosmic Corruption"
       },
       "effects": [],
-      "folder": null,
-      "sort": 0,
+      "sort": 100000,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
-        "compendiumSource": null,
+        "compendiumSource": "Item.pyIsnUmILsPSg5cW",
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1751052343573,
-        "modifiedTime": 1751052387893,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1751798705630,
+        "modifiedTime": 1751798705630,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!RUDvv34Ndc0TKxFU.xPZNfGYMBOOwboxD"
+      "_key": "!actors.items!RUDvv34Ndc0TKxFU.hFMsRUuywIOIhvvx"
     }
   ],
   "effects": [],
@@ -535,7 +535,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750976619995,
-    "modifiedTime": 1751759151305,
+    "modifiedTime": 1751793058761,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!RUDvv34Ndc0TKxFU"

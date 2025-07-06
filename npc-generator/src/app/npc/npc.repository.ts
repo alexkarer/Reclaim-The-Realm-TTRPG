@@ -21,8 +21,6 @@ const npcStore = createStore(
         archeTypeProgression: archeTypesJson.warriorProgression,
         creatureType: creatureTypesJson[0],
         creatureSubType: creatureTypesJson[0].availibleSubTypes[0],
-        freeCreatureTrait: undefined,
-        freeSubCreatureTrait: traitsJson.creatureTypeSpecificTraits[0],
         creatureSize: sizesJson[2],
         specialMovement: [],
 
@@ -132,7 +130,7 @@ export class NpcRepository {
     $statusEffectImmunties = npcStore.pipe(select(state => [...state.creatureType.statusEffectImmunities, ...state.additionalStatusEffectImmunities].join(', ')));
     $damageVulnurabilities = npcStore.pipe(select(state => [...state.creatureType.damageVulnurabilities, ...state.additionalVulnurabilities].join(', ')));
 
-    $traits = npcStore.pipe(select(state => state.freeCreatureTrait === undefined ? state.traits : [...state.traits, state.freeCreatureTrait]));
+    $traits = npcStore.pipe(select(state => state.traits));
 
     $customAbilities = npcStore.pipe(select(state => state.customAbilities));
     $allAbilities = npcStore.pipe(select(state => [...state.preDefinedAbilities, ...state.customAbilities]
@@ -191,24 +189,38 @@ export class NpcRepository {
     }
 
     updateCreatureType(type: CreatureType) {
-        let freeTrait = traitsJson.creatureTypeSpecificTraits.find(t => t.name === type.freeTrait);
-        npcStore.update(setProp('freeCreatureTrait', existingFreeTrait => {
-            //if (existingFreeTrait) { this.removeTraitsCharacteristics(existingFreeTrait.name); }
-            return freeTrait;
-        }));
-        //if (freeTrait) { this.applyTraitsCharacteristics(freeTrait.name); }
+        npcStore.state.creatureType.freeTraits.map(freetraitname => traitsJson.creatureTypeSpecificTraits
+            .find(t => t.name === freetraitname))
+            .filter(t => t !== undefined)
+            .forEach(existingFreeTrait => {
+                this.removeTrait(existingFreeTrait);
+            });
+
+        type.freeTraits.map(freetraitname => traitsJson.creatureTypeSpecificTraits
+            .find(t => t.name === freetraitname))
+            .filter(t => t !== undefined)
+            .forEach(freeTrait => {
+                this.addTrait(freeTrait);
+            });
 
         npcStore.update(setProp('creatureType', type));
         this.updateCreatureSubType(type.availibleSubTypes[0]);
     }
 
     updateCreatureSubType(subType: CreatureSubType) {
-        let freeTrait = traitsJson.creatureTypeSpecificTraits.find(t => t.name === subType.freeTrait);
-        npcStore.update(setProp('freeSubCreatureTrait', existingFreeTrait => {
-            //if (existingFreeTrait) { this.removeTraitsCharacteristics(existingFreeTrait.name); }
-            return freeTrait;
-        }));
-        //if (freeTrait) { this.applyTraitsCharacteristics(freeTrait.name); }
+        npcStore.state.creatureSubType.freeTraits.map(freetraitname => traitsJson.creatureTypeSpecificTraits
+            .find(t => t.name === freetraitname))
+            .filter(t => t !== undefined)
+            .forEach(existingFreeTrait => {
+                this.removeTrait(existingFreeTrait);
+            });
+
+        subType.freeTraits.map(freetraitname => traitsJson.creatureTypeSpecificTraits
+            .find(t => t.name === freetraitname))
+            .filter(t => t !== undefined)
+            .forEach(freeTrait => {
+                this.addTrait(freeTrait);
+            });
 
         npcStore.update(setProp('creatureSubType', subType));
     }
@@ -356,8 +368,14 @@ export class NpcRepository {
     private updateBaseHpBonus(hp: number) {
         npcStore.update(setProp('baseHpBonus', hpBonus => hpBonus + hp));
     }
+    private updateIntBonus(int: number) {
+        npcStore.update(setProp('intBonus', intBonus => intBonus + int));
+    }
     private updateSpiBonus(spi: number) {
         npcStore.update(setProp('spiBonus', spiBonus => spiBonus + spi));
+    }
+    private updateChaBonus(cha: number) {
+        npcStore.update(setProp('chaBonus', chaBonus => chaBonus + cha));
     }
 
     private applyTraitsCharacteristics(traitName: string) {
@@ -369,10 +387,12 @@ export class NpcRepository {
                 this.updateMpBonus(1);
                 break;
             case 'Dwarven Nightvision':
-                break;
             case 'Undead':
-                break;
+            case 'Undead Darkvision':
+            case 'Incorporeal':
+            case 'Primordial':
             case 'Fire Elemental':
+            case 'Earth Elemental':
                 break;
             case 'Air Elemental':
                 this.addSpecialMovement('fly(1.5m)');
@@ -381,6 +401,7 @@ export class NpcRepository {
                 this.addSpecialMovement('swim(1.5m)');
                 break;
             case 'Immortal':
+            case 'Cosmic Darkvision':
                 break;
             case 'Nimble I':
                 this.updateMpBonus(1);
@@ -494,6 +515,7 @@ export class NpcRepository {
                 break;
             case 'Cosmic Corrupted':
                 this.updateSpiBonus(2);
+                this.updateChaBonus(-4);
                 this.addDamageResistance({ type: 'cosmic', value: '10 + [LEVEL]'});
                 this.addDamageResistance({ type: 'physical', value: '[LEVEL]'});
                 break;
@@ -511,10 +533,12 @@ export class NpcRepository {
                 this.updateMpBonus(-1);
                 break;
             case 'Dwarven Nightvision':
-                break;
             case 'Undead':
-                break;
+            case 'Undead Darkvision':
+            case 'Incorporeal':
+            case 'Primordial':
             case 'Fire Elemental':
+            case 'Earth Elemental':
                 break;
             case 'Air Elemental':
                 this.removeSpecialMovement('fly(1.5m)');
@@ -523,6 +547,7 @@ export class NpcRepository {
                 this.removeSpecialMovement('swim(1.5m)');
                 break;
             case 'Immortal':
+            case 'Cosmic Darkvision':
                 break;
             case 'Nimble I':
                 this.updateMpBonus(-1);
@@ -636,6 +661,7 @@ export class NpcRepository {
                 break;
             case 'Cosmic Corrupted':
                 this.updateSpiBonus(-2);
+                this.updateChaBonus(4);
                 this.removeDamageResistance({ type: 'cosmic', value: '10 + [LEVEL]'});
                 this.removeDamageResistance({ type: 'physical', value: '[LEVEL]'});
                 break;

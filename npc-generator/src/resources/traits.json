@@ -4,12 +4,14 @@
         { "pointsCost": 0, "name": "Elven Nimbleness", "description": "+1 [MP]" },
         { "pointsCost": 0, "name": "Dwarven Nightvision", "description": "Gain 4.5m nightvision" },
         { "pointsCost": 0, "name": "Undead", "description": "Doesn't require food, water or sleep. Can't get Exhausted" },
+        { "pointsCost": 0, "name": "Undead Darkvision", "description": "Gain 9m darkvision" },
         { "pointsCost": 0, "name": "Primordial", "description": "When it is reduced to 0 [HP] instead of dying it's energy reforms again in the Elemental Plane of it's orgin." },
         { "pointsCost": 0, "name": "Earth Elemental", "description": "Gain Burrow(3m) speed." },
         { "pointsCost": 0, "name": "Fire Elemental", "description": "[AURA] creatures recieve 2*[LEVEL] fire damage" },
         { "pointsCost": 0, "name": "Air Elemental", "description": "Gain fly(1.5m) speed." },
         { "pointsCost": 0, "name": "Water Elemental", "description": "Gain swim(3m) speed." },
         { "pointsCost": 0, "name": "Immortal", "description": "Doesn't require food, water or sleep. Can't get Exhausted. When it is reduced to 0 [HP] instead of dying it goes back to the Aether where it reforms." },
+        { "pointsCost": 0, "name": "Cosmic Darkvision", "description": "Gain 19m darkvision" },
         { "pointsCost": 0, "name": "Incorporeal", "description": "Gain fly(1.5m) speed and you can move through walls but can't end your mvoe in there" }
     ],
     "movementTraits": [
@@ -17,8 +19,8 @@
         { "pointsCost": 2, "name": "Nimble II", "description": "+2 [MP]" },
         { "pointsCost": 3, "name": "Nimble III", "description": "+3 [MP]" },
         { "pointsCost": 1, "name": "Fly I", "description": "gain fly(1.5m) speed." },
-        { "pointsCost": 2, "name": "Fly II", "description": "Increase fly speed by 1.5m." },
-        { "pointsCost": 3, "name": "Fly III", "description": "Increase fly speed by 3m." }
+        { "pointsCost": 3, "name": "Fly II", "description": "gain fly(3m) speed." },
+        { "pointsCost": 5, "name": "Fly III", "description": "gain fly(6m) speed." }
     ],
     "defensiveTraits": [
         { "pointsCost": 1, "name": "Tank I", "description": "+5 [HP], +2 [HP] per [LEVEL]" },
@@ -48,9 +50,9 @@
         { "pointsCost": 1, "name": "Tower Shield", "description": "Gain shield block base of 15 and threshold of 40 with maneuvrepeanlty of -3 and movement penalty of -1" }
     ],
     "otherTraits": [
-        { "pointsCost": 1, "name": "Nightvision I", "description": "Gain 4.5m nightvision" },
-        { "pointsCost": 2, "name": "Nightvision II", "description": "Gain 6m nightvision" },
-        { "pointsCost": 3, "name": "Nightvision III", "description": "Gain 12m nightvision" },
+        { "pointsCost": 1, "name": "Darkvision I", "description": "Gain 4.5m nightvision" },
+        { "pointsCost": 2, "name": "Darkvision II", "description": "Gain 9m nightvision" },
+        { "pointsCost": 3, "name": "Darkvision III", "description": "Gain 18m nightvision" },
         { "pointsCost": 1, "name": "Deadly I", "description": "Increase Crit Threshold by 1." },
         { "pointsCost": 3, "name": "Deadly II", "description": "Increase Crit Threshold by 1." },
         { "pointsCost": 5, "name": "Deadly III", "description": "Increase Crit Threshold by 1." },
@@ -61,13 +63,16 @@
         { "pointsCost": 2, "name": "Spell Eater", "description": "Each time a [SPELL ABILITY] is used within 9m of the creature, the creature regains 1d6 + additional d6 per [SPELL ABILITY] level and the next damaging Ability deals d6 for [SPELL ABILITY] level." },
         { "pointsCost": 1, "name": "Deadly Demise I", "description": "When the creature dies all creautre within 3m have to make [SAVE] or recieve 2d6 damage." },
         { "pointsCost": 3, "name": "Deadly Demise II", "description": "When the creature dies all creautre within 4.5m have to make [SAVE] or recieve 4d6 damage." },
-        { "pointsCost": 5, "name": "Deadly Demise III", "description": "When the creature dies all creautre within 6m have to make [SAVE] or recieve 6d6 damage." }
+        { "pointsCost": 5, "name": "Deadly Demise III", "description": "When the creature dies all creautre within 6m have to make [SAVE] or recieve 8d6 damage." },
+        { "pointsCost": 1, "name": "Fearsome I", "description": "[AURA] 6m. Any enemy creautre has to make a [WILLPOWER SAVE] vs. [DT] 10+[LEVEL]. On fail:[FRIGHTINED I]. [SAVE ENDS]." },
+        { "pointsCost": 3, "name": "Fearsome II", "description": "[AURA] 12m. Any enemy creautre has to make a [WILLPOWER SAVE] vs. [DT] 10+[LEVEL]. On fail: [FRIGHTINED II] On success: [FRIGHTENED I]. [SAVE LOWERS]." },
+        { "pointsCost": 5, "name": "Fearsome III", "description": "[AURA] 18m. Any enemy creautre has to make a [WILLPOWER SAVE] vs. [DT] 10+[LEVEL]. On fail: [FRIGHTINED II] On success: [FRIGHTENED II]. [SAVE LOWERS]." }
     ],
     "creatureTypeTraits": [
         { "pointsCost": 1, "name": "Mimic", "description": "If the creature remains motionless it is undistinguishable from the object it is mimicing. But can be detected with a [DT] 25 + [LEVEL] [PER] Investigation [SKILL TEST]. Each creature that touches the Mimic gets stuck on it and recieves [RESTRAINED I] [DT] 10 + [LEVEl] + [CON]." },
         { "pointsCost": 1, "name": "Cosmic Touched", "description": "The creature has been touched by the Aether. Increase [SPI] by 1. Get cosmic resistance equal to 5 + [HALF LEVEL] and recieve 1 random minor Cosmic Mutation." },
         { "pointsCost": 3, "name": "Cosmic Blessed", "description": "The creature has been blessed by the Aether. Increase [SPI] by 2. Get cosmic resistance equal to 10 + [LEVEL] and recieve 2 random minor Cosmic Mutations and 1 Cosmic Blessing" },
-        { "pointsCost": 3, "name": "Cosmic Corrupted", "description": "The creature has been blessed by the Aether. Increase [SPI] by 2. Get cosmic resistance equal to 10 + [LEVEL] and phyiscal reisistance equal to [LEVEL] and recieve 3 random minor Cosmic Mutations and 1 Cosmic Corruption" },
-        { "pointsCost": 6, "name": "Cosmic Chosen", "description": "The creature has been blessed by the Aether. Increase [SPI] by 3. Get Immunity to cosmic damage and recieve 2 random minor Cosmic Mutations and 1 Cosmic Blessing and TODO" }
+        { "pointsCost": 3, "name": "Cosmic Corrupted", "description": "The creature has been severly corrupted by the Aether. Either through Possesion by a small demon or severe Aether exposure. Increase [SPI] by 2 and decrease [CHA] by 4. Get cosmic resistance equal to 10 + [LEVEL] and phyiscal reisistance equal to [LEVEL] and recieve 3 random minor Cosmic Mutations and 1 Major Mutation." },
+        { "pointsCost": 6, "name": "Cosmic Chosen", "description": "The creature has been blessed by the Aether. Increase [SPI] by 3. Get Immunity to cosmic damage and recieve 2 random minor Cosmic Mutations and 2 Cosmic Blessing and increase all other Attributes by 1." }
     ]
 }

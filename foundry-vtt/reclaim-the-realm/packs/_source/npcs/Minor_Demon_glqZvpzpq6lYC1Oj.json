@@ -381,7 +381,7 @@
       "_id": "z3te6UmPd9aPBQls",
       "img": "icons/svg/item-bag.svg",
       "system": {
-        "description": "<p>[DT] 12 [WILLPOWER] [SAVE][CONE] (4.5m). On success: d6+3 [unholy] damage. , additionally afflict [CURSED I] lasts 2 [ROUND] [SAVE LOWERS]</p>",
+        "description": "<p><span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DT</span></strong></span> 12 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">WILLPOWER SAVE CONE</span></strong></span>(4.5m). On success: [[/roll d6+3[unholy]]] damage. , additionally afflict [<strong>CURSED</strong> <strong>I</strong>] lasts 2 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">ROUND</span></strong></span> <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SAVE LOWERS .</span></strong></span></p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -427,70 +427,71 @@
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
         "createdTime": 1751053323169,
-        "modifiedTime": 1751053377021,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "modifiedTime": 1751799478492,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
       "_key": "!actors.items!glqZvpzpq6lYC1Oj.z3te6UmPd9aPBQls"
     },
     {
       "name": "Immortal",
       "type": "npcTrait",
-      "_id": "hVLwpwVQ2nSPqqTu",
-      "img": "icons/svg/item-bag.svg",
+      "_id": "hpJUMxo8yRF9IchV",
+      "img": "icons/creatures/magical/construct-golem-stone-blue.webp",
       "system": {
         "description": "<p>Doesn't require food, water or sleep. Can't get Exhausted. When it is reduced to 0 [HP] instead of dying it goes back to the Aether where it reforms.</p>",
         "summary": "Doesn't require food, water or sleep. Can't get Exhausted. When it is reduced to 0 [HP] instead of dying it goes back to the Aether where it reforms."
       },
       "effects": [],
-      "folder": null,
-      "sort": 0,
+      "folder": "MQeNdvmUBKB4Ysgp",
+      "sort": 150000,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "dMcHPOGHbwLGpLCS": 3,
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
-        "compendiumSource": null,
+        "compendiumSource": "Compendium.reclaim-the-realm.npcs.Actor.glqZvpzpq6lYC1Oj.Item.hVLwpwVQ2nSPqqTu",
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1751053464680,
-        "modifiedTime": 1751053477973,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1751799402868,
+        "modifiedTime": 1751799402868,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!glqZvpzpq6lYC1Oj.hVLwpwVQ2nSPqqTu"
+      "_key": "!actors.items!glqZvpzpq6lYC1Oj.hpJUMxo8yRF9IchV"
     },
     {
-      "name": "Darkvision",
+      "folder": "vXJ2CMVbw7Vilgrm",
+      "name": "Deadly Demise I",
       "type": "npcTrait",
-      "_id": "pHVlrh89efaD83rT",
-      "img": "icons/svg/item-bag.svg",
+      "_id": "beNIYwBEvdVEsdU8",
+      "img": "icons/magic/fire/explosion-fireball-small-purple-orange.webp",
       "system": {
-        "description": "<p>Gain 4.5m nightvision</p>",
-        "summary": "Gain 4.5m nightvision"
+        "description": "<p>When the creature dies all creautre within 3m have to make <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SAVE</span></strong></span> or recieve 2d6 damage.</p>",
+        "summary": "When the creature dies all creautre within 3m have to make SAVE or recieve 2d6 damage."
       },
       "effects": [],
-      "folder": null,
-      "sort": 0,
+      "sort": 125000,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
-        "compendiumSource": null,
+        "compendiumSource": "Item.nMm0Z2kJ7WYrysQU",
         "duplicateSource": null,
         "exportSource": null,
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1751053478888,
-        "modifiedTime": 1751053492098,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1751799405725,
+        "modifiedTime": 1751799405725,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!glqZvpzpq6lYC1Oj.pHVlrh89efaD83rT"
+      "_key": "!actors.items!glqZvpzpq6lYC1Oj.beNIYwBEvdVEsdU8"
     }
   ],
   "effects": [],
