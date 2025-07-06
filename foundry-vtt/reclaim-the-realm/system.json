@@ -139,6 +139,28 @@
           "TRUSTED": "OBSERVER",
           "ASSISTANT": "OBSERVER"
       }
+    },
+    {
+      "name": "gm-tables",
+      "label": "GM Tables",
+      "type": "RollTable",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "NONE",
+          "TRUSTED": "NONE",
+          "ASSISTANT": "OBSERVER"
+      }
+    },
+    {
+      "name": "player-tables",
+      "label": "Player Tables",
+      "type": "RollTable",
+      "system": "reclaim-the-realm",
+      "ownership": {
+          "PLAYER": "OBSERVER",
+          "TRUSTED": "OBSERVER",
+          "ASSISTANT": "OBSERVER"
+      }
     }
   ],
   "documentTypes": {

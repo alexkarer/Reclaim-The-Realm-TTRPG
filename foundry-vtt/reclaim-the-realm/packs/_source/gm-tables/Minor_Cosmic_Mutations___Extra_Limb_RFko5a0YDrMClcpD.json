@@ -1,0 +1,138 @@
+{
+  "folder": "01UVlFZ4oz1ds0Wg",
+  "name": "Minor Cosmic Mutations - Extra Limb",
+  "_id": "RFko5a0YDrMClcpD",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "_id": "8jRMR2ly7xuV6kR6",
+      "name": "Tail",
+      "img": "icons/svg/d20-black.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759655696,
+        "modifiedTime": 1751759677880,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!RFko5a0YDrMClcpD.8jRMR2ly7xuV6kR6"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "_id": "rJvLbENeTCtvixhQ",
+      "name": "Arm",
+      "img": "icons/svg/d20-black.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759659412,
+        "modifiedTime": 1751759684886,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!RFko5a0YDrMClcpD.rJvLbENeTCtvixhQ"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "_id": "VpttXFfWrZ1e7CON",
+      "name": "Leg",
+      "img": "icons/svg/d20-black.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759659609,
+        "modifiedTime": 1751759722670,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!RFko5a0YDrMClcpD.VpttXFfWrZ1e7CON"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "_id": "g1ElM38O1IHLsk1u",
+      "name": "Tentacle-like Limb",
+      "img": "icons/svg/d20-black.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759660084,
+        "modifiedTime": 1751759729076,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!RFko5a0YDrMClcpD.g1ElM38O1IHLsk1u"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1751759649948,
+    "modifiedTime": 1751759671901,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "formula": "",
+  "_key": "!tables!RFko5a0YDrMClcpD"
+}

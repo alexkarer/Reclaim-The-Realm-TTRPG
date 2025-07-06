@@ -1,0 +1,84 @@
+{
+  "folder": "01UVlFZ4oz1ds0Wg",
+  "name": "Minor Cosmic Mutations - Sensory Change",
+  "_id": "N3dkdRUUoNhkz1Kk",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "_id": "WDdMbvwBCh9xaSsv",
+      "name": "Cyclops",
+      "img": "icons/svg/d20-black.svg",
+      "description": "<p>You gain one giant eye on your head</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759882739,
+        "modifiedTime": 1751759899459,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!N3dkdRUUoNhkz1Kk.WDdMbvwBCh9xaSsv"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "_id": "McJFpExHcfqgqsXk",
+      "name": "Extra Eye",
+      "img": "icons/svg/d20-black.svg",
+      "description": "<p>An extra eye grows on a random place on your body</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759882904,
+        "modifiedTime": 1751759918622,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!N3dkdRUUoNhkz1Kk.McJFpExHcfqgqsXk"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1751759879960,
+    "modifiedTime": 1751759973456,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "formula": "1d2",
+  "_key": "!tables!N3dkdRUUoNhkz1Kk"
+}

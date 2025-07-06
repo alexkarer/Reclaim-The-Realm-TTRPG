@@ -1,0 +1,192 @@
+{
+  "name": "Minor Cosmic Mutations",
+  "_id": "FfOl8LnFRgLUvewG",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "_id": "glLpuRuKrhwt8xfS",
+      "name": "Grow Horns",
+      "img": "icons/svg/d20-black.svg",
+      "description": "<p>The creature grows horns out of their head</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759578431,
+        "modifiedTime": 1751759705616,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!FfOl8LnFRgLUvewG.glLpuRuKrhwt8xfS"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "_id": "m63GlLCAzs2JFm7n",
+      "name": "Minor Cosmic Mutations - Extra Limb",
+      "img": "icons/svg/d20-grey.svg",
+      "description": "<p>Grow a random extra limb</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759578956,
+        "modifiedTime": 1751759747566,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": "Compendium.reclaim-the-realm.gm-tables.RollTable.RFko5a0YDrMClcpD",
+      "_key": "!tables.results!FfOl8LnFRgLUvewG.m63GlLCAzs2JFm7n"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "_id": "7gvcVKk3qO6KG2qR",
+      "name": "Minor Cosmic Mutations - Skin color change",
+      "img": "icons/svg/d20-grey.svg",
+      "description": "<p>Your skin color changes</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759579311,
+        "modifiedTime": 1751759861158,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": "Compendium.reclaim-the-realm.gm-tables.RollTable.b5pmZEc1xQ5uqdrn",
+      "_key": "!tables.results!FfOl8LnFRgLUvewG.7gvcVKk3qO6KG2qR"
+    },
+    {
+      "type": "document",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "_id": "HBmF8KFHwkLQ7MBu",
+      "name": "Minor Cosmic Mutations - Sensory Change",
+      "img": "icons/svg/d20-grey.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759579840,
+        "modifiedTime": 1751759932721,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": "Compendium.reclaim-the-realm.gm-tables.RollTable.N3dkdRUUoNhkz1Kk",
+      "_key": "!tables.results!FfOl8LnFRgLUvewG.HBmF8KFHwkLQ7MBu"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "_id": "91qnvwNbAsM2GNGp",
+      "name": "Claws",
+      "img": "icons/svg/d20-black.svg",
+      "description": "<p>A random hand turns into a claw</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759580301,
+        "modifiedTime": 1751759952476,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!FfOl8LnFRgLUvewG.91qnvwNbAsM2GNGp"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "_id": "VaFerTCZq8BzEtx2",
+      "name": "Hooves",
+      "img": "icons/svg/d20-black.svg",
+      "description": "<p>The creatures feet turn into hooves</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759580746,
+        "modifiedTime": 1751759964341,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!FfOl8LnFRgLUvewG.VaFerTCZq8BzEtx2"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": "01UVlFZ4oz1ds0Wg",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1751759572147,
+    "modifiedTime": 1751759968348,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "formula": "1d6",
+  "_key": "!tables!FfOl8LnFRgLUvewG"
+}

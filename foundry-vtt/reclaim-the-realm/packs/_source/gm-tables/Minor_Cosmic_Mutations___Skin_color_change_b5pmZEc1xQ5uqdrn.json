@@ -1,0 +1,192 @@
+{
+  "folder": "01UVlFZ4oz1ds0Wg",
+  "name": "Minor Cosmic Mutations - Skin color change",
+  "_id": "b5pmZEc1xQ5uqdrn",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "_id": "dEwEkluBrtqioqyx",
+      "name": "Red",
+      "img": "icons/svg/d20-black.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759772868,
+        "modifiedTime": 1751759783895,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!b5pmZEc1xQ5uqdrn.dEwEkluBrtqioqyx"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "_id": "4OFYlBKc40vqAdfh",
+      "name": "Blue",
+      "img": "icons/svg/d20-black.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759773635,
+        "modifiedTime": 1751759788631,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!b5pmZEc1xQ5uqdrn.4OFYlBKc40vqAdfh"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "_id": "cQtVJZ5U3TcadNVK",
+      "name": "Purple",
+      "img": "icons/svg/d20-black.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759774137,
+        "modifiedTime": 1751759792414,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!b5pmZEc1xQ5uqdrn.cQtVJZ5U3TcadNVK"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "_id": "JUfJGEsegwRKkOMr",
+      "name": "Dark Green",
+      "img": "icons/svg/d20-black.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759774602,
+        "modifiedTime": 1751759797806,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!b5pmZEc1xQ5uqdrn.JUfJGEsegwRKkOMr"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "_id": "SAsu6MaOrGTYYNN1",
+      "name": "Pale White",
+      "img": "icons/svg/d20-black.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759775050,
+        "modifiedTime": 1751759803847,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!b5pmZEc1xQ5uqdrn.SAsu6MaOrGTYYNN1"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "_id": "jjUfHDJmXmcHdvJZ",
+      "name": "Pitch Black",
+      "img": "icons/svg/d20-black.svg",
+      "description": "",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751759775593,
+        "modifiedTime": 1751759808578,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!b5pmZEc1xQ5uqdrn.jjUfHDJmXmcHdvJZ"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1751759765264,
+    "modifiedTime": 1751759847428,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "formula": "1d6",
+  "_key": "!tables!b5pmZEc1xQ5uqdrn"
+}

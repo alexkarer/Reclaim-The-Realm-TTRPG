@@ -17,7 +17,7 @@
         "magicalMishaps": {
             "description": "Roll d20 + [ARCANA] cost of spell. If [ARCANA] Cost was lowered by some other ability does not reduce the bonus here.",
             "table": [
-                {"roll": "4 or lower", "effect": "You gain 1 lepointvel of [EXHAUSTION]"},
+                {"roll": "4 or lower", "effect": "You gain 1 point of [EXHAUSTION]"},
                 {"roll": "5-7", "effect": "A disturbing shirek resounds within the head of every living creature within 9m and they must make a [DT] 15 [WILLPOWER] [SAVE] or recieve the [STUNNED III] Condition for 1 [TURN]."},
                 {"roll": "8-10", "effect": "You recieve 4d6 damage depending on spell discipline (holy/elemental/cosmic)."},
                 {"roll": "11-13", "effect": "Weak Effect depending on spell discipline"},

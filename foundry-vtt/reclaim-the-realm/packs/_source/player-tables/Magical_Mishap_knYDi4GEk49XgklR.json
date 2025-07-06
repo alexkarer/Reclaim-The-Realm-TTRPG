@@ -1,0 +1,435 @@
+{
+  "name": "Magical Mishap",
+  "_id": "knYDi4GEk49XgklR",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "description": "<p>Roll d20 + <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">ARCANA</span></strong></span> cost of spell. If <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">ARCANA</span></strong></span> Cost was lowered by some other ability does not reduce the bonus here.</p>",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        4
+      ],
+      "_id": "pJvURNfNbQF2HXkE",
+      "name": "Exhaustion",
+      "img": "icons/svg/sleep.svg",
+      "description": "<p>You gain 1 point of <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">EXHAUSTION</span></strong></span></p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760069189,
+        "modifiedTime": 1751761145464,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.pJvURNfNbQF2HXkE"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        7
+      ],
+      "_id": "Nf6BU65a1PP9AcQ3",
+      "name": "Distirbing Shriek",
+      "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+      "description": "<p>A disturbing shriekresounds within the head of every living creature within 9m and they must make a <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DT</span></strong></span> 15 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">WILLPOWER SAVE</span></strong></span> or recieve the <strong>[STUNNED III]</strong> Condition for 1 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TURN</span></strong></span></p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760128343,
+        "modifiedTime": 1751761145042,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.Nf6BU65a1PP9AcQ3"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        8,
+        10
+      ],
+      "_id": "sFvZa4n3fMnfN9qx",
+      "name": "Self Damage",
+      "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+      "description": "<p>You recieve 4d6 damage depending on spell discipline (holy/elemental/cosmic)..</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760128514,
+        "modifiedTime": 1751761144675,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.sFvZa4n3fMnfN9qx"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        11,
+        13
+      ],
+      "_id": "CyhWnpNFgrVL7uBb",
+      "name": "Weak Speal Discipline Effect",
+      "img": "icons/magic/symbols/runes-triangle-magenta.webp",
+      "description": "<p>Weak Effect depending on spell discipline</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760129826,
+        "modifiedTime": 1751761144267,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.CyhWnpNFgrVL7uBb"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        14,
+        16
+      ],
+      "_id": "gouyTccxonlBkfR3",
+      "name": "Loose Senses",
+      "img": "icons/svg/blind.svg",
+      "description": "<p>For 1 minute you loose all senses and become <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DEAFENED</span></strong></span>, <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">BLINDED</span></strong></span>. <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SAVE ENDS DT</span></strong></span> 15 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TOUGHNESS SAVE</span></strong></span></p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760130013,
+        "modifiedTime": 1751761143870,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.gouyTccxonlBkfR3"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        17,
+        19
+      ],
+      "_id": "JcTmC5t9V7qzku7N",
+      "name": "Summon Entity",
+      "img": "icons/creatures/unholy/demon-hairy-winged-pink.webp",
+      "description": "<p>You summon a <strong><span style=\"text-decoration:underline\">LEVEL</span></strong> 3 Extraplanar Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests.</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760130169,
+        "modifiedTime": 1751761143512,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.JcTmC5t9V7qzku7N"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        20,
+        22
+      ],
+      "_id": "f8rQ5FxF81vuWQfC",
+      "name": "Spell Echo",
+      "img": "icons/magic/symbols/ring-circle-smoke-blue.webp",
+      "description": "<p>You cast a random Spell of the same Discipline of the same <strong><span style=\"text-decoration:underline\">SPELL ABILITY</span></strong> Level without upcasting or <strong><span style=\"text-decoration:underline\">ARCANA</span></strong> Cost with you being the target, or the center of the area effect.</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760130349,
+        "modifiedTime": 1751761143133,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.f8rQ5FxF81vuWQfC"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        23,
+        25
+      ],
+      "_id": "nX8xkhLBo1XDLRDC",
+      "name": "Medium Spell Discipline Effect",
+      "img": "icons/magic/symbols/runes-star-magenta.webp",
+      "description": "<p>Medium Effect depending on spell discipline</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760130589,
+        "modifiedTime": 1751761141392,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.nX8xkhLBo1XDLRDC"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        26,
+        28
+      ],
+      "_id": "Ka5S9wql7egzwg1M",
+      "name": "Temporal Disturbance",
+      "img": "icons/magic/time/hourglass-tilted-glowing-gold.webp",
+      "description": "<p>The arcane energy causes a temporal disturbance, The spellcaster is removed from existance and appears in 1d10 <strong><span style=\"text-decoration:underline\">ROUND</span></strong> in again, at the nearest unnocupied space.</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760201324,
+        "modifiedTime": 1751761141037,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.Ka5S9wql7egzwg1M"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        29,
+        31
+      ],
+      "_id": "QGd1vTM5gICTH63T",
+      "name": "Summon Stronger Entity",
+      "img": "icons/creatures/magical/spirit-poison-smoke-green.webp",
+      "description": "<p>You summon a <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">LEVEL</span></strong></span> 8 Extraplanar Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests.</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760201502,
+        "modifiedTime": 1751761140462,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.QGd1vTM5gICTH63T"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        32,
+        34
+      ],
+      "_id": "x4HoW2mWCIHtsWvW",
+      "name": "Open Rift",
+      "img": "icons/magic/movement/portal-vortex-orange.webp",
+      "description": "<p>You open a temporary Rift to another Plane depending on your Spell Discipline. Every creature is sucked in unless they pass a <strong><span style=\"text-decoration:underline\">DT</span></strong> 30 <strong><span style=\"text-decoration:underline\">STABILITY SAVE</span></strong>.</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760201690,
+        "modifiedTime": 1751761140065,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.x4HoW2mWCIHtsWvW"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        35,
+        37
+      ],
+      "_id": "JSVxwF9Xj4CUZiIw",
+      "name": "Strong Spell Discipline Effect",
+      "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+      "description": "<p>\tStrong Effect depending on spell discipline</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760201858,
+        "modifiedTime": 1751761139699,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.JSVxwF9Xj4CUZiIw"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        38,
+        40
+      ],
+      "_id": "Kf9v3VpVYbIhvs59",
+      "name": "Violent Spell Feedback",
+      "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
+      "description": "<p>Your spell gives you a violent Feedback that shatters through your body. Make a <strong><span style=\"text-decoration:underline\">DT</span></strong> 30 <strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong> or <strong><span style=\"text-decoration:underline\">WILLPOWER SAVE</span></strong>. On a success you suffer 20d6 damage which can't be reduced in any way. On a failure you are reduced to 0 HP, suffer 5 points of <strong><span style=\"text-decoration:underline\">EXHAUSTION</span></strong> and suffer a permanent Injury with a +20 to the Injury Test.</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760202038,
+        "modifiedTime": 1751761139354,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.Kf9v3VpVYbIhvs59"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        41,
+        43
+      ],
+      "_id": "dndUBO3Krf95mmmC",
+      "name": "Summon Powerful Entity",
+      "img": "icons/creatures/unholy/demon-horned-winged-laughing.webp",
+      "description": "<p>You summon a <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">LEVEL</span></strong></span> 15 Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests. Additionally this Entity is summoned by an army of weaker followers chosen by the GM.</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760248199,
+        "modifiedTime": 1751761138992,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.dndUBO3Krf95mmmC"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        44,
+        100
+      ],
+      "_id": "JhOXgewjJWuGLA19",
+      "name": "Create Stable Rift",
+      "img": "icons/magic/lightning/bolt-strike-explosion-blue.webp",
+      "description": "<p>You create a stable Rift, linking the current area in a 1d4 km radius with another Plane depending on your Spell Discipline. The Area will be permanently transformed unless the Rift can be closed within 1 hour. extraplanar Entities will also start to freely emerge here.</p>",
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751760251728,
+        "modifiedTime": 1751761104887,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "documentUuid": null,
+      "_key": "!tables.results!knYDi4GEk49XgklR.JhOXgewjJWuGLA19"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "OLKSfPDHiy1Xf9SG": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1751760043513,
+    "modifiedTime": 1751761178980,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "formula": "1d20",
+  "_key": "!tables!knYDi4GEk49XgklR"
+}

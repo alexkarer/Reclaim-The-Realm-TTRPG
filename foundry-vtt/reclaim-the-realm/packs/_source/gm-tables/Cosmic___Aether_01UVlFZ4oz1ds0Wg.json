@@ -1,0 +1,23 @@
+{
+  "type": "RollTable",
+  "folder": null,
+  "name": "Cosmic & Aether",
+  "color": "#5e0d57",
+  "sorting": "a",
+  "_id": "01UVlFZ4oz1ds0Wg",
+  "description": "",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.345",
+    "systemId": "reclaim-the-realm",
+    "systemVersion": "2.0.0",
+    "createdTime": 1751759570189,
+    "modifiedTime": 1751759570189,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+  },
+  "_key": "!folders!01UVlFZ4oz1ds0Wg"
+}
