@@ -20,12 +20,12 @@ const npcStore = createStore(
         levelConfig: levelsJson[0],
         archeTypeProgression: archeTypesJson.warriorProgression,
         creatureType: creatureTypesJson[0],
-        creatureSubType: creatureTypesJson[0].availibleSubTypes[0],
+        creatureSubType: creatureTypesJson[0].availibleSubTypes[0], 
         creatureSize: sizesJson[2],
         specialMovement: [],
 
         mpBonus: 0,
-        additionalNpcCreationPoints: 0,
+        additionalNpcCreationPoints: 1, // 1 because human subtype (the default) gains +1 npc creation points 
         baseHpBonus: 0,
         hpPerLevelBonuses: 0,
 
@@ -92,6 +92,7 @@ export class NpcRepository {
     $creatureSubType = npcStore.pipe(select(state => state.creatureSubType.name));
     $creatureSize = npcStore.pipe(select(state => state.creatureSize.name));
 
+    $hp = npcStore.pipe(select(state => helpers.calculateHp(state)));
     $ap = npcStore.pipe(select(state => state.levelConfig.AP));
     $mp = npcStore.pipe(select(state => 6 + state.mpBonus + Math.floor(helpers.calculateAgi(state)/3)));
     $specialMovement = npcStore.pipe(select(state => state.specialMovement.join(', ')));
@@ -117,7 +118,6 @@ export class NpcRepository {
     $meleeSpellAttack = npcStore.pipe(select(state => 10 + helpers.calculateAgi(state) + helpers.calculateSpellLevel(state)));
     $rangedSpellAttack = npcStore.pipe(select(state => 10 + helpers.calculatePer(state) + helpers.calculateSpellLevel(state)));
 
-    $hp = npcStore.pipe(select(state => helpers.calculateHp(state)));
     $stability = npcStore.pipe(select(state => helpers.calculateStability(state)));
     $dodge = npcStore.pipe(select(state => helpers.calculateDodge(state)));
     $toughness = npcStore.pipe(select(state => helpers.calculateToughness(state)));

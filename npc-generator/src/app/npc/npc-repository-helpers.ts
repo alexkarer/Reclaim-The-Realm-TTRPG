@@ -143,7 +143,9 @@ export function calculateCha(state: NPC): number {
 
 export function calculateHp(state: NPC): number {
     let hp = 0;
-    if (state.levelConfig.level === 0.25) {
+    if (state.levelConfig.level === 0.125) {
+        hp = 10;
+    } else if (state.levelConfig.level === 0.25) {
         hp = state.archeTypeProgression.hp.hpQuarterLevel;
     } else if (state.levelConfig.level === 0.5) {
         hp = state.archeTypeProgression.hp.hpHalfLevel;

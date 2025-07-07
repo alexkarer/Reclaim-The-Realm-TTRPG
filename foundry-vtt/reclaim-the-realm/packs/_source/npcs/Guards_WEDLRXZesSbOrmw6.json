@@ -1,12 +1,12 @@
 {
   "type": "Actor",
-  "folder": null,
+  "folder": "9QAvKgjhrG2yZVcs",
   "name": "Guards",
   "color": null,
   "sorting": "a",
   "_id": "WEDLRXZesSbOrmw6",
   "description": "",
-  "sort": 0,
+  "sort": 100000,
   "flags": {},
   "_stats": {
     "compendiumSource": null,
@@ -16,8 +16,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751042445609,
-    "modifiedTime": 1751042445609,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1751834600150,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!folders!WEDLRXZesSbOrmw6"
 }

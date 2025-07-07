@@ -40,7 +40,7 @@ Hooks.once('init', function () {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: '1d20 + max(@attributes.agi.value + @attributes.per.value)',
+    formula: '1d20 + max(@attributes.agi.value, @attributes.per.value)',
     decimals: 2,
   };
 

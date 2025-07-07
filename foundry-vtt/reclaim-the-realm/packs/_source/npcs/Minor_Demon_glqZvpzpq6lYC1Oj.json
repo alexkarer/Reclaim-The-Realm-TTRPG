@@ -3,7 +3,7 @@
   "name": "Minor Demon",
   "type": "npc",
   "_id": "glqZvpzpq6lYC1Oj",
-  "img": "icons/creatures/unholy/demon-winged-cyclops-drooling.webp",
+  "img": "npcs/cosmic/demons/Quasit_Tiny_Fiend_01.png",
   "system": {
     "hp": {
       "value": 17,
@@ -224,13 +224,13 @@
     "statusEffectImmunityString": ""
   },
   "prototypeToken": {
-    "name": "Demon",
+    "name": "Minor Demon",
     "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "icons/creatures/unholy/demon-winged-cyclops-drooling.webp",
+      "src": "npcs/cosmic/demons/Quasit_Tiny_Fiend_01.png",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -322,7 +322,7 @@
       "name": "Basic Attack",
       "type": "npcAbility",
       "_id": "fnIaMCzm822LAJ6q",
-      "img": "icons/svg/item-bag.svg",
+      "img": "icons/creatures/claws/claw-talons-glowing-orange.webp",
       "system": {
         "description": "<p>Attack ⚔️✨ 14 1.5m, 1 target. On hit: 2d6+2 [unholy] damage.</p>",
         "requirements": {
@@ -370,8 +370,8 @@
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
         "createdTime": 1751053282216,
-        "modifiedTime": 1751053311487,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "modifiedTime": 1751909933936,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
       "_key": "!actors.items!glqZvpzpq6lYC1Oj.fnIaMCzm822LAJ6q"
     },
@@ -379,7 +379,7 @@
       "name": "Wave of Misery",
       "type": "npcAbility",
       "_id": "z3te6UmPd9aPBQls",
-      "img": "icons/svg/item-bag.svg",
+      "img": "icons/creatures/unholy/demon-hairy-winged-pink.webp",
       "system": {
         "description": "<p><span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DT</span></strong></span> 12 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">WILLPOWER SAVE CONE</span></strong></span>(4.5m). On success: [[/roll d6+3[unholy]]] damage. , additionally afflict [<strong>CURSED</strong> <strong>I</strong>] lasts 2 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">ROUND</span></strong></span> <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SAVE LOWERS .</span></strong></span></p>",
         "requirements": {
@@ -427,7 +427,7 @@
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
         "createdTime": 1751053323169,
-        "modifiedTime": 1751799478492,
+        "modifiedTime": 1751909952530,
         "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
       "_key": "!actors.items!glqZvpzpq6lYC1Oj.z3te6UmPd9aPBQls"
@@ -509,8 +509,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751052936628,
-    "modifiedTime": 1751053462369,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1751909912922,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!glqZvpzpq6lYC1Oj"
 }

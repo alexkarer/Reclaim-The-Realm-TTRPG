@@ -1,13 +1,13 @@
 {
-  "folder": "WEDLRXZesSbOrmw6",
-  "name": "Men-at-Arms",
+  "folder": "DKzZAAGNAh1bS5ON",
+  "name": "Commoner",
   "type": "npc",
-  "_id": "WwRCGpmEaBRDvSnk",
-  "img": "npcs/humanoids/guards/men-at-arms_wildcard/Guard_Sword_Shield_01.png",
+  "_id": "jS3sbdKrwLsk3WWQ",
+  "img": "npcs/humanoids/civillians/commonor_wildcard/Human_Commoner_A1_01.png",
   "system": {
     "hp": {
-      "value": 29,
-      "max": 29
+      "value": 10,
+      "max": 10
     },
     "tempHp": 0,
     "exhaustion": 0,
@@ -23,33 +23,28 @@
       "toughnessBonus": 0,
       "willpowerBonus": 0,
       "movementBonus": 0,
-      "manoeuvrePenalty": 3,
+      "manoeuvrePenalty": 0,
       "movementPenalty": 0
     },
     "levels": {
       "level": 1,
       "martialLevel": 0,
       "spellLevel": 0,
-      "martialProficency": 1,
+      "martialProficency": 0,
       "spellProficency": 0
     },
     "attributes": {
       "str": {
-        "value": 4,
+        "value": 0,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "agi": {
-        "value": 4,
+        "value": 0,
         "classAttribute": false,
         "attributeMaximum": 3
       },
       "con": {
-        "value": 3,
-        "classAttribute": false,
-        "attributeMaximum": 3
-      },
-      "spi": {
         "value": 0,
         "classAttribute": false,
         "attributeMaximum": 3
@@ -59,8 +54,13 @@
         "classAttribute": false,
         "attributeMaximum": 3
       },
+      "spi": {
+        "value": 0,
+        "classAttribute": false,
+        "attributeMaximum": 3
+      },
       "per": {
-        "value": 2,
+        "value": 0,
         "classAttribute": false,
         "attributeMaximum": 3
       },
@@ -71,9 +71,9 @@
       }
     },
     "defenses": {
-      "stabilityProficency": 1,
-      "dodgeProficency": 0.67,
-      "toughnessProficency": 1,
+      "stabilityProficency": 0,
+      "dodgeProficency": 0,
+      "toughnessProficency": 0,
       "willpowerProficency": 0,
       "shieldBlockBase": 0,
       "shieldBlockThreshold": 0,
@@ -219,18 +219,18 @@
       }
     },
     "npcLevel": 1,
-    "resistancesString": "physical: 4;",
+    "resistancesString": "",
     "immunitiesString": "",
     "statusEffectImmunityString": ""
   },
   "prototypeToken": {
-    "name": "Men-at-Arms",
-    "displayName": 50,
+    "name": "Commoner",
+    "displayName": 30,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/humanoids/guards/men-at-arms_wildcard/*",
+      "src": "npcs/humanoids/civillians/commonor_wildcard/*",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -245,7 +245,7 @@
     "lockRotation": false,
     "rotation": 0,
     "alpha": 1,
-    "disposition": -1,
+    "disposition": 0,
     "displayBars": 30,
     "bar1": {
       "attribute": "hp"
@@ -314,17 +314,17 @@
     "movementAction": null,
     "flags": {},
     "randomImg": true,
-    "appendNumber": true,
-    "prependAdjective": false
+    "appendNumber": false,
+    "prependAdjective": true
   },
   "items": [
     {
       "name": "Basic Attack",
       "type": "npcAbility",
-      "_id": "mGRXgYrW3QEHXac6",
-      "img": "icons/skills/melee/hand-grip-sword-white-brown.webp",
+      "_id": "w9jeBgXsHPT3bLQO",
+      "img": "icons/skills/melee/unarmed-punch-fist-white.webp",
       "system": {
-        "description": "<p>Attack ⚔️ 15 1.5m, 1 target. On hit: 2d6+2 physical damage.</p>",
+        "description": "<p>Attack ⚔️ 10 1.5m, 1 target. On hit: d6 physical damage.</p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -348,18 +348,18 @@
           "otherResourceCost": 0,
           "rawStringCost": "2 AP"
         },
-        "summary": "Attack ⚔️ 15 1.5m, 1 target. On hit: 2d6+2 physical damage.",
+        "summary": "Attack ⚔️ 10 1.5m, 1 target. On hit: d6 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6+2[physical]"
+        "formula": "d6[physical]"
       },
       "effects": [],
       "folder": null,
       "sort": 0,
       "ownership": {
         "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
+        "OLKSfPDHiy1Xf9SG": 3
       },
       "flags": {},
       "_stats": {
@@ -369,189 +369,18 @@
         "coreVersion": "13.345",
         "systemId": "reclaim-the-realm",
         "systemVersion": "2.0.0",
-        "createdTime": 1751042999710,
-        "modifiedTime": 1751043024987,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "createdTime": 1751920414588,
+        "modifiedTime": 1751920528841,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
       },
-      "_key": "!actors.items!WwRCGpmEaBRDvSnk.mGRXgYrW3QEHXac6"
-    },
-    {
-      "name": "Bow",
-      "type": "npcAbility",
-      "_id": "btyjKdiJFHlIDOyU",
-      "img": "icons/skills/ranged/arrow-flying-poisoned-green.webp",
-      "system": {
-        "description": "<p>Attack 🏹 13 20m range, 1 target. On hit: 2d6+2 physical damage.</p>",
-        "requirements": {
-          "minimumLevel": 0,
-          "minimumMartialLevel": 0,
-          "minimumSpellLevel": 0,
-          "minimumStr": 0,
-          "minimumAgi": 0,
-          "minimumCon": 0,
-          "minimumInt": 0,
-          "minimumSpi": 0,
-          "minimumPer": 0,
-          "minimumCha": 0,
-          "skillRankRequirements": [],
-          "requiredPerks": []
-        },
-        "usageCost": {
-          "apCost": 0,
-          "mpCost": 0,
-          "isFree": false,
-          "arcanaCost": 0,
-          "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
-        },
-        "summary": "Attack 🏹 13 20m range, 1 target. On hit: 2d6+2 physical damage.",
-        "range": "",
-        "targets": "",
-        "duration": "",
-        "formula": "2d6+2[physical]"
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.345",
-        "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
-        "createdTime": 1751043133679,
-        "modifiedTime": 1751043184779,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
-      },
-      "_key": "!actors.items!WwRCGpmEaBRDvSnk.btyjKdiJFHlIDOyU"
-    },
-    {
-      "name": "Cleave",
-      "type": "npcAbility",
-      "_id": "x1ICE9UZ9P7nKY2x",
-      "img": "icons/skills/melee/strike-sword-gray.webp",
-      "system": {
-        "description": "<p>Attack ⚔️ 15 1.5m, Cleave. On hit: 2d6+2 physical damage.</p>",
-        "requirements": {
-          "minimumLevel": 0,
-          "minimumMartialLevel": 0,
-          "minimumSpellLevel": 0,
-          "minimumStr": 0,
-          "minimumAgi": 0,
-          "minimumCon": 0,
-          "minimumInt": 0,
-          "minimumSpi": 0,
-          "minimumPer": 0,
-          "minimumCha": 0,
-          "skillRankRequirements": [],
-          "requiredPerks": []
-        },
-        "usageCost": {
-          "apCost": 0,
-          "mpCost": 0,
-          "isFree": false,
-          "arcanaCost": 0,
-          "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "3 AP"
-        },
-        "summary": "Attack ⚔️ 15 1.5m, Cleave. On hit: 2d6+2 physical damage.",
-        "range": "",
-        "targets": "",
-        "duration": "",
-        "formula": "2d6+2[physical]"
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.345",
-        "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
-        "createdTime": 1751043186593,
-        "modifiedTime": 1751043228231,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
-      },
-      "_key": "!actors.items!WwRCGpmEaBRDvSnk.x1ICE9UZ9P7nKY2x"
-    },
-    {
-      "name": "Pommel Strike",
-      "type": "npcAbility",
-      "_id": "ez1eYSxbA2U9DncA",
-      "img": "icons/skills/melee/hand-grip-sword-orange.webp",
-      "system": {
-        "description": "<p>Attack ⚔️ 15 vs HARDNESS 1.5m, 1 target. On hit: knock [PRONE].</p>",
-        "requirements": {
-          "minimumLevel": 0,
-          "minimumMartialLevel": 0,
-          "minimumSpellLevel": 0,
-          "minimumStr": 0,
-          "minimumAgi": 0,
-          "minimumCon": 0,
-          "minimumInt": 0,
-          "minimumSpi": 0,
-          "minimumPer": 0,
-          "minimumCha": 0,
-          "skillRankRequirements": [],
-          "requiredPerks": []
-        },
-        "usageCost": {
-          "apCost": 0,
-          "mpCost": 0,
-          "isFree": false,
-          "arcanaCost": 0,
-          "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "1 AP (1/TURN)"
-        },
-        "summary": "Attack ⚔️ 15 vs HARDNESS 1.5m, 1 target. On hit: knock [PRONE].",
-        "range": "",
-        "targets": "",
-        "duration": "",
-        "formula": ""
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "dMcHPOGHbwLGpLCS": 3
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "coreVersion": "13.345",
-        "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
-        "createdTime": 1751043232813,
-        "modifiedTime": 1751043284920,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
-      },
-      "_key": "!actors.items!WwRCGpmEaBRDvSnk.ez1eYSxbA2U9DncA"
+      "_key": "!actors.items!jS3sbdKrwLsk3WWQ.w9jeBgXsHPT3bLQO"
     }
   ],
   "effects": [],
   "sort": 0,
   "ownership": {
     "default": 0,
-    "dMcHPOGHbwLGpLCS": 3
+    "OLKSfPDHiy1Xf9SG": 3
   },
   "flags": {},
   "_stats": {
@@ -561,9 +390,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1751042848943,
-    "modifiedTime": 1751921640142,
+    "createdTime": 1751835771477,
+    "modifiedTime": 1751921169731,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
-  "_key": "!actors!WwRCGpmEaBRDvSnk"
+  "_key": "!actors!jS3sbdKrwLsk3WWQ"
 }

@@ -2,6 +2,7 @@
 
 rethink the +3 system as it kind of breaks aroudn 6 STR
 
+
 **Add skills**
 - implement skills, see concept
 - passive awarenees

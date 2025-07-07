@@ -3,7 +3,7 @@
   "name": "Possesed",
   "type": "npc",
   "_id": "RUDvv34Ndc0TKxFU",
-  "img": "npcs/Cultists/Cultist_Possessed_01.png",
+  "img": "npcs/humanoids/cultists/possesed_wildcard/Cultist_Possessed_01.png",
   "system": {
     "hp": {
       "value": 42,
@@ -224,13 +224,13 @@
     "statusEffectImmunityString": ""
   },
   "prototypeToken": {
-    "name": "Possessed Enlightened",
+    "name": "Possessed",
     "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Possessed_01.png",
+      "src": "npcs/humanoids/cultists/possesed_wildcard/*",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -313,7 +313,7 @@
     },
     "movementAction": null,
     "flags": {},
-    "randomImg": false,
+    "randomImg": true,
     "appendNumber": true,
     "prependAdjective": false
   },
@@ -535,7 +535,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750976619995,
-    "modifiedTime": 1751793058761,
+    "modifiedTime": 1751922390254,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!RUDvv34Ndc0TKxFU"

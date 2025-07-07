@@ -3,7 +3,7 @@
   "name": "Enlightened Speaker",
   "type": "npc",
   "_id": "DcnZmIdCZv5N7o8w",
-  "img": "npcs/Cultists/Cultist_Mage_Staff_Magic_01.png",
+  "img": "npcs/humanoids/cultists/enlightened_speaker_wildcard/Cultist_Mage_Staff_01.png",
   "system": {
     "hp": {
       "value": 18,
@@ -230,7 +230,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Mage_Staff_Magic_01.png",
+      "src": "npcs/humanoids/cultists/enlightened_speaker_wildcard/*",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -313,7 +313,7 @@
     },
     "movementAction": null,
     "flags": {},
-    "randomImg": false,
+    "randomImg": true,
     "appendNumber": true,
     "prependAdjective": false
   },
@@ -565,7 +565,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750976278063,
-    "modifiedTime": 1750977902932,
+    "modifiedTime": 1751922596484,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!DcnZmIdCZv5N7o8w"

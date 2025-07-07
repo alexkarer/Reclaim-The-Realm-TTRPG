@@ -3,7 +3,7 @@
   "name": "City Guard",
   "type": "npc",
   "_id": "BNFrazQcguIJS6SE",
-  "img": "npcs/Guards/Guard_Sword_Shield_At-Ease_01.png",
+  "img": "npcs/humanoids/guards/city_guard_wildcard/Guard_Spear_01.png",
   "system": {
     "hp": {
       "value": 21,
@@ -21,9 +21,9 @@
       "stabilityBonus": 1,
       "dodgeBonus": 0,
       "toughnessBonus": 1,
-      "willpowerBonus": 3,
+      "willpowerBonus": 0,
       "movementBonus": 0,
-      "manoeuvrePenalty": 4,
+      "manoeuvrePenalty": 3,
       "movementPenalty": 0
     },
     "levels": {
@@ -225,12 +225,12 @@
   },
   "prototypeToken": {
     "name": "City Guard",
-    "displayName": 40,
+    "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Guards/Guard_Spear_01.png",
+      "src": "npcs/humanoids/guards/city_guard_wildcard/*",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -313,7 +313,7 @@
     },
     "movementAction": null,
     "flags": {},
-    "randomImg": false,
+    "randomImg": true,
     "appendNumber": true,
     "prependAdjective": false
   },
@@ -431,6 +431,36 @@
         "lastModifiedBy": "dMcHPOGHbwLGpLCS"
       },
       "_key": "!actors.items!BNFrazQcguIJS6SE.nbI85j9V53FOvweV"
+    },
+    {
+      "folder": "uqKXpy8FGbaZW2r9",
+      "name": "Armor II",
+      "type": "npcTrait",
+      "_id": "mLrWt7EgXmgwNLZm",
+      "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+      "system": {
+        "description": "<p>Wear Armor to gain <strong><span style=\"text-decoration:underline\">DR</span></strong> phyiscal 4, increases maneuvrepenalty to -3.</p>",
+        "summary": "Wear Armor to gain DR phyiscal 4, increases maneuvrepenalty to -3."
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.reclaim-the-realm.npc-traits.Item.QuaDcr079Irz0zNF",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1751922006522,
+        "modifiedTime": 1751922006522,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!BNFrazQcguIJS6SE.mLrWt7EgXmgwNLZm"
     }
   ],
   "effects": [],
@@ -448,8 +478,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751042484975,
-    "modifiedTime": 1751042785715,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1751922024329,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!BNFrazQcguIJS6SE"
 }

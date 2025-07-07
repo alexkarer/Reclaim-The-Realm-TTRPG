@@ -1,7 +1,8 @@
 ### Immidiate TODOS
 
-fix Initiative (currently adds attribute)
+fix Initiative for players
 fix stun description
+reset thp after long rest
 
 add specific roll tests (d20Test, ATtributeTest, ...) in actor class
 
@@ -21,6 +22,8 @@ add specific roll tests (d20Test, ATtributeTest, ...) in actor class
 - Data Section add Translation 
 - Add Notifications if there is something todo (e.g. learn new ability, add attribute pooitns, assign skill ranks)
 
+- have UI that shows current AP and MP at start of Round.
+
 - Handle Cearture Size
 - Add Icons to skill
 
@@ -34,11 +37,16 @@ add specific roll tests (d20Test, ATtributeTest, ...) in actor class
 - Implement Errors in case too many Abilities or Perks are added.
 - Perk Trees
 
+### Summons
+
+Separate Type that is bascically like NPCS but roll everything
+
 ### NPCS
 
 - Overview Tab: change from bonus in save to passive values
 - Description Tab: HTML Field that shows lore and stuff
 - Skills: needs possibility to set skil lranks manaullys
+
 
 ## Items
 
@@ -51,7 +59,7 @@ add specific roll tests (d20Test, ATtributeTest, ...) in actor class
 - Create Functionality to "equip" items.
 - Can embedd abilities that show up in the character sheet
 
-### Abilities
+###  Abilities
 
 - Add better Data structure for Cost and Tags
 - add possiblity to properly modify cost, tags, requirements
@@ -60,6 +68,9 @@ add specific roll tests (d20Test, ATtributeTest, ...) in actor class
     - Custom Dice Roll
     - Custom Roll (Damage)
     - Applying Effects
+
+
+Extend Spell Cast functionality to support upcasting.
 
 ### Perks
 

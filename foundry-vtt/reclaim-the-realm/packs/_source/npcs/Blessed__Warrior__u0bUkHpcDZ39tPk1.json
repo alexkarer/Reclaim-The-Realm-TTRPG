@@ -3,7 +3,7 @@
   "name": "Blessed (Warrior)",
   "type": "npc",
   "_id": "u0bUkHpcDZ39tPk1",
-  "img": "npcs/Cultists/Cultist_Inquisitor_Mace_01.png",
+  "img": "npcs/Humanoids/Cultists/blessed_warrior_wildcard/Cultist_Inquisitor_Mace_01.png",
   "system": {
     "hp": {
       "value": 70,
@@ -224,13 +224,13 @@
     "statusEffectImmunityString": "resist: frightened, charmed;"
   },
   "prototypeToken": {
-    "name": "Chosen (Warrior)",
-    "displayName": 0,
+    "name": "Blessed (Warrior)",
+    "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Inquisitor_Sword_01.png",
+      "src": "npcs/Humanoids/Cultists/blessed_warrior_wildcard/*",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -246,7 +246,7 @@
     "rotation": 0,
     "alpha": 1,
     "disposition": -1,
-    "displayBars": 0,
+    "displayBars": 30,
     "bar1": {
       "attribute": "hp"
     },
@@ -279,8 +279,8 @@
       }
     },
     "sight": {
-      "enabled": false,
-      "range": 0,
+      "enabled": true,
+      "range": 1.5,
       "angle": 360,
       "visionMode": "basic",
       "color": null,
@@ -299,7 +299,7 @@
         "ring": null,
         "background": null
       },
-      "effects": 1,
+      "effects": 0,
       "subject": {
         "scale": 1,
         "texture": null
@@ -313,8 +313,8 @@
     },
     "movementAction": null,
     "flags": {},
-    "randomImg": false,
-    "appendNumber": false,
+    "randomImg": true,
+    "appendNumber": true,
     "prependAdjective": false
   },
   "items": [
@@ -652,7 +652,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751803182792,
-    "modifiedTime": 1751803961521,
+    "modifiedTime": 1751922649380,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!u0bUkHpcDZ39tPk1"

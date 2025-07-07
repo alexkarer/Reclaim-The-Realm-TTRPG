@@ -3,7 +3,7 @@
   "name": "Guard Captain",
   "type": "npc",
   "_id": "ZuUCuMXhIpGpN8sj",
-  "img": "npcs/Guards/Guard_Banner_01.png",
+  "img": "npcs/humanoids/guards/Guard_Banner_01.png",
   "system": {
     "hp": {
       "value": 54,
@@ -230,14 +230,14 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Guards/Guard_Banner_01.png",
+      "src": "npcs/humanoids/guards/Guard_Banner_01.png",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
       "offsetY": 0,
       "fit": "contain",
-      "scaleX": 1,
-      "scaleY": 1,
+      "scaleX": 1.2,
+      "scaleY": 1.2,
       "rotation": 0,
       "tint": "#ffffff",
       "alphaThreshold": 0.75
@@ -280,7 +280,7 @@
     },
     "sight": {
       "enabled": true,
-      "range": 0,
+      "range": 1.5,
       "angle": 360,
       "visionMode": "basic",
       "color": null,
@@ -299,7 +299,7 @@
         "ring": null,
         "background": null
       },
-      "effects": 1,
+      "effects": 0,
       "subject": {
         "scale": 1,
         "texture": null
@@ -314,7 +314,7 @@
     "movementAction": null,
     "flags": {},
     "randomImg": false,
-    "appendNumber": false,
+    "appendNumber": true,
     "prependAdjective": false
   },
   "items": [
@@ -562,8 +562,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751052275300,
-    "modifiedTime": 1751052480601,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1751910544325,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!ZuUCuMXhIpGpN8sj"
 }

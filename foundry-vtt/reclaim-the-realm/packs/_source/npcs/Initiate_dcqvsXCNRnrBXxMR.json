@@ -2,7 +2,7 @@
   "name": "Initiate",
   "type": "npc",
   "_id": "dcqvsXCNRnrBXxMR",
-  "img": "npcs/Cultists/Cultist_Acolyte_Dagger_01.png",
+  "img": "npcs/humanoids/cultists/initiate_wildcard/Cultist_Robed_Standing_01.png",
   "system": {
     "hp": {
       "value": 15,
@@ -225,7 +225,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Acolyte_Dagger_01.png",
+      "src": "npcs/humanoids/cultists/initiate_wildcard/*",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -308,7 +308,7 @@
     },
     "movementAction": null,
     "flags": {},
-    "randomImg": false,
+    "randomImg": true,
     "appendNumber": true,
     "prependAdjective": false
   },
@@ -417,7 +417,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750348223835,
-    "modifiedTime": 1750977869997,
+    "modifiedTime": 1751922406588,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!dcqvsXCNRnrBXxMR"

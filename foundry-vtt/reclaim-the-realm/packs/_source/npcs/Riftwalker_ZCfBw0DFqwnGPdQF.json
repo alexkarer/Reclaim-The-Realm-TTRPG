@@ -3,7 +3,7 @@
   "name": "Riftwalker",
   "type": "npc",
   "_id": "ZCfBw0DFqwnGPdQF",
-  "img": "npcs/riftwalker.png",
+  "img": "npcs/cosmic/horrors/riftwalker_wildcard/Hungry_Sorrowsworn_Medium_Aberration_01.png",
   "system": {
     "hp": {
       "value": 21,
@@ -230,7 +230,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/riftwalker.png",
+      "src": "npcs/cosmic/horrors/riftwalker_wildcard/*",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -313,7 +313,7 @@
     },
     "movementAction": null,
     "flags": {},
-    "randomImg": false,
+    "randomImg": true,
     "appendNumber": true,
     "prependAdjective": false
   },
@@ -421,7 +421,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751041902703,
-    "modifiedTime": 1751755233000,
+    "modifiedTime": 1751922351376,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!ZCfBw0DFqwnGPdQF"

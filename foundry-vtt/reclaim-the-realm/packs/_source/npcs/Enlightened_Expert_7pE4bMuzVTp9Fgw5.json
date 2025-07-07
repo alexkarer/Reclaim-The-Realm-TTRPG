@@ -3,7 +3,7 @@
   "name": "Enlightened Expert",
   "type": "npc",
   "_id": "7pE4bMuzVTp9Fgw5",
-  "img": "npcs/Cultists/Cultist_Rogue_Dagger_01.png",
+  "img": "npcs/humanoids/cultists/enlightned_expert_wildcard/Cultist_Rogue_Dagger_01.png",
   "system": {
     "hp": {
       "value": 19,
@@ -225,12 +225,12 @@
   },
   "prototypeToken": {
     "name": "Enlightened Expert",
-    "displayName": 0,
+    "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Rogue_Dagger_01.png",
+      "src": "npcs/humanoids/cultists/enlightned_expert_wildcard/*",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -279,8 +279,8 @@
       }
     },
     "sight": {
-      "enabled": false,
-      "range": 0,
+      "enabled": true,
+      "range": 1.5,
       "angle": 360,
       "visionMode": "basic",
       "color": null,
@@ -299,7 +299,7 @@
         "ring": null,
         "background": null
       },
-      "effects": 1,
+      "effects": 0,
       "subject": {
         "scale": 1,
         "texture": null
@@ -313,8 +313,8 @@
     },
     "movementAction": null,
     "flags": {},
-    "randomImg": false,
-    "appendNumber": false,
+    "randomImg": true,
+    "appendNumber": true,
     "prependAdjective": false
   },
   "items": [
@@ -682,7 +682,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751799662509,
-    "modifiedTime": 1751800408477,
+    "modifiedTime": 1751922617876,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!7pE4bMuzVTp9Fgw5"

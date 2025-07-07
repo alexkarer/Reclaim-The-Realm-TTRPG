@@ -3,7 +3,7 @@
   "name": "Enlightened",
   "type": "npc",
   "_id": "yFScecbdQqGnHHkB",
-  "img": "npcs/Cultists/Cultist_Bully_Sword_01.png",
+  "img": "npcs/humanoids/cultists/enlightened_wildcard/Cultist_Acolyte_Dagger_01.png",
   "system": {
     "hp": {
       "value": 21,
@@ -230,7 +230,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Bully_Sword_01.png",
+      "src": "npcs/humanoids/cultists/enlightened_wildcard/*",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -313,7 +313,7 @@
     },
     "movementAction": null,
     "flags": {},
-    "randomImg": false,
+    "randomImg": true,
     "appendNumber": true,
     "prependAdjective": false
   },
@@ -508,7 +508,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750974341866,
-    "modifiedTime": 1750977885032,
+    "modifiedTime": 1751922633169,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!yFScecbdQqGnHHkB"

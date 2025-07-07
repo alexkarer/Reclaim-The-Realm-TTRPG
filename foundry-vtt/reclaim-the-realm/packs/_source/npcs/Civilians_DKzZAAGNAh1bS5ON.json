@@ -1,12 +1,12 @@
 {
   "type": "Actor",
   "folder": "9QAvKgjhrG2yZVcs",
-  "name": "cultists",
+  "name": "Civilians",
   "color": null,
   "sorting": "a",
-  "_id": "ga2M66hYaPVgnuJ6",
+  "_id": "DKzZAAGNAh1bS5ON",
   "description": "",
-  "sort": 200000,
+  "sort": 0,
   "flags": {},
   "_stats": {
     "compendiumSource": null,
@@ -15,9 +15,7 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750349489158,
-    "modifiedTime": 1751834600991,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "lastModifiedBy": null
   },
-  "_key": "!folders!ga2M66hYaPVgnuJ6"
+  "_key": "!folders!DKzZAAGNAh1bS5ON"
 }

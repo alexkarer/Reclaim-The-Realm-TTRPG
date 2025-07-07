@@ -221,7 +221,7 @@
   "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
   "download": "This must link to a .zip file of the current version",
   "background": "systems/reclaim-the-realm/assets/anvil-impact.png",
-  "initiative": "1d20",
+  "initiative": "1d20 + max(@attributes.agi.value, @attributes.per.value)",
   "grid": {
     "distance": 1.5,
     "units": "m",

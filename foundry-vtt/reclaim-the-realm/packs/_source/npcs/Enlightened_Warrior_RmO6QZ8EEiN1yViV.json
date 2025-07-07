@@ -3,7 +3,7 @@
   "name": "Enlightened Warrior",
   "type": "npc",
   "_id": "RmO6QZ8EEiN1yViV",
-  "img": "npcs/Cultists/Cultist_Brute_Axe_01.png",
+  "img": "npcs/humanoids/cultists/enlightened_warrior_wildcard/Cultist_Medium_Humanoid_01.png",
   "system": {
     "hp": {
       "value": 29,
@@ -225,12 +225,12 @@
   },
   "prototypeToken": {
     "name": "Enlightened Warrior",
-    "displayName": 40,
+    "displayName": 50,
     "actorLink": false,
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "npcs/Cultists/Cultist_Brute_Axe_01.png",
+      "src": "npcs/humanoids/cultists/enlightened_warrior_wildcard/*",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "offsetX": 0,
@@ -313,7 +313,7 @@
     },
     "movementAction": null,
     "flags": {},
-    "randomImg": false,
+    "randomImg": true,
     "appendNumber": true,
     "prependAdjective": false
   },
@@ -622,7 +622,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750974861402,
-    "modifiedTime": 1751798739725,
+    "modifiedTime": 1751922445735,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!RmO6QZ8EEiN1yViV"
