@@ -5,22 +5,23 @@
   data-tab='effects'
 >
 
-  <div class='compact-grid grid-3col'>
+  <div class='compact-grid grid-4col'>
     {{#each effects as |effect idx|}}
+    {{#if (eq effect.id "stunned1")}}
+        <h6 class="grid-span-4" style="margin-top: 3px;">Detremental Tier I Status Effects</h5>
+      {{/if}}
+      {{#if (eq effect.id "bless1")}}
+        <h6 class="grid-span-4" style="margin-top: 3px;">Beneficial Tier I Status Effects</h5>
+      {{/if}}
       <div class="status-effect flexrow flex-between"
         data-action="toggleEffect"
         data-condition-id="{{ effect.id }}"
       >
         <img style="flex-shrink: 3;" src='{{effect.img}}' height="24" width="24"/>
         <div style="flex-grow: 3;" class="tooltip-wide">
-          <div>{{localize effect.name}}</div>
-          <span class="tooltiptext-wide">{{localize effect.description}}</span>
+          <span class="{{#if effect.disabled}} status-effect-inactive {{else}} status-effect-active {{/if}}" >{{localize effect.name}}</span>
+          <span class="tooltiptext-wide">{{localize effect.summary}}</span>
         </div>
-        {{#if effect.disabled}}
-          <i style="flex-shrink: 3;" class="fas fa-toggle-off"></i>
-        {{else}}
-          <i style="flex-shrink: 3;" class="fas fa-toggle-on"></i>
-        {{/if}}
       </div>
     {{/each}}
   </div>

@@ -18,6 +18,7 @@ Will eventually add perk to heal
 **Minor Things**
 - improve layout of character creation 
 - maybe make seperate pages for the individual headers
+- consider changing to 1 + level + int/2 for abilities
 - adjust equipment item tier
 - Add Wands and Staffs that enable spell basic attacks
 - Robes?

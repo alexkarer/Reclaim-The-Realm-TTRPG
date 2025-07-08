@@ -71,13 +71,13 @@
         {
             "keyword": "[SILENCED]",
             "link": "silenced-i",
-            "summary":  "Can't talk, can't use a [SPELL ABILITY] with verbal compoenents",
+            "summary":  "Can't talk, can't use a [SPELL ABILITY] with verbal components.",
             "description": "A slienced creature can't talk or use any [SPELL ABILITY] that has verbal components."
         },
         {
             "keyword": "[DEAFENED]",
             "link": "deafened-i",
-            "summary":  "can't hear, can't use a [SPELL ABILITY] with verbal compoenents ",
+            "summary":  "Can't hear, can't use a [SPELL ABILITY] with verbal components.",
             "description": "A deafened creature can't hear or use any [SPELL ABILITY] that has verbal components."
         },
         {
@@ -89,7 +89,7 @@
         {
             "keyword": "[DISTRACTED]",
             "link": "distracted-i",
-            "summary":  "-2 to any [D20 TEST]. [DISADVANTAGE] on [PER] [ATTRIBUTE TEST] and penalty to passive Awareness/Investigation",
+            "summary":  "-2 to any [D20 TEST]. [DISADVANTAGE] on [PER] [ATTRIBUTE TEST] and penalty to passive Awareness/Investigation.",
             "description": "A distracted creature suffers a -2 penalty to any [D20 TEST] and has [DISADVANTAGE] on any [PER] [ATTRIBUTE TEST] and their passive Awareness and Investigation is halved."
         }
     ],
@@ -97,7 +97,7 @@
         {
             "keyword": "[STUNNED II]",
             "link": "stunned-ii",
-            "summary":  "Can't use any [REACTION], [MP] and [AP] are reduced by 2 ",
+            "summary":  "Can't use any [REACTION], [MP] and [AP] are reduced by 2.",
             "description": "The affected creature is heavily stunned and can bearly act. They can't use any [REACTION], their [MP] and [AP] are reduced by 2."
         },
         {
@@ -109,25 +109,25 @@
         {
             "keyword": "[BURNING II]",
             "link": "burning-ii",
-            "summary":  "Recieves 4d6 fire damage at the start of the turn, can douse the flames to stop the burning",
+            "summary":  "Recieves 4d6 fire damage at the start of the turn, can douse the flames to stop the burning.",
             "description": "A burning creature recieves 4d6 fire damage at the start their turn.The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 15 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
         },
         {
             "keyword": "[BLEEDING II]",
             "link": "bleeding-ii",
-            "summary":  "Recieves 4d6 damage at the start of turn, can be stopped",
+            "summary":  "Recieves 4d6 damage at the start of turn, can be stopped.",
             "description": "A bleeding creature recieves 4d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 15 [CON] Medicine [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
         },
         {
             "keyword": "[POISON II]",
             "link": "poison-ii",
-            "summary":  "Recieves 4d6 poison damage at the start of the turn",
+            "summary":  "Recieves 4d6 poison damage at the start of the turn.",
             "description": "A poisoned creature recieves 4d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 15 [TOUGHNESS] [SAVE]"
         },
         {
             "keyword": "[CHARMED II]",
             "link": "charmed-ii",
-            "summary":  "The charmed creature carries out a task given by the charmer",
+            "summary":  "The charmed creature carries out a task given by the charmer.",
             "description": "When the charmer applies the condition, they give out a task towards the charmed creature. The charmed creature will carry out this task to the best of it's ability unless it is suicidal or goes strongly against their core values."
         },
         {
@@ -145,13 +145,13 @@
         {
             "keyword": "[WEAKENED II]",
             "link": "weakened-ii",
-            "summary":  "Each time a creature deals damage it only deals halve damage",
+            "summary":  "Each time a creature deals damage it only deals halve damage.",
             "description": "Each time a weakened creature deals damage, it only deals halve as much (rounded down)."
         },
         {
             "keyword": "[VULNURABLE II]",
             "link": "vulnurable-ii",
-            "summary":  "All [SAVE] characteristics are reduced by 4 or -1d8 to any [SAVE] Test",
+            "summary":  "All [SAVE] characteristics are reduced by 4 or -1d8 to any [SAVE] Test.",
             "description": "A vulnurable creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are reduced by 4 or any [SAVE] Test made recieves a 1d8 penalty."
         },
         {
@@ -163,19 +163,19 @@
         {
             "keyword": "[BLINDED]",
             "link": "blinded",
-            "summary":  "can't see, every enemy recieves [PARTIAL CONCEALMENT]",
+            "summary":  "Can't see, every enemy recieves [PARTIAL CONCEALMENT].",
             "description": "A blinded creature fails any [PER] [ATTRIBUTE TEST] relying on sight and any enemy is under [PARTIAL CONCEALMENT]. If the blinded creature is additionally [DEAFENED] all enemies recieve [FULL CONCEALMENT]."
         },
         {
             "keyword": "[TAUNTED]",
             "link": "taunted",
-            "summary":  "Can only target the taunter with harmful abilities",
+            "summary":  "Can only target the taunter with harmful abilities.",
             "description": "A taunted creature can not use any harmful ability that targets a creature other than the Taunter and can't move further away from the Taunter."
         },
         {
             "keyword": "[DECAYING]",
             "link": "decaying",
-            "summary":  "can't regain [HP]",
+            "summary":  "Can't regain [HP].",
             "description": "A decaying creature can't regain any [HP] but can still recieve [THP]"
         }
     ],
@@ -195,31 +195,31 @@
         {
             "keyword": "[BURNING III]",
             "link": "burning-iii",
-            "summary":  "Recieves 12d6 fire damage at the start of the turn, can douse the flames to stop the burning",
+            "summary":  "Recieves 12d6 fire damage at the start of the turn, can douse the flames to stop the burning.",
             "description": "A burning creature recieves 10d6 fire damage at the start their turn.The burning creature or a creature within melee can end this effect early by using 2 [AP] and making a [DT] 20 [AGI] [ATTRIBUTE TEST] to douse the flames. On a success the effect ends."
         },
         {
             "keyword": "[BLEEDING III]",
             "link": "bleeding-iii",
-            "summary":  "Recieves 12d6 damage at the start of turn, can be stopped",
+            "summary":  "Recieves 12d6 damage at the start of turn, can be stopped.",
             "description": "A bleeding creature recieves 12d6 damage at the start of their turn which can't be reduced in any way. The bleeding can be stopped early by using 2 [AP] and making a [DT] 20 [CON] Medicine [ATTRIBUTE TEST]. On a success the effect ends.<br>Creatures without blood or similar like undeads, constructs, plants or extraplanar creatures are immune to this."
         },
         {
             "keyword": "[POISON III]",
             "link": "poison-iii",
-            "summary":  "Recieves 12d6 poison damage at the start of the turn",
+            "summary":  "Recieves 12d6 poison damage at the start of the turn.",
             "description": "A poisoned creature recieves 12d6 poison damage at the start their turn. The affected creature can repeat the [SAVE] that caused the poison at the end of each of its turn, ending the effect on a success. If no [SAVE] was made, then it must make a [DT] 20 [TOUGHNESS] [SAVE]."
         },
         {
             "keyword": "[CHARMED III]",
             "link": "charmed-iii",
-            "summary":  "Is completely mind controlled by the charmer and can only perform Actions commanded by the charmer",
+            "summary":  "Is completely mind controlled by the charmer and can only perform Actions commanded by the charmer.",
             "description": "The affected creature is completely mind-controlled and has to obay any commands issued by the charmer which requires no [AP] or [REACTION] from the charmer and can be done at any time.<br>If the charmer orders a suicidal command or one that strongly goes against their strongest beliefs and principles they can repeat the [SAVE] that caused them to be charmed and on a success they don't have to obey that command, the charmer then can't repeat that same command again. If there was no [SAVE] involved, the charmed creature has to make a [WILLPOWER] [SAVE]  with a [DT] determined by the GM."
         },
         {
             "keyword": "[UNCONCIOUS]",
             "link": "unconcious",
-            "summary":  "Can't use any [REACTION], [MP] or [AP], s unnaware of their sourroundings and unable to defend themselves",
+            "summary":  "Can't use any [REACTION], [MP] or [AP], s unnaware of their sourroundings and unable to defend themselves.",
             "description": "An [UNCONCIOUS] creature can't use any [REACTION], [MP] or [AP] and is not aware of it's sourroundings as such they can't use shields, their [DODGE] and [STABILITY] are 0 and they automatically fail any [DODGE] or [STABILITY] [SAVE]<br>A creature that is sleeping is also [UNCONCIOUS] however a Sleeping creature will wake up as soon as it receives damage or is distrubed in other ways."
         },
         {
@@ -231,13 +231,13 @@
         {
             "keyword": "[WEAKENED III]",
             "link": "weakened-iii",
-            "summary":  "Each time a creature deals damage it only deals 10% damage",
+            "summary":  "Each time a creature deals damage it only deals 10% damage.",
             "description": "Each time the heavily weakened creature deals it deals just 10% (rounded down) of the original damage."
         },
         {
             "keyword": "[VULNURABLE III]",
             "link": "vulnurable-iii",
-            "summary":  "All [SAVE] characteristics are reduced by 6 or -1d12 to any [SAVE] Test",
+            "summary":  "All [SAVE] characteristics are reduced by 6 or -1d12 to any [SAVE] Test.",
             "description": "A strongly vulnurable creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are reduced by 6 or any [SAVE] Test made recieves a 1d12 penalty."
         }
     ],
@@ -251,37 +251,37 @@
         {
             "keyword": "[PROTECTION I]",
             "link": "protection-i",
-            "summary":  "All [SAVE] characteristics are increased by 2 or +1d4 to any [SAVE] Test",
+            "summary":  "All [SAVE] characteristics are increased by 2 or +1d4 to any [SAVE] Test.",
             "description": "A lightly protected creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are increased by 2 or any [SAVE] Test made recieves a +1d4 bonus."
         },
         {
             "keyword": "[HASTE I]",
             "link": "haste-i",
-            "summary":  "+2 [MP], +2 [MP] when using Dash, +2 [DODGE], [ADVANATAGE] on [AGI] [ATTRIBUTE TEST]",
+            "summary":  "+2 [MP], +2 [MP] when using Dash, +2 [DODGE], [ADVANATAGE] on [AGI] [ATTRIBUTE TEST].",
             "description": "A quickened creature recieves a +2 bonus to their [MP] and each time they use the Dash ability thy gain an extra +2 [MP]. Additionally their [DODGE] is increased by 2 and they recieve [ADVANTAGE] for any [AGI] [ATTRIBUTE TEST]."
         },
         {
             "keyword": "[MAGIC RESISTANCE I]",
             "link": "magic-resistance-i",
-            "summary":  "+4 bonus to any [SAVE] against a [SPELL ABILITY]",
+            "summary":  "+4 bonus to any [SAVE] against a [SPELL ABILITY].",
             "description": "A lighlty magic resistant creature recieves a +4 bonus to any [SAVE] made against a [SPELL ABILITY]."
         },
         {
             "keyword": "[HEALING I]",
             "link": "healing-i",
-            "summary":  "heals 1d6 [HP] at the start of their turn.",
+            "summary":  "Heals 1d6 [HP] at the start of their turn.",
             "description": "A lightly healing creature receives 1d6 [HP] at the start of their turn."
         },
         {
             "keyword": "[INVISIBLE I]",
             "link": "invisiblity-i",
-            "summary":  "Recieve [PARTIAL CONCEALMENT] and stealth bonus",
+            "summary":  "Recieve [PARTIAL CONCEALMENT] and stealth bonus.",
             "description": "An occluded creature recieves [PARTIAL CONCEALMENT] bonus against any enemy and a +5 bonus to your Stealth."
         },
         {
             "keyword": "[FOCUSED]",
             "link": "focused",
-            "summary":  "Make any [INT], [PER] [ATTRIBUTE TEST] or Tool [SKILL TEST] with [ADVANTAGE]",
+            "summary":  "Make any [INT], [PER] [ATTRIBUTE TEST] or Tool [SKILL TEST] with [ADVANTAGE].",
             "description": "While you are focuesed you make any [INT], [PER] [ATTRIBUTE TEST] or Tool [SKILL TEST] with [ADVANTAGE]"
         }
     ],
@@ -295,31 +295,31 @@
         {
             "keyword": "[PROTECTION II]",
             "link": "protection-ii",
-            "summary":  "All [SAVE] characteristics are increased by 4 or +1d8 to any [SAVE] Test",
+            "summary":  "All [SAVE] characteristics are increased by 4 or +1d8 to any [SAVE].",
             "description": "A protected creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are increased by 4 or any [SAVE] Test made recieves a +1d8 bonus."
         },
         {
             "keyword": "[HASTE II]",
             "link": "haste-ii",
-            "summary":  "+4 [MP], +1 [AP], +4 [MP] when using Dash, +4 [DODGE], [ADVANATAGE] on [AGI] [ATTRIBUTE TEST]",
+            "summary":  "+4 [MP], +1 [AP], +4 [MP] when using Dash, +4 [DODGE], [ADVANATAGE] on [AGI] [ATTRIBUTE TEST].",
             "description": "A quickened creature recieves a +4 bonus to their [MP], +1 extra [AP] at the start of their turn and each time they use the Dash ability thy gain an +4 [MP]. Additionally their [DODGE] is increased by 4 and they recieve [ADVANTAGE] for any [AGI] [ATTRIBUTE TEST]."
         },
         {
             "keyword": "[MAGIC RESISTANCE II]",
             "link": "magic-resistance-ii",
-            "summary":  "+4 bonus to any [SAVE] against a [SPELL ABILITY], only recieve half damage from a [SPELL ABILITY]",
+            "summary":  "+4 bonus to any [SAVE] against a [SPELL ABILITY], only recieve half damage from a [SPELL ABILITY].",
             "description": "A magic resistant creature recieves a +4 bonus to any [SAVE] made against a [SPELL ABILITY]. Additionally any [SPELL ABILITY] that deals damage now only deals half damage."
         },
         {
             "keyword": "[HEALING II]",
             "link": "healing-ii",
-            "summary":  "heals 4d6 [HP] at the start of their turn.",
+            "summary":  "Heals 4d6 [HP] at the start of their turn.",
             "description": "A healing creature receives 4d6 [HP] at the start of their turn."
         },
         {
             "keyword": "[INVISIBLE II]",
             "link": "invisiblity-ii",
-            "summary":  "Recieve [FULL CONCEALMENT] and stealth bonus",
+            "summary":  "Recieve [FULL CONCEALMENT] and stealth bonus.",
             "description": "An invisible creature recieves [FULL CONCEALMENT] bonus against any enemy and a +10 bonus to your Stealth."
         }
     ],
@@ -333,25 +333,25 @@
         {
             "keyword": "[PROTECTION III]",
             "link": "protection-iii",
-            "summary":  "All [SAVE] characteristics are increased by 6 or +1d12 to any [SAVE] Test",
+            "summary":  "All [SAVE] characteristics are increased by 6 or +1d12 to any [SAVE] Test.",
             "description": "A strongly protected creature has their [DODGE], [STABILITY], [TOUGHNESS] and [WILLPOWER] are increased by 6 or any [SAVE] Test made recieves a +1d12 bonus."
         },
         {
             "keyword": "[HASTE III]",
             "link": "haste-iii",
-            "summary":  "+8 [MP], +2 [AP], +8 [MP] when using Dash, +8 [DODGE], [ADVANATAGE] on [AGI] [ATTRIBUTE TEST]",
+            "summary":  "+8 [MP], +2 [AP], +8 [MP] when using Dash, +8 [DODGE], [ADVANATAGE] on [AGI] [ATTRIBUTE TEST].",
             "description": "A quickened creature recieves a +8 bonus to their [MP], +2 extra [AP] at the start of their turn and each time they use the Dash ability thy gain an +8 [MP]. Additionally their [DODGE] is increased by 8 and they recieve [ADVANTAGE] for any [AGI] [ATTRIBUTE TEST]."
         },
         {
             "keyword": "[MAGIC RESISTANCE III]",
             "link": "magic-resistance-iii",
-            "summary":  "Immunity against any [SPELL ABILITY]",
+            "summary":  "Immunity against any [SPELL ABILITY].",
             "description": "Any [SPELL ABILITY] can't affect this creature directly. However indirect effects such as a rock being magically accelerated against the creature or a pit being created unter the creature still affect it."
         },
         {
             "keyword": "[HEALING III]",
             "link": "healing-iii",
-            "summary":  "heals 12d6 [HP] at the start of their turn.",
+            "summary":  "Heals 12d6 [HP] at the start of their turn.",
             "description": "A strongly healing creature receives 12d6 [HP] at the start of their turn."
         }
     ]

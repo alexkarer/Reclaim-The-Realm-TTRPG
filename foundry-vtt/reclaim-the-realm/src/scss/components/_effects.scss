@@ -8,3 +8,12 @@
     background-color: $c-beige;
   }
 }
+
+.status-effect-active {
+  color: white;
+  font-weight: bold;
+}
+
+.status-effect-inactive {
+  color: grey;
+}

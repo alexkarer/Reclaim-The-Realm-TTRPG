@@ -1,8 +1,8 @@
 ### Immidiate TODOS
 
 fix Initiative for players
-fix stun description
 reset thp after long rest
+add hp to short rest recovery (also change rules)
 
 add specific roll tests (d20Test, ATtributeTest, ...) in actor class
 
@@ -89,7 +89,8 @@ Extend Spell Cast functionality to support upcasting.
 ## Interactions
 
 - Damage Roll functionality
-- Implemt Status Effects
+- Implement all remaining Status Effects
+- Implement Conditions: Prone, Flanked
 
 - When making SKill Test, a Request Help Button
 

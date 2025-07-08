@@ -545,6 +545,13 @@
   cursor: pointer;
   background-color: var(--reclaim-the-realm-c-beige);
 }
+.reclaim-the-realm .status-effect-active {
+  color: white;
+  font-weight: bold;
+}
+.reclaim-the-realm .status-effect-inactive {
+  color: grey;
+}
 .reclaim-the-realm .skill-container {
   overflow-y: scroll;
   height: 450px;
