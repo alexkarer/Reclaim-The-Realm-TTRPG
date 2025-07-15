@@ -103,3 +103,10 @@ Extend Spell Cast functionality to support upcasting.
 
 Keep Records, total damage, healing, etc. (check fantasygrounds example)
 Use JSOn common_resources
+
+# Minor Desired Changes
+
+- Don't make Attribute Names Clickable in NPC Data Section (currently dont do anything)
+- Translate Everything including warnings and such
+- Use Foundry Notifications instead of console statements where reasonable
+- Do not duplicate getEmbeddedDocument Function in CharacterSheet Class

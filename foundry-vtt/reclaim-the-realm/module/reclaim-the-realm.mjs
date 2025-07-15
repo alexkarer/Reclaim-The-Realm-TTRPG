@@ -2,8 +2,9 @@
 import { RtRActor } from './documents/actor.mjs';
 import { RtRItem } from './documents/item.mjs';
 // Import sheet classes.
-import { RtRActorSheet } from './sheets/actor-sheet.mjs';
-import { RtRItemSheet } from './sheets/item-sheet.mjs';
+import { RtRCharacterSheet } from './sheets/actor/character-sheet.mjs';
+import { RtRNpcSheet } from './sheets/actor/npc-sheet.mjs';
+import { RtRItemSheet } from './sheets/item/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { RTR } from './helpers/config.mjs';
 // Import DataModel classes
@@ -22,7 +23,8 @@ globalThis.RtR = {
     RtRItem,
   },
   applications: {
-    RtRActorSheet,
+    RtRCharacterSheet,
+    RtRNpcSheet,
     RtRItemSheet,
   },
   utils: {
@@ -76,10 +78,17 @@ Hooks.once('init', function () {
 
   // Register sheet application classes
   foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ActorSheet);
-  foundry.documents.collections.Actors.registerSheet('reclaim-the-realm', RtRActorSheet, {
+  foundry.documents.collections.Actors.registerSheet('reclaim-the-realm', RtRCharacterSheet, {
+    types: ["character"],
     makeDefault: true,
     label: 'RTR.SheetLabels.Actor',
   });
+  foundry.documents.collections.Actors.registerSheet('reclaim-the-realm', RtRNpcSheet, {
+    types: ["npc"],
+    makeDefault: true,
+    label: 'RTR.SheetLabels.Actor',
+  });
+
   foundry.documents.collections.Items.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
   foundry.documents.collections.Items.registerSheet('reclaim-the-realm', RtRItemSheet, {
     makeDefault: true,

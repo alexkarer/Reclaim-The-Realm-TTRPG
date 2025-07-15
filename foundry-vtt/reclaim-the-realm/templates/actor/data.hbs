@@ -26,15 +26,15 @@
       <div class='attributes grid grid-2col'>
       {{#each system.attributes as |attribute key|}}
         <a 
-          class='rollable bold-text align-left {{#if attribute.classAttribute}} class-attribute {{/if}}'
+          class='bold-text align-left {{#if attribute.classAttribute}} class-attribute {{/if}}'
           {{#if attribute.classAttribute}}
             name='system.attributes.{{key}}.unSetClassAttribute'
             title="{{localize 'RTR.Actor.Character.TOOLTIPS.unSetAsClassAttribute.label'}}"
-            data-action='unSetClassAttribute'
+            {{#if (eq @root.actor.type 'character')}} data-action='unSetClassAttribute' {{/if}}
           {{else}}
             name='system.attributes.{{key}}.setClassAttribute'
             title="{{localize 'RTR.Actor.Character.TOOLTIPS.setAsClassAttribute.label'}}"
-            data-action='setClassAttribute'
+            {{#if (eq @root.actor.type 'character')}} data-action='setClassAttribute' {{/if}}
           {{/if}}
           {{disabled @root.system.editLockers.dataEditLocked}}
         >
@@ -66,7 +66,7 @@
             <input 
               type='number'
               name='system.attributes.{{key}}.value'
-              value='{{concat attribute.value}}'
+              value='{{attribute.value}}'
               data-dtype='Number'
             />
           {{/if}}

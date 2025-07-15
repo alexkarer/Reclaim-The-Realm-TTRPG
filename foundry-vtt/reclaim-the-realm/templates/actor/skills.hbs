@@ -71,7 +71,17 @@
             {{localize (lookup @root.config.skills key)}}
         </a>
         <div class="grid-span-2 flexrow">
-            <span class="align-self-center">{{skills.rank}} / {{skills.rankMaximum}}</span>
+            {{#if (eq @root.actor.type 'character')}}
+                <span class="align-self-center">{{skills.rank}} / {{skills.rankMaximum}}</span>
+            {{else}}
+                <input 
+                type='number'
+                class='compact-input'
+                name='system.skills.{{key}}.rank'
+                value='{{skills.rank}}'
+                data-dtype='Number'
+                />
+            {{/if}}
         </div>
         <div class="flexrow flex-group-center">
             {{#if (eq @root.actor.type 'character')}}
