@@ -1,3 +1,5 @@
+import { parseRollDataForType } from "../helpers/parsing-utils.mjs";
+
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
@@ -40,5 +42,32 @@ export class RtRActor extends Actor {
    */
   getRollData() {
     return { ...super.getRollData(), ...(this.system.getRollData?.() ?? null) };
+  }
+
+  async d20Test() {
+    /*
+      Try out what the best way to do this actually is, what do we need?
+        - have roll functions on the character for re-use
+        - Consider all bonuses and active status effects
+        - Status effects probaby should have penalties and bonuses directly with hook and data fields
+    */
+
+    let d20TestBonuses = '+';
+    let formula=`d20${d20TestBonuses}+${data.d20Test}`;
+    this.roll()
+  }
+
+  /**
+   * @param {string} formula
+   */
+  async roll(formula) {
+    let label = parseRollDataForType(formula);
+    let roll = new Roll(formula, this.getRollData());
+    await roll.toMessage({
+      speaker: ChatMessage.getSpeaker({ actor: this }),
+      flavor: label,
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
+    return roll;
   }
 }

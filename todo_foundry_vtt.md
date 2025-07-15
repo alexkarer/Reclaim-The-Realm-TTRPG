@@ -2,7 +2,7 @@
 
 fix Initiative for players
 reset thp after long rest
-add hp to short rest recovery (also change rules)
+add LEVEL to short rest HP recovery (also change rules)
 
 add specific roll tests (d20Test, ATtributeTest, ...) in actor class
 
@@ -69,6 +69,10 @@ Separate Type that is bascically like NPCS but roll everything
     - Custom Roll (Damage)
     - Applying Effects
 
+- Maybe Custom Actions work like this: Offensive thingy (attack, martial test or spell test).
+  - Then define what happens on success.
+  - also define what happens on failure.
+
 
 Extend Spell Cast functionality to support upcasting.
 
@@ -90,7 +94,8 @@ Extend Spell Cast functionality to support upcasting.
 
 - Damage Roll functionality
 - Implement all remaining Status Effects
-- Implement Conditions: Prone, Flanked
+- Implement Conditions: Prone, Flanked, Climbing
+- Status Effects should time out.
 
 - When making SKill Test, a Request Help Button
 
