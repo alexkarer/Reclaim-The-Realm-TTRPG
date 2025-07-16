@@ -7,6 +7,7 @@ export default class RtRCharacter extends RtRActorBase {
     'RTR.Actor.Character',
   ];
 
+  /** @override */
   static defineSchema() {
     const fields = foundry.data.fields;
     const requiredInteger = { required: true, nullable: false, integer: true };
@@ -80,11 +81,12 @@ export default class RtRCharacter extends RtRActorBase {
     return schema;
   }
 
-  prepareDerivedData() {
+  /** @override */
+  prepareBaseData() {
     // calcualte level first before doing anything else
     this._calculateLevelAndXp();
 
-    super.prepareDerivedData();
+    super.prepareBaseData();
 
     this.hp.max = (this.data.hpPerLevel + Math.floor(this.attributes.con.value / 2)) * this.levels.level + this.data.additionalHp;
     this.stamina.max = Math.max(this.attributes.con.value + Math.floor(this.levels.level + this.levels.martialLevel), 1);
@@ -96,6 +98,7 @@ export default class RtRCharacter extends RtRActorBase {
     this._calculateMartialDamage();
   }
 
+  /** @override */
   getRollData() {
     const data = super.getRollData();
     data.spellCastBonus = this.levels.spellLevel;

@@ -44,17 +44,21 @@ export class RtRActor extends Actor {
     return { ...super.getRollData(), ...(this.system.getRollData?.() ?? null) };
   }
 
-  async d20Test() {
-    /*
-      Try out what the best way to do this actually is, what do we need?
-        - have roll functions on the character for re-use
-        - Consider all bonuses and active status effects
-        - Status effects probaby should have penalties and bonuses directly with hook and data fields
-    */
+  /**
+   * D20 Test
+   * @param {*} options 
+   */
+  async d20Test(options) {
+    let die = 'd20';
+    if (options.advantage && !options.disadvantage) {
+        die = '2d20kh';
+    } if (options.disadvantage && !options.advantage) {
+        die = '2d20kl';
+    }
 
     let d20TestBonuses = '+';
     let formula=`d20${d20TestBonuses}+${data.d20Test}`;
-    this.roll()
+    this.roll(formula);
   }
 
   /**

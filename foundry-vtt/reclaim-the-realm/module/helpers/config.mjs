@@ -90,7 +90,10 @@ RTR.statusEffects = {
     name: "RTR.StatusEffects.Stunned1.label",
     img: "/icons/svg/daze.svg",
     description: "RTR.StatusEffects.Stunned1.description",
-    summary: "RTR.StatusEffects.Stunned1.summary"
+    summary: "RTR.StatusEffects.Stunned1.summary",
+    changes: [
+      { key: "system.ap", mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: "-1", priority: 20 }
+    ]
   },
   frightened1: {
     name: "RTR.StatusEffects.Frightened1.label",

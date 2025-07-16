@@ -58,3 +58,6 @@ Thumbs.db
 # FoundryVtt
 /foundry-vtt/reclaim-the-realm/packs/*
 !/foundry-vtt/reclaim-the-realm/packs/_source/
+
+/foundry-vtt/reclaim-the-realm/foundry-config.yaml
+/foundry-vtt/reclaim-the-realm/foundry

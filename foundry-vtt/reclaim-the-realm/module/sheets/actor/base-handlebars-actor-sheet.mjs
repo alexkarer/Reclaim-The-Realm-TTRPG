@@ -4,7 +4,7 @@ import { parseRollDataForType } from "../../helpers/parsing-utils.mjs";
 const { api, sheets, ux, apps } = foundry.applications;
 
 /**
- * @extends {ActorSheetV2}
+ * @extends {sheets.ActorSheetV2}
  */
 export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicationMixin(
     sheets.ActorSheetV2
@@ -199,12 +199,12 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
      * @private
      */
     static async _toggleEffect(event, target) {
-        const conditionId = target.closest("[data-condition-id]").dataset.conditionId;
-        const existing = this.document.effects.get(generateFvttId(`RTR${conditionId}`));
+        const statusEffectId = target.closest("[data-condition-id]").dataset.conditionId;
+        const existing = this.document.effects.get(generateFvttId(`RTR${statusEffectId}`));
 
         if (existing) return existing.delete();
 
-        const effect = await ActiveEffect.implementation.fromStatusEffect(conditionId);
+        const effect = await ActiveEffect.implementation.fromStatusEffect(statusEffectId);
         return ActiveEffect.implementation.create(effect, { parent: this.document, keepId: true });
     }
 

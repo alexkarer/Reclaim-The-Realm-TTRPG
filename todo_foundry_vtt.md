@@ -1,6 +1,7 @@
 ### Immidiate TODOS
 
-fix Initiative for players
+Status Effects are actually a big pain in the Ass damit.
+Define Prototype Tokens in the Data for each Actor
 reset thp after long rest
 add LEVEL to short rest HP recovery (also change rules)
 

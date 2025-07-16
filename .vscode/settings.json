@@ -1,0 +1,5 @@
+{
+  "files.exclude": {
+    "foundry-vtt/reclaim-the-realm/foundry/": true,
+  }
+}

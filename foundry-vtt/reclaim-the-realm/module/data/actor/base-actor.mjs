@@ -1,9 +1,9 @@
 import { getApForLevel } from '../../helpers/character-helper.mjs';
 
-export default class RtRActorBase extends foundry.abstract
-  .TypeDataModel {
+export default class RtRActorBase extends foundry.abstract.TypeDataModel {
   static LOCALIZATION_PREFIXES = ["RTR.Actor.base"];
 
+  /** @override */
   static defineSchema() {
     const fields = foundry.data.fields;
     const requiredInteger = { required: true, nullable: false, integer: true };
@@ -105,8 +105,9 @@ export default class RtRActorBase extends foundry.abstract
     return schema;
   }
 
-  prepareDerivedData() {
-    super.prepareDerivedData();
+  /** @override */
+  prepareBaseData() {
+    super.prepareBaseData();
 
     for (const key in this.skills) {
       this.skills[key].rankMaximum = this.levels.level + (this.skills[key].classSkill ? 2 : 0);
@@ -134,6 +135,7 @@ export default class RtRActorBase extends foundry.abstract
     this.attackBonuses.rangedSpellAttack = this.levels.spellLevel + this.attributes.per.value - this.exhaustion;
   }
 
+  /** @override */
   getRollData() {
     const data = {};
 

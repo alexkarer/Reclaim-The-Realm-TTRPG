@@ -7,6 +7,7 @@ export default class RtRNPC extends RtRActorBase {
     'RTR.Actor.NPC',
   ];
 
+  /** @override */
   static defineSchema() {
     const fields = foundry.data.fields;
     const requiredInteger = { required: true, nullable: false, integer: true };
@@ -21,12 +22,14 @@ export default class RtRNPC extends RtRActorBase {
     return schema;
   }
 
-  prepareDerivedData() {
+  /** @override */
+  prepareBaseData() {
     this.levels.level = this.npcLevel;
-    super.prepareDerivedData();
+    super.prepareBaseData();
     this.xpReward = calculateXPReward(this.levels.level);
   }
 
+  /** @override */
   getRollData() {
     const data = super.getRollData();
     return data;

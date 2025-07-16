@@ -11,3 +11,8 @@ Additionally common_resources are required
 `mklink /J  {USER_FOLDER}\AppData\Local\FoundryVTT\Data\systems\reclaim-the-realm {LINK_TO_THIS_REPO}\Reclaim-The-Realm-TTRPG\foundry-vtt\reclaim-the-realm`
 
 `mklink /D {LINK_TO_THIS_REPO}\Reclaim-The-Realm-TTRPG\foundry-vtt\reclaim-the-realm\common_resources {LINK_TO_THIS_REPO}\Reclaim-The-Realm-TTRPG\common_resources`
+
+### Improve Intellisense
+
+1. Create file: `/foundry-vtt/reclaim-the-realm/foundry-config.yaml` with the following content: `installPath: "C:\\Program Files\\Foundry Virtual Tabletop\\Version 13"`
+2. Execute npm run createsymlink (or install as it is contained in postInstall)
