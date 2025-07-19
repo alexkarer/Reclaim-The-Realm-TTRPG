@@ -129,7 +129,10 @@ RTR.statusEffects = {
     name: "RTR.StatusEffects.Crippled1.label",
     img: "/systems/reclaim-the-realm/assets/icons/status-effects/broken-bone.svg",
     description: "RTR.StatusEffects.Crippled1.description",
-    summary: "RTR.StatusEffects.Crippled1.summary"
+    summary: "RTR.StatusEffects.Crippled1.summary",
+    changes: [
+      { key: "system.mp", mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: "-2", priority: 20 }
+    ]
   },
   cursed1: {
     name: "RTR.StatusEffects.Cursed1.label",

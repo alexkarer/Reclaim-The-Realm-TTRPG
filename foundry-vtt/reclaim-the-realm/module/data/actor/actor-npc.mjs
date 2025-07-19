@@ -13,8 +13,6 @@ export default class RtRNPC extends RtRActorBase {
     const requiredInteger = { required: true, nullable: false, integer: true };
     const schema = super.defineSchema();
 
-    schema.npcLevel = new fields.NumberField({ required: true, nullable: false, initial: 1, min: 0.125 });
-
     // use it this way for now, but should eventually migrate
     schema.immunitiesString = new fields.StringField();
     schema.statusEffectImmunityString = new fields.StringField();
@@ -24,7 +22,6 @@ export default class RtRNPC extends RtRActorBase {
 
   /** @override */
   prepareBaseData() {
-    this.levels.level = this.npcLevel;
     super.prepareBaseData();
     this.xpReward = calculateXPReward(this.levels.level);
   }

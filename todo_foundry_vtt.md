@@ -1,9 +1,11 @@
 ### Immidiate TODOS
 
-Status Effects are actually a big pain in the Ass damit.
+add remaining status effect things
+  - add penalty section for specific tests which is a list where dice expressions can be added.
 Define Prototype Tokens in the Data for each Actor
 reset thp after long rest
 add LEVEL to short rest HP recovery (also change rules)
+add conditions as status effect: prone, flanked, etc.
 
 add specific roll tests (d20Test, ATtributeTest, ...) in actor class
 
@@ -101,6 +103,8 @@ Extend Spell Cast functionality to support upcasting.
 - When making SKill Test, a Request Help Button
 
 ## Special
+
+Have a UI that shows Action Points and MP at the bottom similar to Divinity or something similar.
 
 Keep Records, total damage, healing, etc. (check fantasygrounds example)
 Use JSOn common_resources

@@ -1,7 +1,9 @@
-import { parseRollDataForType } from "../helpers/parsing-utils.mjs";
+/** @import {Actor} from "@client/documents/actor.mjs" */
+/** @import {Roll} from "@client/dice/roll.mjs" */
 
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
+ * @import {Actor} from "@client/documents/actor.mjs"
  * @extends {Actor}
  */
 export class RtRActor extends Actor {
@@ -48,7 +50,7 @@ export class RtRActor extends Actor {
    * D20 Test
    * @param {*} options 
    */
-  async d20Test(options) {
+  d20Test(options) {
     let die = 'd20';
     if (options.advantage && !options.disadvantage) {
         die = '2d20kh';
@@ -56,16 +58,49 @@ export class RtRActor extends Actor {
         die = '2d20kl';
     }
 
-    let d20TestBonuses = '+';
-    let formula=`d20${d20TestBonuses}+${data.d20Test}`;
-    this.roll(formula);
+    let d20TestBonuses = '';
+
+    let formula=`${die}+@d20Test${d20TestBonuses}${options.bonus}`;
+    this.roll(formula, options);
+  }
+
+  /**
+   * Attack Test, any interactions that modifies any attack happens here.
+   * @param {*} options 
+   */
+  attack(options) {
+    if (this._hasStatusEffect('FRIGHTENED I')) {
+      options.disadvantage = true;
+    }
+    if (this._hasStatusEffect('CURSED I')) {
+      options.bonus = options.bonus.concat(options.bonus, '-1d4');
+    }
+
+    this.d20Test(options);
+  }
+
+  /**
+   * Meele Martial Attack
+   * @param {*} options 
+   */
+  meleeMartialAttack(options) {
+    options.type = 'MELEE MARTIAL ATTACK';
+    options.bonus = options.bonus.concat(options.bonus, '+@meleeMartialAttack');
+    this.attack(options);
   }
 
   /**
    * @param {string} formula
+   * @param {*} options
+   * @returns {Roll} roll object
    */
-  async roll(formula) {
-    let label = parseRollDataForType(formula);
+  async roll(formula, options) {
+    let label = options.type;
+    if (options.advantage && !options.disadvantage) {
+        label = '<span style="color:green">ADVANTAGE ' + options.type + '</span>';
+    } if (options.disadvantage && !options.advantage) {
+        label = '<span style="color:red">DISADVANTAGE ' + options.type + '</span>';
+    }
     let roll = new Roll(formula, this.getRollData());
     await roll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this }),
@@ -73,5 +108,61 @@ export class RtRActor extends Actor {
       rollMode: game.settings.get('core', 'rollMode'),
     });
     return roll;
+  }
+
+  /**
+   * Handle everything that happens on the start of combat
+   */
+  async handleOnCombatTrunStart() {
+    if (this._hasStatusEffect('BURNING I')) {
+      this.roll('d6[fire]', { type: 'BURNING I' }).then(result => {
+        let damage = result.terms[0].results[0].result;
+        this.applyDamage(damage, 'fire');
+      });
+    }
+    if (this._hasStatusEffect('BLEEDING I')) {
+      this.roll('d6[bleed]', { type: 'BLEEDING I' }).then(result => {
+        let damage = result.terms[0].results[0].result;
+        this.applyDamage(damage, 'bleed');
+      });
+    }
+    if (this._hasStatusEffect('POISON I')) {
+      this.roll('d6[poison]', { type: 'POISON I' }).then(result => {
+        let damage = result.terms[0].results[0].result;
+        this.applyDamage(damage, 'poison');
+      });
+    }
+  }
+
+  /**
+   * apply damage to actor
+   * @param {number} amount 
+   * @param {string} type 
+   */
+  applyDamage(amount, type) {
+    ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this }),
+        content: `${this.name} recieves ${amount} ${type} damage.`
+    });
+
+    let remainingAmount = amount;
+    if (this.system.tempHp > 0) {
+      remainingAmount = amount - Math.min(this.system.tempHp, amount);
+      let newTempHp = Math.max(0, this.system.tempHp - amount);
+      this.update({ "system.tempHp": newTempHp});
+    }
+    // TODO handle resistances and stuff.
+    let newHp = Math.max(0, this.system.hp.value - remainingAmount);
+    this.update({ "system.hp.value": newHp});
+  }
+
+  /**
+   * checks if actor has a status effect
+   * @param {string} statusEffectName 
+   * @returns true if status effect is active on actor and false if not
+   */
+  _hasStatusEffect(statusEffectName) {
+    const existing = this.appliedEffects.find(effect => effect.name === statusEffectName);
+    return existing !== undefined;
   }
 }

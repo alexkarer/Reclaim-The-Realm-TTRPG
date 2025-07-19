@@ -39,6 +39,7 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
             unlockDataEdit: this._onUnlockDataEdit,
             lockDataEdit: this._onLockDataEdit,
 
+            meleeMartialAttack: this._meleeMartialAttack,
             castSpell: this._castSpell
         }
     };
@@ -760,6 +761,19 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
         let updatePayload = {};
         updatePayload['system.editLockers.dataEditLocked'] = true;
         this.actor.update(updatePayload).then(v => this.render());
+    }
+
+    /**
+     * Melee Martial Attack
+     *
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _meleeMartialAttack(event, target) {
+        event.preventDefault();
+        this.actor.meleeMartialAttack({bonus: '', advantage: event.ctrlKey, disadvantage: event.shiftKey});
     }
 
     /**

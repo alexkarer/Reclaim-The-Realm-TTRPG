@@ -11,8 +11,8 @@
         {
             "keyword": "[FRIGHTENED I]",
             "link": "frightened-i",
-            "summary":  "[DISADVANTAGE] on any [SPELL TEST] or [MARTIAL TEST] against the source of fear and can't move closer to it.",
-            "description": "The affected creature is shaken by an event or creature and has [DISADVANTAGE] on any [SPELL TEST] or [MARTIAL TEST] and can't move closer to the source of their fear."
+            "summary":  "[DISADVANTAGE] on any [ATTACK], [SPELL TEST] or [MARTIAL TEST] against the source of fear and can't move closer to it.",
+            "description": "The affected creature is shaken by an event or creature and has [DISADVANTAGE] on any [ATTACK], [SPELL TEST] or[MARTIAL TEST] and can't move closer to the source of their fear."
         },
         {
             "keyword": "[BURNING I]",
