@@ -118,14 +118,12 @@
             {{/each}}
         </select>
         <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
-                data-action='d20Test'
-                data-roll='@skillTest + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value {{#if (eq skills.attrBonus 'agi')}} - @manoeuvrePenalty{{/if}}'
+            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' 
+                data-action='skillTest' data-skill='{{key}}' data-attribute='{{skills.attrBonus}}'
             >
-            <span class="rollable-text-centered" 
-                data-action='d20Test'
-                data-roll='@skillTest + @skills.{{key}}.rank + @attributes.{{skills.attrBonus}}.value {{#if (eq skills.attrBonus 'agi')}} - @manoeuvrePenalty{{/if}}'
-            >{{numberFormat (subtract (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value')) @root.system.exhaustion) decimals=0}}</span>
+            <span class="rollable-text-centered" data-action='skillTest' data-skill='{{key}}' data-attribute='{{skills.attrBonus}}'>
+                {{numberFormat (subtract (add skills.rank (lookup (lookup @root.system.attributes skills.attrBonus) 'value')) @root.system.exhaustion) decimals=0}}
+            </span>
         </div>
     {{/each}}
     </div>

@@ -1,13 +1,9 @@
 ### Immidiate TODOS
 
-add remaining status effect things
-  - add penalty section for specific tests which is a list where dice expressions can be added.
 Define Prototype Tokens in the Data for each Actor
 reset thp after long rest
-add LEVEL to short rest HP recovery (also change rules)
-add conditions as status effect: prone, flanked, etc.
 
-add specific roll tests (d20Test, ATtributeTest, ...) in actor class
+Create Damage Roll Logic
 
 # General TODOs/Nice to have
 
@@ -30,15 +26,19 @@ add specific roll tests (d20Test, ATtributeTest, ...) in actor class
 - Handle Cearture Size
 - Add Icons to skill
 
+- Add functionality for cover and concealment
+
 ### Characters
 
 - easy way to record character origin
 - place for permanent injury
-- passive Awareness and stuff
+- passive Awareness and stuff (also handle distracted status effect)
 - concealment bonuzses
 - Implement Exhaustion in a nicer way
 - Implement Errors in case too many Abilities or Perks are added.
 - Perk Trees
+
+- Show how values are calculated and if they are reduced in any way.
 
 ### Summons
 
@@ -75,9 +75,12 @@ Separate Type that is bascically like NPCS but roll everything
 - Maybe Custom Actions work like this: Offensive thingy (attack, martial test or spell test).
   - Then define what happens on success.
   - also define what happens on failure.
-
+  
+Allow Macro (Hotbar) usage of abilities
 
 Extend Spell Cast functionality to support upcasting.
+
+Hide certain abilities that can't be used (example, silennced)
 
 ### Perks
 
@@ -106,6 +109,7 @@ Extend Spell Cast functionality to support upcasting.
 
 Have a UI that shows Action Points and MP at the bottom similar to Divinity or something similar.
 
+Have sound and visual effects for status effects 
 Keep Records, total damage, healing, etc. (check fantasygrounds example)
 Use JSOn common_resources
 

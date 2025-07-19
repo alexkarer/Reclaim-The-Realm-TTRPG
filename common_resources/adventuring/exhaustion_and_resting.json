@@ -7,7 +7,7 @@
     "shortRest": {
         "description": "A short rest is when you quickly take your time to catch your breath. During a short rest, you can use your [STAMINA] to recover [HP] , [ARCANA] and other class specific resources. A short rest takes 1 minute per [STAMINA] used.",
         "options": [
-            "You can spend 1 [STAMINA] and recover 1d6 + ([CON]/3) * d6 [HP].",
+            "You can spend 1 [STAMINA] and recover 1d6 + ([CON]/3) * d6 + [LEVEL] [HP].",
             "You can spend 1 [STAMINA] and recover [ARCANA] equal to 1 + ([SPELL LEVEL]/3).",
             "You can spend 2 [STAMINA] to remove one point of [EXHAUSTION]."
         ]

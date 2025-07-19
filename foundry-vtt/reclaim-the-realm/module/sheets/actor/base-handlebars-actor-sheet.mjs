@@ -28,7 +28,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
             deleteDoc: this._deleteDoc,
             toggleEffect: this._toggleEffect,
             roll: this._onRoll,
-            d20Test: this._onD20Test,
             increaseHp: this._onIncreaseHP,
             decreaseHp: this._onDecreaseHP
         },
@@ -140,7 +139,7 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
      * @protected
      */
     static async _viewDoc(event, target) {
-        const doc = getEmbeddedDocument(target);
+        const doc = this._getEmbeddedDocument(target);
         doc.sheet.render(true);
     }
 
@@ -153,7 +152,7 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
      * @protected
      */
     static async _deleteDoc(event, target) {
-        const doc = getEmbeddedDocument(target);
+        const doc = this._getEmbeddedDocument(target);
         await doc.delete();
     }
 
@@ -223,7 +222,7 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
         // Handle item rolls.
         switch (dataset.rollType) {
             case 'item':
-                const item = getEmbeddedDocument(target);
+                const item = this._getEmbeddedDocument(target);
                 if (item) return item.roll();
         }
 
@@ -238,39 +237,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
             });
             return roll;
         }
-    }
-
-    /**
-     * Handle D20 Tests
-     *
-     * @this RtRActorSheet
-     * @param {PointerEvent} event   The originating click event
-     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-     * @protected
-     */
-    static async _onD20Test(event, target) {
-        event.preventDefault();
-        const dataset = target.dataset;
-
-        const advantage = event.ctrlKey;
-        const disadvantage = event.shiftKey;
-
-        let dice = 'd20';
-        if (advantage && !disadvantage) {
-            dice = '2d20kh';
-        } if (disadvantage && !advantage) {
-            dice = '2d20kl';
-        }
-        let formula = dice + '+' + dataset.roll;
-
-        let label = parseRollDataForType(formula);
-        let roll = new Roll(formula, this.actor.getRollData());
-        await roll.toMessage({
-            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-            flavor: label,
-            rollMode: game.settings.get('core', 'rollMode'),
-        });
-        return roll;
     }
 
     /**
@@ -326,9 +292,9 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
      *
      * @param {HTMLElement} target    The element subject to search
      * @returns {Item | ActiveEffect} The embedded Item or ActiveEffect
-     * @protected
+     * @private
     */
-    getEmbeddedDocument(target) {
+    _getEmbeddedDocument(target) {
         let docRow = target.closest('li[data-document-class]');
         if (!docRow) {
             docRow = target.closest('tr[data-document-class]');
@@ -406,7 +372,7 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
         if ('link' in event.target.dataset) return;
 
         // Chained operation
-        let dragData = getEmbeddedDocument(docRow)?.toDragData();
+        let dragData = this._getEmbeddedDocument(docRow)?.toDragData();
 
         if (!dragData) return;
 
@@ -471,7 +437,7 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
         /** @type {HTMLElement} */
         const dropTarget = event.target.closest('[data-effect-id]');
         if (!dropTarget) return;
-        const target = getEmbeddedDocument(dropTarget);
+        const target = this._getEmbeddedDocument(dropTarget);
 
         // Don't sort on yourself
         if (effect.uuid === target.uuid) return;

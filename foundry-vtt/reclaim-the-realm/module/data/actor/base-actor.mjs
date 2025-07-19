@@ -123,16 +123,16 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel {
     this.ap = getApForLevel(this.levels.level);
     this.mp = 6 + Math.floor(this.attributes.agi.value / 3) + this.data.movementBonus - this.data.movementPenalty;
 
-    this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str.value + this.data.stabilityBonus - this.exhaustion;
-    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi.value + this.data.dodgeBonus - this.data.manoeuvrePenalty - this.exhaustion;
-    this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con.value + this.data.toughnessBonus - this.exhaustion;
-    this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi.value + this.data.willpowerBonus - this.exhaustion;
-    this.defenses.shieldBlock = this.levels.martialLevel + this.defenses.shieldBlockBase - this.exhaustion;
+    this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str.value + this.data.stabilityBonus;
+    this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi.value + this.data.dodgeBonus - this.data.manoeuvrePenalty;
+    this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con.value + this.data.toughnessBonus;
+    this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi.value + this.data.willpowerBonus;
+    this.defenses.shieldBlock = this.levels.martialLevel + this.defenses.shieldBlockBase;
 
-    this.attackBonuses.meleeMartialAttack = this.levels.martialLevel + this.attributes.agi.value - this.exhaustion;
-    this.attackBonuses.rangedMartialAttack = this.levels.martialLevel + this.attributes.per.value - this.exhaustion;
-    this.attackBonuses.meleeSpellAttack = this.levels.spellLevel + this.attributes.agi.value - this.exhaustion;
-    this.attackBonuses.rangedSpellAttack = this.levels.spellLevel + this.attributes.per.value - this.exhaustion;
+    this.attackBonuses.meleeMartialAttack = this.levels.martialLevel + this.attributes.agi.value;
+    this.attackBonuses.rangedMartialAttack = this.levels.martialLevel + this.attributes.per.value;
+    this.attackBonuses.meleeSpellAttack = this.levels.spellLevel + this.attributes.agi.value;
+    this.attackBonuses.rangedSpellAttack = this.levels.spellLevel + this.attributes.per.value;
   }
 
   /** @override */
@@ -154,11 +154,9 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel {
     data.level = this.levels.level;
 
     data.d20Test = -this.exhaustion;
-    data.attributeTest = -this.exhaustion;
-    data.skillTest = -this.exhaustion;
 
-    data.martialTest = this.levels.martialLevel - this.exhaustion;
-    data.spellTest = this.levels.spellLevel  - this.exhaustion;
+    data.martialTest = this.levels.martialLevel;
+    data.spellTest = this.levels.spellLevel;
 
     data.stabilitySave = this.defenses.stability;
     data.dodgeSave = this.defenses.dodge;

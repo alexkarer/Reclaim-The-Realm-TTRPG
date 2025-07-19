@@ -16,6 +16,7 @@ rewrok injury table to have 1d4 instead of 2d3
 Will eventually add perk to heal
 
 **Minor Things**
+- change manouvrepenalty to instead nerf dodge
 - improve layout of character creation 
 - maybe make seperate pages for the individual headers
 - consider changing to 1 + level + int/2 for abilities

@@ -253,6 +253,15 @@
       "Passive": "Passive Effects",
       "Inactive": "Inactive Effects"
     },
+    "CircumstancalBonuses": {
+      "SmallCover": { "label": "SMALL COVER", "description": "If at least 25% of the target is covered the target recieves the following bonuses: An unmodified roll on the ATTACK of 1-5 will always be a critical miss and the target recieves +2 to DODGE and SHIELD BLOCK" },
+      "MediumCover": { "label": "MEDIUM COVER", "description": "If at least 50% of the target is covered the target recieves the following bonuses: An unmodified roll on the ATTACK of 1-10 will always be a critical miss and the target recieves +4 to DODGE and SHIELD BLOCK" },
+      "LargeCover": { "label": "LARGE COVER", "description": "If at least 75% of the target is covered the target recieves the following bonuses: An unmodified roll on the ATTACK of 1-15 will always be a critical miss and the target recieves +6 to DODGE and SHIELD BLOCK" },
+      "Prone": { "label": "PRONE", "description": "While PRONE the Cost of the Move Ability is doubled, any MELEE ATTACK against you has ADVANTAGE and any MELEE ATTACK made by you has DISADVANTAGE. Additionally you always recieve at least SMALL COVER against any RANGED ATTACK." },
+      "Flanked": { "label": "FLANKED", "description": "While a creature is FLANKING it recieves a +2 bonus to any MELEE ATTACK against the surrounded target." },
+      "PartialConcealment": { "label": "PARTIAL CONCEALMENT", "description": "While partially concealed the Concealment DT is equal 8 + Stealth Ranks. If the creature benefiting from PARTIAL CONCEALMENT makes an ATTACK it recieves a +5 bonus to that ATTACK" },
+      "FullConcealment": { "label": "FULL CONCEALMENT", "description": "While partially concealed the Concealment DT is equal 15 + Stealth Ranks. If the creature benefiting from FULL CONCEALMENT makes an ATTACK it recieves ADVANTAGE or a +5 bonus to that ATTACK" }
+    },
     "StatusEffects": {
       "Stunned1": { "label": "STUNNED I", "description": "The affected creature is dazed and can't function properly being unable to use any [REACTION] and has their max [AP] reduced by 1.", "summary": "Can't use any [REACTION], [AP] are reduced by 1." },
       "Frightened1": { "label": "FRIGHTENED I", "description": "The affected creature is shaken by an event or creature and has DISADVANTAGE on any SPELL TEST or MARTIAL TEST and can't move closer to the source of their fear.", "summary": "[DISADVANTAGE] on any [SPELL TEST] or [MARTIAL TEST] against the source of fear and can't move closer to it." },

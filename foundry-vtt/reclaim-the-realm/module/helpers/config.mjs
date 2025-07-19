@@ -84,6 +84,20 @@ RTR.statusEffects = {
     description: "Dead",
     summary: "Dead"
   },
+  
+  // Circumstancal Bonuses
+  prone: {
+    name: "RTR.CircumstancalBonuses.Prone.label",
+    img: "/systems/reclaim-the-realm/assets/icons/abilities/falling.svg",
+    description: "RTR.CircumstancalBonuses.Prone.description",
+    summary: "RTR.CircumstancalBonuses.Prone.description"
+  },
+  flanked: {
+    name: "RTR.CircumstancalBonuses.Flanked.label",
+    img: "/systems/reclaim-the-realm/assets/icons/status-effects/encirclement.svg",
+    description: "RTR.CircumstancalBonuses.Flanked.description",
+    summary: "RTR.CircumstancalBonuses.Flanked.description"
+  },
 
   // Tier I Detremental Status Effects
   stunned1: {
@@ -92,7 +106,7 @@ RTR.statusEffects = {
     description: "RTR.StatusEffects.Stunned1.description",
     summary: "RTR.StatusEffects.Stunned1.summary",
     changes: [
-      { key: "system.ap", mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: "-1", priority: 20 }
+      { key: "system.ap", mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: "-1", priority: 10 }
     ]
   },
   frightened1: {
@@ -131,7 +145,7 @@ RTR.statusEffects = {
     description: "RTR.StatusEffects.Crippled1.description",
     summary: "RTR.StatusEffects.Crippled1.summary",
     changes: [
-      { key: "system.mp", mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: "-2", priority: 20 }
+      { key: "system.mp", mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, value: "2", priority: 50 }
     ]
   },
   cursed1: {
@@ -200,7 +214,11 @@ RTR.statusEffects = {
     name: "RTR.StatusEffects.Haste1.label",
     img: "icons/svg/wingfoot.svg",
     description: "RTR.StatusEffects.Haste1.description",
-    summary: "RTR.StatusEffects.Haste1.summary"
+    summary: "RTR.StatusEffects.Haste1.summary",
+    changes: [
+      { key: "system.mp", mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: "2", priority: 10 },
+      { key: "system.defenses.dodge", mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: "2", priority: 10 }
+    ]
   },
   magicResistance1: {
     name: "RTR.StatusEffects.MagicResistance1.label",
@@ -218,7 +236,10 @@ RTR.statusEffects = {
     name: "RTR.StatusEffects.Invisible1.label",
     img: "icons/svg/invisible.svg",
     description: "RTR.StatusEffects.Invisible1.description",
-    summary: "RTR.StatusEffects.Invisible1.summary"
+    summary: "RTR.StatusEffects.Invisible1.summary",
+    changes: [
+      { key: "system.skills.stealth.rank", mode: CONST.ACTIVE_EFFECT_MODES.ADD, value: "5", priority: 10 }
+    ]
   },
   focused: {
     name: "RTR.StatusEffects.Focused.label",

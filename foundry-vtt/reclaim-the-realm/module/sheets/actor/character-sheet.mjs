@@ -39,7 +39,13 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
             unlockDataEdit: this._onUnlockDataEdit,
             lockDataEdit: this._onLockDataEdit,
 
+            attributeTest: this._attributeTest,
+            skillTest: this._skillTest,
+            saveTest: this._saveTest,
             meleeMartialAttack: this._meleeMartialAttack,
+            rangedMartialAttack: this._rangedMartialAttack,
+            meleeSpellAttack: this._meleeSpellAttack,
+            rangedSpellAttack: this._rangedSpellAttack,
             castSpell: this._castSpell
         }
     };
@@ -605,7 +611,8 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
         }
 
         let dice = Math.max(1, Math.floor(this.actor.system.attributes.con.value / 3) + 1);
-        let roll = new Roll(dice + 'd6', this.actor.getRollData());
+        let formula = `${dice}d6+${this.actor.system.levels.level}`;
+        let roll = new Roll(formula, this.actor.getRollData());
         await roll.toMessage({
             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
             flavor: 'Short Rest HP Recovery',
@@ -680,6 +687,8 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
         if (!confirm) {
             return;
         }
+
+        updatePayload['system.tempHp'] = 0;
 
         let newHP = Math.min(this.actor.system.hp.max, this.actor.system.hp.value + Math.floor(this.actor.system.hp.max / 3));
         updatePayload['system.hp.value'] = newHP;
@@ -764,6 +773,49 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
     }
 
     /**
+     * Attribute Test
+     *
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _attributeTest(event, target) {
+        event.preventDefault();
+        let attr = target.dataset.attribute;
+        this.actor.attributeTest({attribute: attr, advantage: event.ctrlKey, disadvantage: event.shiftKey});
+    }
+
+    /**
+     * Skill Test
+     *
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _skillTest(event, target) {
+        event.preventDefault();
+        let attr = target.dataset.attribute;
+        let skill = target.dataset.skill;
+        this.actor.skillTest({attribute: attr, skill: skill, advantage: event.ctrlKey, disadvantage: event.shiftKey});
+    }
+
+    /**
+     * Save Test
+     *
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _saveTest(event, target) {
+        event.preventDefault();
+        let saveType = target.dataset.save;
+        this.actor.saveTest({save: saveType, advantage: event.ctrlKey, disadvantage: event.shiftKey});
+    }
+
+    /**
      * Melee Martial Attack
      *
      * @this RtRActorSheet
@@ -773,9 +825,47 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
      */
     static async _meleeMartialAttack(event, target) {
         event.preventDefault();
-        this.actor.meleeMartialAttack({bonus: '', advantage: event.ctrlKey, disadvantage: event.shiftKey});
+        this.actor.meleeMartialAttack({advantage: event.ctrlKey, disadvantage: event.shiftKey});
     }
 
+    /**
+     * Ranged Martial Attack
+     *
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _rangedMartialAttack(event, target) {
+        event.preventDefault();
+        this.actor.rangedMartialAttack({advantage: event.ctrlKey, disadvantage: event.shiftKey});
+    }
+
+    /**
+     * Melee Spell Attack
+     *
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _meleeSpellAttack(event, target) {
+        event.preventDefault();
+        this.actor.meleeSpellAttack({advantage: event.ctrlKey, disadvantage: event.shiftKey});
+    }
+
+    /**
+     * Ranged Spell Attack
+     *
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _rangedSpellAttack(event, target) {
+        event.preventDefault();
+        this.actor.rangedSpellAttack({advantage: event.ctrlKey, disadvantage: event.shiftKey});
+    }
     /**
      * Cast a Spell
      *
@@ -815,7 +905,8 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
 
             ChatMessage.create({
                 speaker: speaker,
-                content: text
+                content: text,
+                style: CONST.CHAT_MESSAGE_STYLES.OOC
             });
 
         });

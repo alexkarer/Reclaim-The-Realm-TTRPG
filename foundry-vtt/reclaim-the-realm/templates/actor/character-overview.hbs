@@ -65,12 +65,8 @@
             <img src='/systems/reclaim-the-realm/assets/icons/actor/weight-lifting-up.svg' height='24' width='24'>
           </div>
           <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' 
-              data-action='d20Test' data-roll='@stabilitySave'
-            >
-            <span class="rollable-text-centered" data-action='d20Test' data-roll='@stabilitySave'>
-              {{numberFormat system.defenses.stability decimals=0 }}
-            </span>
+            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='saveTest' data-save='stability'>
+            <span class="rollable-text-centered" data-action='saveTest' data-save='stability'> {{numberFormat system.defenses.stability decimals=0 }} </span>
           </div>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.stability.label'}}</span>
         </div>
@@ -82,10 +78,8 @@
             <img src='/systems/reclaim-the-realm/assets/icons/actor/dodging.svg' height='24' width='24'>
           </div>
           <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' 
-              data-action='d20Test' data-roll='@dodgeSave'
-            >
-            <span class="rollable-text-centered" data-action='d20Test' data-roll='@dodgeSave'>
+            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='saveTest' data-save='dodge'>
+            <span class="rollable-text-centered" data-action='saveTest' data-save='dodge'>
               {{numberFormat system.defenses.dodge decimals=0 }}
             </span>
           </div>
@@ -99,10 +93,8 @@
             <img src='/systems/reclaim-the-realm/assets/icons/actor/muscular-torso.svg' height='24' width='24'>
           </div>
           <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' 
-              data-action='d20Test' data-roll='@toughnessSave'
-            >
-            <span class="rollable-text-centered" data-action='d20Test' data-roll='@toughnessSave'>
+            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='saveTest' data-save='toughness'>
+            <span class="rollable-text-centered" data-action='saveTest' data-save='toughness'>
               {{numberFormat system.defenses.toughness decimals=0 }}
             </span>
           </div>
@@ -116,10 +108,8 @@
             <img src='/systems/reclaim-the-realm/assets/icons/actor/brain.svg' height='24' width='24'>
           </div>
           <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' 
-              data-action='d20Test' data-roll='@willpowerSave'
-            >
-            <span class="rollable-text-centered" data-action='d20Test' data-roll='@willpowerSave'>
+            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='saveTest' data-save='willpower'>
+            <span class="rollable-text-centered" data-action='saveTest' data-save='willpower'>
               {{numberFormat system.defenses.willpower decimals=0 }}
             </span>
           </div>
@@ -132,8 +122,8 @@
           <div>
             <img src='/icons/svg/shield.svg' height='24' width='24'>
           </div>
-          <div >
-            <span class='rollable rollable-defense' data-action='d20Test' data-roll='@shieldBlock'>
+          <div>
+            <span class='rollable rollable-defense' data-action='saveTest' data-save='shieldblock'>
               {{numberFormat system.defenses.shieldBlock decimals=0 sign=true}}/{{numberFormat system.defenses.shieldBlockThreshold decimals=0}}
             </span>
           </div>

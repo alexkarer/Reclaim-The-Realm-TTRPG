@@ -59,21 +59,33 @@ export class RtRActor extends Actor {
     }
 
     let d20TestBonuses = '';
+    if (this.getRollData().d20Test !== 0) {
+      d20TestBonuses = ' +@d20Test'
+    }
+    options.extraDice = options.extraDice ? options.extraDice : '';
 
-    let formula=`${die}+@d20Test${d20TestBonuses}${options.bonus}`;
+    if (this._hasStatusEffect('DISTRACTED')) {
+      d20TestBonuses = d20TestBonuses + ' -2';
+    }
+
+    let formula=`${die}${options.extraDice}${d20TestBonuses}${options.bonus}`;
     this.roll(formula, options);
   }
 
   /**
    * Attack Test, any interactions that modifies any attack happens here.
    * @param {*} options 
+   * @protected
    */
-  attack(options) {
+  attackTest(options) {
     if (this._hasStatusEffect('FRIGHTENED I')) {
       options.disadvantage = true;
     }
     if (this._hasStatusEffect('CURSED I')) {
-      options.bonus = options.bonus.concat(options.bonus, '-1d4');
+      options.extraDice = options.extraDice ? options.extraDice + ' -d4' : ' -d4';
+    }
+    if (this._hasStatusEffect('BLESS I')) {
+      options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
     }
 
     this.d20Test(options);
@@ -85,14 +97,149 @@ export class RtRActor extends Actor {
    */
   meleeMartialAttack(options) {
     options.type = 'MELEE MARTIAL ATTACK';
-    options.bonus = options.bonus.concat(options.bonus, '+@meleeMartialAttack');
-    this.attack(options);
+    options.bonus = options.bonus ? options.bonus + ' +@meleeMartialAttack' : ' +@meleeMartialAttack';
+    this.attackTest(options);
+  }
+
+  /**
+   * Ranged Martial Attack
+   * @param {*} options 
+   */
+  rangedMartialAttack(options) {
+    options.type = 'RANGED MARTIAL ATTACK';
+    options.bonus = options.bonus ? options.bonus + ' +@rangedMartialAttack' : ' +@rangedMartialAttack';
+    this.attackTest(options);
+  }
+
+  /**
+   * Meele Spell Attack
+   * @param {*} options 
+   */
+  meleeSpellAttack(options) {
+    options.type = 'MELEE SPELL ATTACK';
+    options.bonus = options.bonus ? options.bonus + ' +@meleeSpellAttack' : ' +@meleeSpellAttack';
+    this.attackTest(options);
+  }
+
+  /**
+   * Ranged Spell Attack
+   * @param {*} options 
+   */
+  rangedSpellAttack(options) {
+    options.type = 'RANGED SPELL ATTACK';
+    options.bonus = options.bonus ? options.bonus + ' +@rangedSpellAttack' : ' +@rangedSpellAttack';
+    this.attackTest(options);
+  }
+
+  /**
+   * Martial Test
+   * @param {*} options 
+   */
+  martialTest(options) {
+    if (this._hasStatusEffect('FRIGHTENED I')) {
+      options.disadvantage = true;
+    }
+    if (this._hasStatusEffect('CURSED I')) {
+      options.extraDice = options.extraDice ? options.extraDice + ' -d4' : ' -d4';
+    }
+    if (this._hasStatusEffect('BLESS I')) {
+      options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
+    }
+    options.type = 'MARTIAL TEST';
+    options.bonus = options.bonus ? options.bonus + ' +@martialTest' : ' +@martialTest';
+    options.bonus =  options.bonus + this._getAttributeRollBonus(options.attribute);
+
+    this.d20Test(options);
+  }
+
+   /**
+   * Spell Test
+   * @param {*} options 
+   */
+  spellTest(options) {
+    if (this._hasStatusEffect('FRIGHTENED I')) {
+      options.disadvantage = true;
+    }
+    if (this._hasStatusEffect('CURSED I')) {
+      options.extraDice = options.extraDice ? options.extraDice + ' -d4' : ' -d4';
+    }
+    if (this._hasStatusEffect('BLESS I')) {
+      options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
+    }
+    attributeTestData = this._getAttributeRollBonus(options.attribute);
+    options.type = 'SPELL TEST';
+    options.bonus = options.bonus ? options.bonus + ' +@spellTest' : ' +@spellTest';
+    options.bonus =  options.bonus + this._getAttributeRollBonus(options.attribute);
+
+    this.d20Test(options);
+  }
+
+  /**
+   * Attribute Test
+   * @param {*} options 
+   */
+  attributeTest(options) {
+    let attributeTestData = this._getAttributeRollBonus(options.attribute);
+    options.bonus = options.bonus ? options.bonus + attributeTestData.rollData : attributeTestData.rollData;
+
+    if (!options.type) {
+      options.type = attributeTestData.rollType + ' ATTRIBUTE TEST';
+    } else {
+      options.type = attributeTestData.rollType + ' ' + options.type;
+    }
+
+    if (this._hasStatusEffect('INTOXICATED') && ( options.attribute === 'agi' || options.attribute === 'per')) {
+      options.bonus = options.bonus + ' -5';
+    }
+    if (options.attribute === 'per' && this._hasStatusEffect('DISTRACTED')) {
+      options.disadvantage = true;
+    }
+    if (options.attribute === 'agi' && this._hasStatusEffect('HASTE I')) {
+      options.advantage = true;
+    }
+    if (this._hasStatusEffect('FOCUSED') && (options.attribute === 'int' || options.attribute === 'per')) {
+      options.advantage = true;
+    }
+
+    this.d20Test(options);
+  }
+
+  /**
+   * Skill Test
+   * @param {*} options 
+   */
+  skillTest(options) {
+    let skillTestData = this._getSkillRollBonus(options.skill);
+    options.bonus =  options.bonus ? options.bonus + skillTestData.rollData : skillTestData.rollData;
+    options.type = skillTestData.rollType + ' SKILL TEST';
+    this.attributeTest(options);
+  }
+
+  /**
+   * Save Test
+   * @param {*} options
+   * @protected
+   */
+  saveTest(options) {
+    let saveRollData = this._getSaveRollBonus(options.save);
+    options.bonus =  options.bonus ? options.bonus + saveRollData.rollData : saveRollData.rollData;
+    options.type = saveRollData.rollType;
+
+    if (this._hasStatusEffect('VULNURABLE I')) {
+      options.extraDice = options.extraDice ? options.extraDice + ' -d4' : ' -d4';
+    }
+    if (this._hasStatusEffect('PROTECTION I')) {
+      options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
+    }
+
+    this.d20Test(options);
   }
 
   /**
    * @param {string} formula
    * @param {*} options
    * @returns {Roll} roll object
+   * @protected
    */
   async roll(formula, options) {
     let label = options.type;
@@ -132,6 +279,12 @@ export class RtRActor extends Actor {
         this.applyDamage(damage, 'poison');
       });
     }
+    if (this._hasStatusEffect('HEALING I')) {
+      this.roll('d6[heal]', { type: 'HEALING I' }).then(result => {
+        let heal = result.terms[0].results[0].result;
+        this.heal(heal);
+      });
+    }
   }
 
   /**
@@ -142,7 +295,8 @@ export class RtRActor extends Actor {
   applyDamage(amount, type) {
     ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this }),
-        content: `${this.name} recieves ${amount} ${type} damage.`
+        content: `${this.name} recieves ${amount} ${type} damage.`,
+        style: CONST.CHAT_MESSAGE_STYLES.OOC
     });
 
     let remainingAmount = amount;
@@ -157,12 +311,76 @@ export class RtRActor extends Actor {
   }
 
   /**
+   * heal actor
+   * @param {number} amount 
+   */
+  heal(amount) {
+    ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this }),
+        content: `${this.name} heals ${amount} HP.`,
+        style: CONST.CHAT_MESSAGE_STYLES.OOC
+    });
+
+    let newHp = Math.min(this.system.hp.max, this.system.hp.value + amount);
+    this.update({ "system.hp.value": newHp});
+  }
+
+  /**
    * checks if actor has a status effect
    * @param {string} statusEffectName 
    * @returns true if status effect is active on actor and false if not
+   * @private
    */
   _hasStatusEffect(statusEffectName) {
     const existing = this.appliedEffects.find(effect => effect.name === statusEffectName);
     return existing !== undefined;
+  }
+
+  /**
+   * @param {string} attribute 
+   * @returns attribute roll data string
+   * @private
+   */
+  _getAttributeRollBonus(attribute) {
+    let foundAttribute = Object.keys(CONFIG.RTR.attributes).find(attributeName => attributeName === attribute);
+    if (!foundAttribute) {
+      ui.notifications.error(`Attribute ${attribute} not found`, {console: true});
+      return {};
+    }
+    return { rollData: `+@attributes.${foundAttribute}.value`, rollType: foundAttribute.toUpperCase() };
+  }
+
+  /**
+   * @param {string} skill 
+   * @returns skill roll data string
+   * @private
+   */
+  _getSkillRollBonus(skill) {
+    let foundSkill = Object.keys(CONFIG.RTR.skills).find(skillname => skillname === skill);
+    if (!foundSkill) {
+      ui.notifications.error(`Skill ${skill} not found`, {console: true});
+      return {};
+    }
+    if (foundSkill === 'stealth') {
+      return { rollData: `+@skills.${foundSkill}.rank-@manoeuvrePenalty`, rollType: foundSkill }; 
+    }
+    return { rollData: `+@skills.${foundSkill}.rank`, rollType: foundSkill };
+  }
+
+  /**
+   * @param {string} save 
+   * @returns {Object} save roll with roll type label
+   * @private
+   */
+  _getSaveRollBonus(save) {
+    switch(save) {
+      case 'stability': return { rollData: '+@stabilitySave', rollType: 'STABILITY SAVE'};
+      case 'dodge': return { rollData: '+@dodgeSave', rollType: 'DODGE SAVE'};
+      case 'toughness': return { rollData: '+@toughnessSave', rollType: 'TOUGHNESS SAVE'};
+      case 'willpower': return { rollData: '+@willpowerSave', rollType: 'WILLPOWER SAVE'};
+      case 'shieldblock': return { rollData: '+@shieldBlock', rollType: 'SHIELD BLOCK'};
+    }
+    ui.notifications.error(`Unkown Save ${save}`, {console: true});
+    return {};
   }
 }

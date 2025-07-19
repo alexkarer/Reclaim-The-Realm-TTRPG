@@ -7,7 +7,7 @@
         },
         {
             "name": "Manoeuvre Penalty",
-            "description": "The Manoeuvre Penalty grants you a penalty to your [DODGE] and any [AGI] [ATTRIBUTE TEST] while you are wearing that armour."
+            "description": "The Manoeuvre Penalty is a penalty to your [DODGE] and any [AGI] [STEALTH] [SKILL TEST]"
         },
         {
             "name": "Movement Penalty",

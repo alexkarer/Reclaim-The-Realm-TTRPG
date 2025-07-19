@@ -4,6 +4,19 @@ This document contains a series of changelogs to keep track of changes happening
 
 ---
 
+## RtR 2.3.0
+
+ ### Core Rules
+
+#### Short Rest
+- short rests now also add the LEVEL to the heal.
+
+### Equipment
+
+#### Manouvre Penalty
+- manouvrePenalty now only affects dodge and stealth skill test
+
+
 ## RtR 2.2.0
 
 ### General Character Changes

@@ -144,22 +144,18 @@
       <thead>
         <tr class="flex-group-center">
           {{#each system.attributes as |attribute key|}}
-            <th
-              class='rollable'
-              data-action='d20Test'
-              data-roll='@attributeTest + @attributes.{{key}}.value {{#if (eq key 'agi')}} - @manoeuvrePenalty{{/if}}'
-            >{{localize (lookup @root.config.attributeAbbreviations key)}}</th>
+            <th class='rollable' data-action='attributeTest' data-attribute='{{key}}'>
+              {{localize (lookup @root.config.attributeAbbreviations key)}}
+            </th>
           {{/each}}
         </tr>
       </thead>
       <tbody>
         <tr class="flex-group-center">
           {{#each system.attributes as |attribute key|}}
-            <td
-              class='rollable'
-              data-action='d20Test'
-              data-roll='@attributeTest + @attributes.{{key}}.value {{#if (eq key 'agi')}} - @manoeuvrePenalty{{/if}}'
-            >{{numberFormat attribute.value decimals=0}}</td>
+            <td class='rollable' data-action='attributeTest' data-attribute='{{key}}'>{{
+              numberFormat attribute.value decimals=0}}
+            </td>
           {{/each}}
         </tr>
       </tbody>
