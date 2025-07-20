@@ -7,7 +7,8 @@
       <div class="tooltip" style="margin-bottom: 5px;">
         <div class="flexrow">
           <img src='/icons/svg/mystery-man.svg' height='24' width='24'>
-          <input type='text' disabled='true' name='system.levels.level' value='{{system.levels.level}}' data-dtype='Number' />
+          <input type='text' disabled='true' name='system.levels.level' value='{{system.levels.level}}'
+            data-dtype='Number' />
         </div>
         <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.level.label'}}</span>
       </div>
@@ -15,7 +16,8 @@
       <div class="tooltip" style="margin-bottom: 5px;">
         <div class="flexrow">
           <img src='/icons/svg/sword.svg' height='24' width='24'>
-          <input type='text' disabled='true' name='system.levels.martialLevel' value='{{system.levels.martialLevel}}' data-dtype='Number' />
+          <input type='text' disabled='true' name='system.levels.martialLevel' value='{{system.levels.martialLevel}}'
+            data-dtype='Number' />
         </div>
         <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.martialLevel.label'}}</span>
       </div>
@@ -23,7 +25,8 @@
       <div class="tooltip" style="margin-bottom: 5px;">
         <div class="flexrow">
           <img src='/icons/svg/mage-shield.svg' height='24' width='24'>
-          <input type='text' disabled='true' name='system.levels.spellLevel' value='{{system.levels.spellLevel}}' data-dtype='Number' />
+          <input type='text' disabled='true' name='system.levels.spellLevel' value='{{system.levels.spellLevel}}'
+            data-dtype='Number' />
         </div>
         <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.spellLevel.label'}}</span>
       </div>
@@ -65,8 +68,10 @@
             <img src='/systems/reclaim-the-realm/assets/icons/actor/weight-lifting-up.svg' height='24' width='24'>
           </div>
           <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='saveTest' data-save='stability'>
-            <span class="rollable-text-centered" data-action='saveTest' data-save='stability'> {{numberFormat system.defenses.stability decimals=0 }} </span>
+            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
+              data-action='saveTest' data-save='stability'>
+            <span class="rollable-text-centered" data-action='saveTest' data-save='stability'> {{numberFormat
+              system.defenses.stability decimals=0 }} </span>
           </div>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.stability.label'}}</span>
         </div>
@@ -78,7 +83,8 @@
             <img src='/systems/reclaim-the-realm/assets/icons/actor/dodging.svg' height='24' width='24'>
           </div>
           <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='saveTest' data-save='dodge'>
+            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
+              data-action='saveTest' data-save='dodge'>
             <span class="rollable-text-centered" data-action='saveTest' data-save='dodge'>
               {{numberFormat system.defenses.dodge decimals=0 }}
             </span>
@@ -93,7 +99,8 @@
             <img src='/systems/reclaim-the-realm/assets/icons/actor/muscular-torso.svg' height='24' width='24'>
           </div>
           <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='saveTest' data-save='toughness'>
+            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
+              data-action='saveTest' data-save='toughness'>
             <span class="rollable-text-centered" data-action='saveTest' data-save='toughness'>
               {{numberFormat system.defenses.toughness decimals=0 }}
             </span>
@@ -108,7 +115,8 @@
             <img src='/systems/reclaim-the-realm/assets/icons/actor/brain.svg' height='24' width='24'>
           </div>
           <div class="rollable-container">
-            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28' data-action='saveTest' data-save='willpower'>
+            <img src="/icons/svg/d20-grey.svg" class="rollable-image" alt="d20" height='28' width='28'
+              data-action='saveTest' data-save='willpower'>
             <span class="rollable-text-centered" data-action='saveTest' data-save='willpower'>
               {{numberFormat system.defenses.willpower decimals=0 }}
             </span>
@@ -124,7 +132,8 @@
           </div>
           <div>
             <span class='rollable rollable-defense' data-action='saveTest' data-save='shieldblock'>
-              {{numberFormat system.defenses.shieldBlock decimals=0 sign=true}}/{{numberFormat system.defenses.shieldBlockThreshold decimals=0}}
+              {{numberFormat system.defenses.shieldBlock decimals=0 sign=true}}/{{numberFormat
+              system.defenses.shieldBlockThreshold decimals=0}}
             </span>
           </div>
           <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.defenses.shieldBlock.label'}}</span>
@@ -136,44 +145,46 @@
   <hr>
 
   <h6 class="headline">Creature Infos</h6>
-  <div class="flexrow" style="margin-bottom: 5px;">
-    <div>
-      <label class='bold-text' for="system.resistancesString">Resistances:</label>
-      <input class="grid-span-5" type='text' id='system.resistancesString' name='system.resistancesString' value='{{system.resistancesString}}' />
-    </div>
+
+  <label class='bold-text' for='resistances-container' style="margin-bottom: 5px;">Resistances:</label>
+  <div class="flexrow" id='resistances-container'>
+    {{#each system.resistances as |resistance key|}}
+      <input disabled='true' type='text' value='{{resistance.damageType}}: {{resistance.value}}' />
+    {{/each}}
+    <input type='text' name='system.newResistanceDamageType' value='{{@root.system.newResistanceDamageType}}' />
+    <input type='number' name='system.newResistanceValue' value='{{@root.system.newResistanceValue}}' />
+    <input type="button" value="+" class="add-resistance-btn" data-action='addDamageResistance' />
   </div>
+
   <div class="flexrow" style="margin-bottom: 5px;">
     <div>
       <label class='bold-text' for="system.alignment">Alignment:</label>
       <input type='text' id='system.alignment' name='system.alignment' value='{{system.alignment}}' />
     </div>
   </div>
+
   <hr>
+
   <h6 class="headline">Short Rest</h6>
   <div class="flexrow flex-group-center">
-    <button style="margin-right: 10px" 
-      data-action='shortRestHpRecovery'
-      {{disabled (eq system.stamina.value 0)}}
-    >
+    <button style="margin-right: 10px" data-action='shortRestHpRecovery' {{disabled (eq system.stamina.value 0)}}>
       <img src="/icons/svg/regen.svg" alt="Short Rest HP Recovery" height='16' width='16'>
       <span>HP Recovery</span>
     </button>
-    <button style="margin-left: 10px; margin-right: 10px" 
-      data-action='shortRestArcanaRecovery'
-      {{disabled (eq system.stamina.value 0)}}
-    >
-      <img src="/systems/reclaim-the-realm/assets/icons/actor/sparkles.svg" alt="Short Rest Arcana Recovery" height='16' width='16'>
+    <button style="margin-left: 10px; margin-right: 10px" data-action='shortRestArcanaRecovery' {{disabled (eq
+      system.stamina.value 0)}}>
+      <img src="/systems/reclaim-the-realm/assets/icons/actor/sparkles.svg" alt="Short Rest Arcana Recovery"
+        height='16' width='16'>
       <span>Arcana Recovery</span>
     </button>
-    <button style="margin-left: 10px;"
-      data-action='shortRestExhaustionRecovery'
-      {{disabled (eq system.stamina.value 0)}}
-      {{disabled (eq system.stamina.value 1)}}
-    >
-      <img src="/icons/magic/time/hourglass-tilted-gray.webp" alt="Short Rest Exhaustion Recovery" height='16' width='16'>
+    <button style="margin-left: 10px;" data-action='shortRestExhaustionRecovery' {{disabled (eq system.stamina.value
+      0)}} {{disabled (eq system.stamina.value 1)}}>
+      <img src="/icons/magic/time/hourglass-tilted-gray.webp" alt="Short Rest Exhaustion Recovery" height='16'
+        width='16'>
       <span>Exhaustion Recovery</span>
     </button>
   </div>
+
   <h6 class="headline">Long Rest</h6>
   <div class="flexrow flex-group-center">
     <button data-action='longRestRecovery'>

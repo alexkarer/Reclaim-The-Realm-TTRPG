@@ -1,6 +1,7 @@
 ### Immidiate TODOS
 
-Create Damage Roll Logic
+Add edit locker for resistances and way to delete them
+Create Damage Roll Logic and handle resistance in damage apply
 
 # General TODOs/Nice to have
 
@@ -10,6 +11,9 @@ Create Damage Roll Logic
 
 ## Actors
 
+- Handle Cearture Size
+  - ALso increase Tokens and stuff
+
 - Change Biography to either be in separate Tab or at the bottom of the Overview.
   - alignmeent should be there
   - languages should be there
@@ -18,11 +22,11 @@ Create Damage Roll Logic
 - Add Notifications if there is something todo (e.g. learn new ability, add attribute pooitns, assign skill ranks)
 
 - have UI that shows current AP and MP at start of Round.
-
-- Handle Cearture Size
 - Add Icons to skill
 
 - Add functionality for cover and concealment
+
+- Add nicer way of displaying the resitances with icons and stuff
 
 ### Characters
 
@@ -45,7 +49,6 @@ Separate Type that is bascically like NPCS but roll everything
 - Overview Tab: change from bonus in save to passive values
 - Description Tab: HTML Field that shows lore and stuff
 - Skills: needs possibility to set skil lranks manaullys
-
 
 ## Items
 

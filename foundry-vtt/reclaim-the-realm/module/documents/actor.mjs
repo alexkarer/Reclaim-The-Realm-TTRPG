@@ -46,6 +46,10 @@ export class RtRActor extends Actor {
     return { ...super.getRollData(), ...(this.system.getRollData?.() ?? null) };
   }
 
+  /* -------------------------------------------- */
+  /*  D20 Tests                                   */
+  /* -------------------------------------------- */
+
   /**
    * D20 Test
    * @param {*} options 
@@ -263,6 +267,10 @@ export class RtRActor extends Actor {
     return roll;
   }
 
+  /* -------------------------------------------- */
+  /*  Interactions                                */
+  /* -------------------------------------------- */
+
   /**
    * Handle everything that happens on the start of combat
    */
@@ -292,6 +300,8 @@ export class RtRActor extends Actor {
       });
     }
   }
+
+  // TODO method to deal damage to other actors, or attack them
 
   /**
    * apply damage to actor
@@ -330,6 +340,10 @@ export class RtRActor extends Actor {
     let newHp = Math.min(this.system.hp.max, this.system.hp.value + amount);
     this.update({ "system.hp.value": newHp});
   }
+
+  /* -------------------------------------------- */
+  /*  Private Helpers                             */
+  /* -------------------------------------------- */
 
   /**
    * checks if actor has a status effect

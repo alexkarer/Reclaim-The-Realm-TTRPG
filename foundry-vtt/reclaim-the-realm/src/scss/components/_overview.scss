@@ -15,3 +15,28 @@
   overflow-x: hidden;
   scrollbar-width: thin;
 }
+
+.add-resistance-btn {
+  margin-left: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  color: green;
+  background-color: black;
+  text-align: center;
+
+  &:disabled {
+    color: gray;
+    border-color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    color: lightgreen;
+    border-color: lightgreen;
+    background-color: darkslategray;
+    cursor: pointer;
+  }
+}

@@ -28,7 +28,8 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
             toggleEffect: this._toggleEffect,
             roll: this._onRoll,
             increaseHp: this._onIncreaseHP,
-            decreaseHp: this._onDecreaseHP
+            decreaseHp: this._onDecreaseHP,
+            addDamageResistance: this._onAddDamageResistance
         },
         // Custom property that's merged into `this.options`
         dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -103,7 +104,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
 
     /**
      * Handle changing a Document's image.
-     *
      * @this RtRActorSheet
      * @param {PointerEvent} event   The originating click event
      * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
@@ -131,7 +131,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
 
     /**
      * Renders an embedded document's sheet
-     *
      * @this RtRActorSheet
      * @param {PointerEvent} event   The originating click event
      * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
@@ -144,7 +143,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
 
     /**
      * Handles item deletion
-     *
      * @this RtRActorSheet
      * @param {PointerEvent} event   The originating click event
      * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
@@ -157,7 +155,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
 
     /**
      * Handle creating a new Owned Item or ActiveEffect for the actor using initial data defined in the HTML dataset
-     *
      * @this RtRActorSheet
      * @param {PointerEvent} event   The originating click event
      * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
@@ -190,7 +187,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
 
     /**
      * Determines effect parent to pass to helper
-     *
      * @this RtRActorSheet
      * @param {PointerEvent} event   The originating click event
      * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
@@ -208,7 +204,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
 
     /**
      * Handle any custom roll.
-     *
      * @this RtRActorSheet
      * @param {PointerEvent} event   The originating click event
      * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
@@ -240,7 +235,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
 
     /**
      * Handle increasing HP by 1.
-     *
      * @this RtRActorSheet
      * @param {PointerEvent} event   The originating click event
      * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
@@ -261,7 +255,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
 
     /**
      * Handle decreasing HP by 1.
-     *
      * @this RtRActorSheet
      * @param {PointerEvent} event   The originating click event
      * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
@@ -278,6 +271,38 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
             newHp = Math.max(0, this.actor.system.hp.value - 1);
         }
         this.actor.update({ "system.hp.value": newHp }).then(v => this.render());
+    }
+
+    /**
+     * Add new damage resistance
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _onAddDamageResistance(event, target) {
+        if (this.actor.system.newResistanceValue === 0) {
+            return;
+        }
+
+        const existingResistance = this.actor.system.resistances.find(res => res.damageType === this.actor.system.newResistanceDamageType);
+        let updatedResistances = [];
+        if (existingResistance) {
+            updatedResistances = foundry.utils.deepClone(this.actor.system.resistances.filter(res => res.damageType !== this.actor.system.newResistanceDamageType));
+            updatedResistances.push({damageType: existingResistance.damageType, value: existingResistance.value + this.actor.system.newResistanceValue});
+        } else {
+            updatedResistances = [
+                ...foundry.utils.deepClone(this.actor.system.resistances), 
+                {damageType: this.actor.system.newResistanceDamageType, value: this.actor.system.newResistanceValue}
+            ];
+        }
+
+        const updatePayload = { 
+            "system.newResistanceValue": 0,
+            "system.resistances": updatedResistances
+        };
+
+        this.actor.update(updatePayload).then(v => this.render());
     }
 
     /**************

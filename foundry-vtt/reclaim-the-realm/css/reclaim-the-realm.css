@@ -638,6 +638,27 @@
   overflow-x: hidden;
   scrollbar-width: thin;
 }
+.reclaim-the-realm .add-resistance-btn {
+  margin-left: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  color: green;
+  background-color: black;
+  text-align: center;
+}
+.reclaim-the-realm .add-resistance-btn:disabled {
+  color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.reclaim-the-realm .add-resistance-btn:not(:disabled):hover, .reclaim-the-realm .add-resistance-btn:not(:disabled):focus {
+  color: lightgreen;
+  border-color: lightgreen;
+  background-color: darkslategray;
+  cursor: pointer;
+}
 .reclaim-the-realm .increase-attribute-btn {
   margin-left: 5px;
   flex-shrink: 5;
