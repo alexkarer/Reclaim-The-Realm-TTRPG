@@ -10,6 +10,7 @@ import { RTR } from './helpers/config.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
 import { generateFvttId } from "./utils.mjs";
+import { getPrototypeTokenConfig } from "./helpers/actor-helper.mjs"
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -103,7 +104,7 @@ Hooks.once('init', function () {
 
 function _configureStatusEffects() {
   CONFIG.statusEffects = [];
-  for ( const [id, {...data}] of Object.entries(CONFIG.RTR.statusEffects) ) {
+  for (const [id, { ...data }] of Object.entries(CONFIG.RTR.statusEffects)) {
     let effect = foundry.utils.deepClone(data);
     effect.id = id;
     effect._id = generateFvttId(`RTR${id}`);
@@ -162,12 +163,12 @@ Handlebars.registerHelper('formatWeight', function (weightInGramm) {
   }
   let kg = Math.floor(weightInGramm / 1000);
   let gramm = weightInGramm % 1000;
-  let dg =  Math.floor((weightInGramm % 1000) / 100);
+  let dg = Math.floor((weightInGramm % 1000) / 100);
   let cg = weightInGramm % 100;
   if (gramm === 0) {
-    return kg + ' kg'; 
-  } else if (dg !== 0 && cg === 0) { 
-    return kg + '.' + dg + ' kg'; 
+    return kg + ' kg';
+  } else if (dg !== 0 && cg === 0) {
+    return kg + '.' + dg + ' kg';
   } else {
     return kg + ' kg ' + gramm + ' g';
   }
@@ -177,7 +178,7 @@ Handlebars.registerHelper('formatCost', function (costInBc) {
   let bc = costInBc % 10;
   let sc = Math.floor((costInBc % 100) / 10);
   let gc = Math.floor(costInBc / 100);
-  
+
   if (gc === 0 && sc === 0 && bc === 0) {
     return '-';
   } else if (gc === 0 && sc === 0 && bc !== 0) {
@@ -207,6 +208,18 @@ Hooks.once('ready', function () {
 
   Hooks.on('combatTurnChange', (combat, prior, current) => {
     combat.combatant?.actor?.handleOnCombatTrunStart()
+  });
+
+
+  Hooks.on('createActor', async (actor, options, userId) => {
+    // we check this in case the actor is imported from a compendium
+    if (!actor.flags?.mySystem?.defaultsApplied) {
+      const tokenDefaults = getPrototypeTokenConfig(actor.type);
+      await actor.update({
+        prototypeToken: tokenDefaults,
+        'flags.mySystem.defaultsApplied': true
+      });
+    }
   });
 });
 

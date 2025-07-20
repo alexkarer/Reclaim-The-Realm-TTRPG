@@ -1,5 +1,4 @@
 import { generateFvttId } from "../../utils.mjs";
-import { parseRollDataForType } from "../../helpers/parsing-utils.mjs";
 
 const { api, sheets, ux, apps } = foundry.applications;
 

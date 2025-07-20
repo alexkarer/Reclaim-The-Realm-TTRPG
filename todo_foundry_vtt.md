@@ -1,8 +1,5 @@
 ### Immidiate TODOS
 
-Define Prototype Tokens in the Data for each Actor
-reset thp after long rest
-
 Create Damage Roll Logic
 
 # General TODOs/Nice to have
@@ -17,7 +14,6 @@ Create Damage Roll Logic
   - alignmeent should be there
   - languages should be there
 - On all places show the formula for calculating, which is fixed but can be modified with additional values.
-- Configure prototype token
 - Data Section add Translation 
 - Add Notifications if there is something todo (e.g. learn new ability, add attribute pooitns, assign skill ranks)
 
@@ -108,6 +104,7 @@ Hide certain abilities that can't be used (example, silennced)
 ## Special
 
 Have a UI that shows Action Points and MP at the bottom similar to Divinity or something similar.
+  https://foundryvtt.com/api/classes/foundry.applications.ui.Hotbar.html
 
 Have sound and visual effects for status effects 
 Keep Records, total damage, healing, etc. (check fantasygrounds example)

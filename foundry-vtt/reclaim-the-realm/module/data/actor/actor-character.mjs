@@ -1,5 +1,5 @@
 import RtRActorBase from './base-actor.mjs';
-import { calculateXPMilestonesAndLevel, getStrCarryLiftValues, getMartialDamage } from '../../helpers/character-helper.mjs';
+import { calculateXPMilestonesAndLevel, getStrCarryLiftValues, getMartialDamage } from '../../helpers/actor-helper.mjs';
 
 export default class RtRCharacter extends RtRActorBase {
   static LOCALIZATION_PREFIXES = [

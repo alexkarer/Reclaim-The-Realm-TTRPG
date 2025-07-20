@@ -1,4 +1,4 @@
-import { getApForLevel } from '../../helpers/character-helper.mjs';
+import { getApForLevel } from '../../helpers/actor-helper.mjs';
 
 export default class RtRActorBase extends foundry.abstract.TypeDataModel {
   static LOCALIZATION_PREFIXES = ["RTR.Actor.base"];

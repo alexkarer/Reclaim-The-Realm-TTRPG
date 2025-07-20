@@ -98,6 +98,9 @@ export class RtRActor extends Actor {
   meleeMartialAttack(options) {
     options.type = 'MELEE MARTIAL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@meleeMartialAttack' : ' +@meleeMartialAttack';
+    if (this._hasStatusEffect('PRONE')) {
+      options.disadvantage = true;
+    }
     this.attackTest(options);
   }
 
@@ -118,6 +121,9 @@ export class RtRActor extends Actor {
   meleeSpellAttack(options) {
     options.type = 'MELEE SPELL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@meleeSpellAttack' : ' +@meleeSpellAttack';
+    if (this._hasStatusEffect('PRONE')) {
+      options.disadvantage = true;
+    }
     this.attackTest(options);
   }
 

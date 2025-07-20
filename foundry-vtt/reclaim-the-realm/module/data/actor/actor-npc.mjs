@@ -1,5 +1,5 @@
 import RtRActorBase from './base-actor.mjs';
-import { calculateXPReward } from '../../helpers/character-helper.mjs';
+import { calculateXPReward } from '../../helpers/actor-helper.mjs';
 
 export default class RtRNPC extends RtRActorBase {
   static LOCALIZATION_PREFIXES = [
