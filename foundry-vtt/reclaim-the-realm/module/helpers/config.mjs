@@ -63,7 +63,7 @@ RTR.equipmentTypes = {
 }
 
 RTR.damageTypes = {
-  Phyiscial: "RTR.DamageTypes.Phyiscial",
+  Physical: "RTR.DamageTypes.Physical",
   Fire: "RTR.DamageTypes.Fire",
   Frost: "RTR.DamageTypes.Frost",
   Corrosive: "RTR.DamageTypes.Corrosive",

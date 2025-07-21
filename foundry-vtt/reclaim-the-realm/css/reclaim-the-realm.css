@@ -623,6 +623,10 @@
   background-color: lightcoral;
   cursor: pointer;
 }
+.reclaim-the-realm .character-overview-scrollable {
+  overflow-y: scroll;
+  max-height: 560px;
+}
 .reclaim-the-realm .headline {
   margin-top: 0px;
 }
@@ -656,6 +660,27 @@
 .reclaim-the-realm .add-resistance-btn:not(:disabled):hover, .reclaim-the-realm .add-resistance-btn:not(:disabled):focus {
   color: lightgreen;
   border-color: lightgreen;
+  background-color: darkslategray;
+  cursor: pointer;
+}
+.reclaim-the-realm .delete-resistance-btn {
+  margin-left: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: red;
+  color: red;
+  background-color: black;
+  text-align: center;
+}
+.reclaim-the-realm .delete-resistance-btn:disabled {
+  color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.reclaim-the-realm .delete-resistance-btn:not(:disabled):hover, .reclaim-the-realm .delete-resistance-btn:not(:disabled):focus {
+  color: lightcoral;
+  border-color: lightcoral;
   background-color: darkslategray;
   cursor: pointer;
 }

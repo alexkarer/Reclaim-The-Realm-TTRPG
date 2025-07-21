@@ -46,7 +46,7 @@
       "Commodity": "Commodity"
     },
     "DamageTypes": {
-      "Phyiscial": "Phyiscial",
+      "Physical": "Physical",
       "Fire": "Fire",
       "Frost": "Frost",
       "Corrosive": "Corrosive",

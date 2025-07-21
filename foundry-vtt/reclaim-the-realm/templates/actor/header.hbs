@@ -14,6 +14,7 @@
       <input
         style='margin-right: 1em;'
         name='name'
+        {{disabled @root.system.editLock}}
         type='text'
         value='{{actor.name}}'
         placeholder='Name'
@@ -34,10 +35,16 @@
          <input 
             type="button"
             value="+"
+            {{disabled @root.system.editLock}}
             class="add-xp-btn"
             name='system.xp.increase'
             data-action='addXp'
           />
+          {{#if system.editLock}}
+            <button type="button" style="margin-left: 5px;" class="icon toggle" data-action='unlockEdit' {{disabled (not editable)}}><i class="fa-solid fa-pen-to-square"></i></button>
+          {{else}}
+            <button type="button" style="margin-left: 5px;" class="icon toggle" data-action='lockEdit'><i class="fa-solid fa-xmark"></i></button>
+          {{/if}}
       </div>
       {{/if}}
 
@@ -53,6 +60,11 @@
             value='{{system.xpReward}}'
             data-dtype='Number'>
       </div>
+      {{#if system.editLock}}
+          <button type="button" style="margin-left: 5px;" class="icon toggle align-self-right" data-action='unlockEdit' {{disabled (not editable)}}><i class="fa-solid fa-pen-to-square"></i></button>
+          {{else}}
+            <button type="button" style="margin-left: 5px;" class="icon toggle align-self-right" data-action='lockEdit'><i class="fa-solid fa-xmark"></i></button>
+          {{/if}}
       {{/if}}
     </div>
 

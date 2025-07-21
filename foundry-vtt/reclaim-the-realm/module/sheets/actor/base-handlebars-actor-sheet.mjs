@@ -27,9 +27,12 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
             deleteDoc: this._deleteDoc,
             toggleEffect: this._toggleEffect,
             roll: this._onRoll,
+            unlockEdit: this._onUnlockEdit,
+            lockEdit: this._onLockEdit,
             increaseHp: this._onIncreaseHP,
             decreaseHp: this._onDecreaseHP,
-            addDamageResistance: this._onAddDamageResistance
+            addDamageResistance: this._onAddDamageResistance,
+            deleteDamageResistance: this._onDeleteDamageResistance
         },
         // Custom property that's merged into `this.options`
         dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -94,6 +97,18 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
     _onRender(context, options) {
         this.#dragDrop.forEach((d) => d.bind(this.element));
         this.#disableOverrides();
+    }
+
+    /**
+     * Lock edit lockers upon close
+     * @param options
+     * @protected
+     * @override
+     */
+    _onClose(options) {
+        let updatePayload = {};
+        updatePayload['system.editLock'] = true;
+        this.actor.update(updatePayload);
     }
 
     /**************
@@ -234,6 +249,40 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
     }
 
     /**
+     * Unlock Actor Editing
+     *
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _onUnlockEdit(event, target) {
+        event.preventDefault();
+        if (!this.isEditable) {
+            console.error("No Edit permission for " + this.name);
+            return;
+        }
+        let updatePayload = {};
+        updatePayload['system.editLock'] = false;
+        this.actor.update(updatePayload).then(v => this.render());
+    }
+
+    /**
+     * Lock Actor Editing
+     *
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _onLockEdit(event, target) {
+        event.preventDefault();
+        let updatePayload = {};
+        updatePayload['system.editLock'] = true;
+        this.actor.update(updatePayload).then(v => this.render());
+    }
+
+    /**
      * Handle increasing HP by 1.
      * @this RtRActorSheet
      * @param {PointerEvent} event   The originating click event
@@ -281,6 +330,7 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
      * @protected
      */
     static async _onAddDamageResistance(event, target) {
+        event.preventDefault();
         if (this.actor.system.newResistanceValue === 0) {
             return;
         }
@@ -302,6 +352,23 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
             "system.resistances": updatedResistances
         };
 
+        this.actor.update(updatePayload).then(v => this.render());
+    }
+
+    /**
+     * Delete damage resistance
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _onDeleteDamageResistance(event, target) {
+        event.preventDefault();
+        const damageType = target.dataset.dmgtype;
+        console.log(damageType);
+        const updatePayload = { 
+            "system.resistances": foundry.utils.deepClone(this.actor.system.resistances.filter(res => res.damageType !== damageType))
+        };
         this.actor.update(updatePayload).then(v => this.render());
     }
 

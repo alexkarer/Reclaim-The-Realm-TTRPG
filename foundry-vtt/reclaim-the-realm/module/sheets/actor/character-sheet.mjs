@@ -34,11 +34,6 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
             shortRestExhaustionRecovery: this._onShortRestExhaustionRecovery,
             longRestRecovery: this._onLongRestRecovery,
 
-            unlockSkillsEdit: this._onUnlockSkillsEdit,
-            lockSkillsEdit: this._onLockSkillsEdit,
-            unlockDataEdit: this._onUnlockDataEdit,
-            lockDataEdit: this._onLockDataEdit,
-
             attributeTest: this._attributeTest,
             skillTest: this._skillTest,
             saveTest: this._saveTest,
@@ -266,19 +261,6 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
                     .then(v => this.render());
             })
         }
-    }
-
-    /**
-     * Lock edit lockers upon close
-     * @param options
-     * @protected
-     * @override
-     */
-    _onClose(options) {
-        let updatePayload = {};
-        updatePayload['system.editLockers.skillsEditLocked'] = true;
-        updatePayload['system.editLockers.dataEditLocked'] = true;
-        this.actor.update(updatePayload);
     }
 
     /**************
@@ -701,74 +683,6 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
 
         updatePayload['system.exhaustion'] = Math.max(this.actor.system.exhaustion - 1, 0);
 
-        this.actor.update(updatePayload).then(v => this.render());
-    }
-
-    /**
-     * Unlocks Skills for editing
-     *
-     * @this RtRActorSheet
-     * @param {PointerEvent} event   The originating click event
-     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-     * @protected
-     */
-    static async _onUnlockSkillsEdit(event, target) {
-        event.preventDefault();
-        if (!this.isEditable) {
-            console.error("No Edit permission for " + this.name);
-            return;
-        }
-        let updatePayload = {};
-        updatePayload['system.editLockers.skillsEditLocked'] = false;
-        this.actor.update(updatePayload).then(v => this.render());
-    }
-
-    /**
-     * Lock Skills for editing
-     *
-     * @this RtRActorSheet
-     * @param {PointerEvent} event   The originating click event
-     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-     * @protected
-     */
-    static async _onLockSkillsEdit(event, target) {
-        event.preventDefault();
-        let updatePayload = {};
-        updatePayload['system.editLockers.skillsEditLocked'] = true;
-        this.actor.update(updatePayload).then(v => this.render());
-    }
-
-    /**
-     * Unlocks Data for editing
-     *
-     * @this RtRActorSheet
-     * @param {PointerEvent} event   The originating click event
-     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-     * @protected
-     */
-    static async _onUnlockDataEdit(event, target) {
-        event.preventDefault();
-        if (!this.isEditable) {
-            console.error("No Edit permission for " + this.name);
-            return;
-        }
-        let updatePayload = {};
-        updatePayload['system.editLockers.dataEditLocked'] = false;
-        this.actor.update(updatePayload).then(v => this.render());
-    }
-
-    /**
-     * Lock Data for editing
-     *
-     * @this RtRActorSheet
-     * @param {PointerEvent} event   The originating click event
-     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-     * @protected
-     */
-    static async _onLockDataEdit(event, target) {
-        event.preventDefault();
-        let updatePayload = {};
-        updatePayload['system.editLockers.dataEditLocked'] = true;
         this.actor.update(updatePayload).then(v => this.render());
     }
 

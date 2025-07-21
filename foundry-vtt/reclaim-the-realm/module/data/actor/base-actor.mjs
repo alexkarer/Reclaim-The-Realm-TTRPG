@@ -24,6 +24,8 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel {
     schema.biography = new fields.HTMLField();
     schema.alignment = new fields.StringField({blank: false, initial: 'lawful good', choices: ['unaligned', 'lawful good', 'lawful neutral', 'lawful evil', 'neutral good', 'true neutral', 'neutral evil', 'chaotic good', 'chaotic neutral', 'chaotic evil']});
 
+    schema.editLock = new fields.BooleanField({ initial: true, required: true, nullable: false });
+
     schema.data = new fields.SchemaField({
       hpPerLevel: new fields.NumberField({ ...requiredInteger, initial: 6, min: 1 }),
       additionalHp: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
@@ -40,7 +42,7 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel {
     });
 
     schema.levels = new fields.SchemaField({
-      level: new fields.NumberField({ required: true, nullable: false, initial: 1, min: 0.125 }),
+      level: new fields.NumberField({ required: true, nullable: false, integer: false, initial: 1, min: 0.125 }),
       martialLevel: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       spellLevel: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       martialProficency: new fields.AlphaField({ ...proficiency, initial: 0 }),

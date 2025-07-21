@@ -64,9 +64,11 @@
             </td>
             {{#if @root.editable}}
             <td>
+              {{#unless @root.system.editLock}}
               <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='classTechnique'}}' data-action='deleteDoc'>
                 <i class='fas fa-trash'></i>
               </a>
+              {{/unless}}
             </td>
             {{/if}}
           </tr>
@@ -178,9 +180,11 @@
               </td>
               {{#if @root.editable}}
               <td>
+                {{#unless @root.system.editLock}}
                 <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='martialManeuver'}}' data-action='deleteDoc'>
                   <i class='fas fa-trash'></i>
                 </a>
+                {{/unless}}
               </td>
               {{/if}}
             </tr>
@@ -282,9 +286,11 @@
               </td>
               {{#if @root.editable}}
               <td>
+                {{#unless @root.system.editLock}}
                 <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='spell'}}' data-action='deleteDoc'>
                   <i class='fas fa-trash'></i>
                 </a>
+                {{/unless}}
               </td>
               {{/if}}
             </tr>
@@ -327,9 +333,11 @@
           </td>
           {{#if @root.editable}}
           <td>
+            {{#unless @root.system.editLock}}
             <a class='item-control item-delete' title='{{localize "DOCUMENT.Delete" type='ability'}}' data-action='deleteDoc'>
               <i class='fas fa-trash'></i>
             </a>
+            {{/unless}}
           </td>
           {{/if}}
         </tr>

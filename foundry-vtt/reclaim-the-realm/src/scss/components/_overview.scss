@@ -1,3 +1,8 @@
+.character-overview-scrollable {
+  overflow-y: scroll;
+  max-height: 560px;
+}
+
 .headline {
     margin-top: 0px;
 }
@@ -36,6 +41,31 @@
   &:not(:disabled):focus {
     color: lightgreen;
     border-color: lightgreen;
+    background-color: darkslategray;
+    cursor: pointer;
+  }
+}
+
+.delete-resistance-btn {
+  margin-left: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: red;
+  color: red;
+  background-color: black;
+  text-align: center;
+
+  &:disabled {
+    color: gray;
+    border-color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    color: lightcoral;
+    border-color: lightcoral;
     background-color: darkslategray;
     cursor: pointer;
   }

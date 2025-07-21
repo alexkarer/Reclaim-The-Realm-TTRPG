@@ -36,6 +36,7 @@
                     <td style="max-width: 200px;">{{item.system.tags}}</td>
                     {{#if @root.editable}}
                     <td>
+                        {{#unless @root.system.editLock}}
                         <a
                             class='item-control item-delete'
                             title='{{localize "DOCUMENT.Delete" type='perk'}}'
@@ -43,6 +44,7 @@
                         >
                             <i class='fas fa-trash'></i>
                         </a>
+                        {{/unless}}
                     </td>
                     {{/if}}
                 </tr>

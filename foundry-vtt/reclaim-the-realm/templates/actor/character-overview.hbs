@@ -1,5 +1,5 @@
 {{! Character Overview Tab }}
-<section class='tab character-overview {{tab.cssClass}}' data-group='primary' data-tab='characteroverview'>
+<section class='tab character-overview character-overview-scrollable {{tab.cssClass}}' data-group='primary' data-tab='characteroverview'>
   <div class='grid grid-5col'>
 
     <div class="flexcol">
@@ -7,8 +7,7 @@
       <div class="tooltip" style="margin-bottom: 5px;">
         <div class="flexrow">
           <img src='/icons/svg/mystery-man.svg' height='24' width='24'>
-          <input type='text' disabled='true' name='system.levels.level' value='{{system.levels.level}}'
-            data-dtype='Number' />
+          <input type='text' disabled='true' name='system.levels.level' value='{{system.levels.level}}' data-dtype='Number' />
         </div>
         <span class="tooltiptext">{{localize 'RTR.Actor.base.FIELDS.levels.level.label'}}</span>
       </div>
@@ -144,24 +143,26 @@
 
   <hr>
 
-  <h6 class="headline">Creature Infos</h6>
-
-  <label class='bold-text' for='resistances-container' style="margin-bottom: 5px;">Resistances:</label>
-  <div class="flexrow" id='resistances-container'>
+  <h6 class='headline'>Resistances:</h6>
+  <div class="flexrow">
     {{#each system.resistances as |resistance key|}}
-      <input disabled='true' type='text' value='{{resistance.damageType}}: {{resistance.value}}' />
+      <input disabled='true' style="flex-grow: 5;" type='text' value='{{resistance.damageType}}: {{resistance.value}}' />
+      {{#unless @root.system.editLock}}
+        <input type="button" value="-" class="delete-resistance-btn" data-action='deleteDamageResistance' data-dmgtype='{{resistance.damageType}}' />
+      {{/unless}}
     {{/each}}
-    <input type='text' name='system.newResistanceDamageType' value='{{@root.system.newResistanceDamageType}}' />
-    <input type='number' name='system.newResistanceValue' value='{{@root.system.newResistanceValue}}' />
-    <input type="button" value="+" class="add-resistance-btn" data-action='addDamageResistance' />
   </div>
+  {{#unless @root.system.editLock}}
+  <div class="flexrow">
+    <span>New: </span>
+    <input type='text' class="compact-input" name='system.newResistanceDamageType' value='{{@root.system.newResistanceDamageType}}' />
+    <input type='number' class="compact-input" name='system.newResistanceValue' value='{{@root.system.newResistanceValue}}' />
+    <input type="button" value="+" class="compact-input add-resistance-btn" data-action='addDamageResistance' />
+  </div>
+  {{/unless}}
 
-  <div class="flexrow" style="margin-bottom: 5px;">
-    <div>
-      <label class='bold-text' for="system.alignment">Alignment:</label>
-      <input type='text' id='system.alignment' name='system.alignment' value='{{system.alignment}}' />
-    </div>
-  </div>
+  <h6 class='headline'>Alignment:</h6>
+  <input type='text' {{disabled @root.system.editLock}} id='system.alignment' name='system.alignment' value='{{system.alignment}}' />
 
   <hr>
 

@@ -50,8 +50,9 @@
           <td>{{item.system.quantity}}</td>
           <td>{{formatWeight item.system.totalWeightGramm}}</td>
           <td>{{formatCost item.system.costBc}}</td>
+          {{#if @root.editable}}
           <td>
-            {{#if @root.editable}}
+            {{#unless @root.system.editLock}}
               <a
                 class='item-control item-delete'
                 title='{{localize "DOCUMENT.Delete" type='Equipment'}}'
@@ -59,8 +60,9 @@
               >
                 <i class='fas fa-trash'></i>
               </a>
-            {{/if}}
+            {{/unless}}
           </td>
+          {{/if}}
         </tr>
         {{/each}}
       </tbody>
@@ -71,7 +73,7 @@
       <div class="tooltip" style="margin-right: 10px;">
         <div class="flexrow">
           <img style="margin-right: 5px;" src='/icons/commodities/currency/coins-crown-stack-gold.webp' height='24' width='24'>
-          <input style="flex-grow: 5;" type='number' name='system.inventory.gc' value='{{system.inventory.gc}}' data-dtype='Number'/>
+          <input style="flex-grow: 5;" {{disabled @root.system.editLock}} type='number' name='system.inventory.gc' value='{{system.inventory.gc}}' data-dtype='Number'/>
         </div>
         <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.gc.label'}}</span>
       </div>
@@ -79,7 +81,7 @@
       <div class="tooltip" style="margin-right: 10px;margin-left: 10px;">
         <div class="flexrow">
           <img style="margin-right: 5px;"src='/icons/commodities/currency/coins-shield-sword-stack-silver.webp' height='24' width='24'>
-          <input style="flex-grow: 5;" type='number' name='system.inventory.sc' value='{{system.inventory.sc}}' data-dtype='Number'/>
+          <input style="flex-grow: 5;" {{disabled @root.system.editLock}} type='number' name='system.inventory.sc' value='{{system.inventory.sc}}' data-dtype='Number'/>
         </div>
         <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.sc.label'}}</span>
       </div>
@@ -87,7 +89,7 @@
       <div class="tooltip" style="margin-left: 10px;">
         <div class="flexrow">
           <img style="margin-right: 5px;" src='/icons/commodities/currency/coins-wheat-stack-copper.webp' height='24' width='24'>
-          <input style="flex-grow: 5;" type='number' name='system.inventory.bc' value='{{system.inventory.bc}}' data-dtype='Number'/>
+          <input style="flex-grow: 5;" {{disabled @root.system.editLock}} type='number' name='system.inventory.bc' value='{{system.inventory.bc}}' data-dtype='Number'/>
         </div>
         <span class="tooltiptext">{{localize 'RTR.Item.Equipment.FIELDS.cost.bc.label'}}</span>
       </div>

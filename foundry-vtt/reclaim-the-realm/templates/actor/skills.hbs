@@ -28,16 +28,9 @@
             <span class="tooltiptext">Total Skill Points:</span>
         </div>
         <div>
-            {{#unless system.editLockers.skillsEditLocked}}
+            {{#unless system.editLock}}
                 <input class="reset-skills-btn" type="button" data-action='resetSkillPoints' value='Reset Skill Points'/>
             {{/unless}}
-        </div>
-        <div class="align-self-right">
-            {{#if system.editLockers.skillsEditLocked}}
-                <button type="button" class="icon toggle" data-action='unlockSkillsEdit' {{disabled (not editable)}}><i class="fa-solid fa-pen-to-square"></i></button>
-            {{else}}
-                <button type="button" class="icon toggle" data-action='lockSkillsEdit'><i class="fa-solid fa-xmark"></i></button>
-            {{/if}}
         </div>
     </div>
     {{/if}}
@@ -66,7 +59,7 @@
                 title="{{localize 'RTR.Actor.Character.TOOLTIPS.setAsClassSkill.label'}}"
                 data-action='setAsClassSkill'
             {{/if}}
-            {{disabled @root.system.editLockers.skillsEditLocked}}
+            {{disabled @root.system.editLock}}
         >
             {{localize (lookup @root.config.skills key)}}
         </a>
@@ -78,6 +71,7 @@
                 type='number'
                 class='compact-input'
                 name='system.skills.{{key}}.rank'
+                {{disabled @root.system.editLock}}
                 value='{{skills.rank}}'
                 data-dtype='Number'
                 />
@@ -85,7 +79,7 @@
         </div>
         <div class="flexrow flex-group-center">
             {{#if (eq @root.actor.type 'character')}}
-            {{#unless @root.system.editLockers.skillsEditLocked}}
+            {{#unless @root.system.editLock}}
             <input 
                 type="button"
                 value="+"

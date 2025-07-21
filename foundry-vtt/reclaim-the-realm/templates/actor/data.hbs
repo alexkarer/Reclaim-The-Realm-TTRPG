@@ -8,7 +8,7 @@
         <h5>Attributes</h5>
         {{#if (eq @root.actor.type 'character')}}
         <div class="flex-group-center">
-            {{#unless system.editLockers.dataEditLocked}}
+            {{#unless system.editLock}}
             <input class="reset-attributes-btn" type="button" data-action='resetAttributes' value='Reset Attributes'/>
             {{/unless}}
         </div>
@@ -36,7 +36,7 @@
             title="{{localize 'RTR.Actor.Character.TOOLTIPS.setAsClassAttribute.label'}}"
             {{#if (eq @root.actor.type 'character')}} data-action='setClassAttribute' {{/if}}
           {{/if}}
-          {{disabled @root.system.editLockers.dataEditLocked}}
+          {{disabled @root.system.editLock}}
         >
           {{localize (lookup @root.config.attributes key)}}
         </a>
@@ -50,7 +50,7 @@
               disabled='true'
               data-dtype='Number'
             />
-            {{#unless @root.system.editLockers.dataEditLocked}}
+            {{#unless @root.system.editLock}}
               <input 
                 type="button"
                 value="+"
@@ -61,11 +61,11 @@
                 data-action='increaseAttribute'
               />
             {{/unless}}
-          {{/if}}
-          {{#if (eq @root.actor.type 'npc')}}
+          {{else}}
             <input 
               type='number'
               name='system.attributes.{{key}}.value'
+              {{disabled @root.system.editLock}}
               value='{{attribute.value}}'
               data-dtype='Number'
             />
@@ -84,7 +84,7 @@
               </a>
             </div>
             <span class='class-species-text rollable' data-action='viewDoc'>{{species.name}}</span>
-            {{#unless system.editLockers.dataEditLocked}}
+            {{#unless system.editLock}}
               <a class='align-self-right item-control item-delete' title='{{localize "DOCUMENT.Delete" type='species'}}'
                   data-action='deleteDoc'>
                   <i class='fas fa-trash'></i>
@@ -104,7 +104,7 @@
               </a>
             </div>
             <span class='class-species-text rollable' data-action='viewDoc'>{{playerClass.name}}</span>
-            {{#unless system.editLockers.dataEditLocked}}
+            {{#unless system.editLock}}
               <a class='align-self-right item-control item-delete' title='{{localize "DOCUMENT.Delete" type='playerClass'}}'
                   data-action='deleteDoc'>
                   <i class='fas fa-trash'></i>
@@ -118,135 +118,120 @@
     </aside>
 
     <aside>
-      <div class='flexrow'>
-        <h5>Character Data</h5>
-        <div>
-            {{#if (eq @root.actor.type 'character')}}
-              {{#if system.editLockers.dataEditLocked}}
-                  <button type="button" class="icon toggle align-self-right" data-action='unlockDataEdit' {{disabled (not editable)}}><i class="fa-solid fa-pen-to-square"></i></button>
-              {{else}}
-                  <button type="button" class="icon toggle align-self-right" data-action='lockDataEdit'><i class="fa-solid fa-xmark"></i></button>
-              {{/if}}
-            {{/if}}
-        </div>
-      </div>
+      <h5>Character Data</h5>
       <div class="grid grid-2col">
         {{#if (eq @root.actor.type 'character')}}
         <div>
           <label for="system.data.hpPerLevel">HP Per Level:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.data.hpPerLevel' name='system.data.hpPerLevel' value='{{system.data.hpPerLevel}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.data.hpPerLevel' name='system.data.hpPerLevel' value='{{system.data.hpPerLevel}}'/>
         </div>
         <div>
           <label for="system.data.additionalHp">Additional HP:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.data.additionalHp' name='system.data.additionalHp' value='{{system.data.additionalHp}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.data.additionalHp' name='system.data.additionalHp' value='{{system.data.additionalHp}}'/>
         </div>
         {{else}}
         <div>
-          <label for="system.levels.level">Level</label>
-          <input class='compact-input' type='number' id='system.levels.level' name='system.levels.level' value='{{system.levels.level}}'/>
-        </div>
-        <div>
           <label for="system.hp.max">HP</label>
-          <input class='compact-input' type='number' id='system.hp.max' name='system.hp.max' value='{{system.hp.max}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.hp.max' name='system.hp.max' value='{{system.hp.max}}'/>
         </div>
         {{/if}}
 
         <div>
           <label for="system.levels.martialProficency">Martial Level Prof.:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.levels.martialProficency' name='system.levels.martialProficency' value='{{system.levels.martialProficency}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.levels.martialProficency' name='system.levels.martialProficency' value='{{system.levels.martialProficency}}'/>
         </div>
         <div >
           <label for="system.levels.spellProficency">Spell Level Prof.:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.levels.spellProficency' name='system.levels.spellProficency' value='{{system.levels.spellProficency}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.levels.spellProficency' name='system.levels.spellProficency' value='{{system.levels.spellProficency}}'/>
         </div>
 
         <div>
           <label for="system.defenses.stabilityProficency">Stability Prof.:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.defenses.stabilityProficency' name='system.defenses.stabilityProficency' value='{{system.defenses.stabilityProficency}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.defenses.stabilityProficency' name='system.defenses.stabilityProficency' value='{{system.defenses.stabilityProficency}}'/>
         </div>
         <div >
           <label for="system.defenses.dodgeProficency">Dodge Prof.:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.defenses.dodgeProficency' name='system.defenses.dodgeProficency' value='{{system.defenses.dodgeProficency}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.defenses.dodgeProficency' name='system.defenses.dodgeProficency' value='{{system.defenses.dodgeProficency}}'/>
         </div>
 
         <div>
           <label for="system.defenses.toughnessProficency">Toughness Prof.:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.defenses.toughnessProficency' name='system.defenses.toughnessProficency' value='{{system.defenses.toughnessProficency}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.defenses.toughnessProficency' name='system.defenses.toughnessProficency' value='{{system.defenses.toughnessProficency}}'/>
         </div>
         <div >
           <label for="system.defenses.willpowerProficency">Willpower Prof.:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.defenses.willpowerProficency' name='system.defenses.willpowerProficency' value='{{system.defenses.willpowerProficency}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.defenses.willpowerProficency' name='system.defenses.willpowerProficency' value='{{system.defenses.willpowerProficency}}'/>
         </div>
 
         <div>
           <label for="system.defenses.shieldBlockBase">Shield Block:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.defenses.shieldBlockBase' name='system.defenses.shieldBlockBase' value='{{system.defenses.shieldBlockBase}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.defenses.shieldBlockBase' name='system.defenses.shieldBlockBase' value='{{system.defenses.shieldBlockBase}}'/>
         </div>
         <div >
           <label for="system.defenses.shieldBlockThreshold">Shield Thresh.:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.defenses.shieldBlockThreshold' name='system.defenses.shieldBlockThreshold' value='{{system.defenses.shieldBlockThreshold}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.defenses.shieldBlockThreshold' name='system.defenses.shieldBlockThreshold' value='{{system.defenses.shieldBlockThreshold}}'/>
         </div>
 
         <div>
           <label for="system.data.stabilityBonus">Stability Bonus:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.data.stabilityBonus' name='system.data.stabilityBonus' value='{{system.data.stabilityBonus}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.data.stabilityBonus' name='system.data.stabilityBonus' value='{{system.data.stabilityBonus}}'/>
         </div>
         <div >
           <label for="system.data.dodgeBonus">Dodge Bonus:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.data.dodgeBonus' name='system.data.dodgeBonus' value='{{system.data.dodgeBonus}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.data.dodgeBonus' name='system.data.dodgeBonus' value='{{system.data.dodgeBonus}}'/>
         </div>
 
         <div>
           <label for="system.data.toughnessProficency">Toughness Bonus:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.data.toughnessProficency' name='system.data.toughnessBonus' value='{{system.data.toughnessBonus}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.data.toughnessProficency' name='system.data.toughnessBonus' value='{{system.data.toughnessBonus}}'/>
         </div>
         <div >
           <label for="system.data.willpowerBonus">Willpower Bonus:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.data.willpowerBonus' name='system.data.willpowerBonus' value='{{system.data.willpowerBonus}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.data.willpowerBonus' name='system.data.willpowerBonus' value='{{system.data.willpowerBonus}}'/>
         </div>
 
         <div>
           <label for="system.data.movementBonus">Movement Bonus:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.data.movementBonus' name='system.data.movementBonus' value='{{system.data.movementBonus}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.data.movementBonus' name='system.data.movementBonus' value='{{system.data.movementBonus}}'/>
         </div>
 
         <div>
           <label for="system.data.manoeuvrePenalty">{{localize 'RTR.Item.Equipment.FIELDS.manoeuvrePenalty.label'}}</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.data.manoeuvrePenalty' name='system.data.manoeuvrePenalty' value='{{system.data.manoeuvrePenalty}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.data.manoeuvrePenalty' name='system.data.manoeuvrePenalty' value='{{system.data.manoeuvrePenalty}}'/>
         </div>
         <div >
           <label for="system.data.movementPenalty">{{localize 'RTR.Item.Equipment.FIELDS.movementPenalty.label'}}</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.data.movementPenalty' name='system.data.movementPenalty' value='{{system.data.movementPenalty}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.data.movementPenalty' name='system.data.movementPenalty' value='{{system.data.movementPenalty}}'/>
         </div>
 
         {{#if (eq @root.actor.type 'character')}}
         <div>
           <label for="system.exhaustion">Exhuastion:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.exhaustion' name='system.exhaustion' value='{{system.exhaustion}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.exhaustion' name='system.exhaustion' value='{{system.exhaustion}}'/>
         </div>
         <div>
           <label for="system.skillPoints.skillPointsPerLevel">Skill Points per Level:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.skillPoints.skillPointsPerLevel' name='system.skillPoints.skillPointsPerLevel' value='{{system.skillPoints.skillPointsPerLevel}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.skillPoints.skillPointsPerLevel' name='system.skillPoints.skillPointsPerLevel' value='{{system.skillPoints.skillPointsPerLevel}}'/>
         </div>
         <div >
           <label for="system.skillPoints.additionalSkillPoints">Extra Skill Points:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.skillPoints.additionalSkillPoints' name='system.skillPoints.additionalSkillPoints' value='{{system.skillPoints.additionalSkillPoints}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.skillPoints.additionalSkillPoints' name='system.skillPoints.additionalSkillPoints' value='{{system.skillPoints.additionalSkillPoints}}'/>
         </div>
         <div>
           <label for="system.attributePoints.additionalAttributePoints">Extra Attr. Points:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.attributePoints.additionalAttributePoints' name='system.attributePoints.additionalAttributePoints' value='{{system.attributePoints.additionalAttributePoints}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.attributePoints.additionalAttributePoints' name='system.attributePoints.additionalAttributePoints' value='{{system.attributePoints.additionalAttributePoints}}'/>
         </div>
         <div >
           <label for="system.perks.additionalPerkPoints">Additional Perks:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='number' id='system.perks.additionalPerkPoints' name='system.perks.additionalPerkPoints' value='{{system.perks.additionalPerkPoints}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='number' id='system.perks.additionalPerkPoints' name='system.perks.additionalPerkPoints' value='{{system.perks.additionalPerkPoints}}'/>
         </div>
         <div >
           <label for="system.martialDamage.attr">MartialDmg Attr.:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='text' id='system.martialDamage.attr' name='system.martialDamage.attr' value='{{system.martialDamage.attr}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='text' id='system.martialDamage.attr' name='system.martialDamage.attr' value='{{system.martialDamage.attr}}'/>
         </div>
         <div >
           <label for="system.martialDamage.penalty">MartialDmg Penalty:</label>
-          <input {{disabled @root.system.editLockers.dataEditLocked}} class='compact-input' type='text' id='system.martialDamage.penalty' name='system.martialDamage.penalty' value='{{system.martialDamage.penalty}}'/>
+          <input {{disabled @root.system.editLock}} class='compact-input' type='text' id='system.martialDamage.penalty' name='system.martialDamage.penalty' value='{{system.martialDamage.penalty}}'/>
         </div>
         {{/if}}
       </div>
