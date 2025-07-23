@@ -331,28 +331,32 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
      */
     static async _onAddDamageResistance(event, target) {
         event.preventDefault();
-        if (this.actor.system.newResistanceValue === 0) {
+
+        const damageTypeOptions = Object.keys(CONFIG.RTR.damageTypes).map(type => `<option value="${type}">${type}</option>`).join();
+        const result = await api.DialogV2.input({
+            rejectClose: false,
+            modal: true,
+            content: `<select name="type">${damageTypeOptions}</select> <input type="number" value="0" name="value">`,
+            window: { title: "Add Damage Resistance", icon: 'fa-solid fa-shield-halved'},
+            ok: { label: "Add Damage Resistance" }
+        });
+        if (!result || result.value === 0) {
             return;
         }
 
-        const existingResistance = this.actor.system.resistances.find(res => res.damageType === this.actor.system.newResistanceDamageType);
+        const existingResistance = this.actor.system.resistances.find(res => res.damageType === result.type);
         let updatedResistances = [];
         if (existingResistance) {
-            updatedResistances = foundry.utils.deepClone(this.actor.system.resistances.filter(res => res.damageType !== this.actor.system.newResistanceDamageType));
-            updatedResistances.push({damageType: existingResistance.damageType, value: existingResistance.value + this.actor.system.newResistanceValue});
+            updatedResistances = foundry.utils.deepClone(this.actor.system.resistances.filter(res => res.damageType !== result.type));
+            updatedResistances.push({damageType: existingResistance.damageType, value: existingResistance.value + result.value});
         } else {
             updatedResistances = [
                 ...foundry.utils.deepClone(this.actor.system.resistances), 
-                {damageType: this.actor.system.newResistanceDamageType, value: this.actor.system.newResistanceValue}
+                {damageType: result.type, value: result.value}
             ];
         }
 
-        const updatePayload = { 
-            "system.newResistanceValue": 0,
-            "system.resistances": updatedResistances
-        };
-
-        this.actor.update(updatePayload).then(v => this.render());
+        this.actor.update({"system.resistances": updatedResistances}).then(v => this.render());
     }
 
     /**
@@ -365,7 +369,6 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
     static async _onDeleteDamageResistance(event, target) {
         event.preventDefault();
         const damageType = target.dataset.dmgtype;
-        console.log(damageType);
         const updatePayload = { 
             "system.resistances": foundry.utils.deepClone(this.actor.system.resistances.filter(res => res.damageType !== damageType))
         };

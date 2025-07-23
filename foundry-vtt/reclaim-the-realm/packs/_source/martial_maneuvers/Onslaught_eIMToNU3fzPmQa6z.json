@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "5 AP, 2 STAMINA"
     },
-    "tags": "Martial Maneuver (Master); Weapon",
+    "tags": [
+      "Martial Maneuver (Master)",
+      "Weapon"
+    ],
     "range": "MELEE RANGE",
     "targets": "one creature",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750460290760,
-    "modifiedTime": 1750460362449,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313353855,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!eIMToNU3fzPmQa6z"
 }

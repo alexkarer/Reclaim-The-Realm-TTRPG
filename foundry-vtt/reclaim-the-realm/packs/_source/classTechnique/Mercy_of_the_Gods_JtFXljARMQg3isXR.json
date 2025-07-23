@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "0 AP, number of AD(2-) equal to spell ability level + 1"
     },
-    "tags": "Class Technique (Priest); SPELL ABILITY 1",
+    "tags": [
+      "Class Technique (Priest)",
+      "SPELL ABILITY 1"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,7 +54,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750113399646,
-    "modifiedTime": 1750113537100,
+    "modifiedTime": 1753312109353,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!JtFXljARMQg3isXR"

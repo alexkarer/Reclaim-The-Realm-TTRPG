@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "3 MP"
     },
-    "tags": "Martial Maneuver (Basic); Tactical",
+    "tags": [
+      "Martial Maneuver (Basic)",
+      "Tactical"
+    ],
     "range": "MELEE RANGE",
     "targets": "1 allied creature",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750457458353,
-    "modifiedTime": 1750457630573,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313100857,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!kRmdkn2NGoc57Bhc"
 }

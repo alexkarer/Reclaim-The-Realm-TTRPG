@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "4 AP, 2 STAMINA"
     },
-    "tags": "Martial Maneuver (Master); Weapon",
+    "tags": [
+      "Martial Maneuver (Master)",
+      "Weapon"
+    ],
     "range": "WEAPON RANGE",
     "targets": "1 creature",
     "duration": "INSTANT",
-    "formula": "@lightMartialDamage + @lightMartialDamage + @lightMartialDamage + @lightMartialDamage + @lightMartialDamage[physical]"
+    "formula": "@lightMartialDamage + @lightMartialDamage + @lightMartialDamage + @lightMartialDamage + @lightMartialDamage[physical]",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750459996682,
-    "modifiedTime": 1750460477420,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313345297,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!wpXfzwzJpgpSjRTq"
 }

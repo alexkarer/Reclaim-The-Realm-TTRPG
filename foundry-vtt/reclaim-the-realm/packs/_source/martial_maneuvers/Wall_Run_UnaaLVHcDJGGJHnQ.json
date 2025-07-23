@@ -29,11 +29,16 @@
       "otherResourceCost": 0,
       "rawStringCost": "2 MP"
     },
-    "tags": "Martial Maneuver (Advanced); Agile; Movement",
+    "tags": [
+      "Martial Maneuver (Advanced)",
+      "Agile",
+      "Movement"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT or TURN",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +55,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750424466625,
-    "modifiedTime": 1750431710376,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312674928,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!UnaaLVHcDJGGJHnQ"
 }

@@ -20,7 +20,8 @@
     "shieldBlock": 0,
     "damageThreshold": 0,
     "craftingSkills": "Carpenter’s Tools",
-    "availableWeapons": "Crossbows"
+    "availableWeapons": "Crossbows",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -37,8 +38,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750352648606,
-    "modifiedTime": 1750352717302,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312569296,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!bwyQOro8mFtdMYgg"
 }

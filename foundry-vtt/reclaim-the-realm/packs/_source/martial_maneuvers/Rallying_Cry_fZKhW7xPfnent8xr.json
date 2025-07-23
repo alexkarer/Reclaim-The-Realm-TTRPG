@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "2 AP"
     },
-    "tags": "Martial Maneuver (Advanced); Leader",
+    "tags": [
+      "Martial Maneuver (Advanced)",
+      "Leader"
+    ],
     "range": "9m",
     "targets": "allied creatures that can hear you",
     "duration": "1 ROUND",
-    "formula": "@martialLevel + @attributes.cha.value[THP]"
+    "formula": "@martialLevel + @attributes.cha.value[THP]",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750456959860,
-    "modifiedTime": 1750457045288,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312988749,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!fZKhW7xPfnent8xr"
 }

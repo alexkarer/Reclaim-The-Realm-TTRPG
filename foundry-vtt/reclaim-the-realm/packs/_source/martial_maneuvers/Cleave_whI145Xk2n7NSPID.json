@@ -27,10 +27,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "3 AP"
     },
-    "tags": "Martial Maneuver (Basic); Weapon; Melee",
+    "tags": [
+      "Martial Maneuver (Basic)",
+      "Weapon",
+      "Melee"
+    ],
     "range": "MELEE RANGE",
     "targets": "2 creatures that are next to each other and both within range",
-    "duration": "INSTANT"
+    "duration": "INSTANT",
+    "editLock": true
   },
   "effects": [],
   "flags": {},
@@ -42,8 +47,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749381093609,
-    "modifiedTime": 1750423442114,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313241416,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 100000,
   "ownership": {

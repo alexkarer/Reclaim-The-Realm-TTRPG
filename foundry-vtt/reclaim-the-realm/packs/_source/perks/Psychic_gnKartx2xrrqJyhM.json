@@ -23,7 +23,10 @@
       "requiredNotSelectedPerks": [],
       "otherRequirements": ""
     },
-    "tags": ""
+    "tags": [
+      "Spell"
+    ],
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +43,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749995788750,
-    "modifiedTime": 1749995866063,
+    "modifiedTime": 1753311737000,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!gnKartx2xrrqJyhM"

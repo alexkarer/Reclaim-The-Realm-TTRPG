@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "3 AP"
     },
-    "tags": "Martial Maneuver (Advanced); Weapon",
+    "tags": [
+      "Martial Maneuver (Advanced)",
+      "Weapon"
+    ],
     "range": "WEAPON RANGE",
     "targets": "1 creature",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750459659875,
-    "modifiedTime": 1750459722279,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313142197,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!OsZNPo3NAYL7sDYW"
 }

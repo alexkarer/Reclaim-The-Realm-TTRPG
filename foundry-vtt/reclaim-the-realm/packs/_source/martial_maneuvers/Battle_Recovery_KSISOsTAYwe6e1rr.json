@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "1 AP, 1 STAMINA"
     },
-    "tags": "Martial Maneuver (Basic); Fortitude",
+    "tags": [
+      "Martial Maneuver (Basic)",
+      "Foritude"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": "(1 + floor(@attributes.con.value / 3))d6[heal]"
+    "formula": "(1 + floor(@attributes.con.value / 3))d6[heal]",
+    "editLock": true
   },
   "effects": [],
   "sort": 100000,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750348878156,
-    "modifiedTime": 1750423454328,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312931752,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!KSISOsTAYwe6e1rr"
 }

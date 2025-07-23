@@ -29,11 +29,16 @@
       "otherResourceCost": 0,
       "rawStringCost": "3 MP, 1 AP"
     },
-    "tags": "Martial Maneuver (Advanced); Agile; Movement",
+    "tags": [
+      "Martial Maneuver (Advanced)",
+      "Agile",
+      "Movement"
+    ],
     "range": "MELEE RANGE",
     "targets": "1 creature that is at least 1 size larger than you",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +55,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750423952504,
-    "modifiedTime": 1750424289829,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312609686,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!9moq3W4QOfJJoWjF"
 }

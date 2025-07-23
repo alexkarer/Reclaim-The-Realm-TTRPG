@@ -23,7 +23,8 @@
       "requiredNotSelectedPerks": [],
       "otherRequirements": "3 [SPELL LEVEL], Perk:Elementalist, Geomancer Perk not selected"
     },
-    "tags": "Spell"
+    "tags": "Spell",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +41,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749991873996,
-    "modifiedTime": 1749995258267,
+    "modifiedTime": 1753311927361,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!oBIEC5b3TBaIxS6L"

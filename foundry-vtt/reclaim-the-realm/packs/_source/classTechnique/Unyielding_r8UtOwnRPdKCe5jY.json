@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "1 REACTION, 3 matching AD"
     },
-    "tags": "Class Technique (Priest); SPELL ABILITY 1",
+    "tags": [
+      "Class Technique (Priest)",
+      "SPELL ABILITY 1"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": "@level"
+    "formula": "@level",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,7 +54,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750114584318,
-    "modifiedTime": 1750114682006,
+    "modifiedTime": 1753312031539,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!r8UtOwnRPdKCe5jY"

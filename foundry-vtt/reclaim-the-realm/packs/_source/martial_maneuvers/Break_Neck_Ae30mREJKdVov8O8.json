@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "4 AP, 1 STAMINA"
     },
-    "tags": "Martial Maneuver (Master); Brawl",
+    "tags": [
+      "Martial Maneuver (Master)",
+      "Brawl"
+    ],
     "range": "MELEE RANGE",
     "targets": "1 targed affected by [RESTRAINED I] caused by you",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750455374843,
-    "modifiedTime": 1750455492362,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312899126,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!Ae30mREJKdVov8O8"
 }

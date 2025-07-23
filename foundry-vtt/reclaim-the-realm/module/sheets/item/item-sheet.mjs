@@ -22,7 +22,11 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       resizable: true
     },
     actions: {
-      onEditImage: this._onEditImage
+      onEditImage: this._onEditImage,
+      unlockEdit: this._onUnlockEdit,
+      lockEdit: this._onLockEdit,
+      addTag: this._onAddTag,
+      deleteTag: this._onDeleteTag
     },
     form: {
       submitOnChange: true,
@@ -281,6 +285,18 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     }
   }
 
+  /**
+   * Lock edit lockers upon close
+   * @param options
+   * @protected
+   * @override
+   */
+  _onClose(options) {
+      let updatePayload = {};
+      updatePayload['system.editLock'] = true;
+      this.document.update(updatePayload);
+  }
+
   /**************
    *
    *   ACTIONS
@@ -313,6 +329,91 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       left: this.position.left + 10,
     });
     return fp.browse();
+  }
+
+  /**
+   * Unlock Item Editing
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onUnlockEdit(event, target) {
+      event.preventDefault();
+      if (!this.isEditable) {
+          console.error("No Edit permission for " + this.name);
+          return;
+      }
+      let updatePayload = {};
+      updatePayload['system.editLock'] = false;
+      this.document.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Lock Item Editing
+   *
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onLockEdit(event, target) {
+      event.preventDefault();
+      let updatePayload = {};
+      updatePayload['system.editLock'] = true;
+      this.document.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Add new tag
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onAddTag(event, target) {
+      event.preventDefault();
+
+      const result = await api.DialogV2.input({
+          rejectClose: false,
+          modal: true,
+          content: `<input type="text" value="" name="tag">`,
+          window: { title: "Add Tag"},
+          ok: { label: "Add Tag" }
+      });
+      if (!result || !result.tag) {
+          return;
+      }
+
+      const existingResistance = this.document.system.tags.find(t => t === result.tag);
+      let updatedTags = [];
+      if (existingResistance) {
+          return;
+      } else {
+          updatedTags = [
+              ...foundry.utils.deepClone(this.document.system.tags), 
+              result.tag
+          ];
+      }
+
+      this.document.update({"system.tags": updatedTags}).then(v => this.render());
+  }
+
+  /**
+   * Delete tag
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onDeleteTag(event, target) {
+      event.preventDefault();
+      const tag = target.dataset.tag;
+      const updatePayload = { 
+          "system.tags": foundry.utils.deepClone(this.document.system.tags.filter(t => t !== tag))
+      };
+      this.document.update(updatePayload).then(v => this.render());
   }
 
   /** Helper Functions */

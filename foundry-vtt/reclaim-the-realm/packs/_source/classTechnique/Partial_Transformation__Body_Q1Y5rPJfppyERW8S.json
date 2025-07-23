@@ -5,7 +5,7 @@
   "_id": "Q1Y5rPJfppyERW8S",
   "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
   "system": {
-    "description": "<p>You partially transform, while Transformation is active you gain the following benefits:</p><ul><li><p>Increase your <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong> as if your relevant Attribute was 2 higher</p></li><li><p>Increase your <strong><span style=\"text-decoration:underline\">STABILITY</span></strong> and <strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong> by 3</p></li><li><p>Gain 2 extra <strong><span style=\"text-decoration:underline\">MP</span></strong></p></li></ul><p>Only one Transformantion Class Technique can be used per <strong><span style=\"text-decoration:underline\">TURN</span></strong></p>",
+    "description": "<p>You partially transform, while Transformation is active you gain the following benefits:</p><ul><li><p>Increase your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong></span> as if your relevant Attribute was 2 higher</p></li><li><p>Increase your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">STABILITY</span></strong></span> and <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong></span> by 3</p></li><li><p>Gain 2 extra <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MP</span></strong></span></p></li></ul><p>Only one Transformation Class Technique can be used per <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TURN</span></strong></span></p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -18,7 +18,8 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "otherRequirements": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -29,11 +30,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "1 AP, 2 Corruption"
     },
-    "tags": "Class Technique (Warlock)",
+    "tags": [
+      "Class Technique (Warlock)",
+      "Transformation"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "1 minute",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,7 +55,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750115967604,
-    "modifiedTime": 1750116516166,
+    "modifiedTime": 1753312236267,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!Q1Y5rPJfppyERW8S"

@@ -34,12 +34,18 @@
       "diceSize": "d20",
       "diceBonus": "+@str+ceil(@lvl / 2)"
     },
-    "tags": "Spell; SPELL ABILITY 1; Cosmic; Restoration",
+    "tags": [
+      "Spell",
+      "SPELL ABILITY 1",
+      "Cosmic",
+      "Restoration"
+    ],
     "range": "5m",
     "targets": "1 target",
     "duration": "INSTANT",
     "components": "V (Prayer)",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "flags": {},
@@ -50,8 +56,8 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1750421237334,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313434520,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 0,
   "ownership": {

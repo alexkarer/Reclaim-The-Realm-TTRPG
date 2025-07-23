@@ -29,11 +29,16 @@
       "otherResourceCost": 0,
       "rawStringCost": "REACTION"
     },
-    "tags": "Martial Maneuver (Basic); Weapon; Melee",
+    "tags": [
+      "Martial Maneuver (Basic)",
+      "Weapon",
+      "Melee"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 200000,
@@ -50,8 +55,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750349215543,
-    "modifiedTime": 1750423443340,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313298668,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!GAA1NbVSykFloafU"
 }

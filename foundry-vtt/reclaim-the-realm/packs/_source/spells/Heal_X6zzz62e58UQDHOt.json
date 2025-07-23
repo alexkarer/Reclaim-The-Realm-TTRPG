@@ -34,12 +34,18 @@
       "diceSize": "d20",
       "diceBonus": "+@str+ceil(@lvl / 2)"
     },
-    "tags": "Spell; SPELL ABILITY 1; Cosmic; Restoration",
+    "tags": [
+      "Spell",
+      "SPELL ABILITY 1",
+      "Cosmic",
+      "Restoration"
+    ],
     "range": "MELEE RANGE",
     "targets": "1 creature",
     "duration": "INSTANT",
     "components": "V (Prayer), S (Touch)",
-    "formula": "(2 + floor(@attributes.spi.value / 4))d8[heal]"
+    "formula": "(2 + floor(@attributes.spi.value / 4))d8[heal]",
+    "editLock": true
   },
   "effects": [],
   "flags": {},
@@ -50,8 +56,8 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1750421267441,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313453301,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 0,
   "ownership": {

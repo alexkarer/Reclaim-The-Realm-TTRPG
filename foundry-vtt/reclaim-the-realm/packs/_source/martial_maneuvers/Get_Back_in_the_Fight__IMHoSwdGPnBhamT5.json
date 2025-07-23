@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "2 AP"
     },
-    "tags": "Martial Maneuver (Advanced); Leader",
+    "tags": [
+      "Martial Maneuver (Advanced)",
+      "Leader"
+    ],
     "range": "6m",
     "targets": "1 [UNCONCIOUS] allied creature, or one that is at Deaths' door.",
     "duration": "INSTANT",
-    "formula": "@martialLevel + @attributes.cha.value[HP]"
+    "formula": "@martialLevel + @attributes.cha.value[HP]",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750457071014,
-    "modifiedTime": 1750457156828,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312975376,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!IMHoSwdGPnBhamT5"
 }

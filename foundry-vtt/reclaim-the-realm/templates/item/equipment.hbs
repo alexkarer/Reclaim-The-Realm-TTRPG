@@ -4,7 +4,7 @@
   <div class='grid grid-2col'>
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.type.label'}}</label>
-      <select name='system.type' data-dtype='text' class='equipment-type-selector'>
+      <select name='system.type' {{disabled @root.system.editLock}} data-dtype='text' class='equipment-type-selector'>
         {{#each @root.config.equipmentTypes as |type key|}}
           {{#if (compare key @root.system.type)}}
           <option value="{{key}}" selected="selected">{{key}}</option>
@@ -16,59 +16,59 @@
     </div>
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.tier.label'}}</label>
-      <input type='number' name='system.tier' value='{{system.tier}}' data-dtype='Number' />
+      <input type='number' name='system.tier' value='{{system.tier}}' {{disabled @root.system.editLock}} data-dtype='Number' />
     </div>
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.craftingSkills.label'}}</label>
-      <input type='text' name='system.craftingSkills' value='{{system.craftingSkills}}' data-dtype='text' />
+      <input type='text' name='system.craftingSkills' value='{{system.craftingSkills}}' {{disabled @root.system.editLock}} data-dtype='text' />
     </div>
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.cost.cost.label'}} ({{localize
         'RTR.Item.Equipment.FIELDS.cost.bc.abbr'}})</label>
-      <input type='number' name='system.costBc' value='{{system.costBc}}' data-dtype='Number' />
+      <input type='number' name='system.costBc' value='{{system.costBc}}' {{disabled @root.system.editLock}} data-dtype='Number' />
     </div>
     {{#if (eq system.type 'weapon')}}
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.damage.label'}}</label>
-      <input type='text' name='system.damage' value='{{system.damage}}' data-dtype='text' />
+      <input type='text' name='system.damage' value='{{system.damage}}' {{disabled @root.system.editLock}} data-dtype='text' />
     </div>
     {{/if}}
     {{#if (eq system.type 'ammunitions')}}
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.availableWeapons.label'}}</label>
-      <input type='text' name='system.availableWeapons' value='{{system.availableWeapons}}' data-dtype='text' />
+      <input type='text' name='system.availableWeapons' value='{{system.availableWeapons}}' {{disabled @root.system.editLock}} data-dtype='text' />
     </div>
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.recoverable.label'}}</label>
-      <input type='checkbox' name='system.recoverable' value='{{system.recoverable}}' data-dtype='boolean' />
+      <input type='checkbox' name='system.recoverable' value='{{system.recoverable}}' {{disabled @root.system.editLock}} data-dtype='boolean' />
     </div>
     {{/if}}
     {{#if (eq system.type 'armour')}}
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.damageBlock.label'}}</label>
-      <input type='number' name='system.damageBlock' value='{{system.damageBlock}}' data-dtype='Number' />
+      <input type='number' name='system.damageBlock' value='{{system.damageBlock}}' {{disabled @root.system.editLock}} data-dtype='Number' />
     </div>
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.manoeuvrePenalty.label'}}</label>
-      <input type='number' name='system.manoeuvrePenalty' value='{{system.manoeuvrePenalty}}' data-dtype='Number' />
+      <input type='number' name='system.manoeuvrePenalty' value='{{system.manoeuvrePenalty}}' {{disabled @root.system.editLock}} data-dtype='Number' />
     </div>
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.movementPenalty.label'}}</label>
-      <input type='number' name='system.movementPenalty' value='{{system.movementPenalty}}' data-dtype='Number' />
+      <input type='number' name='system.movementPenalty' value='{{system.movementPenalty}}' {{disabled @root.system.editLock}} data-dtype='Number' />
     </div>
     {{/if}}
     {{#if (eq system.type 'shields')}}
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.shieldBlock.label'}}</label>
-      <input type='number' name='system.shieldBlock' value='{{system.shieldBlock}}' data-dtype='Number' />
+      <input type='number' name='system.shieldBlock' value='{{system.shieldBlock}}' {{disabled @root.system.editLock}} data-dtype='Number' />
     </div>
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.manoeuvrePenalty.label'}}</label>
-      <input type='number' name='system.manoeuvrePenalty' value='{{system.manoeuvrePenalty}}' data-dtype='Number' />
+      <input type='number' name='system.manoeuvrePenalty' value='{{system.manoeuvrePenalty}}' {{disabled @root.system.editLock}} data-dtype='Number' />
     </div>
     <div>
       <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.movementPenalty.label'}}</label>
-      <input type='number' name='system.movementPenalty' value='{{system.movementPenalty}}' data-dtype='Number' />
+      <input type='number' name='system.movementPenalty' value='{{system.movementPenalty}}' {{disabled @root.system.editLock}} data-dtype='Number' />
     </div>
     {{/if}}
   </div>

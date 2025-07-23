@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "3 AP"
     },
-    "tags": "Martial Maneuver (Basic); Brawl",
+    "tags": [
+      "Martial Maneuver (Basic)",
+      "Brawl"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "TURN",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750454891370,
-    "modifiedTime": 1750454989679,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312860789,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!nMYC2aLWT7077LWp"
 }

@@ -23,7 +23,11 @@
       "requiredNotSelectedPerks": [],
       "otherRequirements": "3 INT"
     },
-    "tags": "Spell, Repeatable"
+    "tags": [
+      "Spell",
+      "Reapeatable"
+    ],
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +44,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749990858296,
-    "modifiedTime": 1749990878259,
+    "modifiedTime": 1753311761449,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!GOfA9DYCp0N7XAum"

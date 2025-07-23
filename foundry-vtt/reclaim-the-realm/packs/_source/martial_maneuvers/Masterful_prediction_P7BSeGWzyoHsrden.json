@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "2 AP"
     },
-    "tags": "Martial Maneuver (Master); Tactical",
+    "tags": [
+      "Martial Maneuver (Master)",
+      "Tactical"
+    ],
     "range": "12m",
     "targets": "1 creature",
     "duration": "1 ROUND",
-    "formula": "d20 + @martialLevel + @attributes.int.value - @exh"
+    "formula": "d20 + @martialLevel + @attributes.int.value - @exh",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750458148394,
-    "modifiedTime": 1750458522964,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313112574,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!P7BSeGWzyoHsrden"
 }

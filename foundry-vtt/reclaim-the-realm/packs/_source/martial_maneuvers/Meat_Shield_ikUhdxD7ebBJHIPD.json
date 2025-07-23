@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "REACTION"
     },
-    "tags": "Martial Maneuver (Basic); Brawl",
+    "tags": [
+      "Martial Maneuver (Basic)",
+      "Brawl"
+    ],
     "range": "MELEE RANGE",
     "targets": "1 [RESTRAINED I] or [RESTRAINED II] Creature",
     "duration": "INSTANT",
-    "formula": "d20+@martialLevel + @attributes.str.value - @exh"
+    "formula": "d20+@martialLevel + @attributes.str.value - @exh",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750454772761,
-    "modifiedTime": 1750455243169,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312869171,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!ikUhdxD7ebBJHIPD"
 }

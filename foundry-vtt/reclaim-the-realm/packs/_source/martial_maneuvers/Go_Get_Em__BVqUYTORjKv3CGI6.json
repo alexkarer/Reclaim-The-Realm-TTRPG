@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "1 AP"
     },
-    "tags": "Martial Maneuver (Basic); Leader",
+    "tags": [
+      "Martial Maneuver (Basic)",
+      "Leader"
+    ],
     "range": "12m",
     "targets": "1 allied creature",
     "duration": "1 ROUND",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750456875257,
-    "modifiedTime": 1750456938212,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313013181,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!BVqUYTORjKv3CGI6"
 }

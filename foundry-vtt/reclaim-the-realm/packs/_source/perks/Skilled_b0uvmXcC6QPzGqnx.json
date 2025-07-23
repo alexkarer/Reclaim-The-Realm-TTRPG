@@ -23,7 +23,11 @@
       "requiredNotSelectedPerks": [],
       "otherRequirements": "1 INT"
     },
-    "tags": "Skill, repeatable"
+    "tags": [
+      "Skill",
+      "Reapeatable"
+    ],
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +44,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987215030,
-    "modifiedTime": 1750421086803,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753311704234,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!b0uvmXcC6QPzGqnx"
 }

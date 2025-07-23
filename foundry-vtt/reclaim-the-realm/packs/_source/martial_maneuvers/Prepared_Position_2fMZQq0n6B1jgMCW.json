@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "2 AP"
     },
-    "tags": "Martial Maneuver (Basic); Tactical",
+    "tags": [
+      "Martial Maneuver (Basic)",
+      "Tactical"
+    ],
     "range": "9m",
     "targets": "unoccupied space",
     "duration": "1 ROUND",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750457662494,
-    "modifiedTime": 1750457772143,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313086401,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!2fMZQq0n6B1jgMCW"
 }

@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "0 AP, 1 STAMINA"
     },
-    "tags": "Martial Maneuver (Advanced); Fortitude",
+    "tags": [
+      "Martial Maneuver (Advanced)",
+      "Fortitude"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "1 ROUND",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750455582900,
-    "modifiedTime": 1750455690070,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312919470,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!PJomKmSAqK9GWobS"
 }

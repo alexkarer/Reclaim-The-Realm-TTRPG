@@ -385,6 +385,46 @@
 .reclaim-the-realm .tox .tox-edit-area {
   padding: 0 8px;
 }
+.reclaim-the-realm .add-btn {
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  color: green;
+  background-color: black;
+  text-align: center;
+}
+.reclaim-the-realm .add-btn:disabled {
+  color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.reclaim-the-realm .add-btn:not(:disabled):hover, .reclaim-the-realm .add-btn:not(:disabled):focus {
+  color: lightgreen;
+  border-color: lightgreen;
+  background-color: darkslategray;
+  cursor: pointer;
+}
+.reclaim-the-realm .delete-btn {
+  border-width: 1px;
+  border-style: solid;
+  border-color: red;
+  color: red;
+  background-color: black;
+  text-align: center;
+}
+.reclaim-the-realm .delete-btn:disabled {
+  color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.reclaim-the-realm .delete-btn:not(:disabled):hover, .reclaim-the-realm .delete-btn:not(:disabled):focus {
+  color: lightcoral;
+  border-color: lightcoral;
+  background-color: darkslategray;
+  cursor: pointer;
+}
 .reclaim-the-realm .attributes {
   margin: 10px 0 5px;
 }
@@ -641,48 +681,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
-}
-.reclaim-the-realm .add-resistance-btn {
-  margin-left: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: green;
-  color: green;
-  background-color: black;
-  text-align: center;
-}
-.reclaim-the-realm .add-resistance-btn:disabled {
-  color: gray;
-  border-color: gray;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-.reclaim-the-realm .add-resistance-btn:not(:disabled):hover, .reclaim-the-realm .add-resistance-btn:not(:disabled):focus {
-  color: lightgreen;
-  border-color: lightgreen;
-  background-color: darkslategray;
-  cursor: pointer;
-}
-.reclaim-the-realm .delete-resistance-btn {
-  margin-left: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: red;
-  color: red;
-  background-color: black;
-  text-align: center;
-}
-.reclaim-the-realm .delete-resistance-btn:disabled {
-  color: gray;
-  border-color: gray;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-.reclaim-the-realm .delete-resistance-btn:not(:disabled):hover, .reclaim-the-realm .delete-resistance-btn:not(:disabled):focus {
-  color: lightcoral;
-  border-color: lightcoral;
-  background-color: darkslategray;
-  cursor: pointer;
 }
 .reclaim-the-realm .increase-attribute-btn {
   margin-left: 5px;

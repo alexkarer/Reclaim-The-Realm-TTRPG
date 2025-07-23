@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "2 AP"
     },
-    "tags": "Martial Maneuver (Basic); Leader",
+    "tags": [
+      "Martial Maneuver (Basic)",
+      "Leader"
+    ],
     "range": "3m (2 squares)",
     "targets": "all creatures",
     "duration": "1 ROUND",
-    "formula": "d20+@martialLevel + @attributes.cha.value - @exh"
+    "formula": "d20+@martialLevel + @attributes.cha.value - @exh",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750456349182,
-    "modifiedTime": 1750456414383,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313038097,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!mSyhadSSvQWzYozc"
 }

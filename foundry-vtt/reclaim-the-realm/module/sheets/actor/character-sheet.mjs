@@ -664,7 +664,8 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
         const confirm = await api.DialogV2.confirm({
             content: "Perform Long Rest?",
             rejectClose: false,
-            modal: true
+            modal: true,
+            window: { title: "Long Rest", icon: 'fa-solid fa-bed'},
         });
         if (!confirm) {
             return;

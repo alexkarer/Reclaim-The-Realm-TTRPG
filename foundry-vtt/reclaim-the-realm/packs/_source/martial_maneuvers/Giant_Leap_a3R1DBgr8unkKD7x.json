@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "6 MP"
     },
-    "tags": "Martial Maneuver (Advanced); Brawl",
+    "tags": [
+      "Martial Maneuver (Advanced)",
+      "Brawl"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750455283192,
-    "modifiedTime": 1750455356600,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312852777,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!a3R1DBgr8unkKD7x"
 }

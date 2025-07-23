@@ -1,7 +1,14 @@
 ### Immidiate TODOS
 
-Create Damage Roll Logic and handle resistance in damage apply
-check how 5ER handles the stuff.
+Before Ability Actions, data needs to be cleaned up in the Abilities (also do perks immediatly as well)
+- Requirements are Missing
+
+Implement the Ability Actions:
+  - when ability is used, subtract cost, then do first action
+  - then in the chatmessage of the first action there should be continue buttons to go to the next action.
+  
+After ACtions are Implemented:
+  - Add remaining spells
 
 # General TODOs/Nice to have
 

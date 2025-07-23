@@ -83,7 +83,7 @@
             <input 
                 type="button"
                 value="+"
-                class="increase-rank-btn"
+                class="add-btn"
                 {{disabled (eq skills.rank skills.rankMaximum)}}
                 {{disabled (eq @root.system.skillPoints.totalSkillPoints @root.system.skillPoints.usedSkillPoints)}} 
                 name='system.skills.{{key}}.rankIncrease' 
@@ -92,7 +92,7 @@
             <input 
                 type="button"
                 value="-"
-                class="decrease-rank-btn"
+                class="delete-btn"
                 {{disabled (or (eq skills.rank 0) (and (eq skills.rank 2) skills.classSkill))}}
                 name='system.skills.{{key}}.rankDecrease' 
                 data-action='decreaseSkillRank'

@@ -54,7 +54,7 @@
               <input 
                 type="button"
                 value="+"
-                class="increase-attribute-btn"
+                class="add-btn"
                 {{disabled (eq attribute.value attribute.attributeMaximum)}}
                 {{disabled (eq (subtract @root.actor.system.attributePoints.totalAttributePoints @root.actor.system.attributePoints.usedAttributePoints) 0)}}
                 name='system.attribute.{{key}}.value'

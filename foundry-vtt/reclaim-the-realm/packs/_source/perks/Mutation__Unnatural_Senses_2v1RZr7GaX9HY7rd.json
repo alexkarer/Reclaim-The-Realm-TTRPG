@@ -23,7 +23,11 @@
       "requiredNotSelectedPerks": [],
       "otherRequirements": "Warlock Class"
     },
-    "tags": "Warlock, Mutation"
+    "tags": [
+      "Warlock",
+      "Mutation"
+    ],
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +44,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749997069690,
-    "modifiedTime": 1749998759754,
+    "modifiedTime": 1753311854278,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!2v1RZr7GaX9HY7rd"

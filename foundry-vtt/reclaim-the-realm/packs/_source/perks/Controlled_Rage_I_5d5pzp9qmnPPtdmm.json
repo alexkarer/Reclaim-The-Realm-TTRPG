@@ -23,7 +23,10 @@
       "requiredNotSelectedPerks": [],
       "otherRequirements": "Barbarian Class, Cosmic Rage I Perk or Elemental Rage I Perk not selected"
     },
-    "tags": "Barbarian"
+    "tags": [
+      "Barbarian"
+    ],
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +43,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749979905841,
-    "modifiedTime": 1749995349507,
+    "modifiedTime": 1753311550139,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!5d5pzp9qmnPPtdmm"

@@ -147,6 +147,12 @@
         "ClassCoreFeature": "Class Core Feature",
         "Trait": "Trait"
       },
+      "base": {
+        "FIELDS": {
+          "tags": {"label": "Tags"},
+          "requirements": {"label": "Requirements"}
+        }
+      },
       "Equipment": {
         "FIELDS": {
           "icon": {"label": "Icon"},
@@ -177,8 +183,6 @@
       },
       "Ability": {
         "FIELDS": {
-          "tags": {"label": "Tags"},
-          "requirements": {"label": "Requirements"},
           "usageCost": {"label": "Usage Cost"},
           "range": {"label": "Range"},
           "targets": {"label": "Target(s)"},

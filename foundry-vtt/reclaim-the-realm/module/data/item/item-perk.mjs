@@ -9,9 +9,10 @@ export default class RtRPerk extends RtRItemBase {
   static defineSchema() {
     const fields = foundry.data.fields;
     const requiredInteger = { required: true, nullable: false, integer: true };
+    const requiredStringField = { required: true, nullable: false, blank: false };
     const schema = super.defineSchema();
-
-    schema.tags = new fields.StringField();
+    
+    schema.tags = new fields.ArrayField(new fields.StringField(requiredStringField));
 
     schema.perkPointsCost = new fields.NumberField({ ...requiredInteger, initial: 1, min: 0 }),
 
@@ -30,19 +31,19 @@ export default class RtRPerk extends RtRItemBase {
 
       skillRankRequirements: new fields.ArrayField(
         new fields.SchemaField({
-          skill: new fields.StringField({ required: true, nullable: false, blank: false}),
+          skill: new fields.StringField(requiredStringField),
           rank: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
         })
       ),
-      requiredPerks: new fields.ArrayField(
-        new fields.StringField({ required: true, nullable: false, blank: false})
-      ),
-      requiredNotSelectedPerks: new fields.ArrayField(
-        new fields.StringField({ required: true, nullable: false, blank: false})
-      ), 
+
+      requiredClass: new fields.StringField(),
+      requiredPerks: new fields.ArrayField(new fields.StringField(requiredStringField)),
+      requiredNotSelectedPerks: new fields.ArrayField(new fields.StringField(requiredStringField)), 
 
       otherRequirements: new fields.StringField()
     });
     return schema;
   }
+
+  
 }

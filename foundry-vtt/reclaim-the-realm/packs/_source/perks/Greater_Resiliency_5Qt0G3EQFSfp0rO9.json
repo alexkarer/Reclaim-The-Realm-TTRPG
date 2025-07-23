@@ -23,7 +23,8 @@
       "requiredNotSelectedPerks": [],
       "otherRequirements": ""
     },
-    "tags": "Barbarian"
+    "tags": "Barbarian",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +41,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749984958977,
-    "modifiedTime": 1749995436988,
+    "modifiedTime": 1753311566892,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!5Qt0G3EQFSfp0rO9"

@@ -61,3 +61,51 @@
     padding: 0 8px;
   }
 }
+
+.add-btn {
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  color: green;
+  background-color: black;
+  text-align: center;
+
+  &:disabled {
+    color: gray;
+    border-color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    color: lightgreen;
+    border-color: lightgreen;
+    background-color: darkslategray;
+    cursor: pointer;
+  }
+}
+
+.delete-btn {
+  border-width: 1px;
+  border-style: solid;
+  border-color: red;
+  color: red;
+  background-color: black;
+  text-align: center;
+
+  &:disabled {
+    color: gray;
+    border-color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    color: lightcoral;
+    border-color: lightcoral;
+    background-color: darkslategray;
+    cursor: pointer;
+  }
+}

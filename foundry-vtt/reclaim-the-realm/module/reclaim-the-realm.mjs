@@ -153,8 +153,8 @@ Handlebars.registerHelper('exists', function (x) {
 });
 
 
-Handlebars.registerHelper('isOneOf4', function (match, arg1, arg2, arg3, arg4) {
-  return match === arg1 || match === arg2 || match === arg3 || match === arg4;
+Handlebars.registerHelper('isOneOf5', function (match, arg1, arg2, arg3, arg4, arg5) {
+  return match === arg1 || match === arg2 || match === arg3 || match === arg4 || match === arg5;
 });
 
 Handlebars.registerHelper('formatWeight', function (weightInGramm) {
@@ -207,7 +207,7 @@ Hooks.once('ready', function () {
   Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
 
   Hooks.on('combatTurnChange', (combat, prior, current) => {
-    combat.combatant?.actor?.handleOnCombatTrunStart()
+    combat.combatant?.actor?.handleOnCombatTurnStart()
   });
 
 

@@ -9,9 +9,10 @@ export default class RtRAbility extends RtRItemBase {
   static defineSchema() {
     const fields = foundry.data.fields;
     const requiredInteger = { required: true, nullable: false, integer: true };
+    const requiredStringField = { required: true, nullable: false, blank: false };
     const schema = super.defineSchema();
 
-    schema.tags = new fields.StringField();
+    schema.tags = new fields.ArrayField(new fields.StringField(requiredStringField));
 
     schema.requirements = new fields.SchemaField({
       minimumLevel: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),

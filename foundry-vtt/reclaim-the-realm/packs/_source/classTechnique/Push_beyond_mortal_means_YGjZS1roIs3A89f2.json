@@ -1,11 +1,11 @@
 {
-  "folder": "1VH8O6s9gYQMwVj4",
-  "name": "Walk it off",
+  "folder": "EnKycLM94OdTRcxY",
+  "name": "Push beyond mortal means",
   "type": "classTechnique",
-  "_id": "a2b2DvW1fgf7AOCD",
-  "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
+  "_id": "YGjZS1roIs3A89f2",
+  "img": "icons/magic/unholy/strike-body-life-soul-purple.webp",
   "system": {
-    "description": "<p>You can remove one Tier I Status Effect effecting you. When using 2 <strong><span style=\"text-decoration:underline\">AP</span></strong> and 4 <strong>Rage</strong> you can end a Tier II Status Effect. When using 3 <strong><span style=\"text-decoration:underline\">AP</span></strong> and 8 <strong>Rage</strong> you can end a Tier III Status Effect.</p>",
+    "description": "<p>You gain 2 extra <strong><span style=\"text-decoration:underline\">AP</span></strong> this <strong><span style=\"text-decoration:underline\">TURN</span></strong>. You can't use this ability more than once per <strong><span style=\"text-decoration:underline\">ROUND</span></strong></p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -18,7 +18,8 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "otherRequirements": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -27,9 +28,11 @@
       "arcanaCost": 0,
       "staminaCost": 0,
       "otherResourceCost": 0,
-      "rawStringCost": "1 AP, 1 or more Rage"
+      "rawStringCost": "0 AP, 2 Corruption"
     },
-    "tags": "Class Technique (Barbarian)",
+    "tags": [
+      "Class Technique (Warlock)"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
@@ -50,9 +53,9 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "createdTime": 1750112421439,
-    "modifiedTime": 1753311971179,
+    "createdTime": 1750115429043,
+    "modifiedTime": 1753312297337,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
-  "_key": "!items!a2b2DvW1fgf7AOCD"
+  "_key": "!items!YGjZS1roIs3A89f2"
 }

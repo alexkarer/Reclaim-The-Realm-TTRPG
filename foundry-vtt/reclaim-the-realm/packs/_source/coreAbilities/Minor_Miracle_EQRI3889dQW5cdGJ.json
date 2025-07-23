@@ -29,11 +29,16 @@
       "otherResourceCost": 0,
       "rawStringCost": "3 AP"
     },
-    "tags": "Class Technique (Priest); Miracle; SPELL ABILITY 2",
+    "tags": [
+      "Class Technique (Priest)",
+      "SPELL ABILITY 2",
+      "Miracle"
+    ],
     "range": "varies",
     "targets": "varies",
     "duration": "varies",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +55,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749941117834,
-    "modifiedTime": 1750453051383,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312404836,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!EQRI3889dQW5cdGJ"
 }

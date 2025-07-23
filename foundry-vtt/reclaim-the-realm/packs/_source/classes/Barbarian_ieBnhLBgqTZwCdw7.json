@@ -19,7 +19,8 @@
     "classSkillsString": "Athletics, Intimidation, Survival",
     "skillPointsPerLevel": 4,
     "knownMartialManeuverTypes": "Brawl, Fortitude, Weapon, Leader",
-    "knownSpellDisciplines": "-"
+    "knownSpellDisciplines": "-",
+    "editLock": true
   },
   "effects": [],
   "folder": null,
@@ -37,7 +38,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750105187620,
-    "modifiedTime": 1750105712230,
+    "modifiedTime": 1753310347760,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!ieBnhLBgqTZwCdw7"

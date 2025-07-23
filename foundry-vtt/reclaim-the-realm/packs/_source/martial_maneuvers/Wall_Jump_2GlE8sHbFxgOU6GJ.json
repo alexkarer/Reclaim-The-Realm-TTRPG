@@ -29,11 +29,16 @@
       "otherResourceCost": 0,
       "rawStringCost": "3 MP or Reaction"
     },
-    "tags": "Martial Maneuver (Basic); Agile",
+    "tags": [
+      "Martial Maneuver (Basic)",
+      "Agile",
+      "Movement"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +55,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750423811812,
-    "modifiedTime": 1750423841640,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312709018,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!2GlE8sHbFxgOU6GJ"
 }

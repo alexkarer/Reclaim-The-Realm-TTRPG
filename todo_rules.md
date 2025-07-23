@@ -40,6 +40,7 @@ ____________________________________________________________
 - Rewrite perks that have poor ability rendering/formatting
 
 **Ability Simplifications**
+When other Abilities interact that should happen with tags.
 
 **Character Changes**
 - Maybe more attribute points per level

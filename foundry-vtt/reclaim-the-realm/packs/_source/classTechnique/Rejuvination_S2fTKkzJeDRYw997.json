@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "1 AP, 2 AD(1)"
     },
-    "tags": "Class Technique (Priest); SPELL ABILITY 2",
+    "tags": [
+      "Class Technique (Priest)",
+      "SPELL ABILITY 2"
+    ],
     "range": "6m",
     "targets": "one ally that is [UNCONCIOUS]",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,7 +54,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750113655569,
-    "modifiedTime": 1750113710952,
+    "modifiedTime": 1753312090959,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!S2fTKkzJeDRYw997"

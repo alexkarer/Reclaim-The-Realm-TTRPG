@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "REACTION, 1 STAMINA"
     },
-    "tags": "Martial Maneuver (Advanced); Weapon",
+    "tags": [
+      "Martial Maneuver (Advanced)",
+      "Weapon"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750459818819,
-    "modifiedTime": 1750459900242,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313159670,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!0L3zK9p11TgtABBg"
 }

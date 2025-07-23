@@ -27,11 +27,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "FREE, 2 AD(3-)"
     },
-    "tags": "Class Technique (Priest); SPELL ABILITY 1",
+    "tags": [
+      "Class Technique (Priest)",
+      "SPELL ABILITY 1"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": "2d6[holy]"
+    "formula": "2d6[holy]",
+    "editLock": true
   },
   "effects": [],
   "flags": {},
@@ -43,8 +47,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749381078618,
-    "modifiedTime": 1750419885035,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312125402,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 100000,
   "ownership": {

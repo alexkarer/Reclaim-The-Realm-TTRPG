@@ -34,12 +34,18 @@
       "diceSize": "d20",
       "diceBonus": "+@str+ceil(@lvl / 2)"
     },
-    "tags": "Spell; SPELL ABILITY 1; Manipulation; Telekinesis",
+    "tags": [
+      "Spell",
+      "SPELL ABILITY 1",
+      "Manipulation",
+      "Telekinesis"
+    ],
     "range": "12m",
     "targets": "either one medium creature or object weighing up to SPI * 20 kg",
     "duration": "up to SPI ROUND, CONCENTRATION 1",
     "components": "S",
-    "formula": "d20+@spellLevel+ @attributes.spi.value - @exh"
+    "formula": "d20+@spellLevel+ @attributes.spi.value - @exh",
+    "editLock": true
   },
   "effects": [],
   "flags": {},
@@ -50,8 +56,8 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1750421449600,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753313544113,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 0,
   "ownership": {

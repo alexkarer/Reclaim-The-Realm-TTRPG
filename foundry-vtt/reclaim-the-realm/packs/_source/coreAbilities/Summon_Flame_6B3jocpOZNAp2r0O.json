@@ -29,10 +29,14 @@
       "otherResourceCost": 0,
       "rawStringCost": "1 AP"
     },
-    "tags": "Pyromancy, SPELL ABILITY 0",
+    "tags": [
+      "Pyromancy",
+      "SPELL ABILITY 0"
+    ],
     "range": "6m",
     "targets": "varies",
-    "duration": "varies"
+    "duration": "varies",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -49,7 +53,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749991022115,
-    "modifiedTime": 1749991063776,
+    "modifiedTime": 1753312333837,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!6B3jocpOZNAp2r0O"

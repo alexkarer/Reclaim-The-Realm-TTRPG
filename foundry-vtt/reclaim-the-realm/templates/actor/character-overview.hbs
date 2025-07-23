@@ -144,22 +144,19 @@
   <hr>
 
   <h6 class='headline'>Resistances:</h6>
-  <div class="flexrow">
+  <div class="grid grid-3col">
     {{#each system.resistances as |resistance key|}}
-      <input disabled='true' style="flex-grow: 5;" type='text' value='{{resistance.damageType}}: {{resistance.value}}' />
-      {{#unless @root.system.editLock}}
-        <input type="button" value="-" class="delete-resistance-btn" data-action='deleteDamageResistance' data-dmgtype='{{resistance.damageType}}' />
-      {{/unless}}
+      <div class="flexrow">
+        <input disabled='true' style="flex-grow: 5;" type='text' value='{{resistance.damageType}}: {{resistance.value}}' />
+        {{#unless @root.system.editLock}}
+          <input type="button" value="-" class="delete-btn" data-action='deleteDamageResistance' data-dmgtype='{{resistance.damageType}}' />
+        {{/unless}}
+      </div>
     {{/each}}
+    {{#unless @root.system.editLock}}
+      <input type="button" value="+" class="add-btn" data-action='addDamageResistance' />
+    {{/unless}}
   </div>
-  {{#unless @root.system.editLock}}
-  <div class="flexrow">
-    <span>New: </span>
-    <input type='text' class="compact-input" name='system.newResistanceDamageType' value='{{@root.system.newResistanceDamageType}}' />
-    <input type='number' class="compact-input" name='system.newResistanceValue' value='{{@root.system.newResistanceValue}}' />
-    <input type="button" value="+" class="compact-input add-resistance-btn" data-action='addDamageResistance' />
-  </div>
-  {{/unless}}
 
   <h6 class='headline'>Alignment:</h6>
   <input type='text' {{disabled @root.system.editLock}} id='system.alignment' name='system.alignment' value='{{system.alignment}}' />

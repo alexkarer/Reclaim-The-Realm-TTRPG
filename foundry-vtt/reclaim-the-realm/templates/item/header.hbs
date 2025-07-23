@@ -7,8 +7,13 @@
     title='{{item.name}}'
   />
   <div class='header-fields'>
-    <div class='document-name'>
-      <input name='name' type='text' value='{{item.name}}' placeholder='Name' />
+    <div class='flexrow'>
+      <input name='name' type='text' {{disabled @root.system.editLock}} value='{{item.name}}' placeholder='Name' />
+      {{#if system.editLock}}
+        <button type="button" style="margin-left: 5px;" class="align-self-right icon toggle" data-action='unlockEdit' {{disabled (not editable)}}><i class="fa-solid fa-pen-to-square"></i></button>
+      {{else}}
+        <button type="button" style="margin-left: 5px;" class="align-self-right icon toggle" data-action='lockEdit'><i class="fa-solid fa-xmark"></i></button>
+      {{/if}}
     </div>
     {{! You may prefer to have a separate header file instead of this if statement}}
     {{#if (eq item.type 'equipment')}}
@@ -16,6 +21,7 @@
         <div class='resource'>
           <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.quantity.label'}}</label>
           <input
+            {{disabled @root.system.editLock}}
             type='text'
             name='system.quantity'
             value='{{system.quantity}}'
@@ -25,6 +31,7 @@
         <div class='resource'>
           <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.weight.kg.label'}}</label>
           <input
+            {{disabled @root.system.editLock}}
             type='text'
             name='system.weightKg'
             value='{{system.weightKg}}'
@@ -34,6 +41,7 @@
         <div class='resource'>
           <label class='bold-text'>{{localize 'RTR.Item.Equipment.FIELDS.weight.gramm.label'}}</label>
           <input
+            {{disabled @root.system.editLock}}
             type='text'
             name='system.weightGramm'
             value='{{system.weightGramm}}'
@@ -42,31 +50,34 @@
         </div>
       </div>
     {{/if}}
-    {{#if (eq item.type 'perk')}}
-      <div class="compact-grid grid-3col">
-        <span>{{localize 'RTR.Item.Perk.FIELDS.tags.label'}}</span>
-        <input class="compact-input grid-span-2" type='text' name='system.tags' value='{{system.tags}}' data-dtype='text'/>
-
-        <span>{{localize 'RTR.Item.Perk.FIELDS.requirements.label'}}</span>
-        <input class="compact-input grid-span-2" type='text' name='system.requirements.otherRequirements' value='{{system.requirements.otherRequirements}}' data-dtype='text'/>
-      </div>
-    {{/if}}
-    {{#if (isOneOf4 item.type 'ability' 'classTechnique' 'martialManeuver' 'spell')}}
+    {{#if (isOneOf5 item.type 'ability' 'classTechnique' 'martialManeuver' 'spell' 'perk')}}
       <div class="compact-grid grid-4col">
-        <span>{{localize 'RTR.Item.Ability.FIELDS.tags.label'}}</span>
-        <input class="compact-input grid-span-3" type='text' name='system.tags' value='{{system.tags}}' data-dtype='text'/>
+        <span>{{localize 'RTR.Item.base.FIELDS.tags.label'}}</span>
+        <div class="grid-span-3 flexcol">
+          {{#each system.tags as |tag key|}}
+          <div class="flexrow">
+            <input disabled='true' style="flex-grow: 5;" class="compact-input" type='text' value='{{tag}}' />
+            {{#unless @root.system.editLock}}
+              <input type="button" value="-" class="compact-input delete-btn" data-action='deleteTag' data-tag='{{tag}}' />
+            {{/unless}}
+          </div>
+          {{/each}}
+          {{#unless @root.system.editLock}}
+            <input type="button" value="+" class="compact-input add-btn" data-action='addTag' />
+          {{/unless}}
+        </div>
 
-        <span>{{localize 'RTR.Item.Ability.FIELDS.requirements.label'}}</span>
-        <input class="compact-input grid-span-3" type='text' disabled='true' name='todo' value='TODO' data-dtype='text'/>
+        <span style="margin-top: 5px;">{{localize 'RTR.Item.base.FIELDS.requirements.label'}}</span>
+        <input style="margin-top: 5px;" class="compact-input grid-span-3" type='text' name='system.requirements.otherRequirements' {{disabled @root.system.editLock}} value='{{system.requirements.otherRequirements}}' data-dtype='text'/>
       </div>
     {{/if}}
     {{#if (eq item.type 'species')}}
       <span>{{localize 'RTR.Item.Species.FIELDS.startingHPBonus.label'}}</span>
-      <input class="compact-input grid-span-3" type='number' name='system.startingBonusHP' value='{{system.startingBonusHP}}' data-dtype='number'/>
+      <input class="compact-input grid-span-3" type='number' name='system.startingBonusHP' {{disabled @root.system.editLock}} value='{{system.startingBonusHP}}' data-dtype='number'/>
     {{/if}}
     {{#if (or (eq item.type 'npcTrait') (eq item.type 'npcAbility'))}}
       <span>Summary</span>
-      <input class="compact-input grid-span-3" type='text' name='system.summary' value='{{system.summary}}' data-dtype='text'/>
+      <input class="compact-input grid-span-3" type='text' name='system.summary' {{disabled @root.system.editLock}} value='{{system.summary}}' data-dtype='text'/>
     {{/if}}
   </div>
 </header>

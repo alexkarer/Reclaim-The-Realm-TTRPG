@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "2 AP"
     },
-    "tags": "Class Technique (Priest); [SPELL ABILITY] 0",
+    "tags": [
+      "Class Technique (Priest)",
+      "SPELL ABILITY 0"
+    ],
     "range": "9m",
     "targets": "one or more creatures",
     "duration": "1 ROUND",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749941373367,
-    "modifiedTime": 1750453028314,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312439845,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!Qu1j0aGYWT5Fjspv"
 }

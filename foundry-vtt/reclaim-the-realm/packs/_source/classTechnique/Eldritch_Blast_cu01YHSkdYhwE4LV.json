@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "2 AP, 1 Corruption"
     },
-    "tags": "Class Technique (Warlock)",
+    "tags": [
+      "Class Technique (Warlock)",
+      "SPELL ABILITY 1"
+    ],
     "range": "21m",
     "targets": "1 Creature",
     "duration": "1 ROUND",
-    "formula": "(1 + floor(@attributes.spi.value/2))d10[entity damage]"
+    "formula": "(1 + floor(@attributes.spi.value/2))d10[entity damage]",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,7 +54,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750115007671,
-    "modifiedTime": 1750115268872,
+    "modifiedTime": 1753312159095,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!cu01YHSkdYhwE4LV"

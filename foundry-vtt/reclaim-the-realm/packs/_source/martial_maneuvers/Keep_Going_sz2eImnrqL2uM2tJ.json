@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "FREE, 3 STAMINA"
     },
-    "tags": "Martial Maneuver (Master); Fortitude",
+    "tags": [
+      "Martial Maneuver (Master)",
+      "Fortitude"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +54,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750455733624,
-    "modifiedTime": 1750455832518,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312953673,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!sz2eImnrqL2uM2tJ"
 }

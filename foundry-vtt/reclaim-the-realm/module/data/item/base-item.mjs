@@ -8,6 +8,7 @@ export default class RtRItemBase extends foundry.abstract.TypeDataModel {
     const fields = foundry.data.fields;
     const schema = {};
 
+    schema.editLock = new fields.BooleanField({ initial: true, required: true, nullable: false });
     schema.description = new fields.HTMLField();
 
     return schema;

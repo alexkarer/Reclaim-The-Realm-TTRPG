@@ -268,13 +268,13 @@ export class RtRActor extends Actor {
   }
 
   /* -------------------------------------------- */
-  /*  Interactions                                */
+  /*  On Combat Turn Start Handler                */
   /* -------------------------------------------- */
 
   /**
    * Handle everything that happens on the start of combat
    */
-  async handleOnCombatTrunStart() {
+  async handleOnCombatTurnStart() {
     if (this._hasStatusEffect('BURNING I')) {
       this.roll('d6[fire]', { type: 'BURNING I' }).then(result => {
         let damage = result.terms[0].results[0].result;
@@ -301,7 +301,9 @@ export class RtRActor extends Actor {
     }
   }
 
-  // TODO method to deal damage to other actors, or attack them
+  /* -------------------------------------------- */
+  /*  Interactions with other Actors              */
+  /* -------------------------------------------- */
 
   /**
    * apply damage to actor
@@ -321,7 +323,9 @@ export class RtRActor extends Actor {
       let newTempHp = Math.max(0, this.system.tempHp - amount);
       this.update({ "system.tempHp": newTempHp});
     }
-    // TODO handle resistances and stuff.
+    // TODO: add more detailed message which shows also the resistances and tempHP reduced
+    const resistanceAmount = this._hasResistance(type);
+    remainingAmount-= resistanceAmount;
     let newHp = Math.max(0, this.system.hp.value - remainingAmount);
     this.update({ "system.hp.value": newHp});
   }
@@ -402,5 +406,15 @@ export class RtRActor extends Actor {
     }
     ui.notifications.error(`Unkown Save ${save}`, {console: true});
     return {};
+  }
+
+  /**
+   * @param {string} type 
+   * @returns {number} resistance against the type
+   * @private
+   */
+  _hasResistance(type) {
+    const resistance = this.system.resistances.find(r => r.damageType.toUpperCase() === type.toUpperCase());
+    return resistance?.value ?? 0;
   }
 }

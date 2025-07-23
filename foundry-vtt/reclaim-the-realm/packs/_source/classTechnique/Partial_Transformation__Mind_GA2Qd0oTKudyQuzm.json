@@ -5,7 +5,7 @@
   "_id": "GA2Qd0oTKudyQuzm",
   "img": "icons/creatures/magical/spirit-fear-energy-pink.webp",
   "system": {
-    "description": "<p>You partially transform, while Transformation is active you gain the following benefits:</p><ul><li><p>Increase <strong><span style=\"text-decoration:underline\">WILLPOWER</span></strong> by 3</p></li><li><p>Gain a +3 bonus to any <strong><span style=\"text-decoration:underline\">SPELL TEST</span></strong> and <strong><span style=\"text-decoration:underline\">SPELL CAST TEST</span></strong></p></li><li><p>Treat your <strong><span style=\"text-decoration:underline\">SPI</span></strong> 2 higher when casting a spell..</p></li></ul><p>Only one Transformantion Class Technique can be used per <strong><span style=\"text-decoration:underline\">TURN</span></strong></p>",
+    "description": "<p>You partially transform, while Transformation is active you gain the following benefits:</p><ul><li><p>Increase <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">WILLPOWER</span></strong></span> by 3</p></li><li><p>Gain a +3 bonus to any <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SPELL TEST</span></strong></span> and <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SPELL CAST TEST</span></strong></span></p></li><li><p>Treat your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SPI</span></strong></span> 2 higher when casting a spell..</p></li></ul><p>Only one Transformation Class Technique can be used per <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TURN</span></strong></span></p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -29,11 +29,15 @@
       "otherResourceCost": 0,
       "rawStringCost": "1 AP, 2 Corruption"
     },
-    "tags": "Class Technique (Warlock)",
+    "tags": [
+      "Class Technique (Warlock)",
+      "Transformation"
+    ],
     "range": "-",
     "targets": "SELF",
     "duration": "1 minute",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,7 +54,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750116035478,
-    "modifiedTime": 1750116173772,
+    "modifiedTime": 1753312256259,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!GA2Qd0oTKudyQuzm"

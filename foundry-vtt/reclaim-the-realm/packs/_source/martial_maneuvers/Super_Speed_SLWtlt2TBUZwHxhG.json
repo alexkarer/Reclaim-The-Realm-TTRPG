@@ -29,11 +29,16 @@
       "otherResourceCost": 0,
       "rawStringCost": "1 or more MP, 1 or more STAMINA"
     },
-    "tags": "Martial Maneuver (Master); Agile",
+    "tags": [
+      "Martial Maneuver (Master)",
+      "Agile",
+      "Movement"
+    ],
     "range": "-",
     "targets": "enemies that want to use a REACTION",
     "duration": "INSTANT",
-    "formula": "d20+@skills.athletics.rank + @attributes.agi.value - @exh"
+    "formula": "d20+@skills.athletics.rank + @attributes.agi.value - @exh",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,8 +55,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750451280143,
-    "modifiedTime": 1750452398830,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753312735510,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!SLWtlt2TBUZwHxhG"
 }
