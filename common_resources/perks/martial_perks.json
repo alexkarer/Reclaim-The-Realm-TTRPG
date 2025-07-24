@@ -118,7 +118,7 @@
         },
         "textElements": [
             {
-                "regularText": "When you make a Weapon Attack with a light or versatile weapon you can use half of your [AGI] instead of your [STR] for determining your Martial Damage.",
+                "regularText": "When you use a [TAG;Basic Attack] Ability with a light or versatile weapon you can use half of your [AGI] instead of your [STR] for determining your Martial Damage.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -139,7 +139,7 @@
         },
         "textElements": [
             {
-                "regularText": "When you make a Weapon Attack with a light or versatile weapon you can use three-quaters of your [AGI] instead of your [STR] for determining your Martial Damage.",
+                "regularText": "When you use a [TAG;Basic Attack] Ability with a light or versatile weapon you can use three-quaters of your [AGI] instead of your [STR] for determining your Martial Damage.",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null
@@ -162,7 +162,7 @@
         },
         "textElements": [
             {
-                "regularText": "After you make a Weapon Attack that is not a Lighting Attack, the next Weapon Attack can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP]).",
+                "regularText": "When you use a [TAG;Basic Attack] Ability that is not a Lighting Attack, the next [TAG;Basic Attack] Ability can be a lightning Attack and is made at 1 [AP] less (min of 1 [AP]).",
                 "headerLine": null,
                 "bulletPoints": null,
                 "ability": null

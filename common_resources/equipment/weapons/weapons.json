@@ -7,9 +7,24 @@
         "weightInGram": 500,
         "type": "Melee Weapon",
         "description": [
-            { "regularText": "When making a [MELEE MARTIAL ATTACK] with this weapon, the unmodified roll required for scoring a critical hit is lowered by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
-        ],
-        "damage": "light [MARTIAL DAMAGE]"
+            { "regularText": "While you have this Weapon equipped you gain access to the following Ability:", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Weapon Attack - Dagger",
+                    "tags": [ "Basic", "Attack", "Melee" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "[MELEE RANGE]",
+                    "target": "1 Target",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Make a [MELEE MARTIAL ATTACK]. On Hit: deal light [MARTIAL DAMAGE]. Additionally the unmodified roll required for scoring critical hit is lowered by 1.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            }
+        ]
     },
     {
         "name": "Crossbow",
@@ -19,10 +34,41 @@
         "weightInGram": 3000,
         "type": "Ranged Weapon",
         "description": [
-                { "regularText": "The crossbow requires two hands to wield effecively has ranges of (25/50/100) and making a Weapon Attack only costs 1 [AP] but after each [ATTACK] the Weapon has to be reloaded for 2 [AP] before one can shoot with it again. This Weapon consumes Ammunition for each [RANGED MARTIAL ATTACK] made with this Weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
-        ],
-        "properties": [ "two-handed", "ranged(20/40/80)", "loading(1, 2 [AP])" ],
-        "damage": "2d6"
+            { "regularText": "The crossbow requires two hands to wield effecively has ranges of (25/50/100) and making a Weapon Attack only costs 1 [AP] but after each [ATTACK] the Weapon has to be reloaded for 2 [AP] before one can shoot with it again. This Weapon consumes Ammunition for each [RANGED MARTIAL ATTACK] made with this Weapon.", "headerLine": null, "bulletPoints": null, "ability": null },
+            { "regularText": "While you have this Weapon equipped you gain access to the following Ability:", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Weapon Attack - Crossbow",
+                    "tags": [ "Basic", "Attack", "Ranged" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "1 [AP]",
+                    "range": "20m/40m/80m",
+                    "target": "1 Target",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Make a [RANGED MARTIAL ATTACK]. On Hit: deal 2d6. After shooting with this Weapon it needs to be reloaded before you can shoot it again. Requires the weapon to be wielded with two hands.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Crossbow (Reload)",
+                    "tags": [ "Item" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "-",
+                    "target": "[SELF]]",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Reload the Crossbow. Requires ammunition. Requires the weapon to be wielded with two hands", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            }
+        ]
     },
     {
         "name": "Versatile Weapon",
@@ -32,9 +78,40 @@
         "weightInGram": 1500,
         "type": "Melee Weapon",
         "description": [
-                { "regularText": "It deals medium [MARTIAL DAMAGE] when wielded with one hand but can also be wielded with two hands to deal heavy [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null }
-        ],
-        "damage": "medium [MARTIAL DAMAGE]"
+            { "regularText": "While you have this Weapon equipped you gain access to the following Ability:", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Weapon Attack - Versatile Weapon (one-handed)",
+                    "tags": [ "Basic", "Attack", "Melee" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "[MELEE RANGE]",
+                    "target": "1 Target",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Make a [MELEE MARTIAL ATTACK]. On Hit: deal medium [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Weapon Attack - Versatile Weapon (two-handed)",
+                    "tags": [ "Basic", "Attack", "Melee" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "[MELEE RANGE]",
+                    "target": "1 Target",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Make a [MELEE MARTIAL ATTACK]. On Hit: deal heavy [MARTIAL DAMAGE]. Requires the weapon to be wielded with two hands.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            }
+        ]
     },
     {
         "name": "Polarm",
@@ -44,9 +121,24 @@
         "weightInGram": 4000,
         "type": "Melee Weapon",
         "description": [
-                { "regularText": "Requires two hands to be wielded effectively. Any time you make a [MELEE MARTIAL ATTACK] with this Weapon your [MELEE RANGE] is increased by 1.5m", "headerLine": null, "bulletPoints": null, "ability": null }
-        ],
-        "damage": "heavy [MARTIAL DAMAGE]"
+            { "regularText": "While you have this Weapon equipped you gain access to the following Ability:", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Weapon Attack - Polarm",
+                    "tags": [ "Basic", "Attack", "Melee" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "[MELEE RANGE] + 1.5m",
+                    "target": "1 Target",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Make a [MELEE MARTIAL ATTACK]. On Hit: deal heavy [MARTIAL DAMAGE]. Requires the weapon to be wielded with two hands.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            }
+        ]
     },
     {
         "name": "Great Weapon",
@@ -56,9 +148,41 @@
         "weightInGram": 3000,
         "type": "Melee Weapon",
         "description": [
-                { "regularText": "Requires two hands to be wielded effectively. When making a [MELEE MARTIAL ATTACK] with this Weapon you can decrease your [ATTACK] by -2 and treat your [STR] 1 higher for the purposes of determening your [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null }
-        ],
-        "damage": "heavy [MARTIAL DAMAGE]"
+                { "regularText": "Requires two hands to be wielded effectively. When making a [MELEE MARTIAL ATTACK] with this Weapon you can decrease your [ATTACK] by -2 and treat your [STR] 1 higher for the purposes of determening your [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null },
+            { "regularText": "While you have this Weapon equipped you gain access to the following Ability:", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Weapon Attack - Great Weapon",
+                    "tags": [ "Basic", "Attack", "Melee" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "[MELEE RANGE]",
+                    "target": "1 Target",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Make a [MELEE MARTIAL ATTACK]. On Hit: deal heavy [MARTIAL DAMAGE]. Requires the weapon to be wielded with two hands.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Weapon Attack - Great Weapon (Heavy Attack)",
+                    "tags": [ "Basic", "Attack", "Melee" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "3 [AP]",
+                    "range": "[MELEE RANGE]",
+                    "target": "1 Target",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Make a [MELEE MARTIAL ATTACK]. On Hit: deal heavy [MARTIAL DAMAGE] and treat your [STR] 3 higher for the purposes of determening your [MARTIAL DAMAGE]. Requires the weapon to be wielded with two hands.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            }
+        ]
     },
     {
         "name": "Throwing Weapon",
@@ -68,9 +192,40 @@
         "weightInGram": 500,
         "type": "Ranged Weapon",
         "description": [
-                { "regularText": "This weapon has a Range of (9/18/36) but can also be wielded as a Melee Weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
-        ],
-        "damage": "light [MARTIAL DAMAGE]"
+            { "regularText": "While you have this Weapon equipped you gain access to the following Ability:", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Weapon Attack - Throwing Weapon (Melee)",
+                    "tags": [ "Basic", "Attack", "Melee" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "[MELEE RANGE]",
+                    "target": "1 Target",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Make a [MELEE MARTIAL ATTACK]. On Hit: deal light [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Weapon Attack - Throwing Weapon (Thrown)",
+                    "tags": [ "Basic", "Attack", "Ranged", "Thrown" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "9m/18m/36m",
+                    "target": "1 Target",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Make a [RANGED MARTIAL ATTACK]. On Hit: deal light [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            }
+        ]
     },
     {
         "name": "Longbow",
@@ -80,8 +235,23 @@
         "weightInGram": 1500,
         "type": "Ranged Weapon",
         "description": [
-                { "regularText": "This weapon has a range of (30/60/120) and requires two-hands to be wielded effectively. This Weapon consumes Ammunition for each [RANGED MARTIAL ATTACK] made with this Weapon.", "headerLine": null, "bulletPoints": null, "ability": null }
-        ],
-        "damage": "medium [MARTIAL DAMAGE]"
+            { "regularText": "While you have this Weapon equipped you gain access to the following Ability:", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": null,
+                "bulletPoints": null,
+                "ability": {
+                    "name": "Weapon Attack - Longbow",
+                    "tags": [ "Basic", "Attack", "Ranged" ],
+                    "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+                    "cost": "2 [AP]",
+                    "range": "30m/60m/120m",
+                    "target": "1 Target",
+                    "duration": "[INSTANT]",
+                    "description": [ { "regularText": "Make a [RANGED MARTIAL ATTACK]. On Hit: deal medium [MARTIAL DAMAGE]. Requires ammunition and the weapon to be wielded with two hands", "headerLine": null, "bulletPoints": null, "ability": null } ],
+                    "flavorText": [ ]
+                }
+            }
+        ]
     }
 ]

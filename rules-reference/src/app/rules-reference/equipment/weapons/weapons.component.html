@@ -32,7 +32,6 @@
                 <tr>
                     <th scope="col">Weapon</th>
                     <th scope="col">Tier</th>
-                    <th scope="col">Damage</th>
                     <th scope="col">Type</th>
                     <th scope="col">Description</th>
                     <th scope="col">Weight</th>
@@ -44,7 +43,6 @@
                     <tr>
                         <td>{{ w.name }}</td>
                         <td>{{ w.tier }}</td>
-                        <td><app-dynamic-content [content]=" w.getPrettyDamageString() | keywordProcessor"></app-dynamic-content></td>
                         <td>{{ w.type }}</td>
                         <td><app-text-elements [textElements]="w.description"></app-text-elements></td>
                         <td>{{ w.getPrettyWeightString() }}</td>

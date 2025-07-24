@@ -6,16 +6,23 @@ This document contains a series of changelogs to keep track of changes happening
 
 ## RtR 2.3.0
 
- ### Core Rules
+### Core Rules
+
+#### Attack Ability Interactions
+- The Keywords have been cleaned up to how attack abilities interact with each other
+- If Ability depend on other ability it is clearly spelled out via the keyword what abilities are ment.
+- Weapon Attack is no longer a base Ability.
 
 #### Short Rest
 - short rests now also add the LEVEL to the heal.
 
 ### Equipment
 
+#### Weapons
+- Weapons now grant you Attack Abilities dedicated to the Weapons.
+
 #### Manouvre Penalty
 - manouvrePenalty now only affects dodge and stealth skill test
-
 
 ## RtR 2.2.0
 

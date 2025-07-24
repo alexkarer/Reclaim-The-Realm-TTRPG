@@ -105,7 +105,7 @@
             "range": "-",
             "target": "[SELF]",
             "duration": "[TURN]",
-            "description": [ { "regularText": "You double the [MP] you have availible this round but you must spend it all on moving closer to your target. If you can manage to move within melee range of the target you can then make a Weapon Attack or Unarmored Attack against that target, if the [ATTACK] was successful it deals extra physical damage equal to every second meter moved directly towards the target, this is calculated using the shortest distance.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "You double the [MP] you have availible this round but you must spend it all on moving closer to your target. Afterwards target the Creature with a [TAG;Basic Attack Melee] Ability, if the [ATTACK] was successful it deals extra physical damage equal to every second meter moved directly towards the target, this is calculated using the shortest distance.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
@@ -266,7 +266,7 @@
             "range": "9m",
             "target": "unnocupied Space",
             "duration": "1 [ROUND]",
-            "description": [ { "regularText": "The next time an enemy enters this space any allied creature can use their [REACTION] and make a Weapon Attack against that Creature.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "The next time an enemy enters this space any allied creature can use their [REACTION] and target the Creature with a [TAG;Basic Attack] Ability.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ]
         }
     ],
@@ -284,7 +284,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "2 [ROUND]",
-            "description": [ { "regularText": "Make a Weapon Attack with a melee weapon, if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [STUNNED I].", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target the Creature with a [TAG;Basic Attack] Ability, if the [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [STUNNED I].", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
@@ -304,7 +304,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "Make a Weapon Attack with a melee weapon, if [ATTACK] hits and exceeds or matches [STABILITY] either knock the target [PRONE] or push it [STR] meters away from you.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target the Creature with a [TAG;Basic Attack Melee] Ability, if the [ATTACK] hits and exceeds or matches [STABILITY] either knock the target [PRONE] or push it [STR] meters away from you.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
@@ -324,7 +324,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "2[ROUND]",
-            "description": [ { "regularText": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [STABILITY] apply [CRIPPLED I].", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target the Creature with a [TAG;Basic Attack] Ability, if the [ATTACK] hits and exceeds or matches [STABILITY] apply [CRIPPLED I].", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ]
         },
         {
@@ -340,7 +340,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "2 [ROUND]",
-            "description": [ { "regularText": "Make a Weapon Attack, if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [BLEEDING I].", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target the Creature with a [TAG;Basic Attack] Ability, if the [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [BLEEDING I].", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
@@ -357,14 +357,14 @@
                 "otherRequirements": [  "Martial Level Progression > 0" ]
             },
             "cost": "3 [AP]",
-            "range": "[MELEE RANGE]",
+            "range": "[WEAPON RANGE]",
             "target": "2 creatures that are next to each other and both within range",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "Make a Weapon Attack with a melee Weapon that targets both targets.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target both creatures with a [TAG;Basic Attack Melee] Ability.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "You can now target all enemy targets within melee range as long as all targets are within 4.5m of each other."
+                "pushingDescription": "You can now target all enemy targets within melee range as long as all targets are within 4.5m of each other (still need to be within your [WEAPON RANGE]."
             }
         },
         {
@@ -380,7 +380,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "When you have moved at least 3m in the direction of the target you can make a Thrown Weapon Weapon Attack with the range doubled for all ranges. Additionally your [ATTACK] deals extra damage eequal to every second meter moved.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "When you have moved at least 3m in the direction of the target, target that Creature with a [TAG;Basic Attack Thrown] Ability, for that ability, double the range and deal extra damage equal to every second meter moved.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ]
         },
         {
@@ -396,8 +396,12 @@
             "range": "[WEAPON RANGE]",
             "target": "2 creatures within 4.5m of each other",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "Make a Weapon Attack with a Ranged Weapon with a -2 penalty to the [ATTACK] and damage.", "headerLine": null, "bulletPoints": null} ],
-            "flavorText": [ ]
+            "description": [ { "regularText": "Target both Creatures with a [TAG;Basic Attack Ranged] Ability, with a -2 penalty to the [ATTACK] and [DAMAGE].", "headerLine": null, "bulletPoints": null} ],
+            "flavorText": [ ],
+            "maneuverPush": {
+                "pushingExtraCost": "1 [STAMINA]",
+                "pushingDescription": "You can now target a third creature that is within 4.5m of both creatures."
+            }
         },
         {
             "name": "Parry",

@@ -30,6 +30,7 @@ ____________________________________________________________
 ### Planned changes after Playtest:
 
 **Formatting**
+When hovering over Tags, show all abilities that match the given tags.
 
 **Bigger Mechanical Changes**
 - Implement similar system for Spell Damage maybe ish

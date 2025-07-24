@@ -50,28 +50,33 @@ export class KeywordProcessorPipe implements PipeTransform {
 }
 
 function keywordToContentPart(keyword: string): ContentPart {
-    let attributeContentPart = getAttributeContentPart(keyword);
+    const attributeContentPart = getAttributeContentPart(keyword);
     if (attributeContentPart) {
         return attributeContentPart;
     }
 
-    let gameMechanicsContentPart = getGameMechanicsContentPart(keyword);
+    const tagContentPart = generateTagKeyword(keyword);
+    if (tagContentPart) {
+        return tagContentPart;
+    }
+
+    const gameMechanicsContentPart = getGameMechanicsContentPart(keyword);
     if (gameMechanicsContentPart) {
         return gameMechanicsContentPart;
     }
 
-    let characterValuesContentPart = getCharacterValuesContentPart(keyword);
+    const characterValuesContentPart = getCharacterValuesContentPart(keyword);
     if (characterValuesContentPart) {
         return characterValuesContentPart;
     }
 
-    let combatCircumstancesContentPart = getCombatCircumstancesContentPart(keyword);
+    const combatCircumstancesContentPart = getCombatCircumstancesContentPart(keyword);
     if (combatCircumstancesContentPart) {
         return combatCircumstancesContentPart;
     }
 
     // check status effects last because they have the worst performance
-    let statusEffectsContentPart = getStatusEffectsContentPart(keyword);
+    const statusEffectsContentPart = getStatusEffectsContentPart(keyword);
     if (statusEffectsContentPart) {
         return statusEffectsContentPart;
     }
@@ -99,6 +104,16 @@ function getAttributeContentPart(keyword: string): ContentPart | undefined {
         default:
             return undefined;
     }
+}
+
+function generateTagKeyword(keyword: string): ContentPart | undefined {
+    if (keyword.startsWith('TAG')) {
+        return { 
+            type: 'tag',
+            text: keyword.substring(4)
+        };
+    }
+    return undefined;
 }
 
 function generateAttributeKeyword(attribute: Attribute): ContentPart {

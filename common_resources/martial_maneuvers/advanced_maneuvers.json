@@ -290,7 +290,7 @@
             "range": "[WEAPON RANGE]",
             "target": "1 creature",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "Make a Weapon Attack with a thrown Weapon, if [ATTACK] hits and exceeds or matches [STABILITY] push [STR] m away. If anything is blocking movement, the blocking target recieves half damage of the [ATTACK].", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target the Creature with a [TAG;Basic Attack Thrown] Ability, if the [ATTACK] hits and exceeds or matches [STABILITY] push [STR] m away. If anything is blocking movement, the blocking target recieves half damage of the [ATTACK].", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ]
         },
         {

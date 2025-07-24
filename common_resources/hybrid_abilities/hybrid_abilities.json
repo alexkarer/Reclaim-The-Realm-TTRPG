@@ -23,7 +23,7 @@
             },
             "spellDifficulty": 6,
             "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "[LINE] (9m) or [CONE] (4.5m)", "duration":"[INSTANT]",
-            "description": [ { "regularText": "Choose a [LINE] or [CONE] and make a Weapon Attack against targets.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Choose a [LINE] or [CONE] and target all Creatures with a [TAG;Basic Attack Melee] Ability.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": []
         },
         {
@@ -36,7 +36,7 @@
             },
             "spellDifficulty": 6,
             "cost": "3 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "one target and [CONE] (4.5m)", "duration":"[INSTANT]",
-            "description": [ { "regularText": "Make a Weapon Attack Attack against a single target. Additionally [INT] [SPELL TEST] vs. [TOUGHNESS]. On success: receive ([SPI]/2) * d8 sonic damage. On failure: half damage.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target a creature with a [TAG;Basic Attack Melee] Ability. Additionally for [CONE] (4.5m) [INT] [SPELL TEST] vs. [TOUGHNESS]. On success: receive ([SPI]/2) * d8 sonic damage. On failure: half damage.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ { "regularText": "With the might of the Elemental power your Weapon Impact creates a sonic boom that reverberates to nearby targets.", "headerLine": null, "bulletPoints": null} ]
         }
     ],
@@ -51,7 +51,7 @@
             },
             "spellDifficulty": 6,
             "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "one target", "duration": "1 [ROUND]",
-            "description": [ { "regularText": "Make a Weapon Attack. On hit: deal an extra 1d6 + ([SPI]/2) * d6 holy damage and if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [BLINDED].", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target the Creature with a [TAG;Basic Attack Melee] Ability. On hit: deal an extra 1d6 + ([SPI]/2) * d6 holy damage and if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [BLINDED].", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ]
         },
         {
@@ -64,7 +64,7 @@
             },
             "spellDifficulty": 6,
             "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE]", "target": "one target", "duration": "1 [ROUND]",
-            "description": [ { "regularText": "Make a Weapon Attack. On hit: deal an extra 1d6 + ([SPI]/2) * d6 unholy damage and if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [WEAKENED II].", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target the Creature with a [TAG;Basic Attack Melee] Ability. On hit: deal an extra 1d6 + ([SPI]/2) * d6 unholy damage and if [ATTACK] hits and exceeds or matches [TOUGHNESS] apply [WEAKENED II].", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ]
         }
     ],
@@ -92,7 +92,7 @@
             },
             "spellDifficulty": 6,
             "cost": "2 [AP], 1 [ARCANA]", "range": "[WEAPON RANGE] + 9m", "target": "one creature", "duration": "[INSTANT]",
-            "description": [ { "regularText": "Make a Weapon Attack. The target creature can't receive cover bonuses against the [ATTACK] and you recieve bonuses to this [ATTACK] as if you have Partial Concealment.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target the Creature with a [TAG;Basic Attack] Ability. The target creature can't receive cover bonuses against the [ATTACK] and you recieve bonuses to this [ATTACK] as if you have Partial Concealment.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ { "regularText": "You open a temporary portal and strike at a creature from unexpected locations.", "headerLine": null, "bulletPoints": null} ]
         }
     ]

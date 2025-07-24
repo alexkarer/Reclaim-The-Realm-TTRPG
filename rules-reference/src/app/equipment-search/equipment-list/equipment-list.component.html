@@ -21,9 +21,6 @@
                 <tr>
                     <td colspan="5">
                         <p class="description my-0"><span class="fw-bold">Crafting Skills: </span> {{ equipment.craftingSkill }}</p>
-                        @if (isWeapon(equipment)) {
-                            <p class="description my-0"><span class="fw-bold">Damage: </span>{{ getDamage(equipment) }}</p>
-                        }
                         @if (isAmmunition(equipment)) {
                             <p class="description my-0"><span class="fw-bold">Availible Weapons: </span>{{ getAvailibleWeapons(equipment) }}</p>
                             <p class="description my-0"><span class="fw-bold">Recoverable: </span>{{ getRecoverable(equipment) }}</p>

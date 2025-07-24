@@ -88,9 +88,13 @@ export default class RtRCharacter extends RtRActorBase {
     this.arcana.max = Math.floor(3 * this.levels.spellProficency * this.levels.level);
     this._calculateSkillPoints();
     this._calculateAttributePoints();
-    this._calculateInventoryValues();
     this._caclulateKnownAbilitiesAndPerks();
+  }
+
+  /** @override */
+  prepareDerivedData() {
     this._calculateMartialDamage();
+    this._calculateInventoryValues();
   }
 
   /** @override */

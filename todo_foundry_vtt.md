@@ -1,6 +1,7 @@
 ### Immidiate TODOS
 
 Before Ability Actions, data needs to be cleaned up in the Abilities (also do perks immediatly as well)
+- Display Tags in a different way
 - Requirements are Missing
 
 Implement the Ability Actions:
@@ -9,6 +10,8 @@ Implement the Ability Actions:
   
 After ACtions are Implemented:
   - Add remaining spells
+  
+There needs to be a way to temporary reduce attributes
 
 # General TODOs/Nice to have
 
@@ -53,6 +56,9 @@ After ACtions are Implemented:
 - Perk Trees
 
 - Show how values are calculated and if they are reduced in any way.
+  
+- When making SKill Test, a Request Help Button
+  - Included in the chat message of the skill test, where all players are then asked if they want to contribute
 
 ### Summons
 
@@ -85,6 +91,7 @@ Separate Type that is bascically like NPCS but roll everything
     - Attack, Martial Test, Spell Test, ...
     - Damage
     - Applying Effects
+    - also custom bonuses should can be added in each step (attack bonus, martial damage bonus)
 
 - Maybe Custom Actions work like this: Offensive thingy (attack, martial test or spell test).
   - Then define what happens on success.
@@ -100,6 +107,7 @@ Hide certain abilities that can't be used (example, silennced)
 
 - Interactive Perk Tree
 - Proper Requirements Checking
+- also check if there are enough Perks points
 
 ### Tables
 
@@ -117,8 +125,6 @@ Hide certain abilities that can't be used (example, silennced)
 - Implement all remaining Status Effects
 - Implement Conditions: Prone, Flanked, Climbing
 - Status Effects should time out.
-
-- When making SKill Test, a Request Help Button
 
 ## Special
 

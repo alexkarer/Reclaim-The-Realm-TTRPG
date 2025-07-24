@@ -31,14 +31,6 @@ export class EquipmentListComponent {
     return (item instanceof Shield);
   }
 
-  public getDamage(item: Equipment): string {
-    if (item instanceof Weapon) {
-      return item.damage;
-    }
-    console.error('Item is not a weapon: ' + item.name);
-    return '';
-  }
-
   public getAvailibleWeapons(item: Equipment): string {
     if (item instanceof Ammunition) {
       return item.availibleWeapons;

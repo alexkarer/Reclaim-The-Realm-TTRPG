@@ -113,7 +113,7 @@
             "range": "-",
             "target": "1 Weapon you are wielding",
             "duration": "2 + [LEVEL] [ROUND]",
-            "description": [ { "regularText": "One Weapon you are wielding is enchanted with the Element of you Entity. Each time you make a Weapon Attack with that Weapon you deal an extra d8 entity damage. For each additional Corruption used, your weapon will deal an additional d8 entity damage.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "One Weapon you are wielding is enchanted with the Element of you Entity. Each time you make an [ATTACK] with that Weapon you deal an extra d8 entity damage. For each additional Corruption used, your weapon will deal an additional d8 entity damage.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ]
         },
         {

@@ -1,11 +1,6 @@
 import { Cost, Equipment } from "../equipment";
 
 export class Weapon extends Equipment {
-    damage!: string;
-    
-    getPrettyDamageString(): string {
-        return this.damage
-    }
 }
 
 export class Ammunition extends Equipment {
@@ -30,7 +25,6 @@ function map(weaponJson: WeaponsJson): Weapon {
     weapon.weightInGram = weaponJson.weightInGram;
     weapon.type = weaponJson.type;
     weapon.description = weaponJson.description;
-    weapon.damage = weaponJson.damage;
 
     return weapon;
 }

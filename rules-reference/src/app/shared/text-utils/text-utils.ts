@@ -10,7 +10,7 @@ export function generateGenericKeyword(keyword: string, toolTipText: string, lin
 }
 
 export type ContentPart = {
-    type: 'text' | 'keyword';
+    type: 'text' | 'keyword' | 'tag';
     text?: string; 
     component?: KeywordContent;
 }

@@ -98,21 +98,8 @@
         "description": "These are abilities every character and NPC can use.",
         "standardAbilities": [
             {
-                "name": "Weapon Attack",
-                "tags": [ "Weapon", "Attack" ],
-                "requirements": {
-                    "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
-                },
-                "cost": "2 [AP]",
-                "range": "[WEAPON RANGE]",
-                "target": "1 creature",
-                "duration": "[INSTANT]",
-                "description": [ { "regularText": "Make a [MELEE MARTIAL ATTACK] against a creature using any bonuses your weapon provides. On a hit it recieves damage depending on your [MARTIAL DAMAGE] and relevant Weapon.", "headerLine": null, "bulletPoints": null} ],
-                "flavorText": [ ]
-            },
-            {
                 "name": "Unarmored Attack",
-                "tags": [ "Attack" ],
+                "tags": [ "Basic", "Attack", "Melee" ],
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
                 },
@@ -125,7 +112,7 @@
             },
             {
                 "name": "Improvised Missile Attack",
-                "tags": [ "Attack" ],
+                "tags": [ "Basic", "Attack", "Ranged" ],
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
                 },
@@ -247,7 +234,7 @@
                 "range": "[MELEE RANGE]",
                 "target": "1 creature",
                 "duration": "[INSTANT]",
-                "description": [ { "regularText": "If a creature that is not under the effect of concleament leaves your melee range with a move, you can make a Melee [ATTACK] against them.", "headerLine": null, "bulletPoints": null} ],
+                "description": [ { "regularText": "If a creature that is not under the effect of concleament leaves your melee range with a move, you can target them with a [TAG;Basic Attack] Ability.", "headerLine": null, "bulletPoints": null} ],
                 "flavorText": [ ]
             }
         ]

@@ -161,7 +161,7 @@
             "range": "[WEAPON RANGE]",
             "target": "one creature",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "Make a Weapon Attack against [TOUGHNESS]. On hit: 5 * light [MARTIAL DAMAGE] physical damage. On Success: score a critical hit.", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target the Creature with a [TAG;Basic Attack] Ability. On hit: 5 * light [MARTIAL DAMAGE] physical damage. Additionally if the [ATTACK] exceeds the targets [TOUGHNESS]: score a critical hit.", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ],
             "maneuverPush": {
                 "pushingExtraCost": "1 [STAMINA]",
@@ -183,7 +183,7 @@
             "range": "[MELEE RANGE]",
             "target": "one creature",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "Make a Weapon Attack against one target a number of times equal to your [MARTIAL LEVEL].", "headerLine": null, "bulletPoints": null} ],
+            "description": [ { "regularText": "Target the Creature with a [TAG;Basic Attack] Ability a number of times equal to your [MARTIAL LEVEL].", "headerLine": null, "bulletPoints": null} ],
             "flavorText": [ ]
         }
     ]

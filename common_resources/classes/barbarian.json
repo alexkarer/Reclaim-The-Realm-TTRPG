@@ -181,7 +181,7 @@
             "range": "[MELEE RANGE]",
             "target": "1 creature*",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "If loose [HP] from a creature within range you can loose this Ability. Make a Weapon Attack against that creature and on a hit deal extra damage equal to [HP] just lost.", "headerLine": null, "bulletPoints": null } ],
+            "description": [ { "regularText": "If loose [HP] from a creature within range you can use this Ability. Target the Creature with a [TAG;Basic Attack Melee] Ability and on a hit deal extra damage equal to [HP] just lost.", "headerLine": null, "bulletPoints": null } ],
             "flavorText": [ ]
         },
         {

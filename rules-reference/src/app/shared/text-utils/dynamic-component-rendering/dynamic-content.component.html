@@ -10,5 +10,8 @@
                 [toolTip]="contentPart.component?.toolTipText"
             ></app-keyword>
         }
+        @if (contentPart.type === 'tag') {
+            <em style="color: white;" [innerHTML]="contentPart.text" [ngbTooltip]="getTagTooltipText(contentPart.text)" ></em>
+        }
     }
 </ng-container>
