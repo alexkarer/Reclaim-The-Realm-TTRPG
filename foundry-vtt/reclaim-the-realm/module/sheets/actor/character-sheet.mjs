@@ -68,13 +68,16 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
         },
         perks: {
             template: 'systems/reclaim-the-realm/templates/actor/perks.hbs'
+        },
+        biography: {
+            template: 'systems/reclaim-the-realm/templates/actor/biography.hbs'
         }
     };
 
     /** @override */
     _configureRenderOptions(options) {
         super._configureRenderOptions(options);
-        options.parts.push('characteroverview', 'data', 'perks', 'skills', 'equipment', 'abilities', 'effects');
+        options.parts.push('characteroverview', 'data', 'perks', 'skills', 'equipment', 'abilities', 'effects', 'biography');
     }
 
     /** @override */
@@ -139,6 +142,10 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
                 case 'effects':
                     tab.id = 'effects';
                     tab.label += 'Effects';
+                    break;
+                case 'biography':
+                    tab.id = 'biography';
+                    tab.label += 'Biography';
                     break;
             }
             if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
@@ -210,27 +217,23 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
             case 'skills':
             case 'equipment':
             case 'perks':
-                context.tab = context.tabs[partId];
-                break;
             case 'characteroverview':
                 context.tab = context.tabs[partId];
-                // Enrich overview info for display
-                // Enrichment turns text like `[[/r 1d20]]` into buttons
-                context.enrichedBiography = await ux.TextEditor.enrichHTML(
-                    this.actor.system.biography,
-                    {
-                        // Whether to show secret blocks in the finished html
-                        secrets: this.document.isOwner,
-                        // Data to fill in for inline rolls
-                        rollData: this.actor.getRollData(),
-                        // Relative UUID resolution
-                        relativeTo: this.actor,
-                    }
-                );
                 break;
             case 'effects':
                 context.tab = context.tabs[partId];
                 context.effects = super.getAllStatusEffects();
+                break;
+            case 'biography':
+                context.tab = context.tabs?.[partId];
+                context.enrichedBiography = await ux.TextEditor.enrichHTML(
+                    this.actor.system.biography ?? "",
+                    {
+                        secrets: this.document.isOwner,
+                        rollData: this.actor.getRollData(),
+                        relativeTo: this.actor,
+                    }
+                );
                 break;
         }
         return context;
@@ -588,7 +591,7 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
         event.preventDefault();
         let updatePayload = {};
         if (this.actor.system.stamina.value === 0) {
-            console.warn("Can't perform short rest without Stamina.");
+            ui.notifications.warn("Can't perform short rest without Stamina.");
             return;
         }
 
@@ -620,7 +623,7 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
         event.preventDefault();
         let updatePayload = {};
         if (this.actor.system.stamina.value === 0) {
-            console.warn("Can't perform short rest without Stamina.")
+            ui.notifications.warn("Can't perform short rest without Stamina.");
             return;
         }
         updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 1;
@@ -641,7 +644,7 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
         event.preventDefault();
         let updatePayload = {};
         if (this.actor.system.stamina.value === 0 || this.actor.system.stamina.value === 1) {
-            console.warn("Can't perform short rest without Stamina.")
+            ui.notifications.warn("Can't perform short rest without Stamina.");
             return;
         }
         updatePayload['system.stamina.value'] = this.actor.system.stamina.value - 2;
@@ -661,8 +664,19 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
         event.preventDefault();
         let updatePayload = {};
 
+        let newHP = Math.min(this.actor.system.hp.max, this.actor.system.hp.value + Math.floor(this.actor.system.hp.max / 3));
+        let newStamina = Math.min(this.actor.system.stamina.max, this.actor.system.stamina.value + Math.floor(this.actor.system.stamina.max / 3));
+        let newArcana = Math.min(this.actor.system.arcana.max, this.actor.system.arcana.value + Math.floor(this.actor.system.arcana.max / 3));
+        let newExhaustion = Math.max(this.actor.system.exhaustion - 1, 0);
+
         const confirm = await api.DialogV2.confirm({
-            content: "Perform Long Rest?",
+            content: `Perform Long Rest? You will recover:
+            <ul>
+                <li>HP: ${this.actor.system.hp.value} -> ${newHP}</li>
+                <li>Stamina: ${this.actor.system.stamina.value} -> ${newStamina}</li>
+                <li>Arcana: ${this.actor.system.arcana.value} -> ${newArcana}</li>
+                <li>Exhaustion: ${this.actor.system.exhaustion} -> ${newExhaustion}</li>
+            </ul>`,
             rejectClose: false,
             modal: true,
             window: { title: "Long Rest", icon: 'fa-solid fa-bed'},
@@ -671,18 +685,17 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
             return;
         }
 
+        ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            content: `${this.actor.name} is taking a long rest.`,
+            style: CONST.CHAT_MESSAGE_STYLES.OOC
+        });
+
         updatePayload['system.tempHp'] = 0;
-
-        let newHP = Math.min(this.actor.system.hp.max, this.actor.system.hp.value + Math.floor(this.actor.system.hp.max / 3));
         updatePayload['system.hp.value'] = newHP;
-
-        let newStamina = Math.min(this.actor.system.stamina.max, this.actor.system.stamina.value + Math.floor(this.actor.system.stamina.max / 3));
         updatePayload['system.stamina.value'] = newStamina;
-
-        let newArcana = Math.min(this.actor.system.arcana.max, this.actor.system.arcana.value + Math.floor(this.actor.system.arcana.max / 3));
         updatePayload['system.arcana.value'] = newArcana;
-
-        updatePayload['system.exhaustion'] = Math.max(this.actor.system.exhaustion - 1, 0);
+        updatePayload['system.exhaustion'] = newExhaustion;
 
         this.actor.update(updatePayload).then(v => this.render());
     }

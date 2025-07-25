@@ -70,7 +70,8 @@
         "Equipment": "Equipment",
         "Abilities": "Abilities",
         "Effects": "Effects",
-        "Skills": "Skills"
+        "Skills": "Skills",
+        "Biography": "Biography"
       },
       "base": {
         "FIELDS": {

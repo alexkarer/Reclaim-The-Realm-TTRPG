@@ -1,6 +1,6 @@
 {{! Character Overview Tab }}
 <section class='tab character-overview character-overview-scrollable {{tab.cssClass}}' data-group='primary' data-tab='characteroverview'>
-  <div class='grid grid-5col'>
+  <div class='grid grid-4col'>
 
     <div class="flexcol">
       <h6 class="headline">Levels</h6>
@@ -47,14 +47,48 @@
       </div>
     </div>
 
-    <div class="grid-span-3">
-      <h6 class="headline">Biography</h6>
-      {{#if editable}}
-      <prose-mirror name="system.biography" data-document-u-u-i-d="{{actor.uuid}}" value="{{system.biography}}"
-        collaborate="true" toggled="true">
-        {{{enrichedBiography}}}
-      </prose-mirror>
-      {{else}} {{{enrichedBiography}}}
+    <div class="grid-span-2">
+      <h6>{{localize "TYPES.Item.species"}}</h6>
+      {{#if (exists species)}}
+      <div class="flexrow">
+        <div class="species-container flexrow" data-item-id='{{species._id}}' data-drag='true' data-document-class='Item'>
+          <div class='item-image'>
+            <a class='rollable' data-action='viewDoc'>
+                <img src='{{species.img}}' title='{{species.name}}' width='24' height='24' />
+            </a>
+          </div>
+          <span class='species-text rollable' data-action='viewDoc'>{{species.name}}</span>
+        </div>
+        {{#unless system.editLock}}
+          <a class='align-self-center  item-control item-delete' title='{{localize "DOCUMENT.Delete" type='species'}}'
+              data-action='deleteDoc'>
+              <i class='fas fa-trash'></i>
+          </a>
+        {{/unless}}
+      </div>
+      {{else}}
+      <span>No Species Set!</span>
+      {{/if}}
+      <h6 style="margin-top: 5px;">{{localize "TYPES.Item.class"}}</h6>
+      {{#if (exists playerClass)}}
+      <div class="flexrow">
+        <div class="species-container flexrow" data-item-id='{{playerClass._id}}' data-drag='true' data-document-class='Item'>
+            <div class='item-image'>
+              <a class='rollable' data-action='viewDoc'>
+                  <img src='{{playerClass.img}}' title='{{playerClass.name}}' width='24' height='24' />
+              </a>
+            </div>
+            <span class='species-text rollable' data-action='viewDoc'>{{playerClass.name}}</span>
+        </div>
+        {{#unless system.editLock}}
+          <a class='align-self-center item-control item-delete' title='{{localize "DOCUMENT.Delete" type='playerClass'}}'
+              data-action='deleteDoc'>
+              <i class='fas fa-trash'></i>
+          </a>
+        {{/unless}}
+      </div>
+      {{else}}
+      <span>No Class Set!</span>
       {{/if}}
     </div>
 

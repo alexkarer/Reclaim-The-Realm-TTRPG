@@ -54,7 +54,8 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel {
         obj[attr] = new fields.SchemaField({
           value: new fields.NumberField({...requiredInteger, initial: -2, min: -8 }),
           classAttribute: new fields.BooleanField({ initial: false, required: true, nullable: false }),
-          attributeMaximum: new fields.NumberField({ ...requiredInteger, initial: 3, min: 3 })
+          attributeMaximum: new fields.NumberField({ ...requiredInteger, initial: 3, min: 3 }),
+          tempReduction: new fields.NumberField({ ...requiredInteger, initial: 0 })
         });
         return obj;
       }, {})
@@ -119,8 +120,16 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel {
 
     this.levels.martialLevel = Math.floor(this.levels.martialProficency * this.levels.level);
     this.levels.spellLevel = Math.floor(this.levels.spellProficency * this.levels.level);
-
     this.ap = getApForLevel(this.levels.level);
+  }
+
+  /** @override */
+  prepareDerivedData() {
+    super.prepareDerivedData();
+    for (let [k, v] of Object.entries(this.attributes)) {
+      v.value += v.tempReduction;
+    }
+
     this.mp = 6 + Math.floor(this.attributes.agi.value / 3) + this.data.movementBonus - this.data.movementPenalty;
 
     this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str.value + this.data.stabilityBonus;
@@ -139,16 +148,12 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel {
   getRollData() {
     const data = {};
 
-    if (this.attributes) {
-      for (let [k, v] of Object.entries(this.attributes)) {
-        data[k] = foundry.utils.deepClone(v);
-      }
+    for (let [k, v] of Object.entries(this.attributes)) {
+      data[k] = foundry.utils.deepClone(v);
     }
 
-    if (this.skills) {
-      for (let [k, v] of Object.entries(this.skills)) {
-        data[k] = foundry.utils.deepClone(v);
-      }
+    for (let [k, v] of Object.entries(this.skills)) {
+      data[k] = foundry.utils.deepClone(v);
     }
 
     data.level = this.levels.level;

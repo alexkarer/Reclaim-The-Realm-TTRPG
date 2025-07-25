@@ -93,6 +93,7 @@ export default class RtRCharacter extends RtRActorBase {
 
   /** @override */
   prepareDerivedData() {
+    super.prepareDerivedData();
     this._calculateMartialDamage();
     this._calculateInventoryValues();
   }

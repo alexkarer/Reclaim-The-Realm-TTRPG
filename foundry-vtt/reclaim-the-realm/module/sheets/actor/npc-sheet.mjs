@@ -1,5 +1,7 @@
 import RtRBaseHandlebarsActorSheet from './base-handlebars-actor-sheet.mjs';
 
+const { ux } = foundry.applications;
+
 /**
  * @extends {RtRBaseHandlebarsActorSheet}
  */
@@ -27,13 +29,16 @@ export class RtRNpcSheet extends RtRBaseHandlebarsActorSheet {
         },
         skills: {
             template: 'systems/reclaim-the-realm/templates/actor/skills.hbs',
+        },
+        biography: {
+            template: 'systems/reclaim-the-realm/templates/actor/biography.hbs'
         }
     };
 
     /** @override */
     _configureRenderOptions(options) {
         super._configureRenderOptions(options);
-        options.parts.push('npcoverview', 'data', 'skills', 'effects');
+        options.parts.push('npcoverview', 'data', 'skills', 'effects', 'biography');
     }
 
     /** @override */
@@ -87,6 +92,10 @@ export class RtRNpcSheet extends RtRBaseHandlebarsActorSheet {
                     tab.id = 'effects';
                     tab.label += 'Effects';
                     break;
+                case 'biography':
+                    tab.id = 'biography';
+                    tab.label += 'Biography';
+                    break;
             }
             if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
             tabs[partId] = tab;
@@ -122,6 +131,7 @@ export class RtRNpcSheet extends RtRBaseHandlebarsActorSheet {
 
     /** @override */
     async _preparePartContext(partId, context) {
+        super._preparePartContext(partId, context);
         switch (partId) {
             case 'data':
             case 'skills':
@@ -131,6 +141,17 @@ export class RtRNpcSheet extends RtRBaseHandlebarsActorSheet {
             case 'effects':
                 context.tab = context.tabs[partId];
                 context.effects = super.getAllStatusEffects();
+                break;
+            case 'biography':
+                context.tab = context.tabs[partId];
+                context.enrichedBiography = await ux.TextEditor.enrichHTML(
+                    this.actor.system.biography ?? "",
+                    {
+                        secrets: this.document.isOwner,
+                        rollData: this.actor.getRollData(),
+                        relativeTo: this.actor,
+                    }
+                );
                 break;
         }
         return context;

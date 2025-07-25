@@ -1,7 +1,6 @@
 ### Immidiate TODOS
 
 Before Ability Actions, data needs to be cleaned up in the Abilities (also do perks immediatly as well)
-- Display Tags in a different way
 - Requirements are Missing
 
 Implement the Ability Actions:
@@ -10,8 +9,6 @@ Implement the Ability Actions:
   
 After ACtions are Implemented:
   - Add remaining spells
-  
-There needs to be a way to temporary reduce attributes
 
 # General TODOs/Nice to have
 
