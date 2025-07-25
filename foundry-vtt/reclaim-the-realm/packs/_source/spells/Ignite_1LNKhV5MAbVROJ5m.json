@@ -34,12 +34,17 @@
       "diceSize": "d20",
       "diceBonus": "+@str+ceil(@lvl / 2)"
     },
-    "tags": "Spell; SPELL ABILITY 1; Elemental; Pyromancy",
+    "tags": [
+      "Spell(1)",
+      "Elemental",
+      "Pyromancy"
+    ],
     "range": "9m",
     "targets": "1 creature",
     "duration": "SPI ROUND",
     "components": "V (Incantation), S",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "flags": {},
@@ -50,8 +55,8 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1750421325503,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753476319084,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 0,
   "ownership": {

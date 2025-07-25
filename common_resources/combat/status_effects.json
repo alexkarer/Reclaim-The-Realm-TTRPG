@@ -71,14 +71,14 @@
         {
             "keyword": "[SILENCED]",
             "link": "silenced-i",
-            "summary":  "Can't talk, can't use a [SPELL ABILITY] with verbal components.",
-            "description": "A slienced creature can't talk or use any [SPELL ABILITY] that has verbal components."
+            "summary":  "Can't talk, can't use a [TAG;Spell] Ability with verbal components.",
+            "description": "A slienced creature can't talk or use any [TAG;Spell] Ability that has verbal components."
         },
         {
             "keyword": "[DEAFENED]",
             "link": "deafened-i",
-            "summary":  "Can't hear, can't use a [SPELL ABILITY] with verbal components.",
-            "description": "A deafened creature can't hear or use any [SPELL ABILITY] that has verbal components."
+            "summary":  "Can't hear, can't use a [TAG;Spell] Ability with verbal components.",
+            "description": "A deafened creature can't hear or use any [TAG;Spell] Ability that has verbal components."
         },
         {
             "keyword": "[INTOXICATED]",
@@ -158,7 +158,7 @@
             "keyword": "[RESTRAINED II]",
             "link": "restrained-ii",
             "summary":  "Can't use [MP] other than escape, [DISADVANTAGE] for any [ATTACK] and [AGI] [ATTRIBUTE TEST], [DODGE] reduced by 5. Can't use abilities or weapons requiring 2 hands.",
-            "description": "A restreained creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE] [SAVE] or [STABILITY] [SAVE] (restrained creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] for any [ATTACK] or [AGI] [ATTRIBUTE TEST] it makes and it's [DODGE] is reduced by 5.<br>A restrained creature can’t make attacks with two-handed weapons unless they are wielded in only one hand, additionally it can’t use any [SPELL ABILITY] that has somatic components."
+            "description": "A restreained creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE] [SAVE] or [STABILITY] [SAVE] (restrained creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] for any [ATTACK] or [AGI] [ATTRIBUTE TEST] it makes and it's [DODGE] is reduced by 5.<br>A restrained creature can’t make attacks with two-handed weapons unless they are wielded in only one hand, additionally it can’t use any [TAG;Spell] Ability that has somatic components."
         },
         {
             "keyword": "[BLINDED]",
@@ -263,8 +263,8 @@
         {
             "keyword": "[MAGIC RESISTANCE I]",
             "link": "magic-resistance-i",
-            "summary":  "+4 bonus to any [SAVE] against a [SPELL ABILITY].",
-            "description": "A lighlty magic resistant creature recieves a +4 bonus to any [SAVE] made against a [SPELL ABILITY]."
+            "summary":  "+4 bonus to any [SAVE] against any [TAG;Spell] Ability.",
+            "description": "A lighlty magic resistant creature recieves a +4 bonus to any [SAVE] made against any [TAG;Spell] Ability."
         },
         {
             "keyword": "[HEALING I]",
@@ -307,8 +307,8 @@
         {
             "keyword": "[MAGIC RESISTANCE II]",
             "link": "magic-resistance-ii",
-            "summary":  "+4 bonus to any [SAVE] against a [SPELL ABILITY], only recieve half damage from a [SPELL ABILITY].",
-            "description": "A magic resistant creature recieves a +4 bonus to any [SAVE] made against a [SPELL ABILITY]. Additionally any [SPELL ABILITY] that deals damage now only deals half damage."
+            "summary":  "+4 bonus to any [SAVE] against any [TAG;Spell] Ability, only recieve half damage from any [TAG;Spell] Ability.",
+            "description": "A magic resistant creature recieves a +4 bonus to any [SAVE] made against any [TAG;Spell] Ability. Additionally any [TAG;Spell] Ability that deals damage now only deals half damage."
         },
         {
             "keyword": "[HEALING II]",
@@ -345,8 +345,8 @@
         {
             "keyword": "[MAGIC RESISTANCE III]",
             "link": "magic-resistance-iii",
-            "summary":  "Immunity against any [SPELL ABILITY].",
-            "description": "Any [SPELL ABILITY] can't affect this creature directly. However indirect effects such as a rock being magically accelerated against the creature or a pit being created unter the creature still affect it."
+            "summary":  "Immunity against any [TAG;Spell] Ability.",
+            "description": "Any [TAG;Spell] Ability can't affect this creature directly. However indirect effects such as a rock being magically accelerated against the creature or a pit being created unter the creature still affect it."
         },
         {
             "keyword": "[HEALING III]",

@@ -31,7 +31,7 @@
     },
     "tags": [
       "Class Technique (Priest)",
-      "SPELL ABILITY 1"
+      "Spell(1)"
     ],
     "range": "-",
     "targets": "one ally that was targeted by a SPELL ABILITY",
@@ -54,7 +54,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750113284591,
-    "modifiedTime": 1753312116866,
+    "modifiedTime": 1753476468820,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!B3i1pIn7tnu35sx6"

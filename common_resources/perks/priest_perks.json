@@ -22,7 +22,7 @@
                 "bulletPoints": null,
                 "ability": {
                     "name": "Divine Blessing",
-                    "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 0" ],
+                    "tags": [ "Class Technique (Priest)", "Spell(0)" ],
                     "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                     "cost": "2 [AP]",
                     "range": "6m",
@@ -38,7 +38,7 @@
                 "bulletPoints": null,
                 "ability": {
                     "name": "Unholy Curse",
-                    "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 0" ],
+                    "tags": [ "Class Technique (Priest)", "Spell(0)" ],
                     "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                     "cost": "2 [AP]",
                     "range": "9m",
@@ -313,7 +313,7 @@
                 "bulletPoints": null,
                 "ability": {
                     "name": "Minor Miracle",
-                    "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 2" ],
+                    "tags": [ "Class Technique (Priest)", "Miracle", "Spell(2)" ],
                     "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                     "cost": "3 [AP]",
                     "range": "varies",
@@ -363,7 +363,7 @@
                 "bulletPoints": null,
                 "ability": {
                     "name": "Miracle",
-                    "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 3" ],
+                    "tags": [ "Class Technique (Priest)", "Miracle", "Spell(3)" ],
                     "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                     "cost": "4 [AP]",
                     "range": "varies",
@@ -407,7 +407,7 @@
                 "bulletPoints": null,
                 "ability": {
                     "name": "Miracle",
-                    "tags": [ "Class Technique (Priest)", "Miracle", "[SPELL ABILITY] 3" ],
+                    "tags": [ "Class Technique (Priest)", "Miracle", "Spell(3)" ],
                     "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                     "cost": "1 minute",
                     "range": "varies",

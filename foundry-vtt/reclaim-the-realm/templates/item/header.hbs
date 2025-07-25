@@ -53,14 +53,12 @@
     {{#if (isOneOf5 item.type 'ability' 'classTechnique' 'martialManeuver' 'spell' 'perk')}}
       <div class="compact-grid grid-4col">
         <span>{{localize 'RTR.Item.base.FIELDS.tags.label'}}</span>
-        <div class="grid-span-3 flexcol">
+        <div class="grid-span-3">
           {{#each system.tags as |tag key|}}
-          <div class="flexrow">
-            <input disabled='true' style="flex-grow: 5;" class="compact-input" type='text' value='{{tag}}' />
+            <em class="tag-text">{{tag}}</em>
             {{#unless @root.system.editLock}}
               <input type="button" value="-" class="compact-input delete-btn" data-action='deleteTag' data-tag='{{tag}}' />
             {{/unless}}
-          </div>
           {{/each}}
           {{#unless @root.system.editLock}}
             <input type="button" value="+" class="compact-input add-btn" data-action='addTag' />

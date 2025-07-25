@@ -23,7 +23,7 @@
                 {"roll": "11-13", "effect": "Weak Effect depending on spell discipline"},
                 {"roll": "14-16", "effect": "For 1 minute you loose all senses, [SAVE ENDS] [DT] 15 [TOUGHNESS] [SAVE]."},
                 {"roll": "17-19", "effect": "You summon a [LEVEL] 3 Extraplanar Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests."},
-                {"roll": "20-22", "effect": "You cast a random Spell of the same Discipline of the same [SPELL ABILITY] Level without upcasting or [ARCANA] Cost with you being the target, or the center of the area effect."},
+                {"roll": "20-22", "effect": "You cast a random Spell of the same Discipline of the same [TAG;Spell] Ability number without upcasting or [ARCANA] Cost with you being the target, or the center of the area effect."},
                 {"roll": "23-25", "effect": "Medium Effect depending on spell discipline"},
                 {"roll": "26-28", "effect": "The arcane energy causes a temporal disturbance, The spellcaster is removed from existance and appears in 1d10 [ROUND] in again, at the nearest unnocupied space."},
                 {"roll": "29-31", "effect": "You summon a [LEVEL] 8 Extraplanar Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests."},

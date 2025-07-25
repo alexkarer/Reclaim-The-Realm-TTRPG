@@ -28,7 +28,7 @@
                 "regularText": null,
                 "headerLine": null,
                 "bulletPoints": [
-                    "Each time a [SPELL ABILITY] is used the mage gains Magical Charge equal to the number denoted in the [SPELL ABILITY] up to a maximum of 2 * [LEVEL] per [ROUND].",
+                    "Each time a [TAG;Spell] Ability is used within 18m of the mage, they gain Magical Charge equal to the number denoted in the [TAG;Spell] Tag up to a maximum of 2 * [LEVEL] per [ROUND].",
                     "Each time a creature is reduced to 0 [HP] the mage gains magical charge equal to half the creatures [SPELL LEVEL] (rounded up).",
                     "They can use the Channel Ability to gain Magical Charge"
                 ],
@@ -166,7 +166,7 @@
                     "regularText": null,
                     "headerLine": null,
                     "bulletPoints": [
-                        "Each time a Magical Mishap is triggered you gain Magical Charge equal to the number denoted in the [SPELL ABILITY] that caused the Mishap.",
+                        "Each time a Magical Mishap is triggered you gain Magical Charge equal to the number denoted in the [TAG;Spell] Ability that caused the Mishap.",
                         "Each time you make a [SPELL CAST TEST] if you roll doubles you also trigger a magical mishap regardless if it usually would be successful.",
                         "When a magical mishap is triggered you can roll twice choose what effect you wish to trigger."
                     ],

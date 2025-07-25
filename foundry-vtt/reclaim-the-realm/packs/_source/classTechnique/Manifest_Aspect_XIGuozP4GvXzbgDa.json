@@ -31,7 +31,7 @@
     },
     "tags": [
       "Class Technique (Warlock)",
-      "SPELL ABILITY 1"
+      "Spell(1)"
     ],
     "range": "6m",
     "targets": "unocupied Space",
@@ -54,7 +54,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750115777587,
-    "modifiedTime": 1753312218260,
+    "modifiedTime": 1753476546114,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!XIGuozP4GvXzbgDa"

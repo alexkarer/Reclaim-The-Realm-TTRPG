@@ -99,18 +99,18 @@
     "classTechniques": [
         {
             "name": "Lingering Healing",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
             "cost": "0 [AP], 2 AD(3-)",
             "range": "-",
-            "target": "one ally that was targeted by a [SPELL ABILITY]",
+            "target": "one ally that was targeted by a [TAG;Spell] Ability",
             "duration": "[SPI]/2, min 1 [ROUND]",
-            "description": [ { "regularText": "One ally that was targeted with a [SPELL ABILITY] that you cast this turn recieves [HEALING I].", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "description": [ { "regularText": "One ally that was targeted with a [TAG;Spell] Ability that you cast this turn recieves [HEALING I].", "headerLine": null, "bulletPoints": null, "ability": null } ],
             "flavorText": [ ]
         },
         {
             "name": "Holy Strike",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
             "cost": "[FREE], 2 AD(3-)",
             "range": "-",
@@ -121,18 +121,18 @@
         },
         {
             "name": "Mercy of the Gods",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
-            "cost": "0 [AP], number of AD(2-) equal to spell ability level + 1",
+            "cost": "0 [AP], number of AD(2-) equal to [TAG;Spell] Ability number + 1",
             "range": "-",
             "target": "[SELF]",
             "duration": "[INSTANT]",
-            "description": [ { "regularText": "For your next [SPELL ABILITY] that you cast, that heals you can maximize all dice.", "headerLine": null, "bulletPoints": null, "ability": null } ],
+            "description": [ { "regularText": "For your next [TAG;Spell] Ability that you use, that heals you can maximize all dice.", "headerLine": null, "bulletPoints": null, "ability": null } ],
             "flavorText": [ ]
         },
         {
             "name": "Rejuvination",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 2" ],
+            "tags": [ "Class Technique (Priest)", "Spell(2)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
             "cost": "1 [AP], 2 AD(1)",
             "range": "6m",
@@ -143,7 +143,7 @@
         },
         {
             "name": "Holy Fire",
-            "tags": [ "Class Technique (Priest, Good)", "[SPELL ABILITY] 2" ],
+            "tags": [ "Class Technique (Priest, Good)", "Spell(2)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Good or LN/CN/N Alignment" ] },
             "cost": "3 [AP], 3 AD(1)",
             "range": "9m",
@@ -154,7 +154,7 @@
         },
         {
             "name": "Unholy Strike",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Evil or LN/CN/N Alignment" ] },
             "cost": "[FREE], 2 AD(4+)",
             "range": "-",
@@ -165,7 +165,7 @@
         },
         {
             "name": "Unholy Fire",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 2" ],
+            "tags": [ "Class Technique (Priest)", "Spell(2)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Evil or LN/CN/N Alignment" ] },
             "cost": "3 [AP], 3 AD(6)",
             "range": "12m",
@@ -176,7 +176,7 @@
         },
         {
             "name": "Divine Cleanse",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "1 [AP], 2 matching AD",
             "range": "12m",
@@ -187,7 +187,7 @@
         },
         {
             "name": "Protection",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "1 [REACTION], 2 matching AD",
             "range": "9m",
@@ -198,7 +198,7 @@
         },
         {
             "name": "Certainty",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "[FREE], 2 or more matching AD",
             "range": "-",
@@ -209,7 +209,7 @@
         },
         {
             "name": "Sanctified Shackles",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "1 [AP], 2 matching AD",
             "range": "9m",
@@ -220,7 +220,7 @@
         },
         {
             "name": "Unyielding",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Lawful or NG/NE/N Alignment" ] },
             "cost": "1 [REACTION], 3 matching AD",
             "range": "-",
@@ -231,7 +231,7 @@
         },
         {
             "name": "Self Restoration",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE/N Alignment" ] },
             "cost": "1 [AP], two unique AD",
             "range": "-",
@@ -242,7 +242,7 @@
         },
         {
             "name": "Second Chance",
-            "tags": [ "Class Technique (Priest)", "[SPELL ABILITY] 1" ],
+            "tags": [ "Class Technique (Priest)", "Spell(1)" ],
             "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ "Chaotic or NG/NE/N Alignment" ] },
             "cost": "1 [REACTION], 3 unique AD",
             "range": "6m",

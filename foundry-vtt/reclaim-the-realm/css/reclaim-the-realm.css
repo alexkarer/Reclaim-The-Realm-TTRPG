@@ -682,29 +682,6 @@
   overflow-x: hidden;
   scrollbar-width: thin;
 }
-.reclaim-the-realm .increase-attribute-btn {
-  margin-left: 5px;
-  flex-shrink: 5;
-  border-radius: 7px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: green;
-  color: green;
-  background-color: black;
-  text-align: center;
-}
-.reclaim-the-realm .increase-attribute-btn:disabled {
-  color: gray;
-  border-color: gray;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-.reclaim-the-realm .increase-attribute-btn:not(:disabled):hover, .reclaim-the-realm .increase-attribute-btn:not(:disabled):focus {
-  color: lightgreen;
-  border-color: lightgreen;
-  background-color: darkslategray;
-  cursor: pointer;
-}
 .reclaim-the-realm .attribute-points {
   text-align: center;
   margin-top: 0px;
@@ -753,4 +730,8 @@
 .reclaim-the-realm .class-core-feature {
   font-size: 1rem;
   font-weight: bold;
+}
+.reclaim-the-realm .tag-text {
+  flex-grow: 5;
+  margin-right: 3px;
 }

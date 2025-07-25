@@ -35,8 +35,7 @@
       "diceBonus": "+@str+ceil(@lvl / 2)"
     },
     "tags": [
-      "Spell",
-      "SPELL ABILITY 1",
+      "Spell(1)",
       "Manipulation",
       "Telepathy"
     ],
@@ -56,7 +55,7 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1753313566089,
+    "modifiedTime": 1753476401755,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 0,

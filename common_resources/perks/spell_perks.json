@@ -146,7 +146,7 @@
                 "bulletPoints": null,
                 "ability": {
                     "name": "Summon Flame",
-                    "tags": [ "Pyrmoancy" ],
+                    "tags": [ "Elemental", "Pyrmoancy" ],
                     "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
                     "cost": "1 [AP]",
                     "range": "6m",

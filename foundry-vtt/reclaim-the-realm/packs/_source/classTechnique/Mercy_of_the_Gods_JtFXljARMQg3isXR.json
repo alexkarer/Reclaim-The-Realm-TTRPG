@@ -31,7 +31,7 @@
     },
     "tags": [
       "Class Technique (Priest)",
-      "SPELL ABILITY 1"
+      "Spell(1)"
     ],
     "range": "-",
     "targets": "SELF",
@@ -54,7 +54,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750113399646,
-    "modifiedTime": 1753312109353,
+    "modifiedTime": 1753476517718,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!JtFXljARMQg3isXR"

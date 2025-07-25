@@ -153,8 +153,6 @@ function getGameMechanicsContentPart(keyword: string): ContentPart | undefined {
             return generateGenericKeyword('MEELE MARTIAL ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[2].description, 'attack');
         case 'RANGED MARTIAL ATTACK':
             return generateGenericKeyword('RANGED MARTIAL ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[3].description, 'attack');
-        case 'SPELL ABILITY':
-            return generateGenericKeyword('SPELL ABILITY', 'Any Ability with the [SPELL ABILITY] Tag, these Abilities also have a number associated with it, if not the nuzmber is 0.', 'spell-test');
         case 'SPELL CAST TEST':
             return generateGenericKeyword('SPELL CAST TEST', 'Roll 2d6 + [SPELL LEVEL] and if the roll is lower than the Cast Difficulty of the Spell or double 1s, a magical mishap occurs after the spell was cast.', 'spell-test');
         case 'SPELL TEST':

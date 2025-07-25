@@ -3,7 +3,7 @@
         "pyromancySpells": [
             {
                 "name": "Fire Breath",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Pyromancy" ],
+                "tags": [ "Spell(1)", "Elemental", "Pyromancy" ],
                 "components": "V (Incantation), M (Mouth, nostrils or similar)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -17,7 +17,7 @@
             },
             {
                 "name": "Ignite",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Pyromancy" ],
+                "tags": [ "Spell(1)", "Elemental", "Pyromancy" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -31,7 +31,7 @@
             },
             {
                 "name": "Fireball",
-                "tags": [ "Spell", "[SPELL ABILITY] 2", "Elemental", "Pyromancy" ],
+                "tags": [ "Spell(2)", "Elemental", "Pyromancy" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
@@ -45,7 +45,7 @@
             },
             {
                 "name": "Erruption",
-                "tags": [ "Spell", "[SPELL ABILITY] 3", "Elemental", "Pyromancy", "Geomancy" ],
+                "tags": [ "Spell(3)", "Elemental", "Pyromancy", "Geomancy" ],
                 "components": "V (Incantation), S, M (Rocky or Earthen Ground)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
@@ -61,7 +61,7 @@
         "geomancySpell": [
             {
                 "name": "Stone Barrier",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Geomancy" ],
+                "tags": [ "Spell(1)", "Elemental", "Geomancy" ],
                 "components": "V (Incantation), S, M(nearby earth or stone)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
@@ -75,7 +75,7 @@
             },
             {
                 "name": "Poison Touch",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Geomancy" ],
+                "tags": [ "Spell(1)", "Elemental", "Geomancy" ],
                 "components": "V (Incantation), S (Touch)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -89,7 +89,7 @@
             },
             {
                 "name": "Earthquake",
-                "tags": [ "Spell", "[SPELL ABILITY] 4", "Elemental", "Geomancy" ],
+                "tags": [ "Spell(4)", "Elemental", "Geomancy" ],
                 "components": "V (Incantation), S, M (Somethign crazy)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
@@ -105,7 +105,7 @@
         "hydromancySpells": [
             {
                 "name": "Acid Stream",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Hydromancy" ],
+                "tags": [ "Spell(1)", "Elemental", "Hydromancy" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -119,7 +119,7 @@
             },
             {
                 "name": "Icy Floor",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Hydromancy" ],
+                "tags": [ "Spell(1)", "Elemental", "Hydromancy" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -133,7 +133,7 @@
             },
             {
                 "name": "Blizzard",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Hydromancy", "Aeromancy" ],
+                "tags": [ "Spell(1)", "Elemental", "Hydromancy", "Aeromancy" ],
                 "components": "V (Incantation), S, M (Clouds in the sky, or fog in the air)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -149,7 +149,7 @@
         "aeromancySpells": [
             {
                 "name": "Lightning Spark",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Aeromancy" ],
+                "tags": [ "Spell(1)", "Elemental", "Aeromancy" ],
                 "components": "V (Incantation), S, M (object consisting of conductive material)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -163,7 +163,7 @@
             },
             {
                 "name": "Gust of Wind",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Aeromancy" ],
+                "tags": [ "Spell(1)", "Elemental", "Aeromancy" ],
                 "components": "V (Blowing Air), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -177,7 +177,7 @@
             },
             {
                 "name": "Fly",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Elemental", "Aeromancy" ],
+                "tags": [ "Spell(1)", "Elemental", "Aeromancy" ],
                 "components": "S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -191,7 +191,7 @@
             },
             {
                 "name": "Compress",
-                "tags": [ "Spell", "[SPELL ABILITY] 2", "Elemental", "Aeromancy" ],
+                "tags": [ "Spell(2)", "Elemental", "Aeromancy" ],
                 "components": "V (Incantation), S, M(air)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -209,7 +209,7 @@
         "lightSpells": [
             {
                 "name": "Divine Bolt",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Light" ],
+                "tags": [ "Spell(1)", "Cosmic", "Light" ],
                 "components": "V (Prayer), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -223,7 +223,7 @@
             },
             {
                 "name": "Holy Light",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Light" ],
+                "tags": [ "Spell(1)", "Cosmic", "Light" ],
                 "components": "V (Prayer), S, M(a small relic in your hand)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -237,7 +237,7 @@
             },
             {
                 "name": "Shield of Faith",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Light" ],
+                "tags": [ "Spell(1)", "Cosmic", "Light" ],
                 "components": "V (Prayer), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -253,7 +253,7 @@
         "restorationSpells": [
             {
                 "name": "Bless",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Restoration" ],
+                "tags": [ "Spell(1)", "Cosmic", "Restoration" ],
                 "components": "V (Prayer), S, M (a springling of holy water)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -267,7 +267,7 @@
             },
             {
                 "name": "Heal",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Restoration" ],
+                "tags": [ "Spell(1)", "Cosmic", "Restoration" ],
                 "components": "V (Prayer), S (Touch)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -281,7 +281,7 @@
             },
             {
                 "name": "Cleanse",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Restoration" ],
+                "tags": [ "Spell(1)", "Cosmic", "Restoration" ],
                 "components": "V (Prayer)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -295,7 +295,7 @@
             },
             {
                 "name": "Sanctuary",
-                "tags": [ "Spell", "[SPELL ABILITY] 2", "Cosmic", "Restoration" ],
+                "tags": [ "Spell(2)", "Cosmic", "Restoration" ],
                 "components": "V (Prayer), S, M(holy water sprinkled on the ground)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ],
@@ -311,7 +311,7 @@
         "necromancySpell": [
             {
                 "name": "Create Undead Servant",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Necromancy" ],
+                "tags": [ "Spell(1)", "Cosmic", "Necromancy" ],
                 "components": "V (Prayer), S, M(A nearby corpse or bone remnants)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -325,7 +325,7 @@
             },
             {
                 "name": "Curse",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Necromancy" ],
+                "tags": [ "Spell(1)", "Cosmic", "Necromancy" ],
                 "components": "V (Curse)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -339,7 +339,7 @@
             },
             {
                 "name": "Steal Soul",
-                "tags": [ "Spell", "[SPELL ABILITY] 4", "Cosmic", "Necromancy" ],
+                "tags": [ "Spell(4)", "Cosmic", "Necromancy" ],
                 "components": "V (Curse), S, M(complicated)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -355,7 +355,7 @@
         "shadowSpell": [
             {
                 "name": "Unholy Pyre",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Shadow" ],
+                "tags": [ "Spell(1)", "Cosmic", "Shadow" ],
                 "components": "V (Prayer), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -369,7 +369,7 @@
             },
             {
                 "name": "Darkness",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Shadow" ],
+                "tags": [ "Spell(1)", "Cosmic", "Shadow" ],
                 "components": "V (Curse)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -385,7 +385,7 @@
         "divinationSpell": [
             {
                 "name": "Hindsight",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Divination" ],
+                "tags": [ "Spell(1)", "Cosmic", "Divination" ],
                 "components": "V (warning)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -399,7 +399,7 @@
             },
             {
                 "name": "Detect Magic",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Divination" ],
+                "tags": [ "Spell(1)", "Cosmic", "Divination" ],
                 "components": "V (Prayer), S, M(transperant or reflective object)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -420,7 +420,7 @@
             },
             {
                 "name": "The Die is Cast",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Cosmic", "Divination" ],
+                "tags": [ "Spell(1)", "Cosmic", "Divination" ],
                 "components": "V (Prayer), S, M(dice)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -438,7 +438,7 @@
         "telekinesisSpells": [
             {
                 "name": "Telekinetic move",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Telekinesis" ],
+                "tags": [ "Spell(1)", "Manipulation", "Telekinesis" ],
                 "components": "S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -458,7 +458,7 @@
             },
             {
                 "name": "Telekinetic crush",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Telekinesis" ],
+                "tags": [ "Spell(1)", "Manipulation", "Telekinesis" ],
                 "components": "S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -474,7 +474,7 @@
         "transmutationSpells": [
             {
                 "name": "Mutate",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Transmutation" ],
+                "tags": [ "Spell(1)", "Manipulation", "Transmutation" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -495,7 +495,7 @@
             },
             {
                 "name": "Quicken",
-                "tags": [ "Spell", "[SPELL ABILITY] 2", "Manipulation", "Transmutation" ],
+                "tags": [ "Spell(2)", "Manipulation", "Transmutation" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -511,7 +511,7 @@
         "conjurationSpells": [
             {
                 "name": "Magic Missiles",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Conjuration" ],
+                "tags": [ "Spell(1)", "Manipulation", "Conjuration" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -525,7 +525,7 @@
             },
             {
                 "name": "Create Object",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Conjuration" ],
+                "tags": [ "Spell(1)", "Manipulation", "Conjuration" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -550,7 +550,7 @@
         "illusionSpells": [
             {
                 "name": "Shroud",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Illusion" ],
+                "tags": [ "Spell(1)", "Manipulation", "Illusion" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -564,7 +564,7 @@
             },
             {
                 "name": "Illusary Image",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Illusion" ],
+                "tags": [ "Spell(1)", "Manipulation", "Illusion" ],
                 "components": "V (Incantation), S",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -580,7 +580,7 @@
         "teleportationSpells": [
             {
                 "name": "Cosmic Jump",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Teleporation" ],
+                "tags": [ "Spell(1)", "Manipulation", "Teleporation" ],
                 "components": "V (Incantation)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -594,7 +594,7 @@
             },
             {
                 "name": "Extradimensional Pocket",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Teleporation" ],
+                "tags": [ "Spell(1)", "Manipulation", "Teleporation" ],
                 "components": "V (Incantation), S, M (Pocket or container)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -608,7 +608,7 @@
             },
             {
                 "name": "Emergency Teleport",
-                "tags": [ "Spell", "[SPELL ABILITY] 2", "Manipulation", "Teleporation" ],
+                "tags": [ "Spell(2)", "Manipulation", "Teleporation" ],
                 "components": "V (Incantation)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -624,7 +624,7 @@
         "telepathySpells": [
             {
                 "name": "Mind Assault",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Telepathy" ],
+                "tags": [ "Spell(1)", "Manipulation", "Telepathy" ],
                 "components": "V (Scream)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 
@@ -638,7 +638,7 @@
             },
             {
                 "name": "Suggestion",
-                "tags": [ "Spell", "[SPELL ABILITY] 1", "Manipulation", "Telepathy" ],
+                "tags": [ "Spell(1)", "Manipulation", "Telepathy" ],
                 "components": "V (Suggestion)",
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], 

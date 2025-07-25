@@ -31,7 +31,7 @@
     },
     "tags": [
       "Class Technique (Warlock)",
-      "SPELL ABILITY 1"
+      "Spell(1)"
     ],
     "range": "21m",
     "targets": "1 Creature",
@@ -54,7 +54,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750115007671,
-    "modifiedTime": 1753312159095,
+    "modifiedTime": 1753476566988,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!cu01YHSkdYhwE4LV"
