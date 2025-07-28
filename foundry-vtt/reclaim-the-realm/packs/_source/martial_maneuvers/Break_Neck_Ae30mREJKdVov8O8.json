@@ -8,9 +8,9 @@
     "description": "<p><strong><span style=\"text-decoration:underline\">STR MARTIAL TEST</span></strong> vs <strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong> or <strong><span style=\"text-decoration:underline\">STABILITY</span></strong> (targets choice). On success: recieve 5 * light <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong> phyiscal damage. On fail: half damage.</p><h6>Pushing extra cost: 1 [STAMINA]</h6><p>For each 1 <strong><span style=\"text-decoration:underline\">STAMINA</span></strong> increase the damage on a success by your light <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong> phyiscal damage.</p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 8,
       "minimumSpellLevel": 0,
-      "minimumStr": 0,
+      "minimumStr": 6,
       "minimumAgi": 0,
       "minimumCon": 0,
       "minimumInt": 0,
@@ -18,7 +18,16 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "brawl"
     },
     "usageCost": {
       "apCost": 0,
@@ -54,7 +63,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750455374843,
-    "modifiedTime": 1753312899126,
+    "modifiedTime": 1753737019635,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!Ae30mREJKdVov8O8"

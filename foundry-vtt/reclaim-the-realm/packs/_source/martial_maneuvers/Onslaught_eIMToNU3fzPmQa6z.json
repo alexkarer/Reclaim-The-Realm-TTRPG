@@ -8,7 +8,7 @@
     "description": "<p>Make a <em>Weapon Attack</em> against one target a number of times equal to your <strong><span style=\"text-decoration:underline\">MARTIAL LEVEL</span></strong>.</p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 8,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
       "minimumAgi": 0,
@@ -18,7 +18,16 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "weapon"
     },
     "usageCost": {
       "apCost": 0,
@@ -54,7 +63,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750460290760,
-    "modifiedTime": 1753313353855,
+    "modifiedTime": 1753737306030,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!eIMToNU3fzPmQa6z"

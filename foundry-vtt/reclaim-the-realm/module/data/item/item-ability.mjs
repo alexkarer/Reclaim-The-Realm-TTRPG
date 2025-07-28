@@ -27,10 +27,9 @@ export default class RtRAbility extends RtRItemBase {
       minimumPer: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       minimumCha: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
 
-      requiredSpellDisciplines: new fields.ArrayField(
-        new fields.StringField({ ...requiredStringField, choices: Object.keys(CONFIG.RTR.spellDisciplines) })
-      ),
-      requiredMartialManeuverType: new fields.StringField({ nullable: true, choices: Object.keys(CONFIG.RTR.martialManeuverTypes) }),
+      requiredSpellDisciplineOne: new fields.StringField({ nullable: true, blank: true, choices: [...Object.keys(CONFIG.RTR.spellDisciplines), ''] }),
+      requiredSpellDisciplineTwo: new fields.StringField({ nullable: true, blank: true, choices: [...Object.keys(CONFIG.RTR.spellDisciplines), ''] }),
+      requiredMartialManeuverType: new fields.StringField({ nullable: true, choices: [...Object.keys(CONFIG.RTR.martialManeuverTypes), ''] }),
 
       skillRankRequirement: new fields.SchemaField({
         skill: new fields.StringField(),

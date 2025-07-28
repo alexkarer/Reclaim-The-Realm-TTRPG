@@ -16,7 +16,16 @@
       "minimumInt": 0,
       "minimumSpi": 0,
       "minimumPer": 0,
-      "minimumCha": 0
+      "minimumCha": 0,
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "weapon"
     },
     "usageCost": {
       "apCost": 0,
@@ -47,7 +56,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749381093609,
-    "modifiedTime": 1753313241416,
+    "modifiedTime": 1753737250499,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 100000,

@@ -111,6 +111,16 @@ export function registerHandlebarsHelpers() {
             requirementsText.push(`Perk: ${requirements.requiredPerk}`);
         } if (requirements.requiredNotSelectedPerk) {
             requirementsText.push(`Not Perk: ${requirements.requiredNotSelectedPerk}`);
+        } if (requirements.requiredSpellDisciplineOne) {
+            if (!requirements.requiredSpellDisciplineTwo) {
+                requirementsText.push(`Spell Discipline: ${requirements.requiredSpellDisciplineOne}`);
+            } else {
+                requirementsText.push(`Spell Discipline 1: ${requirements.requiredSpellDisciplineOne}`);
+            }
+        } if (requirements.requiredSpellDisciplineTwo) {
+            requirementsText.push(`Spell Discipline 2: ${requirements.requiredSpellDisciplineTwo}`);
+        } if (requirements.requiredMartialManeuverType) {
+            requirementsText.push(`Martial Maneuver Type: ${requirements.requiredMartialManeuverType}`);
         } if (requirements.otherRequirements) {
             requirementsText.push(`Other: ${requirements.otherRequirements}`);
         }

@@ -8,7 +8,7 @@
     "description": "<p>Make a <em>Weapon Attack</em> with a thrown Weapon, if <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> hits and exceeds or matches <strong><span style=\"text-decoration:underline\">STABILITY</span></strong> push <strong><span style=\"text-decoration:underline\">STR</span></strong> m away. If anything is blocking movement, the blocking target recieves half damage of the <strong><span style=\"text-decoration:underline\">ATTACK</span></strong>.</p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 4,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
       "minimumAgi": 0,
@@ -18,7 +18,16 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "weapon"
     },
     "usageCost": {
       "apCost": 0,
@@ -54,7 +63,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750459659875,
-    "modifiedTime": 1753313142197,
+    "modifiedTime": 1753737272648,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!OsZNPo3NAYL7sDYW"

@@ -8,7 +8,7 @@
     "description": "<p>You push yourself and grant yourself an extra 2 <strong><span style=\"text-decoration:underline\">AP</span></strong> this <strong><span style=\"text-decoration:underline\">TURN</span></strong>, however next <strong><span style=\"text-decoration:underline\">TURN</span></strong> you start with 2 <strong><span style=\"text-decoration:underline\">AP</span></strong> less.</p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 4,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
       "minimumAgi": 0,
@@ -18,7 +18,16 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "fortitude"
     },
     "usageCost": {
       "apCost": 0,
@@ -54,7 +63,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750455582900,
-    "modifiedTime": 1753312919470,
+    "modifiedTime": 1753737035304,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!PJomKmSAqK9GWobS"

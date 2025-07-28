@@ -466,8 +466,99 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       if (!result) {
           return;
       }
-      let updatePayload = {};
-      if (result.minlevel) {
+      const updatePayload = this._parseCommonRequirementsEditResult(result);
+      if (result.requiredNotSelectedPerk && result.requiredNotSelectedPerk.trim() !== '') {
+        updatePayload['system.requirements.requiredNotSelectedPerk'] = result.requiredNotSelectedPerk;
+      } else {
+        updatePayload['system.requirements.requiredNotSelectedPerk'] = '';
+      }
+
+      this.document.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Edit Abiltiy Requirements
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onEditAbilityRequirements(event, target) {
+      event.preventDefault();
+      const result = await api.DialogV2.input({
+          rejectClose: false,
+          modal: true,
+          classes: ['reclaim-the-realm'],
+          content: `
+          <div class="compact-grid grid-2col">
+            <h6 style="margin-top: 0px;" class="grid-span-2">Level Requirement</h6>
+            <label for="minlevel" class="compact-input">Minimum LEVEL</label><input type="number" name="minlevel" class="compact-input" id="minlevel" value="${this.document.system.requirements.minimumLevel}">
+            <label for="minmartiallevel" class="compact-input">Minimum MARTIAL LEVEL</label><input type="number" name="minmartiallevel" class="compact-input" id="minmartiallevel" value="${this.document.system.requirements.minimumMartialLevel}">
+            <label for="minspelllevel" class="compact-input">Minimum SPELL LEVEL</label><input type="number" name="minspelllevel" class="compact-input" id="minspelllevel" value="${this.document.system.requirements.minimumSpellLevel}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Attribute Requirements</h6>
+            <label for="minstr" class="compact-input">Minimum STR</label><input type="number" class="compact-input" name="minstr" id="minstr" value="${this.document.system.requirements.minimumStr}">
+            <label for="minagi" class="compact-input">Minimum AGI</label><input type="number" class="compact-input" name="minagi" id="minagi" value="${this.document.system.requirements.minimumAgi}">
+            <label for="mincon" class="compact-input">Minimum CON</label><input type="number" class="compact-input" name="mincon" id="mincon" value="${this.document.system.requirements.minimumCon}">
+            <label for="minint" class="compact-input">Minimum INT</label><input type="number" class="compact-input" name="minint" id="minint" value="${this.document.system.requirements.minimumInt}">
+            <label for="minspi" class="compact-input">Minimum SPI</label><input type="number" class="compact-input" name="minspi" id="minspi" value="${this.document.system.requirements.minimumSpi}">
+            <label for="minper" class="compact-input">Minimum PER</label><input type="number" class="compact-input" name="minper" id="minper" value="${this.document.system.requirements.minimumPer}">
+            <label for="mincha" class="compact-input">Minimum CHA</label><input type="number" class="compact-input" name="mincha" id="mincha" value="${this.document.system.requirements.minimumCha}">
+            
+            <h6 style="margin-top: 6px;" class="grid-span-2">Spell Disciplines or Martial Maneuver Types</h6>
+            <label for="spelldisciplineone" class="compact-input">Required Spell Discipline 1</label><input type="text" class="compact-input" name="spelldisciplineone" id="spelldisciplineone" value="${this.document.system.requirements.requiredSpellDisciplineOne ?? ''}">
+            <label for="spelldisciplinetwo" class="compact-input">Required Spell Discipline 2</label><input type="text" class="compact-input" name="spelldisciplinetwo" id="spelldisciplinetwo" value="${this.document.system.requirements.requiredSpellDisciplineTwo ?? ''}">
+            <label for="martialmaneuvertype" class="compact-input">Required Martial Maneuver Type</label><input type="text" class="compact-input" name="martialmaneuvertype" id="martialmaneuvertype" value="${this.document.system.requirements.requiredMartialManeuverType ?? ''}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Skill Requirement</h6>
+            <label for="skill" class="compact-input">Skill</label><input type="text" name="skill" class="compact-input" id="skill" value="${this.document.system.requirements.skillRankRequirement.skill ?? ''}">
+            <label for="skillrank" class="compact-input">Skill Rank</label><input type="number" name="skillrank" class="compact-input" id="skillrank" value="${this.document.system.requirements.skillRankRequirement.rank}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Class and Perk Requirement</h6>
+            <label for="requiredClass" class="compact-input">Required Class</label><input type="text" name="requiredClass" class="compact-input" id="requiredClass" value="${this.document.system.requirements.requiredClass ?? ''}">
+            <label for="requiredPerk" class="compact-input">Required Perk</label><input type="text" name="requiredPerk" class="compact-input" id="requiredPerk" value="${this.document.system.requirements.requiredPerk ?? ''}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Other Requirements</h6>
+            <input class="grid-span-2 compact-input" type="text" name="otherRequirements" id="otherRequirements" value="${this.document.system.requirements.otherRequirements ?? ''}">
+          </div>
+          `,
+          window: { title: "Edit Ability Requirements"},
+          ok: { label: "Confirm" }
+      });
+      if (!result) {
+          return;
+      }
+      const updatePayload = this._parseCommonRequirementsEditResult(result);
+      if (result.spelldisciplineone && result.spelldisciplineone.trim() !== '') {
+        updatePayload['system.requirements.requiredSpellDisciplineOne'] = result.spelldisciplineone;
+      } else {
+        updatePayload['system.requirements.requiredSpellDisciplineOne'] = '';
+      }
+      if (result.spelldisciplinetwo && result.spelldisciplinetwo.trim() !== '') {
+        updatePayload['system.requirements.requiredSpellDisciplineTwo'] = result.spelldisciplinetwo;
+      } else {
+        updatePayload['system.requirements.requiredSpellDisciplineTwo'] = '';
+      }
+      if (result.martialmaneuvertype && result.martialmaneuvertype.trim() !== '') {
+        updatePayload['system.requirements.requiredMartialManeuverType'] = result.martialmaneuvertype;
+      } else {
+        updatePayload['system.requirements.requiredMartialManeuverType'] = '';
+      }
+
+      this.document.update(updatePayload).then(v => this.render());
+  }
+
+  /** Helper Functions */
+  
+  /**
+   * 
+   * @param {Object} result
+   * @returns {Object} updatePayload
+   * @private 
+   */
+  _parseCommonRequirementsEditResult(result) {
+    const updatePayload = {};
+    if (result.minlevel) {
         updatePayload['system.requirements.minimumLevel'] = parseInt(result.minlevel);
       } else {
         updatePayload['system.requirements.minimumLevel'] = 0;
@@ -538,32 +629,14 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       } else {
         updatePayload['system.requirements.requiredPerk'] = '';
       }
-      if (result.requiredNotSelectedPerk && result.requiredNotSelectedPerk.trim() !== '') {
-        updatePayload['system.requirements.requiredNotSelectedPerk'] = result.requiredNotSelectedPerk;
-      } else {
-        updatePayload['system.requirements.requiredNotSelectedPerk'] = '';
-      }
       if (result.otherRequirements && result.otherRequirements.trim() !== '') {
         updatePayload['system.requirements.otherRequirements'] = result.otherRequirements;
       } else {
         updatePayload['system.requirements.otherRequirements'] = '';
       }
-
-      this.document.update(updatePayload).then(v => this.render());
+      return updatePayload;
   }
 
-  /**
-   * Edit Abiltiy Requirements
-   * @this RtRActorSheet
-   * @param {PointerEvent} event   The originating click event
-   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-   * @protected
-   */
-  static async _onEditAbilityRequirements(event, target) {
-      event.preventDefault();
-  }
-
-  /** Helper Functions */
   /**
    *
    * DragDrop

@@ -8,7 +8,7 @@
     "description": "<p>When you are hit by an <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> you can use this Ability and make that <strong><span style=\"text-decoration:underline\">ATTACK</span></strong> hit the shields instead.</p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 4,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
       "minimumAgi": 0,
@@ -18,7 +18,15 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -54,7 +62,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750459818819,
-    "modifiedTime": 1753313159670,
+    "modifiedTime": 1753737282866,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!0L3zK9p11TgtABBg"

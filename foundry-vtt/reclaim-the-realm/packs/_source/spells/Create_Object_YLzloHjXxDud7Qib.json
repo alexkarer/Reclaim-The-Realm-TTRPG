@@ -17,7 +17,15 @@
       "minimumSpi": 0,
       "minimumPer": 0,
       "minimumCha": 0,
-      "skillRankRequirements": []
+      "skillRankRequirements": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "conjuration",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -55,7 +63,7 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1753476355004,
+    "modifiedTime": 1753736768416,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 0,

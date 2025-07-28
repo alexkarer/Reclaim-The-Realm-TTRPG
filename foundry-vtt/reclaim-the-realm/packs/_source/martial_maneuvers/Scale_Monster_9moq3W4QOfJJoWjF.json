@@ -8,17 +8,27 @@
     "description": "<p><span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">AGI</span></strong></span> or <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">STR</span></strong></span> Athletics <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">SKILL TEST</span></strong></span> vs. <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DODGE</span></strong></span>. On success: you are now mounted on top of the creature which has the following effects:</p><ul><li><p>One hand is always occupied with holding on to the creature</p></li><li><p>You have <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">ADVANTAGE</span></strong></span> on any <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MELEE ATTACK</span></strong></span> against the target.</p></li><li><p>You can’t be targeted by the creature you are currently on, on it’s turn however it can attempt to shake you of by spending 1 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">AP</span></strong></span> and you have to succeed on a <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">STABILITY SAVE</span></strong></span> vs. 10 + creature <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">LEVEL</span></strong></span>. On a fail: you are thrown away a creatures <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">STR</span></strong></span> m.</p></li></ul>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 4,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
-      "minimumAgi": 0,
+      "minimumAgi": 4,
       "minimumCon": 0,
       "minimumInt": 0,
       "minimumSpi": 0,
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": "Athletics",
+        "rank": 4
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "agile"
     },
     "usageCost": {
       "apCost": 0,
@@ -55,7 +65,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750423952504,
-    "modifiedTime": 1753312609686,
+    "modifiedTime": 1753736958101,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!9moq3W4QOfJJoWjF"

@@ -1,7 +1,8 @@
 ### Immidiate TODOS
 
 Before Ability Actions, data needs to be cleaned up in the Abilities (also do perks immediatly as well)
-- Requirements are Missing
+- Requirements of Class Techniques and Core Abilities still need to be proper set
+- Usage Cost still needs to be put in proper structure.
 
 Implement the Ability Actions:
   - when ability is used, subtract cost, then do first action
@@ -43,6 +44,8 @@ After ACtions are Implemented:
 - place for permanent injury
 - passive Awareness and stuff (also handle distracted status effect)
 - concealment bonuzses
+
+- Save Learned Spell Disciplines and Martial Maneuver Types somewhere.
 
 - Equipment changes:
   - Easy way to add/substract currency

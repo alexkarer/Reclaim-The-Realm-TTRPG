@@ -8,17 +8,26 @@
     "description": "<p>You can move towards a target location using <strong><span style=\"text-decoration:underline\">MP</span></strong> as normal. Make a <strong><span style=\"text-decoration:underline\">AGI MARTIAL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">DODGE</span></strong>. On sucess: until you stopped moving and performed 1 other Ability or your <strong><span style=\"text-decoration:underline\">TURN</span></strong> ends, other creatures can't use a <strong><span style=\"text-decoration:underline\">REACTION</span></strong> against you.</p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 8,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
-      "minimumAgi": 0,
+      "minimumAgi": 6,
       "minimumCon": 0,
       "minimumInt": 0,
       "minimumSpi": 0,
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "agile"
     },
     "usageCost": {
       "apCost": 0,
@@ -55,7 +64,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750451280143,
-    "modifiedTime": 1753312735510,
+    "modifiedTime": 1753736977645,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!SLWtlt2TBUZwHxhG"

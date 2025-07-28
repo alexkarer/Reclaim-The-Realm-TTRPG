@@ -84,10 +84,10 @@ RTR.classResources = {
 
 RTR.spellDisciplines = {
   elemental: "RTR.SpellDisciplines.Elemental",
-  Pyrmoancy: "RTR.SpellDisciplines.Pyrmoancy",
-  Hydromancy: "RTR.SpellDisciplines.Hydromancy",
-  Aeromancy: "RTR.SpellDisciplines.Aeromancy",
-  Geomancy: "RTR.SpellDisciplines.Geomancy",
+  pyromancy: "RTR.SpellDisciplines.Pyrmoancy",
+  hydromancy: "RTR.SpellDisciplines.Hydromancy",
+  aeromancy: "RTR.SpellDisciplines.Aeromancy",
+  geomancy: "RTR.SpellDisciplines.Geomancy",
   cosmic: "RTR.SpellDisciplines.Cosmic",
   light: "RTR.SpellDisciplines.Light",
   restoration: "RTR.SpellDisciplines.Restoration",

@@ -8,7 +8,7 @@
     "description": "<p><strong><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></strong>. On hit: deal medium <strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong> physical damage. The shield afterwards bounces back.</p><h6>Pushing extra cost: 1 [STAMINA]</h6><p>If your <strong><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></strong> hits the first Target, it bounces towards another target within 4.5m of the orginal target, make a second <strong><span style=\"text-decoration:underline\">RANGED MARTIAL ATTACK</span></strong> against that target.</p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 4,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
       "minimumAgi": 0,
@@ -18,7 +18,16 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "weapon"
     },
     "usageCost": {
       "apCost": 0,
@@ -54,7 +63,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750459523026,
-    "modifiedTime": 1753313172159,
+    "modifiedTime": 1753737266751,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!n8jYR09vVzf6Gysz"

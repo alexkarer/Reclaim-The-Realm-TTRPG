@@ -8,17 +8,26 @@
     "description": "<p>You can use this Ability at any point, when doing so you can interrupt any enemy or allied action and take a <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TURN</span></strong></span> as if it was your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TURN</span></strong></span>, however you only 2 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">AP</span></strong></span> availible (can’t be increased in any way) and have your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MP</span></strong></span> availible.</p><h6>Pushing extra cost: 5 [STAMINA]</h6><p>You push yourself beyond limits and have a regular <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TURN</span></strong></span> with full <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">AP</span></strong></span> and <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MP</span></strong></span> however this maneuver is very taxing and after finishing it you suffer 2 points of <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">EXHAUSTION</span></strong></span></p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 12,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
-      "minimumAgi": 0,
+      "minimumAgi": 10,
       "minimumCon": 0,
       "minimumInt": 0,
       "minimumSpi": 0,
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "agile"
     },
     "usageCost": {
       "apCost": 0,
@@ -54,7 +63,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750452491981,
-    "modifiedTime": 1753312754935,
+    "modifiedTime": 1753736987871,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!mNIX793EcPUdpZ2Z"

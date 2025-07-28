@@ -8,7 +8,7 @@
     "description": "<p>Make a <em>Weapon Attack</em> against <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong></span>. On hit: 5 * light <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong></span> physical damage. On Success: score a critical hit.</p><h6>Pushing extra cost: 1 [<span style=\"text-decoration:underline\"><span style=\"text-decoration:underline\">STAMINA</span></span>]</h6><p>For each 1 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">STAMINA</span></strong></span> increase the damage by light <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong></span>.</p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 8,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
       "minimumAgi": 0,
@@ -18,7 +18,16 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "weapon"
     },
     "usageCost": {
       "apCost": 0,
@@ -54,7 +63,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750459996682,
-    "modifiedTime": 1753313345297,
+    "modifiedTime": 1753737295404,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!wpXfzwzJpgpSjRTq"

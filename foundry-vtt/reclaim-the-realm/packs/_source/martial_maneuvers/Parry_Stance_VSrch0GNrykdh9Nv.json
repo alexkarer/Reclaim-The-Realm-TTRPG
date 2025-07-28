@@ -8,7 +8,7 @@
     "description": "<p>Each time you use the <em>Parry</em> Ability it doesn't use up your <strong><span style=\"text-decoration:underline\">REACTION</span></strong></p><h6>Pushing extra cost: 1 [STAMINA]</h6><p>Each <strong><span style=\"text-decoration:underline\">STAMINA</span></strong> used grants you a +2 bonus to the <strong><span style=\"text-decoration:underline\">D20 TEST</span></strong> when using the <em>Parry</em> Ability.</p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 4,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
       "minimumAgi": 0,
@@ -18,7 +18,16 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "weapon"
     },
     "usageCost": {
       "apCost": 0,
@@ -54,7 +63,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750459916927,
-    "modifiedTime": 1753313150434,
+    "modifiedTime": 1753737277320,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!VSrch0GNrykdh9Nv"

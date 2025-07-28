@@ -8,17 +8,26 @@
     "description": "<p>Make a Move, during that move you can move vertically along moves. If at the end of your <strong><span style=\"text-decoration:underline\">TURN</span></strong> you are not standing or holding on to anything, you are falling down.</p><h6>Pushing extra cost: 1 [STAMINA]</h6><p>If you use this Ability again during your <strong><span style=\"text-decoration:underline\">TURN</span></strong> it only costs 1 <strong><span style=\"text-decoration:underline\">MP</span></strong>.</p>",
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 4,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
-      "minimumAgi": 0,
+      "minimumAgi": 4,
       "minimumCon": 0,
       "minimumInt": 0,
       "minimumSpi": 0,
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": "",
+      "requiredMartialManeuverType": "agile"
     },
     "usageCost": {
       "apCost": 0,
@@ -55,7 +64,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750424466625,
-    "modifiedTime": 1753312674928,
+    "modifiedTime": 1753736963080,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!UnaaLVHcDJGGJHnQ"
