@@ -8,7 +8,7 @@
     "description": "<p>Select two Martial Maneuver types. You are now able to learn Martial Maneuvers of that type.</p>",
     "perkPointsCost": 2,
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 6,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "6 [LEVEL], Perk:Martial Training"
+      "otherRequirements": "",
+      "requiredPerk": "Martial Training",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Martial"
+    "tags": "Martial",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +47,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749985436329,
-    "modifiedTime": 1750420621409,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753731775241,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!ceRo9k2GMc6X1kVI"
 }

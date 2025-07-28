@@ -8,7 +8,7 @@
     "description": "<p>The Priest has exceptional faith in his believes and fears no danger. The Priest can use a half of their <strong><span style=\"text-decoration:underline\">SPI</span></strong> for calculating <strong><span style=\"text-decoration:underline\">STABILITY</span></strong>, <strong><span style=\"text-decoration:underline\">DODGE</span></strong> and <strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong> instead of <strong><span style=\"text-decoration:underline\">STR AGI</span></strong> and <strong><span style=\"text-decoration:underline\">CON</span></strong></p>",
     "perkPointsCost": 2,
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 6,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "6 [LEVEL], Priest Class"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Priest"
+    "tags": "Priest",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +47,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749940942688,
-    "modifiedTime": 1750420805663,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753732689571,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!zTveIIdgMlixdldU"
 }

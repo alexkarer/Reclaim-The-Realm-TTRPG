@@ -21,7 +21,13 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "Warlock Class"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Warlock",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
     "tags": [
       "Warlock",
@@ -44,7 +50,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749998450732,
-    "modifiedTime": 1753311806418,
+    "modifiedTime": 1753733946913,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!kQChp3IBDe9NlEnt"

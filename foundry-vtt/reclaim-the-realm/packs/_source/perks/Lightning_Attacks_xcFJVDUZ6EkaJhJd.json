@@ -12,7 +12,7 @@
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
-      "minimumAgi": 0,
+      "minimumAgi": 7,
       "minimumCon": 0,
       "minimumInt": 0,
       "minimumSpi": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "7 AGI, Perk: Weapon Finesse II"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "Weapon Finesse II",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Martial"
+    "tags": "Martial",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +47,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749986128828,
-    "modifiedTime": 1750420592899,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753732552850,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!xcFJVDUZ6EkaJhJd"
 }

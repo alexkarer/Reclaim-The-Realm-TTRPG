@@ -8,7 +8,7 @@
     "description": "<p>You gain Wings based on your entity which grant you the magical capability to fly and you gain special Movement fly(3m).</p><h6>Corruption Effect:</h6><p>Your Wings become harder to control, you now gain fly(6m) but each time you Move using your fly speed you have to move the maximum distance.</p>",
     "perkPointsCost": 2,
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 8,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -21,7 +21,13 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "8 LEVEL, Warlock Class"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Warlock",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
     "tags": [
       "Warlock",
@@ -44,7 +50,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749998683526,
-    "modifiedTime": 1753311845473,
+    "modifiedTime": 1753733923592,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!xfTQXewVd5z05sRD"

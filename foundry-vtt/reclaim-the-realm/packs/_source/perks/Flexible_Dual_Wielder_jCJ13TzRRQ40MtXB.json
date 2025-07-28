@@ -9,7 +9,7 @@
     "perkPointsCost": 1,
     "requirements": {
       "minimumLevel": 0,
-      "minimumMartialLevel": 0,
+      "minimumMartialLevel": 6,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
       "minimumAgi": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "6 [MARTIAL LEVEL], Perk:Dual Wielding I"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "Dual Wielding I",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Martial"
+    "tags": "Martial",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +47,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749986611361,
-    "modifiedTime": 1750420611882,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753732456276,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!jCJ13TzRRQ40MtXB"
 }

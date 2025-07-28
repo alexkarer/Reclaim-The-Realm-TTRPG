@@ -21,9 +21,17 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "5 Ranks in the Deception Skill"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": "Deception",
+        "rank": 5
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Skill"
+    "tags": "Skill",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +48,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987372379,
-    "modifiedTime": 1750420990672,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753733078481,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!cfRgOSAJRwHVEJtB"
 }

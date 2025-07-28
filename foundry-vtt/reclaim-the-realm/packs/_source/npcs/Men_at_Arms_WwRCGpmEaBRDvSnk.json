@@ -83,7 +83,12 @@
       "willpower": 0,
       "shieldBlock": 0
     },
-    "resistances": [],
+    "resistances": [
+      {
+        "damageType": "Physical",
+        "value": 4
+      }
+    ],
     "attackBonuses": {
       "meleeMartialAttack": 0,
       "rangedMartialAttack": 0,
@@ -221,7 +226,8 @@
     "npcLevel": 1,
     "resistancesString": "physical: 4;",
     "immunitiesString": "",
-    "statusEffectImmunityString": ""
+    "statusEffectImmunityString": "",
+    "editLock": true
   },
   "prototypeToken": {
     "name": "Men-at-Arms",
@@ -545,6 +551,37 @@
         "lastModifiedBy": "dMcHPOGHbwLGpLCS"
       },
       "_key": "!actors.items!WwRCGpmEaBRDvSnk.ez1eYSxbA2U9DncA"
+    },
+    {
+      "folder": "uqKXpy8FGbaZW2r9",
+      "name": "Armor II",
+      "type": "npcTrait",
+      "_id": "n6mMed6Fbv4TMu9N",
+      "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+      "system": {
+        "description": "<p>Wear Armor to gain <strong><span style=\"text-decoration:underline\">DR</span></strong> phyiscal 4, increases maneuvrepenalty to -3.</p>",
+        "summary": "Wear Armor to gain DR phyiscal 4, increases maneuvrepenalty to -3.",
+        "editLock": true
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "OLKSfPDHiy1Xf9SG": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.reclaim-the-realm.npc-traits.Item.QuaDcr079Irz0zNF",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.345",
+        "systemId": "reclaim-the-realm",
+        "systemVersion": "2.0.0",
+        "createdTime": 1753734041148,
+        "modifiedTime": 1753734041148,
+        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+      },
+      "_key": "!actors.items!WwRCGpmEaBRDvSnk.n6mMed6Fbv4TMu9N"
     }
   ],
   "effects": [],
@@ -562,7 +599,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751042848943,
-    "modifiedTime": 1751921640142,
+    "modifiedTime": 1753734058108,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!WwRCGpmEaBRDvSnk"

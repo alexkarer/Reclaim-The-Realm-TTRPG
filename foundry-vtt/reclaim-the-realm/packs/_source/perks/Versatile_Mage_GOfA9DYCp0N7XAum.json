@@ -14,14 +14,20 @@
       "minimumStr": 0,
       "minimumAgi": 0,
       "minimumCon": 0,
-      "minimumInt": 0,
+      "minimumInt": 3,
       "minimumSpi": 0,
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "3 INT"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
     "tags": [
       "Spell",
@@ -44,7 +50,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749990858296,
-    "modifiedTime": 1753311761449,
+    "modifiedTime": 1753733106118,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!GOfA9DYCp0N7XAum"

@@ -76,6 +76,42 @@ RTR.damageTypes = {
   Unholy: "RTR.DamageTypes.Unholy"
 }
 
+RTR.classResources = {
+  rage: "RTR.ClassResources.Rage",
+  corruption: "RTR.ClassResources.Corruption",
+  aetherDice: "RTR.ClassResources.AetherDice"
+}
+
+RTR.spellDisciplines = {
+  elemental: "RTR.SpellDisciplines.Elemental",
+  Pyrmoancy: "RTR.SpellDisciplines.Pyrmoancy",
+  Hydromancy: "RTR.SpellDisciplines.Hydromancy",
+  Aeromancy: "RTR.SpellDisciplines.Aeromancy",
+  Geomancy: "RTR.SpellDisciplines.Geomancy",
+  cosmic: "RTR.SpellDisciplines.Cosmic",
+  light: "RTR.SpellDisciplines.Light",
+  restoration: "RTR.SpellDisciplines.Restoration",
+  necromancy: "RTR.SpellDisciplines.Necromancy",
+  shadow: "RTR.SpellDisciplines.Shadow",
+  divination: "RTR.SpellDisciplines.Divination",
+  manipulation: "RTR.SpellDisciplines.Manipulation",
+  telekinesis: "RTR.SpellDisciplines.Telekinesis",
+  transmutation: "RTR.SpellDisciplines.Transmutation",
+  conjuration: "RTR.SpellDisciplines.Conjuration",
+  illusion: "RTR.SpellDisciplines.Illusion",
+  teleportation: "RTR.SpellDisciplines.Teleportation",
+  telepathy: "RTR.SpellDisciplines.Telepathy"
+}
+
+RTR.martialManeuverTypes = {
+  agile: "RTR.MartialManeuverTypes.Agile",
+  brawl: "RTR.MartialManeuverTypes.Brawl",
+  fortitude: "RTR.MartialManeuverTypes.Fortitude",
+  leader: "RTR.MartialManeuverTypes.Leader",
+  tactical: "RTR.MartialManeuverTypes.Tactical",
+  weapon: "RTR.MartialManeuverTypes.Weapon"
+}
+
 RTR.statusEffects = {
   // needed for foundry to mark combatants as defeated
   dead: {

@@ -8,7 +8,7 @@
     "description": "<p>The Priest is now able to perform greater miracles in addition to the ones he can already do and gains access to the Miracle Ability.</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.8mmASbvdqQmV9uCJ]{Miracle}</p>",
     "perkPointsCost": 1,
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 7,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "7 [LEVEL], Perk: Minor Miracle, Priest Class"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "Minor Miracle",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Priest"
+    "tags": "Priest",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +47,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749941466256,
-    "modifiedTime": 1750420945238,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753732806916,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!OFNxSc9icqQzvBe1"
 }

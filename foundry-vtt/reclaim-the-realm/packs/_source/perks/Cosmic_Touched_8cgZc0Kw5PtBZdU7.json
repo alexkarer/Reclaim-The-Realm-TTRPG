@@ -10,7 +10,7 @@
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
-      "minimumSpellLevel": 0,
+      "minimumSpellLevel": 1,
       "minimumStr": 0,
       "minimumAgi": 0,
       "minimumCon": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "1 [SPELL LEVEL], can learn Cosmic Spells"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Spell"
+    "tags": "Spell",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +47,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749995668807,
-    "modifiedTime": 1749995761356,
+    "modifiedTime": 1753733855998,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!8cgZc0Kw5PtBZdU7"

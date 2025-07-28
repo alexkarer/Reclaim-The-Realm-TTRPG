@@ -8,7 +8,7 @@
     "description": "<p>The Priest is able to perform mighty acts that rival the power of a god-like being, these can be performed regardless if they are eligble to perform a miracle or not:</p><ul><li><p>If the Priest died or they soul became trapped or bound they can use this ability and come back alive with their soul being returned to them. Talk with the GM on how they came back.</p></li><li><p>They can sacrifice themselves and matyr for their allies or cause. When doing so they can’t be resurrected with their soul now being bound to the aether. For this sacriface they can alter reality in a major way they wish, examples: Forever bind an evli entity somewhere, reverse the destruction of a major city, ....</p></li></ul><p>When performing such an act, they can’t do so again.</p>",
     "perkPointsCost": 1,
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 12,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "12 LEVEL, Perk: Greater Miracle, Priest Class"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "Greater Miracle",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Priest"
+    "tags": "Priest",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +47,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749941612876,
-    "modifiedTime": 1749941660867,
+    "modifiedTime": 1753732843874,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!g5UBJ2jHNoLWgnrk"

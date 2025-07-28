@@ -8,7 +8,7 @@
     "description": "<p>At the start of the combat the Barbarian recieves enugh Rage to instantly trigger their frenzy, once they have done this they can’t use this ability again until the next Long Rest . Additionally while in a frenzy the Barbarian gains the following benefits</p><ul><li><p>The Barbarian recieves 3 extra Rage at the start of their turn instead of 1.</p></li><li><p>The <strong><span style=\"text-decoration:underline\">HP</span></strong> they regain because of their Rage is doubled.</p></li><li><p>The Barbarian is immune to the <strong>[STUNNED II]</strong> and <strong>[STUNNED III]</strong> status effects.</p></li><li><p>Dropping to Deaths Door during a frenzy causes no Exhaustion (however recieving damage during Deaths Door still does)</p></li></ul>",
     "perkPointsCost": 2,
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 9,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "09 [LEVEL], Perk:Controlled Rage II, Barbarian Class"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Barbarian",
+      "requiredPerk": "Controlled Rage II",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Barbarian"
+    "tags": "Barbarian",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +47,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749984146736,
-    "modifiedTime": 1749995368706,
+    "modifiedTime": 1753732238454,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!8dXzcXMAFCzvD9SS"

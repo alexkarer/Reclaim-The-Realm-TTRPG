@@ -25,7 +25,7 @@
       "movementPenalty": 0
     },
     "levels": {
-      "level": 1,
+      "level": 0.25,
       "martialLevel": 0,
       "spellLevel": 0,
       "martialProficency": 1,
@@ -216,7 +216,10 @@
         "attrBonus": "str"
       }
     },
-    "npcLevel": 0.25
+    "npcLevel": 0.25,
+    "editLock": true,
+    "immunitiesString": "",
+    "statusEffectImmunityString": ""
   },
   "prototypeToken": {
     "name": "Initiate",
@@ -417,7 +420,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750348223835,
-    "modifiedTime": 1751922406588,
+    "modifiedTime": 1753734563854,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!dcqvsXCNRnrBXxMR"

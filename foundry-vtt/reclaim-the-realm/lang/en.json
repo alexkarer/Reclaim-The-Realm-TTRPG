@@ -58,6 +58,39 @@
       "Holy": "Holy",
       "Unholy": "Unholy"
     },
+    "ClassResources": {
+      "Rage": "Rage",
+      "Corruption": "Corruption",
+      "AetherDice": "Aether Dice"
+    },
+    "SpellDisciplines": {
+      "Elemental": "Elemental",
+      "Pyrmoancy": "Pyrmoancy",
+      "Hydromancy": "Hydromancy",
+      "Aeromancy": "Aeromancy",
+      "Geomancy": "Geomancy",
+      "Cosmic": "Cosmic",
+      "Light": "Light",
+      "Restoration": "Restoration",
+      "Necromancy": "Necromancy",
+      "Shadow": "Shadow",
+      "Divination": "Divination",
+      "Manipulation": "Manipulation",
+      "Telekinesis": "Telekinesis",
+      "Transmutation": "Transmutation",
+      "Conjuration": "Conjuration",
+      "Teleportation": "Teleportation",
+      "Telepathy": "Telepathy",
+      "Illusion": "Illusion"
+    },
+    "MartialManeuverTypes": {
+      "Agile": "Agile",
+      "Brawl": "Brawl",
+      "Fortitude": "Fortitude",
+      "Leader": "Leader",
+      "Tactical": "Tactical",
+      "Weapon": "Weapon"
+    },
     "SheetLabels": {
       "Actor": "RtR Actor Sheet",
       "Item": "RtR Item Sheet"

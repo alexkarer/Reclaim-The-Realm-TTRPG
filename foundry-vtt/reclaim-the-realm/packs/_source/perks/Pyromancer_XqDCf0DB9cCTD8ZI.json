@@ -10,7 +10,7 @@
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
-      "minimumSpellLevel": 0,
+      "minimumSpellLevel": 3,
       "minimumStr": 0,
       "minimumAgi": 0,
       "minimumCon": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "3 [SPELL LEVEL], Perk:Elementalist, Hydromancer Perk not selected"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "Elementalist",
+      "requiredNotSelectedPerk": "Hydromancer"
     },
-    "tags": "Spell"
+    "tags": "Spell",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +47,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749990940796,
-    "modifiedTime": 1749991406033,
+    "modifiedTime": 1753733800075,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!XqDCf0DB9cCTD8ZI"

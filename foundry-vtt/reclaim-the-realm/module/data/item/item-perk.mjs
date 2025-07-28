@@ -29,16 +29,14 @@ export default class RtRPerk extends RtRItemBase {
       minimumPer: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       minimumCha: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
 
-      skillRankRequirements: new fields.ArrayField(
-        new fields.SchemaField({
-          skill: new fields.StringField(requiredStringField),
-          rank: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
-        })
-      ),
+      skillRankRequirement: new fields.SchemaField({
+        skill: new fields.StringField(),
+        rank: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+      }),
 
       requiredClass: new fields.StringField(),
-      requiredPerks: new fields.ArrayField(new fields.StringField(requiredStringField)),
-      requiredNotSelectedPerks: new fields.ArrayField(new fields.StringField(requiredStringField)), 
+      requiredPerk: new fields.StringField(),
+      requiredNotSelectedPerk: new fields.StringField(),
 
       otherRequirements: new fields.StringField()
     });

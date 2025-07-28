@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "Warlock Class, not selected Cosmic Entity Perk"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Warlock",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": "Cosmic Entity I"
     },
-    "tags": "Warlock"
+    "tags": "Warlock",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +47,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749996269340,
-    "modifiedTime": 1749998664718,
+    "modifiedTime": 1753734013400,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!8RoU9NL2GRmTBjgY"

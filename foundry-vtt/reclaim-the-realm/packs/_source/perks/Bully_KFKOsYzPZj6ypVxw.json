@@ -21,9 +21,17 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "5 Ranks in the Intimidation Skill"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": "Intimidation",
+        "rank": 5
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Skill"
+    "tags": "Skill",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +48,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987624448,
-    "modifiedTime": 1749987747261,
+    "modifiedTime": 1753733086567,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!KFKOsYzPZj6ypVxw"

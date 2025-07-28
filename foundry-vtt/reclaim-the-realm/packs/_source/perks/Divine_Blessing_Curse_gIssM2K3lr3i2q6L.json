@@ -8,7 +8,7 @@
     "description": "<p>If you are of good allignment, you gain access to the Divine Blessing ability. If you are of evil allignment you gain the Divine Curse ability. If you are neutral, you gain access to both.</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.AJXgMfX2rDqb5XyB]{Divine Blessing}</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.Qu1j0aGYWT5Fjspv]{Unholy Curse}</p>",
     "perkPointsCost": 1,
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 1,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "1 [LEVEL], Priest Class"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Priest"
+    "tags": "Priest",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +47,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749941192090,
-    "modifiedTime": 1750420873537,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753732861442,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!gIssM2K3lr3i2q6L"
 }

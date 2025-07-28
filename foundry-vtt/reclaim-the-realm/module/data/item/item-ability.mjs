@@ -27,16 +27,18 @@ export default class RtRAbility extends RtRItemBase {
       minimumPer: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       minimumCha: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
 
-      skillRankRequirements: new fields.ArrayField(
-        new fields.SchemaField({
-          skill: new fields.StringField({ required: true, nullable: false, blank: false}),
-          rank: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
-        })
+      requiredSpellDisciplines: new fields.ArrayField(
+        new fields.StringField({ ...requiredStringField, choices: Object.keys(CONFIG.RTR.spellDisciplines) })
       ),
+      requiredMartialManeuverType: new fields.StringField({ nullable: true, choices: Object.keys(CONFIG.RTR.martialManeuverTypes) }),
 
-      requiredPerks: new fields.ArrayField(
-        new fields.StringField({ required: true, nullable: false, blank: false})
-      ),
+      skillRankRequirement: new fields.SchemaField({
+        skill: new fields.StringField(),
+        rank: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
+      }),
+
+      requiredClass: new fields.StringField(),
+      requiredPerk: new fields.StringField(),
 
       otherRequirements: new fields.StringField()
     });
@@ -48,8 +50,9 @@ export default class RtRAbility extends RtRItemBase {
       isFree: new fields.BooleanField({ initial: false, required: true, nullable: false }),
       arcanaCost: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       staminaCost: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      otherResourceCost: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      otherResourceName: new fields.StringField()
+      classResourceCost: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      classResourceName: new fields.StringField({ blank: true, choices: Object.keys(CONFIG.RTR.classResources) }),
+      otherResourceCost: new fields.StringField()
     });
 
     schema.range = new fields.StringField();

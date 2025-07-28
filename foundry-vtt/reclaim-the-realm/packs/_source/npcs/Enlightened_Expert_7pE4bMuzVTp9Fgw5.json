@@ -83,7 +83,12 @@
       "willpower": 0,
       "shieldBlock": 0
     },
-    "resistances": [],
+    "resistances": [
+      {
+        "damageType": "Cosmic",
+        "value": 5
+      }
+    ],
     "attackBonuses": {
       "meleeMartialAttack": 0,
       "rangedMartialAttack": 0,
@@ -221,7 +226,8 @@
     "npcLevel": 1,
     "resistancesString": "cosmic: 5;",
     "immunitiesString": "",
-    "statusEffectImmunityString": "resist: frightened, charmed;"
+    "statusEffectImmunityString": "resist: frightened, charmed;",
+    "editLock": true
   },
   "prototypeToken": {
     "name": "Enlightened Expert",
@@ -682,7 +688,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751799662509,
-    "modifiedTime": 1751922617876,
+    "modifiedTime": 1753734421579,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!7pE4bMuzVTp9Fgw5"

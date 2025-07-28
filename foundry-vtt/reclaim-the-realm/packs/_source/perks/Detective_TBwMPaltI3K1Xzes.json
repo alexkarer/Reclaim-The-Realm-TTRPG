@@ -21,9 +21,17 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "5 Ranks in the Investigation Skill"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": "Investigation",
+        "rank": 5
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Skill"
+    "tags": "Skill",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +48,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987590606,
-    "modifiedTime": 1750421003280,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753733068788,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!TBwMPaltI3K1Xzes"
 }

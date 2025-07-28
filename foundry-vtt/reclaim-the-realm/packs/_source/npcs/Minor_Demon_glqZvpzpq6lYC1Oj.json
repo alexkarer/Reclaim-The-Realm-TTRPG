@@ -27,7 +27,7 @@
       "movementPenalty": 0
     },
     "levels": {
-      "level": 1,
+      "level": 0.5,
       "martialLevel": 0,
       "spellLevel": 0,
       "martialProficency": 0,
@@ -83,7 +83,12 @@
       "willpower": 0,
       "shieldBlock": 0
     },
-    "resistances": [],
+    "resistances": [
+      {
+        "damageType": "Physical",
+        "value": 5
+      }
+    ],
     "attackBonuses": {
       "meleeMartialAttack": 0,
       "rangedMartialAttack": 0,
@@ -221,7 +226,8 @@
     "npcLevel": 0.5,
     "resistancesString": "physical: 5",
     "immunitiesString": "cosmic",
-    "statusEffectImmunityString": ""
+    "statusEffectImmunityString": "",
+    "editLock": true
   },
   "prototypeToken": {
     "name": "Minor Demon",
@@ -509,7 +515,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751052936628,
-    "modifiedTime": 1751909912922,
+    "modifiedTime": 1753734515085,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!glqZvpzpq6lYC1Oj"

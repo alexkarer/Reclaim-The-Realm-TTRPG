@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "Barbarian Class, Cosmic Rage I Perk or Controlled Rage I Perk not selected"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Barbarian",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": "Cosmic Rage I;Controlled Rage I"
     },
-    "tags": "Barbarian"
+    "tags": "Barbarian",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +47,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749984223852,
-    "modifiedTime": 1749995393500,
+    "modifiedTime": 1753732261179,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!oZ7yTjw8waFDuA3s"

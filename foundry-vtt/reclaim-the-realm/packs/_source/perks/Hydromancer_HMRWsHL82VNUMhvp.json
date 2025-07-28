@@ -10,7 +10,7 @@
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
-      "minimumSpellLevel": 0,
+      "minimumSpellLevel": 3,
       "minimumStr": 0,
       "minimumAgi": 0,
       "minimumCon": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "3 [SPELL LEVEL], Perk:Elementalist, Pyrmonacer Perk not selected"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "Elementalist",
+      "requiredNotSelectedPerk": "Pyrmonacer"
     },
-    "tags": "Spell"
+    "tags": "Spell",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +47,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749991103870,
-    "modifiedTime": 1749995312232,
+    "modifiedTime": 1753733818810,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!HMRWsHL82VNUMhvp"

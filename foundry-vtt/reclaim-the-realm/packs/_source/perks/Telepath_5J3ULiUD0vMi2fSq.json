@@ -10,7 +10,7 @@
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
-      "minimumSpellLevel": 0,
+      "minimumSpellLevel": 3,
       "minimumStr": 0,
       "minimumAgi": 0,
       "minimumCon": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "3 [SPELL LEVEL], Perk:Psychic,"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "Psychic",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Spell"
+    "tags": "Spell",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +47,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749996045545,
-    "modifiedTime": 1749996135094,
+    "modifiedTime": 1753733116061,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!5J3ULiUD0vMi2fSq"

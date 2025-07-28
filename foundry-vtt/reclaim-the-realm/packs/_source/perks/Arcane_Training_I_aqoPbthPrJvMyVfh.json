@@ -15,15 +15,22 @@
       "minimumAgi": 0,
       "minimumCon": 0,
       "minimumInt": 0,
-      "minimumSpi": 0,
+      "minimumSpi": 3,
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "3 [SPI], [SPELL LEVEL] Progression of 0"
+      "otherRequirements": "SPELL LEVEL Progression of 0",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Spell"
+    "tags": "Spell",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,7 +47,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749990711669,
-    "modifiedTime": 1749990782317,
+    "modifiedTime": 1753733894823,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!aqoPbthPrJvMyVfh"

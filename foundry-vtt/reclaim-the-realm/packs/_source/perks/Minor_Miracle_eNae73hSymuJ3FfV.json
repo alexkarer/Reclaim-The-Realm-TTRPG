@@ -8,7 +8,7 @@
     "description": "<p>The Priest is able to perform minor miracles as long as they keep their faith. They gain the Minor Miracle Ability.</p><p>Each time the Priest uses a Miracle Ability they can’t do so it any more. Once at the start of each day they make a prayer and make a <strong><span style=\"text-decoration:underline\">DT</span></strong> 25 <strong><span style=\"text-decoration:underline\">SPI ATTRIBUTE TEST</span></strong> which can’t be modified in any other way, on a success they can use miracles again. They can repeat the Test each following day where they reduce the <strong><span style=\"text-decoration:underline\">DT</span></strong> by 5 until they succeed. Alternatively if the Priest Character acts well within their believes or played well the GM may grant them the Miracle again without rolling.</p><p>@UUID[Compendium.reclaim-the-realm.coreAbilities.Item.EQRI3889dQW5cdGJ]{Minor Miracle}</p>",
     "perkPointsCost": 1,
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 3,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -21,9 +21,16 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "3 [LEVEL], Priest Class"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Priest"
+    "tags": "Priest",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +47,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749940996718,
-    "modifiedTime": 1750420930219,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753732817321,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!eNae73hSymuJ3FfV"
 }

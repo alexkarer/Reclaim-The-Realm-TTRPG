@@ -27,7 +27,7 @@
       "movementPenalty": 0
     },
     "levels": {
-      "level": 1,
+      "level": 0.125,
       "martialLevel": 0,
       "spellLevel": 0,
       "martialProficency": 0,
@@ -221,7 +221,8 @@
     "npcLevel": 1,
     "resistancesString": "",
     "immunitiesString": "",
-    "statusEffectImmunityString": ""
+    "statusEffectImmunityString": "",
+    "editLock": true
   },
   "prototypeToken": {
     "name": "Commoner",
@@ -391,7 +392,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751835771477,
-    "modifiedTime": 1751921169731,
+    "modifiedTime": 1753734555344,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!jS3sbdKrwLsk3WWQ"

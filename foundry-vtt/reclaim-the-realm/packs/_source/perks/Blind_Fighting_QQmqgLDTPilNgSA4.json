@@ -16,14 +16,22 @@
       "minimumCon": 0,
       "minimumInt": 0,
       "minimumSpi": 0,
-      "minimumPer": 0,
+      "minimumPer": 3,
       "minimumCha": 0,
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "3 PER, 3 Ranks in Awareness"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": "Awareness",
+        "rank": 3
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Martial"
+    "tags": "Martial",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +48,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749985596807,
-    "modifiedTime": 1750419938787,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753732388335,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!QQmqgLDTPilNgSA4"
 }

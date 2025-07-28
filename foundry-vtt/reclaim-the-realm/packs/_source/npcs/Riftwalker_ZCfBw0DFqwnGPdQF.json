@@ -27,7 +27,7 @@
       "movementPenalty": 0
     },
     "levels": {
-      "level": 1,
+      "level": 0.25,
       "martialLevel": 0,
       "spellLevel": 0,
       "martialProficency": 0,
@@ -83,7 +83,12 @@
       "willpower": 0,
       "shieldBlock": 0
     },
-    "resistances": [],
+    "resistances": [
+      {
+        "damageType": "Cosmic",
+        "value": 5
+      }
+    ],
     "attackBonuses": {
       "meleeMartialAttack": 0,
       "rangedMartialAttack": 0,
@@ -221,7 +226,8 @@
     "npcLevel": 0.25,
     "resistancesString": "cosmic: 5",
     "immunitiesString": "",
-    "statusEffectImmunityString": ""
+    "statusEffectImmunityString": "",
+    "editLock": true
   },
   "prototypeToken": {
     "name": "Riftwalker",
@@ -421,7 +427,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1751041902703,
-    "modifiedTime": 1751922351376,
+    "modifiedTime": 1753734504197,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!ZCfBw0DFqwnGPdQF"

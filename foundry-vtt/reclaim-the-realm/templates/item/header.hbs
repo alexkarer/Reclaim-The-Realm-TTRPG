@@ -51,9 +51,9 @@
       </div>
     {{/if}}
     {{#if (isOneOf5 item.type 'ability' 'classTechnique' 'martialManeuver' 'spell' 'perk')}}
-      <div class="compact-grid grid-4col">
-        <span>{{localize 'RTR.Item.base.FIELDS.tags.label'}}</span>
-        <div class="grid-span-3">
+      <div class="compact-grid grid-3col">
+        <span>{{localize 'RTR.Item.base.FIELDS.tags.label'}}:</span>
+        <div class="grid-span-2">
           {{#each system.tags as |tag key|}}
             <em class="tag-text">{{tag}}</em>
             {{#unless @root.system.editLock}}
@@ -65,8 +65,15 @@
           {{/unless}}
         </div>
 
-        <span style="margin-top: 5px;">{{localize 'RTR.Item.base.FIELDS.requirements.label'}}</span>
-        <input style="margin-top: 5px;" class="compact-input grid-span-3" type='text' name='system.requirements.otherRequirements' {{disabled @root.system.editLock}} value='{{system.requirements.otherRequirements}}' data-dtype='text'/>
+        <span style="margin-top: 8px;" class="{{#unless @root.system.editLock}}rollable{{/unless}}" 
+          {{#unless @root.system.editLock}}{{#if (eq item.type 'perk')}}data-action='editPerkRequirements'{{else}}data-action='editAbilityRequirements'{{/if}}{{/unless}}>
+          {{localize 'RTR.Item.base.FIELDS.requirements.label'}}:
+        </span>
+        <div style="margin-top: 8px;" class="grid-span-2">
+          {{#each (formatRequirements system.requirements) as |req key|}}
+             <em class="requirement-text">{{req}}</em>
+          {{/each}}
+        </div>
       </div>
     {{/if}}
     {{#if (eq item.type 'species')}}

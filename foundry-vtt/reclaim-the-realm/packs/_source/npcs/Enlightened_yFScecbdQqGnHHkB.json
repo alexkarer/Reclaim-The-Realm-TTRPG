@@ -27,7 +27,7 @@
       "movementPenalty": 0
     },
     "levels": {
-      "level": 1,
+      "level": 0.5,
       "martialLevel": 0,
       "spellLevel": 0,
       "martialProficency": 1,
@@ -83,7 +83,12 @@
       "willpower": 0,
       "shieldBlock": 0
     },
-    "resistances": [],
+    "resistances": [
+      {
+        "damageType": "Cosmic",
+        "value": 5
+      }
+    ],
     "attackBonuses": {
       "meleeMartialAttack": 0,
       "rangedMartialAttack": 0,
@@ -221,7 +226,8 @@
     "npcLevel": 0.5,
     "resistancesString": "cosmic: 5;",
     "immunitiesString": "",
-    "statusEffectImmunityString": "resist: frightened, charmed;"
+    "statusEffectImmunityString": "resist: frightened, charmed;",
+    "editLock": true
   },
   "prototypeToken": {
     "name": "Enlightened",
@@ -508,7 +514,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750974341866,
-    "modifiedTime": 1751922633169,
+    "modifiedTime": 1753734593822,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!yFScecbdQqGnHHkB"

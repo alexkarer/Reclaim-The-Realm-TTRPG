@@ -21,7 +21,13 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": ""
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Barbarian",
+      "requiredPerk": "Resiliant",
+      "requiredNotSelectedPerk": ""
     },
     "tags": "Barbarian",
     "editLock": true
@@ -41,7 +47,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749984958977,
-    "modifiedTime": 1753311566892,
+    "modifiedTime": 1753732296380,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!5Qt0G3EQFSfp0rO9"

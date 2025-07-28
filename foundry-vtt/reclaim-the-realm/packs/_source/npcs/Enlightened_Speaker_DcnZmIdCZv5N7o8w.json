@@ -83,7 +83,12 @@
       "willpower": 0,
       "shieldBlock": 0
     },
-    "resistances": [],
+    "resistances": [
+      {
+        "damageType": "Cosmic",
+        "value": 5
+      }
+    ],
     "attackBonuses": {
       "meleeMartialAttack": 0,
       "rangedMartialAttack": 0,
@@ -221,7 +226,8 @@
     "npcLevel": 1,
     "resistancesString": "cosmic: 5",
     "immunitiesString": "",
-    "statusEffectImmunityString": "resist: frightened, charmed;"
+    "statusEffectImmunityString": "resist: frightened, charmed;",
+    "editLock": true
   },
   "prototypeToken": {
     "name": "Enlightened Speaker",
@@ -565,7 +571,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750976278063,
-    "modifiedTime": 1751922596484,
+    "modifiedTime": 1753734185881,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!actors!DcnZmIdCZv5N7o8w"

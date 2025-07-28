@@ -26,7 +26,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       unlockEdit: this._onUnlockEdit,
       lockEdit: this._onLockEdit,
       addTag: this._onAddTag,
-      deleteTag: this._onDeleteTag
+      deleteTag: this._onDeleteTag,
+      editPerkRequirements: this._onEditPerkRequirements,
+      editAbilityRequirements: this._onEditAbilityRequirements,
     },
     form: {
       submitOnChange: true,
@@ -414,6 +416,151 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
           "system.tags": foundry.utils.deepClone(this.document.system.tags.filter(t => t !== tag))
       };
       this.document.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Edit Perk Requirements
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onEditPerkRequirements(event, target) {
+      event.preventDefault();
+      const result = await api.DialogV2.input({
+          rejectClose: false,
+          modal: true,
+          classes: ['reclaim-the-realm'],
+          content: `
+          <div class="compact-grid grid-2col">
+            <h6 style="margin-top: 0px;" class="grid-span-2">Level Requirement</h6>
+            <label for="minlevel" class="compact-input">Minimum LEVEL</label><input type="number" name="minlevel" class="compact-input" id="minlevel" value="${this.document.system.requirements.minimumLevel}">
+            <label for="minmartiallevel" class="compact-input">Minimum MARTIAL LEVEL</label><input type="number" name="minmartiallevel" class="compact-input" id="minmartiallevel" value="${this.document.system.requirements.minimumMartialLevel}">
+            <label for="minspelllevel" class="compact-input">Minimum SPELL LEVEL</label><input type="number" name="minspelllevel" class="compact-input" id="minspelllevel" value="${this.document.system.requirements.minimumSpellLevel}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Attribute Requirements</h6>
+            <label for="minstr" class="compact-input">Minimum STR</label><input type="number" class="compact-input" name="minstr" id="minstr" value="${this.document.system.requirements.minimumStr}">
+            <label for="minagi" class="compact-input">Minimum AGI</label><input type="number" class="compact-input" name="minagi" id="minagi" value="${this.document.system.requirements.minimumAgi}">
+            <label for="mincon" class="compact-input">Minimum CON</label><input type="number" class="compact-input" name="mincon" id="mincon" value="${this.document.system.requirements.minimumCon}">
+            <label for="minint" class="compact-input">Minimum INT</label><input type="number" class="compact-input" name="minint" id="minint" value="${this.document.system.requirements.minimumInt}">
+            <label for="minspi" class="compact-input">Minimum SPI</label><input type="number" class="compact-input" name="minspi" id="minspi" value="${this.document.system.requirements.minimumSpi}">
+            <label for="minper" class="compact-input">Minimum PER</label><input type="number" class="compact-input" name="minper" id="minper" value="${this.document.system.requirements.minimumPer}">
+            <label for="mincha" class="compact-input">Minimum CHA</label><input type="number" class="compact-input" name="mincha" id="mincha" value="${this.document.system.requirements.minimumCha}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Skill Requirement</h6>
+            <label for="skill" class="compact-input">Skill</label><input type="text" name="skill" class="compact-input" id="skill" value="${this.document.system.requirements.skillRankRequirement.skill ?? ''}">
+            <label for="skillrank" class="compact-input">Skill Rank</label><input type="number" name="skillrank" class="compact-input" id="skillrank" value="${this.document.system.requirements.skillRankRequirement.rank}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Class and Perk Requirement</h6>
+            <label for="requiredClass" class="compact-input">Required Class</label><input type="text" name="requiredClass" class="compact-input" id="requiredClass" value="${this.document.system.requirements.requiredClass ?? ''}">
+            <label for="requiredPerk" class="compact-input">Required Perk</label><input type="text" name="requiredPerk" class="compact-input" id="requiredPerk" value="${this.document.system.requirements.requiredPerk ?? ''}">
+            <label for="requiredNotSelectedPerk" class="compact-input">Required Not Selected Perk</label><input type="text" name="requiredNotSelectedPerk" class="compact-input" id="requiredNotSelectedPerk" value="${this.document.system.requirements.requiredNotSelectedPerk ?? ''}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Other Requirements</h6>
+            <input class="grid-span-2 compact-input" type="text" name="otherRequirements" id="otherRequirements" value="${this.document.system.requirements.otherRequirements ?? ''}">
+          </div>
+          `,
+          window: { title: "Edit Perk Requirements"},
+          ok: { label: "Confirm" }
+      });
+      if (!result) {
+          return;
+      }
+      let updatePayload = {};
+      if (result.minlevel) {
+        updatePayload['system.requirements.minimumLevel'] = parseInt(result.minlevel);
+      } else {
+        updatePayload['system.requirements.minimumLevel'] = 0;
+      }
+      if (result.minmartiallevel) {
+        updatePayload['system.requirements.minimumMartialLevel'] = parseInt(result.minmartiallevel);
+      } else {
+        updatePayload['system.requirements.minimumMartialLevel'] = 0;
+      }
+      if (result.minspelllevel) {
+        updatePayload['system.requirements.minimumSpellLevel'] = parseInt(result.minspelllevel);
+      } else {
+        updatePayload['system.requirements.minimumSpellLevel'] = 0;
+      }
+      if (result.minstr) {
+        updatePayload['system.requirements.minimumStr'] = parseInt(result.minstr);
+      } else {
+        updatePayload['system.requirements.minimumStr'] = 0;
+      }
+      if (result.minagi) {
+        updatePayload['system.requirements.minimumAgi'] = parseInt(result.minagi);
+      } else {
+        updatePayload['system.requirements.minimumAgi'] = 0;
+      }
+      if (result.mincon) {
+        updatePayload['system.requirements.minimumCon'] = parseInt(result.mincon);
+      } else {
+        updatePayload['system.requirements.minimumCon'] = 0;
+      }
+      if (result.minint) {
+        updatePayload['system.requirements.minimumInt'] = parseInt(result.minint);
+      } else {
+        updatePayload['system.requirements.minimumInt'] = 0;
+      }
+      if (result.minspi) {
+        updatePayload['system.requirements.minimumSpi'] = parseInt(result.minspi);
+      } else {
+        updatePayload['system.requirements.minimumSpi'] = 0;
+      }
+      if (result.minper) {
+        updatePayload['system.requirements.minimumPer'] = parseInt(result.minper);
+      } else {
+        updatePayload['system.requirements.minimumPer'] = 0;
+      }
+      if (result.mincha) {
+        updatePayload['system.requirements.minimumCha'] = parseInt(result.mincha);
+      } else {
+        updatePayload['system.requirements.minimumCha'] = 0;
+      }
+      if (result.skill && result.skill.trim() !== '') {
+        updatePayload['system.requirements.skillRankRequirement.skill'] = result.skill;
+      } else {
+        updatePayload['system.requirements.skillRankRequirement.skill'] = '';
+      }
+      if (result.skillrank) {
+        updatePayload['system.requirements.skillRankRequirement.rank'] = parseInt(result.skillrank);
+      } else {
+        updatePayload['system.requirements.skillRankRequirement.rank'] = 0;
+      }
+      if (result.requiredClass && result.requiredClass.trim() !== '') {
+        updatePayload['system.requirements.requiredClass'] = result.requiredClass;
+      } else {
+        updatePayload['system.requirements.requiredClass'] = '';
+      }
+      if (result.requiredPerk && result.requiredPerk.trim() !== '') {
+        console.log('Setting requiredPerk', result.requiredPerk);
+        updatePayload['system.requirements.requiredPerk'] = result.requiredPerk;
+      } else {
+        updatePayload['system.requirements.requiredPerk'] = '';
+      }
+      if (result.requiredNotSelectedPerk && result.requiredNotSelectedPerk.trim() !== '') {
+        updatePayload['system.requirements.requiredNotSelectedPerk'] = result.requiredNotSelectedPerk;
+      } else {
+        updatePayload['system.requirements.requiredNotSelectedPerk'] = '';
+      }
+      if (result.otherRequirements && result.otherRequirements.trim() !== '') {
+        updatePayload['system.requirements.otherRequirements'] = result.otherRequirements;
+      } else {
+        updatePayload['system.requirements.otherRequirements'] = '';
+      }
+
+      this.document.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Edit Abiltiy Requirements
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onEditAbilityRequirements(event, target) {
+      event.preventDefault();
   }
 
   /** Helper Functions */

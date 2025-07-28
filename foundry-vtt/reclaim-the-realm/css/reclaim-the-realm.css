@@ -693,6 +693,7 @@
 .reclaim-the-realm .species-text {
   font-size: 1rem;
   font-weight: bold;
+  flex-grow: 5;
 }
 .reclaim-the-realm .attribute-points {
   text-align: center;
@@ -736,4 +737,17 @@
 .reclaim-the-realm .tag-text {
   flex-grow: 5;
   margin-right: 3px;
+  background-color: #302831;
+  padding: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 5px;
+}
+.reclaim-the-realm .requirement-text {
+  margin-right: 3px;
+  background-color: #302831;
+  padding: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 5px;
 }

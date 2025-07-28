@@ -21,9 +21,17 @@
       "skillRankRequirements": [],
       "requiredPerks": [],
       "requiredNotSelectedPerks": [],
-      "otherRequirements": "5 Ranks in the Medicine Skill"
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": "Medicine",
+        "rank": 5
+      },
+      "requiredClass": "",
+      "requiredPerk": "",
+      "requiredNotSelectedPerk": ""
     },
-    "tags": "Skill"
+    "tags": "Skill",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -40,8 +48,8 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1749987847049,
-    "modifiedTime": 1750421019526,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1753733059715,
+    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!bVrn5n7R3wi6r3Tu"
 }
