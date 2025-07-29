@@ -35,7 +35,6 @@ export function registerHandlebarsHelpers() {
         return x !== undefined;
     });
 
-
     Handlebars.registerHelper('isOneOf5', function (match, arg1, arg2, arg3, arg4, arg5) {
         return match === arg1 || match === arg2 || match === arg3 || match === arg4 || match === arg5;
     });
@@ -130,5 +129,34 @@ export function registerHandlebarsHelpers() {
         }
 
         return requirementsText;
+    });
+
+    Handlebars.registerHelper('formatAbilityCost', function (abilityCost) {
+        let costText = [];
+        if (abilityCost.isFree) {
+            costText.push(`FREE`);
+        }
+        if ((abilityCost.apCost > 0 || abilityCost.mpCost === 0) && !abilityCost.isFree) {
+            costText.push(`${abilityCost.apCost} AP`);
+        } else {}
+        if (abilityCost.mpCost > 0) {
+            costText.push(`${abilityCost.mpCost} MP`);
+        }
+        if (abilityCost.arcanaCost > 0) {
+            costText.push(`${abilityCost.arcanaCost} ARCANA`);
+        }
+        if (abilityCost.staminaCost > 0) {
+            costText.push(`${abilityCost.staminaCost} STAMINA`);
+        }
+        if (abilityCost.classResourceName && abilityCost.classResourceCost > 0) {
+            costText.push(`${abilityCost.classResourceCost} ${abilityCost.classResourceName}`);
+        }
+        if (abilityCost.otherResourceCost && abilityCost.otherResourceCost.trim() !== '') {
+            costText.push(abilityCost.otherResourceCost);
+        }
+        if (costText.length === 0) {
+            return ['No Ability Cost Defined'];
+        }
+        return costText;
     });
 }

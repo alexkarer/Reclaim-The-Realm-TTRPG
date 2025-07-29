@@ -1,13 +1,15 @@
 ### Immidiate TODOS
 
 Before Ability Actions, data needs to be cleaned up in the Abilities (also do perks immediatly as well)
-- Requirements of Class Techniques and Core Abilities still need to be proper set
-- Usage Cost still needs to be put in proper structure.
+- Requirements and Usage Cost of Class Techniques and Core Abilities still need to be proper set
+- Usage Cost also missing for Martial Maneuvers
+- For Usage Cost, Aether Dice are still a bit wonky, maybe save different types as individual entires.
 
 Implement the Ability Actions:
   - when ability is used, subtract cost, then do first action
   - then in the chatmessage of the first action there should be continue buttons to go to the next action.
-  
+  - should be able to be used with macros
+
 After ACtions are Implemented:
   - Add remaining spells
 

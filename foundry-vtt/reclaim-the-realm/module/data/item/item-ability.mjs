@@ -43,15 +43,14 @@ export default class RtRAbility extends RtRItemBase {
     });
 
     schema.usageCost = new fields.SchemaField({
-      rawStringCost: new fields.StringField(),
+      isFree: new fields.BooleanField({ initial: false, required: true, nullable: false }),
       apCost: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       mpCost: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      isFree: new fields.BooleanField({ initial: false, required: true, nullable: false }),
       arcanaCost: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
       staminaCost: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      classResourceName: new fields.StringField({ blank: true, choices: [...Object.keys(CONFIG.RTR.classResources), ''] }),
       classResourceCost: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-      classResourceName: new fields.StringField({ blank: true, choices: Object.keys(CONFIG.RTR.classResources) }),
-      otherResourceCost: new fields.StringField()
+      otherResourceCost: new fields.StringField({initial: '', blank: true})
     });
 
     schema.range = new fields.StringField();

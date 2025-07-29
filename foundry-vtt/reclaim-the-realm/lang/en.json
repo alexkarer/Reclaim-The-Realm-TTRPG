@@ -91,6 +91,15 @@
       "Tactical": "Tactical",
       "Weapon": "Weapon"
     },
+    "AbilityDurationTypes": {
+      "Instant": "INSTANT",
+      "Round": "ROUND",
+      "Rounds": "ROUNDS",
+      "Minute": "Minute",
+      "Minutes": "Minutes",
+      "Hour": "Hour",
+      "Hours": "Hours"
+    },
     "SheetLabels": {
       "Actor": "RtR Actor Sheet",
       "Item": "RtR Item Sheet"

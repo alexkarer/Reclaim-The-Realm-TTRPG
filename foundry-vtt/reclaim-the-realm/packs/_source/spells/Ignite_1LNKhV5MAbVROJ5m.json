@@ -28,13 +28,14 @@
       "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
-      "apCost": 0,
+      "apCost": 1,
       "mpCost": 0,
       "isFree": false,
-      "arcanaCost": 0,
+      "arcanaCost": 1,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "1 AP, 1 ARCANA"
+      "otherResourceCost": "",
+      "rawStringCost": "1 AP, 1 ARCANA",
+      "classResourceName": ""
     },
     "spellDifficulty": 6,
     "roll": {
@@ -63,7 +64,7 @@
     "coreVersion": "13.345",
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
-    "modifiedTime": 1753736734437,
+    "modifiedTime": 1753827736366,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "sort": 0,

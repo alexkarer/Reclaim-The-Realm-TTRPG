@@ -211,7 +211,11 @@
             <img class="rollable" data-action='viewDoc' src='{{item.img}}' title='{{item.name}}' width='24' height='24'/>
           </td>
           <td style="max-width: 80px;" class="rollable" data-action='viewDoc'>{{item.name}}</td>
-          <td style="max-width: 50px;" class="rollable" data-action='viewDoc'>{{item.system.usageCost.rawStringCost}}</td>
+          <td style="max-width: 50px;" class="rollable" data-action='viewDoc'>
+            {{#each (formatAbilityCost item.system.usageCost) as |cost key|}}
+              <span>{{cost}}</span>
+            {{/each}}
+          </td>
           <td style="max-width: 200px;" class="rollable" data-action='viewDoc'>{{item.system.summary}}</td>
           <td>
             <img class='rollable-image' data-roll-type='item' data-action='roll' src='/systems/reclaim-the-realm/assets/icons/actor/rolling-dices.svg' width='24' height='24'/>

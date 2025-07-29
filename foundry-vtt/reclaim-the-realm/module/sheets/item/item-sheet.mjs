@@ -29,6 +29,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       deleteTag: this._onDeleteTag,
       editPerkRequirements: this._onEditPerkRequirements,
       editAbilityRequirements: this._onEditAbilityRequirements,
+      editUsageCost: this._onEditUsageCost,
     },
     form: {
       submitOnChange: true,
@@ -543,6 +544,73 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         updatePayload['system.requirements.requiredMartialManeuverType'] = result.martialmaneuvertype;
       } else {
         updatePayload['system.requirements.requiredMartialManeuverType'] = '';
+      }
+
+      this.document.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Edit Ability Usage Cost
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onEditUsageCost(event, target) {
+      event.preventDefault();
+      const result = await api.DialogV2.input({
+          rejectClose: false,
+          modal: true,
+          classes: ['reclaim-the-realm'],
+          content: `
+          <div class="compact-grid grid-2col">
+            <label for="isfree" class="compact-input">Free</label><input type="checkbox" name="isfree" class="compact-input" id="isfree" value="${this.document.system.usageCost.isFree}">
+            <label for="apcost" class="compact-input">AP Cost</label><input type="number" name="apcost" class="compact-input" id="apcost" value="${this.document.system.usageCost.apCost}">
+            <label for="mpcost" class="compact-input">MP Cost</label><input type="number" name="mpcost" class="compact-input" id="mpcost" value="${this.document.system.usageCost.mpCost}">
+            <label for="arcanacost" class="compact-input">ARCANA Cost</label><input type="number" name="arcanacost" class="compact-input" id="arcanacost" value="${this.document.system.usageCost.arcanaCost}">
+            <label for="staminacost" class="compact-input">STAMINA Cost</label><input type="number" name="staminacost" class="compact-input" id="staminacost" value="${this.document.system.usageCost.staminaCost}">
+            <label for="classresourcename" class="compact-input">Class Resource</label><input type="text" name="classresourcename" class="compact-input" id="classresourcename" value="${this.document.system.usageCost.classResourceName  ?? ''}">
+            <label for="classresourcecost" class="compact-input">Class Resource Cost</label><input type="number" name="classresourcecost" class="compact-input" id="classresourcecost" value="${this.document.system.usageCost.classResourceCost}">
+            <label for="other" class="compact-input">Other</label><input type="text" name="other" class="compact-input" id="other" value="${this.document.system.usageCost.otherResourceCost}">
+          </div>
+          `,
+          window: { title: "Edit Ability Usage Cost"},
+          ok: { label: "Confirm" }
+      });
+      if (!result) {
+          return;
+      }
+      const updatePayload = {};
+      if (result.isfree) {
+        updatePayload['system.usageCost.isFree'] = true;
+      } else {
+        updatePayload['system.usageCost.isFree'] = false;
+      } if (result.apcost) {
+        updatePayload['system.usageCost.apCost'] = parseInt(result.apcost);
+      } else {
+        updatePayload['system.usageCost.apCost'] = 0;
+      } if (result.mpcost) {
+        updatePayload['system.usageCost.mpCost'] = parseInt(result.mpcost);
+      } else {
+        updatePayload['system.usageCost.mpCost'] = 0;
+      } if (result.arcanacost) {
+        updatePayload['system.usageCost.arcanaCost'] = parseInt(result.arcanacost);
+      } else {
+        updatePayload['system.usageCost.arcanaCost'] = 0;
+      } if (result.staminacost) {
+        updatePayload['system.usageCost.staminaCost'] = parseInt(result.staminacost);
+      } else {
+        updatePayload['system.usageCost.staminaCost'] = 0;
+      } if (result.classresourcename && result.classresourcename.trim() !== '' && result.classresourcecost) {
+        updatePayload['system.usageCost.classResourceName'] = result.classresourcename;
+        updatePayload['system.usageCost.classResourceCost'] = parseInt(result.classresourcecost);
+      } else {
+        updatePayload['system.usageCost.classResourceName'] = '';
+        updatePayload['system.usageCost.classResourceCost'] = 0;
+      } if (result.other && result.other.trim() !== '') {
+        updatePayload['system.usageCost.otherResourceCost'] = result.other;
+      } else {
+        updatePayload['system.usageCost.otherResourceCost'] = '';
       }
 
       this.document.update(updatePayload).then(v => this.render());

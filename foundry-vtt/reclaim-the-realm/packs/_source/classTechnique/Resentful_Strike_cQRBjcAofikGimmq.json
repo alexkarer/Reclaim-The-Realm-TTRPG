@@ -23,17 +23,20 @@
     "usageCost": {
       "apCost": 0,
       "mpCost": 0,
-      "isFree": false,
+      "isFree": true,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "FREE, 1-3 Rage"
+      "otherResourceCost": "",
+      "rawStringCost": "FREE, 1-3 Rage",
+      "classResourceName": "rage",
+      "classResourceCost": 1
     },
     "tags": "Class Technique (Barbarian)",
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": "(1+floor(@level/6))d6[physical]"
+    "formula": "(1+floor(@level/6))d6[physical]",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -50,7 +53,7 @@
     "systemId": "reclaim-the-realm",
     "systemVersion": "2.0.0",
     "createdTime": 1750111941522,
-    "modifiedTime": 1750112091111,
+    "modifiedTime": 1753828009371,
     "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
   },
   "_key": "!items!cQRBjcAofikGimmq"

@@ -112,6 +112,13 @@ RTR.martialManeuverTypes = {
   weapon: "RTR.MartialManeuverTypes.Weapon"
 }
 
+RTR.abilityDurationTypes = {
+  instant: "RTR.AbilityDurationTypes.Instant",
+  round: "RTR.AbilityDurationTypes.Round",
+  minute: "RTR.AbilityDurationTypes.Minute",
+  hour: "RTR.AbilityDurationTypes.Hour",
+}
+
 RTR.statusEffects = {
   // needed for foundry to mark combatants as defeated
   dead: {
