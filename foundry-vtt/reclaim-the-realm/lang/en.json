@@ -91,15 +91,6 @@
       "Tactical": "Tactical",
       "Weapon": "Weapon"
     },
-    "AbilityDurationTypes": {
-      "Instant": "INSTANT",
-      "Round": "ROUND",
-      "Rounds": "ROUNDS",
-      "Minute": "Minute",
-      "Minutes": "Minutes",
-      "Hour": "Hour",
-      "Hours": "Hours"
-    },
     "SheetLabels": {
       "Actor": "RtR Actor Sheet",
       "Item": "RtR Item Sheet"
@@ -183,7 +174,6 @@
         "Ability": "Ability",
         "ClassTechnique": "Class Technique",
         "MartialManeuver": "Martial Maneuver",
-        "Spell": "Spell",
         "Perk": "Perk",
         "Species": "Species",
         "ClassCoreValues": "Class Core Values",
@@ -230,7 +220,17 @@
           "range": {"label": "Range"},
           "targets": {"label": "Target(s)"},
           "duration": {"label": "Duration"},
+          "actions": { "label": "Actions" },
           "formula": { "label": "Custom Roll Formula" }
+        },
+        "AbilityDurationTypes": {
+          "Instant": "INSTANT",
+          "Round": "ROUND",
+          "Rounds": "ROUNDS",
+          "Minute": "Minute",
+          "Minutes": "Minutes",
+          "Hour": "Hour",
+          "Hours": "Hours"
         }
       },
       "ClassTechnique": {

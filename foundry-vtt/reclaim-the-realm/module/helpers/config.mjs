@@ -113,10 +113,45 @@ RTR.martialManeuverTypes = {
 }
 
 RTR.abilityDurationTypes = {
-  instant: "RTR.AbilityDurationTypes.Instant",
-  round: "RTR.AbilityDurationTypes.Round",
-  minute: "RTR.AbilityDurationTypes.Minute",
-  hour: "RTR.AbilityDurationTypes.Hour",
+  round: "RTR.Ability.AbilityDurationTypes.Round",
+  minute: "RTR.Ability.AbilityDurationTypes.Minute",
+  hour: "RTR.Ability.AbilityDurationTypes.Hour",
+}
+
+RTR.abilityTargetTypes = {
+  single: 'RTR.Ability.AbilityTargetTypes.Single',
+  cone: 'RTR.Ability.AbilityTargetTypes.Cone',
+  line: 'RTR.Ability.AbilityTargetTypes.Line',
+  sphere: 'RTR.Ability.AbilityTargetTypes.Sphere',
+}
+
+RTR.abilityActionType = {
+  meleeMartialAttack: 'RTR.Ability.AbilityActionType.MeleeMartialAttack',
+  meleeSpellAttack: 'RTR.Ability.AbilityActionType.MeleeSpellAttack',
+  rangedMartialAttack: 'RTR.Ability.AbilityActionType.RangedartialAttack',
+  rangedSpellAttack: 'RTR.Ability.AbilityActionType.RangedSpellAttack',
+  martialTest: 'RTR.Ability.AbilityActionType.MartialTest',
+  spellTest: 'RTR.Ability.AbilityActionType.SpellTest',
+}
+
+RTR.abilityResultCondition = {
+  onSuccess: 'RTR.Ability.AbilityResultCondition.OnSuccess',
+  onFailure: 'RTR.Ability.AbilityResultCondition.OnFailure',
+  onHit: 'RTR.Ability.AbilityResultCondition.OnHit',
+}
+
+RTR.abilityResultType = {
+  damage: 'RTR.Ability.abilityResultType.Damage',
+  statusEffect: 'RTR.Ability.abilityResultType.StatusEffect',
+  damageAndStatusEffect: 'RTR.Ability.abilityResultType.DamageAndStatusEffect',
+  heal: 'RTR.Ability.abilityResultType.Heal',
+}
+
+RTR.abilityDamageCalculationMethod = {
+  lightMartialDamage: 'RTR.Ability.AbilityDamageCalculationMethod.LightMartialDamage',
+  mediumMartialDamage: 'RTR.Ability.AbilityDamageCalculationMethod.MediumMartialDamage',
+  heavyMartialDamage: 'RTR.Ability.AbilityDamageCalculationMethod.HeavyMartialDamage',
+  custom: 'RTR.Ability.AbilityDamageCalculationMethod.Custom',
 }
 
 RTR.statusEffects = {

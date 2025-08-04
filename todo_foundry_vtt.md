@@ -86,7 +86,6 @@ Separate Type that is bascically like NPCS but roll everything
 
 ###  Abilities
 
-- Add better Data structure for Cost and Tags
 - add possiblity to properly modify cost, tags, requirements
 - Automatic checking of requirements
 - Allow for adding custom actions
@@ -104,6 +103,8 @@ Allow Macro (Hotbar) usage of abilities
 Extend Spell Cast functionality to support upcasting.
 
 Hide certain abilities that can't be used (example, silennced)
+
+Add posiblity to add additional condition types for action result (e.g. target creature type)
 
 ### Perks
 

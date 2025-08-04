@@ -1,6 +1,10 @@
 {{! Ability Tab }}
 <section class='tab {{tab.cssClass}}' data-group='primary' data-tab='ability'>
     <div class="compact-grid grid-3col">
+        {{#if (eq item.type 'spell')}}
+            <span>{{localize 'RTR.Item.Spell.FIELDS.components.label'}}</span>
+            <input class="compact-input grid-span-2" type='text' name='system.components' {{disabled @root.system.editLock}} value='{{system.components}}'/>
+        {{/if}}
         <span class="{{#unless @root.system.editLock}}rollable{{/unless}}" 
             {{#unless @root.system.editLock}} data-action='editUsageCost'{{/unless}}>
             {{localize 'RTR.Item.Ability.FIELDS.usageCost.label'}}
@@ -12,18 +16,72 @@
         </div>
 
         <span>{{localize 'RTR.Item.Ability.FIELDS.range.label'}}</span>
-        <input class="compact-input grid-span-2" type='text' name='system.range' value='{{system.range}}' {{disabled @root.system.editLock}} data-dtype='text'/>
+        <input class="compact-input grid-span-2" type='text' name='system.range' value='{{system.range}}' {{disabled @root.system.editLock}} />
 
         <span>{{localize 'RTR.Item.Ability.FIELDS.targets.label'}}</span>
-        <input class="compact-input grid-span-2" type='text' name='system.targets' value='{{system.targets}}' {{disabled @root.system.editLock}} data-dtype='text'/>
+        <input class="compact-input grid-span-2" type='text' name='system.targets' value='{{system.targets}}' {{disabled @root.system.editLock}} />
 
         <span>{{localize 'RTR.Item.Ability.FIELDS.duration.label'}}</span>
-        <input class="compact-input grid-span-2" type='text' name='system.duration' value='{{system.duration}}' {{disabled @root.system.editLock}} data-dtype='text'/>
+        <input class="compact-input grid-span-2" type='text' name='system.duration' value='{{system.duration}}' {{disabled @root.system.editLock}} />
 
         <span>{{localize 'RTR.Item.Ability.FIELDS.formula.label'}}</span>
-        <input class="compact-input grid-span-2" type='text' name='system.formula' value='{{system.formula}}' {{disabled @root.system.editLock}} data-dtype='text'/>
+        <input class="compact-input grid-span-2" type='text' name='system.formula' value='{{system.formula}}' {{disabled @root.system.editLock}} />
+
+        {{#if (eq item.type 'spell')}}
+            <span>{{localize 'RTR.Item.Spell.FIELDS.spellDifficulty.label'}}</span>
+            <input class="compact-input grid-span-2" type='number' name='system.spellDifficulty' {{disabled @root.system.editLock}} value='{{system.spellDifficulty}}'/>
+        {{/if}}
     </div>
-    <h6 style="margin-top: 5px;">Description</h6>
+    <h6 style="margin-top: 5px;">{{localize 'RTR.Item.Ability.FIELDS.actions.label'}}</h6>
+    <div class="flexcol">
+        {{#each system.actions as |action key|}}
+            <div class="grid grid-3col flex-group-center">
+                {{#if (or (eq action.actionType 'martialTest') (eq action.actionType 'spellTest'))}}
+                    <span>{{localize action.attribute}} {{localize action.actionType}}</span>
+                    <span>{{localize 'vs.'}}</span>
+                    <span>{{localize action.targetingSave}}</span>
+                {{else}}
+                    <span>{{localize action.actionType}}</span>
+                    <span>{{localize 'vs.'}}</span>
+                    <span>{{localize action.targetingSave}}</span>
+                {{/if}}
+                
+                {{#unless @root.system.editLock}}
+                    <input type="button" value="{{localize 'Add Result'}}" class="grid-span-3 compact-input add-btn" data-action='addResult' data-actionidx="{{key}}"/>
+                {{/unless}}
+                {{#each action.results as |result key|}}
+                    <strong>{{localize result.condition}}:</strong>
+                    {{#if (or (eq result.type 'damage') (eq result.type 'damageAndStatusEffect'))}}
+                        {{#if (eq result.damageCalculationMethod 'custom')}}
+                            <span>{{localize result.type}}: {{ result.damageFormula }}</span>
+                        {{else}}
+                            <span>{{localize result.type}}: {{localize result.damageCalculationMethod }}</span>
+                        {{/if}}
+                    {{/if}}
+                    {{#if (or (eq result.type 'statusEffect') (eq result.type 'damageAndStatusEffect'))}}
+                        <span>{{localize result.statusEffectToApply}} {{result.statusEffectDuration}} {{localize result.statusEffectDurationType}}</span>
+                    {{/if}}
+                    {{#if (eq result.type 'heal')}}
+                        <span>{{localize result.type}}: {{ result.healFormula }}</span>
+                    {{/if}}
+
+                    {{#unless (eq result.type 'damageAndStatusEffect')}}
+                        <span>{{action.onSuccess.additionalEffects}}</span>
+                    {{/unless}}
+                    {{#unless @root.system.editLock}}
+                        <input type="button" value="{{localize 'Delete Result'}}" class="grid-span-3 compact-input delete-btn" data-action='deleteResult' data-resultidx='{{key}}'/>
+                    {{/unless}}
+                {{/each}}
+
+                {{#unless @root.system.editLock}}
+                    <input type="button" value="{{localize 'Delete Action'}}" class="grid-span-3 compact-input delete-btn" data-action='deleteAction' data-actionidx='{{key}}'/>
+                {{/unless}}
+            </div>
+        {{/each}}
+        {{#unless @root.system.editLock}}
+            <input type="button" value="{{localize 'Add Action'}}" class="compact-input add-btn" data-action='addAction'/>
+        {{/unless}}
+    </div>
     {{! Editors must receive enriched text data from getData to properly handle rolls, UUID links, etc. }}
     {{#if editable}}
     <prose-mirror style="min-height: 200px;" name="system.description" data-document-u-u-i-d="{{item.uuid}}"

@@ -30,6 +30,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       editPerkRequirements: this._onEditPerkRequirements,
       editAbilityRequirements: this._onEditAbilityRequirements,
       editUsageCost: this._onEditUsageCost,
+      addAction: this._onAddAction,
+      deleteAction: this._deleteAction,
     },
     form: {
       submitOnChange: true,
@@ -60,9 +62,6 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     },
     ability: {
       template: 'systems/reclaim-the-realm/templates/item/ability.hbs',
-    },
-    spell: {
-      template: 'systems/reclaim-the-realm/templates/item/spell.hbs',
     },
     species: {
       template: 'systems/reclaim-the-realm/templates/item/species.hbs',
@@ -97,10 +96,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       case 'npcAbility':
       case 'classTechnique':
       case 'martialManeuver':
-        options.parts.push('ability');
-        break;
       case 'spell':
-        options.parts.push('spell');
+        options.parts.push('ability');
         break;
       case 'species':
         options.parts.push('species');
@@ -184,10 +181,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
     const tabGroup = 'primary';
     // Default tab for first time it's rendered this session
     if (!this.tabGroups[tabGroup]) {
-      if (this.document.type === 'ability' || this.document.type === 'martialManeuver' || this.document.type === 'classTechnique' || this.document.type === 'npcAbility') {
+      if (this.document.type === 'ability' || this.document.type === 'martialManeuver' || this.document.type === 'classTechnique' || this.document.type === 'npcAbility' || this.document.type === 'spell') {
         this.tabGroups[tabGroup] = 'ability';
-      } else if (this.document.type === 'spell') {
-        this.tabGroups[tabGroup] = 'spell';
       } else if (this.document.type === 'perk') {
         this.tabGroups[tabGroup] = 'perk';
       } else if (this.document.type === 'equipment') {
@@ -228,10 +223,6 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         case 'ability':
           tab.id = 'ability';
           tab.label += 'Ability';
-          break;
-        case 'spell':
-          tab.id = 'spell';
-          tab.label += 'Spell';
           break;
         case 'perk':
           tab.id = 'perk';
@@ -612,6 +603,108 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       } else {
         updatePayload['system.usageCost.otherResourceCost'] = '';
       }
+
+      this.document.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Add new Action to Ability
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onAddAction(event, target) {
+      event.preventDefault();
+      const newAction = {
+        actionType: Object.keys(CONFIG.RTR.abilityActionType)[0],
+        targets: Object.keys(CONFIG.RTR.abilityTargetTypes)[0]
+      };
+      const updatePayload = { 
+          "system.actions": [...foundry.utils.deepClone(this.document.system.actions), newAction]
+      };
+
+      this.document.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Delete Action
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onDeleteAction(event, target) {
+      event.preventDefault();
+      console.log(target.dataset);
+      return;
+      const tag = target.dataset.tag;
+      const updatePayload = { 
+          "system.tags": foundry.utils.deepClone(this.document.system.tags.filter(t => t !== tag))
+      };
+      this.document.update(updatePayload).then(v => this.render());
+  }
+
+  /**
+   * Add new Result to Ability Action
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onAddResult(event, target) {
+      event.preventDefault();
+      return;
+
+      const mapToSelectOptions = (options) => options.map(type => `<option value="${type}">${type}</option>`).join();
+
+      const actionTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityActionType));
+      const attributeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.attributes));
+      const targetingSaveSelect = mapToSelectOptions(['STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER']);
+      const targetsSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityTargetTypes));
+      const damageCalculationMethodSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDamageCalculationMethod));
+      const statusEffectSelect = mapToSelectOptions(['', ...Object.keys(CONFIG.RTR.statusEffects)]);
+      const durationSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDurationTypes));
+      const result = await api.DialogV2.input({
+          rejectClose: false,
+          modal: true,
+          classes: ['reclaim-the-realm'],
+          content: `
+          <div class="compact-grid grid-2col">
+            <label for="actiontype" class="compact-input">Action Type</label><select name="actiontype" id="actiontype"  class="compact-input">${actionTypeSelect}</select>
+            <label for="attributeselect" class="compact-input">Relevant Attribute</label><select name="attributeselect" id="attributeselect"  class="compact-input">${attributeSelect}</select>
+            <label for="targetingsave" class="compact-input">Targeting Save</label><select name="targetingsave" id="targetingsave"  class="compact-input">${targetingSaveSelect}</select>
+            <label for="targets" class="compact-input">Target(s)</label><select name="targets" id="targets" class="compact-input">${targetsSelect}</select>
+            <label for="targetaereasize" class="compact-input">Target Area Size</label><input type="number" name="targetaereasize" class="compact-input" id="targetaereasize">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">On hit</h6>
+            <label for="onhitdmgcalcmethod" class="compact-input">Damage Calculation Method</label><select name="onhitdmgcalcmethod" id="onhitdmgcalcmethod" class="compact-input">${damageCalculationMethodSelect}</select>
+            <label for="onhitdmgformula" class="compact-input">Damage Formula</label><input type="text" name="onhitdmgformula" class="compact-input" id="onhitdmgformula">
+            <label for="onhitaddeffects" class="compact-input">Additional Effects</label><input type="text" name="onhitaddeffects" class="compact-input" id="onhitaddeffects">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">On Success</h6>
+            <label for="onsuccessdmgcalcmethod" class="compact-input">Damage Calculation Method</label><select name="onsuccessdmgcalcmethod" id="onsuccessdmgcalcmethod" class="compact-input">${damageCalculationMethodSelect}</select>
+            <label for="onsuccessdmgformula" class="compact-input">Damage Formula</label><input type="text" name="onsuccessdmgformula" class="compact-input" id="onsuccessdmgformula">
+            <label for="onsuccessstatuseffect" class="compact-input">Afflict Status Effect</label><select name="onsuccessstatuseffect" id="onsuccessstatuseffect" class="compact-input">${statusEffectSelect}</select>
+            <label for="onsuccessstatuseffectdurationtype" class="compact-input">Duation Unit</label><select name="onsuccessstatuseffectdurationtype" id="onsuccessstatuseffectdurationtype" class="compact-input">${durationSelect}</select>
+            <label for="onsuccessstatuseffectduration" class="compact-input">Duration</label><input type="number" name="onsuccessstatuseffectduration" class="compact-input" id="onsuccessstatuseffectduration">
+            <label for="onsuccessaddeffects" class="compact-input">Additional Effects</label><input type="text" name="onsuccessaddeffects" class="compact-input" id="onsuccessaddeffects">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">On Failure</h6>
+            <label for="halfdamage" class="compact-input">Half Damage?</label><input type="checkbox" name="halfdamage" class="compact-input" id="halfdamage">
+            <label for="onfailurestatuseffect" class="compact-input">Afflict Status Effect</label><select name="onfailurestatuseffect" id="onfailurestatuseffect" class="compact-input">${statusEffectSelect}</select>
+            <label for="onfailurestatuseffectdurationtype" class="compact-input">Duation Unit</label><select name="onfailurestatuseffectdurationtype" id="onfailurestatuseffectdurationtype" class="compact-input">${durationSelect}</select>
+            <label for="onfailurestatuseffectduration" class="compact-input">Duration</label><input type="number" name="onfailurestatuseffectduration" class="compact-input" id="onfailurestatuseffectduration">
+            <label for="onfailureaddeffects" class="compact-input">Additional Effects</label><input type="text" name="onfailureaddeffects" class="compact-input" id="onfailureaddeffects">
+          </div>
+          `,
+          window: { title: "Add Ability Action"},
+          ok: { label: "Add" }
+      });
+      if (!result) {
+          return;
+      }
+      const updatePayload = {};
 
       this.document.update(updatePayload).then(v => this.render());
   }

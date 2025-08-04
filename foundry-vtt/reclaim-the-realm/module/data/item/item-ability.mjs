@@ -57,6 +57,30 @@ export default class RtRAbility extends RtRItemBase {
     schema.targets = new fields.StringField();
     schema.duration = new fields.StringField();
 
+    schema.actions = new fields.ArrayField(
+      new fields.SchemaField({
+        actionType: new fields.StringField({...requiredStringField, choices: [Object.keys(CONFIG.RTR.abilityActionType)], initial: Object.keys(CONFIG.RTR.abilityActionType)[0]}),
+        attribute: new fields.StringField({choices: Object.keys(CONFIG.RTR.attributes)}), // needed for marital/spell test
+        targetingSave: new fields.StringField({choices: ['STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER']}),
+        targets: new fields.StringField({choices: Object.keys(CONFIG.RTR.abilityTargetTypes)}),
+        targetsAreaSize: new fields.NumberField(),
+        results: new fields.ArrayField(
+          new fields.SchemaField({
+            condition: new fields.StringField({choices: Object.keys(CONFIG.RTR.abilityResultCondition)}),
+            type: new fields.StringField({choices: Object.keys(CONFIG.RTR.abilityResultType)}),
+            damageCalculationMethod: new fields.StringField({choices: Object.keys(CONFIG.RTR.abilityDamageCalculationMethod)}),
+            damageFormula: new fields.StringField(),
+            halfDamage: new fields.BooleanField({initial: false, required: true, nullable: false}),
+            statusEffectToApply: new fields.StringField({choices: [...Object.keys(CONFIG.RTR.statusEffects), '']}),
+            statusEffectDurationType: new fields.StringField({choices: Object.keys(CONFIG.RTR.abilityDurationTypes), initial: Object.keys(CONFIG.RTR.abilityDurationTypes)[0]}),
+            statusEffectDuration: new fields.NumberField(),
+            healFormula: new fields.StringField(),
+            additionalEffects: new fields.StringField()
+          })
+        )
+      })
+    );
+
     // formula that can be used for custom Rolls
     schema.formula = new fields.StringField({ blank: true });
 

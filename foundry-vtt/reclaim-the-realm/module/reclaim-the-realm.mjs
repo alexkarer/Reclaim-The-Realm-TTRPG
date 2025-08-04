@@ -206,6 +206,7 @@ function rollItemMacro(itemUuid) {
     }
 
     // Trigger the item roll
+    // TODO change to the actions thingy
     item.roll();
   });
 }
