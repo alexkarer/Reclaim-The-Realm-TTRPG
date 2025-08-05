@@ -5,49 +5,49 @@ export const RTR = {};
  * @type {Object}
  */
 RTR.attributes = {
-  str: 'RTR.Attribute.Str.long',
-  agi: 'RTR.Attribute.Agi.long',
-  con: 'RTR.Attribute.Con.long',
-  int: 'RTR.Attribute.Int.long',
-  spi: 'RTR.Attribute.Spi.long',
-  per: 'RTR.Attribute.Per.long',
-  cha: 'RTR.Attribute.Cha.long',
+  str: "RTR.Attribute.Str.long",
+  agi: "RTR.Attribute.Agi.long",
+  con: "RTR.Attribute.Con.long",
+  int: "RTR.Attribute.Int.long",
+  spi: "RTR.Attribute.Spi.long",
+  per: "RTR.Attribute.Per.long",
+  cha: "RTR.Attribute.Cha.long",
 };
 
 RTR.attributeAbbreviations = {
-  str: 'RTR.Attribute.Str.abbr',
-  agi: 'RTR.Attribute.Agi.abbr',
-  con: 'RTR.Attribute.Con.abbr',
-  int: 'RTR.Attribute.Int.abbr',
-  spi: 'RTR.Attribute.Spi.abbr',
-  per: 'RTR.Attribute.Per.abbr',
-  cha: 'RTR.Attribute.Cha.abbr',
+  str: "RTR.Attribute.Str.abbr",
+  agi: "RTR.Attribute.Agi.abbr",
+  con: "RTR.Attribute.Con.abbr",
+  int: "RTR.Attribute.Int.abbr",
+  spi: "RTR.Attribute.Spi.abbr",
+  per: "RTR.Attribute.Per.abbr",
+  cha: "RTR.Attribute.Cha.abbr",
 };
 
 RTR.skills = {
-  animalHandling:  'RTR.Skills.AnimalHandling.name',
-  athletics:       'RTR.Skills.Athletics.name',
-  deception:       'RTR.Skills.Deception.name',
-  investigation:   'RTR.Skills.Investigation.name',
-  intimidation:    'RTR.Skills.Intimidation.name',
-  medicine:        'RTR.Skills.Medicine.name',
-  persuasion:      'RTR.Skills.Persuasion.name',
-  awareness:       'RTR.Skills.Awareness.name',
-  stealth:         'RTR.Skills.Stealth.name',
-  survival:        'RTR.Skills.Survival.name',
-  thievery:        'RTR.Skills.Thievery.name',
+  animalHandling:  "RTR.Skills.AnimalHandling.name",
+  athletics:       "RTR.Skills.Athletics.name",
+  deception:       "RTR.Skills.Deception.name",
+  investigation:   "RTR.Skills.Investigation.name",
+  intimidation:    "RTR.Skills.Intimidation.name",
+  medicine:        "RTR.Skills.Medicine.name",
+  persuasion:      "RTR.Skills.Persuasion.name",
+  awareness:       "RTR.Skills.Awareness.name",
+  stealth:         "RTR.Skills.Stealth.name",
+  survival:        "RTR.Skills.Survival.name",
+  thievery:        "RTR.Skills.Thievery.name",
 
-  culture:         'RTR.Skills.Culture.name',
-  geography:       'RTR.Skills.Geography.name',
-  elements:        'RTR.Skills.Elements.name',
-  nature:          'RTR.Skills.Nature.name',
-  supernatural:    'RTR.Skills.Supernatural.name',
+  culture:         "RTR.Skills.Culture.name",
+  geography:       "RTR.Skills.Geography.name",
+  elements:        "RTR.Skills.Elements.name",
+  nature:          "RTR.Skills.Nature.name",
+  supernatural:    "RTR.Skills.Supernatural.name",
 
-  smithTools:      'RTR.Skills.SmithTools.name',
-  alchemyKit:      'RTR.Skills.AlchemyKit.name',
-  jewellersTools:  'RTR.Skills.JewellersTools.name',
-  tailorsSet:      'RTR.Skills.TailorsSet.name',
-  carpentersTools: 'RTR.Skills.CarpentersTools.name',
+  smithTools:      "RTR.Skills.SmithTools.name",
+  alchemyKit:      "RTR.Skills.AlchemyKit.name",
+  jewellersTools:  "RTR.Skills.JewellersTools.name",
+  tailorsSet:      "RTR.Skills.TailorsSet.name",
+  carpentersTools: "RTR.Skills.CarpentersTools.name",
 };
 
 RTR.equipmentTypes = {
@@ -113,45 +113,56 @@ RTR.martialManeuverTypes = {
 }
 
 RTR.abilityDurationTypes = {
-  round: "RTR.Ability.AbilityDurationTypes.Round",
-  minute: "RTR.Ability.AbilityDurationTypes.Minute",
-  hour: "RTR.Ability.AbilityDurationTypes.Hour",
+  round: "RTR.Item.Ability.AbilityDurationTypes.Round",
+  minute: "RTR.Item.Ability.AbilityDurationTypes.Minute",
+  hour: "RTR.Item.Ability.AbilityDurationTypes.Hour",
 }
 
 RTR.abilityTargetTypes = {
-  single: 'RTR.Ability.AbilityTargetTypes.Single',
-  cone: 'RTR.Ability.AbilityTargetTypes.Cone',
-  line: 'RTR.Ability.AbilityTargetTypes.Line',
-  sphere: 'RTR.Ability.AbilityTargetTypes.Sphere',
+  creature: "RTR.Item.Ability.AbilityTargetTypes.Creature",
+  friendlyCreature: "RTR.Item.Ability.AbilityTargetTypes.FriendlyCreature",
+  self: "RTR.Item.Ability.AbilityTargetTypes.Self",
+  cone: "RTR.Item.Ability.AbilityTargetTypes.Cone",
+  line: "RTR.Item.Ability.AbilityTargetTypes.Line",
+  sphere: "RTR.Item.Ability.AbilityTargetTypes.Sphere",
+  special: "RTR.Item.Ability.AbilityTargetTypes.Special",
+}
+
+RTR.abilityRangeType = {
+  unspecified: "RTR.Item.Ability.AbilityRangeType.Unspecified",
+  melee: "RTR.Item.Ability.AbilityRangeType.Melee",
+  weaponRange: "RTR.Item.Ability.AbilityRangeType.WeaponRange",
+  meters: "RTR.Item.Ability.AbilityRangeType.Meters",
 }
 
 RTR.abilityActionType = {
-  meleeMartialAttack: 'RTR.Ability.AbilityActionType.MeleeMartialAttack',
-  meleeSpellAttack: 'RTR.Ability.AbilityActionType.MeleeSpellAttack',
-  rangedMartialAttack: 'RTR.Ability.AbilityActionType.RangedartialAttack',
-  rangedSpellAttack: 'RTR.Ability.AbilityActionType.RangedSpellAttack',
-  martialTest: 'RTR.Ability.AbilityActionType.MartialTest',
-  spellTest: 'RTR.Ability.AbilityActionType.SpellTest',
+  meleeMartialAttack: "RTR.Item.Ability.AbilityActionType.MeleeMartialAttack",
+  meleeSpellAttack: "RTR.Item.Ability.AbilityActionType.MeleeSpellAttack",
+  rangedMartialAttack: "RTR.Item.Ability.AbilityActionType.RangedMartialAttack",
+  rangedSpellAttack: "RTR.Item.Ability.AbilityActionType.RangedSpellAttack",
+  martialTest: "RTR.Item.Ability.AbilityActionType.MartialTest",
+  spellTest: "RTR.Item.Ability.AbilityActionType.SpellTest",
 }
 
 RTR.abilityResultCondition = {
-  onSuccess: 'RTR.Ability.AbilityResultCondition.OnSuccess',
-  onFailure: 'RTR.Ability.AbilityResultCondition.OnFailure',
-  onHit: 'RTR.Ability.AbilityResultCondition.OnHit',
+  always: "RTR.Item.Ability.AbilityResultCondition.Always",
+  onSuccess: "RTR.Item.Ability.AbilityResultCondition.OnSuccess",
+  onFailure: "RTR.Item.Ability.AbilityResultCondition.OnFailure",
+  onHit: "RTR.Item.Ability.AbilityResultCondition.OnHit",
 }
 
 RTR.abilityResultType = {
-  damage: 'RTR.Ability.abilityResultType.Damage',
-  statusEffect: 'RTR.Ability.abilityResultType.StatusEffect',
-  damageAndStatusEffect: 'RTR.Ability.abilityResultType.DamageAndStatusEffect',
-  heal: 'RTR.Ability.abilityResultType.Heal',
+  damage: "RTR.Item.Ability.AbilityResultType.Damage",
+  statusEffect: "RTR.Item.Ability.AbilityResultType.StatusEffect",
+  damageAndStatusEffect: "RTR.Item.Ability.AbilityResultType.DamageAndStatusEffect",
+  heal: "RTR.Item.Ability.AbilityResultType.Heal",
 }
 
 RTR.abilityDamageCalculationMethod = {
-  lightMartialDamage: 'RTR.Ability.AbilityDamageCalculationMethod.LightMartialDamage',
-  mediumMartialDamage: 'RTR.Ability.AbilityDamageCalculationMethod.MediumMartialDamage',
-  heavyMartialDamage: 'RTR.Ability.AbilityDamageCalculationMethod.HeavyMartialDamage',
-  custom: 'RTR.Ability.AbilityDamageCalculationMethod.Custom',
+  lightMartialDamage: "RTR.Item.Ability.AbilityDamageCalculationMethod.LightMartialDamage",
+  mediumMartialDamage: "RTR.Item.Ability.AbilityDamageCalculationMethod.MediumMartialDamage",
+  heavyMartialDamage: "RTR.Item.Ability.AbilityDamageCalculationMethod.HeavyMartialDamage",
+  custom: "Unused",
 }
 
 RTR.statusEffects = {

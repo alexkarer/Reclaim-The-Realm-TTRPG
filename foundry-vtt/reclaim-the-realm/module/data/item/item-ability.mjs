@@ -59,11 +59,13 @@ export default class RtRAbility extends RtRItemBase {
 
     schema.actions = new fields.ArrayField(
       new fields.SchemaField({
-        actionType: new fields.StringField({...requiredStringField, choices: [Object.keys(CONFIG.RTR.abilityActionType)], initial: Object.keys(CONFIG.RTR.abilityActionType)[0]}),
+        actionType: new fields.StringField({...requiredStringField, choices: Object.keys(CONFIG.RTR.abilityActionType), initial: Object.keys(CONFIG.RTR.abilityActionType)[0]}),
         attribute: new fields.StringField({choices: Object.keys(CONFIG.RTR.attributes)}), // needed for marital/spell test
         targetingSave: new fields.StringField({choices: ['STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER']}),
-        targets: new fields.StringField({choices: Object.keys(CONFIG.RTR.abilityTargetTypes)}),
+        targets: new fields.StringField({...requiredStringField, choices: Object.keys(CONFIG.RTR.abilityTargetTypes), initial: Object.keys(CONFIG.RTR.abilityTargetTypes)[0]}),
         targetsAreaSize: new fields.NumberField(),
+        rangeType: new fields.StringField({...requiredStringField, choices: Object.keys(CONFIG.RTR.abilityRangeType), initial: Object.keys(CONFIG.RTR.abilityRangeType)[0]}),
+        range: new fields.NumberField(),
         results: new fields.ArrayField(
           new fields.SchemaField({
             condition: new fields.StringField({choices: Object.keys(CONFIG.RTR.abilityResultCondition)}),
@@ -71,6 +73,7 @@ export default class RtRAbility extends RtRItemBase {
             damageCalculationMethod: new fields.StringField({choices: Object.keys(CONFIG.RTR.abilityDamageCalculationMethod)}),
             damageFormula: new fields.StringField(),
             halfDamage: new fields.BooleanField({initial: false, required: true, nullable: false}),
+            damageType: new fields.StringField({choices: Object.keys(CONFIG.RTR.damageTypes)}),
             statusEffectToApply: new fields.StringField({choices: [...Object.keys(CONFIG.RTR.statusEffects), '']}),
             statusEffectDurationType: new fields.StringField({choices: Object.keys(CONFIG.RTR.abilityDurationTypes), initial: Object.keys(CONFIG.RTR.abilityDurationTypes)[0]}),
             statusEffectDuration: new fields.NumberField(),

@@ -31,7 +31,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       editAbilityRequirements: this._onEditAbilityRequirements,
       editUsageCost: this._onEditUsageCost,
       addAction: this._onAddAction,
-      deleteAction: this._deleteAction,
+      deleteAction: this._onDeleteAction,
+      addResult: this._onAddResult,
     },
     form: {
       submitOnChange: true,
@@ -616,55 +617,13 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onAddAction(event, target) {
       event.preventDefault();
-      const newAction = {
-        actionType: Object.keys(CONFIG.RTR.abilityActionType)[0],
-        targets: Object.keys(CONFIG.RTR.abilityTargetTypes)[0]
-      };
-      const updatePayload = { 
-          "system.actions": [...foundry.utils.deepClone(this.document.system.actions), newAction]
-      };
-
-      this.document.update(updatePayload).then(v => this.render());
-  }
-
-  /**
-   * Delete Action
-   * @this RtRActorSheet
-   * @param {PointerEvent} event   The originating click event
-   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-   * @protected
-   */
-  static async _onDeleteAction(event, target) {
-      event.preventDefault();
-      console.log(target.dataset);
-      return;
-      const tag = target.dataset.tag;
-      const updatePayload = { 
-          "system.tags": foundry.utils.deepClone(this.document.system.tags.filter(t => t !== tag))
-      };
-      this.document.update(updatePayload).then(v => this.render());
-  }
-
-  /**
-   * Add new Result to Ability Action
-   * @this RtRActorSheet
-   * @param {PointerEvent} event   The originating click event
-   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
-   * @protected
-   */
-  static async _onAddResult(event, target) {
-      event.preventDefault();
-      return;
 
       const mapToSelectOptions = (options) => options.map(type => `<option value="${type}">${type}</option>`).join();
-
       const actionTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityActionType));
       const attributeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.attributes));
-      const targetingSaveSelect = mapToSelectOptions(['STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER']);
+      const targetingSaveSelect = mapToSelectOptions(['-', 'STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER']);
       const targetsSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityTargetTypes));
-      const damageCalculationMethodSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDamageCalculationMethod));
-      const statusEffectSelect = mapToSelectOptions(['', ...Object.keys(CONFIG.RTR.statusEffects)]);
-      const durationSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDurationTypes));
+      const rangeTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityRangeType));
       const result = await api.DialogV2.input({
           rejectClose: false,
           modal: true,
@@ -676,37 +635,109 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
             <label for="targetingsave" class="compact-input">Targeting Save</label><select name="targetingsave" id="targetingsave"  class="compact-input">${targetingSaveSelect}</select>
             <label for="targets" class="compact-input">Target(s)</label><select name="targets" id="targets" class="compact-input">${targetsSelect}</select>
             <label for="targetaereasize" class="compact-input">Target Area Size</label><input type="number" name="targetaereasize" class="compact-input" id="targetaereasize">
-
-            <h6 style="margin-top: 6px;" class="grid-span-2">On hit</h6>
-            <label for="onhitdmgcalcmethod" class="compact-input">Damage Calculation Method</label><select name="onhitdmgcalcmethod" id="onhitdmgcalcmethod" class="compact-input">${damageCalculationMethodSelect}</select>
-            <label for="onhitdmgformula" class="compact-input">Damage Formula</label><input type="text" name="onhitdmgformula" class="compact-input" id="onhitdmgformula">
-            <label for="onhitaddeffects" class="compact-input">Additional Effects</label><input type="text" name="onhitaddeffects" class="compact-input" id="onhitaddeffects">
-
-            <h6 style="margin-top: 6px;" class="grid-span-2">On Success</h6>
-            <label for="onsuccessdmgcalcmethod" class="compact-input">Damage Calculation Method</label><select name="onsuccessdmgcalcmethod" id="onsuccessdmgcalcmethod" class="compact-input">${damageCalculationMethodSelect}</select>
-            <label for="onsuccessdmgformula" class="compact-input">Damage Formula</label><input type="text" name="onsuccessdmgformula" class="compact-input" id="onsuccessdmgformula">
-            <label for="onsuccessstatuseffect" class="compact-input">Afflict Status Effect</label><select name="onsuccessstatuseffect" id="onsuccessstatuseffect" class="compact-input">${statusEffectSelect}</select>
-            <label for="onsuccessstatuseffectdurationtype" class="compact-input">Duation Unit</label><select name="onsuccessstatuseffectdurationtype" id="onsuccessstatuseffectdurationtype" class="compact-input">${durationSelect}</select>
-            <label for="onsuccessstatuseffectduration" class="compact-input">Duration</label><input type="number" name="onsuccessstatuseffectduration" class="compact-input" id="onsuccessstatuseffectduration">
-            <label for="onsuccessaddeffects" class="compact-input">Additional Effects</label><input type="text" name="onsuccessaddeffects" class="compact-input" id="onsuccessaddeffects">
-
-            <h6 style="margin-top: 6px;" class="grid-span-2">On Failure</h6>
-            <label for="halfdamage" class="compact-input">Half Damage?</label><input type="checkbox" name="halfdamage" class="compact-input" id="halfdamage">
-            <label for="onfailurestatuseffect" class="compact-input">Afflict Status Effect</label><select name="onfailurestatuseffect" id="onfailurestatuseffect" class="compact-input">${statusEffectSelect}</select>
-            <label for="onfailurestatuseffectdurationtype" class="compact-input">Duation Unit</label><select name="onfailurestatuseffectdurationtype" id="onfailurestatuseffectdurationtype" class="compact-input">${durationSelect}</select>
-            <label for="onfailurestatuseffectduration" class="compact-input">Duration</label><input type="number" name="onfailurestatuseffectduration" class="compact-input" id="onfailurestatuseffectduration">
-            <label for="onfailureaddeffects" class="compact-input">Additional Effects</label><input type="text" name="onfailureaddeffects" class="compact-input" id="onfailureaddeffects">
+            <label for="rangetype" class="compact-input">Range Type</label><select name="rangetype" id="rangetype" class="compact-input">${rangeTypeSelect}</select>
+            <label for="range" class="compact-input">Range</label><input type="number" name="range" class="compact-input" id="range">
           </div>
           `,
-          window: { title: "Add Ability Action"},
+          window: { title: "Add new Ability Action"},
           ok: { label: "Add" }
       });
       if (!result) {
           return;
       }
-      const updatePayload = {};
+      const newActions = foundry.utils.deepClone(this.document.system.actions);
+      newActions.push({
+        actionType: result.actiontype,
+        attribute: result.attributeselect,
+        targetingSave: result.targetingsave === '-' ? undefined : result.targetingsave,
+        targets: result.targets,
+        targetsAreaSize: result.targetaereasize,
+        rangeType: result.rangetype,
+        range: result.range,
+        results: []
+      });
 
-      this.document.update(updatePayload).then(v => this.render());
+      this.document.update({"system.actions": newActions}).then(v => this.render());
+  }
+
+  /**
+   * Delete Action
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onDeleteAction(event, target) {
+      event.preventDefault();
+      const idx = parseInt(target.dataset.actionidx);
+      const actionsCopy = foundry.utils.deepClone(this.document.system.actions);
+      const newActions = [...actionsCopy.slice(0, idx), ...actionsCopy.slice(idx + 1)];
+      this.document.update({"system.actions": newActions}).then(v => this.render());
+  }
+
+  /**
+   * Add new Result to Ability Action
+   * @this RtRActorSheet
+   * @param {PointerEvent} event   The originating click event
+   * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+   * @protected
+   */
+  static async _onAddResult(event, target) {
+      event.preventDefault();
+      const idx = parseInt(target.dataset.actionidx);
+
+      const mapToSelectOptions = (options) => options.map(type => `<option value="${type}">${type}</option>`).join();
+      const conditionSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityResultCondition));
+      const typeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityResultType));
+      const damageCalculationMethodSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDamageCalculationMethod));
+      const damageTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.damageTypes));
+      const statusEffectSelect = mapToSelectOptions(['', ...Object.keys(CONFIG.RTR.statusEffects)]);
+      const durationSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDurationTypes));
+      const result = await api.DialogV2.input({
+          rejectClose: false,
+          modal: true,
+          classes: ['reclaim-the-realm'],
+          content: `
+          <div class="compact-grid grid-2col">
+            <label for="condition" class="compact-input">Condition</label><select name="condition" id="condition" class="compact-input">${conditionSelect}</select>
+            <label for="type" class="compact-input">Type</label><select name="type" id="type" class="compact-input">${typeSelect}</select>
+
+            <label for="dmgcalcmethod" class="compact-input">Damage Calculation Method</label><select name="dmgcalcmethod" id="dmgcalcmethod" class="compact-input">${damageCalculationMethodSelect}</select>
+            <label for="dmgformula" class="compact-input">Damage Formula</label><input type="text" name="dmgformula" class="compact-input" id="dmgformula">
+            <label for="halfdamage" class="compact-input">Half Damage?</label><input type="checkbox" name="halfdamage" class="compact-input" id="halfdamage">
+            <label for="damagetype" class="compact-input">Damage Type</label><select name="damagetype" id="damagetype" class="compact-input">${damageTypeSelect}</select>
+
+            <label for="healformula" class="compact-input">Heal Formula</label><input type="text" name="healformula" class="compact-input" id="healformula">
+
+            <label for="statuseffect" class="compact-input">Afflict Status Effect</label><select name="statuseffect" id="statuseffect" class="compact-input">${statusEffectSelect}</select>
+            <label for="durationtype" class="compact-input">Duation Unit</label><select name="durationtype" id="durationtype" class="compact-input">${durationSelect}</select>
+            <label for="duration" class="compact-input">Duration</label><input type="number" name="duration" class="compact-input" id="duration">
+
+            <label for="additional" class="compact-input">Additional Effects</label><input type="text" name="additional" class="compact-input" id="additional">
+          </div>
+          `,
+          window: { title: "Add Ability Result"},
+          ok: { label: "Add" }
+      });
+      if (!result) {
+          return;
+      }
+      const newAction = this.document.system.actions[idx];
+      newAction.results.push({
+        condition: result.condition,
+        type: result.type,
+        damageCalculationMethod: result.dmgcalcmethod,
+        damageFormula: result.dmgformula,
+        halfDamage: result.halfdamage,
+        statusEffectToApply: result.statuseffect,
+        statusEffectDurationType: result.durationtype,
+        statusEffectDuration: result.duration,
+        healFormula: result.healformula,
+        additionalEffects: result.additional
+      });
+
+      const newActions = [...this.document.system.actions.slice(0, idx), newAction, ...this.document.system.actions.slice(idx + 1)];
+      this.document.update({"system.actions": newActions}).then(v => this.render());
   }
 
   /** Helper Functions */

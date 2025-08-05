@@ -231,6 +231,46 @@
           "Minutes": "Minutes",
           "Hour": "Hour",
           "Hours": "Hours"
+        },
+        "AbilityTargetTypes": {
+          "Creature": "Creature",
+          "FriendlyCreature": "Friendly Creature",
+          "Self": "SELF",
+          "Cone": "CONE",
+          "Line": "LINE",
+          "Sphere": "SPHERE",
+          "Special": "Special*"
+        },
+        "AbilityRangeType": {
+          "Unspecified": "-",
+          "Melee": "MELEE",
+          "WeaponRange": "WEAPON RANGE",
+          "Meters": "meters"
+        },
+        "AbilityActionType": {
+          "MeleeMartialAttack": "MELEE MARTIAL ATTACK",
+          "MeleeSpellAttack": "MELEE SPELL ATTACK",
+          "RangedMartialAttack": "RANGED MARTIAL ATTACK",
+          "RangedSpellAttack": "RANGED SPELL ATTACK",
+          "MartialTest": "MARTIAL TEST",
+          "SpellTest": "SPELL TEST"
+        },
+        "AbilityResultCondition": {
+          "Always": "Always",
+          "OnSuccess": "On Success",
+          "OnFailure": "On Failure",
+          "OnHit": "On Hit"
+        },
+        "AbilityResultType": {
+          "Damage": "Damage",
+          "StatusEffect": "StatusEffect",
+          "DamageAndStatusEffect": "DamageAndStatusEffect",
+          "Heal": "Heal"
+        },
+        "AbilityDamageCalculationMethod": {
+          "LightMartialDamage": "LIGHT MARTIAL DAMAGE",
+          "MediumMartialDamage": "MEDIUM MARTIAL DAMAGE",
+          "HeavyMartialDamage": "HEAVY MARTIAL DAMAGE"
         }
       },
       "ClassTechnique": {

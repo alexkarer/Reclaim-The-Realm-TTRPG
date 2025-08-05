@@ -6,6 +6,8 @@ Before Ability Actions, data needs to be cleaned up in the Abilities (also do pe
 - For Usage Cost, Aether Dice are still a bit wonky, maybe save different types as individual entires.
 
 Implement the Ability Actions:
+  - damage type needs to be displayed and check if status effects are displayed correctly
+  - functionality for maneuver push or upcast missing
   - when ability is used, subtract cost, then do first action
   - then in the chatmessage of the first action there should be continue buttons to go to the next action.
   - should be able to be used with macros

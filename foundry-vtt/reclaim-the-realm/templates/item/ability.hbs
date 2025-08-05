@@ -5,7 +5,7 @@
             <span>{{localize 'RTR.Item.Spell.FIELDS.components.label'}}</span>
             <input class="compact-input grid-span-2" type='text' name='system.components' {{disabled @root.system.editLock}} value='{{system.components}}'/>
         {{/if}}
-        <span class="{{#unless @root.system.editLock}}rollable{{/unless}}" 
+        <span style="height: 20px;" class="{{#unless @root.system.editLock}}rollable strong-shake{{/unless}}" 
             {{#unless @root.system.editLock}} data-action='editUsageCost'{{/unless}}>
             {{localize 'RTR.Item.Ability.FIELDS.usageCost.label'}}
         </span>
@@ -35,48 +35,59 @@
     <h6 style="margin-top: 5px;">{{localize 'RTR.Item.Ability.FIELDS.actions.label'}}</h6>
     <div class="flexcol">
         {{#each system.actions as |action key|}}
-            <div class="grid grid-3col flex-group-center">
+            <span>
                 {{#if (or (eq action.actionType 'martialTest') (eq action.actionType 'spellTest'))}}
-                    <span>{{localize action.attribute}} {{localize action.actionType}}</span>
-                    <span>{{localize 'vs.'}}</span>
-                    <span>{{localize action.targetingSave}}</span>
+                    {{localize (lookup @root.config.attributeAbbreviations action.attribute)}} {{localize (lookup @root.config.abilityActionType action.actionType)}} {{localize 'vs.'}} {{localize action.targetingSave}}
                 {{else}}
-                    <span>{{localize action.actionType}}</span>
-                    <span>{{localize 'vs.'}}</span>
-                    <span>{{localize action.targetingSave}}</span>
+                    {{#if (exists action.targetingSave)}}
+                        {{localize (lookup @root.config.abilityActionType action.actionType)}} {{localize 'vs.'}} {{localize action.targetingSave}}
+                    {{else}}
+                        {{localize (lookup @root.config.abilityActionType action.actionType)}}
+                    {{/if}}
                 {{/if}}
+            </span>
+            <div class="compact-grid grid-2col">
+                {{#if (or (or (eq action.targets 'cone') (eq action.targets 'line')) (eq action.targets 'sphere'))}}
+                    <span><strong>{{localize 'RTR.Item.Ability.FIELDS.targets.label'}}:</strong> {{localize (lookup @root.config.abilityTargetTypes action.targets)}} ({{action.targetsAreaSize}} m)</span>
+                {{else}}
+                    <span><strong>{{localize 'RTR.Item.Ability.FIELDS.targets.label'}}:</strong> {{localize (lookup @root.config.abilityTargetTypes action.targets)}}</span>
+                {{/if}}
+                {{#if (eq action.rangeType 'meters')}}
+                    <span><strong>{{localize 'RTR.Item.Ability.FIELDS.range.label'}}:</strong> {{action.range}} {{localize (lookup @root.config.abilityRangeType action.rangeType)}}</span>
+                {{else}}
+                    <span><strong>{{localize 'RTR.Item.Ability.FIELDS.range.label'}}:</strong> {{localize (lookup @root.config.abilityRangeType action.rangeType)}}</span>
+                {{/if}}
+            </div>
                 
                 {{#unless @root.system.editLock}}
                     <input type="button" value="{{localize 'Add Result'}}" class="grid-span-3 compact-input add-btn" data-action='addResult' data-actionidx="{{key}}"/>
                 {{/unless}}
                 {{#each action.results as |result key|}}
-                    <strong>{{localize result.condition}}:</strong>
-                    {{#if (or (eq result.type 'damage') (eq result.type 'damageAndStatusEffect'))}}
-                        {{#if (eq result.damageCalculationMethod 'custom')}}
-                            <span>{{localize result.type}}: {{ result.damageFormula }}</span>
-                        {{else}}
-                            <span>{{localize result.type}}: {{localize result.damageCalculationMethod }}</span>
+                    <div style="background-color: #302831;">
+                        <strong>{{localize (lookup @root.config.abilityResultCondition result.condition)}}:</strong>
+                        {{#if (or (eq result.type 'damage') (eq result.type 'damageAndStatusEffect'))}}
+                            {{#if (eq result.damageCalculationMethod 'custom')}}
+                                <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.damageFormula }} {{#if result.halfDamage}}(half){{/if}}</span>
+                            {{else}}
+                                <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{localize (lookup @root.config.abilityDamageCalculationMethod result.damageCalculationMethod)}} {{#if result.halfDamage}}(half){{/if}}</span>
+                            {{/if}}
                         {{/if}}
-                    {{/if}}
-                    {{#if (or (eq result.type 'statusEffect') (eq result.type 'damageAndStatusEffect'))}}
-                        <span>{{localize result.statusEffectToApply}} {{result.statusEffectDuration}} {{localize result.statusEffectDurationType}}</span>
-                    {{/if}}
-                    {{#if (eq result.type 'heal')}}
-                        <span>{{localize result.type}}: {{ result.healFormula }}</span>
-                    {{/if}}
+                        {{#if (or (eq result.type 'statusEffect') (eq result.type 'damageAndStatusEffect'))}}
+                            <span>{{localize (lookup (lookup @root.config.statusEffects result.statusEffectToApply) 'name')}} {{result.statusEffectDuration}} {{localize (lookup @root.config.abilityDurationTypes result.statusEffectDurationType)}}</span>
+                        {{/if}}
+                        {{#if (eq result.type 'heal')}}
+                            <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.healFormula }}</span>
+                        {{/if}}
 
-                    {{#unless (eq result.type 'damageAndStatusEffect')}}
-                        <span>{{action.onSuccess.additionalEffects}}</span>
-                    {{/unless}}
-                    {{#unless @root.system.editLock}}
-                        <input type="button" value="{{localize 'Delete Result'}}" class="grid-span-3 compact-input delete-btn" data-action='deleteResult' data-resultidx='{{key}}'/>
-                    {{/unless}}
+                        {{#unless (eq result.type 'damageAndStatusEffect')}}
+                            <span>{{action.onSuccess.additionalEffects}}</span>
+                        {{/unless}}
+                    </div>
                 {{/each}}
-
-                {{#unless @root.system.editLock}}
-                    <input type="button" value="{{localize 'Delete Action'}}" class="grid-span-3 compact-input delete-btn" data-action='deleteAction' data-actionidx='{{key}}'/>
-                {{/unless}}
-            </div>
+            {{#unless @root.system.editLock}}
+                <input type="button" value="{{localize 'Delete Action'}}" class="grid-span-3 compact-input delete-btn" data-action='deleteAction' data-actionidx='{{key}}'/>
+            {{/unless}}
+            <hr style="margin-top: 3px; margin-bottom: 3px;"/>
         {{/each}}
         {{#unless @root.system.editLock}}
             <input type="button" value="{{localize 'Add Action'}}" class="compact-input add-btn" data-action='addAction'/>
