@@ -32,7 +32,8 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
             increaseHp: this._onIncreaseHP,
             decreaseHp: this._onDecreaseHP,
             addDamageResistance: this._onAddDamageResistance,
-            deleteDamageResistance: this._onDeleteDamageResistance
+            deleteDamageResistance: this._onDeleteDamageResistance,
+            useAbility: this._onUseAbility,
         },
         // Custom property that's merged into `this.options`
         dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
@@ -373,6 +374,23 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
             "system.resistances": foundry.utils.deepClone(this.actor.system.resistances.filter(res => res.damageType !== damageType))
         };
         this.actor.update(updatePayload).then(v => this.render());
+    }
+
+    /**
+     * Use an Ability
+     * @this RtRActorSheet
+     * @param {PointerEvent} event   The originating click event
+     * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
+     * @protected
+     */
+    static async _onUseAbility(event, target) {
+        event.preventDefault();
+        const item = this._getEmbeddedDocument(target);
+        if (!item) {
+            ui.notifications.warn("Can't find associated Ability");
+            return;
+        }
+        item.useAbility();
     }
 
     /**************

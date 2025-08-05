@@ -32,7 +32,6 @@ export function registerHandlebarsHelpers() {
     });
 
     Handlebars.registerHelper('exists', function (x) {
-        console.log(x);
         return x !== undefined;
     });
 

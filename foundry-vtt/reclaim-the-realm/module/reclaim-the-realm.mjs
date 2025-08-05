@@ -30,7 +30,7 @@ globalThis.RtR = {
     RtRItemSheet,
   },
   utils: {
-    rollItemMacro,
+    useItemMacro,
   },
   models,
 };
@@ -125,12 +125,11 @@ registerHandlebarsHelpers();
 
 Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
-  Hooks.on('hotbarDrop', (bar, data, slot) => createDocMacro(data, slot));
+  Hooks.on('hotbarDrop', (bar, data, slot) => {createDocMacro(data, slot); return false; });
 
   Hooks.on('combatTurnChange', (combat, prior, current) => {
     combat.combatant?.actor?.handleOnCombatTurnStart()
   });
-
 
   Hooks.on('createActor', async (actor, options, userId) => {
     // we check this in case the actor is imported from a compendium
@@ -167,7 +166,7 @@ async function createDocMacro(data, slot) {
   const item = await Item.fromDropData(data);
 
   // Create the macro command using the uuid.
-  const command = `game.reclaimtherealm.rollItemMacro("${data.uuid}");`;
+  const command = `globalThis.RtR.utils.useItemMacro("${data.uuid}");`;
   let macro = game.macros.find(
     (m) => m.name === item.name && m.command === command
   );
@@ -180,8 +179,7 @@ async function createDocMacro(data, slot) {
       flags: { 'reclaim-the-realm.itemMacro': true },
     });
   }
-  game.user.assignHotbarMacro(macro, slot);
-  return false;
+  return game.user.assignHotbarMacro(macro, slot);
 }
 
 /**
@@ -189,7 +187,7 @@ async function createDocMacro(data, slot) {
  * Get an existing item macro if one exists, otherwise create a new one.
  * @param {string} itemUuid
  */
-function rollItemMacro(itemUuid) {
+function useItemMacro(itemUuid) {
   // Reconstruct the drop data so that we can load the item.
   const dropData = {
     type: 'Item',
@@ -205,8 +203,10 @@ function rollItemMacro(itemUuid) {
       );
     }
 
-    // Trigger the item roll
-    // TODO change to the actions thingy
-    item.roll();
+    if (item.isAbility()) {
+      item.useAbility();
+    } else {
+      item.sheet.render(true);
+    }
   });
 }

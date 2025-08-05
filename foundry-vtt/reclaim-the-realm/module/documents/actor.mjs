@@ -1,6 +1,8 @@
 /** @import {Actor} from "@client/documents/actor.mjs" */
 /** @import {Roll} from "@client/dice/roll.mjs" */
 
+const { api } = foundry.applications;
+
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @import {Actor} from "@client/documents/actor.mjs"
@@ -53,8 +55,9 @@ export class RtRActor extends Actor {
   /**
    * D20 Test
    * @param {*} options 
+   * @returns {Roll} roll object
    */
-  d20Test(options) {
+  async d20Test(options) {
     let die = 'd20';
     if (options.advantage && !options.disadvantage) {
         die = '2d20kh';
@@ -73,15 +76,15 @@ export class RtRActor extends Actor {
     }
 
     let formula=`${die}${options.extraDice}${d20TestBonuses}${options.bonus}`;
-    this.roll(formula, options);
+    return await this.roll(formula, options);
   }
 
   /**
    * Attack Test, any interactions that modifies any attack happens here.
    * @param {*} options 
-   * @protected
+   * @returns {Roll} roll object
    */
-  attackTest(options) {
+  async attackTest(options) {
     if (this._hasStatusEffect('FRIGHTENED I')) {
       options.disadvantage = true;
     }
@@ -92,60 +95,65 @@ export class RtRActor extends Actor {
       options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
     }
 
-    this.d20Test(options);
+    return await this.d20Test(options);
   }
 
   /**
    * Meele Martial Attack
    * @param {*} options 
+   * @returns {Roll} roll object
    */
-  meleeMartialAttack(options) {
+  async meleeMartialAttack(options) {
     options.type = 'MELEE MARTIAL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@meleeMartialAttack' : ' +@meleeMartialAttack';
     if (this._hasStatusEffect('PRONE')) {
       options.disadvantage = true;
     }
-    this.attackTest(options);
+    return await this.attackTest(options);
   }
 
   /**
    * Ranged Martial Attack
-   * @param {*} options 
+   * @param {*} options
+   * @returns {Roll} roll object
    */
-  rangedMartialAttack(options) {
+  async rangedMartialAttack(options) {
     options.type = 'RANGED MARTIAL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@rangedMartialAttack' : ' +@rangedMartialAttack';
-    this.attackTest(options);
+    return await this.attackTest(options);
   }
 
   /**
    * Meele Spell Attack
    * @param {*} options 
+   * @returns {Roll} roll object
    */
-  meleeSpellAttack(options) {
+  async meleeSpellAttack(options) {
     options.type = 'MELEE SPELL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@meleeSpellAttack' : ' +@meleeSpellAttack';
     if (this._hasStatusEffect('PRONE')) {
       options.disadvantage = true;
     }
-    this.attackTest(options);
+    return await this.attackTest(options);
   }
 
   /**
    * Ranged Spell Attack
-   * @param {*} options 
+   * @param {*} options
+   * @returns {Roll} roll object
    */
-  rangedSpellAttack(options) {
+  async rangedSpellAttack(options) {
     options.type = 'RANGED SPELL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@rangedSpellAttack' : ' +@rangedSpellAttack';
-    this.attackTest(options);
+    return await this.attackTest(options);
   }
 
   /**
    * Martial Test
-   * @param {*} options 
+   * @param {*} options
+   * @returns {Roll} roll object
    */
-  martialTest(options) {
+  async martialTest(options) {
     if (this._hasStatusEffect('FRIGHTENED I')) {
       options.disadvantage = true;
     }
@@ -159,14 +167,15 @@ export class RtRActor extends Actor {
     options.bonus = options.bonus ? options.bonus + ' +@martialTest' : ' +@martialTest';
     options.bonus =  options.bonus + this._getAttributeRollBonus(options.attribute);
 
-    this.d20Test(options);
+    return await this.d20Test(options);
   }
 
    /**
    * Spell Test
-   * @param {*} options 
+   * @param {*} options
+   * @returns {Roll} roll object
    */
-  spellTest(options) {
+  async spellTest(options) {
     if (this._hasStatusEffect('FRIGHTENED I')) {
       options.disadvantage = true;
     }
@@ -181,14 +190,15 @@ export class RtRActor extends Actor {
     options.bonus = options.bonus ? options.bonus + ' +@spellTest' : ' +@spellTest';
     options.bonus =  options.bonus + this._getAttributeRollBonus(options.attribute);
 
-    this.d20Test(options);
+    return await this.d20Test(options);
   }
 
   /**
    * Attribute Test
-   * @param {*} options 
+   * @param {*} options
+   * @returns {Roll} roll object
    */
-  attributeTest(options) {
+  async attributeTest(options) {
     let attributeTestData = this._getAttributeRollBonus(options.attribute);
     options.bonus = options.bonus ? options.bonus + attributeTestData.rollData : attributeTestData.rollData;
 
@@ -211,26 +221,27 @@ export class RtRActor extends Actor {
       options.advantage = true;
     }
 
-    this.d20Test(options);
+    return await this.d20Test(options);
   }
 
   /**
    * Skill Test
-   * @param {*} options 
+   * @param {*} options
+   * @returns {Roll} roll object
    */
-  skillTest(options) {
+  async skillTest(options) {
     let skillTestData = this._getSkillRollBonus(options.skill);
     options.bonus =  options.bonus ? options.bonus + skillTestData.rollData : skillTestData.rollData;
     options.type = skillTestData.rollType + ' SKILL TEST';
-    this.attributeTest(options);
+    return await this.attributeTest(options);
   }
 
   /**
    * Save Test
    * @param {*} options
-   * @protected
+   * @returns {Roll} roll object
    */
-  saveTest(options) {
+  async saveTest(options) {
     let saveRollData = this._getSaveRollBonus(options.save);
     options.bonus =  options.bonus ? options.bonus + saveRollData.rollData : saveRollData.rollData;
     options.type = saveRollData.rollType;
@@ -242,7 +253,7 @@ export class RtRActor extends Actor {
       options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
     }
 
-    this.d20Test(options);
+    return await this.d20Test(options);
   }
 
   /**
@@ -259,12 +270,72 @@ export class RtRActor extends Actor {
         label = '<span style="color:red">DISADVANTAGE ' + options.type + '</span>';
     }
     let roll = new Roll(formula, this.getRollData());
-    await roll.toMessage({
+    return await roll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this }),
       flavor: label,
       rollMode: game.settings.get('core', 'rollMode'),
     });
-    return roll;
+  }
+
+  /* -------------------------------------------- */
+  /*  Ability Functions                           */
+  /* -------------------------------------------- */
+
+  /**
+   * Pay the usage costs of an ability.
+   * @param {Object} usageCost 
+   * @return {Boolean} true if ability was used
+   */
+  async payAbilityUsageCosts(usageCost) {
+    const updatePayload = {};
+    const warningMessages = [];
+    if (usageCost.arcanaCost > 0) {
+      if (usageCost.arcanaCost > this.system.arcana.value) {
+        warningMessages.push(`Not enough arcana to use ability Required: ${usageCost.arcanaCost}, Available: ${this.system.arcana.value}`);
+      }
+      const newArcana = Math.max(0, this.system.arcana.value - usageCost.arcanaCost);
+      updatePayload['system.arcana.value'] = newArcana;
+    }
+    if (usageCost.staminaCost > 0) {
+      if (usageCost.staminaCost > this.system.stamina.value) {
+        warningMessages.push(`Not enough stamina to use ability Required: ${usageCost.staminaCost}, Available: ${this.system.stamina.value}`);
+      }
+      const newStamina = Math.max(0, this.system.stamina.value - usageCost.staminaCost);
+      updatePayload['system.stamina.value'] = newStamina;
+    }
+
+    if (warningMessages.length > 0) {
+      const confirm = await api.DialogV2.confirm({
+          content: warningMessages.join('<br>'),
+          rejectClose: false,
+          modal: true,
+          window: { title: "Insufficent Resources for Ability", icon: "fa-solid fa-triangle-exclamation" },
+      });
+      if (!confirm) {
+          return false;
+      }
+    }
+    this.update(updatePayload);
+    return true;
+  }
+
+  /**
+   * Determines if the Attack Hits the actor
+   * @param {number} attackResult
+   * @returns {string} hit type: HIT, PARTIAL_HIT
+   */
+  determineAttackHit(attackResult) {
+    if (this.type === 'npc') { {[]}
+      if (attackResult >= (10 + this.system.defenses.dodge)) {
+        return 'HIT';
+      } else {
+        return 'PARTIAL_HIT';
+      }
+    } else {
+      // TODO ask for defensice roll
+      // When implement use promise since lots of shitty refactoring will have to happen
+      return 'HIT';
+    }
   }
 
   /* -------------------------------------------- */

@@ -5,12 +5,16 @@ Before Ability Actions, data needs to be cleaned up in the Abilities (also do pe
 - Usage Cost also missing for Martial Maneuvers
 - For Usage Cost, Aether Dice are still a bit wonky, maybe save different types as individual entires.
 
+A new Chat Message type needs to be implemented for interactivity with applying damage
+
 Implement the Ability Actions:
+  - Look should be improved a bit
+    - Add Icons (Status Effects, for attacks/spell Tests)
   - damage type needs to be displayed and check if status effects are displayed correctly
   - functionality for maneuver push or upcast missing
-  - when ability is used, subtract cost, then do first action
+  - Figure out how to do more than 1 action
   - then in the chatmessage of the first action there should be continue buttons to go to the next action.
-  - should be able to be used with macros
+  - Ability Actions can maybe be displayed in a nice way in the actor sheet
 
 After ACtions are Implemented:
   - Add remaining spells

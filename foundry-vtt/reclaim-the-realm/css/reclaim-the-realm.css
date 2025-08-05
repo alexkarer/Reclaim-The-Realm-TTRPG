@@ -779,3 +779,22 @@
   padding-left: 4px;
   border-radius: 5px;
 }
+.reclaim-the-realm .action-container {
+  padding: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #efe6d8;
+}
+.reclaim-the-realm .success-result {
+  background-color: darkgreen;
+}
+.reclaim-the-realm .failure-result {
+  background-color: darkred;
+}
+.reclaim-the-realm .onhit-result {
+  background-color: darkslateblue;
+}
+.reclaim-the-realm .always-result {
+  background-color: darkgoldenrod;
+}

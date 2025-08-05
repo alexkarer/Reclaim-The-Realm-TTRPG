@@ -1,0 +1,23 @@
+.action-container {
+    padding: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: $c-text;
+}
+
+.success-result {
+    background-color: darkgreen;
+}
+
+.failure-result {
+    background-color: darkred;
+}
+
+.onhit-result {
+    background-color: darkslateblue;
+}
+
+.always-result {
+    background-color: darkgoldenrod;
+}

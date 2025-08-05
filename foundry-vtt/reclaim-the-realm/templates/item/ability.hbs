@@ -1,10 +1,6 @@
 {{! Ability Tab }}
 <section class='tab {{tab.cssClass}}' data-group='primary' data-tab='ability'>
     <div class="compact-grid grid-3col">
-        {{#if (eq item.type 'spell')}}
-            <span>{{localize 'RTR.Item.Spell.FIELDS.components.label'}}</span>
-            <input class="compact-input grid-span-2" type='text' name='system.components' {{disabled @root.system.editLock}} value='{{system.components}}'/>
-        {{/if}}
         <span style="height: 20px;" class="{{#unless @root.system.editLock}}rollable strong-shake{{/unless}}" 
             {{#unless @root.system.editLock}} data-action='editUsageCost'{{/unless}}>
             {{localize 'RTR.Item.Ability.FIELDS.usageCost.label'}}
@@ -14,6 +10,11 @@
                 <span class="useage-cost-text">{{cost}}</span>
             {{/each}}
         </div>
+
+        {{#if (eq item.type 'spell')}}
+            <span>{{localize 'RTR.Item.Spell.FIELDS.components.label'}}</span>
+            <input class="compact-input grid-span-2" type='text' name='system.components' {{disabled @root.system.editLock}} value='{{system.components}}'/>
+        {{/if}}
 
         <span>{{localize 'RTR.Item.Ability.FIELDS.range.label'}}</span>
         <input class="compact-input grid-span-2" type='text' name='system.range' value='{{system.range}}' {{disabled @root.system.editLock}} />
@@ -35,18 +36,7 @@
     <h6 style="margin-top: 5px;">{{localize 'RTR.Item.Ability.FIELDS.actions.label'}}</h6>
     <div class="flexcol">
         {{#each system.actions as |action key|}}
-            <span>
-                {{#if (or (eq action.actionType 'martialTest') (eq action.actionType 'spellTest'))}}
-                    {{localize (lookup @root.config.attributeAbbreviations action.attribute)}} {{localize (lookup @root.config.abilityActionType action.actionType)}} {{localize 'vs.'}} {{localize action.targetingSave}}
-                {{else}}
-                    {{#if (exists action.targetingSave)}}
-                        {{localize (lookup @root.config.abilityActionType action.actionType)}} {{localize 'vs.'}} {{localize action.targetingSave}}
-                    {{else}}
-                        {{localize (lookup @root.config.abilityActionType action.actionType)}}
-                    {{/if}}
-                {{/if}}
-            </span>
-            <div class="compact-grid grid-2col">
+            <div class="action-container compact-grid grid-2col">
                 {{#if (or (or (eq action.targets 'cone') (eq action.targets 'line')) (eq action.targets 'sphere'))}}
                     <span><strong>{{localize 'RTR.Item.Ability.FIELDS.targets.label'}}:</strong> {{localize (lookup @root.config.abilityTargetTypes action.targets)}} ({{action.targetsAreaSize}} m)</span>
                 {{else}}
@@ -57,13 +47,31 @@
                 {{else}}
                     <span><strong>{{localize 'RTR.Item.Ability.FIELDS.range.label'}}:</strong> {{localize (lookup @root.config.abilityRangeType action.rangeType)}}</span>
                 {{/if}}
-            </div>
-                
+
+                <span class="grid-span-2">
+                    {{#if (or (eq action.actionType 'martialTest') (eq action.actionType 'spellTest'))}}
+                        {{localize (lookup @root.config.attributeAbbreviations action.attribute)}} {{localize (lookup @root.config.abilityActionType action.actionType)}} {{localize 'vs.'}} {{localize action.targetingSave}}
+                    {{else}}
+                        {{#if (exists action.targetingSave)}}
+                            {{localize (lookup @root.config.abilityActionType action.actionType)}} {{localize 'vs.'}} {{localize action.targetingSave}}
+                        {{else}}
+                            {{localize (lookup @root.config.abilityActionType action.actionType)}}
+                        {{/if}}
+                    {{/if}}
+                </span>
+
                 {{#unless @root.system.editLock}}
-                    <input type="button" value="{{localize 'Add Result'}}" class="grid-span-3 compact-input add-btn" data-action='addResult' data-actionidx="{{key}}"/>
+                    <input type="button" value="{{localize 'Add Result'}}" class="grid-span-2 compact-input add-btn" data-action='addResult' data-actionidx="{{key}}"/>
                 {{/unless}}
+
                 {{#each action.results as |result key|}}
-                    <div style="background-color: #302831;">
+                    <div 
+                        {{#if (eq result.condition 'always')}}class="always-result grid-span-2"{{/if}}
+                        {{#if (eq result.condition 'onSuccess')}}class="success-result grid-span-2"{{/if}}
+                        {{#if (eq result.condition 'onFailure')}}class="failure-result grid-span-2"{{/if}}
+                        {{#if (eq result.condition 'onHit')}}class="onhit-result grid-span-2"{{/if}}
+                    >
+                        <i class="fa-solid fa-arrow-turn-up" style="margin-left: 5px; transform: rotate(90deg);"></i>
                         <strong>{{localize (lookup @root.config.abilityResultCondition result.condition)}}:</strong>
                         {{#if (or (eq result.type 'damage') (eq result.type 'damageAndStatusEffect'))}}
                             {{#if (eq result.damageCalculationMethod 'custom')}}
@@ -73,10 +81,10 @@
                             {{/if}}
                         {{/if}}
                         {{#if (or (eq result.type 'statusEffect') (eq result.type 'damageAndStatusEffect'))}}
-                            <span>{{localize (lookup (lookup @root.config.statusEffects result.statusEffectToApply) 'name')}} {{result.statusEffectDuration}} {{localize (lookup @root.config.abilityDurationTypes result.statusEffectDurationType)}}</span>
+                            <span>Afflict: {{localize (lookup (lookup @root.config.statusEffects result.statusEffectToApply) 'name')}} {{result.statusEffectDuration}} {{localize (lookup @root.config.abilityDurationTypes result.statusEffectDurationType)}}</span>
                         {{/if}}
                         {{#if (eq result.type 'heal')}}
-                            <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.healFormula }}</span>
+                            <span>Heal: {{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.healFormula }}</span>
                         {{/if}}
 
                         {{#unless (eq result.type 'damageAndStatusEffect')}}
@@ -84,10 +92,10 @@
                         {{/unless}}
                     </div>
                 {{/each}}
-            {{#unless @root.system.editLock}}
-                <input type="button" value="{{localize 'Delete Action'}}" class="grid-span-3 compact-input delete-btn" data-action='deleteAction' data-actionidx='{{key}}'/>
-            {{/unless}}
-            <hr style="margin-top: 3px; margin-bottom: 3px;"/>
+                {{#unless @root.system.editLock}}
+                    <input type="button" value="{{localize 'Delete Action'}}" class="grid-span-2 compact-input delete-btn" data-action='deleteAction' data-actionidx='{{key}}'/>
+                {{/unless}}
+            </div>
         {{/each}}
         {{#unless @root.system.editLock}}
             <input type="button" value="{{localize 'Add Action'}}" class="compact-input add-btn" data-action='addAction'/>
@@ -95,7 +103,7 @@
     </div>
     {{! Editors must receive enriched text data from getData to properly handle rolls, UUID links, etc. }}
     {{#if editable}}
-    <prose-mirror style="min-height: 200px;" name="system.description" data-document-u-u-i-d="{{item.uuid}}"
+    <prose-mirror style="min-height: 125px;" name="system.description" data-document-u-u-i-d="{{item.uuid}}"
         value="{{system.description}}" collaborate="true" toggled="true">
         {{{enrichedDescription}}}
     </prose-mirror>
