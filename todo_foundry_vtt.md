@@ -15,6 +15,9 @@ Implement the Ability Actions:
   - Figure out how to do more than 1 action
   - then in the chatmessage of the first action there should be continue buttons to go to the next action.
   - Ability Actions can maybe be displayed in a nice way in the actor sheet
+  - In character overview, able to manually roll damage (execute results)
+  - allow bonuses in ability (e.g. damage and attack bonuses)
+  - also crit reduction or smth
 
 After ACtions are Implemented:
   - Add remaining spells

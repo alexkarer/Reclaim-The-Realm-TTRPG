@@ -100,9 +100,7 @@
             {{/unless}}
             {{/if}}
         </div>
-        <select 
-            name='system.skills.{{key}}.attrBonus' 
-            class='compact-input skill-attribute-bonus'>
+        <select name='system.skills.{{key}}.attrBonus' class='compact-input skill-attribute-bonus'>
             {{#each @root.system.attributes as |attribute attrkey|}}
                 {{#if (compare attrkey skills.attrBonus)}}
                 <option value="{{attrkey}}" selected="selected">{{attrkey}}</option>

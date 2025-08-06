@@ -259,7 +259,8 @@
           "Always": "Always",
           "OnSuccess": "On Success",
           "OnFailure": "On Failure",
-          "OnHit": "On Hit"
+          "OnHit": "On Hit",
+          "OnPartialHit": "On Partial Hit"
         },
         "AbilityResultType": {
           "Damage": "Damage",

@@ -792,8 +792,11 @@
 .reclaim-the-realm .failure-result {
   background-color: darkred;
 }
-.reclaim-the-realm .onhit-result {
+.reclaim-the-realm .hit-result {
   background-color: darkslateblue;
+}
+.reclaim-the-realm .partialhit-result {
+  background-color: darkorange;
 }
 .reclaim-the-realm .always-result {
   background-color: darkgoldenrod;

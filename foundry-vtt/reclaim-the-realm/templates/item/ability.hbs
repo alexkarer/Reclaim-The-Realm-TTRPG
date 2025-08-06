@@ -69,15 +69,16 @@
                         {{#if (eq result.condition 'always')}}class="always-result grid-span-2"{{/if}}
                         {{#if (eq result.condition 'onSuccess')}}class="success-result grid-span-2"{{/if}}
                         {{#if (eq result.condition 'onFailure')}}class="failure-result grid-span-2"{{/if}}
-                        {{#if (eq result.condition 'onHit')}}class="onhit-result grid-span-2"{{/if}}
+                        {{#if (eq result.condition 'onHit')}}class="hit-result grid-span-2"{{/if}}
+                        {{#if (eq result.condition 'onPartialHit')}}class="partialhit-result grid-span-2"{{/if}}
                     >
                         <i class="fa-solid fa-arrow-turn-up" style="margin-left: 5px; transform: rotate(90deg);"></i>
                         <strong>{{localize (lookup @root.config.abilityResultCondition result.condition)}}:</strong>
                         {{#if (or (eq result.type 'damage') (eq result.type 'damageAndStatusEffect'))}}
                             {{#if (eq result.damageCalculationMethod 'custom')}}
-                                <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.damageFormula }} {{#if result.halfDamage}}(half){{/if}}</span>
+                                <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.damageFormula }} {{localize (lookup @root.config.damageTypes result.damageType)}} {{#if result.halfDamage}}(half){{/if}}</span>
                             {{else}}
-                                <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{localize (lookup @root.config.abilityDamageCalculationMethod result.damageCalculationMethod)}} {{#if result.halfDamage}}(half){{/if}}</span>
+                                <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{localize (lookup @root.config.abilityDamageCalculationMethod result.damageCalculationMethod)}} {{localize (lookup @root.config.damageTypes result.damageType)}} {{#if result.halfDamage}}(half){{/if}}</span>
                             {{/if}}
                         {{/if}}
                         {{#if (or (eq result.type 'statusEffect') (eq result.type 'damageAndStatusEffect'))}}

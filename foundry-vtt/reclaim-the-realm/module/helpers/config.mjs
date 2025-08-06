@@ -149,6 +149,7 @@ RTR.abilityResultCondition = {
   onSuccess: "RTR.Item.Ability.AbilityResultCondition.OnSuccess",
   onFailure: "RTR.Item.Ability.AbilityResultCondition.OnFailure",
   onHit: "RTR.Item.Ability.AbilityResultCondition.OnHit",
+  onPartialHit: "RTR.Item.Ability.AbilityResultCondition.OnPartialHit",
 }
 
 RTR.abilityResultType = {

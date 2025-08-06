@@ -2,6 +2,16 @@
 /** @import {Roll} from "@client/dice/roll.mjs" */
 
 const { api } = foundry.applications;
+/**
+ * @typedef ActorRollOptions
+ * @property {string} bonus bonus string which can evaluate any expression
+ * @property {string} type the type of roll which will be displayed in the message
+ * @property {string} extraDice extra dice to roll
+ * @property {string} attribute the attribute which might be added in some cases
+ * @property {string} skill the skill bonuse relevant for skill test
+ * @property {Boolean} advantage
+ * @property {Boolean} disadvantage 
+ */
 
 /**
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
@@ -49,12 +59,12 @@ export class RtRActor extends Actor {
   }
 
   /* -------------------------------------------- */
-  /*  D20 Tests                                   */
+  /*  Dice Rolls                                  */
   /* -------------------------------------------- */
 
   /**
    * D20 Test
-   * @param {*} options 
+   * @param {ActorRollOptions} options 
    * @returns {Roll} roll object
    */
   async d20Test(options) {
@@ -81,7 +91,7 @@ export class RtRActor extends Actor {
 
   /**
    * Attack Test, any interactions that modifies any attack happens here.
-   * @param {*} options 
+   * @param {ActorRollOptions} options 
    * @returns {Roll} roll object
    */
   async attackTest(options) {
@@ -100,7 +110,7 @@ export class RtRActor extends Actor {
 
   /**
    * Meele Martial Attack
-   * @param {*} options 
+   * @param {ActorRollOptions} options 
    * @returns {Roll} roll object
    */
   async meleeMartialAttack(options) {
@@ -114,7 +124,7 @@ export class RtRActor extends Actor {
 
   /**
    * Ranged Martial Attack
-   * @param {*} options
+   * @param {ActorRollOptions} options
    * @returns {Roll} roll object
    */
   async rangedMartialAttack(options) {
@@ -125,7 +135,7 @@ export class RtRActor extends Actor {
 
   /**
    * Meele Spell Attack
-   * @param {*} options 
+   * @param {ActorRollOptions} options 
    * @returns {Roll} roll object
    */
   async meleeSpellAttack(options) {
@@ -139,7 +149,7 @@ export class RtRActor extends Actor {
 
   /**
    * Ranged Spell Attack
-   * @param {*} options
+   * @param {ActorRollOptions} options
    * @returns {Roll} roll object
    */
   async rangedSpellAttack(options) {
@@ -150,7 +160,7 @@ export class RtRActor extends Actor {
 
   /**
    * Martial Test
-   * @param {*} options
+   * @param {ActorRollOptions} options
    * @returns {Roll} roll object
    */
   async martialTest(options) {
@@ -172,7 +182,7 @@ export class RtRActor extends Actor {
 
    /**
    * Spell Test
-   * @param {*} options
+   * @param {ActorRollOptions} options
    * @returns {Roll} roll object
    */
   async spellTest(options) {
@@ -195,7 +205,7 @@ export class RtRActor extends Actor {
 
   /**
    * Attribute Test
-   * @param {*} options
+   * @param {ActorRollOptions} options
    * @returns {Roll} roll object
    */
   async attributeTest(options) {
@@ -226,7 +236,7 @@ export class RtRActor extends Actor {
 
   /**
    * Skill Test
-   * @param {*} options
+   * @param {ActorRollOptions} options
    * @returns {Roll} roll object
    */
   async skillTest(options) {
@@ -238,7 +248,7 @@ export class RtRActor extends Actor {
 
   /**
    * Save Test
-   * @param {*} options
+   * @param {ActorRollOptions} options
    * @returns {Roll} roll object
    */
   async saveTest(options) {
@@ -257,8 +267,45 @@ export class RtRActor extends Actor {
   }
 
   /**
+   * Make a Damage Roll
+   * @param {String} method damage calculation method: RTR.abilityDamageCalculationMethod 
+   * @param {boolean} halfDamage
+   * @param {ActorRollOptions} options
+   * @param {String} formula custom roll formula for custom rolls
+   * @param {String} dmgType damage type
+   * @returns {Roll} roll object
+   */
+  async damageRoll(method, halfDamage, options, formula, dmgType) {
+    if (this._hasStatusEffect('WEAKENED I')) {
+      options.extraDice = options.extraDice ? options.extraDice + ' -d6' : ' -d6';
+    }
+    let damage;
+    switch (method) {
+      case 'lightMartialDamage':
+        damage = '@lightMartialDamage';
+        break;
+      case 'mediumMartialDamage':
+        damage = '@mediumMartialDamage';
+        break;
+      case 'heavyMartialDamage':
+        damage = '@heavyMartialDamage';
+        break;
+      case 'custom':
+        damage = formula;
+        break;
+    }
+    let damageFormula;
+    if (halfDamage) {
+      damageFormula = `floor((${damage}${options.extraDice ?? ''}${options.bonus ?? ''}) / 2)[${dmgType}]`;
+    } else {
+      damageFormula = `${damage}${options.extraDice ?? ''}${options.bonus ?? ''}[${dmgType}]`;
+    }
+    return await this.roll(damageFormula, options);
+  }
+
+  /**
    * @param {string} formula
-   * @param {*} options
+   * @param {ActorRollOptions} options
    * @returns {Roll} roll object
    * @protected
    */
@@ -305,11 +352,12 @@ export class RtRActor extends Actor {
     }
 
     if (warningMessages.length > 0) {
-      const confirm = await api.DialogV2.confirm({
+      const confirm = await api.DialogV2.prompt({
           content: warningMessages.join('<br>'),
           rejectClose: false,
           modal: true,
           window: { title: "Insufficent Resources for Ability", icon: "fa-solid fa-triangle-exclamation" },
+          ok: { label: 'Use Ability anyways' }
       });
       if (!confirm) {
           return false;
@@ -321,20 +369,24 @@ export class RtRActor extends Actor {
 
   /**
    * Determines if the Attack Hits the actor
-   * @param {number} attackResult
-   * @returns {string} hit type: HIT, PARTIAL_HIT
+   * @param {number} attackResult total attack result
+   * @param {number} unmodifiedResult unmodified attack result
+   * @returns {Promise} Promise containing hit type: CRITICAL_HIT, HIT, PARTIAL_HIT, MISS
    */
-  determineAttackHit(attackResult) {
+  determineAttackHit(attackResult, unmodifiedResult) {
     if (this.type === 'npc') { {[]}
-      if (attackResult >= (10 + this.system.defenses.dodge)) {
-        return 'HIT';
+      if (unmodifiedResult === 1) {
+        return new Promise(() => 'MISS');
+      } else if (unmodifiedResult === 20) {
+        return new Promise(() => 'CRITICAL_HIT');
+      } else if (attackResult >= (10 + this.system.defenses.dodge)) {
+        return new Promise(() => 'HIT');
       } else {
-        return 'PARTIAL_HIT';
+        return new Promise(() => 'PARTIAL_HIT');
       }
     } else {
-      // TODO ask for defensice roll
-      // When implement use promise since lots of shitty refactoring will have to happen
-      return 'HIT';
+      // TODO ask for defensice roll, should do via an option window where you can add temp bonuses as well as adv/disadv
+      return new Promise(() => 'HIT');
     }
   }
 

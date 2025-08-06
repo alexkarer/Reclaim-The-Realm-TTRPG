@@ -723,18 +723,25 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
           return;
       }
       const newAction = this.document.system.actions[idx];
-      newAction.results.push({
+      const newResult = {
         condition: result.condition,
         type: result.type,
         damageCalculationMethod: result.dmgcalcmethod,
         damageFormula: result.dmgformula,
         halfDamage: result.halfdamage,
+        damageType: result.damagetype,
         statusEffectToApply: result.statuseffect,
         statusEffectDurationType: result.durationtype,
         statusEffectDuration: result.duration,
         healFormula: result.healformula,
         additionalEffects: result.additional
-      });
+      };
+      const existingResult = newAction.results.find(r => r.condition === result.condition);
+      if (existingResult) {
+        newAction.results = [...newAction.results.filter(r => r.condition !== result.condition), newResult];
+      } else {
+        newAction.results.push(newResult);
+      }
 
       const newActions = [...this.document.system.actions.slice(0, idx), newAction, ...this.document.system.actions.slice(idx + 1)];
       this.document.update({"system.actions": newActions}).then(v => this.render());

@@ -48,16 +48,12 @@ Hooks.once('init', function () {
     decimals: 2,
   };
 
-  // Define custom Document and DataModel classes
   CONFIG.Actor.documentClass = RtRActor;
-
-  // Note that you don't need to declare a DataModel
-  // for the base actor/item classes - they are included
-  // with the Character/NPC as part of super.defineSchema()
   CONFIG.Actor.dataModels = {
     character: models.RtRCharacter,
     npc: models.RtRNPC,
   };
+
   CONFIG.Item.documentClass = RtRItem;
   CONFIG.Item.dataModels = {
     equipment: models.RtREquipment,
