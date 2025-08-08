@@ -81,14 +81,21 @@
                                 <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{localize (lookup @root.config.abilityDamageCalculationMethod result.damageCalculationMethod)}} {{localize (lookup @root.config.damageTypes result.damageType)}} {{#if result.halfDamage}}(half){{/if}}</span>
                             {{/if}}
                         {{/if}}
-                        {{#if (or (eq result.type 'statusEffect') (eq result.type 'damageAndStatusEffect'))}}
-                            <span>Afflict: {{localize (lookup (lookup @root.config.statusEffects result.statusEffectToApply) 'name')}} {{result.statusEffectDuration}} {{localize (lookup @root.config.abilityDurationTypes result.statusEffectDurationType)}}</span>
-                        {{/if}}
+
                         {{#if (eq result.type 'heal')}}
-                            <span>Heal: {{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.healFormula }}</span>
+                            <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.healFormula }}</span>
                         {{/if}}
 
-                        {{#unless (eq result.type 'damageAndStatusEffect')}}
+                        {{#if (or (or (eq result.type 'statusEffect') (eq result.type 'damageAndStatusEffect')) (eq result.type 'healAndStatusEffect'))}}
+                            <span>Afflict: 
+                                <img style="display: inline;" src="{{lookup (lookup @root.config.statusEffects result.statusEffectToApply) 'img'}}" height="16" width="16"/>
+                                {{localize (lookup (lookup @root.config.statusEffects result.statusEffectToApply) 'name')}}
+                                {{result.statusEffectDuration}} 
+                                {{localize (lookup @root.config.abilityDurationTypes result.statusEffectDurationType)}}
+                            </span>
+                        {{/if}}
+
+                        {{#unless (or (eq result.type 'damageAndStatusEffect') (eq result.type 'healAndStatusEffect'))}}
                             <span>{{action.onSuccess.additionalEffects}}</span>
                         {{/unless}}
                     </div>

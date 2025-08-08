@@ -2,7 +2,7 @@
   "id": "reclaim-the-realm",
   "title": "Reclaim the Realm",
   "description": "FoundryVTT Implementation of the Reclaim the Realm Ruleset",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "compatibility": {
     "minimum": 13,
     "verified": 13.346

@@ -68,6 +68,7 @@ export class RtRItem extends Item {
     }
     this._renderUsingAbilityChatMessage(parentActor);
 
+    // TODO: if ability taret is self, set self as target
     if (this.system.actions.length > 0) {
       switch (this.system.actions[0].actionType) {
         case 'meleeMartialAttack':
@@ -81,6 +82,9 @@ export class RtRItem extends Item {
           break;
         case 'spellTest':
           // TODO
+          break;
+        case 'always':
+          this._handleAlwaysActions(parentActor, this.system.actions[0])
           break;
         default:
           console.warn(`Unknown action type: ${this.system.actions[0].actionType}`);
@@ -97,8 +101,8 @@ export class RtRItem extends Item {
     ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: parentActor }),
         content: `
-          <img style='position: absolute; transform: translate(0, 5px);' src='${this.img}' title='${this.name}' width='24' height='24'/>
-          <p style='margin-left: 29px; margin-top: 0px;'>${parentActor.name} is using ${this.name}.</p>
+          <img style='display: inline; transform: translate(0, 5px);' src='${this.img}' title='${this.name}' width='18' height='18'/>
+          <span>${parentActor.name} is using ${this.name}.</span>
         `,
         style: CONST.CHAT_MESSAGE_STYLES.OOC
     });
@@ -117,15 +121,35 @@ export class RtRItem extends Item {
       return;
     }
     if (targets.size === 0) {
-      this._handleAttackResult(action.results,new Set(), parentActor);
+      this._handleAbilityResults(action.results, new Set(), parentActor);
     } else {
       const targetHitResults = targets.map(target => {
         const unmodifiedResult = attackResult?.rolls[0]?.terms[0]?.results[0]?.result;
         const hitResult = target.document.baseActor.determineAttackHit(attackResult.rolls[0].total, unmodifiedResult ?? 10);
+        // Additionally need to check if other ability is test against.
         return [target, hitResult];
       });
 
-      this._handleAttackResult(action.results, targetHitResults, parentActor);
+      this._handleAbilityResults(action.results, targetHitResults, parentActor);
+    }
+  }
+
+  /**
+   * Handle always Actions
+   * @param {RtRActor} parentActor 
+   * @param {Object} action 
+   * @private
+   */
+  async _handleAlwaysActions(parentActor, action) {
+    const targets = game.user.targets;
+    if (targets.size === 0) {
+      this._handleAbilityResults(action.results, new Set(), parentActor);
+    } else {
+      const targetHitResults = targets.map(target => {
+        return [target, Promise.resolve('always')];
+      });
+
+      this._handleAbilityResults(action.results, targetHitResults, parentActor);
     }
   }
 
@@ -159,15 +183,13 @@ export class RtRItem extends Item {
 
   /**
    * @param {[Object]} actionResults defined action results of ability 
-   * @param {Set<[Token, String]>} targetHitResults the targets that where hit
+   * @param {Set<[Token, Promise<string>]} targetHitResults the targets that where hit
    * @param {RtRActor} parentActor that owns the item
    */
-  async _handleAttackResult(actionResults, targetHitResults, parentActor) {
+  async _handleAbilityResults(actionResults, targetHitResults, parentActor) {
     if (actionResults.size === 0) {
       console.warn(`No Results defined for ability ${this.name}`);
     }
-
-    // TODO is this different than any other result handling???
 
     if (targetHitResults.size === 0) {
       let actionResultContent = actionResults.map(result => this._createAbilityResultRadioOption(result)).join(' ');
@@ -186,21 +208,52 @@ export class RtRItem extends Item {
         return;
       }
 
-      if (chosenResult.type === 'damage') {
-        const rollText = chosenResult.damageCalculationMethod === 'custom' ? 'DAMAGE' : game.i18n.localize(CONFIG.RTR.abilityDamageCalculationMethod[chosenResult.damageCalculationMethod]);
-        parentActor.damageRoll(chosenResult.damageCalculationMethod, chosenResult.halfDamage, {type: rollText}, chosenResult.damageFormula, chosenResult.damageType);
-      } else if (chosenResult.type === 'statusEffect') {
-        // TODO what to do with status effect
-      } else if (chosenResult.type === 'damageAndStatusEffect') {
-        const rollText = chosenResult.damageCalculationMethod === 'custom' ? 'DAMAGE' : game.i18n.localize(CONFIG.RTR.abilityDamageCalculationMethod[chosenResult.damageCalculationMethod]);
-        parentActor.damageRoll(chosenResult.damageCalculationMethod, chosenResult.halfDamage, {type: rollText}, chosenResult.damageFormula, chosenResult.damageType);
-        // TODO what to do with status effect
-      } else if (chosenResult.type === 'heal') {
-        // TODO heal roll
+      switch(chosenResult.type) {
+        case 'damage':
+          this._makeDamageRoll(chosenResult, parentActor);
+          break;
+        case 'statusEffect':
+          this._renderStatusEffectAppliedChatMessage(chosenResult.statusEffectToApply, parentActor);
+          break;
+        case 'damageAndStatusEffect':
+          this._makeDamageRoll(chosenResult, parentActor);
+          this._renderStatusEffectAppliedChatMessage(chosenResult.statusEffectToApply, parentActor);
+          break;
+        case 'heal':
+          parentActor.roll(chosenResult.healFormula, {type: game.i18n.localize(CONFIG.RTR.abilityResultType[chosenResult.type])});
+          break;
+        case 'healAndStatusEffect':
+          parentActor.roll(chosenResult.healFormula, {type: game.i18n.localize(CONFIG.RTR.abilityResultType[chosenResult.type])});
+          this._renderStatusEffectAppliedChatMessage(chosenResult.statusEffectToApply, parentActor);
+          break;
+        default:
+          console.error(`Chosen Result Type '${chosenResult.type}' handling not defined`)
       }
 
     } else {
-      // TODO, do the same but apply directly to a target
+      // TODO, probably better to clarify before damage should is applied.
+      // TODO additionally all hit results should be logged in chat messages
+      // TODO currently .document.baseActor calls the base Implementation but we will have to use the Token directly
+      targetHitResults.forEach(v => {
+        v[1].then(hitResult => {
+          const foundResult = actionResults.find(r => r.condition === hitResult);
+          if (!foundResult) {
+            console.error(`Ability Result ${hitResult} in Ability ${this.name} not found!`);
+            return;
+          }
+          switch(foundResult.type) {
+            case 'damage':
+              this._makeDamageRoll(foundResult, parentActor).then(rollMessage => {
+                const damage = rollMessage.rolls[0].total;
+                v[0].document.baseActor.applyDamage(damage, foundResult.damageType);
+              });
+              break;
+            // TODO implement remaining results
+            default:
+              console.error(`Chosen Result Type '${foundResult.type}' handling not defined`)
+          }
+        })
+      });
     }
   }
 
@@ -213,7 +266,6 @@ export class RtRItem extends Item {
     const type = game.i18n.localize(CONFIG.RTR.abilityResultType[result.type]);
     const statusEffect = game.i18n.localize(CONFIG.RTR.statusEffects[result.statusEffectToApply]?.name);
     const durationType = game.i18n.localize(CONFIG.RTR.abilityDurationTypes[result.statusEffectDurationType]);
-    console.log(result);
     let resultTypeSpecificText;
     switch(result.type) {
       case 'damage':
@@ -246,5 +298,42 @@ export class RtRItem extends Item {
       <input type="radio" id="${result.condition}" name="condition" value="${result.condition}" checked />
       <label for="${result.condition}"><strong>${condition}:</strong> ${type} ${resultTypeSpecificText}</label>
     </div>`;
+  }
+
+  /**
+   * @param {Object} abilityActionResult 
+   * @param {RtRActor} parentActor owner of the item
+   * @returns {Promise<Object>} the roll message 
+   * @private
+   */
+  _makeDamageRoll(abilityActionResult, parentActor) {
+    const rollText = abilityActionResult.damageCalculationMethod === 'custom' ? 'DAMAGE' : game.i18n.localize(CONFIG.RTR.abilityDamageCalculationMethod[abilityActionResult.damageCalculationMethod]);
+    return parentActor.damageRoll(abilityActionResult.damageCalculationMethod, abilityActionResult.halfDamage, {type: rollText}, abilityActionResult.damageFormula, abilityActionResult.damageType);
+  }
+
+  /**
+   * Render a status effect being applied
+   * @param {String} statusEffectId
+   * @param {RtRActor} actingActor actor which used the orignal ability
+   * @param {Token} target the target which the status effect is applied to, if undefined, there is no target
+   */
+  _renderStatusEffectAppliedChatMessage(statusEffectId, actingActor, target) {
+    const statusEffect = CONFIG.RTR.statusEffects[statusEffectId];
+    if (!statusEffect) {
+      ui.notifications.error(`Status Effect '${statusEffectId}' not found`, {console: true});
+      return;
+    }
+    let targetMessage = '';
+    if (target) {
+      targetMessage = ` to ${target.name}`;
+    }
+    const statusEffectName = game.i18n.localize(statusEffect.name);
+    ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: actingActor }),
+        content: `
+          <span>${actingActor.name} applies <img style='display: inline; filter: brightness(0);' src="${statusEffect.img}" title="${statusEffectName}" height="16" width="16"/> ${statusEffectName}${targetMessage}.</span>
+        `,
+        style: CONST.CHAT_MESSAGE_STYLES.OOC
+    });
   }
 }

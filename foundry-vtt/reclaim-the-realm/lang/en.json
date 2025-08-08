@@ -248,6 +248,7 @@
           "Meters": "meters"
         },
         "AbilityActionType": {
+          "Always": "Always",
           "MeleeMartialAttack": "MELEE MARTIAL ATTACK",
           "MeleeSpellAttack": "MELEE SPELL ATTACK",
           "RangedMartialAttack": "RANGED MARTIAL ATTACK",
@@ -266,7 +267,8 @@
           "Damage": "Damage",
           "StatusEffect": "StatusEffect",
           "DamageAndStatusEffect": "DamageAndStatusEffect",
-          "Heal": "Heal"
+          "Heal": "Heal",
+          "HealAndStatusEffect": "HealAndStatusEffect"
         },
         "AbilityDamageCalculationMethod": {
           "LightMartialDamage": "LIGHT MARTIAL DAMAGE",

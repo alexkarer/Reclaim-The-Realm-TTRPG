@@ -142,6 +142,7 @@ RTR.abilityActionType = {
   rangedSpellAttack: "RTR.Item.Ability.AbilityActionType.RangedSpellAttack",
   martialTest: "RTR.Item.Ability.AbilityActionType.MartialTest",
   spellTest: "RTR.Item.Ability.AbilityActionType.SpellTest",
+  always: "RTR.Item.Ability.AbilityActionType.Always",
 }
 
 RTR.abilityResultCondition = {
@@ -157,6 +158,7 @@ RTR.abilityResultType = {
   statusEffect: "RTR.Item.Ability.AbilityResultType.StatusEffect",
   damageAndStatusEffect: "RTR.Item.Ability.AbilityResultType.DamageAndStatusEffect",
   heal: "RTR.Item.Ability.AbilityResultType.Heal",
+  healAndStatusEffect: "RTR.Item.Ability.AbilityResultType.HealAndStatusEffect"
 }
 
 RTR.abilityDamageCalculationMethod = {

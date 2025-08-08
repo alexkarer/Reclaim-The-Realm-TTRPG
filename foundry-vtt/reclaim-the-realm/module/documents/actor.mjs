@@ -1,3 +1,4 @@
+import { generateFvttId } from "../utils.mjs";
 /** @import {Actor} from "@client/documents/actor.mjs" */
 /** @import {Roll} from "@client/dice/roll.mjs" */
 
@@ -65,9 +66,9 @@ export class RtRActor extends Actor {
   /**
    * D20 Test
    * @param {ActorRollOptions} options 
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async d20Test(options) {
+  d20Test(options) {
     let die = 'd20';
     if (options.advantage && !options.disadvantage) {
         die = '2d20kh';
@@ -86,15 +87,15 @@ export class RtRActor extends Actor {
     }
 
     let formula=`${die}${options.extraDice}${d20TestBonuses}${options.bonus}`;
-    return await this.roll(formula, options);
+    return this.roll(formula, options);
   }
 
   /**
    * Attack Test, any interactions that modifies any attack happens here.
    * @param {ActorRollOptions} options 
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async attackTest(options) {
+  attackTest(options) {
     if (this._hasStatusEffect('FRIGHTENED I')) {
       options.disadvantage = true;
     }
@@ -105,65 +106,65 @@ export class RtRActor extends Actor {
       options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
     }
 
-    return await this.d20Test(options);
+    return this.d20Test(options);
   }
 
   /**
    * Meele Martial Attack
    * @param {ActorRollOptions} options 
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async meleeMartialAttack(options) {
+  meleeMartialAttack(options) {
     options.type = 'MELEE MARTIAL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@meleeMartialAttack' : ' +@meleeMartialAttack';
     if (this._hasStatusEffect('PRONE')) {
       options.disadvantage = true;
     }
-    return await this.attackTest(options);
+    return this.attackTest(options);
   }
 
   /**
    * Ranged Martial Attack
    * @param {ActorRollOptions} options
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async rangedMartialAttack(options) {
+  rangedMartialAttack(options) {
     options.type = 'RANGED MARTIAL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@rangedMartialAttack' : ' +@rangedMartialAttack';
-    return await this.attackTest(options);
+    return this.attackTest(options);
   }
 
   /**
    * Meele Spell Attack
    * @param {ActorRollOptions} options 
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async meleeSpellAttack(options) {
+  meleeSpellAttack(options) {
     options.type = 'MELEE SPELL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@meleeSpellAttack' : ' +@meleeSpellAttack';
     if (this._hasStatusEffect('PRONE')) {
       options.disadvantage = true;
     }
-    return await this.attackTest(options);
+    return this.attackTest(options);
   }
 
   /**
    * Ranged Spell Attack
    * @param {ActorRollOptions} options
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async rangedSpellAttack(options) {
+  rangedSpellAttack(options) {
     options.type = 'RANGED SPELL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@rangedSpellAttack' : ' +@rangedSpellAttack';
-    return await this.attackTest(options);
+    return this.attackTest(options);
   }
 
   /**
    * Martial Test
    * @param {ActorRollOptions} options
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async martialTest(options) {
+  martialTest(options) {
     if (this._hasStatusEffect('FRIGHTENED I')) {
       options.disadvantage = true;
     }
@@ -177,15 +178,15 @@ export class RtRActor extends Actor {
     options.bonus = options.bonus ? options.bonus + ' +@martialTest' : ' +@martialTest';
     options.bonus =  options.bonus + this._getAttributeRollBonus(options.attribute);
 
-    return await this.d20Test(options);
+    return this.d20Test(options);
   }
 
    /**
    * Spell Test
    * @param {ActorRollOptions} options
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async spellTest(options) {
+  spellTest(options) {
     if (this._hasStatusEffect('FRIGHTENED I')) {
       options.disadvantage = true;
     }
@@ -200,15 +201,15 @@ export class RtRActor extends Actor {
     options.bonus = options.bonus ? options.bonus + ' +@spellTest' : ' +@spellTest';
     options.bonus =  options.bonus + this._getAttributeRollBonus(options.attribute);
 
-    return await this.d20Test(options);
+    return this.d20Test(options);
   }
 
   /**
    * Attribute Test
    * @param {ActorRollOptions} options
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async attributeTest(options) {
+  attributeTest(options) {
     let attributeTestData = this._getAttributeRollBonus(options.attribute);
     options.bonus = options.bonus ? options.bonus + attributeTestData.rollData : attributeTestData.rollData;
 
@@ -231,27 +232,27 @@ export class RtRActor extends Actor {
       options.advantage = true;
     }
 
-    return await this.d20Test(options);
+    return this.d20Test(options);
   }
 
   /**
    * Skill Test
    * @param {ActorRollOptions} options
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async skillTest(options) {
+  skillTest(options) {
     let skillTestData = this._getSkillRollBonus(options.skill);
     options.bonus =  options.bonus ? options.bonus + skillTestData.rollData : skillTestData.rollData;
     options.type = skillTestData.rollType + ' SKILL TEST';
-    return await this.attributeTest(options);
+    return this.attributeTest(options);
   }
 
   /**
    * Save Test
    * @param {ActorRollOptions} options
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async saveTest(options) {
+  saveTest(options) {
     let saveRollData = this._getSaveRollBonus(options.save);
     options.bonus =  options.bonus ? options.bonus + saveRollData.rollData : saveRollData.rollData;
     options.type = saveRollData.rollType;
@@ -263,7 +264,7 @@ export class RtRActor extends Actor {
       options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
     }
 
-    return await this.d20Test(options);
+    return this.d20Test(options);
   }
 
   /**
@@ -273,9 +274,9 @@ export class RtRActor extends Actor {
    * @param {ActorRollOptions} options
    * @param {String} formula custom roll formula for custom rolls
    * @param {String} dmgType damage type
-   * @returns {Roll} roll object
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async damageRoll(method, halfDamage, options, formula, dmgType) {
+  damageRoll(method, halfDamage, options, formula, dmgType) {
     if (this._hasStatusEffect('WEAKENED I')) {
       options.extraDice = options.extraDice ? options.extraDice + ' -d6' : ' -d6';
     }
@@ -300,16 +301,15 @@ export class RtRActor extends Actor {
     } else {
       damageFormula = `${damage}${options.extraDice ?? ''}${options.bonus ?? ''}[${dmgType}]`;
     }
-    return await this.roll(damageFormula, options);
+    return this.roll(damageFormula, options);
   }
 
   /**
    * @param {string} formula
    * @param {ActorRollOptions} options
-   * @returns {Roll} roll object
-   * @protected
+   * @returns {Promise<any>} Promise containing chat object containing roll data
    */
-  async roll(formula, options) {
+  roll(formula, options) {
     let label = options.type;
     if (options.advantage && !options.disadvantage) {
         label = '<span style="color:green">ADVANTAGE ' + options.type + '</span>';
@@ -317,7 +317,7 @@ export class RtRActor extends Actor {
         label = '<span style="color:red">DISADVANTAGE ' + options.type + '</span>';
     }
     let roll = new Roll(formula, this.getRollData());
-    return await roll.toMessage({
+    return roll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this }),
       flavor: label,
       rollMode: game.settings.get('core', 'rollMode'),
@@ -371,22 +371,22 @@ export class RtRActor extends Actor {
    * Determines if the Attack Hits the actor
    * @param {number} attackResult total attack result
    * @param {number} unmodifiedResult unmodified attack result
-   * @returns {Promise} Promise containing hit type: CRITICAL_HIT, HIT, PARTIAL_HIT, MISS
+   * @returns {Promise<string>} Promise containing result type see RTR.abilityResultCondition
    */
   determineAttackHit(attackResult, unmodifiedResult) {
     if (this.type === 'npc') { {[]}
       if (unmodifiedResult === 1) {
-        return new Promise(() => 'MISS');
+        return Promise.resolve('onFailure');
       } else if (unmodifiedResult === 20) {
-        return new Promise(() => 'CRITICAL_HIT');
+        return Promise.resolve('onHit');
       } else if (attackResult >= (10 + this.system.defenses.dodge)) {
-        return new Promise(() => 'HIT');
+        return Promise.resolve('onHit');
       } else {
-        return new Promise(() => 'PARTIAL_HIT');
+        return Promise.resolve('onPartialHit');
       }
     } else {
       // TODO ask for defensice roll, should do via an option window where you can add temp bonuses as well as adv/disadv
-      return new Promise(() => 'HIT');
+      return Promise.resolve('onHit');
     }
   }
 
@@ -466,6 +466,18 @@ export class RtRActor extends Actor {
 
     let newHp = Math.min(this.system.hp.max, this.system.hp.value + amount);
     this.update({ "system.hp.value": newHp});
+  }
+
+  /**
+   * toggle Status effect
+   * @param {String} statusEffectId 
+   * @returns 
+   */
+  async toggleStatusEffect(statusEffectId) {
+    const existing = this.effects.get(generateFvttId(`RTR${statusEffectId}`));
+    if (existing) return existing.delete();
+    const effect = await ActiveEffect.implementation.fromStatusEffect(statusEffectId);
+    return ActiveEffect.implementation.create(effect, { parent: this, keepId: true });
   }
 
   /* -------------------------------------------- */

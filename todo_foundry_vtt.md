@@ -5,12 +5,11 @@ Before Ability Actions, data needs to be cleaned up in the Abilities (also do pe
 - Usage Cost also missing for Martial Maneuvers
 - For Usage Cost, Aether Dice are still a bit wonky, maybe save different types as individual entires.
 
-A new Chat Message type needs to be implemented for interactivity with applying damage
-
 Implement the Ability Actions:
   - Look should be improved a bit
     - Add Icons (Status Effects, for attacks/spell Tests)
-  - damage type needs to be displayed and check if status effects are displayed correctly
+  - Make Spell Cast Test bwefore using spell
+  - TODO how to do crits
   - functionality for maneuver push or upcast missing
   - Figure out how to do more than 1 action
   - then in the chatmessage of the first action there should be continue buttons to go to the next action.
@@ -21,6 +20,8 @@ Implement the Ability Actions:
 
 After ACtions are Implemented:
   - Add remaining spells
+
+Check TODOS are all resolved
 
 # General TODOs/Nice to have
 
@@ -44,6 +45,8 @@ After ACtions are Implemented:
 
 - have UI that shows current AP and MP at start of Round and if a reaction is availible.
   - Also when using abilities reduce current AP
+  - reference impl: https://github.com/BragginRites/bg3-inspired-hotbar/tree/main
+    or https://github.com/ironmonk108/hotbar-expansion/blob/main/hotbar-expansion.js
 
 - Add Icons to skill
 - Add functionality for cover and concealment

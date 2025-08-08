@@ -208,14 +208,10 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
      * @param {HTMLElement} target   The capturing HTML element which defined a [data-action]
      * @private
      */
-    static async _toggleEffect(event, target) {
+    static _toggleEffect(event, target) {
+        event.preventDefault();
         const statusEffectId = target.closest("[data-condition-id]").dataset.conditionId;
-        const existing = this.document.effects.get(generateFvttId(`RTR${statusEffectId}`));
-
-        if (existing) return existing.delete();
-
-        const effect = await ActiveEffect.implementation.fromStatusEffect(statusEffectId);
-        return ActiveEffect.implementation.create(effect, { parent: this.document, keepId: true });
+        this.actor.toggleStatusEffect(statusEffectId);
     }
 
     /**
