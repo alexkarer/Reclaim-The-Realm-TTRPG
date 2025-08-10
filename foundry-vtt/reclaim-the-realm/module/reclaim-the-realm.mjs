@@ -1,6 +1,7 @@
 // Import document classes.
 import { RtRActor } from './documents/actor.mjs';
 import { RtRItem } from './documents/item.mjs';
+import { RtRToken } from './documents/token.mjs';
 // Import sheet classes.
 import { RtRCharacterSheet } from './sheets/actor/character-sheet.mjs';
 import { RtRNpcSheet } from './sheets/actor/npc-sheet.mjs';
@@ -23,6 +24,7 @@ globalThis.RtR = {
   documents: {
     RtRActor,
     RtRItem,
+    RtRToken
   },
   applications: {
     RtRCharacterSheet,
@@ -53,6 +55,8 @@ Hooks.once('init', function () {
     character: models.RtRCharacter,
     npc: models.RtRNPC,
   };
+
+  CONFIG.Token.documentClass = RtRToken;
 
   CONFIG.Item.documentClass = RtRItem;
   CONFIG.Item.dataModels = {
@@ -124,7 +128,7 @@ Hooks.once('ready', function () {
   Hooks.on('hotbarDrop', (bar, data, slot) => {createDocMacro(data, slot); return false; });
 
   Hooks.on('combatTurnChange', (combat, prior, current) => {
-    combat.combatant?.actor?.handleOnCombatTurnStart()
+    combat.combatant?.token?.handleOnCombatTurnStart();
   });
 
   Hooks.on('createActor', async (actor, options, userId) => {

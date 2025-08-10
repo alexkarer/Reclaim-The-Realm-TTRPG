@@ -3,7 +3,7 @@ import { RtRActor } from "./actor.mjs";
 const { api } = foundry.applications;
 
 /**
- * Extend the basic Item with some very simple modifications.
+ * Extend the basic Item Document
  * @extends {Item}
  */
 export class RtRItem extends Item {
@@ -61,21 +61,31 @@ export class RtRItem extends Item {
       console.warn(`Item ${this.name} has no parent actor to use the ability.`);
       return;
     }
-    
+
     const useAbility = await parentActor.payAbilityUsageCosts(this.system.usageCost);
     if (!useAbility) {
       return false;
     }
     this._renderUsingAbilityChatMessage(parentActor);
 
-    // TODO: if ability taret is self, set self as target
+    let targets = game.user.targets;
+
     if (this.system.actions.length > 0) {
+      if (this.system.actions[0].targets === 'self') {
+        const selfTarget = new Set();
+        if (parentActor.isToken) {
+          selfTarget = parentActor.token;
+        } else if (parentActor.getActiveTokens(false, true).length > 1) {
+          selfTarget.add(parentActor.getActiveTokens(false, true)[0]);
+        }
+        targets = selfTarget;
+      }
       switch (this.system.actions[0].actionType) {
         case 'meleeMartialAttack':
         case 'meleeSpellAttack':
         case 'rangedMartialAttack':
         case 'rangedSpellAttack':
-          await this._handleAttackAction(parentActor, this.system.actions[0]);
+          await this._handleAttackAction(parentActor, this.system.actions[0], targets);
           break;
         case 'martialTest':
           // TODO
@@ -84,7 +94,7 @@ export class RtRItem extends Item {
           // TODO
           break;
         case 'always':
-          this._handleAlwaysActions(parentActor, this.system.actions[0])
+          this._handleAlwaysActions(parentActor, this.system.actions[0], targets)
           break;
         default:
           console.warn(`Unknown action type: ${this.system.actions[0].actionType}`);
@@ -112,10 +122,10 @@ export class RtRItem extends Item {
    * Handle attack actions for abilities.
    * @param {RtRActor} parentActor 
    * @param {Object} action 
+   * @param {Set<RtRToken>} targets
    * @private
    */
-  async _handleAttackAction(parentActor, action) {
-    const targets = game.user.targets;
+  async _handleAttackAction(parentActor, action, targets) {
     let attackResult = await this._makeActorAttack(parentActor, action.actionType);
     if (!attackResult) {
       return;
@@ -123,25 +133,50 @@ export class RtRItem extends Item {
     if (targets.size === 0) {
       this._handleAbilityResults(action.results, new Set(), parentActor);
     } else {
+      const unmodifiedResult = attackResult?.rolls[0]?.terms[0]?.results[0]?.result;
+      const rollTotal = attackResult.rolls[0].total;
       const targetHitResults = targets.map(target => {
-        const unmodifiedResult = attackResult?.rolls[0]?.terms[0]?.results[0]?.result;
-        const hitResult = target.document.baseActor.determineAttackHit(attackResult.rolls[0].total, unmodifiedResult ?? 10);
-        // Additionally need to check if other ability is test against.
+        const hitResult = target.document.actor.determineAttackHit(rollTotal, unmodifiedResult ?? 10);
+        // TODO: Additionally need to check if other ability is test against. eg. ATTACK vs TOUGHNESS
         return [target, hitResult];
       });
-
+      
+      this._renderAttackHitResult(parentActor, targetHitResults, rollTotal);
       this._handleAbilityResults(action.results, targetHitResults, parentActor);
     }
+  }
+
+  /**
+   * Render attack hit result
+   * @param {RtRActor} parentActor 
+   * @param {Set<[RtRToken, Promise<string>]} targetHitResults the targets that where hit
+   * @param {Number} attackRoll
+   */
+  async _renderAttackHitResult(parentActor, targetHitResults, attackRoll) {
+    const hitResultsMessages = await Promise.all(targetHitResults.map(([token, resultPromise]) => {
+      return resultPromise.then(hitResult => {
+        return Promise.resolve(`ATTACK (${attackRoll}) vs. ${token.name} -> ${hitResult}`);
+      })
+    }));
+    ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: parentActor }),
+        content: `
+          <div class="flexcol">
+          ${hitResultsMessages.join(' ')}
+          </div>
+        `,
+        style: CONST.CHAT_MESSAGE_STYLES.OOC
+    });
   }
 
   /**
    * Handle always Actions
    * @param {RtRActor} parentActor 
    * @param {Object} action 
+   * @param {Set<RtRToken>} targets
    * @private
    */
-  async _handleAlwaysActions(parentActor, action) {
-    const targets = game.user.targets;
+  async _handleAlwaysActions(parentActor, action, targets) {
     if (targets.size === 0) {
       this._handleAbilityResults(action.results, new Set(), parentActor);
     } else {
@@ -183,7 +218,7 @@ export class RtRItem extends Item {
 
   /**
    * @param {[Object]} actionResults defined action results of ability 
-   * @param {Set<[Token, Promise<string>]} targetHitResults the targets that where hit
+   * @param {Set<[RtRToken, Promise<string>]} targetHitResults the targets that where hit
    * @param {RtRActor} parentActor that owns the item
    */
   async _handleAbilityResults(actionResults, targetHitResults, parentActor) {
@@ -232,8 +267,6 @@ export class RtRItem extends Item {
 
     } else {
       // TODO, probably better to clarify before damage should is applied.
-      // TODO additionally all hit results should be logged in chat messages
-      // TODO currently .document.baseActor calls the base Implementation but we will have to use the Token directly
       targetHitResults.forEach(v => {
         v[1].then(hitResult => {
           const foundResult = actionResults.find(r => r.condition === hitResult);
@@ -245,7 +278,13 @@ export class RtRItem extends Item {
             case 'damage':
               this._makeDamageRoll(foundResult, parentActor).then(rollMessage => {
                 const damage = rollMessage.rolls[0].total;
-                v[0].document.baseActor.applyDamage(damage, foundResult.damageType);
+                v[0].document.actor.applyDamage(damage, foundResult.damageType);
+              });
+              break;
+            case 'heal':
+              parentActor.roll(foundResult.healFormula, {type: game.i18n.localize(CONFIG.RTR.abilityResultType[foundResult.type])})
+                .then(healResult => {
+                  v[0].document.actor.heal(healResult.rolls[0].total);
               });
               break;
             // TODO implement remaining results

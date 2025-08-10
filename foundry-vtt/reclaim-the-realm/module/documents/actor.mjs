@@ -1,6 +1,7 @@
 import { generateFvttId } from "../utils.mjs";
 /** @import {Actor} from "@client/documents/actor.mjs" */
 /** @import {Roll} from "@client/dice/roll.mjs" */
+/** @import {ChatMessage} from "@client/dice/chat-message.mjs" */
 
 const { api } = foundry.applications;
 /**
@@ -15,7 +16,7 @@ const { api } = foundry.applications;
  */
 
 /**
- * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
+ * Extend the base Actor document
  * @import {Actor} from "@client/documents/actor.mjs"
  * @extends {Actor}
  */
@@ -66,7 +67,7 @@ export class RtRActor extends Actor {
   /**
    * D20 Test
    * @param {ActorRollOptions} options 
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   d20Test(options) {
     let die = 'd20';
@@ -91,28 +92,9 @@ export class RtRActor extends Actor {
   }
 
   /**
-   * Attack Test, any interactions that modifies any attack happens here.
-   * @param {ActorRollOptions} options 
-   * @returns {Promise<any>} Promise containing chat object containing roll data
-   */
-  attackTest(options) {
-    if (this._hasStatusEffect('FRIGHTENED I')) {
-      options.disadvantage = true;
-    }
-    if (this._hasStatusEffect('CURSED I')) {
-      options.extraDice = options.extraDice ? options.extraDice + ' -d4' : ' -d4';
-    }
-    if (this._hasStatusEffect('BLESS I')) {
-      options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
-    }
-
-    return this.d20Test(options);
-  }
-
-  /**
    * Meele Martial Attack
    * @param {ActorRollOptions} options 
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   meleeMartialAttack(options) {
     options.type = 'MELEE MARTIAL ATTACK';
@@ -120,24 +102,24 @@ export class RtRActor extends Actor {
     if (this._hasStatusEffect('PRONE')) {
       options.disadvantage = true;
     }
-    return this.attackTest(options);
+    return this._attackTest(options);
   }
 
   /**
    * Ranged Martial Attack
-   * @param {ActorRollOptions} options
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @param {ActorRollOptions} options 
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   rangedMartialAttack(options) {
     options.type = 'RANGED MARTIAL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@rangedMartialAttack' : ' +@rangedMartialAttack';
-    return this.attackTest(options);
+    return this._attackTest(options);
   }
 
   /**
    * Meele Spell Attack
-   * @param {ActorRollOptions} options 
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @param {ActorRollOptions} options
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   meleeSpellAttack(options) {
     options.type = 'MELEE SPELL ATTACK';
@@ -145,24 +127,24 @@ export class RtRActor extends Actor {
     if (this._hasStatusEffect('PRONE')) {
       options.disadvantage = true;
     }
-    return this.attackTest(options);
+    return this._attackTest(options);
   }
 
   /**
    * Ranged Spell Attack
    * @param {ActorRollOptions} options
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   rangedSpellAttack(options) {
     options.type = 'RANGED SPELL ATTACK';
     options.bonus = options.bonus ? options.bonus + ' +@rangedSpellAttack' : ' +@rangedSpellAttack';
-    return this.attackTest(options);
+    return this._attackTest(options);
   }
 
   /**
    * Martial Test
    * @param {ActorRollOptions} options
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   martialTest(options) {
     if (this._hasStatusEffect('FRIGHTENED I')) {
@@ -184,7 +166,7 @@ export class RtRActor extends Actor {
    /**
    * Spell Test
    * @param {ActorRollOptions} options
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   spellTest(options) {
     if (this._hasStatusEffect('FRIGHTENED I')) {
@@ -207,7 +189,7 @@ export class RtRActor extends Actor {
   /**
    * Attribute Test
    * @param {ActorRollOptions} options
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   attributeTest(options) {
     let attributeTestData = this._getAttributeRollBonus(options.attribute);
@@ -238,7 +220,7 @@ export class RtRActor extends Actor {
   /**
    * Skill Test
    * @param {ActorRollOptions} options
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   skillTest(options) {
     let skillTestData = this._getSkillRollBonus(options.skill);
@@ -250,7 +232,7 @@ export class RtRActor extends Actor {
   /**
    * Save Test
    * @param {ActorRollOptions} options
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   saveTest(options) {
     let saveRollData = this._getSaveRollBonus(options.save);
@@ -274,7 +256,7 @@ export class RtRActor extends Actor {
    * @param {ActorRollOptions} options
    * @param {String} formula custom roll formula for custom rolls
    * @param {String} dmgType damage type
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   damageRoll(method, halfDamage, options, formula, dmgType) {
     if (this._hasStatusEffect('WEAKENED I')) {
@@ -307,7 +289,7 @@ export class RtRActor extends Actor {
   /**
    * @param {string} formula
    * @param {ActorRollOptions} options
-   * @returns {Promise<any>} Promise containing chat object containing roll data
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
    */
   roll(formula, options) {
     let label = options.type;
@@ -323,6 +305,27 @@ export class RtRActor extends Actor {
       rollMode: game.settings.get('core', 'rollMode'),
     });
   }
+
+  /**
+   * Attack Test, any interactions that modifies any attack happens here.
+   * @param {ActorRollOptions} options
+   * @returns {Promise<ChatMessage>} Promise containing chat object containing roll data
+   * @private
+   */
+  _attackTest(options) {
+    if (this._hasStatusEffect('FRIGHTENED I')) {
+      options.disadvantage = true;
+    }
+    if (this._hasStatusEffect('CURSED I')) {
+      options.extraDice = options.extraDice ? options.extraDice + ' -d4' : ' -d4';
+    }
+    if (this._hasStatusEffect('BLESS I')) {
+      options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
+    }
+
+    return this.d20Test(options);
+  }
+
 
   /* -------------------------------------------- */
   /*  Ability Functions                           */
@@ -387,40 +390,6 @@ export class RtRActor extends Actor {
     } else {
       // TODO ask for defensice roll, should do via an option window where you can add temp bonuses as well as adv/disadv
       return Promise.resolve('onHit');
-    }
-  }
-
-  /* -------------------------------------------- */
-  /*  On Combat Turn Start Handler                */
-  /* -------------------------------------------- */
-
-  /**
-   * Handle everything that happens on the start of combat
-   */
-  async handleOnCombatTurnStart() {
-    if (this._hasStatusEffect('BURNING I')) {
-      this.roll('d6[fire]', { type: 'BURNING I' }).then(result => {
-        let damage = result.terms[0].results[0].result;
-        this.applyDamage(damage, 'fire');
-      });
-    }
-    if (this._hasStatusEffect('BLEEDING I')) {
-      this.roll('d6[bleed]', { type: 'BLEEDING I' }).then(result => {
-        let damage = result.terms[0].results[0].result;
-        this.applyDamage(damage, 'bleed');
-      });
-    }
-    if (this._hasStatusEffect('POISON I')) {
-      this.roll('d6[poison]', { type: 'POISON I' }).then(result => {
-        let damage = result.terms[0].results[0].result;
-        this.applyDamage(damage, 'poison');
-      });
-    }
-    if (this._hasStatusEffect('HEALING I')) {
-      this.roll('d6[heal]', { type: 'HEALING I' }).then(result => {
-        let heal = result.terms[0].results[0].result;
-        this.heal(heal);
-      });
     }
   }
 

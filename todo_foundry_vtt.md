@@ -17,6 +17,8 @@ Implement the Ability Actions:
   - In character overview, able to manually roll damage (execute results)
   - allow bonuses in ability (e.g. damage and attack bonuses)
   - also crit reduction or smth
+  - properly translate attack results
+  . allow temp HP healing
 
 After ACtions are Implemented:
   - Add remaining spells
