@@ -9,18 +9,15 @@ Implement the Ability Actions:
   - Also allow editing of ability actions
   - Look should be improved a bit
     - Add Icons (Status Effects, for attacks/spell Tests)
-  - Make Spell Cast Test bwefore using spell
   - always action results need to be handled
   - TODO how to do crits
   - functionality for maneuver push or upcast missing
   - Figure out how to do more than 1 action
-  - then in the chatmessage of the first action there should be continue buttons to go to the next action.
   - Ability Actions can maybe be displayed in a nice way in the actor sheet
   - In character overview, able to manually roll damage (execute results)
   - allow bonuses in ability (e.g. damage and attack bonuses)
   - also crit reduction or smth
   - properly translate attack results
-  . allow temp HP healing
 
 After ACtions are Implemented:
   - Add remaining spells
@@ -74,6 +71,8 @@ Check TODOS are all resolved
 - Perk Trees
 
 - Show how values are calculated and if they are reduced in any way.
+
+- how the fuck are temporary tempHp supposed to be implemented without making a complete mess
   
 - When making SKill Test, a Request Help Button
   - Included in the chat message of the skill test, where all players are then asked if they want to contribute

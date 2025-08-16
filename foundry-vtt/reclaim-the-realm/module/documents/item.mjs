@@ -52,6 +52,10 @@ export class RtRItem extends Item {
    * Use an ability.
    */
   async useAbility() {
+    if (game.paused) {
+      ui.notifications.warn("Abilities can't be used while the game is paused.", {console: true});
+      return;
+    }
     if (!this.isAbility()) {
       console.warn(`Item ${this.name} is not an ability and cannot be used.`);
       return;
@@ -68,10 +72,15 @@ export class RtRItem extends Item {
     }
     this._renderUsingAbilityChatMessage(parentActor);
 
+    if (this.type === 'spell') {
+      const castSuccessful = await parentActor.castSpell(this.system.spellDifficulty, this.name);
+      if (!castSuccessful) return;
+    }
+
     let targets = game.user.targets;
 
     if (this.system.actions.length > 0) {
-      if (this.system.actions[0].targets === 'self') {
+      /*if (this.system.actions[0].targets === 'self') {
         const selfTarget = new Set();
         if (parentActor.isToken) {
           selfTarget = parentActor.token;
@@ -79,7 +88,7 @@ export class RtRItem extends Item {
           selfTarget.add(parentActor.getActiveTokens(false, true)[0]);
         }
         targets = selfTarget;
-      }
+      }*/
       switch (this.system.actions[0].actionType) {
         case 'meleeMartialAttack':
         case 'meleeSpellAttack':
@@ -126,20 +135,24 @@ export class RtRItem extends Item {
    * @private
    */
   async _handleAttackAction(parentActor, action, targets) {
-    const attackResult = await this._makeActorAttack(parentActor, action.actionType);
-    if (!attackResult) {
-      return;
+    let unmodifiedResult = 0;
+    let rollTotal = 0;
+    if (action.fixed) {
+      unmodifiedResult = action.fixedValue;
+      rollTotal = action.fixedValue;
+    } else {
+      const attackResult = await this._makeActorAttack(parentActor, action.actionType);
+      unmodifiedResult = attackResult?.rolls[0]?.terms[0]?.results[0]?.result;
+      rollTotal = attackResult.rolls[0].total;
     }
     if (targets.size === 0) {
       this._handleAbilityResults(action.results, new Set(), parentActor);
     } else {
-      const unmodifiedResult = attackResult?.rolls[0]?.terms[0]?.results[0]?.result;
-      const rollTotal = attackResult.rolls[0].total;
       const targetHitResults = targets.map(target => {
         const hitResults = [];
-        hitResults.push(target.document.actor.determineAttackHit(rollTotal, unmodifiedResult ?? 10));
+        hitResults.push(target.document.actor.determineAttackHit(rollTotal, unmodifiedResult ?? 10, parentActor.name));
         if (action.targetingSave) {
-          hitResults.push(target.document.actor.determineDefensiveTestResult(action.targetingSave, rollTotal));
+          hitResults.push(target.document.actor.determineDefensiveTestResult(action.targetingSave, rollTotal, parentActor.name));
         }
         return [target, hitResults];
       });
@@ -157,16 +170,21 @@ export class RtRItem extends Item {
    * @private
    */
   async _handleSpellTestAction(parentActor, action, targets) {
-    const spellTestResult = await parentActor.spellTest({attribute:  action.attribute});
-    if (target.size === 0) {
+    let testTotal = 0;
+    if (action.fixed) {
+      testTotal = action.fixedValue;
+    } else {
+      const spellTestResult = await parentActor.spellTest({attribute: action.attribute});
+      testTotal = spellTestResult.rolls[0].total;
+    }
+    if (targets.size === 0) {
       this._handleAbilityResults(action.results, new Set(), parentActor);
     } else {
-      const testTotal = spellTestResult.rolls[0].total;
       const targetTestResults = targets.map(target => {
-        let targetTestResult = target.document.actor.determineDefensiveTestResult(action.targetingSave, testTotal);
+        const targetTestResult = target.document.actor.determineDefensiveTestResult(action.targetingSave, testTotal, parentActor.name);
         return [target, [targetTestResult]];
       });
-      this._renderTestResult(parentActor, targetHitResults, rollTotal, action.targetingSave, `${action.attribute} SPELL TEST`);
+      this._renderTestResult(parentActor, targetTestResults, testTotal, action.targetingSave, `${action.attribute} SPELL TEST`);
       this._handleAbilityResults(action.results, targetTestResults, parentActor);
     }
   }
@@ -179,17 +197,41 @@ export class RtRItem extends Item {
    * @private
    */
   async _handleMartialTestAction(parentActor, action, targets) {
-    const spellTestResult = await parentActor.martialTest({attribute:  action.attribute});
-    if (target.size === 0) {
+    let testTotal = 0;
+    if (action.fixed) {
+      testTotal = action.fixedValue;
+    } else {
+      const martialTestResult = await parentActor.martialTest({attribute: action.attribute});
+      testTotal = martialTestResult.rolls[0].total;
+    }
+    if (targets.size === 0) {
       this._handleAbilityResults(action.results, new Set(), parentActor);
     } else {
-      const testTotal = spellTestResult.rolls[0].total;
       const targetTestResults = targets.map(target => {
-        let targetTestResult = target.document.actor.determineDefensiveTestResult(action.targetingSave, testTotal);
+        let targetTestResult = target.document.actor.determineDefensiveTestResult(action.targetingSave, testTotal, parentActor.name);
         return [target, [targetTestResult]];
       });
-      this._renderTestResult(parentActor, targetHitResults, rollTotal, action.targetingSave, `${action.attribute} MARTIAL TEST`);
+      this._renderTestResult(parentActor, targetTestResults, testTotal, action.targetingSave, `${action.attribute} MARTIAL TEST`);
       this._handleAbilityResults(action.results, targetTestResults, parentActor);
+    }
+  }
+
+  /**
+   * Handle always Actions
+   * @param {RtRActor} parentActor 
+   * @param {Object} action 
+   * @param {Set<RtRToken>} targets
+   * @private
+   */
+  async _handleAlwaysActions(parentActor, action, targets) {
+    if (targets.size === 0) {
+      this._handleAbilityResults(action.results, new Set(), parentActor);
+    } else {
+      const targetHitResults = targets.map(target => {
+        return [target, [Promise.resolve('always')]];
+      });
+
+      this._handleAbilityResults(action.results, targetHitResults, parentActor);
     }
   }
 
@@ -244,25 +286,6 @@ export class RtRItem extends Item {
         `,
         style: CONST.CHAT_MESSAGE_STYLES.OOC
     });
-  }
-
-  /**
-   * Handle always Actions
-   * @param {RtRActor} parentActor 
-   * @param {Object} action 
-   * @param {Set<RtRToken>} targets
-   * @private
-   */
-  async _handleAlwaysActions(parentActor, action, targets) {
-    if (targets.size === 0) {
-      this._handleAbilityResults(action.results, new Set(), parentActor);
-    } else {
-      const targetHitResults = targets.map(target => {
-        return [target, Promise.resolve('always')];
-      });
-
-      this._handleAbilityResults(action.results, targetHitResults, parentActor);
-    }
   }
 
   /**
@@ -354,34 +377,55 @@ export class RtRItem extends Item {
             case 'damage':
               this._makeDamageRoll(foundResult, parentActor).then(rollMessage => {
                 const damage = rollMessage.rolls[0].total;
-                token.document.actor.applyDamage(damage, foundResult.damageType);
+                if (game.user.isGM) {
+                  token.document.actor.applyDamage(damage, foundResult.damageType);
+                } else {
+                  game.socket.emit("system.reclaim-the-realm", { action: "applyDamage", actorId: token.document.actor.id, tokenId: token.document.id, damage: damage, type: foundResult.damageType });
+                }
               });
               break;
             case 'heal':
               parentActor.roll(foundResult.healFormula, {type: game.i18n.localize(CONFIG.RTR.abilityResultType[foundResult.type])})
                 .then(healResult => {
-                  token.document.actor.heal(healResult.rolls[0].total);
+                  if (game.user.isGM) {
+                    token.document.actor.heal(healResult.rolls[0].total, foundResult.healTHP);
+                  } else {
+                    game.socket.emit("system.reclaim-the-realm", { action: "heal", actorId: token.document.actor.id, tokenId: token.document.id, heal: healResult.rolls[0].total, healTHP: foundResult.healTHP });
+                  }
               });
               break;
             case 'statusEffect':
-              token.document.actor.applyStatusEffect(foundResult.statusEffectToApply, foundResult.statusEffectDuration);
+              if (game.user.isGM) {
+                token.document.actor.applyStatusEffect(foundResult.statusEffectToApply, foundResult.statusEffectDuration);
+              } else {
+                game.socket.emit("system.reclaim-the-realm", { action: "applyStatusEffect", actorId: token.document.actor.id, tokenId: token.document.id, statusEffect: foundResult.statusEffectToApply, duration: foundResult.statusEffectDuration });
+              }
               this._renderStatusEffectAppliedChatMessage(foundResult.statusEffectToApply, parentActor, token);
               break;
             case 'damageAndStatusEffect':
               this._makeDamageRoll(foundResult, parentActor).then(rollMessage => {
                 const damage = rollMessage.rolls[0].total;
-                token.document.actor.applyDamage(damage, foundResult.damageType);
+                if (game.user.isGM) {
+                  token.document.actor.applyDamage(damage, foundResult.damageType);
+                  token.document.actor.applyStatusEffect(foundResult.statusEffectToApply, foundResult.statusEffectDuration);
+                } else {
+                  game.socket.emit("system.reclaim-the-realm", { action: "applyDamage", actorId: token.document.actor.id, damage: damage, type: foundResult.damageType });
+                  game.socket.emit("system.reclaim-the-realm", { action: "applyStatusEffect", actorId: token.document.actor.id, tokenId: token.document.id, statusEffect: foundResult.statusEffectToApply, duration: foundResult.statusEffectDuration });
+                }
               });
-              token.document.actor.applyStatusEffect(foundResult.statusEffectToApply, foundResult.statusEffectDuration);
               this._renderStatusEffectAppliedChatMessage(chosenResult.statusEffectToApply, parentActor);
               break;
             case 'healAndStatusEffect':
               parentActor.roll(foundResult.healFormula, {type: game.i18n.localize(CONFIG.RTR.abilityResultType[foundResult.type])})
                 .then(healResult => {
-                  token.document.actor.heal(healResult.rolls[0].total);
+                  if (game.user.isGM) {
+                    token.document.actor.heal(healResult.rolls[0].total, foundResult.healTHP);
+                    token.document.actor.applyStatusEffect(foundResult.statusEffectToApply, foundResult.statusEffectDuration);
+                  } else {
+                    game.socket.emit("system.reclaim-the-realm", { action: "heal", actorId: token.document.actor.id, tokenId: token.document.id, heal: healResult.rolls[0].total, healTHP: foundResult.healTHP });
+                    game.socket.emit("system.reclaim-the-realm", { action: "applyStatusEffect", actorId: token.document.actor.id, tokenId: token.document.id, statusEffect: foundResult.statusEffectToApply, duration: foundResult.statusEffectDuration });
+                  }
               });
-              token.document.actor.applyStatusEffect(foundResult.statusEffectToApply, foundResult.statusEffectDuration);
-              this._renderStatusEffectAppliedChatMessage(foundResult.statusEffectToApply, parentActor, token);
               break;
             default:
               console.error(`Chosen Result Type '${foundResult.type}' handling not defined`)

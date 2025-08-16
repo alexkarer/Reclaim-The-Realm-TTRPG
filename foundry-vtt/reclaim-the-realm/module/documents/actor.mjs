@@ -11,6 +11,7 @@ const { api } = foundry.applications;
  * @property {string} extraDice extra dice to roll
  * @property {string} attribute the attribute which might be added in some cases
  * @property {string} skill the skill bonuse relevant for skill test
+ * @property {string} save the type of save made
  * @property {Boolean} advantage
  * @property {Boolean} disadvantage 
  */
@@ -156,9 +157,10 @@ export class RtRActor extends Actor {
     if (this._hasStatusEffect('BLESS I')) {
       options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
     }
-    options.type = 'MARTIAL TEST';
+    const attributeTestData = this._getAttributeRollBonus(options.attribute);
+    options.type =  attributeTestData.rollType + ' MARTIAL TEST';
+    options.bonus = options.bonus ? options.bonus + attributeTestData.rollData : attributeTestData.rollData;
     options.bonus = options.bonus ? options.bonus + ' +@martialTest' : ' +@martialTest';
-    options.bonus =  options.bonus + this._getAttributeRollBonus(options.attribute);
 
     return this.d20Test(options);
   }
@@ -178,10 +180,10 @@ export class RtRActor extends Actor {
     if (this._hasStatusEffect('BLESS I')) {
       options.extraDice = options.extraDice ? options.extraDice + ' +d4' : ' +d4';
     }
-    attributeTestData = this._getAttributeRollBonus(options.attribute);
-    options.type = 'SPELL TEST';
+    const attributeTestData = this._getAttributeRollBonus(options.attribute);
+    options.type =  attributeTestData.rollType + ' SPELL TEST';
+    options.bonus = options.bonus ? options.bonus + attributeTestData.rollData : attributeTestData.rollData;
     options.bonus = options.bonus ? options.bonus + ' +@spellTest' : ' +@spellTest';
-    options.bonus =  options.bonus + this._getAttributeRollBonus(options.attribute);
 
     return this.d20Test(options);
   }
@@ -370,13 +372,50 @@ export class RtRActor extends Actor {
     return true;
   }
 
+
+  /**
+   * casts a spell and checks if it was cast successfully
+   * @param {number} spellDifficulty 
+   * @param {string} spellName 
+   * @returns {Promise<boolean>} promise resolving wheter a spell was cast or not
+   */
+  castSpell(spellDifficulty, spellName) {
+    let roll = new Roll('2d6+@spellCastBonus', this.getRollData());
+
+    return roll.toMessage({
+        speaker: this,
+        flavor: `Casting Spell ${spellName}`,
+        rollMode: game.settings.get('core', 'rollMode'),
+    }).then(result => {
+        let text = '';
+        let doubleOnes = (result.rolls[0].terms[0].results[0].result === 1) && (result.rolls[0].terms[0].results[1].result === 1);
+        let success = true;
+        if ((result.rolls[0].total >= spellDifficulty) && !doubleOnes) {
+            text = `<span style="color:green">Spell ${spellName} was successfuly cast</span>`;
+        } else if (result.rolls[0].total >= (spellDifficulty - 5)) {
+            text = `<span style="color:yellow">Spell ${spellName} was cast with mishap</span>`;
+        } else {
+            text = `<span style="color:red">Spell ${spellName} Cast was unsuccessful and mishap occurs</span>`;
+            success = false;
+        }
+
+        ChatMessage.create({
+            speaker: this,
+            content: text,
+            style: CONST.CHAT_MESSAGE_STYLES.OOC
+        });
+        return success;
+    });
+  }
+
   /**
    * Determines if the Attack Hits the actor
    * @param {number} attackResult total attack result
    * @param {number} unmodifiedResult unmodified attack result
+   * @param {string} attackerName name of the attacker
    * @returns {Promise<string>} Promise containing result type see RTR.abilityResultCondition
    */
-  determineAttackHit(attackResult, unmodifiedResult) {
+  determineAttackHit(attackResult, unmodifiedResult, attackerName) {
     if (this.type === 'npc') { {[]}
       if (unmodifiedResult === 1) {
         return Promise.resolve('onFailure');
@@ -388,8 +427,31 @@ export class RtRActor extends Actor {
         return Promise.resolve('onPartialHit');
       }
     } else {
-      // TODO ask for defensice roll, should do via an option window where you can add temp bonuses as well as adv/disadv
-      return Promise.resolve('onHit');
+      const characterUser = game.users.find(u => u?.character?.id === this.id);
+      return api.DialogV2.query(characterUser ?? game.users.activeGM, 'prompt', {
+        content: `${attackerName} attacked you (${attackResult}). Roll a Dodge?`,
+        rejectClose: false,
+        modal: true,
+        window: { title: 'Incoming Attack!' },
+        ok: { label: 'Roll to Dodge' }
+      }).then(confirm => {
+        if (!confirm) {
+          return Promise.resolve('onFailure');
+        }
+        return this.saveTest({save: 'dodge'}).then(roll => {
+          const unmodifiedResult = roll?.rolls[0]?.terms[0]?.results[0]?.result;
+          const rollTotal = roll.rolls[0].total;
+          if (unmodifiedResult === 1) {
+            return Promise.resolve('onHit');
+          } else if (unmodifiedResult === 20) {
+            return Promise.resolve('onFailure');
+          } else if (attackResult >= rollTotal) {
+            return Promise.resolve('onHit');
+          } else {
+            return Promise.resolve('onPartialHit');
+          }
+        });
+      });
     }
   }
 
@@ -397,10 +459,11 @@ export class RtRActor extends Actor {
    * Determines if an offensive ability is greater than the actors defense
    * @param {string} defense the defense that is targeted ('STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER')
    * @param {number} attackResult total attack result
+   * @param {string} attackerName name of the attacker
    * @returns {Promise<string>} Promise containing result type see RTR.abilityResultCondition
    */
-  determineDefensiveTestResult(defense, attackResult) {
-    if (this.type === 'npc') { {[]}
+  determineDefensiveTestResult(defense, attackResult, attackerName) {
+    if (this.type === 'npc') {
       let defenseThreshold = 99;
       if (defense === 'STABILITY') {
         defenseThreshold = (10 + this.system.defenses.stability);
@@ -417,8 +480,26 @@ export class RtRActor extends Actor {
         return Promise.resolve('onFailure');
       }
     } else {
-      // TODO ask for defensice roll, should do via an option window where you can add temp bonuses as well as adv/disadv
-      return Promise.resolve('onSuccess');
+      const characterUser = game.users.find(u => u?.character?.id === this.id);
+      return api.DialogV2.query(characterUser ?? game.users.activeGM, 'prompt', {
+        content: `${attackerName} targets you (${attackResult}). Make a ${defense} Save?`,
+        rejectClose: false,
+        modal: true,
+        window: { title: 'Incoming Attack!' },
+        ok: { label: `Roll for ${defense} Save` }
+      }).then(confirm => {
+        if (!confirm) {
+          return Promise.resolve('onFailure');
+        }
+        return this.saveTest({save: defense.toLowerCase()}).then(roll => {
+          const rollTotal = roll.rolls[0].total;
+          if (attackResult >= rollTotal) {
+            return Promise.resolve('onSuccess');
+          } else {
+            return Promise.resolve('onFailure');
+          }
+        });
+      });
     }
   }
 
@@ -438,9 +519,9 @@ export class RtRActor extends Actor {
       let newTempHp = Math.max(0, this.system.tempHp - amount);
       this.update({ "system.tempHp": newTempHp});
     }
-    const reducedTempHP = amouunt - remainingAmount;
+    const reducedTempHP = amount - remainingAmount;
     const resistanceAmount = this._hasResistance(type);
-    remainingAmount-= resistanceAmount;
+    remainingAmount = Math.max(0, remainingAmount - resistanceAmount);
     let newHp = Math.max(0, this.system.hp.value - remainingAmount);
     this.update({ "system.hp.value": newHp});
     
@@ -454,7 +535,7 @@ export class RtRActor extends Actor {
     ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this }),
         content: `<div class="flexcol">
-        <span>${this.name} recieved ${amount} ${type} damage.</span>
+        <strong>${this.name} recieved ${remainingAmount} ${type} damage.</strong>
         ${additionalText}
         <div>`,
         style: CONST.CHAT_MESSAGE_STYLES.OOC
@@ -464,16 +545,28 @@ export class RtRActor extends Actor {
   /**
    * heal actor
    * @param {number} amount 
+   * @param {boolean} healTHP 
    */
-  heal(amount) {
+  heal(amount, healTHP) {
+    let chatMessage = '';
+    if (healTHP) {
+      let newTHP = Math.max(this.system.tempHp, amount);
+      if (newTHP > this.system.tempHp) {
+        chatMessage = `${this.name} gains ${amount} THP. (${this.system.tempHp} -> ${newTHP})`;
+        this.update({ "system.tempHp": newTHP});
+      } else {
+        chatMessage = `${this.name} is already at (${this.system.tempHp} THP.`;
+      }
+    } else {
+      let newHp = Math.min(this.system.hp.max, this.system.hp.value + amount);
+      chatMessage = `${this.name} heals ${amount} HP. (${this.system.hp.value} -> ${newHp})`;
+      this.update({ "system.hp.value": newHp});
+    }
     ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this }),
-        content: `${this.name} heals ${amount} HP.`,
+        content: chatMessage,
         style: CONST.CHAT_MESSAGE_STYLES.OOC
     });
-
-    let newHp = Math.min(this.system.hp.max, this.system.hp.value + amount);
-    this.update({ "system.hp.value": newHp});
   }
 
   /**
@@ -502,6 +595,7 @@ export class RtRActor extends Actor {
     }
 
     const effect = await ActiveEffect.implementation.fromStatusEffect(statusEffectId);
+    // TODO fix duration
     effect.duration = foundry.utils.mergeObject(effect.duration ?? {}, {
       rounds: roundDuration
     });

@@ -128,10 +128,12 @@ Hooks.once('ready', function () {
   Hooks.on('hotbarDrop', (bar, data, slot) => {createDocMacro(data, slot); return false; });
 
   Hooks.on('combatTurnChange', (combat, prior, current) => {
+    if (!game.user.isGM) return;
     combat.combatant?.token?.handleOnCombatTurnStart();
   });
 
   Hooks.on('createActor', async (actor, options, userId) => {
+    if (!game.user.isGM) return;
     // we check this in case the actor is imported from a compendium
     if (!actor.flags?.mySystem?.defaultsApplied) {
       const tokenDefaults = getPrototypeTokenConfig(actor.type);
@@ -139,6 +141,30 @@ Hooks.once('ready', function () {
         prototypeToken: tokenDefaults,
         'flags.mySystem.defaultsApplied': true
       });
+    }
+  });
+
+  game.socket.on("system.reclaim-the-realm", async (data) => {
+    if (!game.user.isGM) return;
+
+    if (data.action === "applyDamage") {
+      const actor = game.actors.get(data.actorId);
+      const tokenDocument = actor?.getActiveTokens().find(t => t.document.id === data.tokenId);
+      if (!tokenDocument) return console.error("Token Document not found:", data.actorId, data.tokenId);
+      tokenDocument.actor.applyDamage(data.damage, data.type);
+
+    } else if (data.action === "applyStatusEffect") {
+      const actor = game.actors.get(data.actorId);
+      const tokenDocument = actor?.getActiveTokens().find(t => t.document.id === data.tokenId);
+      if (!tokenDocument) return console.error("Token Document not found:", data.actorId, data.tokenId);
+      tokenDocument.actor.applyStatusEffect(data.statusEffect, data.duration);
+
+    } else if (data.action === "heal") {
+      const actor = game.actors.get(data.actorId);
+      const tokenDocument = actor?.getActiveTokens().find(t => t.document.id === data.tokenId);
+      if (!tokenDocument) return console.error("Token Document not found:", data.actorId, data.tokenId);
+      tokenDocument.actor.heal(data.heal, data.healTHP);
+
     }
   });
 });

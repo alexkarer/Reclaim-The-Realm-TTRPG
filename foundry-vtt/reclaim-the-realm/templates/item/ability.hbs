@@ -50,12 +50,12 @@
 
                 <span class="grid-span-2">
                     {{#if (or (eq action.actionType 'martialTest') (eq action.actionType 'spellTest'))}}
-                        {{localize (lookup @root.config.attributeAbbreviations action.attribute)}} {{localize (lookup @root.config.abilityActionType action.actionType)}} {{localize 'vs.'}} {{localize action.targetingSave}}
+                        {{#unless action.fixed}} {{localize (lookup @root.config.attributeAbbreviations action.attribute)}} {{/unless}} {{localize (lookup @root.config.abilityActionType action.actionType)}} {{#if action.fixed}} ({{action.fixedValue}}) {{/if}} {{localize 'vs.'}} {{localize action.targetingSave}}
                     {{else}}
                         {{#if (exists action.targetingSave)}}
-                            {{localize (lookup @root.config.abilityActionType action.actionType)}} {{localize 'vs.'}} {{localize action.targetingSave}}
+                            {{localize (lookup @root.config.abilityActionType action.actionType)}} {{#if action.fixed}} ({{action.fixedValue}}) {{/if}} {{localize 'vs.'}} {{localize action.targetingSave}}
                         {{else}}
-                            {{localize (lookup @root.config.abilityActionType action.actionType)}}
+                            {{localize (lookup @root.config.abilityActionType action.actionType)}} {{#if action.fixed}} ({{action.fixedValue}}) {{/if}}
                         {{/if}}
                     {{/if}}
                 </span>
@@ -83,7 +83,7 @@
                         {{/if}}
 
                         {{#if (eq result.type 'heal')}}
-                            <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.healFormula }}</span>
+                            <span>{{localize (lookup @root.config.abilityResultType result.type)}}{{#if result.healTHP}} (THP){{/if}}: {{ result.healFormula }}</span>
                         {{/if}}
 
                         {{#if (or (or (eq result.type 'statusEffect') (eq result.type 'damageAndStatusEffect')) (eq result.type 'healAndStatusEffect'))}}

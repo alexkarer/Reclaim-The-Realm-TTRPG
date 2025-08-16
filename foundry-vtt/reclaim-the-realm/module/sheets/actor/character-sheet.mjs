@@ -811,34 +811,7 @@ export class RtRCharacterSheet extends RtRBaseHandlebarsActorSheet {
             ui.notifications.error(`Unable to find Spell to cast`, {console: true});
         }
 
-        let spellDifficulty = spell.system.spellDifficulty;
-        let label = `Casting Spell ${spell.name}`
-        let roll = new Roll('2d6+@spellCastBonus', this.actor.getRollData())
-        let speaker = ChatMessage.getSpeaker({ actor: this.actor });
-
-        await roll.toMessage({
-            speaker: speaker,
-            flavor: label,
-            rollMode: game.settings.get('core', 'rollMode'),
-        }).then(result => {
-            let text = '';
-            let doubleOnes = (result.rolls[0].terms[0].results[0].result === 1) && (result.rolls[0].terms[0].results[1].result === 1);
-            if ((result.rolls[0].total >= spellDifficulty) && !doubleOnes) {
-                text = `<span style="color:green">Spell ${spell.name} was successfuly cast</span>`;
-            } else if (result.rolls[0].total >= (spellDifficulty - 5)) {
-                text = `<span style="color:yellow">Spell ${spell.name} was cast with mishap</span>`;
-            } else {
-                text = `<span style="color:red">Spell ${spell.name} Cast was unsuccessful and mishap occurs</span>`;
-            }
-
-            ChatMessage.create({
-                speaker: speaker,
-                content: text,
-                style: CONST.CHAT_MESSAGE_STYLES.OOC
-            });
-
-        });
-        return roll;
+        this.actor.castSpell(spell.system.spellDifficulty, spell.name);
     }
 
     /***************

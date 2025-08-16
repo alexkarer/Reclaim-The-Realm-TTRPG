@@ -631,6 +631,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
           content: `
           <div class="compact-grid grid-2col">
             <label for="actiontype" class="compact-input">Action Type</label><select name="actiontype" id="actiontype"  class="compact-input">${actionTypeSelect}</select>
+            <label for="fixed" class="compact-input">Fixed?</label><input type="checkbox" name="fixed" class="compact-input" id="fixed">
+            <label for="fixedvalue" class="compact-input">Fixed Value</label><input type="number" name="fixedvalue" class="compact-input" id="fixedvalue">
             <label for="attributeselect" class="compact-input">Relevant Attribute</label><select name="attributeselect" id="attributeselect"  class="compact-input">${attributeSelect}</select>
             <label for="targetingsave" class="compact-input">Targeting Save</label><select name="targetingsave" id="targetingsave"  class="compact-input">${targetingSaveSelect}</select>
             <label for="targets" class="compact-input">Target(s)</label><select name="targets" id="targets" class="compact-input">${targetsSelect}</select>
@@ -648,6 +650,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       const newActions = foundry.utils.deepClone(this.document.system.actions);
       newActions.push({
         actionType: result.actiontype,
+        fixed: result.fixed,
+        fixedValue: result.fixedvalue,
         attribute: result.attributeselect,
         targetingSave: result.targetingsave === '-' ? undefined : result.targetingsave,
         targets: result.targets,
@@ -708,6 +712,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
             <label for="damagetype" class="compact-input">Damage Type</label><select name="damagetype" id="damagetype" class="compact-input">${damageTypeSelect}</select>
 
             <label for="healformula" class="compact-input">Heal Formula</label><input type="text" name="healformula" class="compact-input" id="healformula">
+            <label for="healthp" class="compact-input">Heal THP?</label><input type="checkbox" name="healthp" class="compact-input" id="healthp">
 
             <label for="statuseffect" class="compact-input">Afflict Status Effect</label><select name="statuseffect" id="statuseffect" class="compact-input">${statusEffectSelect}</select>
             <label for="durationtype" class="compact-input">Duation Unit</label><select name="durationtype" id="durationtype" class="compact-input">${durationSelect}</select>
@@ -734,6 +739,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         statusEffectDurationType: result.durationtype,
         statusEffectDuration: result.duration,
         healFormula: result.healformula,
+        healTHP: result.healthp,
         additionalEffects: result.additional
       };
       const existingResult = newAction.results.find(r => r.condition === result.condition);

@@ -60,6 +60,8 @@ export default class RtRAbility extends RtRItemBase {
     schema.actions = new fields.ArrayField(
       new fields.SchemaField({
         actionType: new fields.StringField({...requiredStringField, choices: Object.keys(CONFIG.RTR.abilityActionType), initial: Object.keys(CONFIG.RTR.abilityActionType)[0]}),
+        fixed: new fields.BooleanField({initial: false, required: true, nullable: false}),
+        fixedValue: new fields.NumberField(),
         attribute: new fields.StringField({choices: Object.keys(CONFIG.RTR.attributes)}), // needed for marital/spell test
         targetingSave: new fields.StringField({choices: ['STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER']}),
         targets: new fields.StringField({...requiredStringField, choices: Object.keys(CONFIG.RTR.abilityTargetTypes), initial: Object.keys(CONFIG.RTR.abilityTargetTypes)[0]}),
@@ -78,6 +80,7 @@ export default class RtRAbility extends RtRItemBase {
             statusEffectDurationType: new fields.StringField({choices: Object.keys(CONFIG.RTR.abilityDurationTypes), initial: Object.keys(CONFIG.RTR.abilityDurationTypes)[0]}),
             statusEffectDuration: new fields.NumberField(),
             healFormula: new fields.StringField(),
+            healTHP: new fields.BooleanField({initial: false, required: true, nullable: false}),
             additionalEffects: new fields.StringField()
           })
         )
