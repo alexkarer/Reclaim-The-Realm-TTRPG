@@ -6,9 +6,11 @@ Before Ability Actions, data needs to be cleaned up in the Abilities (also do pe
 - For Usage Cost, Aether Dice are still a bit wonky, maybe save different types as individual entires.
 
 Implement the Ability Actions:
+  - Also allow editing of ability actions
   - Look should be improved a bit
     - Add Icons (Status Effects, for attacks/spell Tests)
   - Make Spell Cast Test bwefore using spell
+  - always action results need to be handled
   - TODO how to do crits
   - functionality for maneuver push or upcast missing
   - Figure out how to do more than 1 action

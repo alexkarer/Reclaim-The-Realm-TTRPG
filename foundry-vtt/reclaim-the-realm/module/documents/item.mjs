@@ -88,13 +88,13 @@ export class RtRItem extends Item {
           await this._handleAttackAction(parentActor, this.system.actions[0], targets);
           break;
         case 'martialTest':
-          // TODO
+          this._handleMartialTestAction(parentActor, this.system.actions[0], targets);
           break;
         case 'spellTest':
-          // TODO
+          this._handleSpellTestAction(parentActor, this.system.actions[0], targets);
           break;
         case 'always':
-          this._handleAlwaysActions(parentActor, this.system.actions[0], targets)
+          this._handleAlwaysActions(parentActor, this.system.actions[0], targets);
           break;
         default:
           console.warn(`Unknown action type: ${this.system.actions[0].actionType}`);
@@ -126,7 +126,7 @@ export class RtRItem extends Item {
    * @private
    */
   async _handleAttackAction(parentActor, action, targets) {
-    let attackResult = await this._makeActorAttack(parentActor, action.actionType);
+    const attackResult = await this._makeActorAttack(parentActor, action.actionType);
     if (!attackResult) {
       return;
     }
@@ -136,27 +136,104 @@ export class RtRItem extends Item {
       const unmodifiedResult = attackResult?.rolls[0]?.terms[0]?.results[0]?.result;
       const rollTotal = attackResult.rolls[0].total;
       const targetHitResults = targets.map(target => {
-        const hitResult = target.document.actor.determineAttackHit(rollTotal, unmodifiedResult ?? 10);
-        // TODO: Additionally need to check if other ability is test against. eg. ATTACK vs TOUGHNESS
-        return [target, hitResult];
+        const hitResults = [];
+        hitResults.push(target.document.actor.determineAttackHit(rollTotal, unmodifiedResult ?? 10));
+        if (action.targetingSave) {
+          hitResults.push(target.document.actor.determineDefensiveTestResult(action.targetingSave, rollTotal));
+        }
+        return [target, hitResults];
       });
       
-      this._renderAttackHitResult(parentActor, targetHitResults, rollTotal);
+      this._renderAttackHitResult(parentActor, targetHitResults, rollTotal, action.targetingSave);
       this._handleAbilityResults(action.results, targetHitResults, parentActor);
+    }
+  }
+
+  /**
+   * Handle Spell test actions for abilities.
+   * @param {RtRActor} parentActor 
+   * @param {Object} action 
+   * @param {Set<RtRToken>} targets
+   * @private
+   */
+  async _handleSpellTestAction(parentActor, action, targets) {
+    const spellTestResult = await parentActor.spellTest({attribute:  action.attribute});
+    if (target.size === 0) {
+      this._handleAbilityResults(action.results, new Set(), parentActor);
+    } else {
+      const testTotal = spellTestResult.rolls[0].total;
+      const targetTestResults = targets.map(target => {
+        let targetTestResult = target.document.actor.determineDefensiveTestResult(action.targetingSave, testTotal);
+        return [target, [targetTestResult]];
+      });
+      this._renderTestResult(parentActor, targetHitResults, rollTotal, action.targetingSave, `${action.attribute} SPELL TEST`);
+      this._handleAbilityResults(action.results, targetTestResults, parentActor);
+    }
+  }
+
+  /**
+   * Handle Martial test actions for abilities.
+   * @param {RtRActor} parentActor 
+   * @param {Object} action 
+   * @param {Set<RtRToken>} targets
+   * @private
+   */
+  async _handleMartialTestAction(parentActor, action, targets) {
+    const spellTestResult = await parentActor.martialTest({attribute:  action.attribute});
+    if (target.size === 0) {
+      this._handleAbilityResults(action.results, new Set(), parentActor);
+    } else {
+      const testTotal = spellTestResult.rolls[0].total;
+      const targetTestResults = targets.map(target => {
+        let targetTestResult = target.document.actor.determineDefensiveTestResult(action.targetingSave, testTotal);
+        return [target, [targetTestResult]];
+      });
+      this._renderTestResult(parentActor, targetHitResults, rollTotal, action.targetingSave, `${action.attribute} MARTIAL TEST`);
+      this._handleAbilityResults(action.results, targetTestResults, parentActor);
     }
   }
 
   /**
    * Render attack hit result
    * @param {RtRActor} parentActor 
-   * @param {Set<[RtRToken, Promise<string>]} targetHitResults the targets that where hit
+   * @param {Set<[RtRToken, [Promise<string>]]} targetHitResults the targets that where hit
    * @param {Number} attackRoll
+   * @param {string} targetingDefense the defense that is targeted ('STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER')
    */
-  async _renderAttackHitResult(parentActor, targetHitResults, attackRoll) {
-    const hitResultsMessages = await Promise.all(targetHitResults.map(([token, resultPromise]) => {
-      return resultPromise.then(hitResult => {
-        return Promise.resolve(`ATTACK (${attackRoll}) vs. ${token.name} -> ${hitResult}`);
+  async _renderAttackHitResult(parentActor, targetHitResults, attackRoll, targetingDefense) {
+    const hitResultsMessages = await Promise.all(targetHitResults.map(([token, resultPromises]) => {
+      return Promise.all(resultPromises).then(hitResults => {
+        if (hitResults.length === 1) {
+           return Promise.resolve(`ATTACK (${attackRoll}) vs. ${token.name} -> ${hitResults[0]}`);
+        } else {
+          return Promise.resolve(`ATTACK (${attackRoll}) vs. ${token.name} (${targetingDefense}) -> ${hitResults.join(', ')}`);
+        }
       })
+    }));
+    ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: parentActor }),
+        content: `
+          <div class="flexcol">
+          ${hitResultsMessages.join(' ')}
+          </div>
+        `,
+        style: CONST.CHAT_MESSAGE_STYLES.OOC
+    });
+  }
+
+  /**
+   * Render test result
+   * @param {RtRActor} parentActor 
+   * @param {Set<[RtRToken, [Promise<string>]]} targetTestResults the targets that where hit
+   * @param {Number} testRoll
+   * @param {string} targetingDefense the defense that is targeted ('STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER')
+   * @param {string} testType
+   */
+  async _renderTestResult(parentActor, targetTestResults, testRoll, targetingDefense, testType) {
+    const hitResultsMessages = await Promise.all(targetTestResults.map(([token, resultPromises]) => {
+      return Promise.all(resultPromises).then(testResult => {
+          return Promise.resolve(`${testType} (${testRoll}) vs. ${token.name} (${targetingDefense}) -> ${testResult[0]}`);
+      });
     }));
     ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: parentActor }),
@@ -218,7 +295,7 @@ export class RtRItem extends Item {
 
   /**
    * @param {[Object]} actionResults defined action results of ability 
-   * @param {Set<[RtRToken, Promise<string>]} targetHitResults the targets that where hit
+   * @param {Set<[RtRToken, [Promise<string>]]} targetHitResults the targets that where hit
    * @param {RtRActor} parentActor that owns the item
    */
   async _handleAbilityResults(actionResults, targetHitResults, parentActor) {
@@ -266,32 +343,50 @@ export class RtRItem extends Item {
       }
 
     } else {
-      // TODO, probably better to clarify before damage should is applied.
-      targetHitResults.forEach(v => {
-        v[1].then(hitResult => {
+      targetHitResults.forEach(([token, resultPromises]) => {
+        resultPromises.forEach(promise => promise.then(hitResult => {
           const foundResult = actionResults.find(r => r.condition === hitResult);
           if (!foundResult) {
-            console.error(`Ability Result ${hitResult} in Ability ${this.name} not found!`);
+            console.warn(`Ability Result ${hitResult} in Ability ${this.name} not found!`);
             return;
           }
           switch(foundResult.type) {
             case 'damage':
               this._makeDamageRoll(foundResult, parentActor).then(rollMessage => {
                 const damage = rollMessage.rolls[0].total;
-                v[0].document.actor.applyDamage(damage, foundResult.damageType);
+                token.document.actor.applyDamage(damage, foundResult.damageType);
               });
               break;
             case 'heal':
               parentActor.roll(foundResult.healFormula, {type: game.i18n.localize(CONFIG.RTR.abilityResultType[foundResult.type])})
                 .then(healResult => {
-                  v[0].document.actor.heal(healResult.rolls[0].total);
+                  token.document.actor.heal(healResult.rolls[0].total);
               });
               break;
-            // TODO implement remaining results
+            case 'statusEffect':
+              token.document.actor.applyStatusEffect(foundResult.statusEffectToApply, foundResult.statusEffectDuration);
+              this._renderStatusEffectAppliedChatMessage(foundResult.statusEffectToApply, parentActor, token);
+              break;
+            case 'damageAndStatusEffect':
+              this._makeDamageRoll(foundResult, parentActor).then(rollMessage => {
+                const damage = rollMessage.rolls[0].total;
+                token.document.actor.applyDamage(damage, foundResult.damageType);
+              });
+              token.document.actor.applyStatusEffect(foundResult.statusEffectToApply, foundResult.statusEffectDuration);
+              this._renderStatusEffectAppliedChatMessage(chosenResult.statusEffectToApply, parentActor);
+              break;
+            case 'healAndStatusEffect':
+              parentActor.roll(foundResult.healFormula, {type: game.i18n.localize(CONFIG.RTR.abilityResultType[foundResult.type])})
+                .then(healResult => {
+                  token.document.actor.heal(healResult.rolls[0].total);
+              });
+              token.document.actor.applyStatusEffect(foundResult.statusEffectToApply, foundResult.statusEffectDuration);
+              this._renderStatusEffectAppliedChatMessage(foundResult.statusEffectToApply, parentActor, token);
+              break;
             default:
               console.error(`Chosen Result Type '${foundResult.type}' handling not defined`)
           }
-        })
+        }))
       });
     }
   }

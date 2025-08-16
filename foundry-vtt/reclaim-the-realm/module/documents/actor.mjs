@@ -393,6 +393,35 @@ export class RtRActor extends Actor {
     }
   }
 
+  /**
+   * Determines if an offensive ability is greater than the actors defense
+   * @param {string} defense the defense that is targeted ('STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER')
+   * @param {number} attackResult total attack result
+   * @returns {Promise<string>} Promise containing result type see RTR.abilityResultCondition
+   */
+  determineDefensiveTestResult(defense, attackResult) {
+    if (this.type === 'npc') { {[]}
+      let defenseThreshold = 99;
+      if (defense === 'STABILITY') {
+        defenseThreshold = (10 + this.system.defenses.stability);
+      } else if (defense === 'DODGE') {
+        defenseThreshold = (10 + this.system.defenses.dodge);
+      } else if (defense === 'TOUGHNESS') {
+        defenseThreshold = (10 + this.system.defenses.toughness);
+      } else if (defense === 'WILLPOWER') {
+        defenseThreshold = (10 + this.system.defenses.willpower);
+      }
+      if (attackResult > defenseThreshold) {
+        return Promise.resolve('onSuccess');
+      } else {
+        return Promise.resolve('onFailure');
+      }
+    } else {
+      // TODO ask for defensice roll, should do via an option window where you can add temp bonuses as well as adv/disadv
+      return Promise.resolve('onSuccess');
+    }
+  }
+
   /* -------------------------------------------- */
   /*  Interactions with other Actors              */
   /* -------------------------------------------- */
@@ -403,23 +432,33 @@ export class RtRActor extends Actor {
    * @param {string} type 
    */
   applyDamage(amount, type) {
-    ChatMessage.create({
-        speaker: ChatMessage.getSpeaker({ actor: this }),
-        content: `${this.name} recieves ${amount} ${type} damage.`,
-        style: CONST.CHAT_MESSAGE_STYLES.OOC
-    });
-
     let remainingAmount = amount;
     if (this.system.tempHp > 0) {
       remainingAmount = amount - Math.min(this.system.tempHp, amount);
       let newTempHp = Math.max(0, this.system.tempHp - amount);
       this.update({ "system.tempHp": newTempHp});
     }
-    // TODO: add more detailed message which shows also the resistances and tempHP reduced
+    const reducedTempHP = amouunt - remainingAmount;
     const resistanceAmount = this._hasResistance(type);
     remainingAmount-= resistanceAmount;
     let newHp = Math.max(0, this.system.hp.value - remainingAmount);
     this.update({ "system.hp.value": newHp});
+    
+    let additionalText = '';
+    if (reducedTempHP > 0) {
+      additionalText += `<span>TempHP reduced by ${reducedTempHP}</span>`;
+    } if (resistanceAmount > 0) {
+      additionalText += `<span>Damaged reduced by ${resistanceAmount} from resistances</span>`;
+    }
+
+    ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this }),
+        content: `<div class="flexcol">
+        <span>${this.name} recieved ${amount} ${type} damage.</span>
+        ${additionalText}
+        <div>`,
+        style: CONST.CHAT_MESSAGE_STYLES.OOC
+    });
   }
 
   /**
@@ -446,6 +485,26 @@ export class RtRActor extends Actor {
     const existing = this.effects.get(generateFvttId(`RTR${statusEffectId}`));
     if (existing) return existing.delete();
     const effect = await ActiveEffect.implementation.fromStatusEffect(statusEffectId);
+    return ActiveEffect.implementation.create(effect, { parent: this, keepId: true });
+  }
+
+  /**
+   * apply Status effect
+   * @param {String} statusEffectId
+   * @param {number} roundDuration duration in number of combat rounds 
+   * @returns 
+   */
+  async applyStatusEffect(statusEffectId, roundDuration) {
+    const existing = this.effects.get(generateFvttId(`RTR${statusEffectId}`));
+    if (existing) {
+      // TODO: at some point need to check the duration overlap
+      return;
+    }
+
+    const effect = await ActiveEffect.implementation.fromStatusEffect(statusEffectId);
+    effect.duration = foundry.utils.mergeObject(effect.duration ?? {}, {
+      rounds: roundDuration
+    });
     return ActiveEffect.implementation.create(effect, { parent: this, keepId: true });
   }
 
