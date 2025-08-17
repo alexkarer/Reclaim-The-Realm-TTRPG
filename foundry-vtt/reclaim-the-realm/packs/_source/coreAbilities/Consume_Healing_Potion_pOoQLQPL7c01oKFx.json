@@ -21,19 +21,50 @@
       "requiredPerks": []
     },
     "usageCost": {
-      "apCost": 0,
+      "apCost": 1,
       "mpCost": 0,
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "1-2 AP"
+      "otherResourceCost": "",
+      "rawStringCost": "1-2 AP",
+      "classResourceName": ""
     },
     "tags": "Item",
     "range": "MELEE RANGE",
     "targets": "SELF or 1 creature",
     "duration": "INSTANT",
-    "formula": "2d6+3[heal]"
+    "formula": "2d6+3[heal]",
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "always",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targets": "self",
+        "targetsAreaSize": null,
+        "rangeType": "unspecified",
+        "range": null,
+        "results": [
+          {
+            "condition": "always",
+            "type": "heal",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "2d6+3",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "sort": 0,
@@ -46,12 +77,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750362131175,
-    "modifiedTime": 1750362190560,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "modifiedTime": 1755425783283,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!pOoQLQPL7c01oKFx"
 }

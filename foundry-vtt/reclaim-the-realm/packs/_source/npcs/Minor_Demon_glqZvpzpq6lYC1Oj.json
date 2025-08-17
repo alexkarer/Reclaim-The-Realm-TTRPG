@@ -346,19 +346,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "Attack ⚔️✨ 14 1.5m, 1 target. On hit: 2d6+2 [unholy] damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6+2 [unholy]"
+        "formula": "2d6+2 [unholy]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "meleeMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 14,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": null,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+2",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+2",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -372,12 +417,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751053282216,
-        "modifiedTime": 1751909933936,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755426595700,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!glqZvpzpq6lYC1Oj.fnIaMCzm822LAJ6q"
     },
@@ -403,19 +448,52 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP, CD(3)"
+          "otherResourceCost": "CD(3)",
+          "rawStringCost": "2 AP, CD(3)",
+          "classResourceName": ""
         },
         "summary": "[DT] 12 [WILLPOWER] [SAVE][CONE] (4.5m). On success: d6+3 [unholy] damage. , additionally afflict [CURSED I] lasts 2 [ROUND] [SAVE LOWERS]",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "d6+3[unholy]"
+        "formula": "d6+3[unholy]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "spellTest",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 12,
+            "attribute": "spi",
+            "targetingSave": "WILLPOWER",
+            "targets": "cone",
+            "targetsAreaSize": 4.5,
+            "rangeType": "unspecified",
+            "range": null,
+            "results": [
+              {
+                "condition": "onSuccess",
+                "type": "damageAndStatusEffect",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "d6+3",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Unholy",
+                "statusEffectToApply": "cursed1",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": 2,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": "SAVE LOWERS"
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -429,12 +507,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751053323169,
-        "modifiedTime": 1751909952530,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755426682944,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!glqZvpzpq6lYC1Oj.z3te6UmPd9aPBQls"
     },

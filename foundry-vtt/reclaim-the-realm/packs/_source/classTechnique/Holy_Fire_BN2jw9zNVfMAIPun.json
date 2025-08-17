@@ -18,16 +18,26 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "",
+      "otherRequirements": "Good or LN/CN/N Alignment",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
-      "apCost": 0,
+      "apCost": 3,
       "mpCost": 0,
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "3 AP, 3 AD(-1)"
+      "otherResourceCost": "(1)",
+      "rawStringCost": "3 AP, 3 AD(-1)",
+      "classResourceName": "aetherDice",
+      "classResourceCost": 3
     },
     "tags": [
       "Class Technique (Priest)",
@@ -37,7 +47,51 @@
     "targets": "evil creatures",
     "duration": "INSTANT",
     "formula": "(2*@attributes.spi.value)d6[holy]",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "spellTest",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "spi",
+        "targetingSave": "DODGE",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "meters",
+        "range": 9,
+        "results": [
+          {
+            "condition": "onSuccess",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(2*@attributes.spi.value)d6",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Holy",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          },
+          {
+            "condition": "onFailure",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(2*@attributes.spi.value)d6",
+            "damageBonus": "",
+            "halfDamage": true,
+            "damageType": "Holy",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "sort": 0,
@@ -50,12 +104,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750113748710,
-    "modifiedTime": 1753476447154,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755424238755,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!BN2jw9zNVfMAIPun"
 }

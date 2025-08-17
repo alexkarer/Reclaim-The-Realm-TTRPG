@@ -7,7 +7,7 @@
   "system": {
     "description": "<p>You partially transform, while Transformation is active you gain the following benefits:</p><ul><li><p>Increase your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MARTIAL DAMAGE</span></strong></span> as if your relevant Attribute was 2 higher</p></li><li><p>Increase your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">STABILITY</span></strong></span> and <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong></span> by 3</p></li><li><p>Gain 2 extra <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">MP</span></strong></span></p></li></ul><p>Only one Transformation Class Technique can be used per <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TURN</span></strong></span></p>",
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 4,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -19,16 +19,25 @@
       "minimumCha": 0,
       "skillRankRequirements": [],
       "requiredPerks": [],
-      "otherRequirements": ""
+      "otherRequirements": "",
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Warlock",
+      "requiredPerk": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
-      "apCost": 0,
+      "apCost": 1,
       "mpCost": 0,
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "1 AP, 2 Corruption"
+      "otherResourceCost": "",
+      "rawStringCost": "1 AP, 2 Corruption",
+      "classResourceName": "corruption",
+      "classResourceCost": 2
     },
     "tags": [
       "Class Technique (Warlock)",
@@ -51,12 +60,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750115967604,
-    "modifiedTime": 1753312236267,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755425672506,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!Q1Y5rPJfppyERW8S"
 }

@@ -7,7 +7,7 @@
   "system": {
     "description": "<p>Requires all 3 partial transformations to be done. Once used requires you to spend 1 <strong>Corruption</strong> at the start of each of your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TURN</span></strong></span> for this ability to remain active. While it remains active you gain the following benefits:</p><ul><li><p>Your creature type changes to match your entity (Elemental or Cosmic).</p></li><li><p>Increase your <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">AP</span></strong></span> by 1</p></li><li><p>You halve all damage you recieve (before any other resistances are applied).</p></li><li><p>All other partial transformation bonuses remain active as long this ability lasts.</p></li></ul><p>Only one Transformation Class Technique can be used per <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">TURN</span></strong></span>. After this transformation ends all other transformations cease to be active.</p>",
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 8,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -18,16 +18,26 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Warlock",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
-      "apCost": 0,
+      "apCost": 1,
       "mpCost": 0,
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "1 AP, 1 Corruption"
+      "otherResourceCost": "",
+      "rawStringCost": "1 AP, 1 Corruption",
+      "classResourceName": "corruption",
+      "classResourceCost": 1
     },
     "tags": [
       "Class Technique (Warlock)",
@@ -50,12 +60,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750116435743,
-    "modifiedTime": 1753312201670,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755425717642,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!Fd6AnFZqI9183MHJ"
 }

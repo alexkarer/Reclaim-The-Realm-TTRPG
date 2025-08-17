@@ -146,11 +146,19 @@ RTR.abilityActionType = {
 }
 
 RTR.abilityResultCondition = {
-  always: "RTR.Item.Ability.AbilityResultCondition.Always",
-  onSuccess: "RTR.Item.Ability.AbilityResultCondition.OnSuccess",
-  onFailure: "RTR.Item.Ability.AbilityResultCondition.OnFailure",
-  onHit: "RTR.Item.Ability.AbilityResultCondition.OnHit",
-  onPartialHit: "RTR.Item.Ability.AbilityResultCondition.OnPartialHit",
+  always: "RTR.Item.Ability.AbilityResultCondition.Always.conditionLabel",
+  onSuccess: "RTR.Item.Ability.AbilityResultCondition.OnSuccess.conditionLabel",
+  onFailure: "RTR.Item.Ability.AbilityResultCondition.OnFailure.conditionLabel",
+  onHit: "RTR.Item.Ability.AbilityResultCondition.OnHit.conditionLabel",
+  onPartialHit: "RTR.Item.Ability.AbilityResultCondition.OnPartialHit.conditionLabel",
+}
+
+RTR.abilityResultConditionChatLabel = {
+  always: "RTR.Item.Ability.AbilityResultCondition.Always.chatLabel",
+  onSuccess: "RTR.Item.Ability.AbilityResultCondition.OnSuccess.chatLabel",
+  onFailure: "RTR.Item.Ability.AbilityResultCondition.OnFailure.chatLabel",
+  onHit: "RTR.Item.Ability.AbilityResultCondition.OnHit.chatLabel",
+  onPartialHit: "RTR.Item.Ability.AbilityResultCondition.OnPartialHit.chatLabel",
 }
 
 RTR.abilityResultType = {

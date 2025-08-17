@@ -410,19 +410,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "Attack ⚔️ 18 1.5m, 1 target. On hit: 3d6+2 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "3d6+2[physical]"
+        "formula": "3d6+2[physical]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "meleeMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 18,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": null,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "3d6+2",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "3d6+2",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -436,12 +481,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751803964406,
-        "modifiedTime": 1751804009197,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755426776794,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!u0bUkHpcDZ39tPk1.WnK8vhgVrsejugFH"
     },
@@ -467,19 +512,66 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 4,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "4 AP, CD(3)"
+          "otherResourceCost": "CD(3)",
+          "rawStringCost": "4 AP, CD(3)",
+          "classResourceName": ""
         },
         "summary": "DT 14 TOUGHNESS SAVE AURA(3m). On success: 3d6+6 physical damage. , additionally knock PRONE.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "3d6+6[physical]"
+        "formula": "3d6+6[physical]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "martialTest",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 14,
+            "attribute": "str",
+            "targetingSave": "TOUGHNESS",
+            "targets": "special",
+            "targetsAreaSize": 3,
+            "rangeType": "unspecified",
+            "range": null,
+            "results": [
+              {
+                "condition": "onSuccess",
+                "type": "damageAndStatusEffect",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "3d6+6",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectToApply": "prone",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": 1,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onFailure",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "3d6+6",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -493,12 +585,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751804010844,
-        "modifiedTime": 1751804577997,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755426878705,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!u0bUkHpcDZ39tPk1.Ujw98IqAQHV7CJn1"
     },
@@ -524,19 +616,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 3,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "3 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "3 AP",
+          "classResourceName": ""
         },
         "summary": "Attack 🏹✨ 13 21m range, 1 target. On hit: 2d6+1 unholy damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6+1[unholy]"
+        "formula": "2d6+1[unholy]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "rangedSpellAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 13,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "meters",
+            "range": 21,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+1",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+1",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -550,22 +687,22 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751804336294,
-        "modifiedTime": 1751804421972,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755426935688,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!u0bUkHpcDZ39tPk1.ThYAVmlIZt7REPjC"
     },
     {
-      "name": "Extract Live",
+      "name": "Extract Life",
       "type": "npcAbility",
       "_id": "FQrBDvejz6xPVYMd",
       "img": "icons/magic/unholy/hand-claw-fire-blue.webp",
       "system": {
-        "description": "<p><span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DT</span></strong></span> 13 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">WILLPOWER SAVE AURA</span></strong></span> (1.5m). On success: 2d6+1 cosmic damage. Additionally the creature heals <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">HP</span></strong></span> equal to half damage done. On Failure: halve damage</p>",
+        "description": "<p><span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">DT</span></strong></span> 13 <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">WILLPOWER SAVE AURA</span></strong></span> (1.5m). On success: 2d6+1 unholy damage. Additionally the creature heals <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">HP</span></strong></span> equal to half damage done. On Failure: halve damage</p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -581,19 +718,65 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 4,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "4 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "4 AP",
+          "classResourceName": ""
         },
         "summary": "DT 13 WILLPOWER SAVE AURA (1.5m). On success: 2d6+1 cosmic damage. , additionally the creature heals HP equal to half damage done. On Failure: halve damage",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6+1[unholy]"
+        "formula": "2d6+1[unholy]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "spellTest",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 13,
+            "attribute": "spi",
+            "targetingSave": "WILLPOWER",
+            "targets": "special",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": null,
+            "results": [
+              {
+                "condition": "onSuccess",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+1",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": "heal damage dealt"
+              },
+              {
+                "condition": "onFailure",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+1",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": "heal damage taken"
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -607,12 +790,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751804486637,
-        "modifiedTime": 1751804568721,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755427051160,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!u0bUkHpcDZ39tPk1.FQrBDvejz6xPVYMd"
     },
@@ -659,12 +842,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1751803182792,
-    "modifiedTime": 1753734650390,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755427061587,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!actors!u0bUkHpcDZ39tPk1"
 }

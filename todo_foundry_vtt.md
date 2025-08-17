@@ -4,6 +4,9 @@ Before Ability Actions, data needs to be cleaned up in the Abilities (also do pe
 - Requirements and Usage Cost of Class Techniques and Core Abilities still need to be proper set
 - Usage Cost also missing for Martial Maneuvers
 - For Usage Cost, Aether Dice are still a bit wonky, maybe save different types as individual entires.
+- add reaction to usage cost
+
+Remove unnecesarry fields from foundry
 
 Implement the Ability Actions:
   - Also allow editing of ability actions
@@ -18,6 +21,11 @@ Implement the Ability Actions:
   - allow bonuses in ability (e.g. damage and attack bonuses)
   - also crit reduction or smth
   - properly translate attack results
+  - self skills should autotarget self
+  - differentiate between single target and multi target
+  - fix damage being rolled inidividually for each result.
+  - find way to implement dynamic duration calcuilation, or remove it
+  - allow multiple damage types
 
 After ACtions are Implemented:
   - Add remaining spells

@@ -5,7 +5,7 @@
   "_id": "1tNEh7TWr2ipaZmT",
   "img": "icons/skills/melee/swords-parry-block-yellow.webp",
   "system": {
-    "description": "<p>If you loose <strong><span style=\"text-decoration:underline\">HP</span></strong> from a creature within range you can loose this Ability. Make a <em>Weapon Attack</em> against that creature and on a hit deal extra damage equal to <strong><span style=\"text-decoration:underline\">HP</span></strong> just lost.</p><p></p>",
+    "description": "<p>If you loose <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">HP</span></strong></span> from a creature within range you can loose this Ability. Make a <em><strong>Basic Attack Melee</strong></em> Ability against that creature and on a hit deal extra damage equal to <span style=\"text-decoration:underline\"><strong><span style=\"text-decoration:underline\">HP</span></strong></span> just lost.</p><p></p>",
     "requirements": {
       "minimumLevel": 0,
       "minimumMartialLevel": 0,
@@ -18,7 +18,15 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Barbarian",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -26,14 +34,17 @@
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "1 REACTION, 3 RAGE"
+      "otherResourceCost": "REACTION",
+      "rawStringCost": "1 REACTION, 3 RAGE",
+      "classResourceName": "rage",
+      "classResourceCost": 3
     },
     "tags": "Class Technique (Barbarian)",
     "range": "MELEE RANGE",
     "targets": "1 creature*",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -46,12 +57,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750113036209,
-    "modifiedTime": 1750113125086,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755423365416,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!1tNEh7TWr2ipaZmT"
 }

@@ -18,7 +18,15 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Barbarian",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -26,14 +34,17 @@
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "2 or more Rage"
+      "otherResourceCost": "",
+      "rawStringCost": "2 or more Rage",
+      "classResourceName": "rage",
+      "classResourceCost": 2
     },
     "tags": "Class Technique (Barbarian)",
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true
   },
   "effects": [],
   "sort": 0,
@@ -46,12 +57,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750112493749,
-    "modifiedTime": 1750112585081,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755423086752,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!V1sGxtEGAJXyjQP1"
 }

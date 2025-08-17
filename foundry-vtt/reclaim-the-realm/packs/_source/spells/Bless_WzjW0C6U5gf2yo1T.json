@@ -53,7 +53,37 @@
     "duration": "SPI ROUND",
     "components": "V (Prayer), S, M (a springling of holy water)",
     "formula": "",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "always",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targets": "friendlyCreature",
+        "targetsAreaSize": null,
+        "rangeType": "meters",
+        "range": 9,
+        "results": [
+          {
+            "condition": "always",
+            "type": "statusEffect",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectToApply": "bless1",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": 1,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "flags": {},
@@ -61,11 +91,11 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
-    "modifiedTime": 1753827639883,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "systemVersion": "2.2.0",
+    "modifiedTime": 1755426048802,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "sort": 0,
   "ownership": {

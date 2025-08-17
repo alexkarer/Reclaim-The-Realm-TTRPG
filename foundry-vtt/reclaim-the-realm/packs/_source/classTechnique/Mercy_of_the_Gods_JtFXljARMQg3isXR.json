@@ -18,7 +18,15 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "",
+      "otherRequirements": "Good or LN/CN/N Alignment",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -26,8 +34,10 @@
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "0 AP, number of AD(2-) equal to spell ability level + 1"
+      "otherResourceCost": "number of AD(2-) equal to Spell Ability number + 1",
+      "rawStringCost": "0 AP, number of AD(2-) equal to spell ability level + 1",
+      "classResourceName": "aetherDice",
+      "classResourceCost": 2
     },
     "tags": [
       "Class Technique (Priest)",
@@ -50,12 +60,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750113399646,
-    "modifiedTime": 1753476517718,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755424233681,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!JtFXljARMQg3isXR"
 }

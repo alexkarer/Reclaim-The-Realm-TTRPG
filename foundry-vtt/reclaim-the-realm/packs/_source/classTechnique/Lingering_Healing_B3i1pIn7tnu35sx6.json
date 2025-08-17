@@ -18,7 +18,15 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "",
+      "otherRequirements": "Good or LN/CN/N Alignment",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -26,8 +34,10 @@
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "0 AP, 2 AD(3-)"
+      "otherResourceCost": "(3-)",
+      "rawStringCost": "0 AP, 2 AD(3-)",
+      "classResourceName": "aetherDice",
+      "classResourceCost": 2
     },
     "tags": [
       "Class Technique (Priest)",
@@ -37,7 +47,37 @@
     "targets": "one ally that was targeted by a SPELL ABILITY",
     "duration": "SPI/2, min 1 ROUND",
     "formula": "",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "always",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "unspecified",
+        "range": null,
+        "results": [
+          {
+            "condition": "always",
+            "type": "statusEffect",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectToApply": "healing1",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": 2,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "sort": 0,
@@ -50,12 +90,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750113284591,
-    "modifiedTime": 1753476468820,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755424234823,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!B3i1pIn7tnu35sx6"
 }

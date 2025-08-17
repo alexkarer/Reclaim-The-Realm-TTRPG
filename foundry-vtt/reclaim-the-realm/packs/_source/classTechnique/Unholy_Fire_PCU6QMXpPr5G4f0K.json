@@ -18,7 +18,15 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "",
+      "otherRequirements": "Evil or LN/CN/N Alignment",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -37,7 +45,51 @@
     "targets": "SPHERE 3m",
     "duration": "INSTANT",
     "formula": "(2*@attributes.spi.value)d6[unholy]",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "spellTest",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "spi",
+        "targetingSave": "DODGE",
+        "targets": "sphere",
+        "targetsAreaSize": 3,
+        "rangeType": "meters",
+        "range": 12,
+        "results": [
+          {
+            "condition": "onSuccess",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(2*@attributes.spi.value)d6",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Unholy",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          },
+          {
+            "condition": "onFailure",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(2*@attributes.spi.value)d6",
+            "damageBonus": "",
+            "halfDamage": true,
+            "damageType": "Unholy",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "sort": 0,
@@ -50,12 +102,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750114044627,
-    "modifiedTime": 1753476488779,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755424451454,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!PCU6QMXpPr5G4f0K"
 }

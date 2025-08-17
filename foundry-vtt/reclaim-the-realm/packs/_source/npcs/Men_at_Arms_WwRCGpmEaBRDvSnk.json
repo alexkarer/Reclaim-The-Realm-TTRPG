@@ -346,19 +346,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "Attack ⚔️ 15 1.5m, 1 target. On hit: 2d6+2 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6+2[physical]"
+        "formula": "2d6+2[physical]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "meleeMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 15,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": null,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+2",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+2",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -372,12 +417,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751042999710,
-        "modifiedTime": 1751043024987,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "modifiedTime": 1755428794577,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!WwRCGpmEaBRDvSnk.mGRXgYrW3QEHXac6"
     },
@@ -403,19 +448,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "Attack 🏹 13 20m range, 1 target. On hit: 2d6+2 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6+2[physical]"
+        "formula": "2d6+2[physical]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "rangedMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 13,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "meters",
+            "range": 21,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+2",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+2",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -429,12 +519,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751043133679,
-        "modifiedTime": 1751043184779,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "modifiedTime": 1755428853395,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!WwRCGpmEaBRDvSnk.btyjKdiJFHlIDOyU"
     },
@@ -460,19 +550,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 3,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "3 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "3 AP",
+          "classResourceName": ""
         },
         "summary": "Attack ⚔️ 15 1.5m, Cleave. On hit: 2d6+2 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6+2[physical]"
+        "formula": "2d6+2[physical]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "meleeMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 15,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "unspecified",
+            "range": null,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+2",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+2",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -486,12 +621,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751043186593,
-        "modifiedTime": 1751043228231,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "modifiedTime": 1755428892848,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!WwRCGpmEaBRDvSnk.x1ICE9UZ9P7nKY2x"
     },
@@ -501,7 +636,7 @@
       "_id": "ez1eYSxbA2U9DncA",
       "img": "icons/skills/melee/hand-grip-sword-orange.webp",
       "system": {
-        "description": "<p>Attack ⚔️ 15 vs HARDNESS 1.5m, 1 target. On hit: knock [PRONE].</p>",
+        "description": "<p>Attack ⚔️ 15 vs STABILITY 1.5m, 1 target. On hit: knock [PRONE].</p>",
         "requirements": {
           "minimumLevel": 0,
           "minimumMartialLevel": 0,
@@ -517,19 +652,52 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 1,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "1 AP (1/TURN)"
+          "otherResourceCost": "1/TURN",
+          "rawStringCost": "1 AP (1/TURN)",
+          "classResourceName": ""
         },
-        "summary": "Attack ⚔️ 15 vs HARDNESS 1.5m, 1 target. On hit: knock [PRONE].",
+        "summary": "Attack ⚔️ 15 vs STABILITY 1.5m, 1 target. On hit: knock [PRONE].",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": ""
+        "formula": "",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "meleeMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 15,
+            "attribute": "str",
+            "targetingSave": "STABILITY",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": null,
+            "results": [
+              {
+                "condition": "onSuccess",
+                "type": "statusEffect",
+                "damageCalculationMethod": "lightMartialDamage",
+                "damageFormula": "",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectToApply": "prone",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -543,12 +711,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751043232813,
-        "modifiedTime": 1751043284920,
-        "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+        "modifiedTime": 1755428954070,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!WwRCGpmEaBRDvSnk.ez1eYSxbA2U9DncA"
     },
@@ -595,12 +763,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1751042848943,
-    "modifiedTime": 1753734058108,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755428957758,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!actors!WwRCGpmEaBRDvSnk"
 }

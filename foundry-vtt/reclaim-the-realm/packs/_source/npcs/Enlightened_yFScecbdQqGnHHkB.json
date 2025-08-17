@@ -376,19 +376,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "Attack ⚔️ 14 1.5m, 1 target. On hit: 2d6+1 physical  damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6+1[physical]"
+        "formula": "2d6+1[physical]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "meleeMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 14,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": null,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+1",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+1",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -402,12 +447,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1750974706891,
-        "modifiedTime": 1751798813428,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755427099712,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!yFScecbdQqGnHHkB.NYnq33cSAhszViib"
     },
@@ -463,19 +508,22 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "Roll d20+SPI vs DT 10. On success the creature gains BLESS I and PROTECTION I. On fail: the creature suffers 1d6 cosmic damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": ""
+        "formula": "",
+        "editLock": true,
+        "actions": []
       },
       "effects": [],
       "folder": null,
@@ -489,12 +537,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751798842525,
-        "modifiedTime": 1751799200713,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755427206926,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!yFScecbdQqGnHHkB.lGl02d5RquZLTsW0"
     }
@@ -510,12 +558,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750974341866,
-    "modifiedTime": 1753734593822,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755427209215,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!actors!yFScecbdQqGnHHkB"
 }

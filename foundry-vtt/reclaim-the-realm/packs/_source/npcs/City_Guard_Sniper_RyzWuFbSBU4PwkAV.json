@@ -346,19 +346,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "Attack ⚔️ 13 1.5m, 1 target. On hit: 2d6+1 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6+1[physical]"
+        "formula": "2d6+1[physical]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "meleeMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 13,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": null,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+1",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+1",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -372,12 +417,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751922060650,
-        "modifiedTime": 1751922105768,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755428470920,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!RyzWuFbSBU4PwkAV.nmDWfiZwZLHxDAQ8"
     },
@@ -403,19 +448,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "ttack 🏹 13 21m range, 1 target. On hit: 2d6+1 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6+1[physical]"
+        "formula": "2d6+1[physical]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "rangedMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 13,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "meters",
+            "range": 21,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+1",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6+1",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -429,12 +519,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1751922061186,
-        "modifiedTime": 1751922155932,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755428503842,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!RyzWuFbSBU4PwkAV.4bRINdeSghGQrS6z"
     },
@@ -480,12 +570,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1751921842186,
-    "modifiedTime": 1753734626604,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755428506228,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!actors!RyzWuFbSBU4PwkAV"
 }

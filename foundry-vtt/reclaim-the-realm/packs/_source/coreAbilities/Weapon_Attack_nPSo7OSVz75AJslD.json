@@ -19,19 +19,68 @@
       "minimumCha": 0
     },
     "usageCost": {
-      "apCost": 0,
+      "apCost": 2,
       "mpCost": 0,
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "2 AP"
+      "otherResourceCost": "",
+      "rawStringCost": "2 AP",
+      "classResourceName": ""
     },
-    "tags": "Weapon; Attack",
+    "tags": [
+      "Basic",
+      "Attack",
+      "Melee"
+    ],
     "range": "WEAPON RANGE",
     "targets": "1 creature",
     "duration": "INSTANT",
-    "formula": ""
+    "formula": "",
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "meleeMartialAttack",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "melee",
+        "range": null,
+        "results": [
+          {
+            "condition": "onHit",
+            "type": "damage",
+            "damageCalculationMethod": "mediumMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          },
+          {
+            "condition": "onPartialHit",
+            "type": "damage",
+            "damageCalculationMethod": "mediumMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": true,
+            "damageType": "Physical",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "flags": {},
@@ -39,11 +88,11 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
-    "modifiedTime": 1750419846961,
-    "lastModifiedBy": "dMcHPOGHbwLGpLCS"
+    "systemVersion": "2.2.0",
+    "modifiedTime": 1755425876245,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "sort": 100000,
   "ownership": {

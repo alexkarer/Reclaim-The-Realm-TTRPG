@@ -350,19 +350,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 physical damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "3d6[physical]"
+        "formula": "3d6[physical]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "meleeMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 16,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": null,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "3d6",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "3d6",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -376,12 +421,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1750977384925,
-        "modifiedTime": 1750977493526,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755428025257,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!RUDvv34Ndc0TKxFU.f68t2KZIcyuQlhXh"
     },
@@ -407,19 +452,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 3,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "3 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "3 AP",
+          "classResourceName": ""
         },
         "summary": "Attack ⚔️ 16 1.5m, 1 target. On hit: 3d6 unholy damage. , additionally the creature heals [HP] equal to half damage done",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "3d6[unholy]"
+        "formula": "3d6[unholy]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "meleeMartialAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 16,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": null,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "3d6",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "3d6",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -433,12 +523,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1750977386020,
-        "modifiedTime": 1750977488772,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755428079144,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!RUDvv34Ndc0TKxFU.6ymf3ZiLQTv82Dx3"
     },
@@ -464,19 +554,21 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 1,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "1 AP CD(3)"
+          "otherResourceCost": "CD(3)",
+          "rawStringCost": "1 AP CD(3)",
+          "classResourceName": ""
         },
         "summary": "Teleport to an unoccupied space up to 12m away",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": ""
+        "formula": "",
+        "editLock": true
       },
       "effects": [],
       "folder": null,
@@ -490,12 +582,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1750977386364,
-        "modifiedTime": 1750977578012,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755428093385,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!RUDvv34Ndc0TKxFU.azNwSpAqmtdRCJYq"
     },
@@ -541,12 +633,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750976619995,
-    "modifiedTime": 1753734526834,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755428116216,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!actors!RUDvv34Ndc0TKxFU"
 }

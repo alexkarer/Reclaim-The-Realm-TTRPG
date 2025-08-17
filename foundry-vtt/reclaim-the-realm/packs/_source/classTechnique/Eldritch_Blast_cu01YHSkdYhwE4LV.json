@@ -18,16 +18,26 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Warlock",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
-      "apCost": 0,
+      "apCost": 2,
       "mpCost": 0,
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "2 AP, 1 Corruption"
+      "otherResourceCost": "",
+      "rawStringCost": "2 AP, 1 Corruption",
+      "classResourceName": "corruption",
+      "classResourceCost": 1
     },
     "tags": [
       "Class Technique (Warlock)",
@@ -37,7 +47,66 @@
     "targets": "1 Creature",
     "duration": "1 ROUND",
     "formula": "(1 + floor(@attributes.spi.value/2))d10[entity damage]",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "rangedSpellAttack",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targetingSave": "TOUGHNESS",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "meters",
+        "range": 21,
+        "results": [
+          {
+            "condition": "onHit",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(1 + floor(@attributes.spi.value/2))d10",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Cosmic",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          },
+          {
+            "condition": "onPartialHit",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(1 + floor(@attributes.spi.value/2))d10",
+            "damageBonus": "",
+            "halfDamage": true,
+            "damageType": "Cosmic",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          },
+          {
+            "condition": "onSuccess",
+            "type": "statusEffect",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectToApply": "vulnurable1",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": 1,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "sort": 0,
@@ -50,12 +119,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750115007671,
-    "modifiedTime": 1753476566988,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755425429050,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!cu01YHSkdYhwE4LV"
 }

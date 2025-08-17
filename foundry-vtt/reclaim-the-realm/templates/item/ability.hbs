@@ -50,12 +50,12 @@
 
                 <span class="grid-span-2">
                     {{#if (or (eq action.actionType 'martialTest') (eq action.actionType 'spellTest'))}}
-                        {{#unless action.fixed}} {{localize (lookup @root.config.attributeAbbreviations action.attribute)}} {{/unless}} {{localize (lookup @root.config.abilityActionType action.actionType)}} {{#if action.fixed}} ({{action.fixedValue}}) {{/if}} {{localize 'vs.'}} {{localize action.targetingSave}}
+                        {{#unless action.fixed}} {{localize (lookup @root.config.attributeAbbreviations action.attribute)}} {{/unless}} {{localize (lookup @root.config.abilityActionType action.actionType)}} {{#if action.fixed}} ({{action.fixedValue}}){{/if}} {{#if action.rollBonus}} (+{{action.rollBonus}}){{/if}} {{localize 'vs.'}} {{localize action.targetingSave}}
                     {{else}}
                         {{#if (exists action.targetingSave)}}
-                            {{localize (lookup @root.config.abilityActionType action.actionType)}} {{#if action.fixed}} ({{action.fixedValue}}) {{/if}} {{localize 'vs.'}} {{localize action.targetingSave}}
+                            {{localize (lookup @root.config.abilityActionType action.actionType)}} {{#if action.fixed}} ({{action.fixedValue}}) {{/if}} {{#if action.rollBonus}} (+{{action.rollBonus}}){{/if}} {{localize 'vs.'}} {{localize action.targetingSave}}
                         {{else}}
-                            {{localize (lookup @root.config.abilityActionType action.actionType)}} {{#if action.fixed}} ({{action.fixedValue}}) {{/if}}
+                            {{localize (lookup @root.config.abilityActionType action.actionType)}} {{#if action.fixed}} ({{action.fixedValue}}) {{/if}} {{#if action.rollBonus}} (+{{action.rollBonus}}){{/if}}
                         {{/if}}
                     {{/if}}
                 </span>
@@ -76,9 +76,9 @@
                         <strong>{{localize (lookup @root.config.abilityResultCondition result.condition)}}:</strong>
                         {{#if (or (eq result.type 'damage') (eq result.type 'damageAndStatusEffect'))}}
                             {{#if (eq result.damageCalculationMethod 'custom')}}
-                                <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.damageFormula }} {{localize (lookup @root.config.damageTypes result.damageType)}} {{#if result.halfDamage}}(half){{/if}}</span>
+                                <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{ result.damageFormula }} {{#if result.damageBonus}} (+{{result.damageBonus}}){{/if}} {{localize (lookup @root.config.damageTypes result.damageType)}} {{#if result.halfDamage}}(half){{/if}}</span>
                             {{else}}
-                                <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{localize (lookup @root.config.abilityDamageCalculationMethod result.damageCalculationMethod)}} {{localize (lookup @root.config.damageTypes result.damageType)}} {{#if result.halfDamage}}(half){{/if}}</span>
+                                <span>{{localize (lookup @root.config.abilityResultType result.type)}}: {{localize (lookup @root.config.abilityDamageCalculationMethod result.damageCalculationMethod)}} {{#if result.damageBonus}} (+{{result.damageBonus}}){{/if}}  {{localize (lookup @root.config.damageTypes result.damageType)}} {{#if result.halfDamage}}(half){{/if}}</span>
                             {{/if}}
                         {{/if}}
 

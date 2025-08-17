@@ -53,7 +53,51 @@
     "duration": "INSTANT",
     "components": "V (Incantation), M (Mouth, nostrils or similar)",
     "formula": "(2 + floor(@attributes.spi.value / 4))d8[fire]",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "spellTest",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "con",
+        "targetingSave": "DODGE",
+        "targets": "cone",
+        "targetsAreaSize": 4.5,
+        "rangeType": "unspecified",
+        "range": null,
+        "results": [
+          {
+            "condition": "onSuccess",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(2 + floor(@attributes.spi.value / 4))d8",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Fire",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          },
+          {
+            "condition": "onFailure",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(2 + floor(@attributes.spi.value / 4))d8",
+            "damageBonus": "",
+            "halfDamage": true,
+            "damageType": "Fire",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "flags": {},
@@ -61,11 +105,11 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
-    "modifiedTime": 1753827725035,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "systemVersion": "2.2.0",
+    "modifiedTime": 1755425935802,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "sort": 0,
   "ownership": {

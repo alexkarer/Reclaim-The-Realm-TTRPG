@@ -7,7 +7,7 @@
   "system": {
     "description": "<p>If you kill an enemy with a <strong><span style=\"text-decoration:underline\">MEELE MARTIAL ATTACK</span></strong> , you can use this ability to instantly gain 2 <strong><span style=\"text-decoration:underline\">AP</span></strong>. You can only use this ability once per turn and only during your turn.</p>",
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 4,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -18,7 +18,15 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Barbarian",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -49,12 +57,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750112905826,
-    "modifiedTime": 1753827813671,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755422999597,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!ZMw9axxJVtOZeBQR"
 }

@@ -550,6 +550,8 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    */
   static async _onEditUsageCost(event, target) {
       event.preventDefault();
+      const mapToSelectOptions = (options, selected) => options.map(type => `<option ${selected === type ? 'selected' : ''} value="${type}">${type}</option>`).join();
+      const classResourceSelect = mapToSelectOptions(['', ...Object.keys(CONFIG.RTR.classResources)], this.document.system.usageCost.classResourceName);
       const result = await api.DialogV2.input({
           rejectClose: false,
           modal: true,
@@ -561,7 +563,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
             <label for="mpcost" class="compact-input">MP Cost</label><input type="number" name="mpcost" class="compact-input" id="mpcost" value="${this.document.system.usageCost.mpCost}">
             <label for="arcanacost" class="compact-input">ARCANA Cost</label><input type="number" name="arcanacost" class="compact-input" id="arcanacost" value="${this.document.system.usageCost.arcanaCost}">
             <label for="staminacost" class="compact-input">STAMINA Cost</label><input type="number" name="staminacost" class="compact-input" id="staminacost" value="${this.document.system.usageCost.staminaCost}">
-            <label for="classresourcename" class="compact-input">Class Resource</label><input type="text" name="classresourcename" class="compact-input" id="classresourcename" value="${this.document.system.usageCost.classResourceName  ?? ''}">
+            <label for="classresourcename" class="compact-input">Class Resource</label><select name="classresourcename" id="classresourcename"  class="compact-input">${classResourceSelect}</select>
             <label for="classresourcecost" class="compact-input">Class Resource Cost</label><input type="number" name="classresourcecost" class="compact-input" id="classresourcecost" value="${this.document.system.usageCost.classResourceCost}">
             <label for="other" class="compact-input">Other</label><input type="text" name="other" class="compact-input" id="other" value="${this.document.system.usageCost.otherResourceCost}">
           </div>
@@ -631,6 +633,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
           content: `
           <div class="compact-grid grid-2col">
             <label for="actiontype" class="compact-input">Action Type</label><select name="actiontype" id="actiontype"  class="compact-input">${actionTypeSelect}</select>
+            <label for="rollbonus" class="compact-input">Roll Bonus</label><input type="number" name="rollbonus" class="compact-input" id="rollbonus">
             <label for="fixed" class="compact-input">Fixed?</label><input type="checkbox" name="fixed" class="compact-input" id="fixed">
             <label for="fixedvalue" class="compact-input">Fixed Value</label><input type="number" name="fixedvalue" class="compact-input" id="fixedvalue">
             <label for="attributeselect" class="compact-input">Relevant Attribute</label><select name="attributeselect" id="attributeselect"  class="compact-input">${attributeSelect}</select>
@@ -650,6 +653,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
       const newActions = foundry.utils.deepClone(this.document.system.actions);
       newActions.push({
         actionType: result.actiontype,
+        rollBonus: result.rollbonus,
         fixed: result.fixed,
         fixedValue: result.fixedvalue,
         attribute: result.attributeselect,
@@ -708,6 +712,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
 
             <label for="dmgcalcmethod" class="compact-input">Damage Calculation Method</label><select name="dmgcalcmethod" id="dmgcalcmethod" class="compact-input">${damageCalculationMethodSelect}</select>
             <label for="dmgformula" class="compact-input">Damage Formula</label><input type="text" name="dmgformula" class="compact-input" id="dmgformula">
+            <label for="damagebonus" class="compact-input">Damage Bonus</label><input type="text" name="damagebonus" class="compact-input" id="damagebonus">
             <label for="halfdamage" class="compact-input">Half Damage?</label><input type="checkbox" name="halfdamage" class="compact-input" id="halfdamage">
             <label for="damagetype" class="compact-input">Damage Type</label><select name="damagetype" id="damagetype" class="compact-input">${damageTypeSelect}</select>
 
@@ -733,6 +738,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
         type: result.type,
         damageCalculationMethod: result.dmgcalcmethod,
         damageFormula: result.dmgformula,
+        damageBonus: result.damagebonus,
         halfDamage: result.halfdamage,
         damageType: result.damagetype,
         statusEffectToApply: result.statuseffect,

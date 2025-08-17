@@ -80,6 +80,7 @@ export class RtRItem extends Item {
     let targets = game.user.targets;
 
     if (this.system.actions.length > 0) {
+      // TODO fix impl
       /*if (this.system.actions[0].targets === 'self') {
         const selfTarget = new Set();
         if (parentActor.isToken) {
@@ -141,7 +142,7 @@ export class RtRItem extends Item {
       unmodifiedResult = action.fixedValue;
       rollTotal = action.fixedValue;
     } else {
-      const attackResult = await this._makeActorAttack(parentActor, action.actionType);
+      const attackResult = await this._makeActorAttack(parentActor, action.actionType, action.rollBonus);
       unmodifiedResult = attackResult?.rolls[0]?.terms[0]?.results[0]?.result;
       rollTotal = attackResult.rolls[0].total;
     }
@@ -157,7 +158,7 @@ export class RtRItem extends Item {
         return [target, hitResults];
       });
       
-      this._renderAttackHitResult(parentActor, targetHitResults, rollTotal, action.targetingSave);
+      this._renderAttackHitResult(parentActor, targetHitResults, rollTotal, action.actionType, action.targetingSave);
       this._handleAbilityResults(action.results, targetHitResults, parentActor);
     }
   }
@@ -174,7 +175,7 @@ export class RtRItem extends Item {
     if (action.fixed) {
       testTotal = action.fixedValue;
     } else {
-      const spellTestResult = await parentActor.spellTest({attribute: action.attribute});
+      const spellTestResult = await parentActor.spellTest({attribute: action.attribute, bonus: `${action.rollBonus ? '+' + action.rollBonus : ''}`});
       testTotal = spellTestResult.rolls[0].total;
     }
     if (targets.size === 0) {
@@ -184,7 +185,7 @@ export class RtRItem extends Item {
         const targetTestResult = target.document.actor.determineDefensiveTestResult(action.targetingSave, testTotal, parentActor.name);
         return [target, [targetTestResult]];
       });
-      this._renderTestResult(parentActor, targetTestResults, testTotal, action.targetingSave, `${action.attribute} SPELL TEST`);
+      this._renderTestResult(parentActor, targetTestResults, testTotal, action.targetingSave, action.type, action.attribute);
       this._handleAbilityResults(action.results, targetTestResults, parentActor);
     }
   }
@@ -201,7 +202,7 @@ export class RtRItem extends Item {
     if (action.fixed) {
       testTotal = action.fixedValue;
     } else {
-      const martialTestResult = await parentActor.martialTest({attribute: action.attribute});
+      const martialTestResult = await parentActor.martialTest({attribute: action.attribute, bonus: `${action.rollBonus ? '+' + action.rollBonus : ''}`});
       testTotal = martialTestResult.rolls[0].total;
     }
     if (targets.size === 0) {
@@ -211,7 +212,7 @@ export class RtRItem extends Item {
         let targetTestResult = target.document.actor.determineDefensiveTestResult(action.targetingSave, testTotal, parentActor.name);
         return [target, [targetTestResult]];
       });
-      this._renderTestResult(parentActor, targetTestResults, testTotal, action.targetingSave, `${action.attribute} MARTIAL TEST`);
+      this._renderTestResult(parentActor, targetTestResults, testTotal, action.targetingSave, action.type, action.attribute);
       this._handleAbilityResults(action.results, targetTestResults, parentActor);
     }
   }
@@ -240,15 +241,16 @@ export class RtRItem extends Item {
    * @param {RtRActor} parentActor 
    * @param {Set<[RtRToken, [Promise<string>]]} targetHitResults the targets that where hit
    * @param {Number} attackRoll
+   * @param {string} attackType type of attack, see abilityActionType
    * @param {string} targetingDefense the defense that is targeted ('STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER')
    */
-  async _renderAttackHitResult(parentActor, targetHitResults, attackRoll, targetingDefense) {
+  async _renderAttackHitResult(parentActor, targetHitResults, attackRoll, attackType, targetingDefense) {
     const hitResultsMessages = await Promise.all(targetHitResults.map(([token, resultPromises]) => {
       return Promise.all(resultPromises).then(hitResults => {
         if (hitResults.length === 1) {
-           return Promise.resolve(`ATTACK (${attackRoll}) vs. ${token.name} -> ${hitResults[0]}`);
+           return Promise.resolve(`<span>vs. ${token.name} -> ${game.i18n.localize(CONFIG.RTR.abilityResultConditionChatLabel[hitResults[0]])}</span>`);
         } else {
-          return Promise.resolve(`ATTACK (${attackRoll}) vs. ${token.name} (${targetingDefense}) -> ${hitResults.join(', ')}`);
+          return Promise.resolve(`<span>vs. ${token.name} (${targetingDefense}) -> ${hitResults.map(r => game.i18n.localize(CONFIG.RTR.abilityResultConditionChatLabel[r])).join(', ')}</span>`);
         }
       })
     }));
@@ -256,6 +258,7 @@ export class RtRItem extends Item {
         speaker: ChatMessage.getSpeaker({ actor: parentActor }),
         content: `
           <div class="flexcol">
+          <strong>${game.i18n.localize(CONFIG.RTR.abilityActionType[attackType])} (${attackRoll})</strong>
           ${hitResultsMessages.join(' ')}
           </div>
         `,
@@ -269,18 +272,20 @@ export class RtRItem extends Item {
    * @param {Set<[RtRToken, [Promise<string>]]} targetTestResults the targets that where hit
    * @param {Number} testRoll
    * @param {string} targetingDefense the defense that is targeted ('STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER')
-   * @param {string} testType
+   * @param {string} testType see abilityActionType
+   * @param {string} attribute
    */
-  async _renderTestResult(parentActor, targetTestResults, testRoll, targetingDefense, testType) {
+  async _renderTestResult(parentActor, targetTestResults, testRoll, targetingDefense, testType, attribute) {
     const hitResultsMessages = await Promise.all(targetTestResults.map(([token, resultPromises]) => {
       return Promise.all(resultPromises).then(testResult => {
-          return Promise.resolve(`${testType} (${testRoll}) vs. ${token.name} (${targetingDefense}) -> ${testResult[0]}`);
+          return Promise.resolve(`<span>${testRoll} vs. ${token.name} (${targetingDefense}) -> ${game.i18n.localize(CONFIG.RTR.abilityResultConditionChatLabel[testResult[0]])}</span>`);
       });
     }));
     ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: parentActor }),
         content: `
           <div class="flexcol">
+          <strong>${game.i18n.localize(CONFIG.RTR.attributeAbbreviations[attribute])} ${game.i18n.localize(CONFIG.RTR.abilityActionType[testType])} (${testRoll})</strong>
           ${hitResultsMessages.join(' ')}
           </div>
         `,
@@ -291,23 +296,25 @@ export class RtRItem extends Item {
   /**
    * @param {RtRActor} parentActor 
    * @param {String} actionType 
+   * @param {number} rollBonus 
    * @private
    * @returns {Roll | undefined} The result of the attack roll, or undefined if the action type is not recognized.
    */
-  async _makeActorAttack(parentActor, actionType) {
+  async _makeActorAttack(parentActor, actionType, rollBonus) {
     let attackResult;
+    const rollOptions = {bonus: `${rollBonus ? '+' + rollBonus : ''}`};
     switch (actionType) {
       case 'meleeMartialAttack':
-        attackResult = parentActor.meleeMartialAttack({});
+        attackResult = parentActor.meleeMartialAttack(rollOptions);
         break;
       case 'meleeSpellAttack':
-        attackResult = parentActor.meleeSpellAttack({});
+        attackResult = parentActor.meleeSpellAttack(rollOptions);
         break;
       case 'rangedMartialAttack':
-        attackResult = parentActor.rangedMartialAttack({});
+        attackResult = parentActor.rangedMartialAttack(rollOptions);
         break;
       case 'rangedSpellAttack':
-        attackResult = parentActor.rangedSpellAttack({});
+        attackResult = parentActor.rangedSpellAttack(rollOptions);
         break;
       default:
         console.error('Not an attack action', action, this);
@@ -479,14 +486,15 @@ export class RtRItem extends Item {
   }
 
   /**
-   * @param {Object} abilityActionResult 
+   * @param {Object} result  abiliy damage result
    * @param {RtRActor} parentActor owner of the item
    * @returns {Promise<Object>} the roll message 
    * @private
    */
-  _makeDamageRoll(abilityActionResult, parentActor) {
-    const rollText = abilityActionResult.damageCalculationMethod === 'custom' ? 'DAMAGE' : game.i18n.localize(CONFIG.RTR.abilityDamageCalculationMethod[abilityActionResult.damageCalculationMethod]);
-    return parentActor.damageRoll(abilityActionResult.damageCalculationMethod, abilityActionResult.halfDamage, {type: rollText}, abilityActionResult.damageFormula, abilityActionResult.damageType);
+  _makeDamageRoll(result, parentActor) {
+    const rollText = result.damageCalculationMethod === 'custom' ? 'DAMAGE' : game.i18n.localize(CONFIG.RTR.abilityDamageCalculationMethod[result.damageCalculationMethod]);
+    const rollOptions = {type: rollText, bonus: `${result.damageBonus ? '+' + result.damageBonus  : ''}`};
+    return parentActor.damageRoll(result.damageCalculationMethod, result.halfDamage, rollOptions, result.damageFormula, result.damageType);
   }
 
   /**

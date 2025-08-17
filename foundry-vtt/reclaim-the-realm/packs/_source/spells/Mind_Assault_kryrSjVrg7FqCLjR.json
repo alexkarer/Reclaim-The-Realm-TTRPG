@@ -53,7 +53,52 @@
     "duration": "1 ROUND",
     "components": "V (Scream)",
     "formula": "(2 + floor(@attributes.spi.value / 4))d8[psychic]",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "spellTest",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "spi",
+        "targetingSave": "WILLPOWER",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "meters",
+        "range": 12,
+        "results": [
+          {
+            "condition": "onSuccess",
+            "type": "damageAndStatusEffect",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(2 + floor(@attributes.spi.value / 4))d8",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Psychic",
+            "statusEffectToApply": "stunned1",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": 1,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          },
+          {
+            "condition": "onFailure",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(2 + floor(@attributes.spi.value / 4))d8",
+            "damageBonus": "",
+            "halfDamage": true,
+            "damageType": "Psychic",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "flags": {},
@@ -61,11 +106,11 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
-    "modifiedTime": 1753827782739,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "systemVersion": "2.2.0",
+    "modifiedTime": 1755426132343,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "sort": 0,
   "ownership": {

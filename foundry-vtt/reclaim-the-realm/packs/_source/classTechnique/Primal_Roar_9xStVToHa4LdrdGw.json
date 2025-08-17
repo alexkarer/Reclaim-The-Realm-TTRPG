@@ -7,7 +7,7 @@
   "system": {
     "description": "<p><strong><span style=\"text-decoration:underline\">CON</span></strong> <strong><span style=\"text-decoration:underline\">MARTIAL TEST</span></strong> vs. <strong><span style=\"text-decoration:underline\">TOUGHNESS</span></strong>. On success: 2*<strong><span style=\"text-decoration:underline\">CON</span></strong>*d6 sonic damage and [DEAFENED]. On fail: half damage.</p>",
     "requirements": {
-      "minimumLevel": 0,
+      "minimumLevel": 8,
       "minimumMartialLevel": 0,
       "minimumSpellLevel": 0,
       "minimumStr": 0,
@@ -18,22 +18,78 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Barbarian",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
-      "apCost": 0,
+      "apCost": 3,
       "mpCost": 0,
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "3 AP, 5 Rage"
+      "otherResourceCost": "",
+      "rawStringCost": "3 AP, 5 Rage",
+      "classResourceName": "rage",
+      "classResourceCost": 5
     },
     "tags": "Class Technique (Barbarian)",
     "range": "-",
     "targets": "CONE 7.5m",
     "duration": "1 ROUND",
-    "formula": "(2 * @attributes.con.value)d6[sonic]"
+    "formula": "(2 * @attributes.con.value)d6[sonic]",
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "martialTest",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "con",
+        "targetingSave": "TOUGHNESS",
+        "targets": "cone",
+        "targetsAreaSize": 7.5,
+        "rangeType": "unspecified",
+        "range": null,
+        "results": [
+          {
+            "condition": "onSuccess",
+            "type": "damageAndStatusEffect",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(2 * @attributes.con.value)d6[sonic]",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Sonic",
+            "statusEffectToApply": "deafened1",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": 1,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          },
+          {
+            "condition": "onFailure",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "(2 * @attributes.con.value)d6",
+            "damageBonus": "",
+            "halfDamage": true,
+            "damageType": "Sonic",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "sort": 0,
@@ -46,12 +102,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750113141169,
-    "modifiedTime": 1750113229196,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755423054234,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!9xStVToHa4LdrdGw"
 }

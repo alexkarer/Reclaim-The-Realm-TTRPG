@@ -18,7 +18,15 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Barbarian",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -26,14 +34,48 @@
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "0 AP, 2 Rage"
+      "otherResourceCost": "",
+      "rawStringCost": "0 AP, 2 Rage",
+      "classResourceName": "rage",
+      "classResourceCost": 2
     },
     "tags": "Class Technique (Barbarian)",
     "range": "MELEE RANGE",
     "targets": "all creatures",
     "duration": "INSTANT",
-    "formula": "d20+@martialLevel + @attributes.str.value - @exh"
+    "formula": "d20+@martialLevel + @attributes.str.value - @exh",
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "martialTest",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targetingSave": "STABILITY",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "melee",
+        "range": null,
+        "results": [
+          {
+            "condition": "onSuccess",
+            "type": "statusEffect",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectToApply": "prone",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "sort": 0,
@@ -46,12 +88,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750112712932,
-    "modifiedTime": 1750112866747,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755423273932,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!ie81t5PgwWfhNCHm"
 }

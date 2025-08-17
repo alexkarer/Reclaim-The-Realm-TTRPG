@@ -16,16 +16,26 @@
       "minimumInt": 0,
       "minimumSpi": 0,
       "minimumPer": 0,
-      "minimumCha": 0
+      "minimumCha": 0,
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "",
+      "otherRequirements": "Good or LN/CN/N Alignment",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
       "mpCost": 0,
-      "isFree": false,
+      "isFree": true,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "FREE, 2 AD(3-)"
+      "otherResourceCost": "3-",
+      "rawStringCost": "FREE, 2 AD(3-)",
+      "classResourceName": "aetherDice",
+      "classResourceCost": 2
     },
     "tags": [
       "Class Technique (Priest)",
@@ -35,7 +45,36 @@
     "targets": "SELF",
     "duration": "INSTANT",
     "formula": "2d6[holy]",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "always",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "unspecified",
+        "range": null,
+        "results": [
+          {
+            "condition": "always",
+            "type": "damage",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "",
+            "damageBonus": "2d6",
+            "halfDamage": false,
+            "damageType": "Holy",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "flags": {},
@@ -43,12 +82,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1749381078618,
-    "modifiedTime": 1753476462453,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755424013140,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "sort": 100000,
   "ownership": {

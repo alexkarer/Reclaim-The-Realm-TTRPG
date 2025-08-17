@@ -53,7 +53,36 @@
     "duration": "INSTANT",
     "components": "V (Prayer), S (Touch)",
     "formula": "(2 + floor(@attributes.spi.value / 4))d8[heal]",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "always",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "melee",
+        "range": null,
+        "results": [
+          {
+            "condition": "always",
+            "type": "heal",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "(2 + floor(@attributes.spi.value / 4))d8",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "flags": {},
@@ -61,11 +90,11 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
-    "modifiedTime": 1753827664033,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "systemVersion": "2.2.0",
+    "modifiedTime": 1755426005603,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "sort": 0,
   "ownership": {

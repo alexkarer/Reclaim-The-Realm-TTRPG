@@ -18,16 +18,26 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Priest",
+      "requiredPerk": "",
+      "otherRequirements": "Lawful or NG/NE/N Alignment",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
-      "apCost": 0,
+      "apCost": 1,
       "mpCost": 0,
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "1 AP, 2 matching AD"
+      "otherResourceCost": "matching",
+      "rawStringCost": "1 AP, 2 matching AD",
+      "classResourceName": "aetherDice",
+      "classResourceCost": 2
     },
     "tags": [
       "Class Technique (Priest)",
@@ -37,7 +47,38 @@
     "targets": "one creature",
     "duration": "SPI/2 ROUND",
     "formula": "d20+@spellLevel+ @attributes.spi.value - @exh",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "spellTest",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "spi",
+        "targetingSave": "STABILITY",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "meters",
+        "range": 9,
+        "results": [
+          {
+            "condition": "onSuccess",
+            "type": "statusEffect",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectToApply": "restrained1",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "sort": 0,
@@ -50,12 +91,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750114466333,
-    "modifiedTime": 1753476504373,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755424738867,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!Ulq6alG8vgFHO1di"
 }

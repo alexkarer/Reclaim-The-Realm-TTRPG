@@ -18,7 +18,15 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Warlock",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
       "apCost": 0,
@@ -26,14 +34,46 @@
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "1 REACTION, 1 Corruption"
+      "otherResourceCost": "REACTION",
+      "rawStringCost": "1 REACTION, 1 Corruption",
+      "classResourceName": "corruption",
+      "classResourceCost": 1
     },
     "tags": "Class Technique (Warlock)",
     "range": "-",
     "targets": "SELF",
     "duration": "INSTANT",
-    "formula": "5+@level+@attributes.spi.value"
+    "formula": "5+@level+@attributes.spi.value",
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "always",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targets": "self",
+        "targetsAreaSize": null,
+        "rangeType": "unspecified",
+        "range": null,
+        "results": [
+          {
+            "condition": "always",
+            "type": "heal",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "5+@level+@attributes.spi.value",
+            "healTHP": true,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "sort": 0,
@@ -46,12 +86,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750114905973,
-    "modifiedTime": 1750114982087,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755425280985,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!TLA3WFuPid65Jd2x"
 }

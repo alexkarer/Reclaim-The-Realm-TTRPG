@@ -257,11 +257,11 @@
           "SpellTest": "SPELL TEST"
         },
         "AbilityResultCondition": {
-          "Always": "Always",
-          "OnSuccess": "On Success",
-          "OnFailure": "On Failure",
-          "OnHit": "On Hit",
-          "OnPartialHit": "On Partial Hit"
+          "Always": { "conditionLabel": "Always", "chatLabel": "AUTO" },
+          "OnSuccess": { "conditionLabel": "On Success", "chatLabel": "SUCCESS" },
+          "OnFailure": { "conditionLabel": "On Failure", "chatLabel": "FAILURE" },
+          "OnHit": { "conditionLabel": "On Hit", "chatLabel": "HIT" },
+          "OnPartialHit": { "conditionLabel": "On Partial Hit", "chatLabel": "PARTIAL HIT" }
         },
         "AbilityResultType": {
           "Damage": "Damage",

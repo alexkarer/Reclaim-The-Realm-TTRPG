@@ -346,19 +346,64 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "Attack 🏹✨ 14 9m range, 1 target. On hit: 2d6 unholy damage.",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6[unholy]"
+        "formula": "2d6[unholy]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "rangedSpellAttack",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 14,
+            "attribute": "str",
+            "targets": "creature",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": 9,
+            "results": [
+              {
+                "condition": "onHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onPartialHit",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "2d6",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -372,12 +417,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1750976418899,
-        "modifiedTime": 1750976456406,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755427470761,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!DcnZmIdCZv5N7o8w.2kY15hFyMutlhcR3"
     },
@@ -403,19 +448,50 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 2,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "2 AP"
+          "otherResourceCost": "",
+          "rawStringCost": "2 AP",
+          "classResourceName": ""
         },
         "summary": "Heal, 1.5m reach, 1 target, 2d6",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": "2d6[heal]"
+        "formula": "2d6[heal]",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "always",
+            "rollBonus": null,
+            "fixed": false,
+            "fixedValue": null,
+            "attribute": "str",
+            "targets": "friendlyCreature",
+            "targetsAreaSize": null,
+            "rangeType": "melee",
+            "range": null,
+            "results": [
+              {
+                "condition": "always",
+                "type": "heal",
+                "damageCalculationMethod": "lightMartialDamage",
+                "damageFormula": "",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Physical",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "2d6",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -429,12 +505,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1750976420388,
-        "modifiedTime": 1750976488090,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755427505443,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!DcnZmIdCZv5N7o8w.gQIeREpDQhW6TUnr"
     },
@@ -460,19 +536,66 @@
           "requiredPerks": []
         },
         "usageCost": {
-          "apCost": 0,
+          "apCost": 3,
           "mpCost": 0,
           "isFree": false,
           "arcanaCost": 0,
           "staminaCost": 0,
-          "otherResourceCost": 0,
-          "rawStringCost": "3 AP, CD(3)"
+          "otherResourceCost": "CD(3)",
+          "rawStringCost": "3 AP, CD(3)",
+          "classResourceName": ""
         },
         "summary": "[DT] 14 [WILLPOWER] [SAVE][SPHERE] (4.5m), 15m range. On success: 4d6 unholy damage. Additionally afflict [WEAKENED I] lasts 2 [ROUND] [SAVE LOWERS]. On Failure: halve damage",
         "range": "",
         "targets": "",
         "duration": "",
-        "formula": ""
+        "formula": "",
+        "editLock": true,
+        "actions": [
+          {
+            "actionType": "spellTest",
+            "rollBonus": null,
+            "fixed": true,
+            "fixedValue": 14,
+            "attribute": "spi",
+            "targetingSave": "WILLPOWER",
+            "targets": "sphere",
+            "targetsAreaSize": 4.5,
+            "rangeType": "meters",
+            "range": 15,
+            "results": [
+              {
+                "condition": "onSuccess",
+                "type": "damageAndStatusEffect",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "4d6",
+                "damageBonus": "",
+                "halfDamage": false,
+                "damageType": "Unholy",
+                "statusEffectToApply": "weakened1",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": 2,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              },
+              {
+                "condition": "onFailure",
+                "type": "damage",
+                "damageCalculationMethod": "custom",
+                "damageFormula": "4d6",
+                "damageBonus": "",
+                "halfDamage": true,
+                "damageType": "Unholy",
+                "statusEffectDurationType": "round",
+                "statusEffectDuration": null,
+                "healFormula": "",
+                "healTHP": false,
+                "additionalEffects": ""
+              }
+            ]
+          }
+        ]
       },
       "effects": [],
       "folder": null,
@@ -486,12 +609,12 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null,
-        "coreVersion": "13.345",
+        "coreVersion": "13.346",
         "systemId": "reclaim-the-realm",
-        "systemVersion": "2.0.0",
+        "systemVersion": "2.2.0",
         "createdTime": 1750976420762,
-        "modifiedTime": 1750976530060,
-        "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+        "modifiedTime": 1755427602801,
+        "lastModifiedBy": "XdNej2rjTg2iPCfr"
       },
       "_key": "!actors.items!DcnZmIdCZv5N7o8w.qbqMqhdUvKOgPWHS"
     },
@@ -567,12 +690,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750976278063,
-    "modifiedTime": 1753734185881,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755427609152,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!actors!DcnZmIdCZv5N7o8w"
 }

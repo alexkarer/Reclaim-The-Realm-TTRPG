@@ -53,7 +53,37 @@
     "duration": "SPI ROUND",
     "components": "V (Incantation), S",
     "formula": "",
-    "editLock": true
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "always",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "meters",
+        "range": 9,
+        "results": [
+          {
+            "condition": "always",
+            "type": "statusEffect",
+            "damageCalculationMethod": "custom",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectToApply": "burning1",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": 1,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "flags": {},
@@ -61,11 +91,11 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
-    "modifiedTime": 1753827736366,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "systemVersion": "2.2.0",
+    "modifiedTime": 1755425966994,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "sort": 0,
   "ownership": {

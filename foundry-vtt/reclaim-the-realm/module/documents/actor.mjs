@@ -427,7 +427,7 @@ export class RtRActor extends Actor {
         return Promise.resolve('onPartialHit');
       }
     } else {
-      const characterUser = game.users.find(u => u?.character?.id === this.id);
+      const characterUser = game.users.filter(u => u.active).find(u => u?.character?.id === this.id);
       return api.DialogV2.query(characterUser ?? game.users.activeGM, 'prompt', {
         content: `${attackerName} attacked you (${attackResult}). Roll a Dodge?`,
         rejectClose: false,

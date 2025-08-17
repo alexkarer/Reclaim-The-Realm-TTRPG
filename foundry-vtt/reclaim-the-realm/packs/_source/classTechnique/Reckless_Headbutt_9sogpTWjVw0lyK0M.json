@@ -18,22 +18,92 @@
       "minimumPer": 0,
       "minimumCha": 0,
       "skillRankRequirements": [],
-      "requiredPerks": []
+      "requiredPerks": [],
+      "skillRankRequirement": {
+        "skill": ""
+      },
+      "requiredClass": "Barbarian",
+      "requiredPerk": "",
+      "otherRequirements": "",
+      "requiredSpellDisciplineOne": "",
+      "requiredSpellDisciplineTwo": ""
     },
     "usageCost": {
-      "apCost": 0,
+      "apCost": 1,
       "mpCost": 0,
       "isFree": false,
       "arcanaCost": 0,
       "staminaCost": 0,
-      "otherResourceCost": 0,
-      "rawStringCost": "1 AP, 2 Rage"
+      "otherResourceCost": "",
+      "rawStringCost": "1 AP, 2 Rage",
+      "classResourceName": "rage",
+      "classResourceCost": 2
     },
     "tags": "Class Technique (Barbarian)",
     "range": "MELEE RANGE",
     "targets": "1 creature",
     "duration": "2 ROUND",
-    "formula": ""
+    "formula": "",
+    "editLock": true,
+    "actions": [
+      {
+        "actionType": "meleeMartialAttack",
+        "rollBonus": null,
+        "fixed": false,
+        "fixedValue": null,
+        "attribute": "str",
+        "targetingSave": "TOUGHNESS",
+        "targets": "creature",
+        "targetsAreaSize": null,
+        "rangeType": "melee",
+        "range": null,
+        "results": [
+          {
+            "condition": "onHit",
+            "type": "damage",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          },
+          {
+            "condition": "onSuccess",
+            "type": "statusEffect",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": false,
+            "damageType": "Physical",
+            "statusEffectToApply": "stunned1",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": 2,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          },
+          {
+            "condition": "onPartialHit",
+            "type": "damage",
+            "damageCalculationMethod": "lightMartialDamage",
+            "damageFormula": "",
+            "damageBonus": "",
+            "halfDamage": true,
+            "damageType": "Physical",
+            "statusEffectDurationType": "round",
+            "statusEffectDuration": null,
+            "healFormula": "",
+            "healTHP": false,
+            "additionalEffects": ""
+          }
+        ]
+      }
+    ]
   },
   "effects": [],
   "sort": 0,
@@ -46,12 +116,12 @@
     "compendiumSource": null,
     "duplicateSource": null,
     "exportSource": null,
-    "coreVersion": "13.345",
+    "coreVersion": "13.346",
     "systemId": "reclaim-the-realm",
-    "systemVersion": "2.0.0",
+    "systemVersion": "2.2.0",
     "createdTime": 1750112537467,
-    "modifiedTime": 1750112688870,
-    "lastModifiedBy": "OLKSfPDHiy1Xf9SG"
+    "modifiedTime": 1755423177776,
+    "lastModifiedBy": "XdNej2rjTg2iPCfr"
   },
   "_key": "!items!9sogpTWjVw0lyK0M"
 }
