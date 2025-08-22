@@ -26,6 +26,11 @@ Implement the Ability Actions:
   - fix damage being rolled inidividually for each result.
   - find way to implement dynamic duration calcuilation, or remove it
   - allow multiple damage types
+  - martialtest/spell test are not rendered properly in the resultscreeen
+  - implement feature to wait for damage
+  - mind assault damage not applied
+
+ - add deaths door condition
 
 After ACtions are Implemented:
   - Add remaining spells
@@ -37,6 +42,8 @@ Check TODOS are all resolved
 ## Bugs:
 
 - Somehow Short rest button is triggered via ENTER Key
+- NPCs can't roll attribute tests
+- fix abilities against multiple spells
 
 ## Actors
 

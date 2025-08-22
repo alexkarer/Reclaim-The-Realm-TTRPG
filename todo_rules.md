@@ -27,6 +27,8 @@ Will eventually add perk to heal
 - rework origin to be more inline with in universe (consider riftlands)
 - add toolbox as json
 - simplify Aether DIce notation: AD(=) matching AD, AD(!) unique AD
+- parry is a bit wacky
+- deaths door needs additional penalty or checl needs to get harder (maybe 10+? do some math)
 ____________________________________________________________
 ### Planned changes after Playtest:
 
