@@ -1,4 +1,4 @@
-import { generateFvttId } from "../utils.mjs";
+import { generateFvttId } from "../utils";
 
 const { api } = foundry.applications;
 
@@ -28,6 +28,8 @@ export class RtRActor extends Actor {
     prepareDerivedData() {
         const actorData = this;
         const flags = actorData.flags.reclaimtherealm || {};
+
+        this.system
     }
 
     /**
@@ -299,7 +301,7 @@ export class RtRActor extends Actor {
                 text = `<span style="color:green">Spell ${spellName} was successfuly cast</span>`;
             } else if (result.rolls[0].total >= (spellDifficulty - 5)) {
                 text = `<span style="color:yellow">Spell ${spellName} was cast with mishap</span>`;
-            } else {s
+            } else {
                 text = `<span style="color:red">Spell ${spellName} Cast was unsuccessful and mishap occurs</span>`;
                 success = false;
             }
@@ -401,12 +403,8 @@ s
     /*  Interactions with other Actors              */
     /* -------------------------------------------- */
 
-    /**
-     * apply damage to actor
-     * @param {number} amount 
-     * @param {string} type 
-     */
-    applyDamage(amount, type) {
+    // TODO use enum
+    applyDamage(amount: number, type: string) {
         let remainingAmount = amount;
         if (this.system.tempHp > 0) {
             remainingAmount = amount - Math.min(this.system.tempHp, amount);
@@ -436,12 +434,7 @@ s
         });
     }
 
-    /**
-     * heal actor
-     * @param {number} amount 
-     * @param {boolean} healTHP 
-     */
-    heal(amount, healTHP) {
+    heal(amount: number, healTHP: boolean) {
         let chatMessage = '';
         if (healTHP) {
             let newTHP = Math.max(this.system.tempHp, amount);
@@ -463,25 +456,16 @@ s
         });
     }
 
-    /**
-     * toggle Status effect
-     * @param {String} statusEffectId 
-     * @returns 
-     */
-    async toggleStatusEffect(statusEffectId) {
+    // TODO, enum
+    async toggleStatusEffect(statusEffectId: string) {
         const existing = this.effects.get(generateFvttId(`RTR${statusEffectId}`));
         if (existing) return existing.delete();
         const effect = await ActiveEffect.implementation.fromStatusEffect(statusEffectId);
         return ActiveEffect.implementation.create(effect, { parent: this, keepId: true });
     }
 
-    /**
-     * apply Status effect
-     * @param {String} statusEffectId
-     * @param {number} roundDuration duration in number of combat rounds 
-     * @returns 
-     */
-    async applyStatusEffect(statusEffectId, roundDuration) {
+    // TODO, enum
+    async applyStatusEffect(statusEffectId: string, roundDuration: number) {
         const existing = this.effects.get(generateFvttId(`RTR${statusEffectId}`));
         if (existing) {
             // TODO: at some point need to check the duration overlap
@@ -501,12 +485,12 @@ s
     /* -------------------------------------------- */
 
     // TODO: use enum maybe
-    _hasStatusEffect(statusEffectName: string) {
+    _hasStatusEffect(statusEffectName?: string) {
         const existing = this.appliedEffects.find(effect => effect.name === statusEffectName);
         return existing !== undefined;
     }
 
-    _getAttributeRollBonus(attribute: string) {
+    _getAttributeRollBonus(attribute?: string) {
         let foundAttribute = Object.keys(CONFIG.RTR.attributes).find(attributeName => attributeName === attribute);
         if (!foundAttribute) {
             ui.notifications?.error(`Attribute ${attribute} not found`, { console: true });
@@ -516,7 +500,7 @@ s
     }
 
     //TODO: use enum
-    _getSkillRollBonus(skill: string) {
+    _getSkillRollBonus(skill?: string) {
         let foundSkill = Object.keys(CONFIG.RTR.skills).find(skillname => skillname === skill);
         if (!foundSkill) {
             ui.notifications?.error(`Skill ${skill} not found`, { console: true });
@@ -529,7 +513,7 @@ s
     }
 
     // TODO use, enum
-    _getSaveRollBonus(save: string) {
+    _getSaveRollBonus(save?: string) {
         switch (save) {
             case 'stability': return { rollData: '+@stabilitySave', rollType: 'STABILITY SAVE' };
             case 'dodge': return { rollData: '+@dodgeSave', rollType: 'DODGE SAVE' };
@@ -542,7 +526,7 @@ s
     }
 s
     // TODO - use enum
-    _hasResistance(type: string) {
+    _hasResistance(type?: string) {
         const resistance = this.system.resistances.find(r => r.damageType.toUpperCase() === type.toUpperCase());
         return resistance?.value ?? 0;
     }

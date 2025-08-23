@@ -1,6 +1,11 @@
-import RtRAbility from './item-ability';
+import RtRAbility, { RtRAbilitySchema } from "./item-ability";
 
-export default class RtRSpell extends RtRAbility {
+export interface RtRSpellSchema extends RtRAbilitySchema {
+    spellDifficulty: foundry.data.fields.NumberField;
+    components: foundry.data.fields.StringField;
+}
+
+export default class RtRSpell extends RtRAbility<RtRSpellSchema> {
     static LOCALIZATION_PREFIXES = [
         ...super.LOCALIZATION_PREFIXES,
         'RTR.Item.Spell',

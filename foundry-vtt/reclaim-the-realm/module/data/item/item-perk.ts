@@ -1,6 +1,39 @@
-import RtRItemBase from './base-item';
+import RtRItemBase, { RtRItemBaseSchema } from "./base-item";
 
-export default class RtRPerk extends RtRItemBase {
+export interface RtRPerkSchema extends RtRItemBaseSchema {
+    tags: foundry.data.fields.ArrayField<foundry.data.fields.StringField>;
+    perkPointsCost: foundry.data.fields.NumberField;
+    requirements: foundry.data.fields.SchemaField<RtRPerkRequirementSchema>;
+}
+
+export interface RtRPerkRequirementSchema extends foundry.data.fields.DataSchema {
+    minimumLevel: foundry.data.fields.NumberField;
+    minimumMartialLevel: foundry.data.fields.NumberField;
+    minimumSpellLevel: foundry.data.fields.NumberField;
+
+    minimumStr: foundry.data.fields.NumberField;
+    minimumAgi: foundry.data.fields.NumberField;
+    minimumCon: foundry.data.fields.NumberField;
+    minimumInt: foundry.data.fields.NumberField;
+    minimumSpi: foundry.data.fields.NumberField;
+    minimumPer: foundry.data.fields.NumberField;
+    minimumCha: foundry.data.fields.NumberField;
+
+    skillRankRequirement: foundry.data.fields.SchemaField<RtRPerkRequirementsSkillRankSchema>;
+
+    requiredClass: foundry.data.fields.StringField
+    requiredPerk: foundry.data.fields.StringField
+    requiredNotSelectedPerk: foundry.data.fields.StringField
+
+    otherRequirements: foundry.data.fields.StringField
+}
+
+export interface RtRPerkRequirementsSkillRankSchema extends foundry.data.fields.DataSchema {
+    skill: foundry.data.fields.StringField;
+    rank: foundry.data.fields.NumberField;
+}
+
+export default class RtRPerk extends RtRItemBase<RtRPerkSchema> {
     static LOCALIZATION_PREFIXES = [
         ...super.LOCALIZATION_PREFIXES,
         'RTR.Item.Perk',

@@ -1,6 +1,9 @@
-import RtRAbility from "./item-ability";
+import RtRAbility, { RtRAbilitySchema } from "./item-ability";
 
-export default class RtRMartialManeuver extends RtRAbility {
+export interface RtRMartialManeuverSchema extends RtRAbilitySchema {
+}
+
+export default class RtRMartialManeuver extends RtRAbility<RtRMartialManeuverSchema> {
     static LOCALIZATION_PREFIXES = [
         ...super.LOCALIZATION_PREFIXES,
         'RTR.Item.MartialManeuver',

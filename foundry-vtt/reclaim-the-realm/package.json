@@ -35,7 +35,7 @@
     "build:unpackplayertables": "fvtt package unpack \"player-tables\" --out \"./packs/_source/player-tables\"",
 
     "createsymlink": "node ./scripts/create-symlinks.mjs",
-    "postinstall": "npm run build:css && build:ts && npm run build:pack"
+    "postinstall": "npm run build:css && npm run build:ts && npm run build:pack"
   },
   "browserslist": [
     "last 3 versions"

@@ -1,6 +1,89 @@
-import RtRItemBase from "./base-item";
+import RtRItemBase, { RtRItemBaseSchema } from "./base-item";
 
-export default class RtRAbility extends RtRItemBase {
+export interface RtRAbilitySchema extends RtRItemBaseSchema {
+	tags: foundry.data.fields.ArrayField<foundry.data.fields.StringField>;
+	requirements: foundry.data.fields.SchemaField<RtRAbilityRequirementsSchema>;
+	usageCost: foundry.data.fields.SchemaField<RtRAbilityUsageCostSchema>;
+	range: foundry.data.fields.StringField;
+	targets: foundry.data.fields.StringField;
+	duration: foundry.data.fields.StringField;
+	actions: foundry.data.fields.SchemaField<RtRAbilityActionsSchema>;
+	formula: foundry.data.fields.StringField;
+}
+
+export interface RtRAbilityRequirementsSchema extends foundry.data.fields.DataSchema {
+	minimumLevel: foundry.data.fields.NumberField;
+	minimumMartialLevel: foundry.data.fields.NumberField;
+	minimumSpellLevel: foundry.data.fields.NumberField;
+
+	minimumStr: foundry.data.fields.NumberField;
+	minimumAgi: foundry.data.fields.NumberField;
+	minimumCon: foundry.data.fields.NumberField;
+	minimumInt: foundry.data.fields.NumberField;
+	minimumSpi: foundry.data.fields.NumberField;
+	minimumPer: foundry.data.fields.NumberField;
+	minimumCha: foundry.data.fields.NumberField;
+
+	requiredSpellDisciplineOne: foundry.data.fields.StringField;
+	requiredSpellDisciplineTwo: foundry.data.fields.StringField;
+	requiredMartialManeuverType: foundry.data.fields.StringField;
+
+	skillRankRequirement: foundry.data.fields.SchemaField<RtRAbilityRequirementsSkillRankSchema>;
+
+	requiredClass: foundry.data.fields.StringField;
+	requiredPerk: foundry.data.fields.StringField;
+
+	otherRequirements: foundry.data.fields.StringField;
+}
+
+export interface RtRAbilityRequirementsSkillRankSchema extends foundry.data.fields.DataSchema {
+	skill: foundry.data.fields.StringField;
+	rank: foundry.data.fields.NumberField;
+}
+
+export interface RtRAbilityUsageCostSchema extends foundry.data.fields.DataSchema {
+	isFree: foundry.data.fields.BooleanField;
+	apCost: foundry.data.fields.NumberField;
+	mpCost: foundry.data.fields.NumberField;
+	arcanaCost: foundry.data.fields.NumberField;
+	staminaCost: foundry.data.fields.NumberField;
+	classResourceName: foundry.data.fields.StringField;
+	classResourceCost: foundry.data.fields.NumberField;
+	otherResourceCost: foundry.data.fields.StringField;
+}
+
+export interface RtRAbilityActionsSchema extends foundry.data.fields.DataSchema {
+	actionType: foundry.data.fields.StringField;
+	rollBonus: foundry.data.fields.NumberField;
+	fixed: foundry.data.fields.BooleanField;
+	fixedValue: foundry.data.fields.NumberField;
+	attribute: foundry.data.fields.StringField;
+	targetingSave: foundry.data.fields.StringField;
+	targets: foundry.data.fields.StringField;
+	targetsAreaSize: foundry.data.fields.StringField;
+	rangeType: foundry.data.fields.StringField;
+	range: foundry.data.fields.NumberField;
+	results: foundry.data.fields.ArrayField<foundry.data.fields.SchemaField<RtRAbilityActionsResultSchema>>;
+}
+
+export interface RtRAbilityActionsResultSchema extends foundry.data.fields.DataSchema {
+	condition: foundry.data.fields.StringField;
+	type: foundry.data.fields.StringField;
+	damageCalculationMethod: foundry.data.fields.StringField;
+	damageFormula: foundry.data.fields.StringField;
+	damageBonus: foundry.data.fields.StringField;
+	halfDamage: foundry.data.fields.BooleanField;
+	damageType: foundry.data.fields.StringField;
+	statusEffectToApply: foundry.data.fields.StringField;
+	statusEffectDurationType: foundry.data.fields.StringField;
+	statusEffectDuration: foundry.data.fields.NumberField;
+	healFormula: foundry.data.fields.StringField;
+	healTHP: foundry.data.fields.BooleanField
+	additionalEffects: foundry.data.fields.StringField;
+
+}
+
+export default class RtRAbility<T extends RtRAbilitySchema> extends RtRItemBase<T> {
 	static LOCALIZATION_PREFIXES = [
 		...super.LOCALIZATION_PREFIXES,
 		'RTR.Item.Ability',

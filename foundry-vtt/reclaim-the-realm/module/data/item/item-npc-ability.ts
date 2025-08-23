@@ -1,6 +1,10 @@
-import RtRAbility from "./item-ability";
+import RtRAbility, { RtRAbilitySchema } from "./item-ability";
 
-export default class RtRNpcAbility extends RtRAbility {
+export interface RRtRNpcAbilitySchema extends RtRAbilitySchema {
+    summary: foundry.data.fields.StringField;
+}
+
+export default class RtRNpcAbility extends RtRAbility<RRtRNpcAbilitySchema> {
     static LOCALIZATION_PREFIXES = [
         ...super.LOCALIZATION_PREFIXES,
         'RTR.Item.NpcAbility',

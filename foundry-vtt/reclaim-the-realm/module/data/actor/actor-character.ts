@@ -1,6 +1,68 @@
-import RtRActorBase from './base-actor';
+import { calculateXPMilestonesAndLevel, getMartialDamage, getStrCarryLiftValues } from '../../helpers/actor-helper';
+import RtRActorBase, { RtRActorBaseSchema, RtRActorResourceSchema } from './base-actor';
 
-export default class RtRCharacter extends RtRActorBase {
+export interface RtRCharacterSchema extends RtRActorBaseSchema {
+  stamina: foundry.data.fields.SchemaField<RtRActorResourceSchema>;
+  arcana: foundry.data.fields.SchemaField<RtRActorResourceSchema>;
+  xp: foundry.data.fields.SchemaField<RtRCharacterXPSchema>;
+  attributePoints: foundry.data.fields.SchemaField<RtRCharacterAttributePointsSchema>;
+  skillPoints: foundry.data.fields.SchemaField<RtRCharacterSkillPointsSchema>;
+  inventory: foundry.data.fields.SchemaField<RtRCharacterInventorySchema>;
+  knownAbilities: foundry.data.fields.SchemaField<RtRCharacterKnownAbilitiesSchema>;
+  perks: foundry.data.fields.SchemaField<RtRCharacterPerksSchema>;
+  martialDamage: foundry.data.fields.SchemaField<RtRCharacterMartialDamageSchema>;
+  classResource: foundry.data.fields.StringField;
+}
+
+export interface RtRCharacterXPSchema extends RtRActorBaseSchema {
+  total: foundry.data.fields.NumberField;
+  prevMilestone: foundry.data.fields.NumberField;
+  nextMilestone: foundry.data.fields.NumberField;
+}
+
+export interface RtRCharacterAttributePointsSchema extends RtRActorBaseSchema {
+  totalAttributePoints: foundry.data.fields.NumberField;
+  usedAttributePoints: foundry.data.fields.NumberField;
+  additionalAttributePoints: foundry.data.fields.NumberField;
+}
+
+export interface RtRCharacterSkillPointsSchema extends RtRActorBaseSchema {
+  skillPointsPerLevel: foundry.data.fields.NumberField;
+  additionalSkillPoints: foundry.data.fields.NumberField;
+  totalSkillPoints: foundry.data.fields.NumberField;
+  usedSkillPoints: foundry.data.fields.NumberField;
+}
+
+export interface RtRCharacterInventorySchema extends RtRActorBaseSchema {
+  bc: foundry.data.fields.NumberField;
+  sc: foundry.data.fields.NumberField;
+  gc: foundry.data.fields.NumberField;
+  carryCapacityKg: foundry.data.fields.NumberField;
+  liftPushDragKg: foundry.data.fields.NumberField;
+}
+
+export interface RtRCharacterKnownAbilitiesSchema extends RtRActorBaseSchema {
+  knownClassTechniques: foundry.data.fields.NumberField;
+  knownMartialManeuvers: foundry.data.fields.NumberField;
+  knownMartialManeuversTypes: foundry.data.fields.StringField;
+  knownSpells: foundry.data.fields.NumberField;
+  knownSpellDisciplines: foundry.data.fields.StringField;
+}
+
+export interface RtRCharacterPerksSchema extends RtRActorBaseSchema {
+  additionalPerkPoints: foundry.data.fields.NumberField;
+  totalPerkPoints: foundry.data.fields.NumberField;
+}
+
+export interface RtRCharacterMartialDamageSchema extends RtRActorBaseSchema {
+  light: foundry.data.fields.StringField;
+  medium: foundry.data.fields.StringField;
+  heavy: foundry.data.fields.StringField;
+  attr: foundry.data.fields.StringField;
+  penalty: foundry.data.fields.NumberField;
+}
+
+export default class RtRCharacter extends RtRActorBase<RtRCharacterSchema> {
   static LOCALIZATION_PREFIXES = [
     ...super.LOCALIZATION_PREFIXES,
     'RTR.Actor.Character',
@@ -72,9 +134,9 @@ export default class RtRCharacter extends RtRActorBase {
 
     super.prepareBaseData();
 
-    this.hp.max = (this.data.hpPerLevel + Math.floor(this.attributes.con.value / 2)) * this.levels.level + this.data.additionalHp;
-    this.stamina.max = Math.max(this.attributes.con.value + Math.floor(this.levels.level + this.levels.martialLevel), 1);
-    this.arcana.max = Math.floor(3 * this.levels.spellProficency * this.levels.level);
+    this.hp.max = ((this.data.hpPerLevel?.valueOf() ?? 0) + Math.floor(this.attributes.con.value / 2)) * (this.levels.level?.valueOf() ?? 0) + (this.data.additionalHp?.valueOf() ?? 0);
+    this.stamina.max = Math.max(this.attributes.con.value + Math.floor((this.levels.level?.valueOf() ?? 0) + (this.levels.martialLevel?.valueOf() ?? 0)), 1);
+    this.arcana.max = Math.floor(3 * this.levels.spellProficency * (this.levels.level?.valueOf() ?? 0));
     this._calculateSkillPoints();
     this._calculateAttributePoints();
     this._caclulateKnownAbilitiesAndPerks();
@@ -99,14 +161,14 @@ export default class RtRCharacter extends RtRActorBase {
   }
 
   _calculateLevelAndXp() {
-    const progression = calculateXPMilestonesAndLevel(this.xp.total);
+    const progression = calculateXPMilestonesAndLevel(this.xp.total?.valueOf() ?? 0);
     this.levels.level = progression.level;
     this.xp.prevMilestone = progression.xpPrevMilestone;
     this.xp.nextMilestone = progression.xpNextMilestone;
   }
 
   _calculateSkillPoints() {
-    this.skillPoints.totalSkillPoints = (this.skillPoints.skillPointsPerLevel + Math.floor(this.attributes.int.value / 2)) * this.levels.level + this.skillPoints.additionalSkillPoints;
+    this.skillPoints.totalSkillPoints = ((this.skillPoints.skillPointsPerLevel?.valueOf() ?? 0) + Math.floor(this.attributes.int.value / 2)) * (this.levels.level?.valueOf() ?? 0) + (this.skillPoints.additionalSkillPoints?.valueOf() ?? 0);
     this.skillPoints.usedSkillPoints = 0;
     if (this.skills) {
       for (let [k, v] of Object.entries(this.skills)) {
@@ -116,7 +178,7 @@ export default class RtRCharacter extends RtRActorBase {
   }
 
   _calculateAttributePoints() {
-    this.attributePoints.totalAttributePoints = (2 * (this.levels.level - 1)) + 8 + 14 + this.attributePoints.additionalAttributePoints;
+    this.attributePoints.totalAttributePoints = (2 * ((this.levels.level ?.valueOf() ?? 0) - 1)) + 8 + 14 + (this.attributePoints.additionalAttributePoints?.valueOf() ?? 0);
     this.attributePoints.usedAttributePoints = 0;
     if (this.attributes) {
       for (let [k, v] of Object.entries(this.attributes)) {
@@ -137,21 +199,21 @@ export default class RtRCharacter extends RtRActorBase {
   }
 
   _caclulateKnownAbilitiesAndPerks() {
-    this.knownAbilities.knownClassTechniques = 2 + Math.floor(this.levels.level / 2) + Math.floor(this.attributes.int.value / 2);
+    this.knownAbilities.knownClassTechniques = 2 + Math.floor((this.levels.level?.valueOf() ?? 0) / 2) + Math.floor(this.attributes.int.value / 2);
 
     if (this.levels.martialProficency === 0) {
       this.knownAbilities.knownMartialManeuvers = 0;
     } else {
-      this.knownAbilities.knownMartialManeuvers = 2 + Math.floor(this.levels.martialLevel / 2) + Math.floor(this.attributes.int.value / 2);
+      this.knownAbilities.knownMartialManeuvers = 2 + Math.floor((this.levels.level?.valueOf() ?? 0) / 2) + Math.floor(this.attributes.int.value / 2);
     }
 
     if (this.levels.spellProficency === 0) {
       this.knownAbilities.knownSpells = 0;
     } else {
-      this.knownAbilities.knownSpells = 2 + Math.floor(this.levels.spellLevel / 2) + Math.floor(this.attributes.int.value / 2);
+      this.knownAbilities.knownSpells = 2 + Math.floor((this.levels.spellLevel?.valueOf() ?? 0) / 2) + Math.floor(this.attributes.int.value / 2);
     }
 
-    this.perks.totalPerkPoints = this.levels.level * 2 + this.perks.additionalPerkPoints;
+    this.perks.totalPerkPoints = (this.levels.level?.valueOf() ?? 0) * 2 + (this.perks.additionalPerkPoints?.valueOf() ?? 0);
   }
 
   _calculateMartialDamage() {
@@ -160,7 +222,7 @@ export default class RtRCharacter extends RtRActorBase {
     if (!attribute) {
       console.error("Unable to find attribute", this.martialDamage.attr);
     } else {
-      attrValue = attribute[1].value - this.martialDamage.penalty;
+      attrValue = attribute[1].value - (this.martialDamage.penalty?.valueOf() ?? 0);
     }
 
     let md = getMartialDamage(attrValue);

@@ -1,4 +1,9 @@
-export default class RtRItemBase extends foundry.abstract.TypeDataModel<{}, any> {
+export interface RtRItemBaseSchema extends foundry.data.fields.DataSchema {
+    editLock: foundry.data.fields.BooleanField;
+    description: foundry.data.fields.HTMLField;
+}
+
+export default class RtRItemBase<T extends RtRItemBaseSchema> extends foundry.abstract.TypeDataModel<T, any> {
 
   static LOCALIZATION_PREFIXES = [
     'RTR.Item.base',
@@ -10,9 +15,5 @@ export default class RtRItemBase extends foundry.abstract.TypeDataModel<{}, any>
       editLock: new fields.BooleanField({ initial: true, required: true, nullable: false }),
       description: new fields.HTMLField()
     };
-  }
-
-  prepareDerivedData() {
-    this
   }
 }

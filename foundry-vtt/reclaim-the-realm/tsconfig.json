@@ -8,7 +8,7 @@
     "rootDir": "./",
     "allowJs": false,
     "declaration": false,
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "types": ["fvtt-types"]

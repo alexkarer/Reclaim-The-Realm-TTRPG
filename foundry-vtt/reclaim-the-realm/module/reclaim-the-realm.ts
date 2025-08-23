@@ -39,7 +39,7 @@ globalThis.RtR = {
 
 Hooks.once('init', function () {
   // Add custom constants for configuration.
-  CONFIG.RTR = RTR;
+  (CONFIG as any).RTR = RTR;
 
   /**
    * Set an initiative formula for the system
@@ -49,6 +49,7 @@ Hooks.once('init', function () {
     formula: '1d20 + max(@attributes.agi.value, @attributes.per.value)',
     decimals: 2,
   };
+
 
   CONFIG.Actor.documentClass = RtRActor;
   CONFIG.Actor.dataModels = {

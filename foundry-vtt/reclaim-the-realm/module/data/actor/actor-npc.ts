@@ -1,6 +1,13 @@
-import RtRActorBase from "./base-actor";
+import { calculateXPReward } from "../../helpers/actor-helper";
+import RtRActorBase, { RtRActorBaseSchema } from "./base-actor";
 
-export default class RtRNPC extends RtRActorBase {
+export interface RtRNPCSchema extends RtRActorBaseSchema {
+  immunitiesString: foundry.data.fields.StringField;
+  statusEffectImmunityString: foundry.data.fields.StringField;
+  xpReward: foundry.data.fields.NumberField;
+}
+
+export default class RtRNPC extends RtRActorBase<RtRNPCSchema> {
   static LOCALIZATION_PREFIXES = [
     ...super.LOCALIZATION_PREFIXES,
     'RTR.Actor.NPC',
@@ -13,14 +20,15 @@ export default class RtRNPC extends RtRActorBase {
     return {
       ...super.defineSchema(),
       immunitiesString: new fields.StringField(),
-      statusEffectImmunityString: new fields.StringField();
+      statusEffectImmunityString: new fields.StringField(),
+      xpReward: new fields.NumberField()
     };
   }
 
   /** @override */
   prepareBaseData() {
     super.prepareBaseData();
-    this.xpReward = calculateXPReward(this.levels.level);
+    this.xpReward = calculateXPReward(this.levels.level?.valueOf() ?? 0);
   }
 
   /** @override */

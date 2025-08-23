@@ -1,6 +1,28 @@
-import RtRItemBase from "./base-item";
+import RtRItemBase, { RtRItemBaseSchema } from "./base-item";
 
-export default class RtRClass extends RtRItemBase {
+export interface RtRClassSchema extends RtRItemBaseSchema {
+    classCoreFeatureName: foundry.data.fields.StringField;
+    hpPerLevel: foundry.data.fields.NumberField;
+
+    martialLevelProgression: foundry.data.fields.AlphaField;
+    knownMartialManeuverTypes: foundry.data.fields.StringField;
+    spellLevelProgression: foundry.data.fields.AlphaField;
+    knownSpellDisciplines: foundry.data.fields.StringField;
+
+    stabilityProficiency: foundry.data.fields.AlphaField;
+    dodgeProficiency: foundry.data.fields.AlphaField;
+    toughnessProficiency: foundry.data.fields.AlphaField;
+    willpowerProficiency: foundry.data.fields.AlphaField;
+
+    classAttributes: foundry.data.fields.ArrayField<foundry.data.fields.StringField>;
+    classSkills: foundry.data.fields.ArrayField<foundry.data.fields.StringField>;
+
+    classAttributesString:foundry.data.fields.StringField;
+    classSkillsString: foundry.data.fields.StringField;
+    skillPointsPerLevel: foundry.data.fields.StringField;
+}
+
+export default class RtRClass extends RtRItemBase<RtRClassSchema> {
     static LOCALIZATION_PREFIXES = [
         ...super.LOCALIZATION_PREFIXES,
         'RTR.Item.Class',

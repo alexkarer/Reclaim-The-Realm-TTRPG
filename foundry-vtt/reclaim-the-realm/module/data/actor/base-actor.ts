@@ -1,4 +1,91 @@
-export default class RtRActorBase extends foundry.abstract.TypeDataModel<{}, any> {
+import { getApForLevel } from "../../helpers/actor-helper";
+import { RTR } from "../../helpers/config";
+
+export interface RtRActorBaseSchema extends foundry.data.fields.DataSchema {
+	hp: foundry.data.fields.SchemaField<RtRActorResourceSchema>;
+	tempHp: foundry.data.fields.NumberField;
+
+	exhaustion: foundry.data.fields.NumberField;
+	ap: foundry.data.fields.NumberField;
+	mp: foundry.data.fields.NumberField;
+
+	biography: foundry.data.fields.HTMLField;
+	alignment: foundry.data.fields.StringField;
+	editLock: foundry.data.fields.BooleanField;
+
+	data: foundry.data.fields.SchemaField<RtRActorDataSchema>;
+	levels: foundry.data.fields.SchemaField<RtRActorLevelsSchema>;
+	attributes: foundry.data.fields.SchemaField<RtRActorAttributesSchema>;
+	defenses: foundry.data.fields.SchemaField<RtRActorDefensesSchema>;
+	resistances: foundry.data.fields.ArrayField<foundry.data.fields.SchemaField<RtRActorResistanceSchema>>;
+	attackBonuses: foundry.data.fields.SchemaField<RtRActorAttackBonusesSchema>;
+	skills: foundry.data.fields.SchemaField<RtRActorSkillsSchema>;
+}
+
+export interface RtRActorResourceSchema extends foundry.data.fields.DataSchema {
+	value: foundry.data.fields.NumberField;
+	max: foundry.data.fields.NumberField;
+}
+
+export interface RtRActorDataSchema extends foundry.data.fields.DataSchema {
+	hpPerLevel: foundry.data.fields.NumberField;
+	additionalHp: foundry.data.fields.NumberField;
+
+	stabilityBonus: foundry.data.fields.NumberField;
+	dodgeBonus: foundry.data.fields.NumberField;
+	toughnessBonus: foundry.data.fields.NumberField;
+	willpowerBonus: foundry.data.fields.NumberField;
+
+	movementBonus: foundry.data.fields.NumberField;
+
+	manoeuvrePenalty: foundry.data.fields.NumberField;
+	movementPenalty: foundry.data.fields.NumberField;
+}
+
+export interface RtRActorLevelsSchema extends foundry.data.fields.DataSchema {
+	level: foundry.data.fields.NumberField;
+	martialLevel: foundry.data.fields.NumberField;
+	spellLevel: foundry.data.fields.NumberField;
+	martialProficency: foundry.data.fields.AlphaField;
+	spellProficency: foundry.data.fields.AlphaField;
+}
+
+export interface RtRActorAttributesSchema extends foundry.data.fields.DataSchema {
+
+}
+
+export interface RtRActorDefensesSchema extends foundry.data.fields.DataSchema {
+	stabilityProficency: foundry.data.fields.AlphaField;
+	dodgeProficency: foundry.data.fields.AlphaField;
+	toughnessProficency: foundry.data.fields.AlphaField;
+	willpowerProficency: foundry.data.fields.AlphaField;
+
+	shieldBlockBase: foundry.data.fields.NumberField;
+	shieldBlockThreshold: foundry.data.fields.NumberField;
+
+	stability: foundry.data.fields.NumberField;
+	dodge: foundry.data.fields.NumberField;
+	toughness: foundry.data.fields.NumberField;
+	willpower: foundry.data.fields.NumberField;
+	shieldBlock: foundry.data.fields.NumberField;
+}
+
+export interface RtRActorResistanceSchema extends foundry.data.fields.DataSchema {
+	damageType: foundry.data.fields.StringField;
+	value: foundry.data.fields.NumberField;
+}
+
+export interface RtRActorAttackBonusesSchema extends foundry.data.fields.DataSchema {
+	meleeMartialAttack: foundry.data.fields.NumberField;
+	rangedMartialAttack: foundry.data.fields.NumberField;
+	meleeSpellAttack: foundry.data.fields.NumberField;
+	rangedSpellAttack: foundry.data.fields.NumberField;
+}
+
+export interface RtRActorSkillsSchema extends foundry.data.fields.DataSchema {
+}
+
+export default class RtRActorBase<T extends RtRActorBaseSchema> extends foundry.abstract.TypeDataModel<T, any> {
 	static LOCALIZATION_PREFIXES = ["RTR.Actor.base"];
 
 	/** @override */
@@ -41,7 +128,7 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel<{}, any
 				spellProficency: new fields.AlphaField({ ...proficiency, initial: 0 }),
 			}),
 			attributes: new fields.SchemaField(
-				Object.keys(CONFIG.RTR.attributes).reduce((obj, attr) => {
+				Object.keys(RTR.attributes).reduce((obj: {}, attr) => {
 					obj[attr]: new fields.SchemaField({
 						value: new fields.NumberField({ ...requiredInteger, initial: -2, min: -8 }),
 						classAttribute: new fields.BooleanField({ initial: false, required: true, nullable: false }),
@@ -101,12 +188,12 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel<{}, any
 		}
 
 		for (const key in this.attributes) {
-			this.attributes[key].attributeMaximum = 3 + (this.attributes[key].classAttribute ? 2 : 0) + Math.floor((this.levels.level - 1) * 0.5);
+			this.attributes[key].attributeMaximum = 3 + (this.attributes[key].classAttribute ? 2 : 0) + Math.floor(((this.levels.level?.valueOf() ?? 0) - 1) * 0.5);
 		}
 
-		this.levels.martialLevel = Math.floor(this.levels.martialProficency * this.levels.level);
-		this.levels.spellLevel = Math.floor(this.levels.spellProficency * this.levels.level);
-		this.ap = getApForLevel(this.levels.level);
+		this.levels.martialLevel = Math.floor(this.levels.martialProficency * (this.levels.level?.valueOf() ?? 0));
+		this.levels.spellLevel = Math.floor(this.levels.spellProficency * (this.levels.level?.valueOf() ?? 0));
+		this.ap = getApForLevel(this.levels.level?.valueOf() ?? 0);
 	}
 
 	/** @override */
@@ -116,13 +203,13 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel<{}, any
 			v.value += v.tempReduction;
 		}
 
-		this.mp = 6 + Math.floor(this.attributes.agi.value / 3) + this.data.movementBonus - this.data.movementPenalty;
+		this.mp = 6 + Math.floor(this.attributes.agi.value / 3) + (this.data.movementBonus?.valueOf() ?? 0) - (this.data.movementBonus?.valueOf() ?? 0);
 
-		this.defenses.stability = Math.floor(this.defenses.stabilityProficency * this.levels.level) + this.attributes.str.value + this.data.stabilityBonus;
-		this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * this.levels.level) + this.attributes.agi.value + this.data.dodgeBonus - this.data.manoeuvrePenalty;
-		this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * this.levels.level) + this.attributes.con.value + this.data.toughnessBonus;
-		this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * this.levels.level) + this.attributes.spi.value + this.data.willpowerBonus;
-		this.defenses.shieldBlock = this.levels.martialLevel + this.defenses.shieldBlockBase;
+		this.defenses.stability = Math.floor(this.defenses.stabilityProficency * (this.levels.level?.valueOf() ?? 0)) + this.attributes.str.value + this.data.stabilityBonus;
+		this.defenses.dodge = Math.floor(this.defenses.dodgeProficency * (this.levels.level?.valueOf() ?? 0)) + this.attributes.agi.value + this.data.dodgeBonus - this.data.manoeuvrePenalty;
+		this.defenses.toughness = Math.floor(this.defenses.toughnessProficency * (this.levels.level?.valueOf() ?? 0)) + this.attributes.con.value + this.data.toughnessBonus;
+		this.defenses.willpower = Math.floor(this.defenses.willpowerProficency * (this.levels.level?.valueOf() ?? 0)) + this.attributes.spi.value + this.data.willpowerBonus;
+		this.defenses.shieldBlock = (this.levels.martialLevel?.valueOf() ?? 0) + (this.defenses.shieldBlockBase?.valueOf() ?? 0);
 
 		this.attackBonuses.meleeMartialAttack = this.levels.martialLevel + this.attributes.agi.value;
 		this.attackBonuses.rangedMartialAttack = this.levels.martialLevel + this.attributes.per.value;
@@ -135,7 +222,7 @@ export default class RtRActorBase extends foundry.abstract.TypeDataModel<{}, any
 		const data = {
 			level: this.levels.level,
 
-			d20Test: -this.exhaustion,
+			d20Test: -(this.exhaustion?.valueOf() ?? 0)
 			martialTest: this.levels.martialLevel,
 			spellTest: this.levels.spellLevel,
 
