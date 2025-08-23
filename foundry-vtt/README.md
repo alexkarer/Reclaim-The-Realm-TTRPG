@@ -15,4 +15,4 @@ Additionally common_resources are required
 ### Improve Intellisense
 
 1. Create file: `/foundry-vtt/reclaim-the-realm/foundry-config.yaml` with the following content: `installPath: "C:\\Program Files\\Foundry Virtual Tabletop\\Version 13"`
-2. Execute npm run createsymlink (or install as it is contained in postInstall)
+2. Execute npm run createsymlink

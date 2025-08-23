@@ -1,0 +1,164 @@
+export function registerHandlebarsHelpers() {
+    Handlebars.registerHelper('divideCeil', function (value: number, divider: number) {
+        return Math.ceil(value / divider);
+    });
+
+    Handlebars.registerHelper('add', function (x: number, y: number) {
+        return x + y;
+    });
+
+    Handlebars.registerHelper('subtract', function (x: number, y: number) {
+        return x - y;
+    });
+
+    Handlebars.registerHelper('compare', function (x: unknown, y: unknown) {
+        return x === y;
+    });
+
+    Handlebars.registerHelper('neq', function (x: unknown, y: unknown) {
+        return x !== y;
+    });
+
+    Handlebars.registerHelper('not', function (x: unknown) {
+        return !x;
+    });
+
+    Handlebars.registerHelper('and', function (x: unknown, y: unknown) {
+        return x && y;
+    });
+
+    Handlebars.registerHelper('or', function (x: unknown, y: unknown) {
+        return x || y;
+    });
+
+    Handlebars.registerHelper('exists', function (x: unknown) {
+        return x !== undefined;
+    });
+
+    Handlebars.registerHelper('isOneOf5', function (match: string, arg1: string, arg2: string, arg3: string, arg4: string, arg5: string) {
+        return match === arg1 || match === arg2 || match === arg3 || match === arg4 || match === arg5;
+    });
+
+    Handlebars.registerHelper('formatWeight', function (weightInGramm: number) {
+        if (weightInGramm < 1000) {
+            return weightInGramm + ' g';
+        }
+        let kg = Math.floor(weightInGramm / 1000);
+        let gramm = weightInGramm % 1000;
+        let dg = Math.floor((weightInGramm % 1000) / 100);
+        let cg = weightInGramm % 100;
+        if (gramm === 0) {
+            return kg + ' kg';
+        } else if (dg !== 0 && cg === 0) {
+            return kg + '.' + dg + ' kg';
+        } else {
+            return kg + ' kg ' + gramm + ' g';
+        }
+    });
+
+    Handlebars.registerHelper('formatCost', function (costInBc: number) {
+        let bc = costInBc % 10;
+        let sc = Math.floor((costInBc % 100) / 10);
+        let gc = Math.floor(costInBc / 100);
+
+        if (gc === 0 && sc === 0 && bc === 0) {
+            return '-';
+        } else if (gc === 0 && sc === 0 && bc !== 0) {
+            return bc + ' bc';
+        } else if (gc === 0 && sc !== 0 && bc === 0) {
+            return sc + ' sc';
+        } else if (gc === 0 && sc !== 0 && bc !== 0) {
+            return sc + ' sc ' + bc + ' sc';
+        } else if (gc !== 0 && sc === 0 && bc === 0) {
+            return gc + ' gc';
+        } else if (gc !== 0 && sc === 0 && bc !== 0) {
+            return gc + ' gc ' + bc + ' bc';
+        } else if (gc !== 0 && sc !== 0 && bc === 0) {
+            return gc + ' gc ' + sc + ' sc';
+        } else if (gc !== 0 && sc !== 0 && bc !== 0) {
+            return gc + ' gc ' + sc + ' sc ' + bc + ' bc';
+        }
+    });
+
+    //TODO: use enum
+    Handlebars.registerHelper('formatRequirements', function (requirements: any) {
+        let requirementsText = [];
+        if (requirements.minimumLevel > 0) {
+            requirementsText.push(`LEVEL: ${requirements.minimumLevel}`);
+        } if (requirements.minimumMartialLevel > 0) {
+            requirementsText.push(`MARTIAL LEVEL: ${requirements.minimumMartialLevel}`);
+        } if (requirements.minimumSpellLevel > 0) {
+            requirementsText.push(`SPELL LEVEL: ${requirements.minimumSpellLevel}`);
+        } if (requirements.minimumStr > 0) {
+            requirementsText.push(`STR: ${requirements.minimumStr}`);
+        } if (requirements.minimumAgi > 0) {
+            requirementsText.push(`AGI: ${requirements.minimumAgi}`);
+        } if (requirements.minimumCon > 0) {
+            requirementsText.push(`CON: ${requirements.minimumCon}`);
+        } if (requirements.minimumInt > 0) {
+            requirementsText.push(`INT: ${requirements.minimumInt}`);
+        } if (requirements.minimumSpi > 0) {
+            requirementsText.push(`SPI: ${requirements.minimumSpi}`);
+        } if (requirements.minimumPer > 0) {
+            requirementsText.push(`PER: ${requirements.minimumPer}`);
+        } if (requirements.minimumCha > 0) {
+            requirementsText.push(`CHA: ${requirements.minimumCha}`);
+        } if (requirements.skillRankRequirement && requirements.skillRankRequirement.skill && requirements.skillRankRequirement.rank > 0) {
+            requirementsText.push(`Skill: ${requirements.skillRankRequirement.skill}: ${requirements.skillRankRequirement.rank}`);
+        } if (requirements.requiredClass) {
+            requirementsText.push(`Class: ${requirements.requiredClass}`);
+        } if (requirements.requiredPerk) {
+            requirementsText.push(`Perk: ${requirements.requiredPerk}`);
+        } if (requirements.requiredNotSelectedPerk) {
+            requirementsText.push(`Not Perk: ${requirements.requiredNotSelectedPerk}`);
+        } if (requirements.requiredSpellDisciplineOne) {
+            if (!requirements.requiredSpellDisciplineTwo) {
+                requirementsText.push(`Spell Discipline: ${requirements.requiredSpellDisciplineOne}`);
+            } else {
+                requirementsText.push(`Spell Discipline 1: ${requirements.requiredSpellDisciplineOne}`);
+            }
+        } if (requirements.requiredSpellDisciplineTwo) {
+            requirementsText.push(`Spell Discipline 2: ${requirements.requiredSpellDisciplineTwo}`);
+        } if (requirements.requiredMartialManeuverType) {
+            requirementsText.push(`Martial Maneuver Type: ${requirements.requiredMartialManeuverType}`);
+        } if (requirements.otherRequirements) {
+            requirementsText.push(`Other: ${requirements.otherRequirements}`);
+        }
+
+        if (requirementsText.length === 0) {
+            requirementsText.push('No Requirements');
+        }
+
+        return requirementsText;
+    });
+
+    //TODO: use enum
+    Handlebars.registerHelper('formatAbilityCost', function (abilityCost: any) {
+        let costText = [];
+        if (abilityCost.isFree) {
+            costText.push(`FREE`);
+        }
+        if ((abilityCost.apCost > 0 || abilityCost.mpCost === 0) && !abilityCost.isFree) {
+            costText.push(`${abilityCost.apCost} AP`);
+        }
+        if (abilityCost.mpCost > 0) {
+            costText.push(`${abilityCost.mpCost} MP`);
+        }
+        if (abilityCost.arcanaCost > 0) {
+            costText.push(`${abilityCost.arcanaCost} ARCANA`);
+        }
+        if (abilityCost.staminaCost > 0) {
+            costText.push(`${abilityCost.staminaCost} STAMINA`);
+        }
+        if (abilityCost.classResourceName && abilityCost.classResourceCost > 0) {
+            costText.push(`${abilityCost.classResourceCost} ${abilityCost.classResourceName}`);
+        }
+        if (abilityCost.otherResourceCost && abilityCost.otherResourceCost.trim() !== '') {
+            costText.push(abilityCost.otherResourceCost);
+        }
+        if (costText.length === 0) {
+            return ['No Ability Cost Defined'];
+        }
+        return costText;
+    });
+}

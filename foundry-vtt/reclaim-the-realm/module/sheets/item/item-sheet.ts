@@ -1,0 +1,913 @@
+const { api, sheets, ux, apps } = foundry.applications;
+
+export class RtRItemSheet extends api.HandlebarsApplicationMixin(
+    sheets.ItemSheetV2
+) {
+    constructor(options = {}) {
+        super(options);
+        this.#dragDrop = this.#createDragDropHandlers();
+    }
+
+    /** @override */
+    static DEFAULT_OPTIONS = {
+        classes: ['reclaim-the-realm', 'item'],
+        position: {
+            width: 480,
+        },
+        window: {
+            resizable: true
+        },
+        actions: {
+            onEditImage: this._onEditImage,
+            unlockEdit: this._onUnlockEdit,
+            lockEdit: this._onLockEdit,
+            addTag: this._onAddTag,
+            deleteTag: this._onDeleteTag,
+            editPerkRequirements: this._onEditPerkRequirements,
+            editAbilityRequirements: this._onEditAbilityRequirements,
+            editUsageCost: this._onEditUsageCost,
+            addAction: this._onAddAction,
+            deleteAction: this._onDeleteAction,
+            addResult: this._onAddResult,
+        },
+        form: {
+            submitOnChange: true,
+        },
+        // Custom property that's merged into `this.options`
+        dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
+    };
+
+    /* -------------------------------------------- */
+
+    /** @override */
+    static PARTS = {
+        header: {
+            template: 'systems/reclaim-the-realm/templates/item/header.hbs',
+        },
+        tabs: {
+            // Foundry-provided generic template
+            template: 'templates/generic/tab-navigation.hbs',
+        },
+        description: {
+            template: 'systems/reclaim-the-realm/templates/item/description.hbs',
+        },
+        perk: {
+            template: 'systems/reclaim-the-realm/templates/item/perk.hbs',
+        },
+        equipment: {
+            template: 'systems/reclaim-the-realm/templates/item/equipment.hbs',
+        },
+        ability: {
+            template: 'systems/reclaim-the-realm/templates/item/ability.hbs',
+        },
+        species: {
+            template: 'systems/reclaim-the-realm/templates/item/species.hbs',
+        },
+        classcorefeature: {
+            template: 'systems/reclaim-the-realm/templates/item/class-core-feature.hbs',
+        },
+        classcorevalues: {
+            template: 'systems/reclaim-the-realm/templates/item/class-core-values.hbs',
+        },
+        npctrait: {
+            template: 'systems/reclaim-the-realm/templates/item/npc-trait.hbs',
+        }
+    };
+
+
+
+    /** @override */
+    _configureRenderOptions(options: any) {
+        super._configureRenderOptions(options);
+        // Not all parts always render
+        options.parts = ['header', 'tabs'];
+        // Don't show the other tabs if only limited view
+        if (this.document.limited) return;
+        // Control which parts show based on document subtype
+        switch (this.document.type) {
+            case 'perk':
+                options.parts.push('perk',);
+                break;
+            case 'equipment':
+                options.parts.push('equipment');
+                break;
+            case 'ability':
+            case 'npcAbility':
+            case 'classTechnique':
+            case 'martialManeuver':
+            case 'spell':
+                options.parts.push('ability');
+                break;
+            case 'species':
+                options.parts.push('species');
+                break;
+            case 'class':
+                options.parts.push('classcorefeature', 'classcorevalues');
+                break;
+            case 'npcTrait':
+                options.parts.push('npctrait');
+                break;
+        }
+    }
+
+    /* -------------------------------------------- */
+
+    /** @override */
+    async _prepareContext(options: any) {
+        const context = {
+            // Validates both permissions and compendium status
+            editable: this.isEditable,
+            owner: this.document.isOwner,
+            limited: this.document.limited,
+            // Add the item document.
+            item: this.item,
+            // Adding system and flags for easier access
+            system: this.item.system,
+            flags: this.item.flags,
+            // Adding a pointer to CONFIG.RTR
+            config: CONFIG.RTR,
+            // You can factor out context construction to helper functions
+            tabs: this._getTabs(options.parts),
+            // Necessary for formInput and formFields helpers
+            fields: this.document.schema.fields,
+            systemFields: this.document.system.schema.fields,
+        };
+
+        return context;
+    }
+
+    /** @override */
+    async _preparePartContext(partId: string, context: any) {
+        switch (partId) {
+            case 'equipment':
+            case 'perk':
+            case 'ability':
+            case 'spell':
+            case 'description':
+            case 'species':
+            case 'classcorefeature':
+            case 'npctrait':
+                context.tab = context.tabs[partId];
+                // Enrich description info for display
+                // Enrichment turns text like `[[/r 1d20]]` into buttons
+                context.enrichedDescription = await ux.TextEditor.enrichHTML(
+                    this.item.system.description,
+                    {
+                        // Whether to show secret blocks in the finished html
+                        secrets: this.document.isOwner,
+                        // Data to fill in for inline rolls
+                        rollData: this.item.getRollData(),
+                        // Relative UUID resolution
+                        relativeTo: this.item,
+                    }
+                );
+                break;
+            case 'classcorevalues':
+                context.tab = context.tabs[partId];
+                break;
+        }
+        return context;
+    }
+
+    _getTabs(parts: string[]) {
+        // If you have sub-tabs this is necessary to change
+        const tabGroup = 'primary';
+        // Default tab for first time it's rendered this session
+        if (!this.tabGroups[tabGroup]) {
+            if (this.document.type === 'ability' || this.document.type === 'martialManeuver' || this.document.type === 'classTechnique' || this.document.type === 'npcAbility' || this.document.type === 'spell') {
+                this.tabGroups[tabGroup] = 'ability';
+            } else if (this.document.type === 'perk') {
+                this.tabGroups[tabGroup] = 'perk';
+            } else if (this.document.type === 'equipment') {
+                this.tabGroups[tabGroup] = 'equipment';
+            } else if (this.document.type === 'species') {
+                this.tabGroups[tabGroup] = 'species';
+            } else if (this.document.type === 'class') {
+                this.tabGroups[tabGroup] = 'classcorefeature';
+            } else if (this.document.type === 'npcTrait') {
+                this.tabGroups[tabGroup] = 'npctrait';
+            } else {
+                this.tabGroups[tabGroup] = 'description';
+            }
+        }
+        return parts.reduce((tabs, partId) => {
+            const tab = {
+                cssClass: '',
+                group: tabGroup,
+                // Matches tab property to
+                id: '',
+                // FontAwesome Icon, if you so choose
+                icon: '',
+                // Run through localization
+                label: 'RTR.Item.Tabs.',
+            };
+            switch (partId) {
+                case 'header':
+                case 'tabs':
+                    return tabs;
+                case 'description':
+                    tab.id = 'description';
+                    tab.label += 'Description';
+                    break;
+                case 'equipment':
+                    tab.id = 'equipment';
+                    tab.label += 'Equipment';
+                    break;
+                case 'ability':
+                    tab.id = 'ability';
+                    tab.label += 'Ability';
+                    break;
+                case 'perk':
+                    tab.id = 'perk';
+                    tab.label += 'Perk';
+                    break;
+                case 'species':
+                    tab.id = 'species';
+                    tab.label += 'Species';
+                    break;
+                case 'classcorefeature':
+                    tab.id = 'classcorefeature';
+                    tab.label += 'ClassCoreFeature';
+                    break;
+                case 'classcorevalues':
+                    tab.id = 'classcorevalues';
+                    tab.label += 'ClassCoreValues';
+                    break;
+                case 'npctrait':
+                    tab.id = 'npctrait';
+                    tab.label += 'Trait';
+                    break;
+            }
+            if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
+            tabs[partId] = tab;
+            return tabs;
+        }, {});
+    }
+
+    /**
+     * Actions performed after any render of the Application.
+     * Post-render steps are not awaited by the render process.
+     * @param {ApplicationRenderContext} context      Prepared context data
+     * @param {RenderOptions} options                 Provided render options
+     * @protected
+     */
+    _onRender(context: any, options: RenderOptions) {
+        this.#dragDrop.forEach((d) => d.bind(this.element));
+
+        // bind equipment type selector
+        if (this.document.type === 'equipment') {
+            const equipmentTypeSelectors = this.element.querySelectorAll('.equipment-type-selector')
+            for (const equipmentTypeSelector of equipmentTypeSelectors) {
+                equipmentTypeSelector.addEventListener("change", (e) => {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    const name = e.target.name;
+                    const equipmentType = e.target.value;
+                    let updatePayload = {};
+                    updatePayload[name] = equipmentType;
+                    this.document.update(updatePayload)
+                        .then(v => this.render());
+                })
+            }
+        }
+    }
+
+    /**
+     * Lock edit lockers upon close
+     * @param options
+     * @protected
+     * @override
+     */
+    _onClose(options: any) {
+        const updatePayload = {
+            'system.editLock': true
+        };
+        this.document.update(updatePayload);
+    }
+
+    /**************
+     *
+     *   ACTIONS
+     *
+     **************/
+
+    static async _onEditImage(event: PointerEvent, target: HTMLElement) {
+        const attr = target.dataset.edit;
+        const current = foundry.utils.getProperty(this.document, attr);
+        const { img } =
+            this.document.constructor.getDefaultArtwork?.(this.document.toObject()) ??
+            {};
+        const fp = new apps.FilePicker({
+            current,
+            type: 'image',
+            redirectToRoot: img ? [img] : [],
+            callback: (path) => {
+                this.document.update({ [attr]: path });
+            },
+            top: this.position.top + 40,
+            left: this.position.left + 10,
+        });
+        return fp.browse();
+    }
+
+    static async _onUnlockEdit(event: PointerEvent, target: HTMLElement) {
+        event.preventDefault();
+        if (!this.isEditable) {
+            console.error("No Edit permission for " + this.name);
+            return;
+        }
+        const updatePayload = {
+            'system.editLock': false
+        };
+        this.document.update(updatePayload).then(v => this.render());
+    }
+
+    static async _onLockEdit(event: PointerEvent, target: HTMLElement) {
+        event.preventDefault();
+        const updatePayload = {
+            'system.editLock': true
+        };
+        this.document.update(updatePayload).then(v => this.render());
+    }
+
+    static async _onAddTag(event: PointerEvent, target: HTMLElement) {
+        event.preventDefault();
+
+        const result = await api.DialogV2.input({
+            rejectClose: false,
+            modal: true,
+            content: `<input type="text" value="" name="tag">`,
+            window: { title: "Add Tag" },
+            ok: { label: "Add Tag" }
+        });
+        if (!result || !result.tag) {
+            return;
+        }
+
+        const existingResistance = this.document.system.tags.find(t => t === result.tag);
+        let updatedTags = [];
+        if (existingResistance) {
+            return;
+        } else {
+            updatedTags = [
+                ...foundry.utils.deepClone(this.document.system.tags),
+                result.tag
+            ];
+        }
+
+        this.document.update({ "system.tags": updatedTags }).then(v => this.render());
+    }
+
+    static async _onDeleteTag(event: PointerEvent, target: HTMLElement) {
+        event.preventDefault();
+        const tag = target.dataset.tag;
+        const updatePayload = {
+            "system.tags": foundry.utils.deepClone(this.document.system.tags.filter(t => t !== tag))
+        };
+        this.document.update(updatePayload).then(v => this.render());
+    }
+
+    static async _onEditPerkRequirements(event: PointerEvent, target: HTMLElement) {
+        event.preventDefault();
+        const result = await api.DialogV2.input({
+            rejectClose: false,
+            modal: true,
+            classes: ['reclaim-the-realm'],
+            content: `
+          <div class="compact-grid grid-2col">
+            <h6 style="margin-top: 0px;" class="grid-span-2">Level Requirement</h6>
+            <label for="minlevel" class="compact-input">Minimum LEVEL</label><input type="number" name="minlevel" class="compact-input" id="minlevel" value="${this.document.system.requirements.minimumLevel}">
+            <label for="minmartiallevel" class="compact-input">Minimum MARTIAL LEVEL</label><input type="number" name="minmartiallevel" class="compact-input" id="minmartiallevel" value="${this.document.system.requirements.minimumMartialLevel}">
+            <label for="minspelllevel" class="compact-input">Minimum SPELL LEVEL</label><input type="number" name="minspelllevel" class="compact-input" id="minspelllevel" value="${this.document.system.requirements.minimumSpellLevel}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Attribute Requirements</h6>
+            <label for="minstr" class="compact-input">Minimum STR</label><input type="number" class="compact-input" name="minstr" id="minstr" value="${this.document.system.requirements.minimumStr}">
+            <label for="minagi" class="compact-input">Minimum AGI</label><input type="number" class="compact-input" name="minagi" id="minagi" value="${this.document.system.requirements.minimumAgi}">
+            <label for="mincon" class="compact-input">Minimum CON</label><input type="number" class="compact-input" name="mincon" id="mincon" value="${this.document.system.requirements.minimumCon}">
+            <label for="minint" class="compact-input">Minimum INT</label><input type="number" class="compact-input" name="minint" id="minint" value="${this.document.system.requirements.minimumInt}">
+            <label for="minspi" class="compact-input">Minimum SPI</label><input type="number" class="compact-input" name="minspi" id="minspi" value="${this.document.system.requirements.minimumSpi}">
+            <label for="minper" class="compact-input">Minimum PER</label><input type="number" class="compact-input" name="minper" id="minper" value="${this.document.system.requirements.minimumPer}">
+            <label for="mincha" class="compact-input">Minimum CHA</label><input type="number" class="compact-input" name="mincha" id="mincha" value="${this.document.system.requirements.minimumCha}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Skill Requirement</h6>
+            <label for="skill" class="compact-input">Skill</label><input type="text" name="skill" class="compact-input" id="skill" value="${this.document.system.requirements.skillRankRequirement.skill ?? ''}">
+            <label for="skillrank" class="compact-input">Skill Rank</label><input type="number" name="skillrank" class="compact-input" id="skillrank" value="${this.document.system.requirements.skillRankRequirement.rank}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Class and Perk Requirement</h6>
+            <label for="requiredClass" class="compact-input">Required Class</label><input type="text" name="requiredClass" class="compact-input" id="requiredClass" value="${this.document.system.requirements.requiredClass ?? ''}">
+            <label for="requiredPerk" class="compact-input">Required Perk</label><input type="text" name="requiredPerk" class="compact-input" id="requiredPerk" value="${this.document.system.requirements.requiredPerk ?? ''}">
+            <label for="requiredNotSelectedPerk" class="compact-input">Required Not Selected Perk</label><input type="text" name="requiredNotSelectedPerk" class="compact-input" id="requiredNotSelectedPerk" value="${this.document.system.requirements.requiredNotSelectedPerk ?? ''}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Other Requirements</h6>
+            <input class="grid-span-2 compact-input" type="text" name="otherRequirements" id="otherRequirements" value="${this.document.system.requirements.otherRequirements ?? ''}">
+          </div>
+          `,
+            window: { title: "Edit Perk Requirements" },
+            ok: { label: "Confirm" }
+        });
+        if (!result) {
+            return;
+        }
+        const updatePayload = this._parseCommonRequirementsEditResult(result);
+        if (result.requiredNotSelectedPerk && result.requiredNotSelectedPerk.trim() !== '') {
+            updatePayload['system.requirements.requiredNotSelectedPerk'] = result.requiredNotSelectedPerk;
+        } else {
+            updatePayload['system.requirements.requiredNotSelectedPerk'] = '';
+        }
+
+        this.document.update(updatePayload).then(v => this.render());
+    }
+
+    static async _onEditAbilityRequirements(event: PointerEvent, target: HTMLElement) {
+        event.preventDefault();
+        const result = await api.DialogV2.input({
+            rejectClose: false,
+            modal: true,
+            classes: ['reclaim-the-realm'],
+            content: `
+          <div class="compact-grid grid-2col">
+            <h6 style="margin-top: 0px;" class="grid-span-2">Level Requirement</h6>
+            <label for="minlevel" class="compact-input">Minimum LEVEL</label><input type="number" name="minlevel" class="compact-input" id="minlevel" value="${this.document.system.requirements.minimumLevel}">
+            <label for="minmartiallevel" class="compact-input">Minimum MARTIAL LEVEL</label><input type="number" name="minmartiallevel" class="compact-input" id="minmartiallevel" value="${this.document.system.requirements.minimumMartialLevel}">
+            <label for="minspelllevel" class="compact-input">Minimum SPELL LEVEL</label><input type="number" name="minspelllevel" class="compact-input" id="minspelllevel" value="${this.document.system.requirements.minimumSpellLevel}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Attribute Requirements</h6>
+            <label for="minstr" class="compact-input">Minimum STR</label><input type="number" class="compact-input" name="minstr" id="minstr" value="${this.document.system.requirements.minimumStr}">
+            <label for="minagi" class="compact-input">Minimum AGI</label><input type="number" class="compact-input" name="minagi" id="minagi" value="${this.document.system.requirements.minimumAgi}">
+            <label for="mincon" class="compact-input">Minimum CON</label><input type="number" class="compact-input" name="mincon" id="mincon" value="${this.document.system.requirements.minimumCon}">
+            <label for="minint" class="compact-input">Minimum INT</label><input type="number" class="compact-input" name="minint" id="minint" value="${this.document.system.requirements.minimumInt}">
+            <label for="minspi" class="compact-input">Minimum SPI</label><input type="number" class="compact-input" name="minspi" id="minspi" value="${this.document.system.requirements.minimumSpi}">
+            <label for="minper" class="compact-input">Minimum PER</label><input type="number" class="compact-input" name="minper" id="minper" value="${this.document.system.requirements.minimumPer}">
+            <label for="mincha" class="compact-input">Minimum CHA</label><input type="number" class="compact-input" name="mincha" id="mincha" value="${this.document.system.requirements.minimumCha}">
+            
+            <h6 style="margin-top: 6px;" class="grid-span-2">Spell Disciplines or Martial Maneuver Types</h6>
+            <label for="spelldisciplineone" class="compact-input">Required Spell Discipline 1</label><input type="text" class="compact-input" name="spelldisciplineone" id="spelldisciplineone" value="${this.document.system.requirements.requiredSpellDisciplineOne ?? ''}">
+            <label for="spelldisciplinetwo" class="compact-input">Required Spell Discipline 2</label><input type="text" class="compact-input" name="spelldisciplinetwo" id="spelldisciplinetwo" value="${this.document.system.requirements.requiredSpellDisciplineTwo ?? ''}">
+            <label for="martialmaneuvertype" class="compact-input">Required Martial Maneuver Type</label><input type="text" class="compact-input" name="martialmaneuvertype" id="martialmaneuvertype" value="${this.document.system.requirements.requiredMartialManeuverType ?? ''}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Skill Requirement</h6>
+            <label for="skill" class="compact-input">Skill</label><input type="text" name="skill" class="compact-input" id="skill" value="${this.document.system.requirements.skillRankRequirement.skill ?? ''}">
+            <label for="skillrank" class="compact-input">Skill Rank</label><input type="number" name="skillrank" class="compact-input" id="skillrank" value="${this.document.system.requirements.skillRankRequirement.rank}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Class and Perk Requirement</h6>
+            <label for="requiredClass" class="compact-input">Required Class</label><input type="text" name="requiredClass" class="compact-input" id="requiredClass" value="${this.document.system.requirements.requiredClass ?? ''}">
+            <label for="requiredPerk" class="compact-input">Required Perk</label><input type="text" name="requiredPerk" class="compact-input" id="requiredPerk" value="${this.document.system.requirements.requiredPerk ?? ''}">
+
+            <h6 style="margin-top: 6px;" class="grid-span-2">Other Requirements</h6>
+            <input class="grid-span-2 compact-input" type="text" name="otherRequirements" id="otherRequirements" value="${this.document.system.requirements.otherRequirements ?? ''}">
+          </div>
+          `,
+            window: { title: "Edit Ability Requirements" },
+            ok: { label: "Confirm" }
+        });
+        if (!result) {
+            return;
+        }
+        const updatePayload = this._parseCommonRequirementsEditResult(result);
+        if (result.spelldisciplineone && result.spelldisciplineone.trim() !== '') {
+            updatePayload['system.requirements.requiredSpellDisciplineOne'] = result.spelldisciplineone;
+        } else {
+            updatePayload['system.requirements.requiredSpellDisciplineOne'] = '';
+        }
+        if (result.spelldisciplinetwo && result.spelldisciplinetwo.trim() !== '') {
+            updatePayload['system.requirements.requiredSpellDisciplineTwo'] = result.spelldisciplinetwo;
+        } else {
+            updatePayload['system.requirements.requiredSpellDisciplineTwo'] = '';
+        }
+        if (result.martialmaneuvertype && result.martialmaneuvertype.trim() !== '') {
+            updatePayload['system.requirements.requiredMartialManeuverType'] = result.martialmaneuvertype;
+        } else {
+            updatePayload['system.requirements.requiredMartialManeuverType'] = '';
+        }
+
+        this.document.update(updatePayload).then(v => this.render());
+    }
+
+    static async _onEditUsageCost(event: PointerEvent, target: HTMLElement) {
+        event.preventDefault();
+        const mapToSelectOptions = (options, selected) => options.map(type => `<option ${selected === type ? 'selected' : ''} value="${type}">${type}</option>`).join();
+        const classResourceSelect = mapToSelectOptions(['', ...Object.keys(CONFIG.RTR.classResources)], this.document.system.usageCost.classResourceName);
+        const result = await api.DialogV2.input({
+            rejectClose: false,
+            modal: true,
+            classes: ['reclaim-the-realm'],
+            content: `
+          <div class="compact-grid grid-2col">
+            <label for="isfree" class="compact-input">Free</label><input type="checkbox" name="isfree" class="compact-input" id="isfree" value="${this.document.system.usageCost.isFree}">
+            <label for="apcost" class="compact-input">AP Cost</label><input type="number" name="apcost" class="compact-input" id="apcost" value="${this.document.system.usageCost.apCost}">
+            <label for="mpcost" class="compact-input">MP Cost</label><input type="number" name="mpcost" class="compact-input" id="mpcost" value="${this.document.system.usageCost.mpCost}">
+            <label for="arcanacost" class="compact-input">ARCANA Cost</label><input type="number" name="arcanacost" class="compact-input" id="arcanacost" value="${this.document.system.usageCost.arcanaCost}">
+            <label for="staminacost" class="compact-input">STAMINA Cost</label><input type="number" name="staminacost" class="compact-input" id="staminacost" value="${this.document.system.usageCost.staminaCost}">
+            <label for="classresourcename" class="compact-input">Class Resource</label><select name="classresourcename" id="classresourcename"  class="compact-input">${classResourceSelect}</select>
+            <label for="classresourcecost" class="compact-input">Class Resource Cost</label><input type="number" name="classresourcecost" class="compact-input" id="classresourcecost" value="${this.document.system.usageCost.classResourceCost}">
+            <label for="other" class="compact-input">Other</label><input type="text" name="other" class="compact-input" id="other" value="${this.document.system.usageCost.otherResourceCost}">
+          </div>
+          `,
+            window: { title: "Edit Ability Usage Cost" },
+            ok: { label: "Confirm" }
+        });
+        if (!result) {
+            return;
+        }
+        const updatePayload = {};
+        if (result.isfree) {
+            updatePayload['system.usageCost.isFree'] = true;
+        } else {
+            updatePayload['system.usageCost.isFree'] = false;
+        } if (result.apcost) {
+            updatePayload['system.usageCost.apCost'] = parseInt(result.apcost);
+        } else {
+            updatePayload['system.usageCost.apCost'] = 0;
+        } if (result.mpcost) {
+            updatePayload['system.usageCost.mpCost'] = parseInt(result.mpcost);
+        } else {
+            updatePayload['system.usageCost.mpCost'] = 0;
+        } if (result.arcanacost) {
+            updatePayload['system.usageCost.arcanaCost'] = parseInt(result.arcanacost);
+        } else {
+            updatePayload['system.usageCost.arcanaCost'] = 0;
+        } if (result.staminacost) {
+            updatePayload['system.usageCost.staminaCost'] = parseInt(result.staminacost);
+        } else {
+            updatePayload['system.usageCost.staminaCost'] = 0;
+        } if (result.classresourcename && result.classresourcename.trim() !== '' && result.classresourcecost) {
+            updatePayload['system.usageCost.classResourceName'] = result.classresourcename;
+            updatePayload['system.usageCost.classResourceCost'] = parseInt(result.classresourcecost);
+        } else {
+            updatePayload['system.usageCost.classResourceName'] = '';
+            updatePayload['system.usageCost.classResourceCost'] = 0;
+        } if (result.other && result.other.trim() !== '') {
+            updatePayload['system.usageCost.otherResourceCost'] = result.other;
+        } else {
+            updatePayload['system.usageCost.otherResourceCost'] = '';
+        }
+
+        this.document.update(updatePayload).then(v => this.render());
+    }
+
+    static async _onAddAction(event: PointerEvent, target: HTMLElement) {
+        event.preventDefault();
+
+        const mapToSelectOptions = (options) => options.map(type => `<option value="${type}">${type}</option>`).join();
+        const actionTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityActionType));
+        const attributeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.attributes));
+        const targetingSaveSelect = mapToSelectOptions(['-', 'STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER']);
+        const targetsSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityTargetTypes));
+        const rangeTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityRangeType));
+        const result = await api.DialogV2.input({
+            rejectClose: false,
+            modal: true,
+            classes: ['reclaim-the-realm'],
+            content: `
+          <div class="compact-grid grid-2col">
+            <label for="actiontype" class="compact-input">Action Type</label><select name="actiontype" id="actiontype"  class="compact-input">${actionTypeSelect}</select>
+            <label for="rollbonus" class="compact-input">Roll Bonus</label><input type="number" name="rollbonus" class="compact-input" id="rollbonus">
+            <label for="fixed" class="compact-input">Fixed?</label><input type="checkbox" name="fixed" class="compact-input" id="fixed">
+            <label for="fixedvalue" class="compact-input">Fixed Value</label><input type="number" name="fixedvalue" class="compact-input" id="fixedvalue">
+            <label for="attributeselect" class="compact-input">Relevant Attribute</label><select name="attributeselect" id="attributeselect"  class="compact-input">${attributeSelect}</select>
+            <label for="targetingsave" class="compact-input">Targeting Save</label><select name="targetingsave" id="targetingsave"  class="compact-input">${targetingSaveSelect}</select>
+            <label for="targets" class="compact-input">Target(s)</label><select name="targets" id="targets" class="compact-input">${targetsSelect}</select>
+            <label for="targetaereasize" class="compact-input">Target Area Size</label><input type="number" name="targetaereasize" class="compact-input" id="targetaereasize">
+            <label for="rangetype" class="compact-input">Range Type</label><select name="rangetype" id="rangetype" class="compact-input">${rangeTypeSelect}</select>
+            <label for="range" class="compact-input">Range</label><input type="number" name="range" class="compact-input" id="range">
+          </div>
+          `,
+            window: { title: "Add new Ability Action" },
+            ok: { label: "Add" }
+        });
+        if (!result) {
+            return;
+        }
+        const newActions = foundry.utils.deepClone(this.document.system.actions);
+        newActions.push({
+            actionType: result.actiontype,
+            rollBonus: result.rollbonus,
+            fixed: result.fixed,
+            fixedValue: result.fixedvalue,
+            attribute: result.attributeselect,
+            targetingSave: result.targetingsave === '-' ? undefined : result.targetingsave,
+            targets: result.targets,
+            targetsAreaSize: result.targetaereasize,
+            rangeType: result.rangetype,
+            range: result.range,
+            results: []
+        });
+
+        this.document.update({ "system.actions": newActions }).then(v => this.render());
+    }
+
+    static async _onDeleteAction(event: PointerEvent, target: HTMLElement) {
+        event.preventDefault();
+        const idx = parseInt(target.dataset.actionidx);
+        const actionsCopy = foundry.utils.deepClone(this.document.system.actions);
+        const newActions = [...actionsCopy.slice(0, idx), ...actionsCopy.slice(idx + 1)];
+        this.document.update({ "system.actions": newActions }).then(v => this.render());
+    }
+
+    static async _onAddResult(event: PointerEvent, target: HTMLElement) {
+        event.preventDefault();
+        const idx = parseInt(target.dataset.actionidx);
+
+        const mapToSelectOptions = (options) => options.map(type => `<option value="${type}">${type}</option>`).join();
+        const conditionSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityResultCondition));
+        const typeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityResultType));
+        const damageCalculationMethodSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDamageCalculationMethod));
+        const damageTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.damageTypes));
+        const statusEffectSelect = mapToSelectOptions(['', ...Object.keys(CONFIG.RTR.statusEffects)]);
+        const durationSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDurationTypes));
+        const result = await api.DialogV2.input({
+            rejectClose: false,
+            modal: true,
+            classes: ['reclaim-the-realm'],
+            content: `
+          <div class="compact-grid grid-2col">
+            <label for="condition" class="compact-input">Condition</label><select name="condition" id="condition" class="compact-input">${conditionSelect}</select>
+            <label for="type" class="compact-input">Type</label><select name="type" id="type" class="compact-input">${typeSelect}</select>
+
+            <label for="dmgcalcmethod" class="compact-input">Damage Calculation Method</label><select name="dmgcalcmethod" id="dmgcalcmethod" class="compact-input">${damageCalculationMethodSelect}</select>
+            <label for="dmgformula" class="compact-input">Damage Formula</label><input type="text" name="dmgformula" class="compact-input" id="dmgformula">
+            <label for="damagebonus" class="compact-input">Damage Bonus</label><input type="text" name="damagebonus" class="compact-input" id="damagebonus">
+            <label for="halfdamage" class="compact-input">Half Damage?</label><input type="checkbox" name="halfdamage" class="compact-input" id="halfdamage">
+            <label for="damagetype" class="compact-input">Damage Type</label><select name="damagetype" id="damagetype" class="compact-input">${damageTypeSelect}</select>
+
+            <label for="healformula" class="compact-input">Heal Formula</label><input type="text" name="healformula" class="compact-input" id="healformula">
+            <label for="healthp" class="compact-input">Heal THP?</label><input type="checkbox" name="healthp" class="compact-input" id="healthp">
+
+            <label for="statuseffect" class="compact-input">Afflict Status Effect</label><select name="statuseffect" id="statuseffect" class="compact-input">${statusEffectSelect}</select>
+            <label for="durationtype" class="compact-input">Duation Unit</label><select name="durationtype" id="durationtype" class="compact-input">${durationSelect}</select>
+            <label for="duration" class="compact-input">Duration</label><input type="number" name="duration" class="compact-input" id="duration">
+
+            <label for="additional" class="compact-input">Additional Effects</label><input type="text" name="additional" class="compact-input" id="additional">
+          </div>
+          `,
+            window: { title: "Add Ability Result" },
+            ok: { label: "Add" }
+        });
+        if (!result) {
+            return;
+        }
+        const newAction = this.document.system.actions[idx];
+        const newResult = {
+            condition: result.condition,
+            type: result.type,
+            damageCalculationMethod: result.dmgcalcmethod,
+            damageFormula: result.dmgformula,
+            damageBonus: result.damagebonus,
+            halfDamage: result.halfdamage,
+            damageType: result.damagetype,
+            statusEffectToApply: result.statuseffect,
+            statusEffectDurationType: result.durationtype,
+            statusEffectDuration: result.duration,
+            healFormula: result.healformula,
+            healTHP: result.healthp,
+            additionalEffects: result.additional
+        };
+        const existingResult = newAction.results.find(r => r.condition === result.condition);
+        if (existingResult) {
+            newAction.results = [...newAction.results.filter(r => r.condition !== result.condition), newResult];
+        } else {
+            newAction.results.push(newResult);
+        }
+
+        const newActions = [...this.document.system.actions.slice(0, idx), newAction, ...this.document.system.actions.slice(idx + 1)];
+        this.document.update({ "system.actions": newActions }).then(v => this.render());
+    }
+
+    /** Helper Functions */
+
+    // TODO use proper type
+    _parseCommonRequirementsEditResult(result: any) {
+        const updatePayload = {};
+        if (result.minlevel) {
+            updatePayload['system.requirements.minimumLevel'] = parseInt(result.minlevel);
+        } else {
+            updatePayload['system.requirements.minimumLevel'] = 0;
+        }
+        if (result.minmartiallevel) {
+            updatePayload['system.requirements.minimumMartialLevel'] = parseInt(result.minmartiallevel);
+        } else {
+            updatePayload['system.requirements.minimumMartialLevel'] = 0;
+        }
+        if (result.minspelllevel) {
+            updatePayload['system.requirements.minimumSpellLevel'] = parseInt(result.minspelllevel);
+        } else {
+            updatePayload['system.requirements.minimumSpellLevel'] = 0;
+        }
+        if (result.minstr) {
+            updatePayload['system.requirements.minimumStr'] = parseInt(result.minstr);
+        } else {
+            updatePayload['system.requirements.minimumStr'] = 0;
+        }
+        if (result.minagi) {
+            updatePayload['system.requirements.minimumAgi'] = parseInt(result.minagi);
+        } else {
+            updatePayload['system.requirements.minimumAgi'] = 0;
+        }
+        if (result.mincon) {
+            updatePayload['system.requirements.minimumCon'] = parseInt(result.mincon);
+        } else {
+            updatePayload['system.requirements.minimumCon'] = 0;
+        }
+        if (result.minint) {
+            updatePayload['system.requirements.minimumInt'] = parseInt(result.minint);
+        } else {
+            updatePayload['system.requirements.minimumInt'] = 0;
+        }
+        if (result.minspi) {
+            updatePayload['system.requirements.minimumSpi'] = parseInt(result.minspi);
+        } else {
+            updatePayload['system.requirements.minimumSpi'] = 0;
+        }
+        if (result.minper) {
+            updatePayload['system.requirements.minimumPer'] = parseInt(result.minper);
+        } else {
+            updatePayload['system.requirements.minimumPer'] = 0;
+        }
+        if (result.mincha) {
+            updatePayload['system.requirements.minimumCha'] = parseInt(result.mincha);
+        } else {
+            updatePayload['system.requirements.minimumCha'] = 0;
+        }
+        if (result.skill && result.skill.trim() !== '') {
+            updatePayload['system.requirements.skillRankRequirement.skill'] = result.skill;
+        } else {
+            updatePayload['system.requirements.skillRankRequirement.skill'] = '';
+        }
+        if (result.skillrank) {
+            updatePayload['system.requirements.skillRankRequirement.rank'] = parseInt(result.skillrank);
+        } else {
+            updatePayload['system.requirements.skillRankRequirement.rank'] = 0;
+        }
+        if (result.requiredClass && result.requiredClass.trim() !== '') {
+            updatePayload['system.requirements.requiredClass'] = result.requiredClass;
+        } else {
+            updatePayload['system.requirements.requiredClass'] = '';
+        }
+        if (result.requiredPerk && result.requiredPerk.trim() !== '') {
+            console.log('Setting requiredPerk', result.requiredPerk);
+            updatePayload['system.requirements.requiredPerk'] = result.requiredPerk;
+        } else {
+            updatePayload['system.requirements.requiredPerk'] = '';
+        }
+        if (result.otherRequirements && result.otherRequirements.trim() !== '') {
+            updatePayload['system.requirements.otherRequirements'] = result.otherRequirements;
+        } else {
+            updatePayload['system.requirements.otherRequirements'] = '';
+        }
+        return updatePayload;
+    }
+
+    /**
+     *
+     * DragDrop
+     *
+     */
+
+    /**
+     * Define whether a user is able to begin a dragstart workflow for a given drag selector
+     * @param {string} selector       The candidate HTML selector for dragging
+     * @returns {boolean}             Can the current user drag this selector?
+     * @protected
+     */
+    _canDragStart(selector: string) {
+        // game.user fetches the current user
+        return this.isEditable;
+    }
+
+    /**
+     * Define whether a user is able to conclude a drag-and-drop workflow for a given drop selector
+     * @param {string} selector       The candidate HTML selector for the drop target
+     * @returns {boolean}             Can the current user drop on this selector?
+     * @protected
+     */
+    _canDragDrop(selector: string) {
+        // game.user fetches the current user
+        return this.isEditable;
+    }
+
+    /**
+     * Callback actions which occur at the beginning of a drag start workflow.
+     * @param {DragEvent} event       The originating DragEvent
+     * @protected
+     */
+    _onDragStart(event: DragEvent) {
+        const li = event.currentTarget;
+        if ('link' in event.target.dataset) return;
+
+        console.log('Drag Start Event', event);
+        let dragData = null;
+
+        if (!dragData) return;
+
+        // Set data transfer
+        event.dataTransfer.setData('text/plain', JSON.stringify(dragData));
+    }
+
+    /**
+     * Callback actions which occur when a dragged element is over a drop target.
+     * @param {DragEvent} event       The originating DragEvent
+     * @protected
+     */
+    _onDragOver(event: DragEvent) {
+        console.log('Drag Over Event', event);
+    }
+
+    /**
+     * Callback actions which occur when a dragged element is dropped on a target.
+     * @param {DragEvent} event       The originating DragEvent
+     * @protected
+     */
+    async _onDrop(event: DragEvent) {
+        const data = ux.TextEditor.getDragEventData(event);
+        const item = this.item;
+        console.log('On Drop Event', event);
+
+        const allowed = Hooks.call('dropItemSheetData', item, this, data);
+        if (allowed === false) return;
+
+        // Handle different data types
+        switch (data.type) {
+            case 'Actor':
+                return this._onDropActor(event, data);
+            case 'Item':
+                return this._onDropItem(event, data);
+            case 'Folder':
+                return this._onDropFolder(event, data);
+        }
+    }
+
+    /* -------------------------------------------- */
+
+    /**
+     * Handle dropping of an Actor data onto another Actor sheet
+     * @param {DragEvent} event            The concluding DragEvent which contains drop data
+     * @param {object} data                The data transfer extracted from the event
+     * @returns {Promise<object|boolean>}  A data object which describes the result of the drop, or false if the drop was
+     *                                     not permitted.
+     * @protected
+     */
+    async _onDropActor(event: DragEvent, data: any) {
+        if (!this.item.isOwner) return false;
+    }
+
+    /* -------------------------------------------- */
+
+    /**
+     * Handle dropping of an item reference or item data onto an Actor Sheet
+     * @param {DragEvent} event            The concluding DragEvent which contains drop data
+     * @param {object} data                The data transfer extracted from the event
+     * @returns {Promise<Item[]|boolean>}  The created or updated Item instances, or false if the drop was not permitted.
+     * @protected
+     */
+    async _onDropItem(event: DragEvent, data: any) {
+        if (!this.item.isOwner) return false;
+    }
+
+    /* -------------------------------------------- */
+
+    /**
+     * Handle dropping of a Folder on an Actor Sheet.
+     * The core sheet currently supports dropping a Folder of Items to create all items as owned items.
+     * @param {DragEvent} event     The concluding DragEvent which contains drop data
+     * @param {object} data         The data transfer extracted from the event
+     * @returns {Promise<Item[]>}
+     * @protected
+     */
+    async _onDropFolder(event: DragEvent, data: any) {
+        if (!this.item.isOwner) return [];
+    }
+
+    /** The following pieces set up drag handling and are unlikely to need modification  */
+
+    /**
+     * Returns an array of DragDrop instances
+     * @type {DragDrop[]}
+     */
+    get dragDrop() {
+        return this.#dragDrop;
+    }
+
+    // This is marked as private because there's no real need
+    // for subclasses or external hooks to mess with it directly
+    #dragDrop;
+
+    /**
+     * Create drag-and-drop workflow handlers for this Application
+     * @returns {DragDrop[]}     An array of DragDrop handlers
+     * @private
+     */
+    #createDragDropHandlers() {
+        return this.options.dragDrop.map((d) => {
+            d.permissions = {
+                dragstart: this._canDragStart.bind(this),
+                drop: this._canDragDrop.bind(this),
+            };
+            d.callbacks = {
+                dragstart: this._onDragStart.bind(this),
+                dragover: this._onDragOver.bind(this),
+                drop: this._onDrop.bind(this),
+            };
+            return new ux.DragDrop(d);
+        });
+    }
+}

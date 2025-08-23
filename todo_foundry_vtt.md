@@ -9,6 +9,8 @@ Before Ability Actions, data needs to be cleaned up in the Abilities (also do pe
 Remove unnecesarry fields from foundry
 
 Implement the Ability Actions:
+  - the attack action that additionally check if hit should work differently
+    result should be combined into one
   - Also allow editing of ability actions
   - Look should be improved a bit
     - Add Icons (Status Effects, for attacks/spell Tests)

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "moduleResolution": "bundler",
+    "outDir": "dist",
+    "rootDir": "./",
+    "allowJs": false,
+    "declaration": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["fvtt-types"]
+  },
+  "include": ["module/**/*.ts", "foundry/**/*.ts", "src/**/*.ts", "src/types/**/*.d.ts"],
+  "exclude": ["node_modules", "dist", "scripts"]
+}
