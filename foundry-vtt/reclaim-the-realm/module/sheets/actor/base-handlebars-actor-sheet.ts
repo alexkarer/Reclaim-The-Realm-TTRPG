@@ -101,10 +101,9 @@ export default class RtRBaseHandlebarsActorSheet extends api.HandlebarsApplicati
      * @override
      */
     _onClose(options: any) {
-        let updatePayload = {
-            'system.editLock': true
-        };
-        this.actor.update(updatePayload);
+        if (this.isEditable) {
+            this.actor.update({ "system.editLock": true });
+        }
     }
 
     /**************

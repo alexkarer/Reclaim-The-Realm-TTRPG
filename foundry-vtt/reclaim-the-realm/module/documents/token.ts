@@ -1,3 +1,5 @@
+import { RtRActor } from "./actor";
+
 export class RtRToken extends TokenDocument {
 
   /**
@@ -9,34 +11,35 @@ export class RtRToken extends TokenDocument {
       return;
     }
 
-    if (this.actor._hasStatusEffect('BURNING I')) {
-      this.actor.roll('d6[fire]', { type: 'BURNING I' }).then(rollMessage => {
+    const actor = this.actor as RtRActor;
+    if (actor._hasStatusEffect('BURNING I')) {
+      actor.roll('d6[fire]', { type: 'BURNING I' }).then(rollMessage => {
         let damage = this._parseRollResult(rollMessage);
-        this.actor.applyDamage(damage, 'fire');
+        actor.applyDamage(damage, 'fire');
       });
     }
-    if (this.actor._hasStatusEffect('BLEEDING I')) {
-      this.actor.roll('d6[bleed]', { type: 'BLEEDING I' }).then(rollMessage => {
+    if (actor._hasStatusEffect('BLEEDING I')) {
+      actor.roll('d6[bleed]', { type: 'BLEEDING I' }).then(rollMessage => {
         let damage = this._parseRollResult(rollMessage);
-        this.actor.applyDamage(damage, 'bleed');
+        actor.applyDamage(damage, 'bleed');
       });
     }
-    if (this.actor._hasStatusEffect('POISON I')) {
-      this.actor.roll('d6[poison]', { type: 'POISON I' }).then(rollMessage => {
+    if (actor._hasStatusEffect('POISON I')) {
+      actor.roll('d6[poison]', { type: 'POISON I' }).then(rollMessage => {
         let damage = this._parseRollResult(rollMessage);
-        this.actor.applyDamage(damage, 'poison');
+        actor.applyDamage(damage, 'poison');
       });
     }
-    if (this.actor._hasStatusEffect('HEALING I')) {
-      this.actor.roll('d6[heal]', { type: 'HEALING I' }).then(rollMessage => {
+    if (actor._hasStatusEffect('HEALING I')) {
+      actor.roll('d6[heal]', { type: 'HEALING I' }).then(rollMessage => {
         let heal = this._parseRollResult(rollMessage);
-        this.actor.heal(heal);
+        actor.heal(heal, false);
       });
     }
   }
 
 
-  _parseRollResult(rollMessage: ChatMessage): number {
+  _parseRollResult(rollMessage: Roll.ToMessageReturn<undefined>): number {
     return rollMessage.rolls[0].total;
   }
 

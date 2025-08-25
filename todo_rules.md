@@ -11,9 +11,18 @@ ____________________________________________________________
   - Think of a way that makes the Riftlands work
   - It should be special and if you want to get to a specific Location it requires something special.
   - remove stamina cost from travel or rework it.
+- Maybe its better/simpler if there where only class Perks
+  - there will be some duplicates but thats prob. better
+- does an Attack have to be different from a Martial/Spell Test?
+- Spell changes?
+    - New major spell disciplines: Elemental (), Psychic(Telekin, Telepath, Divintation), Light (Restoration, Holy), Dark (Necromancy, Shadow), Arcane(Transmutation, Teleporation, Conjuration, Illusion)
+- Maybe remvoe Weapon maneuvers and instead have abilitieis tied to Weapon
+  - Check if that would be feasable.
+  - Maybe unlock additional at certain levels
+  - also push variants should be separate
+
 
 rewrok injury table to have 1d4 instead of 2d3
-Will eventually add perk to heal
 
 **Minor Things**
 - change manouvrepenalty to instead nerf dodge
@@ -27,8 +36,10 @@ Will eventually add perk to heal
 - rework origin to be more inline with in universe (consider riftlands)
 - add toolbox as json
 - simplify Aether DIce notation: AD(=) matching AD, AD(!) unique AD
-- parry is a bit wacky
-- deaths door needs additional penalty or checl needs to get harder (maybe 10+? do some math)
+- parry is a bit wacky (prob. should be removed)
+- check deaths door
+- NPCs are too lethal
+- regeneration mutation, is a bit too strong, maybe just regenerate LEVEL HP, and on mutation do something different maybe.
 ____________________________________________________________
 ### Planned changes after Playtest:
 

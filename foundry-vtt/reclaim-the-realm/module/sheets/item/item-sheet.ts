@@ -279,10 +279,9 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
      * @override
      */
     _onClose(options: any) {
-        const updatePayload = {
-            'system.editLock': true
-        };
-        this.document.update(updatePayload);
+        if (this.isEditable) {
+            this.document.update({ "system.editLock": true });
+        }
     }
 
     /**************

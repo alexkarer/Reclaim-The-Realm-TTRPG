@@ -181,7 +181,7 @@ export const RTR = {
       summary: "Dead"
     },
 
-    // Circumstancal Bonuses
+    // Circumstancal Bonuses / Penalties
     prone: {
       name: "RTR.CircumstancalBonuses.Prone.label",
       img: "/systems/reclaim-the-realm/assets/icons/abilities/falling.svg",
@@ -193,6 +193,12 @@ export const RTR = {
       img: "/systems/reclaim-the-realm/assets/icons/status-effects/encirclement.svg",
       description: "RTR.CircumstancalBonuses.Flanked.description",
       summary: "RTR.CircumstancalBonuses.Flanked.description"
+    },
+    deathsDoor: {
+      name: "RTR.CircumstancalBonuses.DeathsDoor.label",
+      img: "/icons/svg/skull.svg",
+      description: "RTR.CircumstancalBonuses.DeathsDoor.description",
+      summary: "RTR.CircumstancalBonuses.DeathsDoor.description"
     },
 
     // Tier I Detremental Status Effects

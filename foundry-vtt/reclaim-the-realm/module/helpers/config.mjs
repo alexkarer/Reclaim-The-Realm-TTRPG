@@ -25,28 +25,28 @@ RTR.attributeAbbreviations = {
 };
 
 RTR.skills = {
-  animalHandling:  "RTR.Skills.AnimalHandling.name",
-  athletics:       "RTR.Skills.Athletics.name",
-  deception:       "RTR.Skills.Deception.name",
-  investigation:   "RTR.Skills.Investigation.name",
-  intimidation:    "RTR.Skills.Intimidation.name",
-  medicine:        "RTR.Skills.Medicine.name",
-  persuasion:      "RTR.Skills.Persuasion.name",
-  awareness:       "RTR.Skills.Awareness.name",
-  stealth:         "RTR.Skills.Stealth.name",
-  survival:        "RTR.Skills.Survival.name",
-  thievery:        "RTR.Skills.Thievery.name",
+  animalHandling: "RTR.Skills.AnimalHandling.name",
+  athletics: "RTR.Skills.Athletics.name",
+  deception: "RTR.Skills.Deception.name",
+  investigation: "RTR.Skills.Investigation.name",
+  intimidation: "RTR.Skills.Intimidation.name",
+  medicine: "RTR.Skills.Medicine.name",
+  persuasion: "RTR.Skills.Persuasion.name",
+  awareness: "RTR.Skills.Awareness.name",
+  stealth: "RTR.Skills.Stealth.name",
+  survival: "RTR.Skills.Survival.name",
+  thievery: "RTR.Skills.Thievery.name",
 
-  culture:         "RTR.Skills.Culture.name",
-  geography:       "RTR.Skills.Geography.name",
-  elements:        "RTR.Skills.Elements.name",
-  nature:          "RTR.Skills.Nature.name",
-  supernatural:    "RTR.Skills.Supernatural.name",
+  culture: "RTR.Skills.Culture.name",
+  geography: "RTR.Skills.Geography.name",
+  elements: "RTR.Skills.Elements.name",
+  nature: "RTR.Skills.Nature.name",
+  supernatural: "RTR.Skills.Supernatural.name",
 
-  smithTools:      "RTR.Skills.SmithTools.name",
-  alchemyKit:      "RTR.Skills.AlchemyKit.name",
-  jewellersTools:  "RTR.Skills.JewellersTools.name",
-  tailorsSet:      "RTR.Skills.TailorsSet.name",
+  smithTools: "RTR.Skills.SmithTools.name",
+  alchemyKit: "RTR.Skills.AlchemyKit.name",
+  jewellersTools: "RTR.Skills.JewellersTools.name",
+  tailorsSet: "RTR.Skills.TailorsSet.name",
   carpentersTools: "RTR.Skills.CarpentersTools.name",
 };
 
@@ -184,7 +184,7 @@ RTR.statusEffects = {
     description: "Dead",
     summary: "Dead"
   },
-  
+
   // Circumstancal Bonuses
   prone: {
     name: "RTR.CircumstancalBonuses.Prone.label",
@@ -197,6 +197,12 @@ RTR.statusEffects = {
     img: "/systems/reclaim-the-realm/assets/icons/status-effects/encirclement.svg",
     description: "RTR.CircumstancalBonuses.Flanked.description",
     summary: "RTR.CircumstancalBonuses.Flanked.description"
+  },
+  deathsDoor: {
+    name: "RTR.CircumstancalBonuses.DeathsDoor.label",
+    img: "/icons/svg/skull.svg",
+    description: "RTR.CircumstancalBonuses.DeathsDoor.description",
+    summary: "RTR.CircumstancalBonuses.DeathsDoor.description"
   },
 
   // Tier I Detremental Status Effects

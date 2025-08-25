@@ -27,6 +27,5 @@ There should be different Tiers of Riftlands which impact the location and envir
 ### Settlemetn Events
 - Interresting THings that can happen in a settlement.
 
-
 ### Travelling outside Riftlands
 - Travelling outside Riftlands should be done with montages and encounters predefined as soon as the party declares their travel intent, It should average out at ~1 Encounter every 3 days.

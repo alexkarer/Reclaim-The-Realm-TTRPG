@@ -51,7 +51,6 @@ export interface RtRActorLevelsSchema extends foundry.data.fields.DataSchema {
 }
 
 export interface RtRActorAttributesSchema extends foundry.data.fields.DataSchema {
-
 }
 
 export interface RtRActorDefensesSchema extends foundry.data.fields.DataSchema {
@@ -128,8 +127,8 @@ export default class RtRActorBase<T extends RtRActorBaseSchema> extends foundry.
 				spellProficency: new fields.AlphaField({ ...proficiency, initial: 0 }),
 			}),
 			attributes: new fields.SchemaField(
-				Object.keys(RTR.attributes).reduce((obj: {}, attr) => {
-					obj[attr]: new fields.SchemaField({
+				Object.keys(RTR.attributes).reduce((obj: { [k: string]: any }, attr) => {
+					obj[attr] = new fields.SchemaField({
 						value: new fields.NumberField({ ...requiredInteger, initial: -2, min: -8 }),
 						classAttribute: new fields.BooleanField({ initial: false, required: true, nullable: false }),
 						attributeMaximum: new fields.NumberField({ ...requiredInteger, initial: 3, min: 3 }),
@@ -151,11 +150,11 @@ export default class RtRActorBase<T extends RtRActorBaseSchema> extends foundry.
 				dodge: new fields.NumberField({ ...requiredInteger, initial: 0 }),
 				toughness: new fields.NumberField({ ...requiredInteger, initial: 0 }),
 				willpower: new fields.NumberField({ ...requiredInteger, initial: 0 }),
-				shieldBlock: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+				shieldBlock: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 })
 			}),
 			resistances: new fields.ArrayField(
 				new fields.SchemaField({
-					damageType: new fields.StringField({ ...requiredStringField, choices: Object.keys(CONFIG.RTR.damageTypes) }),
+					damageType: new fields.StringField({ ...requiredStringField, choices: Object.keys(RTR.damageTypes) }),
 					value: new fields.NumberField({ ...requiredInteger, min: 1 }),
 				})
 			),
@@ -166,12 +165,12 @@ export default class RtRActorBase<T extends RtRActorBaseSchema> extends foundry.
 				rangedSpellAttack: new fields.NumberField({ ...requiredInteger, initial: 0 }),
 			}),
 			skills: new fields.SchemaField(
-				Object.keys(CONFIG.RTR.skills).reduce((obj, skill) => {
-					obj[skill]: new fields.SchemaField({
+				Object.keys(RTR.skills).reduce((obj: { [k: string]: any }, skill) => {
+					obj[skill] = new fields.SchemaField({
 						rank: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
 						classSkill: new fields.BooleanField({ initial: false, required: true, nullable: false }),
 						rankMaximum: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
-						attrBonus: new fields.StringField({ ...requiredStringField, initial: 'str', choices: Object.keys(CONFIG.RTR.attributes) })
+						attrBonus: new fields.StringField({ ...requiredStringField, initial: 'str', choices: Object.keys(RTR.attributes) })
 					});
 					return obj;
 				}, {})

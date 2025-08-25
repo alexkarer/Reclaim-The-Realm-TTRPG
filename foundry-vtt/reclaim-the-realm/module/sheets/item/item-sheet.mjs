@@ -272,7 +272,7 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
           const name = e.target.name;
           const equipmentType = e.target.value;
           let updatePayload = {};
-          updatePayload[name]=equipmentType;
+          updatePayload[name] = equipmentType;
           this.document.update(updatePayload)
             .then(v => this.render());
         })
@@ -287,9 +287,11 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @override
    */
   _onClose(options) {
+    if (this.isEditable) {
       let updatePayload = {};
       updatePayload['system.editLock'] = true;
       this.document.update(updatePayload);
+    }
   }
 
   /**************
@@ -335,14 +337,14 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onUnlockEdit(event, target) {
-      event.preventDefault();
-      if (!this.isEditable) {
-          console.error("No Edit permission for " + this.name);
-          return;
-      }
-      let updatePayload = {};
-      updatePayload['system.editLock'] = false;
-      this.document.update(updatePayload).then(v => this.render());
+    event.preventDefault();
+    if (!this.isEditable) {
+      console.error("No Edit permission for " + this.name);
+      return;
+    }
+    let updatePayload = {};
+    updatePayload['system.editLock'] = false;
+    this.document.update(updatePayload).then(v => this.render());
   }
 
   /**
@@ -354,10 +356,10 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onLockEdit(event, target) {
-      event.preventDefault();
-      let updatePayload = {};
-      updatePayload['system.editLock'] = true;
-      this.document.update(updatePayload).then(v => this.render());
+    event.preventDefault();
+    let updatePayload = {};
+    updatePayload['system.editLock'] = true;
+    this.document.update(updatePayload).then(v => this.render());
   }
 
   /**
@@ -368,31 +370,31 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onAddTag(event, target) {
-      event.preventDefault();
+    event.preventDefault();
 
-      const result = await api.DialogV2.input({
-          rejectClose: false,
-          modal: true,
-          content: `<input type="text" value="" name="tag">`,
-          window: { title: "Add Tag"},
-          ok: { label: "Add Tag" }
-      });
-      if (!result || !result.tag) {
-          return;
-      }
+    const result = await api.DialogV2.input({
+      rejectClose: false,
+      modal: true,
+      content: `<input type="text" value="" name="tag">`,
+      window: { title: "Add Tag" },
+      ok: { label: "Add Tag" }
+    });
+    if (!result || !result.tag) {
+      return;
+    }
 
-      const existingResistance = this.document.system.tags.find(t => t === result.tag);
-      let updatedTags = [];
-      if (existingResistance) {
-          return;
-      } else {
-          updatedTags = [
-              ...foundry.utils.deepClone(this.document.system.tags), 
-              result.tag
-          ];
-      }
+    const existingResistance = this.document.system.tags.find(t => t === result.tag);
+    let updatedTags = [];
+    if (existingResistance) {
+      return;
+    } else {
+      updatedTags = [
+        ...foundry.utils.deepClone(this.document.system.tags),
+        result.tag
+      ];
+    }
 
-      this.document.update({"system.tags": updatedTags}).then(v => this.render());
+    this.document.update({ "system.tags": updatedTags }).then(v => this.render());
   }
 
   /**
@@ -403,12 +405,12 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onDeleteTag(event, target) {
-      event.preventDefault();
-      const tag = target.dataset.tag;
-      const updatePayload = { 
-          "system.tags": foundry.utils.deepClone(this.document.system.tags.filter(t => t !== tag))
-      };
-      this.document.update(updatePayload).then(v => this.render());
+    event.preventDefault();
+    const tag = target.dataset.tag;
+    const updatePayload = {
+      "system.tags": foundry.utils.deepClone(this.document.system.tags.filter(t => t !== tag))
+    };
+    this.document.update(updatePayload).then(v => this.render());
   }
 
   /**
@@ -419,12 +421,12 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onEditPerkRequirements(event, target) {
-      event.preventDefault();
-      const result = await api.DialogV2.input({
-          rejectClose: false,
-          modal: true,
-          classes: ['reclaim-the-realm'],
-          content: `
+    event.preventDefault();
+    const result = await api.DialogV2.input({
+      rejectClose: false,
+      modal: true,
+      classes: ['reclaim-the-realm'],
+      content: `
           <div class="compact-grid grid-2col">
             <h6 style="margin-top: 0px;" class="grid-span-2">Level Requirement</h6>
             <label for="minlevel" class="compact-input">Minimum LEVEL</label><input type="number" name="minlevel" class="compact-input" id="minlevel" value="${this.document.system.requirements.minimumLevel}">
@@ -453,20 +455,20 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
             <input class="grid-span-2 compact-input" type="text" name="otherRequirements" id="otherRequirements" value="${this.document.system.requirements.otherRequirements ?? ''}">
           </div>
           `,
-          window: { title: "Edit Perk Requirements"},
-          ok: { label: "Confirm" }
-      });
-      if (!result) {
-          return;
-      }
-      const updatePayload = this._parseCommonRequirementsEditResult(result);
-      if (result.requiredNotSelectedPerk && result.requiredNotSelectedPerk.trim() !== '') {
-        updatePayload['system.requirements.requiredNotSelectedPerk'] = result.requiredNotSelectedPerk;
-      } else {
-        updatePayload['system.requirements.requiredNotSelectedPerk'] = '';
-      }
+      window: { title: "Edit Perk Requirements" },
+      ok: { label: "Confirm" }
+    });
+    if (!result) {
+      return;
+    }
+    const updatePayload = this._parseCommonRequirementsEditResult(result);
+    if (result.requiredNotSelectedPerk && result.requiredNotSelectedPerk.trim() !== '') {
+      updatePayload['system.requirements.requiredNotSelectedPerk'] = result.requiredNotSelectedPerk;
+    } else {
+      updatePayload['system.requirements.requiredNotSelectedPerk'] = '';
+    }
 
-      this.document.update(updatePayload).then(v => this.render());
+    this.document.update(updatePayload).then(v => this.render());
   }
 
   /**
@@ -477,12 +479,12 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onEditAbilityRequirements(event, target) {
-      event.preventDefault();
-      const result = await api.DialogV2.input({
-          rejectClose: false,
-          modal: true,
-          classes: ['reclaim-the-realm'],
-          content: `
+    event.preventDefault();
+    const result = await api.DialogV2.input({
+      rejectClose: false,
+      modal: true,
+      classes: ['reclaim-the-realm'],
+      content: `
           <div class="compact-grid grid-2col">
             <h6 style="margin-top: 0px;" class="grid-span-2">Level Requirement</h6>
             <label for="minlevel" class="compact-input">Minimum LEVEL</label><input type="number" name="minlevel" class="compact-input" id="minlevel" value="${this.document.system.requirements.minimumLevel}">
@@ -515,30 +517,30 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
             <input class="grid-span-2 compact-input" type="text" name="otherRequirements" id="otherRequirements" value="${this.document.system.requirements.otherRequirements ?? ''}">
           </div>
           `,
-          window: { title: "Edit Ability Requirements"},
-          ok: { label: "Confirm" }
-      });
-      if (!result) {
-          return;
-      }
-      const updatePayload = this._parseCommonRequirementsEditResult(result);
-      if (result.spelldisciplineone && result.spelldisciplineone.trim() !== '') {
-        updatePayload['system.requirements.requiredSpellDisciplineOne'] = result.spelldisciplineone;
-      } else {
-        updatePayload['system.requirements.requiredSpellDisciplineOne'] = '';
-      }
-      if (result.spelldisciplinetwo && result.spelldisciplinetwo.trim() !== '') {
-        updatePayload['system.requirements.requiredSpellDisciplineTwo'] = result.spelldisciplinetwo;
-      } else {
-        updatePayload['system.requirements.requiredSpellDisciplineTwo'] = '';
-      }
-      if (result.martialmaneuvertype && result.martialmaneuvertype.trim() !== '') {
-        updatePayload['system.requirements.requiredMartialManeuverType'] = result.martialmaneuvertype;
-      } else {
-        updatePayload['system.requirements.requiredMartialManeuverType'] = '';
-      }
+      window: { title: "Edit Ability Requirements" },
+      ok: { label: "Confirm" }
+    });
+    if (!result) {
+      return;
+    }
+    const updatePayload = this._parseCommonRequirementsEditResult(result);
+    if (result.spelldisciplineone && result.spelldisciplineone.trim() !== '') {
+      updatePayload['system.requirements.requiredSpellDisciplineOne'] = result.spelldisciplineone;
+    } else {
+      updatePayload['system.requirements.requiredSpellDisciplineOne'] = '';
+    }
+    if (result.spelldisciplinetwo && result.spelldisciplinetwo.trim() !== '') {
+      updatePayload['system.requirements.requiredSpellDisciplineTwo'] = result.spelldisciplinetwo;
+    } else {
+      updatePayload['system.requirements.requiredSpellDisciplineTwo'] = '';
+    }
+    if (result.martialmaneuvertype && result.martialmaneuvertype.trim() !== '') {
+      updatePayload['system.requirements.requiredMartialManeuverType'] = result.martialmaneuvertype;
+    } else {
+      updatePayload['system.requirements.requiredMartialManeuverType'] = '';
+    }
 
-      this.document.update(updatePayload).then(v => this.render());
+    this.document.update(updatePayload).then(v => this.render());
   }
 
   /**
@@ -549,14 +551,14 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onEditUsageCost(event, target) {
-      event.preventDefault();
-      const mapToSelectOptions = (options, selected) => options.map(type => `<option ${selected === type ? 'selected' : ''} value="${type}">${type}</option>`).join();
-      const classResourceSelect = mapToSelectOptions(['', ...Object.keys(CONFIG.RTR.classResources)], this.document.system.usageCost.classResourceName);
-      const result = await api.DialogV2.input({
-          rejectClose: false,
-          modal: true,
-          classes: ['reclaim-the-realm'],
-          content: `
+    event.preventDefault();
+    const mapToSelectOptions = (options, selected) => options.map(type => `<option ${selected === type ? 'selected' : ''} value="${type}">${type}</option>`).join();
+    const classResourceSelect = mapToSelectOptions(['', ...Object.keys(CONFIG.RTR.classResources)], this.document.system.usageCost.classResourceName);
+    const result = await api.DialogV2.input({
+      rejectClose: false,
+      modal: true,
+      classes: ['reclaim-the-realm'],
+      content: `
           <div class="compact-grid grid-2col">
             <label for="isfree" class="compact-input">Free</label><input type="checkbox" name="isfree" class="compact-input" id="isfree" value="${this.document.system.usageCost.isFree}">
             <label for="apcost" class="compact-input">AP Cost</label><input type="number" name="apcost" class="compact-input" id="apcost" value="${this.document.system.usageCost.apCost}">
@@ -568,46 +570,46 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
             <label for="other" class="compact-input">Other</label><input type="text" name="other" class="compact-input" id="other" value="${this.document.system.usageCost.otherResourceCost}">
           </div>
           `,
-          window: { title: "Edit Ability Usage Cost"},
-          ok: { label: "Confirm" }
-      });
-      if (!result) {
-          return;
-      }
-      const updatePayload = {};
-      if (result.isfree) {
-        updatePayload['system.usageCost.isFree'] = true;
-      } else {
-        updatePayload['system.usageCost.isFree'] = false;
-      } if (result.apcost) {
-        updatePayload['system.usageCost.apCost'] = parseInt(result.apcost);
-      } else {
-        updatePayload['system.usageCost.apCost'] = 0;
-      } if (result.mpcost) {
-        updatePayload['system.usageCost.mpCost'] = parseInt(result.mpcost);
-      } else {
-        updatePayload['system.usageCost.mpCost'] = 0;
-      } if (result.arcanacost) {
-        updatePayload['system.usageCost.arcanaCost'] = parseInt(result.arcanacost);
-      } else {
-        updatePayload['system.usageCost.arcanaCost'] = 0;
-      } if (result.staminacost) {
-        updatePayload['system.usageCost.staminaCost'] = parseInt(result.staminacost);
-      } else {
-        updatePayload['system.usageCost.staminaCost'] = 0;
-      } if (result.classresourcename && result.classresourcename.trim() !== '' && result.classresourcecost) {
-        updatePayload['system.usageCost.classResourceName'] = result.classresourcename;
-        updatePayload['system.usageCost.classResourceCost'] = parseInt(result.classresourcecost);
-      } else {
-        updatePayload['system.usageCost.classResourceName'] = '';
-        updatePayload['system.usageCost.classResourceCost'] = 0;
-      } if (result.other && result.other.trim() !== '') {
-        updatePayload['system.usageCost.otherResourceCost'] = result.other;
-      } else {
-        updatePayload['system.usageCost.otherResourceCost'] = '';
-      }
+      window: { title: "Edit Ability Usage Cost" },
+      ok: { label: "Confirm" }
+    });
+    if (!result) {
+      return;
+    }
+    const updatePayload = {};
+    if (result.isfree) {
+      updatePayload['system.usageCost.isFree'] = true;
+    } else {
+      updatePayload['system.usageCost.isFree'] = false;
+    } if (result.apcost) {
+      updatePayload['system.usageCost.apCost'] = parseInt(result.apcost);
+    } else {
+      updatePayload['system.usageCost.apCost'] = 0;
+    } if (result.mpcost) {
+      updatePayload['system.usageCost.mpCost'] = parseInt(result.mpcost);
+    } else {
+      updatePayload['system.usageCost.mpCost'] = 0;
+    } if (result.arcanacost) {
+      updatePayload['system.usageCost.arcanaCost'] = parseInt(result.arcanacost);
+    } else {
+      updatePayload['system.usageCost.arcanaCost'] = 0;
+    } if (result.staminacost) {
+      updatePayload['system.usageCost.staminaCost'] = parseInt(result.staminacost);
+    } else {
+      updatePayload['system.usageCost.staminaCost'] = 0;
+    } if (result.classresourcename && result.classresourcename.trim() !== '' && result.classresourcecost) {
+      updatePayload['system.usageCost.classResourceName'] = result.classresourcename;
+      updatePayload['system.usageCost.classResourceCost'] = parseInt(result.classresourcecost);
+    } else {
+      updatePayload['system.usageCost.classResourceName'] = '';
+      updatePayload['system.usageCost.classResourceCost'] = 0;
+    } if (result.other && result.other.trim() !== '') {
+      updatePayload['system.usageCost.otherResourceCost'] = result.other;
+    } else {
+      updatePayload['system.usageCost.otherResourceCost'] = '';
+    }
 
-      this.document.update(updatePayload).then(v => this.render());
+    this.document.update(updatePayload).then(v => this.render());
   }
 
   /**
@@ -618,19 +620,19 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onAddAction(event, target) {
-      event.preventDefault();
+    event.preventDefault();
 
-      const mapToSelectOptions = (options) => options.map(type => `<option value="${type}">${type}</option>`).join();
-      const actionTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityActionType));
-      const attributeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.attributes));
-      const targetingSaveSelect = mapToSelectOptions(['-', 'STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER']);
-      const targetsSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityTargetTypes));
-      const rangeTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityRangeType));
-      const result = await api.DialogV2.input({
-          rejectClose: false,
-          modal: true,
-          classes: ['reclaim-the-realm'],
-          content: `
+    const mapToSelectOptions = (options) => options.map(type => `<option value="${type}">${type}</option>`).join();
+    const actionTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityActionType));
+    const attributeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.attributes));
+    const targetingSaveSelect = mapToSelectOptions(['-', 'STABILITY', 'DODGE', 'TOUGHNESS', 'WILLPOWER']);
+    const targetsSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityTargetTypes));
+    const rangeTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityRangeType));
+    const result = await api.DialogV2.input({
+      rejectClose: false,
+      modal: true,
+      classes: ['reclaim-the-realm'],
+      content: `
           <div class="compact-grid grid-2col">
             <label for="actiontype" class="compact-input">Action Type</label><select name="actiontype" id="actiontype"  class="compact-input">${actionTypeSelect}</select>
             <label for="rollbonus" class="compact-input">Roll Bonus</label><input type="number" name="rollbonus" class="compact-input" id="rollbonus">
@@ -644,28 +646,28 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
             <label for="range" class="compact-input">Range</label><input type="number" name="range" class="compact-input" id="range">
           </div>
           `,
-          window: { title: "Add new Ability Action"},
-          ok: { label: "Add" }
-      });
-      if (!result) {
-          return;
-      }
-      const newActions = foundry.utils.deepClone(this.document.system.actions);
-      newActions.push({
-        actionType: result.actiontype,
-        rollBonus: result.rollbonus,
-        fixed: result.fixed,
-        fixedValue: result.fixedvalue,
-        attribute: result.attributeselect,
-        targetingSave: result.targetingsave === '-' ? undefined : result.targetingsave,
-        targets: result.targets,
-        targetsAreaSize: result.targetaereasize,
-        rangeType: result.rangetype,
-        range: result.range,
-        results: []
-      });
+      window: { title: "Add new Ability Action" },
+      ok: { label: "Add" }
+    });
+    if (!result) {
+      return;
+    }
+    const newActions = foundry.utils.deepClone(this.document.system.actions);
+    newActions.push({
+      actionType: result.actiontype,
+      rollBonus: result.rollbonus,
+      fixed: result.fixed,
+      fixedValue: result.fixedvalue,
+      attribute: result.attributeselect,
+      targetingSave: result.targetingsave === '-' ? undefined : result.targetingsave,
+      targets: result.targets,
+      targetsAreaSize: result.targetaereasize,
+      rangeType: result.rangetype,
+      range: result.range,
+      results: []
+    });
 
-      this.document.update({"system.actions": newActions}).then(v => this.render());
+    this.document.update({ "system.actions": newActions }).then(v => this.render());
   }
 
   /**
@@ -676,11 +678,11 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onDeleteAction(event, target) {
-      event.preventDefault();
-      const idx = parseInt(target.dataset.actionidx);
-      const actionsCopy = foundry.utils.deepClone(this.document.system.actions);
-      const newActions = [...actionsCopy.slice(0, idx), ...actionsCopy.slice(idx + 1)];
-      this.document.update({"system.actions": newActions}).then(v => this.render());
+    event.preventDefault();
+    const idx = parseInt(target.dataset.actionidx);
+    const actionsCopy = foundry.utils.deepClone(this.document.system.actions);
+    const newActions = [...actionsCopy.slice(0, idx), ...actionsCopy.slice(idx + 1)];
+    this.document.update({ "system.actions": newActions }).then(v => this.render());
   }
 
   /**
@@ -691,21 +693,21 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
    * @protected
    */
   static async _onAddResult(event, target) {
-      event.preventDefault();
-      const idx = parseInt(target.dataset.actionidx);
+    event.preventDefault();
+    const idx = parseInt(target.dataset.actionidx);
 
-      const mapToSelectOptions = (options) => options.map(type => `<option value="${type}">${type}</option>`).join();
-      const conditionSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityResultCondition));
-      const typeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityResultType));
-      const damageCalculationMethodSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDamageCalculationMethod));
-      const damageTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.damageTypes));
-      const statusEffectSelect = mapToSelectOptions(['', ...Object.keys(CONFIG.RTR.statusEffects)]);
-      const durationSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDurationTypes));
-      const result = await api.DialogV2.input({
-          rejectClose: false,
-          modal: true,
-          classes: ['reclaim-the-realm'],
-          content: `
+    const mapToSelectOptions = (options) => options.map(type => `<option value="${type}">${type}</option>`).join();
+    const conditionSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityResultCondition));
+    const typeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityResultType));
+    const damageCalculationMethodSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDamageCalculationMethod));
+    const damageTypeSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.damageTypes));
+    const statusEffectSelect = mapToSelectOptions(['', ...Object.keys(CONFIG.RTR.statusEffects)]);
+    const durationSelect = mapToSelectOptions(Object.keys(CONFIG.RTR.abilityDurationTypes));
+    const result = await api.DialogV2.input({
+      rejectClose: false,
+      modal: true,
+      classes: ['reclaim-the-realm'],
+      content: `
           <div class="compact-grid grid-2col">
             <label for="condition" class="compact-input">Condition</label><select name="condition" id="condition" class="compact-input">${conditionSelect}</select>
             <label for="type" class="compact-input">Type</label><select name="type" id="type" class="compact-input">${typeSelect}</select>
@@ -726,41 +728,41 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
             <label for="additional" class="compact-input">Additional Effects</label><input type="text" name="additional" class="compact-input" id="additional">
           </div>
           `,
-          window: { title: "Add Ability Result"},
-          ok: { label: "Add" }
-      });
-      if (!result) {
-          return;
-      }
-      const newAction = this.document.system.actions[idx];
-      const newResult = {
-        condition: result.condition,
-        type: result.type,
-        damageCalculationMethod: result.dmgcalcmethod,
-        damageFormula: result.dmgformula,
-        damageBonus: result.damagebonus,
-        halfDamage: result.halfdamage,
-        damageType: result.damagetype,
-        statusEffectToApply: result.statuseffect,
-        statusEffectDurationType: result.durationtype,
-        statusEffectDuration: result.duration,
-        healFormula: result.healformula,
-        healTHP: result.healthp,
-        additionalEffects: result.additional
-      };
-      const existingResult = newAction.results.find(r => r.condition === result.condition);
-      if (existingResult) {
-        newAction.results = [...newAction.results.filter(r => r.condition !== result.condition), newResult];
-      } else {
-        newAction.results.push(newResult);
-      }
+      window: { title: "Add Ability Result" },
+      ok: { label: "Add" }
+    });
+    if (!result) {
+      return;
+    }
+    const newAction = this.document.system.actions[idx];
+    const newResult = {
+      condition: result.condition,
+      type: result.type,
+      damageCalculationMethod: result.dmgcalcmethod,
+      damageFormula: result.dmgformula,
+      damageBonus: result.damagebonus,
+      halfDamage: result.halfdamage,
+      damageType: result.damagetype,
+      statusEffectToApply: result.statuseffect,
+      statusEffectDurationType: result.durationtype,
+      statusEffectDuration: result.duration,
+      healFormula: result.healformula,
+      healTHP: result.healthp,
+      additionalEffects: result.additional
+    };
+    const existingResult = newAction.results.find(r => r.condition === result.condition);
+    if (existingResult) {
+      newAction.results = [...newAction.results.filter(r => r.condition !== result.condition), newResult];
+    } else {
+      newAction.results.push(newResult);
+    }
 
-      const newActions = [...this.document.system.actions.slice(0, idx), newAction, ...this.document.system.actions.slice(idx + 1)];
-      this.document.update({"system.actions": newActions}).then(v => this.render());
+    const newActions = [...this.document.system.actions.slice(0, idx), newAction, ...this.document.system.actions.slice(idx + 1)];
+    this.document.update({ "system.actions": newActions }).then(v => this.render());
   }
 
   /** Helper Functions */
-  
+
   /**
    * 
    * @param {Object} result
@@ -770,82 +772,82 @@ export class RtRItemSheet extends api.HandlebarsApplicationMixin(
   _parseCommonRequirementsEditResult(result) {
     const updatePayload = {};
     if (result.minlevel) {
-        updatePayload['system.requirements.minimumLevel'] = parseInt(result.minlevel);
-      } else {
-        updatePayload['system.requirements.minimumLevel'] = 0;
-      }
-      if (result.minmartiallevel) {
-        updatePayload['system.requirements.minimumMartialLevel'] = parseInt(result.minmartiallevel);
-      } else {
-        updatePayload['system.requirements.minimumMartialLevel'] = 0;
-      }
-      if (result.minspelllevel) {
-        updatePayload['system.requirements.minimumSpellLevel'] = parseInt(result.minspelllevel);
-      } else {
-        updatePayload['system.requirements.minimumSpellLevel'] = 0;
-      }
-      if (result.minstr) {
-        updatePayload['system.requirements.minimumStr'] = parseInt(result.minstr);
-      } else {
-        updatePayload['system.requirements.minimumStr'] = 0;
-      }
-      if (result.minagi) {
-        updatePayload['system.requirements.minimumAgi'] = parseInt(result.minagi);
-      } else {
-        updatePayload['system.requirements.minimumAgi'] = 0;
-      }
-      if (result.mincon) {
-        updatePayload['system.requirements.minimumCon'] = parseInt(result.mincon);
-      } else {
-        updatePayload['system.requirements.minimumCon'] = 0;
-      }
-      if (result.minint) {
-        updatePayload['system.requirements.minimumInt'] = parseInt(result.minint);
-      } else {
-        updatePayload['system.requirements.minimumInt'] = 0;
-      }
-      if (result.minspi) {
-        updatePayload['system.requirements.minimumSpi'] = parseInt(result.minspi);
-      } else {
-        updatePayload['system.requirements.minimumSpi'] = 0;
-      }
-      if (result.minper) {
-        updatePayload['system.requirements.minimumPer'] = parseInt(result.minper);
-      } else {
-        updatePayload['system.requirements.minimumPer'] = 0;
-      }
-      if (result.mincha) {
-        updatePayload['system.requirements.minimumCha'] = parseInt(result.mincha);
-      } else {
-        updatePayload['system.requirements.minimumCha'] = 0;
-      }
-      if (result.skill && result.skill.trim() !== '') {
-        updatePayload['system.requirements.skillRankRequirement.skill'] = result.skill;
-      } else {
-        updatePayload['system.requirements.skillRankRequirement.skill'] = '';
-      }
-      if (result.skillrank) {
-        updatePayload['system.requirements.skillRankRequirement.rank'] = parseInt(result.skillrank);
-      } else {
-        updatePayload['system.requirements.skillRankRequirement.rank'] = 0;
-      }
-      if (result.requiredClass && result.requiredClass.trim() !== '') {
-        updatePayload['system.requirements.requiredClass'] = result.requiredClass;
-      } else {
-        updatePayload['system.requirements.requiredClass'] = '';
-      }
-      if (result.requiredPerk && result.requiredPerk.trim() !== '') {
-        console.log('Setting requiredPerk', result.requiredPerk);
-        updatePayload['system.requirements.requiredPerk'] = result.requiredPerk;
-      } else {
-        updatePayload['system.requirements.requiredPerk'] = '';
-      }
-      if (result.otherRequirements && result.otherRequirements.trim() !== '') {
-        updatePayload['system.requirements.otherRequirements'] = result.otherRequirements;
-      } else {
-        updatePayload['system.requirements.otherRequirements'] = '';
-      }
-      return updatePayload;
+      updatePayload['system.requirements.minimumLevel'] = parseInt(result.minlevel);
+    } else {
+      updatePayload['system.requirements.minimumLevel'] = 0;
+    }
+    if (result.minmartiallevel) {
+      updatePayload['system.requirements.minimumMartialLevel'] = parseInt(result.minmartiallevel);
+    } else {
+      updatePayload['system.requirements.minimumMartialLevel'] = 0;
+    }
+    if (result.minspelllevel) {
+      updatePayload['system.requirements.minimumSpellLevel'] = parseInt(result.minspelllevel);
+    } else {
+      updatePayload['system.requirements.minimumSpellLevel'] = 0;
+    }
+    if (result.minstr) {
+      updatePayload['system.requirements.minimumStr'] = parseInt(result.minstr);
+    } else {
+      updatePayload['system.requirements.minimumStr'] = 0;
+    }
+    if (result.minagi) {
+      updatePayload['system.requirements.minimumAgi'] = parseInt(result.minagi);
+    } else {
+      updatePayload['system.requirements.minimumAgi'] = 0;
+    }
+    if (result.mincon) {
+      updatePayload['system.requirements.minimumCon'] = parseInt(result.mincon);
+    } else {
+      updatePayload['system.requirements.minimumCon'] = 0;
+    }
+    if (result.minint) {
+      updatePayload['system.requirements.minimumInt'] = parseInt(result.minint);
+    } else {
+      updatePayload['system.requirements.minimumInt'] = 0;
+    }
+    if (result.minspi) {
+      updatePayload['system.requirements.minimumSpi'] = parseInt(result.minspi);
+    } else {
+      updatePayload['system.requirements.minimumSpi'] = 0;
+    }
+    if (result.minper) {
+      updatePayload['system.requirements.minimumPer'] = parseInt(result.minper);
+    } else {
+      updatePayload['system.requirements.minimumPer'] = 0;
+    }
+    if (result.mincha) {
+      updatePayload['system.requirements.minimumCha'] = parseInt(result.mincha);
+    } else {
+      updatePayload['system.requirements.minimumCha'] = 0;
+    }
+    if (result.skill && result.skill.trim() !== '') {
+      updatePayload['system.requirements.skillRankRequirement.skill'] = result.skill;
+    } else {
+      updatePayload['system.requirements.skillRankRequirement.skill'] = '';
+    }
+    if (result.skillrank) {
+      updatePayload['system.requirements.skillRankRequirement.rank'] = parseInt(result.skillrank);
+    } else {
+      updatePayload['system.requirements.skillRankRequirement.rank'] = 0;
+    }
+    if (result.requiredClass && result.requiredClass.trim() !== '') {
+      updatePayload['system.requirements.requiredClass'] = result.requiredClass;
+    } else {
+      updatePayload['system.requirements.requiredClass'] = '';
+    }
+    if (result.requiredPerk && result.requiredPerk.trim() !== '') {
+      console.log('Setting requiredPerk', result.requiredPerk);
+      updatePayload['system.requirements.requiredPerk'] = result.requiredPerk;
+    } else {
+      updatePayload['system.requirements.requiredPerk'] = '';
+    }
+    if (result.otherRequirements && result.otherRequirements.trim() !== '') {
+      updatePayload['system.requirements.otherRequirements'] = result.otherRequirements;
+    } else {
+      updatePayload['system.requirements.otherRequirements'] = '';
+    }
+    return updatePayload;
   }
 
   /**

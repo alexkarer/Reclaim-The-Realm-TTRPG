@@ -1,10 +1,21 @@
 ### Immidiate TODOS
 
+Implement new typescript system from scratch where all the improvements from V3 RtR are included nad it is based on.
+
+
+
+
+
+
+
+
+
 Before Ability Actions, data needs to be cleaned up in the Abilities (also do perks immediatly as well)
 - Requirements and Usage Cost of Class Techniques and Core Abilities still need to be proper set
 - Usage Cost also missing for Martial Maneuvers
 - For Usage Cost, Aether Dice are still a bit wonky, maybe save different types as individual entires.
 - add reaction to usage cost
+- Fix all abilities at some  point
 
 Remove unnecesarry fields from foundry
 
@@ -30,9 +41,7 @@ Implement the Ability Actions:
   - allow multiple damage types
   - martialtest/spell test are not rendered properly in the resultscreeen
   - implement feature to wait for damage
-  - mind assault damage not applied
-
- - add deaths door condition
+  - all results should be in a single big chat Message
 
 After ACtions are Implemented:
   - Add remaining spells
@@ -46,6 +55,7 @@ Check TODOS are all resolved
 - Somehow Short rest button is triggered via ENTER Key
 - NPCs can't roll attribute tests
 - fix abilities against multiple spells
+mind assault damage not applied
 
 ## Actors
 

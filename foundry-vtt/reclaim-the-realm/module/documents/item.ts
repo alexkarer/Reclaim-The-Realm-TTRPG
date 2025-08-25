@@ -118,15 +118,15 @@ export class RtRItem extends Item {
         ChatMessage.create({
             speaker: ChatMessage.getSpeaker({ actor: parentActor }),
             content: `
-          <img style='display: inline; transform: translate(0, 5px);' src='${this.img}' title='${this.name}' width='18' height='18'/>
-          <span>${parentActor.name} is using ${this.name}.</span>
-        `,
+            <img style='display: inline; transform: translate(0, 5px);' src='${this.img}' title='${this.name}' width='18' height='18'/>
+            <span>${parentActor.name} is using ${this.name}.</span>
+            `,
             style: CONST.CHAT_MESSAGE_STYLES.OOC
         });
     }
 
     // TODO fix any, check how to use action structure
-    async _handleAttackAction(parentActor: RtRActor, action:  unkown, targets: Set<RtRToken>) {
+    async _handleAttackAction(parentActor: RtRActor, action: unkown, targets: Set<RtRToken>) {
         let unmodifiedResult = 0;
         let rollTotal = 0;
         if (action.fixed) {
@@ -176,7 +176,7 @@ export class RtRItem extends Item {
     }
 
     // TODO fix any, check how to use action structure
-    async _handleMartialTestAction(parentActor: RtRActor, action:  unkown, targets: Set<RtRToken>) {
+    async _handleMartialTestAction(parentActor: RtRActor, action: unkown, targets: Set<RtRToken>) {
         let testTotal = 0;
         if (action.fixed) {
             testTotal = action.fixedValue;
@@ -197,7 +197,7 @@ export class RtRItem extends Item {
     }
 
     // TODO fix any, check how to use action structure
-    async _handleAlwaysActions(parentActor: RtRActor, action:  unkown, targets: Set<RtRToken>) {
+    async _handleAlwaysActions(parentActor: RtRActor, action: unkown, targets: Set<RtRToken>) {
         if (targets.size === 0) {
             this._handleAbilityResults(action.results, new Set(), parentActor);
         } else {
