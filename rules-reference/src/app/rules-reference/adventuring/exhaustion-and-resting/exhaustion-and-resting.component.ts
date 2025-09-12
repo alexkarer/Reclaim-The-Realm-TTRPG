@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
-import { KeywordProcessorPipe } from '../../../shared/text-utils/text-processor';
+import { TextProcessorPipe } from '../../../shared/text-utils/text-processor';
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import exhaustionAndRestingJson from '../../../../../../common_resources/adventuring/exhaustion_and_resting.json'
 
 @Component({
     selector: 'app-exhaustion-and-resting',
-    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
+    imports: [DynamicContentComponent, TextProcessorPipe, NgbScrollSpyFragment],
     templateUrl: './exhaustion-and-resting.component.html',
     styleUrl: './exhaustion-and-resting.component.scss'
 })

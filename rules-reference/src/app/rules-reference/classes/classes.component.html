@@ -1,38 +1,38 @@
 <div>
-    <app-dynamic-content [content]="classDescriptions.classesDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="classDescriptions.classesDescription | textProcessor"></app-dynamic-content>
 
     <h4 class="mt-2">Class Core Values</h4>
     <ul>
         <li>
             <span class="fw-bold">HP per Level: </span>
-            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.hpPerLevelDescription | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.hpPerLevelDescription | textProcessor"></app-dynamic-content>
         </li>
         <li>
             <span class="fw-bold">Martial Level Progression: </span>
-            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.hpPerLevelDescription | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.hpPerLevelDescription | textProcessor"></app-dynamic-content>
         </li>
         <li>
             <span class="fw-bold">Spell Level Progression: </span>
-            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.spellLevelProgressionDescription | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.spellLevelProgressionDescription | textProcessor"></app-dynamic-content>
         </li>
         <li>
             <span class="fw-bold">Defenses: </span>
-            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.defensesDescription | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.defensesDescription | textProcessor"></app-dynamic-content>
         </li>
         <li>
             <span class="fw-bold">Main Class Attributes: </span>
-            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.mainClassAttributesDescription | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.mainClassAttributesDescription | textProcessor"></app-dynamic-content>
         </li>
         <li>
             <span class="fw-bold">Class Skill: </span>
-            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.classSkillsDescription | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.classSkillsDescription | textProcessor"></app-dynamic-content>
         </li>
         <li>
             <span class="fw-bold">Skill Points per Level: </span>
-            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.skillPointsDescription | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="classDescriptions.classCoreValuesDescriptions.skillPointsDescription | textProcessor"></app-dynamic-content>
         </li>
     </ul>
 
     <h4>Class Paths</h4>
-    <app-dynamic-content [content]="classDescriptions.classPathDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="classDescriptions.classPathDescription | textProcessor"></app-dynamic-content>
 </div>

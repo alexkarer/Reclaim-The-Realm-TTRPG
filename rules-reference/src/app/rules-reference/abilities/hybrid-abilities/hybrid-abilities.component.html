@@ -1,14 +1,14 @@
 <div>
-    <app-dynamic-content [content]="hybridAbilityDescription.hybridAbilitiesDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="hybridAbilityDescription.hybridAbilitiesDescription | textProcessor"></app-dynamic-content>
     <div>
         <h4 class="mb-1 mt-3">Learning Hybrid Abilities</h4>
-        <app-dynamic-content [content]="hybridAbilityDescription.lerningHybridAbilitiesDescription| keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="hybridAbilityDescription.lerningHybridAbilitiesDescription| textProcessor"></app-dynamic-content>
         <ul>
             @for (desc of hybridAbilityDescription.learningHybridAbilitiesRequirementsDescriptions; track $index) {
-                <li><app-dynamic-content [content]="desc | keywordProcessor"></app-dynamic-content></li>
+                <li><app-dynamic-content [content]="desc | textProcessor"></app-dynamic-content></li>
             }
         </ul>
         <h4 class="mb-1 mt-3">Performing Hybrid Abilities</h4>
-        <app-dynamic-content [content]="hybridAbilityDescription.performingHybridAbilities | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="hybridAbilityDescription.performingHybridAbilities | textProcessor"></app-dynamic-content>
     </div>
 </div>

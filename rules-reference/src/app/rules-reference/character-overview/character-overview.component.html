@@ -3,7 +3,7 @@
     <p class="description" [innerHTML]="attributeDescription"></p>
     <div class="mb-3">
         <h4 ngbScrollSpyFragment="attribute-test">Attribute Test</h4>
-        <app-dynamic-content [content]="attributeTestDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="attributeTestDescription | textProcessor"></app-dynamic-content>
     </div>
     <app-attributes-list/>
     <hr>
@@ -13,11 +13,11 @@
     <hr>
 
     <h3 ngbScrollSpyFragment="skills">Skills</h3>
-    <app-dynamic-content [content]="skillRules.skillDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="skillRules.skillDescription | textProcessor"></app-dynamic-content>
     <h4 class="mb-1 mt-2">Skill Points</h4>
-    <app-dynamic-content [content]="skillRules.skillPointsDescription| keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="skillRules.skillPointsDescription| textProcessor"></app-dynamic-content>
     <h4 class="mb-1 mt-2">Skill Rank Bonus</h4>
-    <app-dynamic-content [content]="skillRules.skillRankBonusesDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="skillRules.skillRankBonusesDescription | textProcessor"></app-dynamic-content>
 
     <h4 class="mb-3 mt-3" ngbScrollSpyFragment="regular-skills">Regular Skills</h4>
     <div>

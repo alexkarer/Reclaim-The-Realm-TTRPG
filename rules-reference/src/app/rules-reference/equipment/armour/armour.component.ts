@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { KeywordProcessorPipe } from '../../../shared/text-utils/text-processor';
+import { TextProcessorPipe } from '../../../shared/text-utils/text-processor';
 import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 import { armours } from '../../../../../../common_resources/equipment/armour/armour';
 
@@ -7,7 +7,7 @@ import armourRulesJson from '../../../../../../common_resources/equipment/armour
 
 @Component({
     selector: 'app-armour',
-    imports: [DynamicContentComponent, KeywordProcessorPipe],
+    imports: [DynamicContentComponent, TextProcessorPipe],
     templateUrl: './armour.component.html',
     styleUrl: './armour.component.scss'
 })

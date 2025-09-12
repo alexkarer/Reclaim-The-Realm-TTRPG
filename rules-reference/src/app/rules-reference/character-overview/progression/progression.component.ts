@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { KeywordProcessorPipe } from '../../../shared/text-utils/text-processor';
+import { TextProcessorPipe } from '../../../shared/text-utils/text-processor';
 import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 import progressionJson from '../../../../../../common_resources/character_values/progression.json';
 
 @Component({
     selector: 'app-progression',
-    imports: [KeywordProcessorPipe, DynamicContentComponent],
+    imports: [TextProcessorPipe, DynamicContentComponent],
     templateUrl: './progression.component.html',
     styleUrl: './progression.component.scss'
 })

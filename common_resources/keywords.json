@@ -90,11 +90,6 @@
         "link": ""
     },
     {
-        "name": "SAVE",
-        "description": "'SAVE', 'TODO', 'save",
-        "link": ""
-    },
-    {
         "name": "SHIELD BLOCK",
         "description": "'SHIELD BLOCK', 'When wielding and hit by an [ATTACK], instead of a [DODGE] [SAVE] make a [SHIELD BLOCK]. Which is a [SAVE] with a bonus of Shield Block + [MARTIAL LEVEL]', 'shield-block",
         "link": ""
@@ -245,22 +240,22 @@
         "link": ""
     },
     {
-        "name": "STABILITY",
+        "name": "STABILITY TEST",
         "description": "'STABILITY', 'A representation of the characters resistance against being forcefully moved or crushed against their will. Increases with your [STR]', 'stability'",
         "link": ""
     },
     {
-        "name": "DODGE",
+        "name": "DODGE TEST",
         "description": "'DODGE', 'A representation of how good the character is at evading danger. Increases with your [AGI]', 'dodge'",
         "link": ""
     },
     {
-        "name": "TOUGHNESS",
+        "name": "TOUGHNESS TEST",
         "description": "'TOUGHNESS', 'A representation of the characters bodily health and ability to resist internal injuries, poisons and concussions. Increases with your [CON]', 'toughness'",
         "link": ""
     },
     {
-        "name": "WILLPOWER",
+        "name": "WILLPOWER TEST",
         "description": "'WILLPOWER', ' A representation of how well the character can resist being mind-controlled, feeling fear or resisting other mind affecting effects. Increases with your [SPI]', 'willpower'",
         "link": ""
     },

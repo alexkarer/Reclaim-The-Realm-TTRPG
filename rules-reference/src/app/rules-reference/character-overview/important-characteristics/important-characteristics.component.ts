@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DynamicContentComponent } from "../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
-import { KeywordProcessorPipe } from "../../../shared/text-utils/text-processor";
+import { TextProcessorPipe } from "../../../shared/text-utils/text-processor";
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import coreValuesJson from "../../../../../../common_resources/character_values/core_values.json";
 import resourcesJson from "../../../../../../common_resources/character_values/resources.json";
@@ -9,7 +9,7 @@ import otherValuesJson from "../../../../../../common_resources/character_values
 
 @Component({
     selector: 'app-important-characteristics',
-    imports: [DynamicContentComponent, KeywordProcessorPipe, NgbScrollSpyFragment],
+    imports: [DynamicContentComponent, TextProcessorPipe, NgbScrollSpyFragment],
     templateUrl: './important-characteristics.component.html',
     styleUrl: './important-characteristics.component.scss'
 })

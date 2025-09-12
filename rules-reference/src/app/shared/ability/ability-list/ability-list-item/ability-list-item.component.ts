@@ -6,12 +6,12 @@ import { MartialManeuver } from '../../../../../../../common_resources/martial_m
 import { Spell } from '../../../../../../../common_resources/spells/spells';
 import { HybridAbility } from '../../../../../../../common_resources/hybrid_abilities/hybrid_abilities';
 import { DynamicContentComponent } from "../../../text-utils/dynamic-component-rendering/dynamic-content.component";
-import { KeywordProcessorPipe } from "../../../text-utils/text-processor";
+import { TextProcessorPipe } from "../../../text-utils/text-processor";
 import { TextElementsWithoutAbilityComponent } from "../../../text-utils/text-elements-without-ability/text-elements-without-ability.component";
 
 @Component({
     selector: 'app-ability-list-item',
-    imports: [NgbCollapse, RequirementsPrettierPipe, DynamicContentComponent, KeywordProcessorPipe, TextElementsWithoutAbilityComponent],
+    imports: [NgbCollapse, RequirementsPrettierPipe, DynamicContentComponent, TextProcessorPipe, TextElementsWithoutAbilityComponent],
     templateUrl: './ability-list-item.component.html',
     styleUrl: './ability-list-item.component.scss'
 })

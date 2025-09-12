@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { SkillListComponent } from "./skill-list/skill-list.component";
 import { AttributesListComponent } from "./attributes-list/attributes-list.component";
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
-import { KeywordProcessorPipe } from "../../shared/text-utils/text-processor";
+import { TextProcessorPipe } from "../../shared/text-utils/text-processor";
 import { DynamicContentComponent } from "../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
 import { ImportantCharacteristicsComponent } from "./important-characteristics/important-characteristics.component";
 import { ProgressionComponent } from "./progression/progression.component";
@@ -12,7 +12,7 @@ import skillRulesJson from '../../../../../common_resources/skills/skillRules.js
 
 @Component({
     selector: 'app-character-overview',
-    imports: [SkillListComponent, AttributesListComponent, NgbScrollSpyFragment, KeywordProcessorPipe, DynamicContentComponent, ImportantCharacteristicsComponent, ProgressionComponent],
+    imports: [SkillListComponent, AttributesListComponent, NgbScrollSpyFragment, TextProcessorPipe, DynamicContentComponent, ImportantCharacteristicsComponent, ProgressionComponent],
     templateUrl: './character-overview.component.html',
     styleUrl: './character-overview.component.scss'
 })

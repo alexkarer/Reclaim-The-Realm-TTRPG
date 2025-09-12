@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Attribute, attributes } from '../../../../../../common_resources/character_values/attributes/attribute';
 import { DynamicContentComponent } from "../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
-import { KeywordProcessorPipe } from "../../../shared/text-utils/text-processor";
+import { TextProcessorPipe } from "../../../shared/text-utils/text-processor";
 
 @Component({
     selector: 'app-attributes-list',
-    imports: [DynamicContentComponent, NgbScrollSpyFragment, KeywordProcessorPipe],
+    imports: [DynamicContentComponent, NgbScrollSpyFragment, TextProcessorPipe],
     templateUrl: './attributes-list.component.html',
     styleUrl: './attributes-list.component.scss'
 })

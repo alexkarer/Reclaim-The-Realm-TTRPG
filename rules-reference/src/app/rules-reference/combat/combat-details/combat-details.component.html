@@ -1,36 +1,36 @@
 <div>
-    <app-dynamic-content [content]="combatDetails.description | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="combatDetails.description | textProcessor"></app-dynamic-content>
 
     <h5 class="mb-0 mt-2">Assymetric Combat</h5>
-    <app-dynamic-content [content]="combatDetails.assymetricCombat | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="combatDetails.assymetricCombat | textProcessor"></app-dynamic-content>
 
     <h4 class="mb-1 mt-2">Movement Abilities</h4>
     <div>
-        <app-dynamic-content [content]="combatDetails.movementAbilities.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.movementAbilities.description | textProcessor"></app-dynamic-content>
 
         <app-ability-list [abilities]="combatDetails.movementAbilities.standardAbilities"></app-ability-list>
 
         <h5 class="mb-0 mt-2">Moving out of Melee Range</h5>
-        <app-dynamic-content [content]="combatDetails.movementAbilities.movingOutOfMeleeRange | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.movementAbilities.movingOutOfMeleeRange | textProcessor"></app-dynamic-content>
         <h5 class="mb-0 mt-2">Forced Movement</h5>
-        <app-dynamic-content [content]="combatDetails.movementAbilities.forcedMovement | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.movementAbilities.forcedMovement | textProcessor"></app-dynamic-content>
     </div>
 
     <h4 class="mb-1 mt-2">Attack Abilities</h4>
     <div>
-        <app-dynamic-content [content]="combatDetails.attackAbilities.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.attackAbilities.description | textProcessor"></app-dynamic-content>
         <app-ability-list [abilities]="combatDetails.attackAbilities.standardAbilities"></app-ability-list>
     </div>
 
     <h4 class="mb-1 mt-2">Other Standard Actions</h4>
     <div>
-        <app-dynamic-content [content]="combatDetails.otherAbilities.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.otherAbilities.description | textProcessor"></app-dynamic-content>
         <app-ability-list [abilities]="combatDetails.otherAbilities.standardAbilities"></app-ability-list>
     </div>
 
     <h4 class="mb-1 mt-2">Reations</h4>
     <div>
-        <app-dynamic-content [content]="combatDetails.reactions.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.reactions.description | textProcessor"></app-dynamic-content>
         <app-ability-list [abilities]="combatDetails.reactions.standardReactions"></app-ability-list>
     </div>
 
@@ -38,14 +38,14 @@
     <div>
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="attack">Attacks</h5>
         <p class="header-subscript">Keyword: [ATTACK]</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.attack.description | textProcessor"></app-dynamic-content>
 
         <h6 class="mb-0 mt-2" ngbScrollSpyFragment="attack">Attack Results</h6>
         <ul>
             @for (result of combatDetails.additionalCombatRules.attack.attackResults; track $index) {
                 <li>
-                    <span class="fw-bold"><app-dynamic-content [content]="result.result + ': ' | keywordProcessor"></app-dynamic-content></span>
-                    <app-dynamic-content [content]="result.description | keywordProcessor"></app-dynamic-content>
+                    <span class="fw-bold"><app-dynamic-content [content]="result.result + ': ' | textProcessor"></app-dynamic-content></span>
+                    <app-dynamic-content [content]="result.description | textProcessor"></app-dynamic-content>
                 </li>
             }
         </ul>
@@ -54,72 +54,72 @@
         <ul>
             @for (type of combatDetails.additionalCombatRules.attack.attackTypes; track $index) {
                 <li>
-                    <app-dynamic-content [content]="type.type | keywordProcessor"></app-dynamic-content>
+                    <app-dynamic-content [content]="type.type | textProcessor"></app-dynamic-content>
                 </li>
             }
         </ul>
 
         <h5 class="mb-0 mt-2">Damage</h5>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.damage.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.damage.description | textProcessor"></app-dynamic-content>
         <ol>
             @for (damageOrder of combatDetails.additionalCombatRules.damage.damageOrder; track $index) {
                 <li>
-                    <app-dynamic-content [content]="damageOrder | keywordProcessor"></app-dynamic-content>
+                    <app-dynamic-content [content]="damageOrder | textProcessor"></app-dynamic-content>
                 </li>
             }
         </ol>
         <h6 class="mb-0 mt-2">Damage Types</h6>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.damage.damageTypes.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.damage.damageTypes.description | textProcessor"></app-dynamic-content>
         <ul>
             @for (damageType of combatDetails.additionalCombatRules.damage.damageTypes.types; track $index) {
                 <li>
-                    <span class="fw-bold"><app-dynamic-content [content]="damageType.name + ': ' | keywordProcessor"></app-dynamic-content></span>
-                    <app-dynamic-content [content]="damageType.description | keywordProcessor"></app-dynamic-content>
+                    <span class="fw-bold"><app-dynamic-content [content]="damageType.name + ': ' | textProcessor"></app-dynamic-content></span>
+                    <app-dynamic-content [content]="damageType.description | textProcessor"></app-dynamic-content>
                 </li>
             }
         </ul>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="ranges">Ranges</h5>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.description | textProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: [MELEE RANGE]</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.meleeRange | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.meleeRange | textProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: [WEAPON RANGE]</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.weaponRange | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.ranges.weaponRange | textProcessor"></app-dynamic-content>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="targets">Targets</h5>
         <p class="header-subscript">Keyword: {{ combatDetails.additionalCombatRules.target.areaEffectsKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.additionalCombatRules.target.areaEffectsDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.additionalCombatRules.target.areaEffectsDescription | textProcessor"></app-dynamic-content>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="duration">Duration</h5>
     </div>
     <h4 class="mb-0 mt-2">Circumstancal Bonuses</h4>
     <div>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.description | textProcessor"></app-dynamic-content>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="cover">Cover</h5>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.description | textProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.cover.smallCoverKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.smallCoverDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.smallCoverDescription | textProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.cover.mediumCoverKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.mediumCoverDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.mediumCoverDescription | textProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.cover.largeCoverKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.largeCoverDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.cover.largeCoverDescription | textProcessor"></app-dynamic-content>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="prone">Prone</h5>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.prone.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.prone.description | textProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.prone.keyword }}</p>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.prone.pronePenaltyDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.prone.pronePenaltyDescription | textProcessor"></app-dynamic-content>
         
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="flanking">Flanking</h5>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.flanking.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.flanking.description | textProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.flanking.keyword }}</p>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.flanking.flankingPenaltyDescription| keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.flanking.flankingPenaltyDescription| textProcessor"></app-dynamic-content>
 
         <h5 class="mb-0 mt-2" ngbScrollSpyFragment="concealment">Concealment</h5>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.concealment.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.concealment.description | textProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.concealment.partialConcealmentKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.concealment.partialConcealmentBonusDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.concealment.partialConcealmentBonusDescription | textProcessor"></app-dynamic-content>
         <p class="header-subscript">Keyword: {{ combatDetails.circumstancalBonuses.concealment.fullConcealmentKeyword }}</p>
-        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.concealment.fullConcealmentBonusDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="combatDetails.circumstancalBonuses.concealment.fullConcealmentBonusDescription | textProcessor"></app-dynamic-content>
     </div>
 </div>

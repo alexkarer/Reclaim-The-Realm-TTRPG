@@ -1,12 +1,12 @@
 import { Component, input } from '@angular/core';
 import { TextElement } from '../../../../../../common_resources/shared/TextElements';
 import { DynamicContentComponent } from "../dynamic-component-rendering/dynamic-content.component";
-import { KeywordProcessorPipe } from "../text-processor";
+import { TextProcessorPipe } from "../text-processor";
 import { AbilityListItemComponent } from "../../ability/ability-list/ability-list-item/ability-list-item.component";
 
 @Component({
     selector: 'app-text-elements',
-    imports: [DynamicContentComponent, KeywordProcessorPipe, AbilityListItemComponent],
+    imports: [DynamicContentComponent, TextProcessorPipe, AbilityListItemComponent],
     templateUrl: './text-elements.component.html',
     styleUrl: './text-elements.component.scss'
 })

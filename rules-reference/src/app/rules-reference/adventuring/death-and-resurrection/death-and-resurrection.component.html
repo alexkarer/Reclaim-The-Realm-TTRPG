@@ -1,26 +1,26 @@
 <div>
-    <app-dynamic-content [content]="description | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="description | textProcessor"></app-dynamic-content>
 
     <h4>Being Reduced to 0 [HP]</h4>
     <div>
-        <app-dynamic-content [content]="reducedTo0Hp.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="reducedTo0Hp.description | textProcessor"></app-dynamic-content>
         <h5 ngbScrollSpyFragment="deaths-door" class=" mt-2 mb-0">Death's Door</h5>
         <p class="header-subscript">Keyword: [DEATHS DOOR]</p>
-        <app-dynamic-content [content]="reducedTo0Hp.deathsDoor.description| keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="reducedTo0Hp.deathsDoor.description| textProcessor"></app-dynamic-content>
         <ul>
             @for (effect of reducedTo0Hp.deathsDoor.effects; track $index) {
-                <li><app-dynamic-content [content]="effect | keywordProcessor"></app-dynamic-content></li>
+                <li><app-dynamic-content [content]="effect | textProcessor"></app-dynamic-content></li>
             }
         </ul>
     </div>
 
     <h4>Massive Injuries</h4>
     <div>
-        <app-dynamic-content [content]="massiveInjuries.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="massiveInjuries.description | textProcessor"></app-dynamic-content>
         <h5>Massive Injury Triggers</h5>
         <ul>
             @for (trigger of massiveInjuries.massiveInjuriesTriggers; track $index) {
-                <li><app-dynamic-content [content]="trigger | keywordProcessor"></app-dynamic-content></li>
+                <li><app-dynamic-content [content]="trigger | textProcessor"></app-dynamic-content></li>
             }
         </ul>
         <div class="d-flex justify-content-center">
@@ -35,7 +35,7 @@
                     @for (massiveInjury of massiveInjuries.massiveInjuriesTable; track $index) {
                         <tr>
                             <td>{{ massiveInjury.diceRoll }}</td>
-                            <td><app-dynamic-content [content]="massiveInjury.Injury | keywordProcessor"></app-dynamic-content></td>
+                            <td><app-dynamic-content [content]="massiveInjury.Injury | textProcessor"></app-dynamic-content></td>
                         </tr>
                     }
                 </tbody>
@@ -45,16 +45,16 @@
 
     <h4>Recovering from dropping Unconcious</h4>
     <div>
-        <app-dynamic-content [content]="recoverFromBeingUnconcious.description| keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="recoverFromBeingUnconcious.description| textProcessor"></app-dynamic-content>
         <ul>
             @for (recoveryMethod of recoverFromBeingUnconcious.recoveryMethods; track $index) {
-                <li><app-dynamic-content [content]="recoveryMethod | keywordProcessor"></app-dynamic-content></li>
+                <li><app-dynamic-content [content]="recoveryMethod | textProcessor"></app-dynamic-content></li>
             }
         </ul>
     </div>
 
     <h4>Resurrection</h4>
     <div>
-        <app-dynamic-content [content]="resurrection.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="resurrection.description | textProcessor"></app-dynamic-content>
     </div>
 </div>

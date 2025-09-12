@@ -1,15 +1,15 @@
 <div>
-    <app-dynamic-content [content]="characterCreationJson.description | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="characterCreationJson.description | textProcessor"></app-dynamic-content>
     <ol>
         @for (step of characterCreationJson.characterCreationSteps; track $index) {
             <li>
-                <app-dynamic-content [content]="step | keywordProcessor"></app-dynamic-content>
+                <app-dynamic-content [content]="step | textProcessor"></app-dynamic-content>
             </li>
         }
     </ol>
     <div>
         <h3 class="m-0">Choose your speicies</h3>
-        <app-dynamic-content [content]="speciesJson.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="speciesJson.description | textProcessor"></app-dynamic-content>
 
         <div class="d-flex flex-column">
             @for (species of speciesJson.speciesList; track $index) {
@@ -19,13 +19,13 @@
                     <span><span class="fw-bold">Size: </span>{{ species.size }}</span>
                     <span><span class="ms-3 fw-bold">Height: </span>{{ species.height }}</span>
                     <span><span class="ms-3 fw-bold">Weight: </span>{{ species.weight }}</span>
-                    <span><span class="ms-3 fw-bold"><app-dynamic-content [content]="'Starting [HP] Bonus: ' | keywordProcessor"></app-dynamic-content></span>{{ species.startingHPBonus }}</span>
+                    <span><span class="ms-3 fw-bold"><app-dynamic-content [content]="'Starting [HP] Bonus: ' | textProcessor"></app-dynamic-content></span>{{ species.startingHPBonus }}</span>
                     <br>
                     <h5>Traits:</h5>
                     <ul>
                         @for (trait of species.traits; track $index) {
                             <li>
-                                <app-dynamic-content [content]="trait | keywordProcessor"></app-dynamic-content>
+                                <app-dynamic-content [content]="trait | textProcessor"></app-dynamic-content>
                             </li>    
                         }
                     </ul>
@@ -35,11 +35,11 @@
     </div>
     <div class="mt-2">
         <h3 class="m-0">Determine your Origin</h3>
-        <app-dynamic-content [content]="characterOriginJson.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="characterOriginJson.description | textProcessor"></app-dynamic-content>
 
         <div class="mt-2">
             <h4 class="m-0">Birthplace</h4>
-            <app-dynamic-content [content]="characterOriginJson.birthPlace.description | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="characterOriginJson.birthPlace.description | textProcessor"></app-dynamic-content>
             <table class="rules-table">
                 <thead>
                     <tr>
@@ -53,7 +53,7 @@
                         <tr>
                             <td>{{ birthplace.d100 }}</td>
                             <td>{{ birthplace.birthLocation }}</td>
-                            <td><app-dynamic-content [content]="birthplace.attributeBonus | keywordProcessor"></app-dynamic-content></td>
+                            <td><app-dynamic-content [content]="birthplace.attributeBonus | textProcessor"></app-dynamic-content></td>
                         </tr>
                     }
                 </tbody>
@@ -72,7 +72,7 @@
                         <tr>
                             <td>{{ birthplace.d6 }}</td>
                             <td>{{ birthplace.exoticBirthLocation }}</td>
-                            <td><app-dynamic-content [content]="birthplace.bonus| keywordProcessor"></app-dynamic-content></td>
+                            <td><app-dynamic-content [content]="birthplace.bonus| textProcessor"></app-dynamic-content></td>
                         </tr>
                     }
                 </tbody>
@@ -81,7 +81,7 @@
 
         <div class="mt-2">
             <h4 class="m-0">Early Training</h4>
-            <app-dynamic-content [content]="characterOriginJson.earlyTraining.description | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="characterOriginJson.earlyTraining.description | textProcessor"></app-dynamic-content>
             <table class="rules-table">
                 <thead>
                     <tr>
@@ -106,7 +106,7 @@
 
         <div class="mt-2">
             <h4 class="m-0">Life Events</h4>
-            <app-dynamic-content [content]="characterOriginJson.lifeEvents.description | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="characterOriginJson.lifeEvents.description | textProcessor"></app-dynamic-content>
             <table class="rules-table">
                 <thead>
                     <tr>
@@ -217,7 +217,7 @@
 
         <div class="mt-2">
             <h4 class="m-0">Defining Moment</h4>
-            <app-dynamic-content [content]="characterOriginJson.definingMoment.description | keywordProcessor"></app-dynamic-content>
+            <app-dynamic-content [content]="characterOriginJson.definingMoment.description | textProcessor"></app-dynamic-content>
             <table class="rules-table">
                 <thead>
                     <tr>
@@ -239,33 +239,33 @@
 
     <div class="mt-2">
         <h4 class="m-0">Select a Class</h4>
-        <app-dynamic-content [content]="characterCreationJson.selectAClass.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="characterCreationJson.selectAClass.description | textProcessor"></app-dynamic-content>
     </div>
 
     <div class="mt-2">
         <h4 class="m-0">Assign your Attributes</h4>
-        <app-dynamic-content [content]="characterCreationJson.assignYourAttributers.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="characterCreationJson.assignYourAttributers.description | textProcessor"></app-dynamic-content>
         <h5 class="m-0">Assigning Attributes to your Chracter</h5>
-        <app-dynamic-content [content]="characterCreationJson.assignYourAttributers.assigningAttributesDescription | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="characterCreationJson.assignYourAttributers.assigningAttributesDescription | textProcessor"></app-dynamic-content>
     </div>
 
     <div class="mt-2">
         <h4 class="m-0">Choose First Level Abilities and a Perk</h4>
-        <app-dynamic-content [content]="characterCreationJson.chooseLevel1AbilitiesAndPerks.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="characterCreationJson.chooseLevel1AbilitiesAndPerks.description | textProcessor"></app-dynamic-content>
     </div>
 
     <div class="mt-2">
         <h4 class="m-0">Select your Starting Equipment</h4>
-        <app-dynamic-content [content]="characterCreationJson.selectYourStartingEquipment.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="characterCreationJson.selectYourStartingEquipment.description | textProcessor"></app-dynamic-content>
     </div>
 
     <div class="mt-2">
         <h4 class="m-0">Finish your character Details</h4>
-        <app-dynamic-content [content]="characterCreationJson.finishCharacterDetails.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="characterCreationJson.finishCharacterDetails.description | textProcessor"></app-dynamic-content>
     </div>
 
     <div class="mt-2">
         <h4 class="m-0">Optional: Party Origin</h4>
-        <app-dynamic-content [content]="characterCreationJson.partyOrigin.description | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="characterCreationJson.partyOrigin.description | textProcessor"></app-dynamic-content>
     </div>
 </div>

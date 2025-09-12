@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DynamicContentComponent } from '../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
-import { KeywordProcessorPipe } from '../../shared/text-utils/text-processor';
+import { TextProcessorPipe } from '../../shared/text-utils/text-processor';
 import { WeaponsComponent } from './weapons/weapons.component';
 import { ArmourComponent } from './armour/armour.component';
 import { CraftingComponent } from './crafting/crafting.component';
@@ -12,7 +12,7 @@ import { ShieldsComponent } from "./shield/shields.component";
 
 @Component({
     selector: 'app-equipment',
-    imports: [DynamicContentComponent, NgbScrollSpyFragment, KeywordProcessorPipe, WeaponsComponent, ArmourComponent, CraftingComponent, MagicItemsComponent, ShieldsComponent],
+    imports: [DynamicContentComponent, NgbScrollSpyFragment, TextProcessorPipe, WeaponsComponent, ArmourComponent, CraftingComponent, MagicItemsComponent, ShieldsComponent],
     templateUrl: './equipment.component.html',
     styleUrl: './equipment.component.scss'
 })

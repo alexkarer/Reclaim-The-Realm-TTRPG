@@ -7,34 +7,6 @@
 	<nav [ngbScrollSpyMenu]="spy" class="navbar-nav-scroll bg-secondary-subtle table-of-contents">
 		<nav class="nav nav-pills flex-column">
 			<a role="button" class="nav-link" ngbScrollSpyItem="reclaim-the-realm">Reclaim The Realm</a>
-			<a role="button" class="nav-link" ngbScrollSpyItem="character-creation">Character Creation</a>
-	
-			<a role="button" class="nav-link" ngbScrollSpyItem="character-overview">Character Overview</a>
-			<nav class="nav nav-pills flex-column">
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="attributes" parent="character-overview">Attributes</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="important-characteristics" parent="character-overview">Important Characteristics</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="skills" parent="character-overview">Skills</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="progression" parent="character-overview">Progression</a>
-			</nav>
-	
-			<a role="button" class="nav-link" ngbScrollSpyItem="classes">Classes</a>
-	
-			<a role="button" class="nav-link" ngbScrollSpyItem="abilities">Abilities</a>
-			<nav class="nav nav-pills flex-column">
-				<a role="button" class="nav-link ms-3 my-0" parent="abilities" ngbScrollSpyItem="martial-maneuvers">Martial Maneuvers</a>
-				<a role="button" class="nav-link ms-3 my-0" parent="abilities" ngbScrollSpyItem="spells">Spells</a>
-				<a role="button" class="nav-link ms-3 my-0" parent="abilities" ngbScrollSpyItem="hybrid-abilities">Hybrid Abilities</a>
-			</nav>
-
-			<a role="button" class="nav-link" ngbScrollSpyItem="equipment">Equipment</a>
-			<nav class="nav nav-pills flex-column">
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="weapons-ammunition" parent="equipment">Weapons and Ammunitions </a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="armour" parent="equipment">Armour</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="shields" parent="equipment">Shields</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="magic-items" parent="equipment">Magic Items</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="crafting" parent="equipment">Crafting</a>
-			</nav>
-	
 			<a role="button" class="nav-link" ngbScrollSpyItem="adventuring">Adventuring</a>
 			<nav class="nav nav-pills flex-column">
 				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="travel" parent="adventuring">Travel</a>
@@ -42,14 +14,12 @@
 				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="exhaustion-resting" parent="adventuring">Exhaustion and Resting</a>
 				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="death-resurrection" parent="adventuring">Death and Resurrection</a>
 			</nav>
-	
 			<a role="button" class="nav-link" ngbScrollSpyItem="combat">Combat</a>
 			<nav class="nav nav-pills flex-column">
 				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="combat-overview" parent="combat">Combat Overview</a>
 				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="combat-details" parent="combat">Combat Details</a>
 				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="status-effects" parent="combat">Status Effects</a>
 			</nav>
-	
 			<a role="button" class="nav-link" ngbScrollSpyItem="toolbox">Toolbox</a>
 			<nav class="nav nav-pills flex-column">
 			</nav>
@@ -71,26 +41,7 @@
 		<app-rules-overview/>
 		<hr>
 
-		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="character-creation">Character Creation</h2>
-		<app-character-creation/>
-		<hr>
-	
-		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="character-overview">Character Overview</h2>
-		<app-character-overview/>
-		<hr>
-	
-		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="classes">Classes</h2>
-		<app-classes/>
-		<hr>
-	
-		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="abilities">Abilities</h2>
-		<app-abilities/>
-		<hr>
-	
-		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="equipment">Equipment</h2>
-		<app-equipment/>
-		<hr>
-	
+		<!--
 		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="adventuring">Adventuring</h2>
 		<app-adventuring/>
 		<hr>
@@ -101,5 +52,6 @@
 	
 		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="toolbox">Toolbox</h2>
 		<app-toolbox/>
+		-->
 	</div>
 </div>

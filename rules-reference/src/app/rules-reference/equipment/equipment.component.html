@@ -1,6 +1,6 @@
 <div>
     <h4 class="mb-1">Currency</h4>
-    <app-dynamic-content [content]="equipmentJson.currency.currencyDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="equipmentJson.currency.currencyDescription | textProcessor"></app-dynamic-content>
     <h5 class="mb-1 mt-2">Coins</h5>
     <ul>
         @for (coin of equipmentJson.currency.coinDescriptions; track $index) {
@@ -9,10 +9,10 @@
             </li>
         }
     </ul>
-    <app-dynamic-content [content]="equipmentJson.currency.coinValueDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="equipmentJson.currency.coinValueDescription | textProcessor"></app-dynamic-content>
 
     <h4 class="mb-1 mt-3">Goods And Services</h4>
-    <app-dynamic-content [content]="equipmentJson.goodsAndServices.description | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="equipmentJson.goodsAndServices.description | textProcessor"></app-dynamic-content>
     <div class="d-flex justify-content-center">
         <table class="rules-table-75">
             <thead>
@@ -45,29 +45,29 @@
     </div>
 
     <h4 class="mb-1 mt-3">Item Tier</h4>
-    <app-dynamic-content [content]="equipmentJson.itemTierDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="equipmentJson.itemTierDescription | textProcessor"></app-dynamic-content>
 
     <h4 class="mb-1 mt-3">Equipping and Carrying Items</h4>
-    <app-dynamic-content [content]="equipmentJson.equippingItemsDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="equipmentJson.equippingItemsDescription | textProcessor"></app-dynamic-content>
     <ul>
         @for (description of equipmentJson.wearingAndCarryingItemsRules; track $index) {
             <li>
-                <app-dynamic-content [content]="description | keywordProcessor"></app-dynamic-content>
+                <app-dynamic-content [content]="description | textProcessor"></app-dynamic-content>
             </li>
         }
     </ul>
     <h5 class="mb-1 mt-3">Carrying Capacity</h5>
-    <app-dynamic-content [content]="equipmentJson.carryingCapacityDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="equipmentJson.carryingCapacityDescription | textProcessor"></app-dynamic-content>
     <ul>
         @for (description of equipmentJson.exceedingCarryingCapacityPenalties; track $index) {
             <li>
-                <app-dynamic-content [content]="description | keywordProcessor"></app-dynamic-content>
+                <app-dynamic-content [content]="description | textProcessor"></app-dynamic-content>
             </li>
         }
     </ul>
 
     <h5 class="mb-1 mt-3">Lift/Push/Drag</h5>
-    <app-dynamic-content [content]="equipmentJson.liftPushDragDescription | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="equipmentJson.liftPushDragDescription | textProcessor"></app-dynamic-content>
 
     <h5 class="mb-1 mt-3">Carrying Capacity + Lift/Push/Drag Table</h5>
     <div class="row g-4">
@@ -123,7 +123,7 @@
     <app-shields></app-shields>
 
     <h3 class="mb-1" ngbScrollSpyFragment="other-items">Other Items</h3>
-    <app-dynamic-content [content]="equipmentJson.otherItemsDescriptions | keywordProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="equipmentJson.otherItemsDescriptions | textProcessor"></app-dynamic-content>
 
     <h3 class="mb-1" ngbScrollSpyFragment="magic-items">Magic Items</h3>
     <app-magic-items></app-magic-items>

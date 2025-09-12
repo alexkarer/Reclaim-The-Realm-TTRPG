@@ -1,12 +1,10 @@
-{
-    "difficultyThresholds": [
-        { "dtNumber": 5, "webkey": "introduction.difficulty_threshold_5" },
-        { "dtNumber": 10, "webkey": "introduction.difficulty_threshold_10" },
-        { "dtNumber": 15, "webkey": "introduction.difficulty_threshold_15" },
-        { "dtNumber": 20, "webkey": "introduction.difficulty_threshold_20" },
-        { "dtNumber": 25, "webkey": "introduction.difficulty_threshold_25" },
-        { "dtNumber": 30, "webkey": "introduction.difficulty_threshold_30" },
-        { "dtNumber": 35, "webkey": "introduction.difficulty_threshold_35" },
-        { "dtNumber": 40, "webkey": "introduction.difficulty_threshold_40" }
-    ]
-}
+[
+    { "dtNumber": 5, "webkey": "difficulty_threshold_5" },
+    { "dtNumber": 10, "webkey": "difficulty_threshold_10" },
+    { "dtNumber": 15, "webkey": "difficulty_threshold_15" },
+    { "dtNumber": 20, "webkey": "difficulty_threshold_20" },
+    { "dtNumber": 25, "webkey": "difficulty_threshold_25" },
+    { "dtNumber": 30, "webkey": "difficulty_threshold_30" },
+    { "dtNumber": 35, "webkey": "difficulty_threshold_35" },
+    { "dtNumber": 40, "webkey": "difficulty_threshold_40" }
+]

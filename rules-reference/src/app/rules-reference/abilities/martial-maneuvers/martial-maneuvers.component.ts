@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
-import { KeywordProcessorPipe } from "../../../shared/text-utils/text-processor";
+import { TextProcessorPipe } from "../../../shared/text-utils/text-processor";
 import { halveArray } from '../../../shared/utils/array-utils';
 import { advancedManeuvers, basicManeuvers, masterManeuvers, transcendentManeuvers } from '../../../../../../common_resources/martial_maneuvers/martial-maneuvers';
 
@@ -8,7 +8,7 @@ import martialManeuversJson from '../../../../../../common_resources/martial_man
 
 @Component({
     selector: 'app-martial-maneuvers',
-    imports: [DynamicContentComponent, KeywordProcessorPipe],
+    imports: [DynamicContentComponent, TextProcessorPipe],
     templateUrl: './martial-maneuvers.component.html',
     styleUrl: './martial-maneuvers.component.scss'
 })

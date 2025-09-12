@@ -4,20 +4,28 @@ import { MartialManueversSearchComponent } from './martial-manuevers-search/mart
 import { SpellsSearchComponent } from './spells-search/spells-search.component';
 import { EquipmentSearchComponent } from './equipment-search/equipment-search.component';
 import { ClassesOverviewComponent } from './classes-overview/classes-overview.component';
+import { PlayerRulesComponent } from './player-rules/player-rules.component';
+import { BasicRulesComponent } from './basic-rules/basic-rules.component';
+import { StartPageComponent } from './start-page/start-page.component';
 
 export const routes: Routes = [
     {
         path: '',
-        component: TODO,
+        component: StartPageComponent,
+        title: 'Reclaim the Realm'
+    },
+    {
+        path: 'basic-rules',
+        component: BasicRulesComponent,
         title: 'Reclaim the Realm - Basic Rules'
     },
     {
-        path: '/player-rules',
-        component: TODO,
+        path: 'player-rules',
+        component: PlayerRulesComponent,
         title: 'Reclaim the Realm - Player Rules'
     },
     {
-        path: '/rules',
+        path: 'rules',
         component: RulesReferenceComponent,
         title: 'Reclaim the Realm - Rules Reference'
     },

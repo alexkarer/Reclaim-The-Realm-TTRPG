@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
-import { KeywordProcessorPipe } from '../../../shared/text-utils/text-processor';
+import { TextProcessorPipe } from '../../../shared/text-utils/text-processor';
 import adventuringHazardsJson from '../../../../../../common_resources/adventuring/adventuring_hazards.json'
 
 @Component({
     selector: 'app-adventuring-hazards',
-    imports: [DynamicContentComponent, KeywordProcessorPipe],
+    imports: [DynamicContentComponent, TextProcessorPipe],
     templateUrl: './adventuring-hazards.component.html',
     styleUrl: './adventuring-hazards.component.scss'
 })
