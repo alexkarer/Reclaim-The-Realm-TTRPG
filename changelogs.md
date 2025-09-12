@@ -4,6 +4,10 @@ This document contains a series of changelogs to keep track of changes happening
 
 ---
 
+## RtR 3.0.0
+
+TODO
+
 ## RtR 2.3.0
 
 ### Core Rules

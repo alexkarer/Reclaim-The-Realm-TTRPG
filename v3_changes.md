@@ -39,8 +39,12 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 
 ### Character
 
-- Add fate mechanic (❌)
+- Add fate mechanic, potential options: reroll, gain extra 2 AP during turn, reduce damage (❌)
+    - Potentially have a limit of fate that can be used per extended long rest
 - Make Origin a bit more interactive, let the Players have a bit more agency or empower them to do something with it. (❌)
+- Try creating some sort of party/combo mechanic if possible or maybe general party upgrades like a synergy stat (❌)
+- Add complete Injury Table, with different Damage Type categories (❌)
+    - Should only happen at Deaths Door
 
 #### Species
 - Create at least 3 more Species (❌)
@@ -51,6 +55,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
     - Should be no more than 2 per Skill (6/12)
 - Move Animal Handling into Nature (❌)
 - Rework Lore skills and remove their distinction (❌)
+    - possibly create riftlands skill 
 
 #### Classes
 
@@ -65,6 +70,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
     - Rework Barbarian Perk Tree (❌)
     - Rework Priest Perk Tree (❌)
     - Rework Warlock Perk Tree (❌)
+        check phone todos
         - Regeneration Mutation is a bit too strong (❌)
 
 ### NPCs
@@ -84,8 +90,6 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - REwork abilities to use the clear formating from foundryVTT (❌)
     - For ongoing effects label Concentartion clearly and rework how mechanics are displayed (❌)
     - Each Ability should have their own crit effect.
-
-#### Class Techniques
 
 
 #### Martial Maneuvers
@@ -113,26 +117,35 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - maneuvrepenalty should only nerf dodge (❌)
 - Add Staffs: each staff has 1 ability that has charges with max charges that need arcana too charge (❌)
 - Add Robes: that do cool stuff, worst case just +1 to spell cast test (❌)
+- Instead of Rations just have a supplies count/item (❌)
 
 ### Combat Mechanics
 
+- Try out different Initiative mechanics, mainly copy a version of the shadow of the demon lord system (❌)
+    - essentially, monsters always go first, players after unless they use a special reaction (❌)
+    - also requires new reactions. (❌)
+    - also requires all turn based ability to change so that they last until end of a round. (❌)
 - Remove cosmic damage type (❌)
 - Deaths Door should have more tension (❌)
-- Rework Cover so it works with ther not being any attacks (only give DODGE bonus) (❌)
+- Rework all circumstancial bonuses so it works with ther not being any attacks (only give DODGE bonus) (❌)
     - Only have 2 types of Cover small/large (❌)
-    - rework concealment to work with new impl.  (❌)
+    - rework concealment to work with new impl (potentially make a d100 roll)  (❌)
 - Remove unneded stuff: high ground/low gound (❌) 
 - You can wake up from unconcious during combat (❌) 
 
 - Rework Status Effects so they work with changes to remove Attacks (❌)
+    - remove reduntant status effect
 
 ### Adventure Mechanics
 
 - Are the climbing, swimming, fyling rules really necesarry? (❌)
 - Remvoe that Falling stuff, just have the damage table remaining (❌)
+- travel distance should be reworked to be simpler and work more with the travel mechanics below (❌)
 
-- Add complete Injury Table, with different Damage Type categories (❌)
-    - Should only happen at Deaths Door
+- For Long Rests in dangerous area, generate a table that is communicated to the players for long rest dangers (❌)
+    - should also include a non-combat or distrubt option, just maybe something went wrong
+- Extended Long Rest should be 1 week minimum (❌)
+    - add possibilities for stuff to do which the players can pick and choose (❌)
 
 - Proper travel mechanic that includes the following: (❌)
     - One day Travel mechanic, should be similar to Delve from Heart (❌)
@@ -140,22 +153,37 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
         - They have to achieve a number of success
         - Events that can happen 
         - Traveling can reduce stamina/hp depending on events 
-        - Create proper table of what can happen (combat, ....)
-        - XP are only rewarded for the travel day and nothing extr
+        - Create proper table of what can happen (combat, sickness, ...)
+        - XP are only rewarded for the travel day and nothing extra for combat
+        - Create set Difficulty Levels
+        - rules for aborting travel
+        - should define how much distance was covered
     - Multi-day Travel, which should be more role-play like (❌)
         - Allow players too pick from Events that can happen or let them roll and they need to describe it.
             - Each Event is not a garantueed result, there can be multiple concluions
         - Additionally there is one event affecting the whole party, potentially different tables if they travel in a large group.
     - Riftlands Travel (❌)
         - see phone notes, essentially one-day travel mechanic on steriods
+        - the difficulty relates to how deep you are inside the riftlands
+        - enahnced random tables, also tables for random locations and civilizations genreator (how large, origin, how they treat strangers, ...)
+        - arcana mishaps are more common here
+        - specific locations are hard to get too and maybe need some sort of keys or instructions or clues with many smaller expeditions.
+        - teleporation is special in riftlands
 
 ### Other
 
+- Rework keyword processor logic to use the new json (❌)
+- when referencing abilities, have a small preview of the ability (❌)
 - Cosmic Mutations should maybe be fleshed out more. (❌)
 - Move Player Character creation to separate page from Rules (❌)
 - Remove initial page and keywords since ATTACK is getting removed (❌)
     - remove degree of success/failure part (❌)
     - mention that everything is an ability (❌)
 - Create Chase Mechanic (❌)
-- add extended long rest mechanics (❌)
+    - should be very abstract but state distance in case needed
+    - distance covered should be based on MP and all are added simultaneously at the end of the round. (in case of special movement maybe grant extra move)
+    - should be round based and at the start a complication is rolled and at the end the movement is added and any chase reults are resolved.
+    - There should be a set of actions that can be used during the round (tackle, imrpovise, ...)
+    - after x rounds should cost stamina for players and if no stamina, either reduce speed or take exhaustion
+    - there should be a win condition for the players after X rounds (maybe based on level of enemy)
 - Clear TODO lists (❌)

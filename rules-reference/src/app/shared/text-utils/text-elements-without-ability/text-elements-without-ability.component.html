@@ -7,12 +7,12 @@
         }
     }
     @if (textElement.regularText != null) {
-        <app-dynamic-content [content]="textElement.regularText | keywordProcessor"></app-dynamic-content>
+        <app-dynamic-content [content]="textElement.regularText | textProcessor"></app-dynamic-content>
     }
     @if (textElement.bulletPoints != null) {
         <ul class="mt-0 mb-0">
             @for (bulletPoint of textElement.bulletPoints; track $index) {
-                <li><app-dynamic-content [content]="bulletPoint | keywordProcessor"></app-dynamic-content></li>
+                <li><app-dynamic-content [content]="bulletPoint | textProcessor"></app-dynamic-content></li>
             }
         </ul>
     }

@@ -1,0 +1,25 @@
+{
+    "introduction": {
+        "introduction_text": "This is My Table-Top RPG called Reclaim the Realm (RtR) it is a d20 ruleset that focues primarily on Combat and Exploration. It is set in a Fantasy world that has a technological and culural development that can be compared to the renaissance era.<br>In this system each player controls a character that can perform various abilities depending on the chosen class and selected abilities. This character gets stronger as they adventure at which point they unlock more abilities, improve existing ones and get more powerful in general. The system's rules are mainly designed to support combat and exploration.",
+        "keywords": "During this document you will find Keywords which are bold and underlined, example: [D20 TEST]. These Keywords are here to clearly indicate that the text is refering to a game machenic or how precisly it can interact with other mechanics.",
+        "d20_test_description": "The core mechanic for which uncertanties are resolved is the [D20 TEST]. A [D20 TEST] requires the acting individual (usually the player) to roll a d20 and add a bonus to the result which is stated by the relveant ability. This result is then compared to a Difficulty Threshold ([DT]). If the resolt meets or exceeds the [DT] the result is a success. Additionally if the d20 die rolled is a 20 the result is a critical success, if the die shows a 1, it is a critical failure. What impact these reults have is stated in the relevant ability/mechanic.",
+        "difficulty_threshold_description": "The difficulty of any [D20 TEST] is measured by the Difficulty Threshld ([DT]). The [DT] should be exlusivly based upon the difficulty of the action the actor attempts. Below are examples on what the [DT] number translates to in difficulty. It should be kept in mind that different forms of a [D20 TEST] can achieve significantly higher bonuses.",
+        "difficulty_threshold_5": "Trivial task for an avarage person",
+        "difficulty_threshold_10": "Challenging task for an avarage person",
+        "difficulty_threshold_15": "Difficult task for an avarage person",
+        "difficulty_threshold_20": "Difficult task for a trained person in that task",
+        "difficulty_threshold_25": "Difficult task for an expert in that task",
+        "difficulty_threshold_30": "Difficult task for a genius in that task",
+        "difficulty_threshold_35": "Impossible task for almost all mortal person",
+        "difficulty_threshold_40": "Task only achievable by demi-gods",
+        "d20_test_specializations_description": "There are various specific [D20 TEST] that have their own keywords to simplify the text. Some examples include [MARTIAL TEST], [SPELL TEST], [STABILITY TEST], [DODGE TEST], [TOUGHNESS TEST], [WILLPOWER TEST]. The specefic of which will be explained later on.",
+        "advantage_disadvantage": "There are 2 common ways to modify a [D20 TEST], the first one is to just add or subtract a flat number to the test or set the [DT] higher or lower. The second one is to grant advantage/disadvantage.<br>[ADVANTAGE]: You roll the d20 twice and take the better result. <br>[DISADVANTAGE]: You roll the d20 twice and take the worse result.<br>You can only benefit from one instance of [ADVANTAGE] or [DISADVANTAGE] at a time and if a [D20 TEST] has both, they cancel each other out.",
+        "abilitiies_description": "Every mechanical action performed by a charceter or npc is an ability. Each Ability specificies relevant characteristics such as range, target(s), and usage cost. Additionally it describes how the ability works and what it does.<br>The Ability also contains Tags which are indicators and later used to indicate what abilities can interact with other abilities."
+    },
+    "character": {
+
+    },
+    "keywords": {
+        
+    }
+}

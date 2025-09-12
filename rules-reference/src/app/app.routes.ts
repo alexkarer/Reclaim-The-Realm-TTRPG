@@ -2,16 +2,24 @@ import { Routes } from '@angular/router';
 import { RulesReferenceComponent } from './rules-reference/rules-reference.component';
 import { MartialManueversSearchComponent } from './martial-manuevers-search/martial-manuevers-search.component';
 import { SpellsSearchComponent } from './spells-search/spells-search.component';
-import { HybridAbilitiesSearchComponent } from './hybrid-abilities-search/hybrid-abilities-search.component';
 import { EquipmentSearchComponent } from './equipment-search/equipment-search.component';
 import { ClassesOverviewComponent } from './classes-overview/classes-overview.component';
-import { PerkSearchComponent } from './perk-search/perk-search.component';
 
 export const routes: Routes = [
     {
         path: '',
+        component: TODO,
+        title: 'Reclaim the Realm - Basic Rules'
+    },
+    {
+        path: '/player-rules',
+        component: TODO,
+        title: 'Reclaim the Realm - Player Rules'
+    },
+    {
+        path: '/rules',
         component: RulesReferenceComponent,
-        title: 'Reclaim the Realm - Rules'
+        title: 'Reclaim the Realm - Rules Reference'
     },
     {
         path: 'classes',
@@ -27,16 +35,6 @@ export const routes: Routes = [
         path: 'spells',
         component: SpellsSearchComponent,
         title: 'Reclaim the Realm - Spells'
-    },
-    {
-        path: 'hybrid-abilities',
-        component: HybridAbilitiesSearchComponent,
-        title: 'Reclaim the Realm - Hybrid Abilities'
-    },
-    {
-        path: 'perks',
-        component: PerkSearchComponent,
-        title: 'Reclaim the Realm - Perks'
     },
     {
         path: 'equipment',

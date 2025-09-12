@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import { DynamicContentComponent } from '../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
-import { KeywordProcessorPipe } from '../../shared/text-utils/keyword-processor';
+import { KeywordProcessorPipe } from '../../shared/text-utils/text-processor';
 import { CombatOverviewComponent } from "./combat-overview/combat-overview.component";
 import { CombatDetailsComponent } from "./combat-details/combat-details.component";
 import { StatusEffectsOverviewComponent } from "./status-effects-overview/status-effects-overview.component";

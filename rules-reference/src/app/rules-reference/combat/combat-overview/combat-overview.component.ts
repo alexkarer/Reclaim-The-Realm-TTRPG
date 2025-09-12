@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgbScrollSpyFragment } from '@ng-bootstrap/ng-bootstrap';
 import { DynamicContentComponent } from "../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
-import { KeywordProcessorPipe } from "../../../shared/text-utils/keyword-processor";
+import { KeywordProcessorPipe } from "../../../shared/text-utils/text-processor";
 import combatOverviewJson from '../../../../../../common_resources/combat/combat_overview.json'
 
 @Component({
