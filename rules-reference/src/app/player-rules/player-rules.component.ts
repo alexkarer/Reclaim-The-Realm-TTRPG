@@ -1,5 +1,10 @@
 import { Component, inject, TemplateRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgbOffcanvas, NgbScrollSpy, NgbScrollSpyFragment, NgbScrollSpyItem, NgbScrollSpyMenu } from '@ng-bootstrap/ng-bootstrap';
+import { ResolveTextKeyPipe } from "../shared/text-utils/resolve-text-key";
+import { TextProcessorPipe } from "../shared/text-utils/text-processor";
+import { DynamicContentComponent } from '../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
+
+import characterCreationStepsJson from "../../../../common_resources/player_rules/character_creation_steps.json";
 
 @Component({
   selector: 'app-player-rules',
@@ -9,12 +14,16 @@ import { NgbOffcanvas, NgbScrollSpy, NgbScrollSpyFragment, NgbScrollSpyItem, Ngb
     NgbScrollSpyMenu,
     NgbScrollSpyItem,
     NgbScrollSpyFragment,
-  ],
+    ResolveTextKeyPipe,
+    TextProcessorPipe,
+    DynamicContentComponent
+],
   templateUrl: './player-rules.component.html',
   styleUrl: './player-rules.component.scss'
 })
 export class PlayerRulesComponent {
 
+  public readonly characterCreationSteps = characterCreationStepsJson;
   private offcanvasService = inject(NgbOffcanvas);
 
   openTableOfContents(content: TemplateRef<any>) {

@@ -6,28 +6,20 @@
 	</div>
 	<nav [ngbScrollSpyMenu]="spy" class="navbar-nav-scroll bg-secondary-subtle table-of-contents">
 		<nav class="nav nav-pills flex-column">
-			<a role="button" class="nav-link" ngbScrollSpyItem="character-creation">Character Creation</a>
+			<a role="button" class="nav-link" ngbScrollSpyItem="character-creation">Creating a Character</a>
 			<nav class="nav nav-pills flex-column">
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="attributes" parent="character-overview">Attributes</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="important-characteristics" parent="character-overview">Important Characteristics</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="skills" parent="character-overview">Skills</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="progression" parent="character-overview">Progression</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="character-creation" ngbScrollSpyItem="species">Species</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="character-creation" ngbScrollSpyItem="determine-origin">Determine your Origin</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="character-creation" ngbScrollSpyItem="classes">Classes</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="character-creation" ngbScrollSpyItem="attributes-skills">Attributes and Skills</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="character-creation" ngbScrollSpyItem="perks-abilities">Perks and Abilities</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="character-creation" ngbScrollSpyItem="finish-up-character">Finish up your Character</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="character-creation" ngbScrollSpyItem="equipment">Equipment</a>
+				<a role="button" class="nav-link ms-3 my-0" parent="character-creation" ngbScrollSpyItem="choose-party-origin">Optional: Party Origin</a>
 			</nav>
-			<a role="button" class="nav-link" ngbScrollSpyItem="classes">Classes</a>
-			<a role="button" class="nav-link" ngbScrollSpyItem="abilities">Abilities</a>
-			<nav class="nav nav-pills flex-column">
-				<a role="button" class="nav-link ms-3 my-0" parent="abilities" ngbScrollSpyItem="martial-maneuvers">Martial Maneuvers</a>
-				<a role="button" class="nav-link ms-3 my-0" parent="abilities" ngbScrollSpyItem="spells">Spells</a>
-				<a role="button" class="nav-link ms-3 my-0" parent="abilities" ngbScrollSpyItem="hybrid-abilities">Hybrid Abilities</a>
-			</nav>
-			<a role="button" class="nav-link" ngbScrollSpyItem="equipment">Equipment</a>
-			<nav class="nav nav-pills flex-column">
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="weapons-ammunition" parent="equipment">Weapons and Ammunitions </a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="armour" parent="equipment">Armour</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="shields" parent="equipment">Shields</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="magic-items" parent="equipment">Magic Items</a>
-				<a role="button" class="nav-link ms-3 my-0" ngbScrollSpyItem="crafting" parent="equipment">Crafting</a>
-			</nav>
+			<a role="button" class="nav-link" ngbScrollSpyItem="getting-stronger">Getting Stronger</a>
+			<a role="button" class="nav-link" ngbScrollSpyItem="exhaustion-resting">Exhaustion and Resting</a>
+			<a role="button" class="nav-link" ngbScrollSpyItem="spells">Spells</a>
 		</nav>
 	</nav>
 </ng-template>
@@ -42,6 +34,41 @@
 
 <div ngbScrollSpy #spy="ngbScrollSpy" class="rules-body-wrapper d-flex justify-content-center">
 	<div class="rules-body">
+		<h1 ngbScrollSpyFragment="character-creation">Creating a Character</h1>
+		<app-dynamic-content [content]="'creation_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+		<ol>
+			@for (step of characterCreationSteps; track $index) {
+				<li>
+					<app-dynamic-content [content]="step | resolveTextKey | textProcessor"></app-dynamic-content>
+				</li>
+			}
+		</ol>
+		
+		<h3 ngbScrollSpyFragment="species">1. Species</h3>
+
+		<h3 ngbScrollSpyFragment="determine-origin">2. Character Origin</h3>
+
+		<h3 ngbScrollSpyFragment="classes">3. Classes</h3>
+
+		<h3 ngbScrollSpyFragment="attributes-skills">4. Attributes and Skills</h3>
+
+		<h3 ngbScrollSpyFragment="perks-abilities">5. Perks and Abilities</h3>
+
+		<h3 ngbScrollSpyFragment="equipment">6. Finish up your Character</h3>
+
+		<!-- Remain stuff that needs to be explained, Basically do the same as now, Core Values, Resources, Defensive Values, Other: Size?, alignment, special movement -->
+
+		<h3 ngbScrollSpyFragment="equipment">7. Equipment</h3>
+
+		<h3 ngbScrollSpyFragment="species">8. Optional: Party Origin</h3>
+
+		<h2 ngbScrollSpyFragment="getting-stronger">Getting Stronger</h2>
+
+		<h2 ngbScrollSpyFragment="exhaustion-resting">Exhaustion and Resting</h2>
+		<!-- Also explain deaths door, and injuries here-->
+
+		<h2 ngbScrollSpyFragment="spells">Spells</h2>
 		<!--
 		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="character-creation">Character Creation</h2>
 		<app-character-creation/>

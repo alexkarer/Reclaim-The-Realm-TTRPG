@@ -3,16 +3,16 @@ import { ContentPart, generateGenericKeyword } from "./text-utils";
 import statusEffectsJson from '../../../../../common_resources/combat/status_effects.json';
 import keywordsJson from '../../../../../common_resources/keywords.json';
 
-const combinedStatusEffects = [
+const statusEffectMap = [
     ...statusEffectsJson.tierOneBeneficialStatusEffects,
     ...statusEffectsJson.tierOneHarmfulStatusEffects,
     ...statusEffectsJson.tierTwoBeneficialStatusEffects,
     ...statusEffectsJson.tierTwoHarmfulStatusEffects,
     ...statusEffectsJson.tierThreeBeneficialStatusEffects,
     ...statusEffectsJson.tierThreeHarmfulStatusEffects
-];
+].reduce((map, v) => map.set(v.keyword, v), new Map<string, typeof statusEffectsJson.tierOneBeneficialStatusEffects[0]>());
 
-const keywords = keywordsJson.reduce((map, v) => map.set(v.name, v), new Map<string, typeof keywordsJson[0]>());
+const keywordMap = keywordsJson.reduce((map, v) => map.set(v.name, v), new Map<string, typeof keywordsJson[0]>());
 
 @Pipe({
     name: 'textProcessor',
@@ -83,7 +83,7 @@ function generateTagContentPart(keyword: string): ContentPart | undefined {
 }
 
 function generateRulesContentPart(keyword: string): ContentPart | undefined {
-    const foundKeyword = keywords.get(keyword);
+    const foundKeyword = keywordMap.get(keyword);
     if (foundKeyword) {
         return generateGenericKeyword(foundKeyword.name, foundKeyword.description, foundKeyword.link);
     }
@@ -91,9 +91,9 @@ function generateRulesContentPart(keyword: string): ContentPart | undefined {
 }
 
 function getStatusEffectsContentPart(keyword: string): ContentPart | undefined {
-    let foundKeywords = combinedStatusEffects.filter(effect => effect.keyword.replaceAll(/[\[\]]/g, '') === keyword);
-    if (foundKeywords.length > 0) {
-        return generateGenericKeyword(foundKeywords[0].keyword, foundKeywords[0].summary, foundKeywords[0].link);
+    let foundKeyword = statusEffectMap.get(`[${keyword}]`);
+    if (foundKeyword) {
+        return generateGenericKeyword(foundKeyword.keyword, foundKeyword.summary, foundKeyword.link);
     }
     return undefined;
 }

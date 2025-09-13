@@ -17,7 +17,15 @@
         "abilitiies_description": "Every mechanical action performed by a charceter or npc is an ability. Each Ability specificies relevant characteristics such as range, target(s), and usage cost. Additionally it describes how the ability works and what it does.<br>The Ability also contains Tags which are indicators and later used to indicate what abilities can interact with other abilities."
     },
     "character": {
-        "test2": ""
+        "creation_description": "The Collapse of the Ancient World has left civilizations ravaged and isolated and the wilderness more dangerous than ever. Your Character will have to be strong, fast or cunning to survive out there and explore the remains. Use the following procedure to create your character:",
+        "creation_step_choose_species": "Choose a Species",
+        "creation_step_determine_your_origin": "Determine your Origin",
+        "creation_step_choose_a_class": "Choose a class",
+        "creation_step_assign_attributes_skills": "Assign your starting Attributes and Skills",
+        "creation_step_choose_perks_abilities": "Pick your starting Perks and Abilities",
+        "creation_step_finish_up_character": "Finish up your Character",
+        "creation_step_select_starting_equipment": "Choose your starting equipment",
+        "creation_step_choose_party_origin": "Optional: Choose your party origin"
     },
     "keywords": {
         "test1": ""
