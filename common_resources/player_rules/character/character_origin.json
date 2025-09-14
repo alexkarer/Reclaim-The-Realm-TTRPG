@@ -55,7 +55,7 @@
         {
             "d6": "5-6",
             "exoticBirthLocation": "Riftlands",
-            "bonus": "+1 [SPI], can choose one first power Divine or Restoration spell and cast it once per day without spending [ARCANA]"
+            "bonus": "+1 [SPI], <span class=\"text-danger\">TODO Should have some kind of Mutation</span> "
         }
     ],
     "earlyTraining": [
@@ -237,31 +237,31 @@
     "exampleAdventuringGoals": [
         {
             "goal": "Revenge",
-            "description": "TODO"
+            "description": "<span class=\"text-danger\">TODO</span>"
         },
         {
             "goal": "Fulfill Oath/Promise",
-            "description": "TODO"
+            "description": "<span class=\"text-danger\">TODO</span>"
         },
         {
             "goal": "Resurrected / Forgot old Live",
-            "description": "Find old life"
+            "description": "<span class=\"text-danger\">TODO</span>Find old life"
         },
         {
             "goal": "Monster Hunter",
-            "description": "Kill > Level 12 creature"
+            "description": "<span class=\"text-danger\">TODO</span>Kill > Level 12 creature"
         },
         {
             "goal": "Recover lost things",
-            "description": "Artifact, Person or Knowledge"
+            "description": "<span class=\"text-danger\">TODO</span>Artifact, Person or Knowledge"
         },
         {
             "goal": "Find Legendary Location",
-            "description": "Find the origin of the cataclysm (specific place9"
+            "description": "<span class=\"text-danger\">TODO</span>Find the origin of the cataclysm (specific place)"
         },
         {
             "goal": "Become Immortal",
-            "description": "Find the origin of the cataclysm (specific place9"
+            "description": "<span class=\"text-danger\">TODO</span>"
         }
     ]
 }

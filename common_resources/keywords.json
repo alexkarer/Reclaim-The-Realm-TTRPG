@@ -191,37 +191,37 @@
     },
     {
         "name": "STR",
-        "description": "",
+        "description": "Strength represents the physical strength of a character, it affects your damage with weapons, carrying capacity and jumping distance.",
         "link": ""
     },
     {
         "name": "AGI",
-        "description": "",
+        "description": "Agility represents how agile, dexterous and fast the character is, it represents accuracy with melee attacks, movement and the ability to dodge incoming attacks.",
         "link": ""
     },
     {
         "name": "CON",
-        "description": "",
+        "description": "Constitution represents our bodily health as well as your endurance and the ability to resist poisons.",
         "link": ""
     },
     {
         "name": "INT",
-        "description": "",
+        "description": "Intelligence represents your Intelligence, it represents how many techniques you can know at the same time and how many skill points you have.",
         "link": ""
     },
     {
         "name": "SPI",
-        "description": "",
+        "description": "Spirit represents how strong your connection to the elemental planes and the Aether is as well your mental fortitude and spiritual health, it most importantly affects your ability to use spells and other supernatural techniques.",
         "link": ""
     },
     {
         "name": "PER",
-        "description": "",
+        "description": "Perception represents your physical senses and the ability to perceive details and weak spots and accuracy of ranged attacks.",
         "link": ""
     },
     {
         "name": "CHA",
-        "description": "",
+        "description": "Charisma represents how likeable you are and your ability to sway others for your cause.",
         "link": ""
     },
     {

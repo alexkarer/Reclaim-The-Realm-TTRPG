@@ -57,15 +57,19 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - Move Animal Handling into Nature (❌)
 - Rework Lore skills and remove their distinction (❌)
     - possibly create riftlands skill 
+- Add rules for aiding others in skill tests (❌)
+    - probably just give an extra dice
 
 #### Classes
 
 - Warlock: (❌)
-  - Mutations should have some visual or mental changes, where a table is rolled everytime (❌)
+  - Mutations should have some visual or mental changes when the perk is taken, where a table is rolled everytime (❌)
+  - Corrutpion Limit should be changed a bit also with how it interacts with Mutations (❌)
 - Priest: (❌)
  - Simplify Aether Dice notation: AD(=) -> matching AD, AD(!) -> unique AD  (❌)
 
-- Only have Class Perks and fold all other Perks in there and have Perks be part of Classes   (❌)
+- Only have Class Perks and fold all other Perks in there and have Perks be part of Classes (❌)
+- Every Class gains the same amount of base skill points (❌)
 - Remove Perk point system, instead you get maybe 3 Perks at first level  (❌)
 - Only have class Perks (❌)
     - Rework Barbarian Perk Tree (❌)

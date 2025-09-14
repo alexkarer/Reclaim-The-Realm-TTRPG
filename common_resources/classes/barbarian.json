@@ -11,7 +11,7 @@
         "stabilityProficiency": 1.0,
         "toughnessProficiency": 1.0,
         "willpowerProficiency": 0.334,
-        "mainClassAttributes": [ "[STR]", "[AGI]", "[CON]" ],
+        "classAttributes": [ "[STR]", "[AGI]", "[CON]" ],
         "classSKills": [ "Athletics", "Intimidation", "Survival" ],
         "skillPointsPerLevel": 4
     },

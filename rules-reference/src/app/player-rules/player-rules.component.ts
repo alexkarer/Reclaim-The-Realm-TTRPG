@@ -4,9 +4,12 @@ import { ResolveTextKeyPipe } from "../shared/text-utils/resolve-text-key";
 import { TextProcessorPipe } from "../shared/text-utils/text-processor";
 import { DynamicContentComponent } from '../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 import { SpeciesComponent } from './species/species.component';
+import { CharacterOriginComponent } from './character-origin/character-origin.component';
+import { ClassesComponent } from './classes/classes.component';
 
 import characterCreationStepsJson from "../../../../common_resources/player_rules/character_creation_steps.json";
-import speciesJson from '../../../../common_resources/character/species.json';
+import speciesJson from '../../../../common_resources/player_rules/character/species.json';
+import { AttributesSkillsComponent } from './attributes-skills/attributes-skills.component';
 
 @Component({
   selector: 'app-player-rules',
@@ -19,7 +22,10 @@ import speciesJson from '../../../../common_resources/character/species.json';
     ResolveTextKeyPipe,
     TextProcessorPipe,
     DynamicContentComponent,
-    SpeciesComponent
+    SpeciesComponent,
+    CharacterOriginComponent,
+    ClassesComponent,
+    AttributesSkillsComponent
 ],
   templateUrl: './player-rules.component.html',
   styleUrl: './player-rules.component.scss'

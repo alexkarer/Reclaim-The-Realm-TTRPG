@@ -45,6 +45,7 @@
 			}
 		</ol>
 		
+		<hr>
 		<h3 ngbScrollSpyFragment="species">1. Species</h3>
 		<app-dynamic-content [content]="'species_description' | resolveTextKey | textProcessor"></app-dynamic-content>
 		
@@ -54,34 +55,46 @@
 			}
 		</div>
 
+		<hr>
 		<h3 ngbScrollSpyFragment="determine-origin">2. Character Origin</h3>
 		<app-dynamic-content [content]="'origin_description' | resolveTextKey | textProcessor"></app-dynamic-content>
 
 		<app-character-origin></app-character-origin>
 
+		<hr>
 		<h3 ngbScrollSpyFragment="classes">3. Classes</h3>
 
-		
+		<app-classes></app-classes>
 
+		<hr>
 		<h3 ngbScrollSpyFragment="attributes-skills">4. Attributes and Skills</h3>
 
-		<!-- TODO: if skill gains multiple times, change to different class skill -->
+		<app-attributes-skills></app-attributes-skills>
 
+		<hr>
 		<h3 ngbScrollSpyFragment="perks-abilities">5. Perks and Abilities</h3>
 
+		<!-- Perks, Class Techniques, Spells, Martial Maneuvers -->
+
+		<hr>
 		<h3 ngbScrollSpyFragment="equipment">6. Finish up your Character</h3>
 
 		<!-- Remain stuff that needs to be explained, Basically do the same as now, Core Values, Resources, Defensive Values, Other: Size?, alignment, special movement -->
 
+		<hr>
 		<h3 ngbScrollSpyFragment="equipment">7. Equipment</h3>
 
+		<hr>
 		<h3 ngbScrollSpyFragment="species">8. Optional: Party Origin</h3>
 
+		<hr>
 		<h2 ngbScrollSpyFragment="getting-stronger">Getting Stronger</h2>
 
+		<hr>
 		<h2 ngbScrollSpyFragment="exhaustion-resting">Exhaustion and Resting</h2>
 		<!-- Also explain deaths door, and injuries here-->
 
+		<hr>
 		<h2 ngbScrollSpyFragment="spells">Spells</h2>
 		<!--
 		<h2 class="pt-3 mt-3" ngbScrollSpyFragment="character-creation">Character Creation</h2>

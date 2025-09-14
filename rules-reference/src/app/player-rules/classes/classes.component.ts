@@ -3,15 +3,12 @@ import { ResolveTextKeyPipe } from '../../shared/text-utils/resolve-text-key';
 import { TextProcessorPipe } from '../../shared/text-utils/text-processor';
 import { DynamicContentComponent } from '../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 
-import originJson from '../../../../../common_resources/player_rules/character/character_origin.json';
-
 @Component({
-  selector: 'app-character-origin',
+  selector: 'app-classes',
   imports: [ResolveTextKeyPipe, TextProcessorPipe, DynamicContentComponent],
-  templateUrl: './character-origin.component.html',
-  styleUrl: './character-origin.component.scss'
+  templateUrl: './classes.component.html',
+  styleUrl: './classes.component.scss'
 })
-export class CharacterOriginComponent {
+export class ClassesComponent {
 
-  public readonly characterOrigin = originJson;
 }

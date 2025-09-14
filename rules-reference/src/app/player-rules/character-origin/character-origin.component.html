@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (birthplace of characterOrigin.birthPlace.birthplaces; track $index) {
+        @for (birthplace of characterOrigin.birthplaces; track $index) {
         <tr>
             <td>{{ birthplace.d100 }}</td>
             <td>{{ birthplace.birthLocation }}</td>
@@ -29,7 +29,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (birthplace of characterOrigin.birthPlace.exoticBirthplaces; track $index) {
+        @for (birthplace of characterOrigin.exoticBirthplaces; track $index) {
         <tr>
             <td>{{ birthplace.d6 }}</td>
             <td>{{ birthplace.exoticBirthLocation }}</td>
@@ -51,7 +51,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (trainingType of characterOrigin.earlyTraining.earlyTrainingTypes ; track $index) {
+        @for (trainingType of characterOrigin.earlyTraining ; track $index) {
         <tr>
             <td>{{ trainingType.d10 }}</td>
             <td>{{ trainingType.trainingType }}</td>
@@ -185,7 +185,7 @@
         @for (adventuringGoal of characterOrigin.exampleAdventuringGoals; track $index) {
         <tr>
             <td>{{ adventuringGoal.goal }}</td>
-            <td>{{ adventuringGoal.description }}</td>
+            <td [innerHTML]="adventuringGoal.description"></td>
         </tr>
         }
     </tbody>

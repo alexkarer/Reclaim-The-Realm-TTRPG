@@ -11,7 +11,7 @@
         "stabilityProficiency": 0.334,
         "toughnessProficiency": 0.334,
         "willpowerProficiency": 1.0,
-        "mainClassAttributes": [ "[SPI]", "[CHA]", "[PER]" ],
+        "classAttributes": [ "[SPI]", "[CHA]", "[PER]" ],
         "classSKills": [ "Persuasion", "Medicine", "Culture", "Supernatural" ],
         "skillPointsPerLevel": 5
     },

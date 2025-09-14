@@ -11,7 +11,7 @@
         "stabilityProficiency": 0.334,
         "toughnessProficiency": 0.334,
         "willpowerProficiency": 0.667,
-        "mainClassAttributes": [ "[AGI]", "[INT]", "[PER]" ],
+        "classAttributes": [ "[AGI]", "[INT]", "[PER]" ],
         "classSKills": [ "Deception", "Investigation", "Stealth", "Thievery", "Culture" ],
         "skillPointsPerLevel": 6
     },
