@@ -1,0 +1,267 @@
+{
+    "birthplaces": [
+        {
+            "d100": "1-10",
+            "birthLocation": "Nomadic Tribe",
+            "attributeBonus": "+1 [PER]"
+        },
+        {
+            "d100": "11–20",
+            "birthLocation": "Small Island/Coastal",
+            "attributeBonus": "+1 [AGI]"
+        },
+        {
+            "d100": "21–30",
+            "birthLocation": "Mountain Valley",
+            "attributeBonus": "+1 [CON]"
+        },
+        {
+            "d100": "31-75",
+            "birthLocation": "Village",
+            "attributeBonus": "+1 [STR]"
+        },
+        {
+            "d100": "76–95",
+            "birthLocation": "City",
+            "attributeBonus": "+1 [CHA], +1 [INT]"
+        },
+        {
+            "d100": "86-100",
+            "birthLocation": "Roll on Exotic Location Table",
+            "attributeBonus": "-"
+        }
+    ],
+    "exoticBirthplaces": [
+        {
+            "d6": "1",
+            "exoticBirthLocation": "Elemental Plane of Fire",
+            "bonus": "[DR] Fire equal to 5 + half your [LEVEL] (rounded down)"
+        },
+        {
+            "d6": "2",
+            "exoticBirthLocation": "Elemental Plane of Earth",
+            "bonus": "+2 [HP] per Level up."
+        },
+        {
+            "d6": "3",
+            "exoticBirthLocation": "Elemental Plane of Water",
+            "bonus": "Swim Speed equal to your walking speed and [DR] Frost equal to 5 + half your [LEVEL] (rounded down)"
+        },
+        {
+            "d6": "4",
+            "exoticBirthLocation": "Elemental Plane of Air",
+            "bonus": "permanent +2 [MP]"
+        },
+        {
+            "d6": "5-6",
+            "exoticBirthLocation": "Riftlands",
+            "bonus": "+1 [SPI], can choose one first power Divine or Restoration spell and cast it once per day without spending [ARCANA]"
+        }
+    ],
+    "earlyTraining": [
+        {
+            "d10": "1",
+            "trainingType": "Wildman",
+            "benefits": "Surivival and Intimidation become class skills for you.",
+            "extraStartingMoney": "0 gc"
+        },
+        {
+            "d10": "2",
+            "trainingType": "Farmhand",
+            "benefits": "Animal Handling and Nature become class skills for you.",
+            "extraStartingMoney": "3 gc"
+        },
+        {
+            "d10": "3",
+            "trainingType": "Assistant Hunter",
+            "benefits": "Survival and Nature become class skills for you",
+            "extraStartingMoney": "5 gc"
+        },
+        {
+            "d10": "4",
+            "trainingType": "Militia Training",
+            "benefits": "Athletics becomes class skill for you and your",
+            "extraStartingMoney": "5 gc"
+        },
+        {
+            "d10": "5",
+            "trainingType": "Artisan Training",
+            "benefits": "one tool skill of your choice becomes a class skill for you and it's rank is increased by 1. Additionally you start with one tier 3 item of your choice that can be crafted with your chosen tool.",
+            "extraStartingMoney": "10 gc"
+        },
+        {
+            "d10": "6",
+            "trainingType": "Entertainer",
+            "benefits": "Persuasion and Deception become Class skills for you.",
+            "extraStartingMoney": "10 gc"
+        },
+        {
+            "d10": "7",
+            "trainingType": "Scholar",
+            "benefits": "Either Medicine or 2 lore skills of your choice become a class skill for you. Additionally you learn an extra language and start the game with a book about your subject.",
+            "extraStartingMoney": "3 gc"
+        },
+        {
+            "d10": "8",
+            "trainingType": "Merchant Apprentice",
+            "benefits": "Persuasion and Culture become a class skills for you and you learn an extra language",
+            "extraStartingMoney": "20 gc"
+        },
+        {
+            "d10": "9",
+            "trainingType": "Criminal",
+            "benefits": "Stealth and Thievery become class skills fro you and you become a wanted criminal in a location of your choice.",
+            "extraStartingMoney": "25 gc"
+        },
+        {
+            "d10": "10",
+            "trainingType": "Young Noble",
+            "benefits": "1 regular skill and one lore skill of your choice become class skills for you and you learn an extra language.",
+            "extraStartingMoney": "50 gc"
+        }
+    ],
+    "lifeEvents": {
+        "lifeEventTypes": [
+            {
+                "d8": "1-3",
+                "lifeEventType": "Happy Memory"
+            },
+            {
+                "d8": "4-5",
+                "lifeEventType": "Tragedy"
+            },
+            {
+                "d8": "6",
+                "lifeEventType": "Early Adventuring"
+            },
+            {
+                "d8": "7",
+                "lifeEventType": "Martial Events"
+            },
+            {
+                "d8": "8",
+                "lifeEventType": "Supernatural Events"
+            }
+        ],
+        "happyMoments": [
+            {
+                "d4": "1",
+                "description": "You came into the possesion of a treasure map, work with the GM to figure out what kind of Treasure it hides."
+            },
+            {
+                "d4": "2",
+                "description": "You inherited a masterwork weapon from your family."
+            },
+            {
+                "d4": "3",
+                "description": "You got in contact with a pwerson in a powerful position and developed a friendship with them, work with the GM to determine their idendity."
+            },
+            {
+                "d4": "4",
+                "description": "You found love and got happily married."
+            }
+        ],
+        "tragedies": [
+            {
+                "d4": "1",
+                "description": "You are afflicted with a severe illness and will die in 1 year unless you can find a cure."
+            },
+            {
+                "d4": "2",
+                "description": "You have a gambling problem, you lose 10 gc starting money and you can't complete an extended long rest unless you spend one evening gambling"
+            },
+            {
+                "d4": "3",
+                "description": "Your hometown was burned to the ground or otherwise destroyed."
+            },
+            {
+                "d4": "4",
+                "description": "Your parents or someone else close to you has died."
+            }
+        ],
+        "earlyAdventuringMoment": [
+            {
+                "d4": "1",
+                "description": "You barely made it out of a dangerous dungeon (or equivalent) and vow to come back when you are stronger."
+            },
+            {
+                "d4": "2",
+                "description": "You were terribly frightened by something you encountered and ran away, abandoning your companions to their fate."
+            },
+            {
+                "d4": "3",
+                "description": "You still have a healing potion that you didn't need to use in the last adventure."
+            },
+            {
+                "d4": "4",
+                "description": "You found some treasure in an abandoned ruin/dungeon, start the game with extra 8d6 gc."
+            }
+        ],
+        "martialEvents": [
+            {
+                "d4": "1",
+                "description": "You took part in a battle but where either terribly injured or you had to run away."
+            },
+            {
+                "d4": "2",
+                "description": "You performed mercanery work, start the game with extra 4d6 gc."
+            },
+            {
+                "d4": "3",
+                "description": "You are the undefeated brawling champion of your village/town/district."
+            },
+            {
+                "d4": "4",
+                "description": "You took part in a famous battle and aquitted yourself well. Your deads are still remembered by some."
+            }
+        ],
+        "supernaturalEvents": [
+            {
+                "d4": "1",
+                "description": "You caused a Spell Mishap and people got hurt."
+            },
+            {
+                "d4": "2",
+                "description": "You came into contact with a demon or angel from the Aether."
+            },
+            {
+                "d4": "3",
+                "description": "You had a vision of an event that will come to pass."
+            },
+            {
+                "d4": "4",
+                "description": "You where mind controlled for the last 1d4 years and have no clear recollection of what you did during that time."
+            }
+        ]
+    },
+    "exampleAdventuringGoals": [
+        {
+            "goal": "Revenge",
+            "description": "TODO"
+        },
+        {
+            "goal": "Fulfill Oath/Promise",
+            "description": "TODO"
+        },
+        {
+            "goal": "Resurrected / Forgot old Live",
+            "description": "Find old life"
+        },
+        {
+            "goal": "Monster Hunter",
+            "description": "Kill > Level 12 creature"
+        },
+        {
+            "goal": "Recover lost things",
+            "description": "Artifact, Person or Knowledge"
+        },
+        {
+            "goal": "Find Legendary Location",
+            "description": "Find the origin of the cataclysm (specific place9"
+        },
+        {
+            "goal": "Become Immortal",
+            "description": "Find the origin of the cataclysm (specific place9"
+        }
+    ]
+}

@@ -46,12 +46,26 @@
 		</ol>
 		
 		<h3 ngbScrollSpyFragment="species">1. Species</h3>
+		<app-dynamic-content [content]="'species_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+		
+		<div class="d-flex flex-column">
+			@for (species of speciesList; track $index) {
+				<app-species [species]="species"></app-species>
+			}
+		</div>
 
 		<h3 ngbScrollSpyFragment="determine-origin">2. Character Origin</h3>
+		<app-dynamic-content [content]="'origin_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+		<app-character-origin></app-character-origin>
 
 		<h3 ngbScrollSpyFragment="classes">3. Classes</h3>
 
+		
+
 		<h3 ngbScrollSpyFragment="attributes-skills">4. Attributes and Skills</h3>
+
+		<!-- TODO: if skill gains multiple times, change to different class skill -->
 
 		<h3 ngbScrollSpyFragment="perks-abilities">5. Perks and Abilities</h3>
 

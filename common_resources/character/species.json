@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Human",
+        "description": "human_decription",
+        "size": "Medium",
+        "height": "140cm + 6d12 cm",
+        "weight": "40kg + 6d12 kg",
+        "startingHPBonus": 6
+    },
+    {
+        "name": "Dwarf",
+        "description": "dwarf_description",
+        "size": "Medium",
+        "height": "100 cm + 5d12 cm",
+        "weight": "40 kg + 5d12 kg",
+        "startingHPBonus": 8
+    },
+    {
+        "name": "Elf",
+        "description": "elf_description",
+        "size": "Medium",
+        "height": "170 cm + 4d12 cm",
+        "weight": "40kg + 4d12 kg",
+        "startingHPBonus": 6
+    }
+]

@@ -1,0 +1,13 @@
+<div class="m-2 p-2 border bg-body-tertiary">
+    <h4>{{ species().name }}</h4>
+    <p>{{ species().description }}</p>
+    <span><span class="fw-bold">Size: </span>{{ species().size }}</span>
+    <span><span class="ms-3 fw-bold">Height: </span>{{ species().height }}</span>
+    <span><span class="ms-3 fw-bold">Weight: </span>{{ species().weight }}</span>
+    <span><span class="ms-3 fw-bold"><app-dynamic-content
+                [content]="'Starting [HP] Bonus: ' | textProcessor"></app-dynamic-content></span>{{
+        species().startingHPBonus }}</span>
+    <br>
+    <h5>Trait:</h5>
+    <span class="text-warning">TODO</span>
+</div>

@@ -3,8 +3,10 @@ import { NgbOffcanvas, NgbScrollSpy, NgbScrollSpyFragment, NgbScrollSpyItem, Ngb
 import { ResolveTextKeyPipe } from "../shared/text-utils/resolve-text-key";
 import { TextProcessorPipe } from "../shared/text-utils/text-processor";
 import { DynamicContentComponent } from '../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
+import { SpeciesComponent } from './species/species.component';
 
 import characterCreationStepsJson from "../../../../common_resources/player_rules/character_creation_steps.json";
+import speciesJson from '../../../../common_resources/character/species.json';
 
 @Component({
   selector: 'app-player-rules',
@@ -16,7 +18,8 @@ import characterCreationStepsJson from "../../../../common_resources/player_rule
     NgbScrollSpyFragment,
     ResolveTextKeyPipe,
     TextProcessorPipe,
-    DynamicContentComponent
+    DynamicContentComponent,
+    SpeciesComponent
 ],
   templateUrl: './player-rules.component.html',
   styleUrl: './player-rules.component.scss'
@@ -24,6 +27,7 @@ import characterCreationStepsJson from "../../../../common_resources/player_rule
 export class PlayerRulesComponent {
 
   public readonly characterCreationSteps = characterCreationStepsJson;
+  public readonly speciesList = speciesJson;
   private offcanvasService = inject(NgbOffcanvas);
 
   openTableOfContents(content: TemplateRef<any>) {

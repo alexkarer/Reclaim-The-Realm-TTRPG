@@ -42,13 +42,14 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - Add fate mechanic, potential options: reroll, gain extra 2 AP during turn, reduce damage (❌)
     - Potentially have a limit of fate that can be used per extended long rest
 - Make Origin a bit more interactive, let the Players have a bit more agency or empower them to do something with it. (❌)
+    - Each character should have a goal upon completion they get extra Fate (❌)
 - Try creating some sort of party/combo mechanic if possible or maybe general party upgrades like a synergy stat (❌)
 - Add complete Injury Table, with different Damage Type categories (❌)
     - Should only happen at Deaths Door
 
 #### Species
 - Create at least 3 more Species (❌)
-- Maybe Gain benefits at higher Levels (❌)
+- Rework traits, should just be 1 thing and  be something way more unique (❌)
 
 #### Skills
 - Since skill perks are removed consider adding milestone benefits back (❌)
@@ -111,6 +112,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 
 ### Equipment
 
+- Don't roll randomly for starting equipment, also figure out what good prices should be and starting gold/equipment (❌)
 - Medi-kit requires at least 3 Ranks in Medicine to use abilities (❌)
 - Shields should just give extra physical damage resistance (❌)
 - Each Item should have listed what higher item tiers give you (❌)
