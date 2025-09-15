@@ -53,7 +53,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 
 #### Skills
 - Since skill perks are removed consider adding milestone benefits back (❌)
-    - Should be no more than 2 per Skill (6/12)
+    - Should be no more than 2 per Skill (6/12) but only at the end and check if they are really needed
 - Move Animal Handling into Nature (❌)
 - Rework Lore skills and remove their distinction (❌)
     - possibly create riftlands skill 
@@ -124,6 +124,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - Add Staffs: each staff has 1 ability that has charges with max charges that need arcana too charge (❌)
 - Add Robes: that do cool stuff, worst case just +1 to spell cast test (❌)
 - Instead of Rations just have a supplies count/item (❌)
+- Add a Trinket Table (❌)
 
 ### Combat Mechanics
 

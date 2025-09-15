@@ -1,0 +1,30 @@
+[
+    {
+        "name": "STR - Strength",
+        "fulldescription": "str_description"
+    },
+    {
+        "name": "AGI - Agility",
+        "fulldescription": "agi_description"
+    },
+    {
+        "name": "CON - Constitution",
+        "fulldescription": "con_description"
+    },
+    {
+        "name": "INT - Intelligence",
+        "fulldescription": "int_description"
+    },
+    {
+        "name": "SPI - Spirit",
+        "fulldescription": "spi_description"
+    },
+    {
+        "name": "PER - Perception",
+        "fulldescription": "per_description"
+    },
+    {
+        "name": "CHA - Charisma",
+        "fulldescription": "cha_description"
+    }
+]

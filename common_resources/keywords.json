@@ -20,43 +20,8 @@
         "link": ""
     },
     {
-        "name": "ATTRIBUTE TEST",
-        "description": "'ATTRIBUTE TEST', 'An [ATTRIBUTE TEST] is a [D20 TEST] to determine if you can succeed in a certain activity related to a specific Attribute. Simply roll a d20 and add the related Attribute.', 'attribute-test",
-        "link": ""
-    },
-    {
-        "name": "SKILL TEST",
-        "description": "'SKILL TEST', 'A Skill Test is an [ATTRIBUTE TEST] where also ranks of a Skill can be added to the bonus.', '",
-        "link": ""
-    },
-    {
-        "name": "ATTACK",
-        "description": "'ATTACK', combatDetailsJson.additionalCombatRules.attack.description, 'attack",
-        "link": ""
-    },
-    {
-        "name": "MELEE ATTACK",
-        "description": "'MELEE ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[0].description, 'attack",
-        "link": ""
-    },
-    {
-        "name": "RANGED ATTACK",
-        "description": "'RANGED ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[1].description, 'attack",
-        "link": ""
-    },
-    {
         "name": "MARTIAL TEST",
         "description": "'MARTIAL TEST', 'Tests made when performing Martial Maneuvers. A [MARTIAL TEST] is a [D20 TEST] that benefits from your [MARTIAL LEVEL] and an Attribute that is stated in the context', '",
-        "link": ""
-    },
-    {
-        "name": "MELEE MARTIAL ATTACK",
-        "description": "'MEELE MARTIAL ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[2].description, 'attack",
-        "link": ""
-    },
-    {
-        "name": "RANGED MARTIAL ATTACK",
-        "description": "'RANGED MARTIAL ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[3].description, 'attack",
         "link": ""
     },
     {
@@ -67,16 +32,6 @@
     {
         "name": "SPELL TEST",
         "description": "'SPELL TEST', 'Tests made when casting Spells. A [SPELL TEST] is a [D20 TEST] that benefits from your [SPELL LEVEL] and an Attribute that is stated in the context.', 'spell-test",
-        "link": ""
-    },
-    {
-        "name": "MELEE SPELL ATTACK",
-        "description": "'MELEE SPELL ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[4].description, 'melee-spell-attack",
-        "link": ""
-    },
-    {
-        "name": "RANGED SPELL ATTACK",
-        "description": "'RANGED SPELL ATTACK', combatDetailsJson.additionalCombatRules.attack.attackTypes[5].description, 'ranged-spell-attack",
         "link": ""
     },
     {
