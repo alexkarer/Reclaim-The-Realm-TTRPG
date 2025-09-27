@@ -57,8 +57,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - Move Animal Handling into Nature (❌)
 - Rework Lore skills and remove their distinction (❌)
     - possibly create riftlands skill 
-- Add rules for aiding others in skill tests (❌)
-    - probably just give an extra dice
+- Add rules for aiding others in skill tests (✅)
 
 #### Classes
 

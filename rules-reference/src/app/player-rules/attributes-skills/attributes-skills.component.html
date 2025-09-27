@@ -20,4 +20,18 @@
 
 <h4 class="mt-3">Skills</h4>
 
-<span class="text-danger">TODO Skill Tests and how to aid others in them, also mention if skill gains multiple times, change to different class skill</span>
+<app-dynamic-content [content]="'skills_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+<h5 class="mb-0 mt-2">Assigning and Improving Skills</h5>
+
+<app-dynamic-content [content]="'assigning_skills' | resolveTextKey | textProcessor"></app-dynamic-content>
+<br>
+<em class="text-info"><app-dynamic-content [content]="'stacking_class_skills' | resolveTextKey | textProcessor"></app-dynamic-content></em>
+
+<p class="text-danger">Add Lists of Skills</p>
+
+<h5 class="mb-0 mt-2">Skill Tests</h5>
+<app-dynamic-content [content]="'skill_tests' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+<h5 class="mb-0 mt-2">Helping Others</h5>
+<app-dynamic-content [content]="'helping_others' | resolveTextKey | textProcessor"></app-dynamic-content>
