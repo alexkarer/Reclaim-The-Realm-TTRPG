@@ -22,6 +22,7 @@
         "creation_step_determine_your_origin": "Determine your Origin",
         "creation_step_choose_a_class": "Choose a class",
         "creation_step_assign_attributes_skills": "Assign your starting Attributes and Skills",
+        "creation_step_set_character_values": "Set the Statistics and Values of your Character",
         "creation_step_choose_perks_abilities": "Pick your starting Perks and Abilities",
         "creation_step_finish_up_character": "Finish up your Character",
         "creation_step_select_starting_equipment": "Choose your starting equipment",
@@ -69,5 +70,8 @@
         "stacking_class_skills": "If you get the same Skill as a Class Skill from 2 different Sources you can instead pick a different Skill you don't have as a Class Skill already.",
         "skill_tests": "During the game you will be required to make [D20 TEST] where you can add your Skill Rank as well as an Attribute as a bonus to the roll. For example the GM or an Ability might call for a [STR] Athletics [D20 TEST]. Upon which you will roll a d20 and add your [STR] and your Ranks in Athletics to the Result.",
         "helping_others": "If another Person is making a [D20 TEST] you can aid them if they are willing and you are not otherwise Distracted. When doing so the Person you are helping makes their [D20 TEST] as normal and you repeat the same [D20 TEST] they are making. You divide your result by 10 (rounded down) and the Person you are aiding can add it to their Result. It is possible for multiple Persons to aid someone."
+    },
+    "character_values": {
+        
     }
 }
