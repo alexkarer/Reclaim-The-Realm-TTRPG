@@ -66,6 +66,11 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
   - Corrutpion Limit should be changed a bit also with how it interacts with Mutations (❌)
 - Priest: (❌)
  - Simplify Aether Dice notation: AD(=) -> matching AD, AD(!) -> unique AD  (❌)
+ - Think whether to change it to a more flavourful Faith mechanic, where when you perform/show faith you get Dice (❌)
+
+- Barbarian (❌)
+    - new maneuvers: Unspent Rage(When going unconcious can take a turn, costs lot of rage), (Reckless Abandon)  can'T dodge but gain bonuses
+    - Think if Rage can be improved to be more flavourful without being too complicated. (❌)
 
 - Only have Class Perks and fold all other Perks in there and have Perks be part of Classes (❌)
 - Every Class gains the same amount of base skill points (❌)
