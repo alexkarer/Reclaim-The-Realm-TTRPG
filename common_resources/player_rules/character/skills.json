@@ -1,3 +1,92 @@
 [
-    
+    {
+        "name": "Athletics",
+        "textKeyFullDescription": "athletics_full_description",
+        "textKeyShortDescription": "athletics_full_description"
+    },
+    {
+        "name": "Awareness",
+        "textKeyFullDescription": "awareness_full_description",
+        "textKeyShortDescription": "awareness_short_description"
+    },
+    {
+        "name": "Culture",
+        "textKeyFullDescription": "culture_full_description",
+        "textKeyShortDescription": "culture_full_description"
+    },
+    {
+        "name": "Deception",
+        "textKeyFullDescription": "deception_full_description",
+        "textKeyShortDescription": "deception_full_description"
+    },
+    {
+        "name": "Investigation",
+        "textKeyFullDescription": "investigation_full_description",
+        "textKeyShortDescription": "investigation_short_description"
+    },
+    {
+        "name": "Intimidation",
+        "textKeyFullDescription": "intimidation_full_description",
+        "textKeyShortDescription": "intimidation_full_description"
+    },
+    {
+        "name": "Medicine",
+        "textKeyFullDescription": "medicine_full_description",
+        "textKeyShortDescription": "medicine_full_description"
+    },
+    {
+        "name": "Nature",
+        "textKeyFullDescription": "nature_full_description",
+        "textKeyShortDescription": "nature_full_description"
+    },
+    {
+        "name": "Persuasion",
+        "textKeyFullDescription": "persuasion_full_description",
+        "textKeyShortDescription": "persuasion_full_description"
+    },
+    {
+        "name": "Stealth",
+        "textKeyFullDescription": "stealth_full_description",
+        "textKeyShortDescription": "stealth_full_description"
+    },
+    {
+        "name": "Supernatural",
+        "textKeyFullDescription": "supernatural_full_description",
+        "textKeyShortDescription": "supernatural_full_description"
+    },
+    {
+        "name": "Survival",
+        "textKeyFullDescription": "survival_full_description",
+        "textKeyShortDescription": "survival_full_description"
+    },
+    {
+        "name": "Thievery",
+        "textKeyFullDescription": "thievery_full_description",
+        "textKeyShortDescription": "thievery_full_description"
+    },
+    {
+        "name": "Crafting - Smithing",
+        "textKeyFullDescription": "crafting_smithing_full_description",
+        "textKeyShortDescription": "crafting_smithing_full_description"
+    },
+    {
+        "name": "Crafting - Alchemy",
+        "textKeyFullDescription": "crafting_alchemy_full_description",
+        "textKeyShortDescription": "crafting_alchemy_full_description"
+    },
+    {
+        "name": "Crafting - Jewewlry Making",
+        "textKeyFullDescription": "crafting_jewewlry_making_full_description",
+        "textKeyShortDescription": "crafting_jewewlry_making_full_description"
+    },
+    {
+        "name": "Crafting - Tailoring",
+        "textKeyFullDescription": "crafting_tailoring_full_description",
+        "textKeyShortDescription": "crafting_tailoring_full_description"
+    },
+    {
+        "name": "Crafting - Woodworking",
+        "textKeyFullDescription": "crafting_woodworking_full_description",
+        "textKeyShortDescription": "crafting_woodworking_full_description"
+    }
 ]

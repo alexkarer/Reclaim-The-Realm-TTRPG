@@ -1,10 +1,10 @@
 [
-    { "dtNumber": 5, "webkey": "difficulty_threshold_5" },
-    { "dtNumber": 10, "webkey": "difficulty_threshold_10" },
-    { "dtNumber": 15, "webkey": "difficulty_threshold_15" },
-    { "dtNumber": 20, "webkey": "difficulty_threshold_20" },
-    { "dtNumber": 25, "webkey": "difficulty_threshold_25" },
-    { "dtNumber": 30, "webkey": "difficulty_threshold_30" },
-    { "dtNumber": 35, "webkey": "difficulty_threshold_35" },
-    { "dtNumber": 40, "webkey": "difficulty_threshold_40" }
+    { "dtNumber": 5, "textkey": "difficulty_threshold_5" },
+    { "dtNumber": 10, "textkey": "difficulty_threshold_10" },
+    { "dtNumber": 15, "textkey": "difficulty_threshold_15" },
+    { "dtNumber": 20, "textkey": "difficulty_threshold_20" },
+    { "dtNumber": 25, "textkey": "difficulty_threshold_25" },
+    { "dtNumber": 30, "textkey": "difficulty_threshold_30" },
+    { "dtNumber": 35, "textkey": "difficulty_threshold_35" },
+    { "dtNumber": 40, "textkey": "difficulty_threshold_40" }
 ]

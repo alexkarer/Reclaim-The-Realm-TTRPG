@@ -26,9 +26,27 @@
 
 <app-dynamic-content [content]="'assigning_skills' | resolveTextKey | textProcessor"></app-dynamic-content>
 <br>
-<em class="text-info"><app-dynamic-content [content]="'stacking_class_skills' | resolveTextKey | textProcessor"></app-dynamic-content></em>
 
-<p class="text-danger">Add Lists of Skills</p>
+<div class="info-box">
+    <app-dynamic-content [content]="'stacking_class_skills' | resolveTextKey | textProcessor"></app-dynamic-content>
+</div>
+
+<table class="rules-table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>S
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (skill of skills; track $index) {
+            <tr>
+                <td>{{ skill.name }}</td>
+                <td><app-dynamic-content [content]="skill.textKeyFullDescription | resolveTextKey | textProcessor"></app-dynamic-content></td>
+            </tr>
+        }
+    </tbody>
+</table>
 
 <h5 class="mb-0 mt-2">Skill Tests</h5>
 <app-dynamic-content [content]="'skill_tests' | resolveTextKey | textProcessor"></app-dynamic-content>

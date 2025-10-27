@@ -58,6 +58,8 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - Rework Lore skills and remove their distinction (❌)
     - possibly create riftlands skill 
 - Add rules for aiding others in skill tests (✅)
+- remove all references to passive skills (❌)
+- make sure links to all skills are there in the text (❌)
 
 #### Classes
 

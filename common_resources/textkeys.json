@@ -69,7 +69,27 @@
         "assigning_skills": "At the start Every Skill starts at Rank 0. You can increase the Rank of your Skills by spending Skill points of which you have 5 + [INT]/2 (rounded down) for every [LEVEL] your character has. If you spend one Skill Point you can improve the Rank of the Skill by 1.<br>Unless stated otherwise the maximum Rank of your Skills is equal to your [LEVEL]. Each Class also gives you access to Class Skills for each of which the current Rank and Rank Maximum are increased by 2.",
         "stacking_class_skills": "If you get the same Skill as a Class Skill from 2 different Sources you can instead pick a different Skill you don't have as a Class Skill already.",
         "skill_tests": "During the game you will be required to make [D20 TEST] where you can add your Skill Rank as well as an Attribute as a bonus to the roll. For example the GM or an Ability might call for a [STR] Athletics [D20 TEST]. Upon which you will roll a d20 and add your [STR] and your Ranks in Athletics to the Result.",
-        "helping_others": "If another Person is making a [D20 TEST] you can aid them if they are willing and you are not otherwise Distracted. When doing so the Person you are helping makes their [D20 TEST] as normal and you repeat the same [D20 TEST] they are making. You divide your result by 10 (rounded down) and the Person you are aiding can add it to their Result. It is possible for multiple Persons to aid someone."
+        "helping_others": "If another Person is making a [D20 TEST] you can aid them if they are willing and you are not otherwise Distracted. When doing so the Person you are helping makes their [D20 TEST] as normal and you repeat the same [D20 TEST] they are making. You divide your result by 10 (rounded down) and the Person you are aiding can add it to their Result. It is possible for multiple Persons to aid someone.",
+        "athletics_full_description": "Represents your ability to climb, swim, jump and other forms of physical movement and balance.",
+        "awareness_full_description": "Represents your ability to notice threats, spot objects far away and making out details in a distance, Awareness is assumed to take no more than a few seconds.",
+        "awareness_short_description": "Represents your ability to notice threats, spot objects far away and making out details in a distance.",
+        "culture_full_description": "Knowledge about Civilizations, History, Important Figures and Traditions.",
+        "deception_full_description": "Represents your ability to deceive, twist the truth, act as someone else and confuse others with your words and actions.",
+        "investigation_short_description": "The ability to discern details, find hidden meanings, search for secret entrances/treasure, reach conclusions, figure out illusions.",
+        "investigation_full_description": "Investigation is used to discern details, find hidden meanings, search for hidden treasure or secret rooms, reach conclusions based on clues or figure out illusions.",
+        "intimidation_full_description": "Your ability to frighten others and make them act on your will.",
+        "medicine_full_description": "Understanding of Medicine, the Anatomy of most living beings and knowledge of herbs, minerals and other substances with healing properties.",
+        "nature_full_description": "Knowledge about Beasts, Monsters, Plants and certain exotic creatures.",
+        "persuasion_full_description": "Your ability to sway others for your cause or convince them to aid you in your endeavours or barter with them.",
+        "stealth_full_description": "Your ability to effectively hide or move silently as well to conceal objects.",
+        "supernatural_full_description": "Knowledge about creatures, secrets sects, cults and other groups related to the cosmic and elemental planes.",
+        "survival_full_description": "Your ability to navigate the Wilderness, scavenge for food as well as your general sense of direction.",
+        "thievery_full_description": "Thievery is used where fast and precise motions are required. It also allows you to lock pick locks and disarm traps with Thieves Tools.",
+        "crafting_smithing_full_description": "The ability for forging or shaping metal objects and Equipment. Can be used for crafting most weapons or Armour.",
+        "crafting_alchemy_full_description": "Knowledge about alchemy and chemestry that can be used to brew potions or create acids or poisons.",
+        "crafting_jewewlry_making_full_description": "Expertise in creating rings, necklaces and other forms of Jewewlry as well as manipulating and analysing gems and crystals.",
+        "crafting_tailoring_full_description": "Sowing cloth as well as work with leather to create various items of clothing including boots, cloak, hats and others.",
+        "crafting_woodworking_full_description": "Proficiency with tools to create objects mostly made out of wood like furniture, shields or certain weapons like spears, bows, crossbows, or arrows/bolts."
     },
     "character_values": {
         

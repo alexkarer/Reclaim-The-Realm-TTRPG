@@ -63,6 +63,19 @@ h4 {
     max-width: 94vw;
 }
 
+.info-box {
+    @extend .text-info;
+    @extend .bg-info-subtle;
+    @extend .border-start;
+    @extend .border-5;
+    @extend .border-info;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
 // tablet size
 @media (min-width: map.get($grid-breakpoints, "md")) {
     .rules-table-50 {

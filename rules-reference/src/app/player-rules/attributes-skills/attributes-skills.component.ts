@@ -4,6 +4,7 @@ import { TextProcessorPipe } from '../../shared/text-utils/text-processor';
 import { DynamicContentComponent } from '../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 
 import attributesJson from "../../../../../common_resources/player_rules/character/attributes.json";
+import skillsJson from "../../../../../common_resources/player_rules/character/skills.json";
 
 @Component({
   selector: 'app-attributes-skills',
@@ -14,5 +15,6 @@ import attributesJson from "../../../../../common_resources/player_rules/charact
 export class AttributesSkillsComponent {
 
   public readonly attributes = attributesJson;
+  public readonly skills = skillsJson;
 
 }
