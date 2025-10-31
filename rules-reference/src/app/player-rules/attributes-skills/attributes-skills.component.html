@@ -34,7 +34,7 @@
 <table class="rules-table">
     <thead>
         <tr>
-            <th scope="col">Name</th>S
+            <th scope="col">Name</th>
             <th scope="col">Description</th>
         </tr>
     </thead>
@@ -47,6 +47,11 @@
         }
     </tbody>
 </table>
+
+<div class="info-box">
+    <h6>Passive Skills</h6>
+    <app-dynamic-content [content]="'passive_skills' | resolveTextKey | textProcessor"></app-dynamic-content>
+</div>
 
 <h5 class="mb-0 mt-2">Skill Tests</h5>
 <app-dynamic-content [content]="'skill_tests' | resolveTextKey | textProcessor"></app-dynamic-content>

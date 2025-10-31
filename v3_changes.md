@@ -54,7 +54,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 #### Skills
 - Since skill perks are removed consider adding milestone benefits back (❌)
     - Should be no more than 2 per Skill (6/12) but only at the end and check if they are really needed
-- Move Animal Handling into Nature (❌)
+- Move Animal Handling into Nature (✅)
 - Rework Lore skills and remove their distinction (❌)
     - possibly create riftlands skill 
 - Add rules for aiding others in skill tests (✅)
@@ -185,6 +185,9 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 
 ### Other
 
+- Of a lore and game perspective make sure to emphasis the need to grow powerful as the world is so hostile that everyone will otherwise perish (❌)
+    - which also means that the individuals who get to powerful gain other flaws which stops them from saving the world (❌)
+- Make items collapsable/hidden for easier navigation (❌)
 - Rework keyword processor logic to use the new json (❌)
 - when referencing abilities, have a small preview of the ability (❌)
 - Cosmic Mutations should maybe be fleshed out more. (❌)

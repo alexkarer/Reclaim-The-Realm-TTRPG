@@ -70,6 +70,7 @@
         "stacking_class_skills": "If you get the same Skill as a Class Skill from 2 different Sources you can instead pick a different Skill you don't have as a Class Skill already.",
         "skill_tests": "During the game you will be required to make [D20 TEST] where you can add your Skill Rank as well as an Attribute as a bonus to the roll. For example the GM or an Ability might call for a [STR] Athletics [D20 TEST]. Upon which you will roll a d20 and add your [STR] and your Ranks in Athletics to the Result.",
         "helping_others": "If another Person is making a [D20 TEST] you can aid them if they are willing and you are not otherwise Distracted. When doing so the Person you are helping makes their [D20 TEST] as normal and you repeat the same [D20 TEST] they are making. You divide your result by 10 (rounded down) and the Person you are aiding can add it to their Result. It is possible for multiple Persons to aid someone.",
+        
         "athletics_full_description": "Represents your ability to climb, swim, jump and other forms of physical movement and balance.",
         "awareness_full_description": "Represents your ability to notice threats, spot objects far away and making out details in a distance, Awareness is assumed to take no more than a few seconds.",
         "awareness_short_description": "Represents your ability to notice threats, spot objects far away and making out details in a distance.",
@@ -79,7 +80,7 @@
         "investigation_full_description": "Investigation is used to discern details, find hidden meanings, search for hidden treasure or secret rooms, reach conclusions based on clues or figure out illusions.",
         "intimidation_full_description": "Your ability to frighten others and make them act on your will.",
         "medicine_full_description": "Understanding of Medicine, the Anatomy of most living beings and knowledge of herbs, minerals and other substances with healing properties.",
-        "nature_full_description": "Knowledge about Beasts, Monsters, Plants and certain exotic creatures.",
+        "nature_full_description": "Knowledge about Beasts, Monsters, Plants and certain exotic creatures and the ability to interact with them.",
         "persuasion_full_description": "Your ability to sway others for your cause or convince them to aid you in your endeavours or barter with them.",
         "stealth_full_description": "Your ability to effectively hide or move silently as well to conceal objects.",
         "supernatural_full_description": "Knowledge about creatures, secrets sects, cults and other groups related to the cosmic and elemental planes.",
@@ -89,7 +90,9 @@
         "crafting_alchemy_full_description": "Knowledge about alchemy and chemestry that can be used to brew potions or create acids or poisons.",
         "crafting_jewewlry_making_full_description": "Expertise in creating rings, necklaces and other forms of Jewewlry as well as manipulating and analysing gems and crystals.",
         "crafting_tailoring_full_description": "Sowing cloth as well as work with leather to create various items of clothing including boots, cloak, hats and others.",
-        "crafting_woodworking_full_description": "Proficiency with tools to create objects mostly made out of wood like furniture, shields or certain weapons like spears, bows, crossbows, or arrows/bolts."
+        "crafting_woodworking_full_description": "Proficiency with tools to create objects mostly made out of wood like furniture, shields or certain weapons like spears, bows, crossbows, or arrows/bolts.",
+        
+        "passive_skills": "Certain skills might also be used by the GM in a passive way. Instead of calling for a relevant [D20 TEST] with the Skill the GM might just ask if a player has a sufficiently high enough Skill rank in the relevant Skill or the highest out of all the players. Awarness and Investigation are particularly useful for this."
     },
     "character_values": {
         
