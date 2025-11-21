@@ -41,6 +41,8 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 
 - Add fate mechanic, potential options: reroll, gain extra 2 AP during turn, reduce damage (❌)
     - Potentially have a limit of fate that can be used per extended long rest
+    - Non Spellcasting Characters should have more fate as they are less relient on the cosmic plane.
+    - Warlock should not have any Fate at all but a substitude ability where they can essentially gate fate abilities/bonus by gaining corruption.
 - Make Origin a bit more interactive, let the Players have a bit more agency or empower them to do something with it. (❌)
     - Each character should have a goal upon completion they get extra Fate (❌)
 - Try creating some sort of party/combo mechanic if possible or maybe general party upgrades like a synergy stat (❌)
@@ -69,6 +71,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - Priest: (❌)
  - Simplify Aether Dice notation: AD(=) -> matching AD, AD(!) -> unique AD  (❌)
  - Think whether to change it to a more flavourful Faith mechanic, where when you perform/show faith you get Dice (❌)
+ - Priest should also interact the most with the Fate mechanic.
 
 - Barbarian (❌)
     - new maneuvers: Unspent Rage(When going unconcious can take a turn, costs lot of rage), (Reckless Abandon)  can'T dodge but gain bonuses
@@ -122,6 +125,8 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 
 ### Equipment
 
+- Rebalance Weapons to have Maneuvers (❌)
+    - More Maneuvers should be unlocked with Martial Level so spellcasters have not immediate access to them.
 - Don't roll randomly for starting equipment, also figure out what good prices should be and starting gold/equipment (❌)
 - Medi-kit requires at least 3 Ranks in Medicine to use abilities (❌)
 - Shields should just give extra physical damage resistance (❌)
