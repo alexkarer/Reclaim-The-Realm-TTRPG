@@ -1,0 +1,50 @@
+<div class="container-fluid py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10 col-xl-8">
+      <h1>3. Classes</h1>
+
+      <div class="my-4">
+        <app-dynamic-content [content]="'class_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+        <h5>Class Core Values</h5>
+        <ol>
+            <li>
+                <span class="fw-bold">
+                    <app-dynamic-content [content]="'[HP] per LEVEL: '| textProcessor"></app-dynamic-content>
+                </span>
+                <app-dynamic-content [content]="'class_hp_per_level' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </li>
+            <li>
+                <span class="fw-bold">
+                    <app-dynamic-content [content]="'[MARTIAL LEVEL] Progression: '| textProcessor"></app-dynamic-content>
+                </span>
+                <app-dynamic-content [content]="'class_martial_level_progression' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </li>
+            <li>
+                <span class="fw-bold">
+                    <app-dynamic-content [content]="'[SPELL LEVEL] Progression: '| textProcessor"></app-dynamic-content>
+                </span>
+                <app-dynamic-content [content]="'class_spell_level_progression' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </li>
+            <li>
+                <span class="fw-bold">Class Defenses: </span>
+                <app-dynamic-content [content]="'class_defenses' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </li>
+            <li>
+                <span class="fw-bold">Class Attributes: </span>
+                <app-dynamic-content [content]="'class_class_attributes' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </li>
+            <li>
+                <span class="fw-bold">Class Skills: </span>
+                <app-dynamic-content [content]="'class_skills' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </li>
+        </ol>
+
+        <h5>Class Perks</h5>
+        <app-dynamic-content [content]="'class_perks_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+      </div>
+
+      <app-page-navigation [currentPageId]="pageId"></app-page-navigation>
+    </div>
+  </div>
+</div>

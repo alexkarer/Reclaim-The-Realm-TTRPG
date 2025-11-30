@@ -140,9 +140,12 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 ### Combat Mechanics
 
 - Try out different Initiative mechanics, mainly copy a version of the shadow of the demon lord system (❌)
-    - essentially, monsters always go first, players after unless they use a special reaction (❌)
+    - essentially, monsters always go first, players can go first if they use a 1 AP Ability "Seize the Initiative"
     - also requires new reactions. (❌)
     - also requires all turn based ability to change so that they last until end of a round. (❌)
+    - Also all Status Efffects trigger at the start of the round (❌).
+    - Suprised Creatures: can't use Reaction Abilities and their AP is reduced by 1. Also can't use Seize the Initiative
+- Rework Reactions (❌), these are now special Abilities with a special Tag. (❌)
 - Remove cosmic damage type (❌)
 - Deaths Door should have more tension (❌)
 - Rework all circumstancial bonuses so it works with ther not being any attacks (only give DODGE bonus) (❌)

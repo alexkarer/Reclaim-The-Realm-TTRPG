@@ -1,0 +1,28 @@
+<div class="container-fluid py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10 col-xl-8">
+      <h1>1. Species</h1>
+      <app-dynamic-content [content]="'species_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+      <div class="d-flex flex-column my-4">
+        @for (species of speciesList; track $index) {
+          <div class="m-2 p-2 border bg-body-tertiary">
+              <h4>{{ species.name }}</h4>
+              <p>{{ species.description | resolveTextKey }}</p>
+              <span><span class="fw-bold">Size: </span>{{ species.size }}</span>
+              <span><span class="ms-3 fw-bold">Height: </span>{{ species.height }}</span>
+              <span><span class="ms-3 fw-bold">Weight: </span>{{ species.weight }}</span>
+              <span><span class="ms-3 fw-bold"><app-dynamic-content
+                          [content]="'Starting [HP] Bonus: ' | textProcessor"></app-dynamic-content></span>{{
+                  species.startingHPBonus }}</span>
+              <br>
+              <h5>Trait:</h5>
+              <span class="text-danger">TODO</span>
+          </div>
+        }
+      </div>
+
+      <app-page-navigation [currentPageId]="pageId"></app-page-navigation>
+    </div>
+  </div>
+</div>

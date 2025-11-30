@@ -1,0 +1,18 @@
+<div class="container-fluid py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10 col-xl-8">
+      <h1>Creating a Character</h1>
+      <app-dynamic-content [content]="'creation_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+      <ol class="my-4">
+        @for (step of characterCreationSteps; track $index) {
+          <li>
+            <app-dynamic-content [content]="step | resolveTextKey | textProcessor"></app-dynamic-content>
+          </li>
+        }
+      </ol>
+
+      <app-page-navigation [currentPageId]="pageId"></app-page-navigation>
+    </div>
+  </div>
+</div>
