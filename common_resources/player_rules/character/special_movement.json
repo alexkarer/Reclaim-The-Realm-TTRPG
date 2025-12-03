@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Swim (X)",
+        "textKeyDescription": "special_movement_swim"
+    },
+    {
+        "name": "Climb (X)",
+        "textKeyDescription": "special_movement_climb"
+    },
+    {
+        "name": "Burrow (X)",
+        "textKeyDescription": "special_movement_burrow"
+    },
+    {
+        "name": "Fly (X)",
+        "textKeyDescription": "special_movement_fly"
+    },
+    {
+        "name": "Hover (X)",
+        "textKeyDescription": "special_movement_hover"
+    }
+]

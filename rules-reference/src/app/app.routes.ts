@@ -19,7 +19,7 @@ import { EquipmentPageComponent } from './player-rules/pages/equipment-page/equi
 import { PartyOriginPageComponent } from './player-rules/pages/party-origin-page/party-origin-page.component';
 import { GettingStrongerPageComponent } from './player-rules/pages/getting-stronger-page/getting-stronger-page.component';
 import { ExhaustionRestingPageComponent } from './player-rules/pages/exhaustion-resting-page/exhaustion-resting-page.component';
-import { SpellsPageComponent } from './player-rules/pages/spells-page/spells-page.component';
+import { SpellsPageComponent } from './player-rules/pages/casting-spells-page/casting-spells-page.component';
 
 export const routes: Routes = [
     {
@@ -102,7 +102,7 @@ export const routes: Routes = [
                 title: 'Exhaustion and Resting - Player Rules'
             },
             {
-                path: 'spells',
+                path: 'casting-spells',
                 component: SpellsPageComponent,
                 title: 'Spells - Player Rules'
             }

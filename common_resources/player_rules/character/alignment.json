@@ -1,0 +1,10 @@
+{
+    "goodAlignment": { "name": "Good", "ideas": [ "Altruism", "Respect for life" ] },
+    "evilAlignment": { "name": "Evil", "ideas": [ "Greed", "Selfishness", "Sadism" ] },
+    "moralNeutralAlignment": { "name": "Moral Neutral", "ideas": [] },
+    "lawfulAlignment": { "name": "Lawful", "ideas": [ "Equality", "Honor", "Dogmatism" ] },
+    "chaoticAlignment": { "name": "Chaotic", "ideas": [ "Pragmatism", "Freedom" ] },
+    "idiologicalNeutralAlignment": { "name": "Idiological Neutral", "ideas": [] },
+    "linkText": "easydamus.com - Alignment",
+    "link": "https://easydamus.com/alignment.html"
+}

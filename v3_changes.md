@@ -57,10 +57,10 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - Since skill perks are removed consider adding milestone benefits back (❌)
     - Should be no more than 2 per Skill (6/12) but only at the end and check if they are really needed
 - Move Animal Handling into Nature (✅)
-- Rework Lore skills and remove their distinction (❌)
-    - possibly create riftlands skill 
+- Rework Lore skills and remove their distinction (✅)
+    - possibly create riftlands skill ❌)
 - Add rules for aiding others in skill tests (✅)
-- remove all references to passive skills (❌)
+- remove all references to passive skills (✅)
 - make sure links to all skills are there in the text (❌)
 
 #### Classes
@@ -71,7 +71,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - Priest: (❌)
  - Simplify Aether Dice notation: AD(=) -> matching AD, AD(!) -> unique AD  (❌)
  - Think whether to change it to a more flavourful Faith mechanic, where when you perform/show faith you get Dice (❌)
- - Priest should also interact the most with the Fate mechanic.
+ - Priest should also interact the most with the Fate mechanic. (❌)
 
 - Barbarian (❌)
     - new maneuvers: Unspent Rage(When going unconcious can take a turn, costs lot of rage), (Reckless Abandon)  can'T dodge but gain bonuses
@@ -126,9 +126,10 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 ### Equipment
 
 - Rebalance Weapons to have Maneuvers (❌)
-    - More Maneuvers should be unlocked with Martial Level so spellcasters have not immediate access to them.
+    - More Maneuvers should be unlocked with Martial Level so spellcasters have not immediate access to them. 
 - Don't roll randomly for starting equipment, also figure out what good prices should be and starting gold/equipment (❌)
 - Medi-kit requires at least 3 Ranks in Medicine to use abilities (❌)
+    - split up into multiple abilities that you can access at higher level.
 - Shields should just give extra physical damage resistance (❌)
 - Each Item should have listed what higher item tiers give you (❌)
 - maneuvrepenalty should only nerf dodge (❌)

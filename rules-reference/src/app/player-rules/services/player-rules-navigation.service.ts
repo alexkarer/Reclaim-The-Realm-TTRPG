@@ -26,7 +26,7 @@ export class PlayerRulesNavigationService {
     { id: 'party-origin', title: 'Optional: Party Origin', route: '/player-rules/party-origin', parent: 'character-creation', order: 10 },
     { id: 'getting-stronger', title: 'Getting Stronger', route: '/player-rules/getting-stronger', order: 11 },
     { id: 'exhaustion-resting', title: 'Exhaustion and Resting', route: '/player-rules/exhaustion-resting', order: 12 },
-    { id: 'spells', title: 'Spells', route: '/player-rules/spells', order: 13 }
+    { id: 'casting-spells', title: 'Casting Spells', route: '/player-rules/casting-spells', order: 13 }
   ];
 
   constructor() { }

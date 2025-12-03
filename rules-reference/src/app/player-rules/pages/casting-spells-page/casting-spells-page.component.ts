@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { PageNavigationComponent } from '../../shared/page-navigation/page-navigation.component';
 
 @Component({
-  selector: 'app-spells-page',
+  selector: 'app-casting-spells-page',
   imports: [PageNavigationComponent],
-  templateUrl: './spells-page.component.html',
-  styleUrl: './spells-page.component.scss'
+  templateUrl: './casting-spells-page.component.html',
+  styleUrl: './casting-spells-page.component.scss'
 })
 export class SpellsPageComponent {
-  public readonly pageId = 'spells';
+  public readonly pageId = 'casting-spells';
 }
