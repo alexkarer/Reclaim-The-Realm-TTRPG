@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, input } from '@angular/core';
 import { KeywordComponent } from '../keyword/keyword.component';
 import { ContentPart } from '../text-utils';
@@ -6,7 +6,7 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'app-dynamic-content',
-    imports: [CommonModule, KeywordComponent, NgbTooltipModule],
+    imports: [KeywordComponent, NgbTooltipModule],
     templateUrl: './dynamic-content.component.html',
     styleUrl: './dynamic-content.component.scss'
 })
