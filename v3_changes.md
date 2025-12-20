@@ -77,6 +77,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
     - new maneuvers: Unspent Rage(When going unconcious can take a turn, costs lot of rage), (Reckless Abandon)  can'T dodge but gain bonuses
     - Think if Rage can be improved to be more flavourful without being too complicated. (❌)
 
+- Possibly havbe every class have the same number of class skills per level (❌)
 - Only have Class Perks and fold all other Perks in there and have Perks be part of Classes (❌)
 - Every Class gains the same amount of base skill points (❌)
 - Remove Perk point system, instead you get maybe 3 Perks at first level  (❌)

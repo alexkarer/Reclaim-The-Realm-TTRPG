@@ -1,0 +1,48 @@
+<!-- Mobile Offcanvas TOC -->
+<ng-template #mobileContent let-offcanvas>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Table of Contents</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss()"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <app-table-of-contents-sidebar></app-table-of-contents-sidebar>
+  </div>
+</ng-template>
+
+<div class="player-rules-layout d-flex">
+  <!-- Desktop Sidebar - Hidden on mobile/tablet -->
+  <aside class="sidebar d-none d-lg-block" [class.sidebar-hidden]="!sidebarVisible">
+    <div class="sidebar-content">
+      <app-table-of-contents-sidebar></app-table-of-contents-sidebar>
+    </div>
+  </aside>
+
+  <main class="content-area flex-grow-1">
+    <!-- Mobile Toggle Button -->
+    <div class="mobile-toc-toggle d-lg-none">
+      <button class="btn btn-outline-primary" (click)="openMobileSidebar(mobileContent)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+        <span class="ms-2">Table of Contents</span>
+      </button>
+    </div>
+
+    <!-- Desktop Toggle Button -->
+    <div class="desktop-toc-toggle d-none d-lg-block" [class.sidebar-hidden]="!sidebarVisible">
+      <button class="btn btn-sm btn-outline-secondary" (click)="toggleSidebar()" [attr.aria-label]="sidebarVisible ? 'Hide sidebar' : 'Show sidebar'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16">
+          @if (sidebarVisible) {
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+          } @else {
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+          }
+        </svg>
+      </button>
+    </div>
+
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { PlayerRulesNavigationService, PlayerRulePage } from '../../services/player-rules-navigation.service';
 
 @Component({
-  selector: 'app-table-of-contents',
-  imports: [RouterLink],
-  templateUrl: './table-of-contents.component.html',
-  styleUrl: './table-of-contents.component.scss'
+  selector: 'app-table-of-contents-sidebar',
+  imports: [RouterLink, RouterLinkActive],
+  templateUrl: './table-of-contents-sidebar.component.html',
+  styleUrl: './table-of-contents-sidebar.component.scss'
 })
-export class TableOfContentsComponent implements OnInit {
+export class TableOfContentsSidebarComponent implements OnInit {
   topLevelPages: PlayerRulePage[] = [];
   pageChildren: Map<string, PlayerRulePage[]> = new Map();
 

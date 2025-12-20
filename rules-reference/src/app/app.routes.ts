@@ -6,7 +6,7 @@ import { EquipmentSearchComponent } from './equipment-search/equipment-search.co
 import { ClassesOverviewComponent } from './classes-overview/classes-overview.component';
 import { BasicRulesComponent } from './basic-rules/basic-rules.component';
 import { StartPageComponent } from './start-page/start-page.component';
-import { TableOfContentsComponent } from './player-rules/pages/table-of-contents/table-of-contents.component';
+import { PlayerRulesLayoutComponent } from './player-rules/player-rules-layout/player-rules-layout.component';
 import { CharacterCreationPageComponent } from './player-rules/pages/character-creation-page/character-creation-page.component';
 import { SpeciesPageComponent } from './player-rules/pages/species-page/species-page.component';
 import { CharacterOriginPageComponent } from './player-rules/pages/character-origin-page/character-origin-page.component';
@@ -34,12 +34,13 @@ export const routes: Routes = [
     },
     {
         path: 'player-rules',
+        component: PlayerRulesLayoutComponent,
         title: 'Reclaim the Realm - Player Rules',
         children: [
             {
                 path: '',
-                component: TableOfContentsComponent,
-                title: 'Reclaim the Realm - Player Rules'
+                redirectTo: 'character-creation',
+                pathMatch: 'full'
             },
             {
                 path: 'character-creation',
@@ -104,7 +105,7 @@ export const routes: Routes = [
             {
                 path: 'casting-spells',
                 component: SpellsPageComponent,
-                title: 'Spells - Player Rules'
+                title: 'Casting Spells - Player Rules'
             }
         ]
     },
