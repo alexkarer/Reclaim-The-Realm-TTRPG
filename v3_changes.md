@@ -92,7 +92,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - Possibly havbe every class have the same number of class skills per level (❌)
 - Only have Class Perks and fold all other Perks in there and have Perks be part of Classes (❌)
 - Every Class gains the same amount of base skill points (❌)
-- Remove Perk point system, instead you get maybe 3 Perks at first level  (❌)
+- See if perk point system needs to be kept (probably)  (❌)
 
 ### NPCs
 
@@ -117,7 +117,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - Each Ability should have their own crit effect.
 
 
-#### Martial Maneuvers
+#### Martial Maneuvers (Techniques)
 
 - rename Martial Maneuvers to Techniques as there are no more Class Techniques (❌)
 - Incoperate all Weapon MAneuvers in Weapons (❌)
@@ -224,3 +224,4 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - after x rounds should cost stamina for players and if no stamina, either reduce speed or take exhaustion
     - there should be a win condition for the players after X rounds (maybe based on level of enemy)
 - Clear TODO lists (❌)
+ 

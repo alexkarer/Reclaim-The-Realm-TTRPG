@@ -1,7 +1,39 @@
 <h1>Getting Stronger</h1>
 
 <div class="my-4">
-  <p>Content coming soon</p>
+  <div>
+    <app-dynamic-content [content]="'level_up_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <ul>
+      @for (levelUpBonus of progression.levelUpBonuses; track $index) {
+        <li>
+          <app-dynamic-content [content]="levelUpBonus | resolveTextKey | textProcessor"></app-dynamic-content>
+        </li>
+      }
+    </ul>
+     <app-dynamic-content [content]="'after_level_12' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <div class="d-flex justify-content-center">
+        <table class="rules-table-75" style="text-align: center">
+            <thead>
+                <tr>
+                    <th scope="col"><app-dynamic-content [content]="'[LEVEL]' | textProcessor"></app-dynamic-content></th>
+                    <th scope="col"><app-dynamic-content [content]="'[XP]' | textProcessor"></app-dynamic-content></th>
+                    <th scope="col"><app-dynamic-content [content]="'[AP]' | textProcessor"></app-dynamic-content></th>
+                    <th scope="col">Attribute Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (lrab of progression.levelRequirementsAndBonuses; track $index) {
+                    <tr>
+                        <td>{{ lrab.level }}</td>
+                        <td>{{ lrab.xp }}</td>
+                        <td>{{ lrab.ap }}</td>
+                        <td>{{ lrab.attributeLimit }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
 </div>
 
 <app-page-navigation [currentPageId]="pageId"></app-page-navigation>

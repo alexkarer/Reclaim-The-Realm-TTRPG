@@ -1,0 +1,82 @@
+{
+    "levelUpBonuses": [
+        "level_up_level_increase_and_dependent_values",
+        "level_up_table",
+        "level_up_gain_2_attribute_points",
+        "level_up_gain_2_perk_points"
+    ],
+    "levelRequirementsAndBonuses": [
+        {
+            "level": 1,
+            "xp": 0,
+            "ap": 3,
+            "attributeLimit": 3
+        },
+        {
+            "level": 2,
+            "xp": 100,
+            "ap": 3,
+            "attributeLimit": 3
+        },
+        {
+            "level": 3,
+            "xp": 400,
+            "ap": 3,
+            "attributeLimit": 4
+        },
+        {
+            "level": 4,
+            "xp": 1300,
+            "ap": 4,
+            "attributeLimit": 4
+        },
+        {
+            "level": 5,
+            "xp": 3100,
+            "ap": 4,
+            "attributeLimit": 5
+        },
+        {
+            "level": 6,
+            "xp": 6500,
+            "ap": 4,
+            "attributeLimit": 5
+        },
+        {
+            "level": 7,
+            "xp": 14000,
+            "ap": 4,
+            "attributeLimit": 6
+        },
+        {
+            "level": 8,
+            "xp": 30000,
+            "ap": 5,
+            "attributeLimit": 6
+        },
+        {
+            "level": 9,
+            "xp": 50000,
+            "ap": 5,
+            "attributeLimit": 7
+        },
+        {
+            "level": 10,
+            "xp": 80000,
+            "ap": 5,
+            "attributeLimit": 7
+        },
+        {
+            "level": 11,
+            "xp": 130000,
+            "ap": 5,
+            "attributeLimit": 8
+        },
+        {
+            "level": 12,
+            "xp": 200000,
+            "ap": 6,
+            "attributeLimit": 8
+        }
+    ]
+}

@@ -134,5 +134,16 @@
         "special_movement_fly": "Creatures with Fly speed are able to soar through the air, They need to at least spend 1 [MP] each turn to move in a direction or to hover in the air to prevent falling down. If they are falling they can stop their falling by spending 4 [MP] . Additionally if a flying creature is knocked [PRONE] they immediatly drop 5 meters and only stay [PRONE] if they hit the ground.",
         "special_movement_hover": "Creatures with Hover speed can also fly through the air but are a lot more flexible and don't have to spend [MP] to stay in the air and are not affected by being knocked [PRONE].",
         "size_description": "Most humanoids are medium [SIZE] , however certain species have different ones and certain effects might change your [SIZE] . Changing your [SIZE] affects some of your physical characteristics"
+    },
+    "perks_and_abilities": {
+        "perks_description": "Perks are improvements that make your character better in various ways. Your Character starts with 4 Perk Points they can choose to spend on various Perks. Any Perk can be choosen as long as the Character meets all the requirements of the Perk and has enough Perk Points."
+    },
+    "character_progression": {
+        "level_up_description": "After you meet the required [XP] your [LEVEL] increases. When this happens you gain the following benefits:",
+        "level_up_level_increase_and_dependent_values": "Your [LEVEL] increases which means all other values dependent on your [LEVEL] increase as well.",
+        "level_up_table": "Based on the Table below your [AP] or Attribute Limit might increase as well.",
+        "level_up_gain_2_attribute_points": "You gain 2 Attribute Points you can increase your Attributes with.",
+        "level_up_gain_2_perk_points": "You gain 2 Perk Points to select new Perks.",
+        "after_level_12": "After you have reached [LEVEL] 12 for every 30 000 [XP] past [LEVEL] 12, you gain an additional Attribute Point and Perk Point. However, your [LEVEL] does not increase."
     }
 }
