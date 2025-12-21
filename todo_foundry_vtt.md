@@ -113,6 +113,7 @@ Separate Type that is bascically like NPCS but roll everything
 - Overview Tab: change from bonus in save to passive values
 - Description Tab: HTML Field that shows lore and stuff
 - Implement Archetypes.
+- Have dedicated place to show triggered abilities as well as Cooldowns visible to players.
 
 ## Items
 

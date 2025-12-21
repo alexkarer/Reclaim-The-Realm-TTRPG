@@ -8,6 +8,7 @@ import martialDamageJson from '../../../../../../common_resources/player_rules/c
 import specialMovementJson from '../../../../../../common_resources/player_rules/character/special_movement.json';
 import sizesJson from '../../../../../../common_resources/player_rules/character/sizes.json';
 import alignmentJson from '../../../../../../common_resources/player_rules/character/alignment.json';
+import fateJson from '../../../../../../common_resources/player_rules/character/fate.json';
 
 @Component({
   selector: 'app-character-values-page',
@@ -26,4 +27,5 @@ export class CharacterValuesPageComponent {
   public readonly specialMovementTypes = specialMovementJson;
   public readonly sizes = sizesJson;
   public readonly alignment = alignmentJson;
+  public readonly fate = fateJson;
 }

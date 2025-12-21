@@ -1,0 +1,20 @@
+{
+    "fateUseages": [
+        {
+            "cost": "1 Fate Point",
+            "description_textKey": "fate_usage_reroll"
+        },
+        {
+            "cost": "1 Fate Point",
+            "description_textKey": "fate_usage_extra_ap"
+        },
+        {
+            "cost": "1 Fate Point",
+            "description_textKey": "fate_usage_reduce_damage"
+        },
+        {
+            "cost": "2 Fate Points",
+            "description_textKey": "fate_usage_nat_20"
+        }
+    ]
+}

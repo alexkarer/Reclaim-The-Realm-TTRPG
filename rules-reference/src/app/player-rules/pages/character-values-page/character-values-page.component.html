@@ -1,250 +1,277 @@
-<div class="container-fluid py-4">
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-10 col-xl-8">
-      <h1>5. Set Character Values</h1>
+<h1>5. Set Character Values</h1>
 
-      <div class="my-4">
-        <h4>Core Values</h4>
-        <div>
-            <div class="p-2 border bg-body-tertiary">
-                <h5 class="mb-0">Level</h5>
-                <p class="header-subscript">Keyword: LEVEL</p>
-                <app-dynamic-content [content]="'level_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+<div class="my-4">
+    <h4>Core Values</h4>
+    <div>
+        <h5 class="mb-0">Level</h5>
+        <p class="header-subscript">Keyword: LEVEL</p>
+        <app-dynamic-content [content]="'level_description' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-                <h6 class="mb-0 mt-2">Martial Level</h6>
+        <div class="row mt-3 mb-2">
+            <div class="col mx-3 p-2 border bg-body-tertiary">
+                <h6 class="mb-0 mt-0">Martial Level</h6>
                 <p class="header-subscript">Keyword: MARTIAL LEVEL</p>
-                <app-dynamic-content [content]="'martial_level_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-
-                <h6 class="mb-0 mt-2">Spell Level</h6>
+                <app-dynamic-content
+                    [content]="'martial_level_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </div>
+            <div class="col mx-3 p-2 border bg-body-tertiary">
+                <h6 class="mb-0 mt-0">Spell Level</h6>
                 <p class="header-subscript">Keyword: SPELL LEVEL</p>
-                <app-dynamic-content [content]="'spell_level_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-            </div>
-            <div class="p-2 border bg-body-tertiary mt-3">
-                <h5 class="mb-0">Experience Points</h5>
-                <p class="header-subscript">Keyword: XP</p>
-                <app-dynamic-content [content]="'xp_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-            </div>
-            <div class="p-2 border bg-body-tertiary mt-3">
-                <h5 class="mb-0">Action Points</h5>
-                <p class="header-subscript">Keyword: AP</p>
-                <app-dynamic-content [content]="'ap_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-            </div>
-            <div class="p-2 border bg-body-tertiary mt-3">
-                <h5 class="mb-0">Movement Points</h5>
-                <p class="header-subscript">Keyword: MP</p>
-                <app-dynamic-content [content]="'mp_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-            </div>
-            <div class="p-2 border bg-body-tertiary mt-3">
-                <h5 class="mb-0">Martial Damage</h5>
-                <p class="header-subscript">Keyword: MARTIAL DAMAGE</p>
-                <app-dynamic-content [content]="'martial_damage_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                <ul>
-                    <li>
-                        <span class="fw-bold">Light damage: </span>
-                        <app-dynamic-content [content]="'light_damage_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                    </li>
-                    <li>
-                        <span class="fw-bold">Medium damage: </span>
-                        <app-dynamic-content [content]="'medium_damage_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                    </li>
-                    <li>
-                        <span class="fw-bold">Heavy damage: </span>
-                        <app-dynamic-content [content]="'heavy_damage_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                    </li>
-                </ul>
-            </div>
-            <div class="mt-3 mx-3 d-flex justify-content-center">
-                <table class="rules-table">
-                    <thead>
-                        <tr>
-                            <th scope="col"><app-dynamic-content [content]="'[STR]' | textProcessor"></app-dynamic-content></th>
-                            <th scope="col">Light Damage</th>
-                            <th scope="col">Medium Damage</th>
-                            <th scope="col">Heavy Damage</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @for (martialDamage of martialDamageTable; track $index) {
-                            <tr>
-                                <td>{{ martialDamage.str }}</td>
-                                <td>{{ martialDamage.light }}</td>
-                                <td>{{ martialDamage.medium }}</td>
-                                <td>{{ martialDamage.heavy }}</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
+                <app-dynamic-content
+                    [content]="'spell_level_description' | resolveTextKey | textProcessor"></app-dynamic-content>
             </div>
         </div>
 
-        <h4 class="mt-3">Resources</h4>
-        <div class="px-3 row g-5">
-            <div class="col-6">
-                <div class="p-2 border bg-body-tertiary mt-3">
-                    <h5 class="mb-0">HP</h5>
-                    <p class="header-subscript">Keyword: HP</p>
-                    <app-dynamic-content [content]="'hp_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                    <h6 class="mb-0 mt-1">Dropping to 0 HP:</h6>
-                    <app-dynamic-content [content]="'dropping_to_0_hp_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                </div>
+        <h5 class="mb-0 mt-3">Experience Points</h5>
+        <p class="header-subscript">Keyword: XP</p>
+        <app-dynamic-content [content]="'xp_description' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-                <div class="p-2 border bg-body-tertiary mt-3">
-                    <h5 class="mb-0">Temporary HP</h5>
-                    <p class="header-subscript">Keyword: THP</p>
-                    <app-dynamic-content [content]="'temp_hp_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="p-2 border bg-body-tertiary mt-3">
-                    <h5 class="mb-0">Stamina</h5>
-                    <p class="header-subscript">Keyword: STAMINA</p>
-                    <app-dynamic-content [content]="'stamina_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                </div>
+        <h5 class="mb-0 mt-3">Action Points</h5>
+        <p class="header-subscript">Keyword: AP</p>
+        <app-dynamic-content [content]="'ap_description' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-                <div class="p-2 border bg-body-tertiary mt-3">
-                    <h5 class="mb-0">Arcana</h5>
-                    <p class="header-subscript">Keyword: ARCANA</p>
-                    <app-dynamic-content [content]="'arcana_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                </div>
-            </div>
-        </div>
+        <h5 class="mb-0 mt-3">Movement Points</h5>
+        <p class="header-subscript">Keyword: MP</p>
+        <app-dynamic-content [content]="'mp_description' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-        <h4 class="mt-3">Defensive Values</h4>
-        <app-dynamic-content [content]="'defenses_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-
-        <h6 class="mb-0 mt-1">Save Bonus:</h6>
-        <app-dynamic-content [content]="'save_bonus_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-
-        <div class="px-3 row g-5">
-            <div class="col-sm">
-                <div class="p-2 border bg-body-tertiary mt-3">
-                    <h5 class="mb-0">Stability</h5>
-                    <p class="header-subscript">Keyword: STABILITY</p>
-                    <app-dynamic-content [content]="'stability_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                </div>
-
-                <div class="p-2 border bg-body-tertiary mt-3">
-                    <h5 class="mb-0">Dodge</h5>
-                    <p class="header-subscript">Keyword: DODGE</p>
-                    <app-dynamic-content [content]="'dodge_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                </div>
-
-                <div class="p-2 border bg-body-tertiary mt-3">
-                    <h5 class="mb-0">Toughness</h5>
-                    <p class="header-subscript">Keyword: TOUGHNESS</p>
-                    <app-dynamic-content [content]="'toughness_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="p-2 border bg-body-tertiary mt-3">
-                    <h5 class="mb-0">Willpower</h5>
-                    <p class="header-subscript">Keyword: WILLPOWER</p>
-                    <app-dynamic-content [content]="'willpower_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                </div>
-
-                <div class="p-2 border bg-body-tertiary mt-3">
-                    <h5 class="mb-0">Damage Resistance</h5>
-                    <p class="header-subscript">Keyword: DR</p>
-                    <app-dynamic-content [content]="'damage_resistance_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-                </div>
-            </div>
-        </div>
-
-        <h4 class="mt-3">Other Values</h4>
-        <h5 class="mb-0">Alignment</h5>
-        <app-dynamic-content [content]="'alignment_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-
-        <div class="d-flex justify-content-center mx-3 mt-3">
-            <table class="table table-bordered align-middle">
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td class="text-center table-active">
-                            <h6 class="text-center">{{ alignment.lawfulAlignment.name }}</h6>
-                            <span class="text-center description">{{ alignment.lawfulAlignment.ideas.join(', ') }}</span>
-                        </td>
-                        <td class="text-center table-active">
-                            <h6 class="text-center">{{ alignment.idiologicalNeutralAlignment.name }}</h6>
-                            <span class="text-center description">{{ alignment.idiologicalNeutralAlignment.ideas.join(', ') }}</span>
-                        </td>
-                        <td class="text-center table-active">
-                            <h6 class="text-center">{{ alignment.chaoticAlignment.name }}</h6>
-                            <span class="text-center description">{{ alignment.chaoticAlignment.ideas.join(', ') }}</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center table-active">
-                            <h6>{{ alignment.goodAlignment.name }}</h6>
-                            <span class="description">{{ alignment.goodAlignment.ideas.join(', ') }}</span>
-                        </td>
-                        <td class="text-center">Lawful Good (LG)</td>
-                        <td class="text-center">Neutral Good (NG)</td>
-                        <td class="text-center">Chaotic Good (CG)</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center table-active">
-                            <h6 class="text-center">{{ alignment.moralNeutralAlignment.name }}</h6>
-                            <span class="text-center description">{{ alignment.moralNeutralAlignment.ideas.join(', ') }}</span>
-                        </td>
-                        <td class="text-center">Lawful Neutral (LN)</td>
-                        <td class="text-center">True Neutral (N)</td>
-                        <td class="text-center">Chaotic Neutral (CN)</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center table-active">
-                            <h6 class="text-center">{{ alignment.evilAlignment.name }}</h6>
-                            <span class="text-center description">{{ alignment.evilAlignment.ideas.join(', ') }}</span>
-                        </td>
-                        <td class="text-center">Lawful Evil (LE)</td>
-                        <td class="text-center">Neutral Evil (NE)</td>
-                        <td class="text-center">Chaotic Evil (CE)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <app-dynamic-content [content]="'alignment_additional_detail' | resolveTextKey | textProcessor"></app-dynamic-content>
-        <a [href]="alignment.link">{{ alignment.linkText }}</a>
-
-        <h5 class="mb-0 mt-3">Special Movement</h5>
-        <app-dynamic-content [content]="'special_movement_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+        <h5 class="mb-0 mt-3">Martial Damage</h5>
+        <p class="header-subscript">Keyword: MARTIAL DAMAGE</p>
+        <app-dynamic-content
+            [content]="'martial_damage_description' | resolveTextKey | textProcessor"></app-dynamic-content>
         <ul>
-            @for (specialMovement of specialMovementTypes; track $index) {
-                <li>
-                    <span class="fw-bold">{{ specialMovement.name }}: </span>
-                    <app-dynamic-content [content]="specialMovement.textKeyDescription | resolveTextKey | textProcessor"></app-dynamic-content>
-                </li>
-            }
+            <li>
+                <span class="fw-bold">Light damage: </span>
+                <app-dynamic-content
+                    [content]="'light_damage_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </li>
+            <li>
+                <span class="fw-bold">Medium damage: </span>
+                <app-dynamic-content
+                    [content]="'medium_damage_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </li>
+            <li>
+                <span class="fw-bold">Heavy damage: </span>
+                <app-dynamic-content
+                    [content]="'heavy_damage_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </li>
         </ul>
-
-        <h5 class="mb-0 mt-3">Size</h5>
-        <p class="header-subscript">Keyword: SIZE</p>
-        <app-dynamic-content [content]="'size_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-        <div class="d-flex justify-content-center">
-            <table class="rules-table-75">
+        <div class="mt-3 mx-3 d-flex justify-content-center">
+            <table class="rules-table">
                 <thead>
                     <tr>
-                        <th scope="col">Size</th>
-                        <th scope="col">STR Modifier</th>
-                        <th scope="col">DODGE Modifier</th>
-                        <th scope="col">Other size modifiers</th>
+                        <th scope="col"><app-dynamic-content [content]="'[STR]' | textProcessor"></app-dynamic-content>
+                        </th>
+                        <th scope="col">Light Damage</th>
+                        <th scope="col">Medium Damage</th>
+                        <th scope="col">Heavy Damage</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @for (size of sizes; track $index) {
-                        <tr>
-                            <td>{{ size.name }}</td>
-                            <td>{{ size.strengthBonus }}</td>
-                            <td>{{ size.dodgeBonus }}</td>
-                            <td>{{ size.otherSizeModifications }}</td>
-                        </tr>
+                    @for (martialDamage of martialDamageTable; track $index) {
+                    <tr>
+                        <td>{{ martialDamage.str }}</td>
+                        <td>{{ martialDamage.light }}</td>
+                        <td>{{ martialDamage.medium }}</td>
+                        <td>{{ martialDamage.heavy }}</td>
+                    </tr>
                     }
                 </tbody>
             </table>
         </div>
-      </div>
-
-      <app-page-navigation [currentPageId]="pageId"></app-page-navigation>
     </div>
-  </div>
+
+    <h4 class="mt-3">Resources</h4>
+    <div class="px-3 row g-5">
+        <div class="col-6">
+            <div class="p-2 border bg-body-tertiary mt-3">
+                <h5 class="mb-0">HP</h5>
+                <p class="header-subscript">Keyword: HP</p>
+                <app-dynamic-content
+                    [content]="'hp_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+                <h6 class="mb-0 mt-1">Dropping to 0 HP:</h6>
+                <app-dynamic-content
+                    [content]="'dropping_to_0_hp_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </div>
+
+            <div class="p-2 border bg-body-tertiary mt-3">
+                <h5 class="mb-0">Temporary HP</h5>
+                <p class="header-subscript">Keyword: THP</p>
+                <app-dynamic-content
+                    [content]="'temp_hp_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="p-2 border bg-body-tertiary mt-3">
+                <h5 class="mb-0">Stamina</h5>
+                <p class="header-subscript">Keyword: STAMINA</p>
+                <app-dynamic-content
+                    [content]="'stamina_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </div>
+
+            <div class="p-2 border bg-body-tertiary mt-3">
+                <h5 class="mb-0">Arcana</h5>
+                <p class="header-subscript">Keyword: ARCANA</p>
+                <app-dynamic-content
+                    [content]="'arcana_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="mt-3">Defensive Values</h4>
+    <app-dynamic-content [content]="'defenses_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+    <h6 class="mb-0 mt-1">Save Bonus:</h6>
+    <app-dynamic-content [content]="'save_bonus_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+    <div class="px-3 row g-5">
+        <div class="col-sm">
+            <div class="p-2 border bg-body-tertiary mt-3">
+                <h5 class="mb-0">Stability</h5>
+                <p class="header-subscript">Keyword: STABILITY</p>
+                <app-dynamic-content
+                    [content]="'stability_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </div>
+
+            <div class="p-2 border bg-body-tertiary mt-3">
+                <h5 class="mb-0">Dodge</h5>
+                <p class="header-subscript">Keyword: DODGE</p>
+                <app-dynamic-content
+                    [content]="'dodge_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </div>
+
+            <div class="p-2 border bg-body-tertiary mt-3">
+                <h5 class="mb-0">Toughness</h5>
+                <p class="header-subscript">Keyword: TOUGHNESS</p>
+                <app-dynamic-content
+                    [content]="'toughness_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="p-2 border bg-body-tertiary mt-3">
+                <h5 class="mb-0">Willpower</h5>
+                <p class="header-subscript">Keyword: WILLPOWER</p>
+                <app-dynamic-content
+                    [content]="'willpower_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </div>
+
+            <div class="p-2 border bg-body-tertiary mt-3">
+                <h5 class="mb-0">Damage Resistance</h5>
+                <p class="header-subscript">Keyword: DR</p>
+                <app-dynamic-content
+                    [content]="'damage_resistance_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="mt-3">Other Values</h4>
+
+    <h5 class="mb-0">Fate</h5>
+    <app-dynamic-content [content]="'fate_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <ul>
+       @for (fateUsage of fate.fateUseages; track $index) {
+        <li>
+            <span class="fw-bold">{{fateUsage.cost}}: </span>
+            <app-dynamic-content [content]="fateUsage.description_textKey| resolveTextKey | textProcessor"></app-dynamic-content>
+        </li>
+       } 
+    </ul>
+
+    <h5 class="mb-0">Alignment</h5>
+    <app-dynamic-content [content]="'alignment_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+    <div class="d-flex justify-content-center mx-3 mt-3">
+        <table class="table table-bordered align-middle">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td class="text-center table-active">
+                        <h6 class="text-center">{{ alignment.lawfulAlignment.name }}</h6>
+                        <span class="text-center description">{{ alignment.lawfulAlignment.ideas.join(', ') }}</span>
+                    </td>
+                    <td class="text-center table-active">
+                        <h6 class="text-center">{{ alignment.idiologicalNeutralAlignment.name }}</h6>
+                        <span class="text-center description">{{ alignment.idiologicalNeutralAlignment.ideas.join(', ')
+                            }}</span>
+                    </td>
+                    <td class="text-center table-active">
+                        <h6 class="text-center">{{ alignment.chaoticAlignment.name }}</h6>
+                        <span class="text-center description">{{ alignment.chaoticAlignment.ideas.join(', ') }}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center table-active">
+                        <h6>{{ alignment.goodAlignment.name }}</h6>
+                        <span class="description">{{ alignment.goodAlignment.ideas.join(', ') }}</span>
+                    </td>
+                    <td class="text-center">Lawful Good (LG)</td>
+                    <td class="text-center">Neutral Good (NG)</td>
+                    <td class="text-center">Chaotic Good (CG)</td>
+                </tr>
+                <tr>
+                    <td class="text-center table-active">
+                        <h6 class="text-center">{{ alignment.moralNeutralAlignment.name }}</h6>
+                        <span class="text-center description">{{ alignment.moralNeutralAlignment.ideas.join(', ')
+                            }}</span>
+                    </td>
+                    <td class="text-center">Lawful Neutral (LN)</td>
+                    <td class="text-center">True Neutral (N)</td>
+                    <td class="text-center">Chaotic Neutral (CN)</td>
+                </tr>
+                <tr>
+                    <td class="text-center table-active">
+                        <h6 class="text-center">{{ alignment.evilAlignment.name }}</h6>
+                        <span class="text-center description">{{ alignment.evilAlignment.ideas.join(', ') }}</span>
+                    </td>
+                    <td class="text-center">Lawful Evil (LE)</td>
+                    <td class="text-center">Neutral Evil (NE)</td>
+                    <td class="text-center">Chaotic Evil (CE)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <app-dynamic-content
+        [content]="'alignment_additional_detail' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <a [href]="alignment.link">{{ alignment.linkText }}</a>
+
+    <h5 class="mb-0 mt-3">Special Movement</h5>
+    <app-dynamic-content
+        [content]="'special_movement_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <ul>
+        @for (specialMovement of specialMovementTypes; track $index) {
+        <li>
+            <span class="fw-bold">{{ specialMovement.name }}: </span>
+            <app-dynamic-content
+                [content]="specialMovement.textKeyDescription | resolveTextKey | textProcessor"></app-dynamic-content>
+        </li>
+        }
+    </ul>
+
+    <h5 class="mb-0 mt-3">Size</h5>
+    <p class="header-subscript">Keyword: SIZE</p>
+    <app-dynamic-content [content]="'size_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <div class="d-flex justify-content-center">
+        <table class="rules-table-75">
+            <thead>
+                <tr>
+                    <th scope="col">Size</th>
+                    <th scope="col">STR Modifier</th>
+                    <th scope="col">DODGE Modifier</th>
+                    <th scope="col">Other size modifiers</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (size of sizes; track $index) {
+                <tr>
+                    <td>{{ size.name }}</td>
+                    <td>{{ size.strengthBonus }}</td>
+                    <td>{{ size.dodgeBonus }}</td>
+                    <td>{{ size.otherSizeModifications }}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
+
+<app-page-navigation [currentPageId]="pageId"></app-page-navigation>

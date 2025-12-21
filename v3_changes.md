@@ -9,7 +9,6 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - Martial Damage rework seems OK
 - Spell casting system also seems ok, it is a bit cumbersome - but they can't cast that many spells so it's ok.
 - Fixed NPC rolls do make some stuff quite easy.
-- Split of Class Techniques/Martial Maneuvers/Spells is quite good.
 - The Ability strucutre/formatting implemented in FoundryVTT, clearly spelling out the Check and the results, sepeartly is good
 - That everything is an ability should stay.
 - Introducing tags didn'T come up much but very much makes sense
@@ -31,6 +30,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 - The requirements are not clearly visible, a skill tree would be better
 - Did not get too test shields
 - Alignemnt does not matter as much as I would maybe like
+- Class techniques are kinda problematic for desinging as it is difficult to split between spells/martial maneuvers, and lots of redundant abilities.
 
 ## Progress Tracker
 
@@ -39,15 +39,17 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 
 ### Character
 
-- Add fate mechanic, potential options: reroll, gain extra 2 AP during turn, reduce damage (❌)
-    - Potentially have a limit of fate that can be used per extended long rest
-    - Non Spellcasting Characters should have more fate as they are less relient on the cosmic plane.
-    - Warlock should not have any Fate at all but a substitude ability where they can essentially gate fate abilities/bonus by gaining corruption.
+- Add fate mechanic, potential options: reroll, gain extra 2 AP during turn, reduce damage (✅)
+    - Potentially have a limit of fate that can be used per extended long rest (✅)
+    - Non Spellcasting Characters should have more fate as they are less relient on the cosmic plane. (❌)
+    - Warlock should not have any Fate at all but a substitude ability where they can essentially gate fate abilities/bonus by gaining corruption. (❌)
 - Make Origin a bit more interactive, let the Players have a bit more agency or empower them to do something with it. (❌)
-    - Each character should have a goal upon completion they get extra Fate (❌)
+    - Each character should have a goal upon completion they get extra Fate (✅)
 - Try creating some sort of party/combo mechanic if possible or maybe general party upgrades like a synergy stat (❌)
+    - maybe some combo abilities that gain benefits when used at the same time. (❌)
 - Add complete Injury Table, with different Damage Type categories (❌)
-    - Should only happen at Deaths Door
+    - Should only happen at Deaths Door, maybe need to continuesly count how much damage recieved and at the end of the round needs some injury test (❌)
+    - Injury also should maybe instead be something that increases and accumulates with the last level being death (❌)
 
 #### Species
 - Create at least 3 more Species (❌)
@@ -58,42 +60,50 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
     - Should be no more than 2 per Skill (6/12) but only at the end and check if they are really needed
 - Move Animal Handling into Nature (✅)
 - Rework Lore skills and remove their distinction (✅)
-    - possibly create riftlands skill ❌)
+    - possibly create riftlands skill (❌)
 - Add rules for aiding others in skill tests (✅)
 - remove all references to passive skills (✅)
 - make sure links to all skills are there in the text (❌)
 
 #### Classes
 
+Remove class techniques as they make more provbelms as they solve and include abilities in martial maneuvers or spells (❌)
+    - Some Abilities can also be accessed as part of Perks where it makes sense (❌)
+    - In return Class Core Abilities have to be reworked to not be a resource for using abilities but something else (❌)
+
 - Warlock: (❌)
+  - Rework Corruption to work without Class Techniques (❌)
   - Mutations should have some visual or mental changes when the perk is taken, where a table is rolled everytime (❌)
+    - Regeneration Mutation is a bit too strong (❌)
   - Corrutpion Limit should be changed a bit also with how it interacts with Mutations (❌)
+  - Rework Warlock Perk Tree (❌)
 - Priest: (❌)
+ - Rework Tides of the Aether to work without Class Techniques (❌)
  - Simplify Aether Dice notation: AD(=) -> matching AD, AD(!) -> unique AD  (❌)
  - Think whether to change it to a more flavourful Faith mechanic, where when you perform/show faith you get Dice (❌)
  - Priest should also interact the most with the Fate mechanic. (❌)
-
+ Rework Priest Perk Tree (❌)
 - Barbarian (❌)
+     Rework Rage to work without Class Techniques (❌)
     - new maneuvers: Unspent Rage(When going unconcious can take a turn, costs lot of rage), (Reckless Abandon)  can'T dodge but gain bonuses
     - Think if Rage can be improved to be more flavourful without being too complicated. (❌)
+    - Rework Barbarian Perk Tree (❌)
 
 - Possibly havbe every class have the same number of class skills per level (❌)
 - Only have Class Perks and fold all other Perks in there and have Perks be part of Classes (❌)
 - Every Class gains the same amount of base skill points (❌)
 - Remove Perk point system, instead you get maybe 3 Perks at first level  (❌)
-- Only have class Perks (❌)
-    - Rework Barbarian Perk Tree (❌)
-    - Rework Priest Perk Tree (❌)
-    - Rework Warlock Perk Tree (❌)
-        check phone todos
-        - Regeneration Mutation is a bit too strong (❌)
 
 ### NPCs
 
 - Tune down damage (❌)
 - Create more templates too createinterresting NPCs and have dedicated sub-types (❌)
+- Boss NPC type, grants double XP, they gain a second turn before the end of the battle round. Also access to special boss abilities depending on their Level, but only 1 Boss can exist at the same time. (❌)
+    - Second Life after dropping to 0 HP with then maybe to access to extra ability. (❌)
+    - Spawning More Enemies each Round. (❌)
 - More Interactive NPC Mechanics (❌)
-    - CD is nice but there should be more
+    - CD, should start on cooldown and be visible to the players (❌)
+    - Triggered Abilities that are reactions that happen on defined points and it is visible to players that a trigger exists (❌)
 
 ### Abilities
 
@@ -109,6 +119,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 
 #### Martial Maneuvers
 
+- rename Martial Maneuvers to Techniques as there are no more Class Techniques (❌)
 - Incoperate all Weapon MAneuvers in Weapons (❌)
 - Rework Parry (❌)
 - More abilities that have non-combat users (❌)
@@ -142,11 +153,11 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 ### Combat Mechanics
 
 - Try out different Initiative mechanics, mainly copy a version of the shadow of the demon lord system (❌)
-    - essentially, monsters always go first, players can go first if they use a 1 AP Ability "Seize the Initiative"
-    - also requires new reactions. (❌)
+    - essentially, monsters always go first, players can go first if they use a 1 AP Ability "Seize the Initiative" (❌)
+    - also requires new reactions. Reactions now are regular Abilities that have a keyword. They can have any cost and only other reaction abilities can be used in response to a reaction ability (❌)
     - also requires all turn based ability to change so that they last until end of a round. (❌)
     - Also all Status Efffects trigger at the start of the round (❌).
-    - Suprised Creatures: can't use Reaction Abilities and their AP is reduced by 1. Also can't use Seize the Initiative
+    - Suprised Creatures: can't use Reaction Abilities and their AP is reduced by 1. Also can't use Seize the Initiative (❌)
 - Rework Reactions (❌), these are now special Abilities with a special Tag. (❌)
 - Remove cosmic damage type (❌)
 - Deaths Door should have more tension (❌)

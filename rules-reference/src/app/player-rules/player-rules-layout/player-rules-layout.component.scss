@@ -63,6 +63,15 @@
 
 .page-content {
   padding: 0;
+
+  // Override rules-body margins for the sidebar layout
+  margin-left: 3vw;
+  margin-right: 3vw;
+
+  @media (min-width: 992px) { // Bootstrap's lg breakpoint
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
 }
 
 // Scrollbar styling for sidebar
