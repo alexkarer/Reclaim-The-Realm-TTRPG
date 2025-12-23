@@ -5,7 +5,7 @@
     <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss()"></button>
   </div>
   <div class="offcanvas-body p-0">
-    <app-table-of-contents-sidebar></app-table-of-contents-sidebar>
+    <app-player-rules-table-of-contents-sidebar></app-player-rules-table-of-contents-sidebar>
   </div>
 </ng-template>
 
@@ -13,7 +13,7 @@
   <!-- Desktop Sidebar - Hidden on mobile/tablet -->
   <aside class="sidebar d-none d-lg-block" [class.sidebar-hidden]="!sidebarVisible">
     <div class="sidebar-content">
-      <app-table-of-contents-sidebar></app-table-of-contents-sidebar>
+      <app-player-rules-table-of-contents-sidebar></app-player-rules-table-of-contents-sidebar>
     </div>
   </aside>
 

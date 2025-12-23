@@ -1,5 +1,5 @@
 <nav class="toc-sidebar">
-  <h6 class="toc-title mb-3">Player Rules</h6>
+  <h6 class="toc-title mb-3">{{ title() }}</h6>
 
   <div class="nav flex-column">
     @for (page of topLevelPages; track page.id) {
@@ -12,9 +12,9 @@
           {{ page.title }}
         </a>
 
-        @if (hasChildren(page.id)) {
+        @if (getChildPages(page.id).length > 0) {
           <div class="nav flex-column ms-3">
-            @for (child of getChildren(page.id); track child.id) {
+            @for (child of getChildPages(page.id); track child.id) {
               <a
                 [routerLink]="child.route"
                 routerLinkActive="active"

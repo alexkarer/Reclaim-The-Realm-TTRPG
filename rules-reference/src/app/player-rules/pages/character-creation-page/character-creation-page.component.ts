@@ -2,7 +2,7 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ResolveTextKeyPipe } from '../../../shared/text-utils/resolve-text-key';
 import { TextProcessorPipe } from '../../../shared/text-utils/text-processor';
 import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
-import { PageNavigationComponent } from '../../shared/page-navigation/page-navigation.component';
+import { PlayerRulesPageNavigationComponent } from '../../shared/page-navigation/player-rules-page-navigation.component';
 import characterCreationStepsJson from '../../../../../../common_resources/player_rules/character_creation_steps.json';
 
 @Component({
@@ -12,7 +12,7 @@ import characterCreationStepsJson from '../../../../../../common_resources/playe
     ResolveTextKeyPipe,
     TextProcessorPipe,
     DynamicContentComponent,
-    PageNavigationComponent
+    PlayerRulesPageNavigationComponent
   ],
   templateUrl: './character-creation-page.component.html',
   styleUrl: './character-creation-page.component.scss'

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
-import { TableOfContentsSidebarComponent } from '../shared/table-of-contents-sidebar/table-of-contents-sidebar.component';
+import { PlayerRulesTableOfContentsSidebarComponent } from '../shared/table-of-contents-sidebar/player-rules-table-of-contents-sidebar.component';
 
 @Component({
   selector: 'app-player-rules-layout',
-  imports: [RouterOutlet, TableOfContentsSidebarComponent],
+  imports: [RouterOutlet, PlayerRulesTableOfContentsSidebarComponent],
   templateUrl: './player-rules-layout.component.html',
   styleUrl: './player-rules-layout.component.scss'
 })

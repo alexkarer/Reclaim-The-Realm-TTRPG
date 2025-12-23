@@ -1,12 +1,7 @@
-<div>
-    <h3 ngbScrollSpyFragment="introduction">Introduction</h3>
-    <app-dynamic-content [content]="'system_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+<h1>Core Gameplay</h1>
 
-    <h4 class="pt-3" ngbScrollSpyFragment="keywords">Keywords</h4>
-    <app-dynamic-content [content]="'keywords_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-
-    <h3 class="pt-3" >Core Gameplay</h3>
-    <h4 class="pt-3" ngbScrollSpyFragment="d20-test">D20 Test</h4>
+<div class="my-4">
+  <h4 class="pt-3" ngbScrollSpyFragment="d20-test">D20 Test</h4>
     <app-dynamic-content [content]="'d20_test_description' | resolveTextKey | textProcessor"></app-dynamic-content>
 
     <h5 class="pt-3" ngbScrollSpyFragment="d20-test">Specialized D20 Test</h5>
@@ -39,4 +34,7 @@
 
     <h4 class="pt-3" ngbScrollSpyFragment="abilities">Abilities</h4>
     <app-dynamic-content [content]="'abilitiies_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+
 </div>
+
+<app-page-navigation [currentPageId]="pageId"></app-page-navigation>

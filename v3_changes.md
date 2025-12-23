@@ -224,4 +224,4 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - after x rounds should cost stamina for players and if no stamina, either reduce speed or take exhaustion
     - there should be a win condition for the players after X rounds (maybe based on level of enemy)
 - Clear TODO lists (❌)
- 
+ - Check where Info and additional explainer boxes might be needed (❌)

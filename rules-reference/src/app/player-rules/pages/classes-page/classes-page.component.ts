@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PageNavigationComponent } from '../../shared/page-navigation/page-navigation.component';
+import { PlayerRulesPageNavigationComponent } from '../../shared/page-navigation/player-rules-page-navigation.component';
 import { ResolveTextKeyPipe } from '../../../shared/text-utils/resolve-text-key';
 import { TextProcessorPipe } from '../../../shared/text-utils/text-processor';
 import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
@@ -7,7 +7,7 @@ import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-comp
 @Component({
   selector: 'app-classes-page',
   imports: [
-    PageNavigationComponent,
+    PlayerRulesPageNavigationComponent,
     ResolveTextKeyPipe,
     TextProcessorPipe,
     DynamicContentComponent

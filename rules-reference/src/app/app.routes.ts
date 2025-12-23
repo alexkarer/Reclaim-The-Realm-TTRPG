@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { RulesReferenceComponent } from './rules-reference/rules-reference.component';
 import { MartialManueversSearchComponent } from './martial-manuevers-search/martial-manuevers-search.component';
 import { SpellsSearchComponent } from './spells-search/spells-search.component';
 import { EquipmentSearchComponent } from './equipment-search/equipment-search.component';
@@ -20,6 +19,19 @@ import { PartyOriginPageComponent } from './player-rules/pages/party-origin-page
 import { GettingStrongerPageComponent } from './player-rules/pages/getting-stronger-page/getting-stronger-page.component';
 import { ExhaustionRestingPageComponent } from './player-rules/pages/exhaustion-resting-page/exhaustion-resting-page.component';
 import { SpellsPageComponent } from './player-rules/pages/casting-spells-page/casting-spells-page.component';
+import { RulesLayoutComponent } from './rules-reference/rules-layout/rules-layout.component';
+import { IntroductionPageComponent } from './rules-reference/pages/introduction-page/introduction-page.component';
+import { CoreGamePlayPageComponent } from './rules-reference/pages/core-gameplay-page/core-gameplay-page.component';
+import { AdventuringPageComponent } from './rules-reference/pages/adventuring-page/adventuring-page.component';
+import { TravelPageComponent } from './rules-reference/pages/travel-page/travel-page.component';
+import { RiftlandsTravelPageComponent } from './rules-reference/pages/riftlands-travel-page/riftlands-travel-page.component';
+import { AdventuringHazardsPageComponent } from './rules-reference/pages/adventuring-hazards-page/adventuring-hazards-page.component';
+import { CombatPageComponent } from './rules-reference/pages/combat-page/combat-page.component';
+import { CombatRoundPageComponent } from './rules-reference/pages/combat-round-page/combat-round-page.component';
+import { StatusEffectsPageComponent } from './rules-reference/pages/status-effects-page/status-effects-page.component';
+import { AppendixPageComponent } from './rules-reference/pages/appendix-page/appendix-page.component';
+import { UsefulTablesPageComponent } from './rules-reference/pages/useful-tables-page/useful-tables-page.component';
+import { ChaseRulesPageComponent } from './rules-reference/pages/chase-rules-page/chase-rules-page.component';
 
 export const routes: Routes = [
     {
@@ -111,8 +123,75 @@ export const routes: Routes = [
     },
     {
         path: 'rules',
-        component: RulesReferenceComponent,
-        title: 'Reclaim the Realm - Rules Reference'
+        component: RulesLayoutComponent,
+        title: 'Reclaim the Realm - Rules Reference',
+        children: [
+            {
+                path: '',
+                redirectTo: 'introduction',
+                pathMatch: 'full'
+            },
+            {
+                path: 'introduction',
+                component: IntroductionPageComponent,
+                title: 'Introduction - Rules Reference'
+            },
+            {
+                path: 'core-gameplay',
+                component: CoreGamePlayPageComponent,
+                title: 'Core Gameplay - Rules Reference'
+            },
+            {
+                path: 'adventuring',
+                component: AdventuringPageComponent,
+                title: 'Adventuring - Rules Reference'
+            },
+            {
+                path: 'travel',
+                component: TravelPageComponent,
+                title: 'Travel - Rules Reference'
+            },
+            {
+                path: 'riftlands-travel',
+                component: RiftlandsTravelPageComponent,
+                title: 'Riftlands Travel - Rules Reference'
+            },
+            {
+                path: 'adventuring-hazards',
+                component: AdventuringHazardsPageComponent,
+                title: 'Adventuring Hazards - Rules Reference'
+            },
+            {
+                path: 'combat',
+                component: CombatPageComponent,
+                title: 'Combat - Rules Reference'
+            },
+            {
+                path: 'combat-round',
+                component: CombatRoundPageComponent,
+                title: 'Combat Round - Rules Reference'
+            },
+            {
+                path: 'status-effects',
+                component: StatusEffectsPageComponent,
+                title: 'Status Effects - Rules Reference'
+            },
+            {
+                path: 'appendix',
+                component: AppendixPageComponent,
+                title: 'Appendix - Rules Reference'
+            },
+            {
+                path: 'useful-tables',
+                component: UsefulTablesPageComponent,
+                title: 'A: Useful Tables - Rules Reference'
+            },
+            {
+                path: 'chase-rules',
+                component: ChaseRulesPageComponent,
+                title: 'B: Chase Rules - Rules Reference'
+            }
+        ]
     },
     {
         path: 'classes',
@@ -120,9 +199,9 @@ export const routes: Routes = [
         title: 'Reclaim the Realm - Classes'
     },
     {
-        path: 'martial-maneuvers',
+        path: 'techniques',
         component: MartialManueversSearchComponent,
-        title: 'Reclaim the Realm - Martial Maneuvers'
+        title: 'Reclaim the Realm - Techniques'
     },
     {
         path: 'spells',
