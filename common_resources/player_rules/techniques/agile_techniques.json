@@ -1,0 +1,40 @@
+{
+    "basic": [
+        {
+            "name": "Wall Jump",
+            "meta": {
+                "icon": "",
+                "colour": "GREEN"
+            },
+            "tags": [ "[REACTION]", "Technique (Basic)", "Agile", "Movement" ],
+            "requirements": {
+                "requiredLevels": [],
+                "requiredAttributes": [ { "amount": 3, "attribute": "[AGI]" } ],
+                "requiredPerks": [ ],
+                "otherRequirements": [ "Martial Level Progression > 0" ]
+            },
+            "cost": "3 [MP]",
+            "range": "-",
+            "target": "[SELF]",
+            "duration": "-",
+            "description": [
+                TODO probably reform to add template for new Founrdry Type Templating 
+                { "regularText": "When you end a [TAG;Jump] Move at a flat surface you can immedatly use a [TAG;Jump] Ability at no cost but halve the distance moved. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. Depending on surface conditions the GM might require you to perform a [AGI] Athletics [SKILL TEST].", "headerLine": null, "bulletPoints": null} 
+            ],
+            "flavorText": [ ],
+            "push": {
+                "extraCost": "1 [STAMINA]",
+                "effect": "When you push this maneuver your pushing distance is not halved."
+            }
+        }
+    ],
+    "advanced": [
+
+    ],
+    "master": [
+
+    ],
+    "transcendent": [
+
+    ]
+}

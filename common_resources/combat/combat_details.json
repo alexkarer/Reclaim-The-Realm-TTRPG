@@ -19,7 +19,7 @@
             },
             {
                 "name": "Jump",
-                "tags": [ "Movement" ],
+                "tags": [ "Movement", "Jump" ],
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]
                 },

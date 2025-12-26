@@ -236,7 +236,7 @@
     },
     {
         "name": "REACTION",
-        "description": "'REACTION', 'Once during a combat round you can use a [REACTION] which you gain at the start of the battle unless stated otherwise. At the start of each of your turns you regain your [REACTION] but you can only have one.', ''",
+        "description": "'REACTION', 'Abilities with the [REACTION] Tag may be played outside your [TURN].', ''",
         "link": ""
     },
     {

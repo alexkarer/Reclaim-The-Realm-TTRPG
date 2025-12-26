@@ -107,8 +107,8 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 ### Abilities
 
-- add foundry icon to each ability in JSON (❌)
-    - also find way to include icon in webpage (❌)
+- add foundry icon to each ability in JSON (✅)
+    - also find way to include icon in webpage (✅)
     - also define colour for each ability and define it in JSON (❌)
 - Ability amount should increase instead with 1 + LEVEL + (int/2) (❌)
 - All abilities are now MARTIAL or SPELL Test (❌)
