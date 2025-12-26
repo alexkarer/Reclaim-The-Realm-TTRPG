@@ -1,8 +1,8 @@
-<h1>2. Character Origin</h1>
+<h1>Character Origin</h1>
 <app-dynamic-content [content]="'origin_description' | resolveTextKey | textProcessor"></app-dynamic-content>
 
 <div class="my-4">
-    <h4 class="m-0">Birthplace</h4>
+    <h3 class="m-0">Birthplace</h3>
     <app-dynamic-content [content]="'birthplace_description' | resolveTextKey | textProcessor"></app-dynamic-content>
     <table class="rules-table">
         <thead>
@@ -44,7 +44,8 @@
         </tbody>
     </table>
 
-    <h4>Early Training</h4>
+    <hr>
+    <h3>Early Training</h3>
     <app-dynamic-content
         [content]="'early_training_description' | resolveTextKey | textProcessor"></app-dynamic-content>
     <table class="rules-table">
@@ -69,7 +70,8 @@
     </table>
 
 
-    <h4 class="m-0">Life Events</h4>
+    <hr>
+    <h3 class="m-0">Life Events</h3>
     <app-dynamic-content [content]="'life_events_description' | resolveTextKey | textProcessor"></app-dynamic-content>
     <table class="rules-table">
         <thead>
@@ -183,7 +185,8 @@
         </div>
     </div>
 
-    <h4>Adventuring Goal</h4>
+    <hr>
+    <h3>Adventuring Goal</h3>
     <app-dynamic-content [content]="'adventuring_goal' | resolveTextKey | textProcessor"></app-dynamic-content>
     <table class="rules-table">
         <thead>

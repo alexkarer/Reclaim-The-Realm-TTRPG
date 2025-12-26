@@ -32,6 +32,8 @@ import { StatusEffectsPageComponent } from './rules-reference/pages/status-effec
 import { AppendixPageComponent } from './rules-reference/pages/appendix-page/appendix-page.component';
 import { UsefulTablesPageComponent } from './rules-reference/pages/useful-tables-page/useful-tables-page.component';
 import { ChaseRulesPageComponent } from './rules-reference/pages/chase-rules-page/chase-rules-page.component';
+import { MovementPageComponent } from './rules-reference/pages/movement-page/movement-page.component';
+import { StandardAbilitiesPageComponent } from './rules-reference/pages/standard-abilities/standard-abilities-page.component';
 
 export const routes: Routes = [
     {
@@ -170,6 +172,16 @@ export const routes: Routes = [
                 path: 'combat-round',
                 component: CombatRoundPageComponent,
                 title: 'Combat Round - Rules Reference'
+            },
+            {
+                path: 'standard-abilities',
+                component: StandardAbilitiesPageComponent,
+                title: 'Standard Abilities - Rules Reference'
+            },
+            {
+                path: 'movement',
+                component: MovementPageComponent,
+                title: 'Movement - Rules Reference'
             },
             {
                 path: 'status-effects',

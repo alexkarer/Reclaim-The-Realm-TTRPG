@@ -5,7 +5,6 @@ import { TextProcessorPipe } from '../../../shared/text-utils/text-processor';
 import { DynamicContentComponent } from '../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component';
 
 import martialDamageJson from '../../../../../../common_resources/player_rules/character/martial_damage.json';
-import specialMovementJson from '../../../../../../common_resources/player_rules/character/special_movement.json';
 import sizesJson from '../../../../../../common_resources/player_rules/character/sizes.json';
 import alignmentJson from '../../../../../../common_resources/player_rules/character/alignment.json';
 import fateJson from '../../../../../../common_resources/player_rules/character/fate.json';
@@ -24,7 +23,6 @@ import fateJson from '../../../../../../common_resources/player_rules/character/
 export class CharacterValuesPageComponent {
   public readonly pageId = 'character-values';
   public readonly martialDamageTable = martialDamageJson;
-  public readonly specialMovementTypes = specialMovementJson;
   public readonly sizes = sizesJson;
   public readonly alignment = alignmentJson;
   public readonly fate = fateJson;

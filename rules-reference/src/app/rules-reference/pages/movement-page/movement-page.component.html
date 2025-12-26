@@ -1,0 +1,18 @@
+<h1>Movement</h1>
+
+<div class="my-4">
+  <h3 class="mb-0 mt-3">Special Movement</h3>
+    <app-dynamic-content
+        [content]="'special_movement_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <ul>
+        @for (specialMovement of specialMovement; track $index) {
+        <li>
+            <span class="fw-bold">{{ specialMovement.name }}: </span>
+            <app-dynamic-content
+                [content]="specialMovement.textKeyDescription | resolveTextKey | textProcessor"></app-dynamic-content>
+        </li>
+        }
+    </ul>
+</div>
+
+<app-page-navigation [currentPageId]="pageId"></app-page-navigation>

@@ -108,6 +108,8 @@ Remove class techniques as they make more provbelms as they solve and include ab
 ### Abilities
 
 - add foundry icon to each ability in JSON (❌)
+    - also find way to include icon in webpage (❌)
+    - also define colour for each ability and define it in JSON (❌)
 - Ability amount should increase instead with 1 + LEVEL + (int/2) (❌)
 - All abilities are now MARTIAL or SPELL Test (❌)
 - Remove Hybrid Abilities for now (❌)
@@ -122,6 +124,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - rename Martial Maneuvers to Techniques as there are no more Class Techniques (❌)
 - Incoperate all Weapon MAneuvers in Weapons (❌)
 - Rework Parry (❌)
+    - maybe fine if part of a weapon
 - More abilities that have non-combat users (❌)
 
 #### Spells
@@ -208,14 +211,21 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 - Of a lore and game perspective make sure to emphasis the need to grow powerful as the world is so hostile that everyone will otherwise perish (❌)
     - which also means that the individuals who get to powerful gain other flaws which stops them from saving the world (❌)
+
 - Make items collapsable/hidden for easier navigation (❌)
-- Rework keyword processor logic to use the new json (❌)
+
+- Rework keyword processor logic to use the new json (✅)
+
 - when referencing abilities, have a small preview of the ability (❌)
+
 - Cosmic Mutations should maybe be fleshed out more. (❌)
-- Move Player Character creation to separate page from Rules (❌)
+
+- Move Player Character creation to separate page from Rules (✅)
+
 - Remove initial page and keywords since ATTACK is getting removed (❌)
     - remove degree of success/failure part (❌)
     - mention that everything is an ability (❌)
+
 - Create Chase Mechanic (❌)
     - should be very abstract but state distance in case needed
     - distance covered should be based on MP and all are added simultaneously at the end of the round. (in case of special movement maybe grant extra move)
@@ -223,5 +233,10 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - There should be a set of actions that can be used during the round (tackle, imrpovise, ...)
     - after x rounds should cost stamina for players and if no stamina, either reduce speed or take exhaustion
     - there should be a win condition for the players after X rounds (maybe based on level of enemy)
+
 - Clear TODO lists (❌)
+ - Size should be moved away from player rules (❌)
+
+- Fomratting cahnges (❌)
  - Check where Info and additional explainer boxes might be needed (❌)
+ - add certain key values and formulas as a sidebar.

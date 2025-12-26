@@ -108,7 +108,8 @@
         
         "hp_description": "Health Points. Represents how much damage you can take before going unconscious. [HP] is calculated using the following Formula:<br>Species [HP] Bonus + (Class [HP] + [CON]/2) * [LEVEL].",
         "dropping_to_0_hp_description": "When your Character drops to 0 [HP] they receive the [UNCONCIOUS] status effect. If the character is currently in combat, they also have the option to drop to Death's Door before going unconscious.",
-        "temp_hp_description": "Temporary health points. Some spells and special abilities confer [THP] to a creature. [THP] aren't actual [HP]. they are a buffer against damage, a pool of hit points that protect you from injury. When you have [THP] and take damage, the [THP] are lost first, and any leftover damage carries over to your normal hit points.<br> It is important to note that [THP] does not benefit from any [DR] and they can't be restored, however if you receive [THP] again you can choose to either gain the new ones or keep the [THP] you have.<br>Additionally, if you are at 0 [HP], receiving [THP] doesn't return you to consciousness or remove Death's Door. Unless a feature that grants you [THP] has a duration, they last until they're depleted, or you finish a long rest.",
+        "temp_hp_description": "Temporary health points. Some spells and special abilities confer [THP] to a creature. [THP] aren't actual [HP]. they are a buffer against damage, a pool of hit points that protect you from injury. When you have [THP] and take damage, the [THP] are lost first, and any leftover damage carries over to your normal hit points.",
+        "temp_hp_additional_info": "It is important to note that [THP] does not benefit from any [DR] and they can't be restored, however if you receive [THP] again you can choose to either gain the new ones or keep the [THP] you have. Additionally, if you are at 0 [HP], receiving [THP] doesn't return you to consciousness or remove Death's Door. Unless a feature that grants you [THP] has a duration, they last until they're depleted, or you finish a long rest.",
         "stamina_description": "[STAMINA] is your energy reserve with which you can replenish your Resources like [HP] and [ARCANA] and is used up when performing physically demanding tasks. Your maximum stamina is calculated with the following Formula:<br>[CON] + [LEVEL] + [MARTIAL LEVEL].<br>It can be expended during a short rest and are regained after a long rest.",
         "arcana_description": "Your [ARCANA] represents an energy reserve you expend when drawing power from the elemental planes and the aether to cast spells. Your maximum [ARCANA] calculated the following way:<br>3 ∗ [SPELL LEVEL].<br>It can be replenished by using stamina during a short rest and are also regained after a long rest.",
         
@@ -145,5 +146,8 @@
         "level_up_gain_2_attribute_points": "You gain 2 Attribute Points you can increase your Attributes with.",
         "level_up_gain_2_perk_points": "You gain 2 Perk Points to select new Perks.",
         "after_level_12": "After you have reached [LEVEL] 12 for every 30 000 [XP] past [LEVEL] 12, you gain an additional Attribute Point and Perk Point. However, your [LEVEL] does not increase."
+    },
+    "barbarian_class": {
+        "barbarian_description": "This description is not yet complete. Thankfully Barbarian Players can't read."
     }
 }
