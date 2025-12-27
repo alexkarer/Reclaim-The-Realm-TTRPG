@@ -1,11 +1,11 @@
-import { Ability } from "../shared/Ability";
+import { AbilityOld } from "../shared/Ability";
 
 import hybridAbilitiesJson from "./hybrid_abilities.json";
 
 type HybridAbilitiesJson = typeof hybridAbilitiesJson
 type JsonHybridAbility = typeof hybridAbilitiesJson.elementalHybridAbilities[0];
 
-export class HybridAbility extends Ability {
+export class HybridAbility extends AbilityOld {
     components?: string;
     spellDifficulty?: number;
 }

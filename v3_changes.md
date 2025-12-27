@@ -109,6 +109,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 - add foundry icon to each ability in JSON (✅)
     - also find way to include icon in webpage (✅)
+    - define icons at a single place in global resourecs and add npm step to copy it to other repos (❌)
     - also define colour for each ability and define it in JSON (❌)
 - Ability amount should increase instead with 1 + LEVEL + (int/2) (❌)
 - All abilities are now MARTIAL or SPELL Test (❌)
@@ -239,4 +240,6 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 - Fomratting cahnges (❌)
  - Check where Info and additional explainer boxes might be needed (❌)
- - add certain key values and formulas as a sidebar.
+ - add certain key values and formulas as a sidebar. (❌)
+
+- Verify all console errors are gone (❌)

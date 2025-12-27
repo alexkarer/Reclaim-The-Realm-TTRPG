@@ -1,4 +1,4 @@
-import { Ability } from '../shared/Ability';
+import { AbilityOld } from '../shared/Ability';
 import { TextElement } from '../shared/TextElements';
 import barbarianJson from './barbarian.json';
 import priestJson from './priest.json';
@@ -22,7 +22,7 @@ export class PlayerClass {
         textElements: TextElement[];
     };
     classTechniquesDescription!: string;
-    classTechniques!: Ability[];
+    classTechniques!: AbilityOld[];
 }
 
 function mapPlayerClass(jsonClass: PlayerClassJson): PlayerClass {
@@ -42,8 +42,8 @@ function mapPlayerClass(jsonClass: PlayerClassJson): PlayerClass {
     return playerClass;
 }
 
-function mapClassTechnique(jsonTechnique: ClassTechnique): Ability {
-    let classTechnique = new Ability();
+function mapClassTechnique(jsonTechnique: ClassTechnique): AbilityOld {
+    let classTechnique = new AbilityOld();
     classTechnique.name = jsonTechnique.name;
     classTechnique.tags = jsonTechnique.tags;
     classTechnique.requirements = jsonTechnique.requirements;

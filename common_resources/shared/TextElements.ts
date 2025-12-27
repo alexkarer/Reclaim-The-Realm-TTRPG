@@ -1,4 +1,4 @@
-import { Ability } from "./Ability";
+import { AbilityOld } from "./Ability";
 
 export type TextElement = 
 {
@@ -29,7 +29,7 @@ export type TextElement =
     regularText: null;
     headerLine: null;
     bulletPoints: null;
-    ability: Ability;
+    ability: AbilityOld;
 };
 
 export type TextElementWithoutAbility = 

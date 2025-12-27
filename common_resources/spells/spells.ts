@@ -1,11 +1,11 @@
-import { Ability } from '../shared/Ability';
+import { AbilityOld } from '../shared/Ability';
 
 import JsonSpellList from './spells.json'
 
 type JsonSpells = typeof JsonSpellList;
 type JsonSpell = typeof JsonSpellList.elementalSpells.pyromancySpells[0] | typeof JsonSpellList.manipulationSpells.conjurationSpells[1];
 
-export class Spell extends Ability {
+export class Spell extends AbilityOld {
     components?: string
     spellDifficulty?: number
     upCastingTheSpell?: string

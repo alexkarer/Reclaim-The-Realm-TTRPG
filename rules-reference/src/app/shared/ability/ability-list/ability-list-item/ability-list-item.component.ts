@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Ability } from '../../../../../../../common_resources/shared/Ability';
+import { AbilityOld } from '../../../../../../../common_resources/shared/Ability';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 import { RequirementsPrettierPipe } from "../../../utils/to-pretty-string";
 import { MartialManeuver } from '../../../../../../../common_resources/martial_maneuvers/martial-maneuvers';
@@ -16,7 +16,7 @@ import { TextElementsWithoutAbilityComponent } from "../../../text-utils/text-el
     styleUrl: './ability-list-item.component.scss'
 })
 export class AbilityListItemComponent {
-  ability = input<Ability>();
+  ability = input<AbilityOld>();
   public isCollapsed = true;
 
   public getAbilityName(): string | undefined {

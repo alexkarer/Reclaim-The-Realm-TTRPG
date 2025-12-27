@@ -1,5 +1,4 @@
-import { Ability } from '../shared/Ability';
-import { Requirements } from '../shared/AbilityRequirements';
+import { AbilityOld, Requirements } from '../shared/Ability';
 
 import basicManeuversJson from './basic_maneuvers.json';
 import advancedManeuversJson from './advanced_maneuvers.json';
@@ -7,7 +6,7 @@ import masterManeuversJson from './master_maneuvers.json';
 import transcendentManeuversJson from './transcendent_maneuvers.json';
 import { TextElement, TextElementWithoutAbility } from '../shared/TextElements';
 
-export class MartialManeuver extends Ability {
+export class MartialManeuver extends AbilityOld {
     maneuverPush?: {
         pushingExtraCost: string;
         pushingDescription: string;
