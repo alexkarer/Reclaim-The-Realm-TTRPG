@@ -61,3 +61,7 @@ Thumbs.db
 
 /foundry-vtt/reclaim-the-realm/foundry-config.yaml
 /foundry-vtt/reclaim-the-realm/foundry
+
+# Copied Assets
+/rules-reference/public/assets/*
+!/rules-reference/public/assets/icons/.gitkeep

@@ -1,5 +1,8 @@
 ### Immidiate TODOS
 
+!!! add copy step to properly get assets from common_resources
+
+
 Implement new typescript system from scratch where all the improvements from V3 RtR are included nad it is based on.
 
 

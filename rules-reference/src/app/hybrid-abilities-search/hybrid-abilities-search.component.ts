@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { allHybridAbilities, HybridAbility } from '../../../../common_resources/hybrid_abilities/hybrid_abilities';
-import { AbilityListComponent } from '../shared/ability/ability-list/ability-list.component';
+import { AbilityListComponent } from '../shared/ability/ability-list/ability-old-list.component';
 import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 

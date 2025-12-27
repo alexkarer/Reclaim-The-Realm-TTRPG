@@ -10,10 +10,10 @@ import { TextProcessorPipe } from "../../../text-utils/text-processor";
 import { TextElementsWithoutAbilityComponent } from "../../../text-utils/text-elements-without-ability/text-elements-without-ability.component";
 
 @Component({
-    selector: 'app-ability-list-item',
+    selector: 'app-ability-old-list-item',
     imports: [NgbCollapse, RequirementsPrettierPipe, DynamicContentComponent, TextProcessorPipe, TextElementsWithoutAbilityComponent],
-    templateUrl: './ability-list-item.component.html',
-    styleUrl: './ability-list-item.component.scss'
+    templateUrl: './ability-old-list-item.component.html',
+    styleUrl: './ability-old-list-item.component.scss'
 })
 export class AbilityListItemComponent {
   ability = input<AbilityOld>();

@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "copy:assets": "xcopy ..\\common_resources\\assets\\icons\\ .\\public\\assets\\icons /s /e",
+    "postinstall": "npm run copy:assets"
   },
   "private": true,
   "dependencies": {

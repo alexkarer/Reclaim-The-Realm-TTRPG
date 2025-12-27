@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { MartialManueversSearchComponent } from './martial-manuevers-search/martial-manuevers-search.component';
 import { SpellsSearchComponent } from './spells-search/spells-search.component';
 import { EquipmentSearchComponent } from './equipment-search/equipment-search.component';
 import { ClassesOverviewComponent } from './classes-overview/classes-overview.component';
@@ -34,6 +33,7 @@ import { UsefulTablesPageComponent } from './rules-reference/pages/useful-tables
 import { ChaseRulesPageComponent } from './rules-reference/pages/chase-rules-page/chase-rules-page.component';
 import { MovementPageComponent } from './rules-reference/pages/movement-page/movement-page.component';
 import { StandardAbilitiesPageComponent } from './rules-reference/pages/standard-abilities/standard-abilities-page.component';
+import { TechniquesSearchComponent } from './techniques-search/techniques-search.component';
 
 export const routes: Routes = [
     {
@@ -212,7 +212,7 @@ export const routes: Routes = [
     },
     {
         path: 'techniques',
-        component: MartialManueversSearchComponent,
+        component: TechniquesSearchComponent,
         title: 'Reclaim the Realm - Techniques'
     },
     {

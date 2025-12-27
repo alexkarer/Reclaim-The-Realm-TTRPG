@@ -1,0 +1,24 @@
+<div [class]="colourClass + ' card'">
+    <div class="card-header btn header">
+        <div class="d-flex flex-row align-items-center">
+            <img class="image-wrapper" [src]="ability()?.meta?.iconPath">
+            <h4 class="ms-2">{{ ability()?.name }}</h4>
+            <p class="fst-italic text-body-secondary ms-3"><span class="text-body">Tags: </span><app-dynamic-content [content]="ability()?.tags?.join('; ') | textProcessor"></app-dynamic-content></p>
+        </div>
+    </div>
+    <div class="card-body body">
+        <p class="description my-0"><span class="fw-bold">Requirements: </span><app-dynamic-content [content]="ability()?.requirements | requirementsPrettier | textProcessor"></app-dynamic-content></p>
+        <p class="description my-0"><span class="fw-bold">Cost: </span><app-dynamic-content [content]="abilityCost | textProcessor"></app-dynamic-content></p>
+        <h5>Actions</h5>
+        <div class="d-flex flex-col">
+            @for (action of ability()?.actions; track $index) {
+                <app-ability-action [action]="action"></app-ability-action>
+                <hr>
+            }
+        </div>
+        @if (ability()?.flavorText) {
+            <br>
+            <span class="fst-italic text-body-secondary"><app-text-elements-without-ability [textElements]="ability()?.flavorText"></app-text-elements-without-ability></span>
+        }
+    </div>
+</div>

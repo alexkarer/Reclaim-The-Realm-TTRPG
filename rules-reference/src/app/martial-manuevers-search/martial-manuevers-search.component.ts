@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { basicManeuvers, ManeuverCollection, MartialManeuver, advancedManeuvers, masterManeuvers, transcendentManeuvers, transcendentTacticalManeuvers } from '../../../../common_resources/martial_maneuvers/martial-maneuvers';
-import { AbilityListComponent } from "../shared/ability/ability-list/ability-list.component";
+import { AbilityListComponent } from "../shared/ability/ability-list/ability-old-list.component";
 import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 

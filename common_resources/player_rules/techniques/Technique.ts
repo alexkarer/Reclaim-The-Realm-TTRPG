@@ -15,7 +15,7 @@ export class Technique extends Ability {
 type JsonTechniques = typeof agilityTechniquesJson;
 type JsonTechnique = typeof agilityTechniquesJson.basic[0];
 
-export const allTechniques = [...map(agilityTechniquesJson), ...map(brawlTechniquesJson), ...map(fortitudeTechniquesJson), ...map(leaderTechniquesJson), ...map(tacticalTechniquesJson)];
+export const ALL_TECHNIQUES = [...map(agilityTechniquesJson), ...map(brawlTechniquesJson), ...map(fortitudeTechniquesJson), ...map(leaderTechniquesJson), ...map(tacticalTechniquesJson)];
 
 function map(jsonTechniques: JsonTechniques) : Technique[] {
     return [

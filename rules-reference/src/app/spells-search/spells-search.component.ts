@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbilityListComponent } from '../shared/ability/ability-list/ability-list.component';
+import { AbilityListComponent } from '../shared/ability/ability-list/ability-old-list.component';
 import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { allSpells, Spell } from '../../../../common_resources/spells/spells';
