@@ -95,7 +95,7 @@
             ],
             "push": {
                 "cost": "2 [MP]",
-                "effect": "You cam move an additional [FIELD] (1.5m). This Ability can be pushed multiple times."
+                "effect": "You can move an additional [FIELD] (1.5m). This Ability can be pushed multiple times."
             }
         }
     ],

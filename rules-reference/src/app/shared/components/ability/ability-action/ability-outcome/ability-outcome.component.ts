@@ -29,14 +29,14 @@ export class AbilityOutcomeComponent {
   }
 
   get healText(): string {
-    return `Heal ${this.outcome()?.healExpression}${this.outcome()?.healThp ? ' [THP]' : '[HP]'}`;
+    return `Heal ${this.outcome()?.healExpression}${this.outcome()?.healThp ? ' [THP]' : ' [HP]'}`;
   }
 
   get statusEffectText(): string {
     if (this.outcome()?.statusEffectDurationUnit === StatusEffectDurationUnit.INDEFINATE) {
       return `Apply [${this.outcome()?.statusEffect}]`;
     } else {
-      return `Apply [${this.outcome()?.statusEffect}] for ${this.outcome()?.statusEffectDuration} [${this.outcome()?.statusEffectDurationUnit}]`;
+      return `Apply [${this.outcome()?.statusEffect}] for ${this.outcome()?.statusEffectDuration} ${this.outcome()?.statusEffectDurationUnit}`;
     }
   }
 }

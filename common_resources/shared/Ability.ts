@@ -44,7 +44,7 @@ export type AbilityAction = {
 
 export enum AbilityActionType { NO_ACTION, SIMPLE, MARTIAL_TEST, SPELL_TEST, D20_TEST }
 export enum AbilityRangeType { NONE, MELEE, FIELDS }
-export enum AbilityTargetType { NONE, SELF, INDIVIDUAL, SPHERE, LINE, CONE, CUSTOM }
+export enum AbilityTargetType { NONE, SELF, INDIVIDUAL, SPHERE, LINE, CONE, AURA, ALL, CUSTOM }
 export enum AbilityOpposingSave { NONE, STABILITY = 'STABILITY', DODGE = 'DODGE', TOUGHNESS = 'TOUGHNESS', WILLPOWER = 'WILLPOWER' }
 export enum AbilityAttribute { NONE, STR = 'STR', AGI = 'AGI', CON = 'CON', INT = 'INT', SPI = 'SPI', PER = 'PER', CHA = 'CHA' }
 
@@ -63,7 +63,7 @@ export type AbilityActionOutcome = {
 }
 
 export enum AbilityActionOutcomeType { FREETEXT, DAMAGE, HEAL, STATUS_EFFECT }
-export enum StatusEffectDurationUnit { NONE, INDEFINATE, ROUNDS, MINUTES, HOURS }
+export enum StatusEffectDurationUnit { NONE, INDEFINATE, ROUND = '[ROUND]', MINUTE = 'Minute(s)', HOUR = 'Hour(s)' }
 
 export class AbilityOld {
     name!: string;
@@ -201,6 +201,10 @@ export function parseAbilityTargetType(s?: string): AbilityTargetType {
         return AbilityTargetType.SPHERE;
     } else if (s.startsWith("LINE")) {
         return AbilityTargetType.LINE;
+    } else if (s.startsWith("AURA")) {
+        return AbilityTargetType.AURA;
+    } else if (s.startsWith("ALL")) {
+        return AbilityTargetType.ALL;
     } else if (s.startsWith("NONE")) {
         return AbilityTargetType.NONE;
     }else {
@@ -254,12 +258,12 @@ export function parseStatusEffectDurationUnit(s?: string): StatusEffectDurationU
         console.error("StatusEffectDurationUnit not defined! Setting NONE");
         return StatusEffectDurationUnit.NONE;
     }
-    if (s.startsWith("ROUNDS")) {
-        return StatusEffectDurationUnit.ROUNDS
-    } else if (s.startsWith("MINUTES")) {
-        return StatusEffectDurationUnit.MINUTES;
-    } else if (s.startsWith("HOURS")) {
-        return StatusEffectDurationUnit.HOURS;
+    if (s.startsWith("ROUND")) {
+        return StatusEffectDurationUnit.ROUND
+    } else if (s.startsWith("MINUTE")) {
+        return StatusEffectDurationUnit.MINUTE;
+    } else if (s.startsWith("HOUR")) {
+        return StatusEffectDurationUnit.HOUR;
     } else if (s.startsWith("INDEFINATE")) {
         return StatusEffectDurationUnit.INDEFINATE;
     } else if (s.startsWith("NONE")) {

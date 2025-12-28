@@ -93,7 +93,7 @@
         {
             "name": "Throw",
             "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
-            "tags": [ "Technique (Brawl, Basic)", "Attack" ],
+            "tags": [ "Technique (Brawl, Basic)" ],
             "meta": { "iconPath": "icons/skills/targeting/target-strike-gray.webp", "colour": "ORANGE" },
             "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "actions": [

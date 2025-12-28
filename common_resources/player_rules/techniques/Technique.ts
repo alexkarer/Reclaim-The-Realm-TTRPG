@@ -12,8 +12,8 @@ export class Technique extends Ability {
     } | null;
 }
 
-type JsonTechniques = typeof agilityTechniquesJson | typeof brawlTechniquesJson;
-type JsonTechnique = typeof agilityTechniquesJson.basic[0] | typeof brawlTechniquesJson.basic[0];
+type JsonTechniques = typeof agilityTechniquesJson | typeof brawlTechniquesJson | typeof fortitudeTechniquesJson  | typeof leaderTechniquesJson;
+type JsonTechnique = typeof agilityTechniquesJson.basic[0] | typeof brawlTechniquesJson.basic[0] | typeof fortitudeTechniquesJson.basic[0] | typeof leaderTechniquesJson.basic[0];
 
 export const ALL_TECHNIQUES = [...map(agilityTechniquesJson), ...map(brawlTechniquesJson), ...map(fortitudeTechniquesJson), ...map(leaderTechniquesJson), ...map(tacticalTechniquesJson)];
 
@@ -58,7 +58,9 @@ function mapIconPath(s: string) {
 
 const agileSampleAction = agilityTechniquesJson.basic[0].actions[0];
 const brawlSampleAction = brawlTechniquesJson.basic[0].actions[0];
-type JsonAction = typeof agileSampleAction | typeof brawlSampleAction;
+const fortitudeSampleAction = fortitudeTechniquesJson.basic[0].actions[0];
+const leaderSampleAction = leaderTechniquesJson.basic[0].actions[0];
+type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction;
 
 function mapAction(jsonAction: JsonAction): AbilityAction {
     return {
@@ -82,7 +84,9 @@ function mapAction(jsonAction: JsonAction): AbilityAction {
 
 const agileSampleOutcome = agileSampleAction.outcomesAlways[0];
 const brawlSampleOutcome = brawlSampleAction.outcomesOnSuccess[0];
-type JsonOutcome = typeof agileSampleOutcome | typeof brawlSampleOutcome;
+const fortitudeSampleOutcome = fortitudeSampleAction.outcomesOnSuccess[0];
+const leaderSampleOutcome = leaderSampleAction.outcomesOnSuccess[0];
+type JsonOutcome = typeof agileSampleOutcome | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome;
 
 function mapOutcome(jsonOutcome: JsonOutcome): AbilityActionOutcome {
     return {

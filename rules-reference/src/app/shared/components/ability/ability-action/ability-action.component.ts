@@ -65,9 +65,11 @@ export class AbilityActionComponent {
     switch(targetType) {
       case AbilityTargetType.SELF: text = '[SELF]'; break;
       case AbilityTargetType.INDIVIDUAL: text = `${this.action()?.targets}`; break;
-      case AbilityTargetType.SPHERE: text = `[SPHERE] ${this.action()?.targetAreaSizeFields}[FIELD] (${this.action()?.targetAreaSizeFields ?? 0 * 1.5}m)`; break;
-      case AbilityTargetType.LINE: text = `[LINE] ${this.action()?.targetAreaSizeFields}[FIELD] (${this.action()?.targetAreaSizeFields ?? 0 * 1.5}m)`; break;
-      case AbilityTargetType.CONE: text = `[CONE] ${this.action()?.targetAreaSizeFields}[FIELD] (${this.action()?.targetAreaSizeFields ?? 0 * 1.5}m)`; break;
+      case AbilityTargetType.SPHERE: text = `[SPHERE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
+      case AbilityTargetType.LINE: text = `[LINE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
+      case AbilityTargetType.CONE: text = `[CONE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
+      case AbilityTargetType.AURA: text = `[AURA] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
+      case AbilityTargetType.ALL: text = `All creatures within ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
       case AbilityTargetType.CUSTOM: text = `${this.action()?.customTargeting}`; break;
     }
 
@@ -92,7 +94,7 @@ export class AbilityActionComponent {
     
     switch (rangeType) {
       case AbilityRangeType.MELEE: text = '[MELEE]'; break;
-      case AbilityRangeType.FIELDS: text = `${this.action()?.rangeDistanceFields}[FIELD] (${this.action()?.rangeDistanceFields ?? 0 * 1.5}m);`; break;
+      case AbilityRangeType.FIELDS: text = `${this.action()?.rangeDistanceFields}[FIELD] (${(this.action()?.rangeDistanceFields ?? 0) * 1.5}m);`; break;
     }
 
     if (text === '') {

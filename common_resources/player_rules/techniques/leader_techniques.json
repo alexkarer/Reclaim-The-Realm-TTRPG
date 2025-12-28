@@ -1,6 +1,49 @@
 {
     "basic": [
-        
+        {
+            "name": "Taunt",
+            "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+            "tags": [ "Technique (Leader, Basic)", "Charm" ],
+            "meta": { "iconPath": "icons/skills/social/intimidation-impressing.webp", "colour": "YELLOW" },
+            "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "actions": [
+                {
+                    "actionType": "MARTIAL_TEST",
+                    "customCondition": null,
+                    "attribute": "CHA",
+                    "rangeType": "NONE",
+                    "rangeDistanceFields": 0,
+                    "targetType": "ALL",
+                    "customTargeting": "",
+                    "targets": 0,
+                    "targetAreaSizeFields": 2,
+                    "opposingSave": "WILLPOWER",
+                    "outcomesAlways": [],
+                    "outcomesOnCritSuccess": [],
+                    "outcomesOnSuccess": [
+                        {
+                            "outcomeType": "STATUS_EFFECT",
+                            "damageExpression": "",
+                            "damageType": "",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "TAUNTED",
+                            "statusEffectDuration": 1,
+                            "statusEffectDurationUnit": "ROUND",
+                            "freeText": [ ]
+                        }
+                    ],
+                    "outcomesOnFail": [],
+                    "outcomesOnCritFail": []
+                }
+            ],
+            "flavorText": [
+                { "regularText": "", "headerLine": null, "bulletPoints": null}
+            ],
+            "push": null
+        }
     ],
     "advanced": [
 

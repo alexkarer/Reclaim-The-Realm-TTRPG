@@ -223,6 +223,11 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 - Move Player Character creation to separate page from Rules (✅)
 
+- Allow more filter options for Abilities (❌)
+    - Filter for Tags: Reaction, Attack, Move (❌)
+    - add more tags: Heal?
+    - Add sorting
+
 - Remove initial page and keywords since ATTACK is getting removed (❌)
     - remove degree of success/failure part (❌)
     - mention that everything is an ability (❌)
@@ -238,9 +243,10 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - Clear TODO lists (❌)
  - Size should be moved away from player rules (❌)
 
-- Fomratting cahnges (❌)
+- Fomratting changes (❌)
  - Check where Info and additional explainer boxes might be needed (❌)
  - add certain key values and formulas as a sidebar. (❌)
  - instead of range in meters use [FIELD] to designate ranges (❌)
+ - add feature to reference Abilities directly (❌)
 
 - Verify all console errors are gone (❌)
