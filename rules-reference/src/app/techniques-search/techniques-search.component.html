@@ -40,8 +40,12 @@
     <input class="form-control me-2" type="search" placeholder="Search in name and tags" aria-label="Search" (input)="onFreeTextFilterChange()" [(ngModel)]="currentFilterText">
   </div>
 </nav>
-<div class="techniques-wrapper">
-  @for (technique of filteredTechniques; track $index) {
-    <app-ability [ability]="technique"></app-ability>
-  }
+<div class="container">
+  <div class="row row-cols-lg-3 g-3">
+      @for (technique of filteredTechniques; track $index) {
+        <div class="col" style="min-width: 400px;">
+          <app-ability [ability]="technique"></app-ability>
+        </div>
+      }
+  </div>
 </div>

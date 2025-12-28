@@ -85,7 +85,7 @@ function generateTagContentPart(keyword: string): ContentPart | undefined {
 function generateRulesContentPart(keyword: string): ContentPart | undefined {
     const foundKeyword = keywordMap.get(keyword);
     if (foundKeyword) {
-        return generateGenericKeyword(foundKeyword.name, foundKeyword.description, foundKeyword.link);
+        return generateGenericKeyword(foundKeyword.displayName, foundKeyword.description, foundKeyword.link);
     }
     return undefined;
 }

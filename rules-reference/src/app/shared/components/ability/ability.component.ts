@@ -24,6 +24,8 @@ export class AbilityComponent {
       case AbilityColour.RED: colourText = 'ability-red'; break;
       case AbilityColour.BLUE: colourText = 'ability-blue'; break;
       case AbilityColour.YELLOW: colourText = 'ability-yellow'; break;
+      case AbilityColour.ORANGE: colourText = 'ability-orange'; break;
+      case AbilityColour.BROWN: colourText = 'ability-brown'; break;
       case AbilityColour.COLOURLESS: colourText = 'ability-colourless'; break;
     }
     return colourText;
@@ -53,7 +55,28 @@ export class AbilityComponent {
     return costText.join(' ');
   }
 
-  isTechnique(): boolean {
-    return (this.ability() instanceof Technique)
+  get isTechniqueAndHasPush(): boolean {
+    let ability = this.ability();
+    if (ability instanceof Technique) {
+      return ability.push !== null;
+    } else {
+      return false;
+    }
+  }
+
+  get pushingCost(): string {
+    let ability = this.ability();
+    if (ability instanceof Technique) {
+      return ability.push?.cost ?? '';
+    }
+    return '';
+  }
+
+  get pushingEffect(): string {
+    let ability = this.ability();
+    if (ability instanceof Technique) {
+      return ability.push?.effect ?? '';
+    }
+    return '';
   }
 }

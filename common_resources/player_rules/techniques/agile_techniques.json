@@ -3,40 +3,42 @@
         {
             "name": "Wall Jump",
             "cost": { "ap": 0, "mp": 3, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
-            "tags": [ "[REACTION]", "Technique (Agile, Basic)", "Movement" ],
+            "tags": [ "[REACTION]", "Technique (Agile, Basic)", "Move" ],
             "meta": { "iconPath": "/assets/icons/abilities/jump-across.svg", "colour": "GREEN" },
             "requirements": { "requiredLevels": [], "requiredAttributes": [ { "amount": 3, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
             "actions": [
                 {
-                    "actionType": "CUSTOM_CONDITION",
+                    "actionType": "SIMPLE",
                     "customCondition": "When coming in contact with a vertical surface",
-                    "rollBonus": "",
-                    "rangeType": "UNSPECIFIED",
+                    "attribute": "NONE",
+                    "rangeType": "NONE",
                     "rangeDistanceFields": 0,
                     "targetType": "SELF",
                     "customTargeting": "",
                     "targets": 0,
-                    "targetAreaSizeM": 0,
-                    "opposingSave": "UNSPECIFIED",
+                    "targetAreaSizeFields": 0,
+                    "opposingSave": "NONE",
                     "outcomesAlways": [
                         {
                             "outcomeType": "FREETEXT",
                             "damageExpression": "",
+                            "damageType": "",
+                            "critDamage": false,
                             "halfDamage": false,
                             "healExpression": "",
                             "healThp": false,
                             "statusEffect": "",
                             "statusEffectDuration": 0,
-                            "statusEffectDurationUnit": "UNSPECIFIED",
+                            "statusEffectDurationUnit": "NONE",
                             "freeText": [
-                                    { "regularText": "You can immedatly use a [TAG;Jump] Ability at no cost but halve the distance moved. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. Depending on surface conditions the GM might require you to perform a [AGI] Athletics [SKILL TEST].", "headerLine": null, "bulletPoints": null } 
+                                    { "regularText": "You can immedatly use a [TAG;Jump] Ability at no cost but halve the distance jumped. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. Depending on surface conditions the GM might require you to perform a [AGI] Athletics [D20 TEST].", "headerLine": null, "bulletPoints": null } 
                             ]
                         }
                     ],
                     "outcomesOnCritSuccess": [],
                     "outcomesOnSuccess": [],
-                    "outcomesOnFailure": [],
-                    "outcomesOnCritFailure": []
+                    "outcomesOnFail": [],
+                    "outcomesOnCritFail": []
                 }
             ],
             "flavorText": [
@@ -44,7 +46,56 @@
             ],
             "push": {
                 "cost": "1 [STAMINA]",
-                "effect": "When you push this maneuver your pushing distance is not halved."
+                "effect": "The distance jumped is not halved."
+            }
+        },
+        {
+            "name": "Pass Through",
+            "cost": { "ap": 0, "mp": 4, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+            "tags": [ "Technique (Agile, Basic)", "Move" ],
+            "meta": { "iconPath": "/assets/icons/abilities/ghost-ally.svg", "colour": "GREEN" },
+            "requirements": { "requiredLevels": [], "requiredAttributes": [ { "amount": 3, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "actions": [
+                {
+                    "actionType": "SIMPLE",
+                    "customCondition": null,
+                    "attribute": "NONE",
+                    "rangeType": "NONE",
+                    "rangeDistanceFields": 0,
+                    "targetType": "SELF",
+                    "customTargeting": "",
+                    "targets": 0,
+                    "targetAreaSizeFields": 0,
+                    "opposingSave": "NONE",
+                    "outcomesAlways": [
+                        {
+                            "outcomeType": "FREETEXT",
+                            "damageExpression": "",
+                            "damageType": "",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "NONE",
+                            "freeText": [
+                                    { "regularText": "You can move 2[FIELD] (3m). During this movement you can move through opposing creatures but can't end your movement in fields occupied by them.", "headerLine": null, "bulletPoints": null } 
+                            ]
+                        }
+                    ],
+                    "outcomesOnCritSuccess": [],
+                    "outcomesOnSuccess": [],
+                    "outcomesOnFail": [],
+                    "outcomesOnCritFail": []
+                }
+            ],
+            "flavorText": [
+                { "regularText": "", "headerLine": null, "bulletPoints": null}
+            ],
+            "push": {
+                "cost": "2 [MP]",
+                "effect": "You cam move an additional [FIELD] (1.5m). This Ability can be pushed multiple times."
             }
         }
     ],

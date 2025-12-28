@@ -22,35 +22,38 @@ export type AbilityCost = {
     other: string
 }
 
-export enum AbilityColour { GREEN, RED, BLUE, YELLOW, COLOURLESS }
+export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, COLOURLESS }
 
 export type AbilityAction = {
     type: AbilityActionType,
-    customCondition: string
-    rollBonus: string,
+    customCondition: string | null,
+    attribute: AbilityAttribute,
     rangeType: AbilityRangeType,
     rangeDistanceFields: number
     targetType: AbilityTargetType,
     customTargeting: string,
     targets: number,
-    targetAreaSizeM: number,
+    targetAreaSizeFields: number,
     opposingSave: AbilityOpposingSave,
     outcomesAlways: AbilityActionOutcome[];
     outcomesOnCritSuccess: AbilityActionOutcome[],
     outcomesOnSuccess: AbilityActionOutcome[],
-    outcomesOnFailure: AbilityActionOutcome[],
-    outcomesOnCritFailure: AbilityActionOutcome[]
+    outcomesOnFail: AbilityActionOutcome[],
+    outcomesOnCritFail: AbilityActionOutcome[]
 }
 
-export enum AbilityActionType { FIXED, MARTIAL_TEST, SPELL_TEST, D20_TEST, CUSTOM_CONDITION }
-export enum AbilityRangeType { UNSPECIFIED, MELEE, FIELDS }
-export enum AbilityTargetType { UNSPECIFIED, SELF, INDIVIDUAL, SPHERE, LINE, CONE, CUSTOM }
-export enum AbilityOpposingSave { UNSPECIFIED, STABILITY, DODGE, TOUGHNESS, WILLPOWER }
+export enum AbilityActionType { NO_ACTION, SIMPLE, MARTIAL_TEST, SPELL_TEST, D20_TEST }
+export enum AbilityRangeType { NONE, MELEE, FIELDS }
+export enum AbilityTargetType { NONE, SELF, INDIVIDUAL, SPHERE, LINE, CONE, CUSTOM }
+export enum AbilityOpposingSave { NONE, STABILITY = 'STABILITY', DODGE = 'DODGE', TOUGHNESS = 'TOUGHNESS', WILLPOWER = 'WILLPOWER' }
+export enum AbilityAttribute { NONE, STR = 'STR', AGI = 'AGI', CON = 'CON', INT = 'INT', SPI = 'SPI', PER = 'PER', CHA = 'CHA' }
 
 export type AbilityActionOutcome = {
     outcomeType: AbilityActionOutcomeType,
     damageExpression: string,
+    damageType: string,
     halfDamage: boolean,
+    critDamage: boolean,
     healExpression: string,
     healThp: boolean,
     statusEffect: string,
@@ -60,7 +63,7 @@ export type AbilityActionOutcome = {
 }
 
 export enum AbilityActionOutcomeType { FREETEXT, DAMAGE, HEAL, STATUS_EFFECT }
-export enum StatusEffectDurationUnit { ROUNDS, MINUTES, HOURS, UNSPECIFIED }
+export enum StatusEffectDurationUnit { NONE, INDEFINATE, ROUNDS, MINUTES, HOURS }
 
 export class AbilityOld {
     name!: string;
@@ -103,9 +106,13 @@ export function parseAbilityColour(s?: string): AbilityColour {
     } else if (s.startsWith("GREEN")) {
         return AbilityColour.GREEN;
     } else if (s.startsWith("YELLOW")) {
-        return AbilityColour.YELLOW
+        return AbilityColour.YELLOW;
+    } else if (s.startsWith("ORANGE")) {
+        return AbilityColour.ORANGE;
+    } else if (s.startsWith("BROWN")) {
+        return AbilityColour.BROWN;
     } else if (s.startsWith("COLOURLESS")) {
-        return AbilityColour.COLOURLESS
+        return AbilityColour.COLOURLESS;
     } else {
         console.error(`Ability colour ${s} not recognized! Setting colourless`);
         return AbilityColour.COLOURLESS;
@@ -114,46 +121,73 @@ export function parseAbilityColour(s?: string): AbilityColour {
 
 export function parseAbilityActionType(s?: string): AbilityActionType {
     if (!s) {
-        console.error("AbilityActionType not defined! Setting FIXED");
-        return AbilityActionType.FIXED;
+        console.error("AbilityActionType not defined! Setting NO_ACTION");
+        return AbilityActionType.NO_ACTION;
     }
-    if (s.startsWith("CUSTOM_CONDITION")) {
-        return AbilityActionType.CUSTOM_CONDITION;
-    } else if (s.startsWith("D20_TEST")) {
+    if (s.startsWith("D20_TEST")) {
         return AbilityActionType.D20_TEST;
     } else if (s.startsWith("MARTIAL_TEST")) {
         return AbilityActionType.MARTIAL_TEST;
     } else if (s.startsWith("SPELL_TEST")) {
         return AbilityActionType.SPELL_TEST;
-    } else if (s.startsWith("FIXED")) {
-        return AbilityActionType.FIXED;
+    } else if (s.startsWith("SIMPLE")) {
+        return AbilityActionType.SIMPLE;
+    } else if (s.startsWith("NO_ACTION")) {
+        return AbilityActionType.NO_ACTION;
     }  else {
-        console.error(`AbilityActionType ${s} not recognized! Setting FIXED`);
-        return AbilityActionType.FIXED;
+        console.error(`AbilityActionType ${s} not recognized! Setting NO_ACTION`);
+        return AbilityActionType.NO_ACTION;
+    }
+}
+
+export function parseAbilityAttribute(s?: string): AbilityAttribute {
+    if (!s) {
+        console.error("AbilityAttribute not defined! Setting NONE");
+        return AbilityAttribute.NONE;
+    }
+    if (s.startsWith("STR")) {
+        return AbilityAttribute.STR;
+    } else if (s.startsWith("AGI")) {
+        return AbilityAttribute.AGI;
+    } else if (s.startsWith("CON")) {
+        return AbilityAttribute.CON;
+    } else if (s.startsWith("INT")) {
+        return AbilityAttribute.INT;
+    } else if (s.startsWith("SPI")) {
+        return AbilityAttribute.SPI;
+    }else if (s.startsWith("PER")) {
+        return AbilityAttribute.PER;
+    }else if (s.startsWith("CHA")) {
+        return AbilityAttribute.CHA;
+    } else if (s.startsWith("NONE")) {
+        return AbilityAttribute.NONE;
+    } else {
+        console.error(`AbilityAttribute ${s} not recognized! Setting NONE`);
+        return AbilityAttribute.NONE;
     }
 }
 
 export function parseAbilityRangeType(s?: string): AbilityRangeType {
     if (!s) {
-        console.error("AbilityRangeType not defined! Setting UNSPECIFIED");
-        return AbilityRangeType.UNSPECIFIED;
+        console.error("AbilityRangeType not defined! Setting NONE");
+        return AbilityRangeType.NONE;
     }
     if (s.startsWith("MELEE")) {
         return AbilityRangeType.MELEE;
     } else if (s.startsWith("FIELDS")) {
         return AbilityRangeType.FIELDS;
-    } else if (s.startsWith("UNSPECIFIED")) {
-        return AbilityRangeType.UNSPECIFIED;
+    } else if (s.startsWith("NONE")) {
+        return AbilityRangeType.NONE;
     } else {
-        console.error(`AbilityRangeType ${s} not recognized! Setting UNSPECIFIED`);
-        return AbilityRangeType.UNSPECIFIED;
+        console.error(`AbilityRangeType ${s} not recognized! Setting NONE`);
+        return AbilityRangeType.NONE;
     }
 }
 
 export function parseAbilityTargetType(s?: string): AbilityTargetType {
     if (!s) {
-        console.error("AbilityTargetType not defined! Setting UNSPECIFIED");
-        return AbilityTargetType.UNSPECIFIED;
+        console.error("AbilityTargetType not defined! Setting NONE");
+        return AbilityTargetType.NONE;
     }
     if (s.startsWith("SELF")) {
         return AbilityTargetType.SELF;
@@ -167,18 +201,18 @@ export function parseAbilityTargetType(s?: string): AbilityTargetType {
         return AbilityTargetType.SPHERE;
     } else if (s.startsWith("LINE")) {
         return AbilityTargetType.LINE;
-    } else if (s.startsWith("UNSPECIFIED")) {
-        return AbilityTargetType.UNSPECIFIED;
+    } else if (s.startsWith("NONE")) {
+        return AbilityTargetType.NONE;
     }else {
-        console.error(`AbilityTargetType ${s} not recognized! Setting UNSPECIFIED`);
-        return AbilityTargetType.UNSPECIFIED;
+        console.error(`AbilityTargetType ${s} not recognized! Setting NONE`);
+        return AbilityTargetType.NONE;
     }
 }
 
 export function parseAbilityOpposingSave(s?: string): AbilityOpposingSave {
     if (!s) {
-        console.error("AbilityOpposingSave not defined! Setting UNSPECIFIED");
-        return AbilityOpposingSave.UNSPECIFIED;
+        console.error("AbilityOpposingSave not defined! Setting NONE");
+        return AbilityOpposingSave.NONE;
     }
     if (s.startsWith("STABILITY")) {
         return AbilityOpposingSave.STABILITY
@@ -188,11 +222,11 @@ export function parseAbilityOpposingSave(s?: string): AbilityOpposingSave {
         return AbilityOpposingSave.TOUGHNESS;
     } else if (s.startsWith("WILLPOWER")) {
         return AbilityOpposingSave.WILLPOWER;
-    } else if (s.startsWith("UNSPECIFIED")) {
-        return AbilityOpposingSave.UNSPECIFIED;
+    } else if (s.startsWith("NONE")) {
+        return AbilityOpposingSave.NONE;
     } else {
-        console.error(`AbilityOpposingSave ${s} not recognized! Setting UNSPECIFIED`);
-        return AbilityOpposingSave.UNSPECIFIED;
+        console.error(`AbilityOpposingSave ${s} not recognized! Setting NONE`);
+        return AbilityOpposingSave.NONE;
     }
 }
 
@@ -217,8 +251,8 @@ export function parseAbilityActionOutcomeType(s?: string): AbilityActionOutcomeT
 
 export function parseStatusEffectDurationUnit(s?: string): StatusEffectDurationUnit {
     if (!s) {
-        console.error("StatusEffectDurationUnit not defined! Setting UNSPECIFIED");
-        return StatusEffectDurationUnit.UNSPECIFIED;
+        console.error("StatusEffectDurationUnit not defined! Setting NONE");
+        return StatusEffectDurationUnit.NONE;
     }
     if (s.startsWith("ROUNDS")) {
         return StatusEffectDurationUnit.ROUNDS
@@ -226,10 +260,12 @@ export function parseStatusEffectDurationUnit(s?: string): StatusEffectDurationU
         return StatusEffectDurationUnit.MINUTES;
     } else if (s.startsWith("HOURS")) {
         return StatusEffectDurationUnit.HOURS;
-    } else if (s.startsWith("UNSPECIFIED")) {
-        return StatusEffectDurationUnit.UNSPECIFIED;
+    } else if (s.startsWith("INDEFINATE")) {
+        return StatusEffectDurationUnit.INDEFINATE;
+    } else if (s.startsWith("NONE")) {
+        return StatusEffectDurationUnit.NONE;
     } else {
-        console.error(`StatusEffectDurationUnit ${s} not recognized! Setting UNSPECIFIED`);
-        return StatusEffectDurationUnit.UNSPECIFIED;
+        console.error(`StatusEffectDurationUnit ${s} not recognized! Setting NONE`);
+        return StatusEffectDurationUnit.NONE;
     }
 }

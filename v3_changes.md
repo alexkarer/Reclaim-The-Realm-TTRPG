@@ -241,5 +241,6 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - Fomratting cahnges (❌)
  - Check where Info and additional explainer boxes might be needed (❌)
  - add certain key values and formulas as a sidebar. (❌)
+ - instead of range in meters use [FIELD] to designate ranges (❌)
 
 - Verify all console errors are gone (❌)

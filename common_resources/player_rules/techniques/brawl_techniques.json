@@ -1,6 +1,322 @@
 {
     "basic": [
-        
+        {
+            "name": "Pin Down",
+            "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+            "tags": [ "Technique (Brawl, Basic)" ],
+            "meta": { "iconPath": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp", "colour": "ORANGE" },
+            "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "actions": [
+                {
+                    "actionType": "MARTIAL_TEST",
+                    "customCondition": null,
+                    "attribute": "STR",
+                    "rangeType": "MELEE",
+                    "rangeDistanceFields": 0,
+                    "targetType": "CUSTOM",
+                    "customTargeting": "1 Creature affected by [RESTRAINED I]",
+                    "targets": 1,
+                    "targetAreaSizeFields": 0,
+                    "opposingSave": "STABILITY",
+                    "outcomesAlways": [],
+                    "outcomesOnCritSuccess": [],
+                    "outcomesOnSuccess": [
+                        {
+                            "outcomeType": "STATUS_EFFECT",
+                            "damageExpression": "",
+                            "damageType": "",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "RESTRAINED II",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "INDEFINATE",
+                            "freeText": []
+                        }
+                    ],
+                    "outcomesOnFail": [],
+                    "outcomesOnCritFail": []
+                }
+            ],
+            "flavorText": [
+                { "regularText": "", "headerLine": null, "bulletPoints": null}
+            ],
+            "push": null
+        },
+        {
+            "name": "Meat Shield",
+            "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+            "tags": [ "[REACTION]", "Technique (Brawl, Basic)" ],
+            "meta": { "iconPath": "icons/skills/melee/shield-block-bash-blue.webp", "colour": "ORANGE" },
+            "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "actions": [
+                {
+                    "actionType": "MARTIAL_TEST",
+                    "customCondition": "You are targeted by an [TAG;Attack] Ability.",
+                    "attribute": "STR",
+                    "rangeType": "MELEE",
+                    "rangeDistanceFields": 0,
+                    "targetType": "CUSTOM",
+                    "customTargeting": "1 Creature affected by [RESTRAINED I]",
+                    "targets": 1,
+                    "targetAreaSizeFields": 0,
+                    "opposingSave": "STABILITY",
+                    "outcomesAlways": [],
+                    "outcomesOnCritSuccess": [],
+                    "outcomesOnSuccess": [
+                        {
+                            "outcomeType": "FREETEXT",
+                            "damageExpression": "",
+                            "damageType": "",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "NONE",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "NONE",
+                            "freeText": [
+                                { "regularText": "The target of this Ability becomes the target of the [TAG;Attack] Ability instead.", "headerLine": null, "bulletPoints": null } 
+                            ]
+                        }
+                    ],
+                    "outcomesOnFail": [],
+                    "outcomesOnCritFail": []
+                }
+            ],
+            "flavorText": [
+                { "regularText": "", "headerLine": null, "bulletPoints": null}
+            ],
+            "push": null
+        },
+        {
+            "name": "Throw",
+            "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+            "tags": [ "Technique (Brawl, Basic)", "Attack" ],
+            "meta": { "iconPath": "icons/skills/targeting/target-strike-gray.webp", "colour": "ORANGE" },
+            "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "actions": [
+                {
+                    "actionType": "MARTIAL_TEST",
+                    "customCondition": null,
+                    "attribute": "STR",
+                    "rangeType": "MELEE",
+                    "rangeDistanceFields": 0,
+                    "targetType": "CUSTOM",
+                    "customTargeting": "1 Creature affected by [RESTRAINED I]",
+                    "targets": 1,
+                    "targetAreaSizeFields": 0,
+                    "opposingSave": "STABILITY",
+                    "outcomesAlways": [],
+                    "outcomesOnCritSuccess": [],
+                    "outcomesOnSuccess": [
+                        {
+                            "outcomeType": "FREETEXT",
+                            "damageExpression": "",
+                            "damageType": "",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "NONE",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "NONE",
+                            "freeText": [
+                                { "regularText": "The target is moved up to 2 + [STR] [FIELD].", "headerLine": null, "bulletPoints": null } 
+                            ]
+                        },
+                        {
+                            "outcomeType": "DAMAGE",
+                            "damageExpression": "light [MARTIAL DAMAGE]",
+                            "damageType": "physical",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "NONE",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "NONE",
+                            "freeText": []
+                        },
+                        {
+                            "outcomeType": "STATUS_EFFECT",
+                            "damageExpression": "",
+                            "damageType": "",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "PRONE",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "INDEFINATE",
+                            "freeText": []
+                        }
+                    ],
+                    "outcomesOnFail": [],
+                    "outcomesOnCritFail": []
+                },
+                {
+                    "actionType": "SIMPLE",
+                    "customCondition": "Target of previous Action collides with another creature",
+                    "attribute": "NONE",
+                    "rangeType": "NONE",
+                    "rangeDistanceFields": 0,
+                    "targetType": "CUSTOM",
+                    "customTargeting": "The first creature that has collided with target of previous Action",
+                    "targets": 1,
+                    "targetAreaSizeFields": 0,
+                    "opposingSave": "NONE",
+                    "outcomesAlways": [],
+                    "outcomesOnCritSuccess": [],
+                    "outcomesOnSuccess": [
+                        {
+                            "outcomeType": "DAMAGE",
+                            "damageExpression": "light [MARTIAL DAMAGE]",
+                            "damageType": "physical",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "NONE",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "NONE",
+                            "freeText": []
+                        }
+                    ],
+                    "outcomesOnFail": [],
+                    "outcomesOnCritFail": []
+                }
+            ],
+            "flavorText": [
+                { "regularText": "", "headerLine": null, "bulletPoints": null}
+            ],
+            "push": null
+        },
+        {
+            "name": "Charge",
+            "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+            "tags": [ "Technique (Brawl, Basic)", "Attack", "Move" ],
+            "meta": { "iconPath": "icons/creatures/mammals/ox-bull-horned-glowing-orange.webp", "colour": "ORANGE" },
+            "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+            "actions": [
+                {
+                    "actionType": "SIMPLE",
+                    "customCondition": null,
+                    "attribute": "NONE",
+                    "rangeType": "NONE",
+                    "rangeDistanceFields": 0,
+                    "targetType": "SELF",
+                    "customTargeting": "",
+                    "targets": 1,
+                    "targetAreaSizeFields": 0,
+                    "opposingSave": "NONE",
+                    "outcomesAlways": [
+                        {
+                            "outcomeType": "FREETEXT",
+                            "damageExpression": "",
+                            "damageType": "",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "NONE",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "NONE",
+                            "freeText": [
+                                { "regularText": "You can use the Move Ability 6 times, but each move must end closer to an enemy.", "headerLine": null, "bulletPoints": null } 
+                            ]
+                        }
+                    ],
+                    "outcomesOnCritSuccess": [],
+                    "outcomesOnSuccess": [],
+                    "outcomesOnFail": [],
+                    "outcomesOnCritFail": []
+                },
+                {
+                    "actionType": "MARTIAL_TEST",
+                    "customCondition": null,
+                    "attribute": "STR",
+                    "rangeType": "MELEE",
+                    "rangeDistanceFields": 0,
+                    "targetType": "INDIVIDUAL",
+                    "customTargeting": "",
+                    "targets": 1,
+                    "targetAreaSizeFields": 0,
+                    "opposingSave": "DODGE",
+                    "outcomesAlways": [],
+                    "outcomesOnCritSuccess": [
+                        {
+                            "outcomeType": "DAMAGE",
+                            "damageExpression": "Medium [MARTIAL DAMAGE] + 1 for every [FIELD] moved with this Ability.",
+                            "damageType": "pyhsical",
+                            "critDamage": true,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "NONE",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "NONE",
+                            "freeText": [ ]
+                        }
+                    ],
+                    "outcomesOnSuccess": [
+                        {
+                            "outcomeType": "DAMAGE",
+                            "damageExpression": "Medium [MARTIAL DAMAGE] + 1 for every [FIELD] moved with this Ability",
+                            "damageType": "pyhsical",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "NONE",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "NONE",
+                            "freeText": [ ]
+                        }
+                    ],
+                    "outcomesOnFail": [
+                        {
+                            "outcomeType": "DAMAGE",
+                            "damageExpression": "Medium [MARTIAL DAMAGE] + 1 for every [FIELD] moved with this Ability",
+                            "damageType": "pyhsical",
+                            "critDamage": false,
+                            "halfDamage": true,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "NONE",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "NONE",
+                            "freeText": [ ]
+                        }
+                    ],
+                    "outcomesOnCritFail": [
+                        {
+                            "outcomeType": "FREETEXT",
+                            "damageExpression": "",
+                            "damageType": "",
+                            "critDamage": false,
+                            "halfDamage": false,
+                            "healExpression": "",
+                            "healThp": false,
+                            "statusEffect": "NONE",
+                            "statusEffectDuration": 0,
+                            "statusEffectDurationUnit": "NONE",
+                            "freeText": [
+                                { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                             ]
+                        }
+                    ]
+                }
+            ],
+            "flavorText": [
+                { "regularText": "Alright chums, Let's do this! -L. J.", "headerLine": null, "bulletPoints": null}
+            ],
+            "push": {
+                "cost": "1 [STAMINA]",
+                "effect": "You can use the move ability 6 additional times in the first Action."
+            }
+        }
     ],
     "advanced": [
 

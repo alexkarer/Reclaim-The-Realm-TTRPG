@@ -1,4 +1,85 @@
-<div>
-    <!-- TODO fixed should skip this step somehow -->
-    <app-dynamic-content [content]="actionType | textProcessor"></app-dynamic-content>
+<div class="action-wrapper mb-3">
+    @if (hasCondition) {
+        <span><span class="fw-bold">Condition: </span><app-dynamic-content [content]="condition | textProcessor"></app-dynamic-content></span>
+    }
+    @if (hasAction) {
+        @if (hasTargets) {
+        <p class="description my-0"><span class="fw-bold">Target(s): </span><app-dynamic-content [content]="targetText | textProcessor"></app-dynamic-content></p>
+        }
+        @if (hasRange) {
+        <p class="description my-0"><span class="fw-bold">Range: </span><app-dynamic-content [content]="rangeText | textProcessor"></app-dynamic-content></p>
+        }
+        @if (noSimpleAction) {
+        <p class="description my-0"><span class="fw-bold">Action: </span><app-dynamic-content [content]="actionText | textProcessor"></app-dynamic-content></p>
+        }
+    }
+
+    <hr class="my-1"/>
+
+    <div class="ms-2">
+        @if ((action()?.outcomesOnCritSuccess?.length ?? 0) > 1) {
+            <span class="fw-bold">On Crit:</span>
+            <ul>
+                @for (outcome of action()?.outcomesOnCritSuccess; track $index) {
+                    <li><app-ability-outcome [outcome]="outcome"></app-ability-outcome></li>
+                }
+            </ul>
+        } @else {
+            @for (outcome of action()?.outcomesOnCritSuccess; track $index) {
+                <p class="description my-0"><span class="fw-bold">On Crit: </span><app-ability-outcome [outcome]="outcome"></app-ability-outcome></p>
+            }
+        }
+
+        @if ((action()?.outcomesOnSuccess?.length ?? 0) > 1) {
+            <span class="fw-bold">On Success:</span>
+            <ul>
+                @for (outcome of action()?.outcomesOnSuccess; track $index) {
+                    <li><app-ability-outcome [outcome]="outcome"></app-ability-outcome></li>
+                }
+            </ul>
+        } @else {
+            @for (outcome of action()?.outcomesOnSuccess; track $index) {
+                <p class="description my-0"><span class="fw-bold">On Success: </span><app-ability-outcome [outcome]="outcome"></app-ability-outcome></p>
+            }
+        }
+
+        @if ((action()?.outcomesOnFail?.length ?? 0) > 1) {
+            <span class="fw-bold">On Fail:</span>
+            <ul>
+                @for (outcome of action()?.outcomesOnFail; track $index) {
+                    <li><app-ability-outcome [outcome]="outcome"></app-ability-outcome></li>
+                }
+            </ul>
+        } @else {
+            @for (outcome of action()?.outcomesOnFail; track $index) {
+                <p class="description my-0"><span class="fw-bold">On Fail: </span><app-ability-outcome [outcome]="outcome"></app-ability-outcome></p>
+            }
+        }
+
+        @if ((action()?.outcomesOnCritFail?.length ?? 0) > 1) {
+            <span class="fw-bold">On Crit Fail:</span>
+            <ul>
+                @for (outcome of action()?.outcomesOnCritFail; track $index) {
+                    <li><app-ability-outcome [outcome]="outcome"></app-ability-outcome></li>
+                }
+            </ul>
+        } @else {
+            @for (outcome of action()?.outcomesOnCritFail; track $index) {
+                <p class="description my-0"><span class="fw-bold">On Crit Fail: </span><app-ability-outcome [outcome]="outcome"></app-ability-outcome></p>
+            }
+        }
+
+        @if ((action()?.outcomesAlways?.length ?? 0) > 1) {
+            <span class="fw-bold">Always:</span>
+            <ul>
+                @for (outcome of action()?.outcomesAlways; track $index) {
+                    <li><app-ability-outcome [outcome]="outcome"></app-ability-outcome></li>
+                }
+            </ul>
+        } @else {
+            @for (outcome of action()?.outcomesAlways; track $index) {
+                <p class="description my-0"><span class="fw-bold">Always: </span><app-ability-outcome [outcome]="outcome"></app-ability-outcome></p>
+            }
+        }
+    </div>
 </div>

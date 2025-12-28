@@ -8,14 +8,16 @@
     </div>
     <div class="card-body body">
         <p class="description my-0"><span class="fw-bold">Requirements: </span><app-dynamic-content [content]="ability()?.requirements | requirementsPrettier | textProcessor"></app-dynamic-content></p>
-        <p class="description my-0"><span class="fw-bold">Cost: </span><app-dynamic-content [content]="abilityCost | textProcessor"></app-dynamic-content></p>
-        <h5>Actions</h5>
-        <div class="d-flex flex-col">
-            @for (action of ability()?.actions; track $index) {
-                <app-ability-action [action]="action"></app-ability-action>
-                <hr>
-            }
-        </div>
+        <p class="description mt-0 mb-1"><span class="fw-bold">Cost: </span><app-dynamic-content [content]="abilityCost | textProcessor"></app-dynamic-content></p>
+        <h5 class="mt-0 mb-2">Actions</h5>
+        @for (action of ability()?.actions; track $index) {
+            <app-ability-action [action]="action"></app-ability-action>
+        }
+        @if (isTechniqueAndHasPush) {
+            <h5 class="mb-0 mt-2">Push</h5>
+            <p class="description my-0"><span class="fw-bold">Cost: </span><app-dynamic-content [content]="pushingCost | textProcessor"></app-dynamic-content></p>
+            <p class="description my-0"><span class="fw-bold">Effect on push: </span><app-dynamic-content [content]="pushingEffect | textProcessor"></app-dynamic-content></p>
+        }
         @if (ability()?.flavorText) {
             <br>
             <span class="fst-italic text-body-secondary"><app-text-elements-without-ability [textElements]="ability()?.flavorText"></app-text-elements-without-ability></span>

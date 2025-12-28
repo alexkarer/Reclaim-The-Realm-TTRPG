@@ -1,0 +1,14 @@
+@switch (type) {
+    @case (AbilityActionOutcomeType.FREETEXT) {
+        <app-text-elements-without-ability [textElements]="freeText"></app-text-elements-without-ability>
+    }
+    @case (AbilityActionOutcomeType.DAMAGE) {
+        <app-dynamic-content [content]="damageText | textProcessor"></app-dynamic-content>
+    }
+    @case (AbilityActionOutcomeType.HEAL) {
+        <app-dynamic-content [content]="healText | textProcessor"></app-dynamic-content>
+    }
+    @case (AbilityActionOutcomeType.STATUS_EFFECT) {
+        <app-dynamic-content [content]="statusEffectText | textProcessor"></app-dynamic-content>
+    }
+}
