@@ -1,111 +1,388 @@
-{
-    "basic": [
-        {
-            "name": "Wall Jump",
-            "cost": { "ap": 0, "mp": 3, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
-            "tags": [ "[REACTION]", "Technique (Agile, Basic)", "Move" ],
-            "meta": { "iconPath": "/assets/icons/abilities/jump-across.svg", "colour": "GREEN" },
-            "requirements": { "requiredLevels": [], "requiredAttributes": [ { "amount": 3, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "actions": [
-                {
-                    "actionType": "SIMPLE",
-                    "customCondition": "When coming in contact with a vertical surface",
-                    "attribute": "NONE",
-                    "rangeType": "NONE",
-                    "rangeDistanceFields": 0,
-                    "targetType": "SELF",
-                    "customTargeting": "",
-                    "targets": 0,
-                    "targetAreaSizeFields": 0,
-                    "opposingSave": "NONE",
-                    "outcomesAlways": [
-                        {
-                            "outcomeType": "FREETEXT",
-                            "damageExpression": "",
-                            "damageType": "",
-                            "critDamage": false,
-                            "halfDamage": false,
-                            "healExpression": "",
-                            "healThp": false,
-                            "statusEffect": "",
-                            "statusEffectDuration": 0,
-                            "statusEffectDurationUnit": "NONE",
-                            "freeText": [
-                                    { "regularText": "You can immedatly use a [TAG;Jump] Ability at no cost but halve the distance jumped. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. Depending on surface conditions the GM might require you to perform a [AGI] Athletics [D20 TEST].", "headerLine": null, "bulletPoints": null } 
-                            ]
-                        }
-                    ],
-                    "outcomesOnCritSuccess": [],
-                    "outcomesOnSuccess": [],
-                    "outcomesOnFail": [],
-                    "outcomesOnCritFail": []
-                }
-            ],
-            "flavorText": [
-                { "regularText": "", "headerLine": null, "bulletPoints": null}
-            ],
-            "push": {
-                "cost": "1 [STAMINA]",
-                "effect": "The distance jumped is not halved."
+[
+    {
+        "name": "Wall Jump",
+        "cost": { "ap": 0, "mp": 3, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "[REACTION]", "Technique (Agile, Basic)", "Move" ],
+        "meta": { "iconPath": "/assets/icons/abilities/jump-across.svg", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ { "amount": 3, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customCondition": "When coming in contact with a vertical surface",
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                                { "regularText": "You can immedatly use a the Jump Ability at no additional cost but halve the distance jumped. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. Depending on surface conditions the GM might require you to perform a [AGI] Athletics [D20 TEST].", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
             }
-        },
-        {
-            "name": "Pass Through",
-            "cost": { "ap": 0, "mp": 4, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
-            "tags": [ "Technique (Agile, Basic)", "Move" ],
-            "meta": { "iconPath": "/assets/icons/abilities/ghost-ally.svg", "colour": "GREEN" },
-            "requirements": { "requiredLevels": [], "requiredAttributes": [ { "amount": 3, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "actions": [
-                {
-                    "actionType": "SIMPLE",
-                    "customCondition": null,
-                    "attribute": "NONE",
-                    "rangeType": "NONE",
-                    "rangeDistanceFields": 0,
-                    "targetType": "SELF",
-                    "customTargeting": "",
-                    "targets": 0,
-                    "targetAreaSizeFields": 0,
-                    "opposingSave": "NONE",
-                    "outcomesAlways": [
-                        {
-                            "outcomeType": "FREETEXT",
-                            "damageExpression": "",
-                            "damageType": "",
-                            "critDamage": false,
-                            "halfDamage": false,
-                            "healExpression": "",
-                            "healThp": false,
-                            "statusEffect": "",
-                            "statusEffectDuration": 0,
-                            "statusEffectDurationUnit": "NONE",
-                            "freeText": [
-                                    { "regularText": "You can move 2[FIELD] (3m). During this movement you can move through opposing creatures but can't end your movement in fields occupied by them.", "headerLine": null, "bulletPoints": null } 
-                            ]
-                        }
-                    ],
-                    "outcomesOnCritSuccess": [],
-                    "outcomesOnSuccess": [],
-                    "outcomesOnFail": [],
-                    "outcomesOnCritFail": []
-                }
-            ],
-            "flavorText": [
-                { "regularText": "", "headerLine": null, "bulletPoints": null}
-            ],
-            "push": {
-                "cost": "2 [MP]",
-                "effect": "You can move an additional [FIELD] (1.5m). This Ability can be pushed multiple times."
-            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "The distance jumped is not halved."
         }
-    ],
-    "advanced": [
-
-    ],
-    "master": [
-
-    ],
-    "transcendent": [
-
-    ]
-}
+    },
+    {
+        "name": "Pass Through",
+        "cost": { "ap": 0, "mp": 4, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Technique (Agile, Basic)", "Move" ],
+        "meta": { "iconPath": "/assets/icons/abilities/ghost-ally.svg", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ { "amount": 3, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                                { "regularText": "You can move 2[FIELD] (3m). During this movement you can move through opposing creatures but can't end your movement in fields occupied by them.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "2 [MP]",
+            "effect": "You can move an additional [FIELD] (1.5m). This Ability can be pushed multiple times."
+        }
+    },
+    {
+        "name": "Scale Titan",
+        "cost": { "ap": 1, "mp": 3, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Technique (Agile, Advanced)", "Move" ],
+        "meta": { "iconPath": "/assets/icons/abilities/mountain-climbing.svg", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CUSTOM",
+                "customTargeting": "1 creature that is at least 1 size larger than you",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "You are now mounted on top of the creature which has the following effects:", "headerLine": null, "bulletPoints": null},
+                            { "regularText": null, "headerLine": null, "bulletPoints": [
+                                "One hand is always occupied with holding on to the creature",
+                                "You have [ADVANTAGE] on any [D20 TEST] made with [TAG;Meele Attack] Abilities against the target.",
+                                "You can’t be targeted by the creature you are currently on, on it’s turn however it can attempt to shake you of by spending 1 [AP] and you have to succeed on a [STABILITY] [SAVE] vs. 10 + creature [LEVEL]. On a fail: you are thrown away creatures [STR] [FIELD]."
+                            ]}
+                        ]
+                    }
+                ],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Reactive Move",
+        "cost": { "ap": 0, "mp": 3, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "[REACTION]", "Technique (Agile, Advanced)", "Move" ],
+        "meta": { "iconPath": "icons/magic/movement/trail-streak-zigzag-teal.webp", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "NONE",
+                "customCondition": null,
+                "attribute": "",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [ 
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "You can immediatly use the Normal Move Ability at no additional Cost.", "headerLine": null, "bulletPoints": null}
+                        ]
+                    }
+                 ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "2 [MP]",
+            "effect": "You can use the Normal Move Ability an additional time. This Ability can be pushed multiple times."
+        }
+    },
+    {
+        "name": "Wall Run",
+        "cost": { "ap": 0, "mp": 2, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Technique (Agile, Advanced)", "Move" ],
+        "meta": { "iconPath": "/assets/icons/abilities/sprint.svg", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "NONE",
+                "customCondition": null,
+                "attribute": "",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [ 
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "You can move 1 [FIELD] (1.5m), this movement can be made vertically along walls. If at the end of the [ROUND] you are not standing or holding on to anything, you are falling down.", "headerLine": null, "bulletPoints": null}
+                        ]
+                    }
+                 ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Super Speed",
+        "cost": { "ap": 0, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "tags": [ "[REACTION]", "Technique (Agile, Master)", "Move" ],
+        "meta": { "iconPath": "icons/magic/movement/trail-streak-zigzag-yellow.webp", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [ { "amount": 8, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "ALL",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [ ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [ 
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Target creature's can't use [REACTION] Abilities in response to your Abilities for the remaining [ROUND].", "headerLine": null, "bulletPoints": null}
+                        ]
+                    }
+                ],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "2 [STAMINA]",
+            "effect": "Ability also works on failed [AGI] [MARTIAL TEST]."
+        }
+    },
+    {
+        "name": "Afterimage",
+        "cost": { "ap": 1, "mp": 3, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "tags": [ "Technique (Agile, Master)" ],
+        "meta": { "iconPath": "icons/magic/defensive/illusion-evasion-echo-purple.webp", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [ { "amount": 8, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ { "amount": 6, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "NONE",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "ALL",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "The next [TAG;Attack] Ability against you automatically results in a critical fail.", "headerLine": null, "bulletPoints": null}
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [ ],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "This Ability works an time. This Ability can be pushed multiple times."
+        }
+    },
+    {
+        "name": "Transcendent Speed",
+        "cost": { "ap": 0, "mp": 0, "arcana": 0, "stamina": 5, "life": 0, "other": "" },
+        "tags": [ "[REACTION]", "Technique (Agile, Transcendent)" ],
+        "meta": { "iconPath": "icons/magic/movement/trail-streak-pink.webp", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [ { "amount": 12, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ { "amount": 10, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "NONE",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "ALL",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "The gain the following benefits for the current [ROUND]:", "headerLine": null, "bulletPoints": null},
+                            { "regularText": null, "headerLine": null, "bulletPoints": [
+                                "You double your current [MP]",
+                                "Anytime you would gain [MP], double that amount",
+                                "All your abilities can be used as if they had the [REACTION] Tag",
+                                "At the end of this [ROUND] you will gain 1 Level of [EXHAUSTION]."
+                            ]}
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [ ],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    }
+]

@@ -1,4 +1,4 @@
-import { Ability, AbilityAction, AbilityActionOutcome, parseAbilityActionOutcomeType, parseAbilityActionType, parseAbilityAttribute, parseAbilityColour, parseAbilityOpposingSave, parseAbilityRangeType, parseAbilityTargetType, parseStatusEffectDurationUnit } from "../../shared/Ability";
+import { Ability, AbilityAction, AbilityActionOutcome, parseAbilityActionOutcomeType, parseAbilityActionType, parseAbilityAttribute, parseAbilityColour, parseAbilityOpposingSave, parseAbilityRangeType, parseAbilityTargetType, parseDurationUnit as parseDurationUnit } from "../../shared/Ability";
 import agilityTechniquesJson from "./agile_techniques.json";
 import brawlTechniquesJson from "./brawl_techniques.json";
 import fortitudeTechniquesJson from "./fortitude_techniques.json";
@@ -12,19 +12,15 @@ export class Technique extends Ability {
     } | null;
 }
 
-type JsonTechniques = typeof agilityTechniquesJson | typeof brawlTechniquesJson | typeof fortitudeTechniquesJson  | typeof leaderTechniquesJson;
-type JsonTechnique = typeof agilityTechniquesJson.basic[0] | typeof brawlTechniquesJson.basic[0] | typeof fortitudeTechniquesJson.basic[0] | typeof leaderTechniquesJson.basic[0];
+type JsonTechnique = typeof agilityTechniquesJson[0] | typeof brawlTechniquesJson[0] | typeof fortitudeTechniquesJson[0] | typeof leaderTechniquesJson[0] | typeof tacticalTechniquesJson[0];
 
-export const ALL_TECHNIQUES = [...map(agilityTechniquesJson), ...map(brawlTechniquesJson), ...map(fortitudeTechniquesJson), ...map(leaderTechniquesJson), ...map(tacticalTechniquesJson)];
-
-function map(jsonTechniques: JsonTechniques) : Technique[] {
-    return [
-        ...jsonTechniques.basic.map(basic => mapTechnique(basic)),
-        ...jsonTechniques.advanced.map(advanced => mapTechnique(advanced)),
-        ...jsonTechniques.master.map(master => mapTechnique(master)),
-        ...jsonTechniques.transcendent.map(transcendent => mapTechnique(transcendent))
-    ];
-}
+export const ALL_TECHNIQUES = [
+    ...agilityTechniquesJson.map(t => mapTechnique(t)), 
+    ...brawlTechniquesJson.map(t => mapTechnique(t)), 
+    ...fortitudeTechniquesJson.map(t => mapTechnique(t)), 
+    ...leaderTechniquesJson.map(t => mapTechnique(t)), 
+    ...tacticalTechniquesJson.map(t => mapTechnique(t)), 
+];
 
 function mapTechnique(jsonTechnique: JsonTechnique): Technique {
     let technique = new Technique();
@@ -56,11 +52,12 @@ function mapIconPath(s: string) {
     return s;
 }
 
-const agileSampleAction = agilityTechniquesJson.basic[0].actions[0];
-const brawlSampleAction = brawlTechniquesJson.basic[0].actions[0];
-const fortitudeSampleAction = fortitudeTechniquesJson.basic[0].actions[0];
-const leaderSampleAction = leaderTechniquesJson.basic[0].actions[0];
-type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction;
+const agileSampleAction = agilityTechniquesJson[0].actions[0];
+const brawlSampleAction = brawlTechniquesJson[0].actions[0];
+const fortitudeSampleAction = fortitudeTechniquesJson[0].actions[0];
+const leaderSampleAction = leaderTechniquesJson[0].actions[0];
+const tacticalSampleAction = tacticalTechniquesJson[0].actions[0];
+type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction;
 
 function mapAction(jsonAction: JsonAction): AbilityAction {
     return {
@@ -82,24 +79,25 @@ function mapAction(jsonAction: JsonAction): AbilityAction {
     };
 }
 
-const agileSampleOutcome = agileSampleAction.outcomesAlways[0];
+const agileSampleOutcome1 = agileSampleAction.outcomesAlways[0];
+const agileSampleOutcome2 = agilityTechniquesJson[2].actions[0].outcomesOnSuccess[0];
 const brawlSampleOutcome = brawlSampleAction.outcomesOnSuccess[0];
 const fortitudeSampleOutcome = fortitudeSampleAction.outcomesOnSuccess[0];
 const leaderSampleOutcome = leaderSampleAction.outcomesOnSuccess[0];
-type JsonOutcome = typeof agileSampleOutcome | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome;
+const tacticalSampleOutcome = tacticalSampleAction.outcomesOnSuccess[0];
+type JsonOutcome = typeof agileSampleOutcome1 | typeof agileSampleOutcome2 | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome | typeof tacticalSampleOutcome;
 
 function mapOutcome(jsonOutcome: JsonOutcome): AbilityActionOutcome {
     return {
         outcomeType: parseAbilityActionOutcomeType(jsonOutcome.outcomeType),
-        damageExpression: jsonOutcome.damageExpression,
+        expression: jsonOutcome.expression,
         damageType: jsonOutcome.damageType,
         critDamage: jsonOutcome.critDamage,
         halfDamage: jsonOutcome.halfDamage,
-        healExpression: jsonOutcome.healExpression,
         healThp: jsonOutcome.healThp,
         statusEffect: jsonOutcome.statusEffect,
-        statusEffectDuration: jsonOutcome.statusEffectDuration,
-        statusEffectDurationUnit: parseStatusEffectDurationUnit(jsonOutcome.statusEffectDurationUnit),
+        duration: jsonOutcome.duration,
+        durationUnit: parseDurationUnit(jsonOutcome.durationUnit),
         freeText: jsonOutcome.freeText
     };
 }

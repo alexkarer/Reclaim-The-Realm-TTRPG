@@ -18,11 +18,11 @@ export class RequirementsPrettierPipe implements PipeTransform {
             if (requirementsPrettyString !== '') {
                 requirementsPrettyString = requirementsPrettyString + ', ';
             }
-            requirementsPrettyString = attributesToPrettyString(requirements.requiredAttributes);
+            requirementsPrettyString += attributesToPrettyString(requirements.requiredAttributes);
         }
         if (requirements?.requiredPerks?.length !== 0) {
             if (requirementsPrettyString !== '') {
-                requirementsPrettyString = requirementsPrettyString + ', Perk:';
+                requirementsPrettyString += requirementsPrettyString + ', Perk:';
             }
             requirements.requiredPerks.forEach(requiredPerk => {
                 requirementsPrettyString =  + ' ' + requirementsPrettyString + requiredPerk;
@@ -30,7 +30,7 @@ export class RequirementsPrettierPipe implements PipeTransform {
         }
         if (requirements?.otherRequirements?.length !== 0) {
             if (requirementsPrettyString !== '') {
-                requirementsPrettyString = requirementsPrettyString + ', ';
+                requirementsPrettyString += requirementsPrettyString + ', ';
             }
             requirements.otherRequirements.forEach(req => {
                 requirementsPrettyString = requirementsPrettyString + req;

@@ -1,14 +1,47 @@
-{
-    "basic": [
-        
-    ],
-    "advanced": [
-
-    ],
-    "master": [
-
-    ],
-    "transcendent": [
-
-    ]
-}
+[
+    {
+        "name": "Prepared Position",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Technique (Tactical, Basic)", "Move" ],
+        "meta": { "iconPath": "icons/environment/traps/trap-jaw-tan.webp", "colour": "BLUE" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 4,
+                "targetType": "SQUARE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 2,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                                { "regularText": "For this and the following [ROUND] anytime an enemy creatures enters the target area you or an ally can use an [TAG;Attack] Ability targeting that creature as if it was a [REACTION] Ability.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    }
+]

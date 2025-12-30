@@ -68,8 +68,13 @@ export class AbilityActionComponent {
       case AbilityTargetType.SPHERE: text = `[SPHERE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
       case AbilityTargetType.LINE: text = `[LINE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
       case AbilityTargetType.CONE: text = `[CONE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
+      case AbilityTargetType.SQUARE: text = `[SQUARE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
       case AbilityTargetType.AURA: text = `[AURA] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
-      case AbilityTargetType.ALL: text = `All creatures within ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
+      case AbilityTargetType.ALL: 
+        this.action()?.targetAreaSizeFields == 0 ? 
+          text = `All creatures` :
+          text = `All creatures within ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
+        break;
       case AbilityTargetType.CUSTOM: text = `${this.action()?.customTargeting}`; break;
     }
 

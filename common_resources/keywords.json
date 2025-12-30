@@ -120,6 +120,12 @@
         "link": ""
     },
     {
+        "name": "SQUARE",
+        "displayName": "SQUARE",
+        "description": "Listed with length, the point of origin is a corner within range and visible to the caster.",
+        "link": ""
+    },
+    {
         "name": "AREA EFFECT",
         "displayName": "AREA EFFECT",
         "description": "Describes an ongoing effect in a designated target area that happens to each creature in the area at the start of the [ROUND] or any moves into the area, each creature can only be affected by it once per [ROUND].",

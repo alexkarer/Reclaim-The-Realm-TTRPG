@@ -122,30 +122,6 @@
                 "pushingExtraCost": "1 [STAMINA]",
                 "pushingDescription": "Increase the distance by further [STR]/2 m for a long jump or [STR]/4 m for a high jump."
             }
-        },
-        {
-            "name": "",
-            "tags": [ "Martial Maneuver (Advanced)", "Brawl" ],
-            "requirements": {
-                "requiredLevels": [
-                    { "amount": 4, "levelType": "[MARTIAL LEVEL]" }
-                ],
-                "requiredAttributes": [
-                    { "amount": 5, "attribute": "[STR]" }
-                ],
-                "requiredPerks": [ ],
-                "otherRequirements": [ ]
-            },
-            "cost": "6 [MP]",
-            "range": "-",
-            "target": "[SELF]",
-            "duration": "[INSTANT]",
-            "description": [ { "regularText": "Make a Jump Move and increase the jumping distance by an additional [STR] m for a long jump or [STR]/2 m for a high jump.", "headerLine": null, "bulletPoints": null} ],
-            "flavorText": [ ],
-            "maneuverPush": {
-                "pushingExtraCost": "1 [STAMINA]",
-                "pushingDescription": "Increase the distance by further [STR]/2 m for a long jump or [STR]/4 m for a high jump."
-            }
         }
     ],
     "leaderManeuvers": [

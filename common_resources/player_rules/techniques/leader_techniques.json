@@ -1,57 +1,264 @@
-{
-    "basic": [
-        {
-            "name": "Taunt",
-            "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
-            "tags": [ "Technique (Leader, Basic)", "Charm" ],
-            "meta": { "iconPath": "icons/skills/social/intimidation-impressing.webp", "colour": "YELLOW" },
-            "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "actions": [
-                {
-                    "actionType": "MARTIAL_TEST",
-                    "customCondition": null,
-                    "attribute": "CHA",
-                    "rangeType": "NONE",
-                    "rangeDistanceFields": 0,
-                    "targetType": "ALL",
-                    "customTargeting": "",
-                    "targets": 0,
-                    "targetAreaSizeFields": 2,
-                    "opposingSave": "WILLPOWER",
-                    "outcomesAlways": [],
-                    "outcomesOnCritSuccess": [],
-                    "outcomesOnSuccess": [
-                        {
-                            "outcomeType": "STATUS_EFFECT",
-                            "damageExpression": "",
-                            "damageType": "",
-                            "critDamage": false,
-                            "halfDamage": false,
-                            "healExpression": "",
-                            "healThp": false,
-                            "statusEffect": "TAUNTED",
-                            "statusEffectDuration": 1,
-                            "statusEffectDurationUnit": "ROUND",
-                            "freeText": [ ]
-                        }
-                    ],
-                    "outcomesOnFail": [],
-                    "outcomesOnCritFail": []
-                }
-            ],
-            "flavorText": [
-                { "regularText": "", "headerLine": null, "bulletPoints": null}
-            ],
-            "push": null
-        }
-    ],
-    "advanced": [
-
-    ],
-    "master": [
-
-    ],
-    "transcendent": [
-
-    ]
-}
+[
+    {
+        "name": "Taunt",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Technique (Leader, Basic)", "Charm" ],
+        "meta": { "iconPath": "icons/skills/social/intimidation-impressing.webp", "colour": "YELLOW" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customCondition": null,
+                "attribute": "CHA",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "ALL",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 2,
+                "opposingSave": "WILLPOWER",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "TAUNTED",
+                        "duration": 2,
+                        "durationUnit": "ROUND",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Challenge",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Technique (Leader, Basic)", "Charm" ],
+        "meta": { "iconPath": "icons/magic/control/energy-stream-link-white.webp", "colour": "YELLOW" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customCondition": null,
+                "attribute": "CHA",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 4,
+                "targetType": "INDIVIDUAL",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "WILLPOWER",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "TAUNTED",
+                        "duration": 2,
+                        "durationUnit": "ROUND",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Keep on Going!",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "[REACTION]", "Technique (Leader, Basic)" ],
+        "meta": { "iconPath": "icons/skills/social/thumbsup-approval-like.webp", "colour": "YELLOW" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customCondition": "Your target has recieved Damage this or the last [ROUND].",
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 6,
+                "targetType": "INDIVIDUAL",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "WILLPOWER",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "HEAL",
+                        "expression": "d6 + ([CHA]/3)d6",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": true,
+                        "statusEffect": "",
+                        "duration": 2,
+                        "durationUnit": "ROUND",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Go Get Em!",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Technique (Leader, Basic)", "Charm" ],
+        "meta": { "iconPath": "icons/skills/targeting/crosshair-arrowhead-blue.webp", "colour": "YELLOW" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 6,
+                "targetType": "INDIVIDUAL",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "WILLPOWER",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": true,
+                        "statusEffect": "",
+                        "duration": 1,
+                        "durationUnit": "ROUND",
+                        "freeText": [
+                            { "regularText": "Target gains [CHA] extra [MP] for this [ROUND]. Additionally it gains a bonus equal to [CHA]/2 towards their next [D20 TEST] they make this [ROUND].", "headerLine": null, "bulletPoints": null}
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Rallying Cry",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Technique (Leader, Advanced)" ],
+        "meta": { "iconPath": "icons/environment/people/charge.webp", "colour": "YELLOW" },
+        "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 6,
+                "targetType": "ALL",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "HEAL",
+                        "expression": "d6 + ([CHA]/3)d6",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": true,
+                        "statusEffect": "",
+                        "duration": 2,
+                        "durationUnit": "ROUND",
+                        "freeText": []
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Get Back in the Fight!",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Technique (Leader, Advanced)" ],
+        "meta": { "iconPath": "icons/magic/life/heart-hand-gold-green.webp", "colour": "YELLOW" },
+        "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ { "amount":4, "attribute": "[CHA]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 4,
+                "targetType": "CUSTOM",
+                "customTargeting": "1 unconcious creature",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Target creature regains 1 [HP].", "headerLine": null, "bulletPoints": null}
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    }
+]

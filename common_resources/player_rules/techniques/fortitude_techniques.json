@@ -1,106 +1,93 @@
-{
-    "basic": [
-        {
-            "name": "Battle Recovery",
-            "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
-            "tags": [ "Technique (Fortitude, Basic)" ],
-            "meta": { "iconPath": "icons/magic/life/heart-cross-purple-orange.webp", "colour": "BROWN" },
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "actions": [
-                {
-                    "actionType": "SIMPLE",
-                    "customCondition": "You are below half your maximum [HP].",
-                    "attribute": "NONE",
-                    "rangeType": "NONE",
-                    "rangeDistanceFields": 0,
-                    "targetType": "SELF",
-                    "customTargeting": "",
-                    "targets": 0,
-                    "targetAreaSizeFields": 0,
-                    "opposingSave": "NONE",
-                    "outcomesAlways": [
-                        {
-                            "outcomeType": "HEAL",
-                            "damageExpression": "",
-                            "damageType": "",
-                            "critDamage": false,
-                            "halfDamage": false,
-                            "healExpression": "1d6 + ([CON]/3) * d6",
-                            "healThp": false,
-                            "statusEffect": "",
-                            "statusEffectDuration": 0,
-                            "statusEffectDurationUnit": "NONE",
-                            "freeText": [ ]
-                        }
-                    ],
-                    "outcomesOnCritSuccess": [],
-                    "outcomesOnSuccess": [],
-                    "outcomesOnFail": [],
-                    "outcomesOnCritFail": []
-                }
-            ],
-            "flavorText": [
-                { "regularText": "", "headerLine": null, "bulletPoints": null}
-            ],
-            "push": null
-        },
-        {
-            "name": "Pushing the Limit",
-            "cost": { "ap": 0, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
-            "tags": [ "[REACTION]", "Technique (Fortitude, Basic)" ],
-            "meta": { "iconPath": "icons/magic/control/buff-strength-muscle-damage-orange.webp", "colour": "BROWN" },
-            "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-            "actions": [
-                {
-                    "actionType": "SIMPLE",
-                    "customCondition": "You fail a [D20 TEST]",
-                    "attribute": "NONE",
-                    "rangeType": "NONE",
-                    "rangeDistanceFields": 0,
-                    "targetType": "SELF",
-                    "customTargeting": "",
-                    "targets": 0,
-                    "targetAreaSizeFields": 0,
-                    "opposingSave": "NONE",
-                    "outcomesAlways": [
-                        {
-                            "outcomeType": "FREETEXT",
-                            "damageExpression": "",
-                            "damageType": "",
-                            "critDamage": false,
-                            "halfDamage": false,
-                            "healExpression": "",
-                            "healThp": false,
-                            "statusEffect": "",
-                            "statusEffectDuration": 0,
-                            "statusEffectDurationUnit": "NONE",
-                            "freeText": [
-                                    { "regularText": "You can add 2 to the failed [D20 TEST] potentially turning it into a success.", "headerLine": null, "bulletPoints": null } 
-                            ]
-                        }
-                    ],
-                    "outcomesOnCritSuccess": [],
-                    "outcomesOnSuccess": [],
-                    "outcomesOnFail": [],
-                    "outcomesOnCritFail": []
-                }
-            ],
-            "flavorText": [
-                { "regularText": "", "headerLine": null, "bulletPoints": null}
-            ],
-            "push": {
-                "cost": "1 [STAMINA]",
-                "effect": "You can add an additional 2 to the [D20 TEST]. This Ability can be pushed multiple times."
+[
+    {
+        "name": "Battle Recovery",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "tags": [ "Technique (Fortitude, Basic)" ],
+        "meta": { "iconPath": "icons/magic/life/heart-cross-purple-orange.webp", "colour": "BROWN" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customCondition": "You are below half your maximum [HP].",
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "HEAL",
+                        "expression": "1d6 + ([CON]/3) * d6",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
             }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Pushing the Limit",
+        "cost": { "ap": 0, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "tags": [ "[REACTION]", "Technique (Fortitude, Basic)" ],
+        "meta": { "iconPath": "icons/magic/control/buff-strength-muscle-damage-orange.webp", "colour": "BROWN" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customCondition": "You fail a [D20 TEST]",
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                                { "regularText": "You can add 2 to the failed [D20 TEST] potentially turning it into a success.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "You can add an additional 2 to the [D20 TEST]. This Ability can be pushed multiple times."
         }
-    ],
-    "advanced": [
-
-    ],
-    "master": [
-
-    ],
-    "transcendent": [
-
-    ]
-}
+    }
+]

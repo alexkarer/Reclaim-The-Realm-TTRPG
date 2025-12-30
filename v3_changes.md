@@ -128,6 +128,11 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - maybe fine if part of a weapon
 - More abilities that have non-combat users (❌)
 
+- Abilities that have not been Kept for now and need a rework (❌)
+    - Anticipate (❌)
+    - Tag Team (❌)
+    - Bodyguard (❌)
+
 #### Spells
 
 - Split up disciplines differently (❌)

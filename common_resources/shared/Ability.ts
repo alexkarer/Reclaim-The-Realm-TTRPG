@@ -44,26 +44,25 @@ export type AbilityAction = {
 
 export enum AbilityActionType { NO_ACTION, SIMPLE, MARTIAL_TEST, SPELL_TEST, D20_TEST }
 export enum AbilityRangeType { NONE, MELEE, FIELDS }
-export enum AbilityTargetType { NONE, SELF, INDIVIDUAL, SPHERE, LINE, CONE, AURA, ALL, CUSTOM }
+export enum AbilityTargetType { NONE, SELF, INDIVIDUAL, SPHERE, LINE, CONE, SQUARE, AURA, ALL, CUSTOM }
 export enum AbilityOpposingSave { NONE, STABILITY = 'STABILITY', DODGE = 'DODGE', TOUGHNESS = 'TOUGHNESS', WILLPOWER = 'WILLPOWER' }
 export enum AbilityAttribute { NONE, STR = 'STR', AGI = 'AGI', CON = 'CON', INT = 'INT', SPI = 'SPI', PER = 'PER', CHA = 'CHA' }
 
 export type AbilityActionOutcome = {
     outcomeType: AbilityActionOutcomeType,
-    damageExpression: string,
+    expression: string,
     damageType: string,
     halfDamage: boolean,
     critDamage: boolean,
-    healExpression: string,
     healThp: boolean,
     statusEffect: string,
-    statusEffectDuration: number,
-    statusEffectDurationUnit: StatusEffectDurationUnit,
+    duration: number,
+    durationUnit: DurationUnit,
     freeText: TextElementWithoutAbility[];
 }
 
 export enum AbilityActionOutcomeType { FREETEXT, DAMAGE, HEAL, STATUS_EFFECT }
-export enum StatusEffectDurationUnit { NONE, INDEFINATE, ROUND = '[ROUND]', MINUTE = 'Minute(s)', HOUR = 'Hour(s)' }
+export enum DurationUnit { NONE, INDEFINATE, ROUND = '[ROUND]', MINUTE = 'Minute(s)', HOUR = 'Hour(s)' }
 
 export class AbilityOld {
     name!: string;
@@ -201,6 +200,8 @@ export function parseAbilityTargetType(s?: string): AbilityTargetType {
         return AbilityTargetType.SPHERE;
     } else if (s.startsWith("LINE")) {
         return AbilityTargetType.LINE;
+    } else if (s.startsWith("SQUARE")) {
+        return AbilityTargetType.SQUARE;
     } else if (s.startsWith("AURA")) {
         return AbilityTargetType.AURA;
     } else if (s.startsWith("ALL")) {
@@ -253,23 +254,23 @@ export function parseAbilityActionOutcomeType(s?: string): AbilityActionOutcomeT
     }
 }
 
-export function parseStatusEffectDurationUnit(s?: string): StatusEffectDurationUnit {
+export function parseDurationUnit(s?: string): DurationUnit {
     if (!s) {
-        console.error("StatusEffectDurationUnit not defined! Setting NONE");
-        return StatusEffectDurationUnit.NONE;
+        console.error("durationUnit not defined! Setting NONE");
+        return DurationUnit.NONE;
     }
     if (s.startsWith("ROUND")) {
-        return StatusEffectDurationUnit.ROUND
+        return DurationUnit.ROUND
     } else if (s.startsWith("MINUTE")) {
-        return StatusEffectDurationUnit.MINUTE;
+        return DurationUnit.MINUTE;
     } else if (s.startsWith("HOUR")) {
-        return StatusEffectDurationUnit.HOUR;
+        return DurationUnit.HOUR;
     } else if (s.startsWith("INDEFINATE")) {
-        return StatusEffectDurationUnit.INDEFINATE;
+        return DurationUnit.INDEFINATE;
     } else if (s.startsWith("NONE")) {
-        return StatusEffectDurationUnit.NONE;
+        return DurationUnit.NONE;
     } else {
-        console.error(`StatusEffectDurationUnit ${s} not recognized! Setting NONE`);
-        return StatusEffectDurationUnit.NONE;
+        console.error(`durationUnit ${s} not recognized! Setting NONE`);
+        return DurationUnit.NONE;
     }
 }

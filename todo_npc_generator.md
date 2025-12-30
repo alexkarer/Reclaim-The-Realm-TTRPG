@@ -1,5 +1,7 @@
 # TODO
 
+Most monsters (level 2+) should have a reactive abilities that triggers during hero actions
+
 rethink the +3 system as it kind of breaks aroudn 6 STR
 - reduce damage as NPCs are too lethal
 - spread resistance more often and allow more tags when building creature too have more unique templates

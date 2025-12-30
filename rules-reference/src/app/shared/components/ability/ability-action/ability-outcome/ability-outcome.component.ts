@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { AbilityActionOutcome, AbilityActionOutcomeType, StatusEffectDurationUnit } from '../../../../../../../../common_resources/shared/Ability';
+import { AbilityActionOutcome, AbilityActionOutcomeType, DurationUnit } from '../../../../../../../../common_resources/shared/Ability';
 import { DynamicContentComponent } from "../../../../text-utils/dynamic-component-rendering/dynamic-content.component";
 import { TextProcessorPipe } from "../../../../text-utils/text-processor";
 import { TextElementWithoutAbility } from '../../../../../../../../common_resources/shared/TextElements';
@@ -25,18 +25,26 @@ export class AbilityOutcomeComponent {
   }
 
   get damageText(): string {
-    return `Deal ${this.outcome()?.damageExpression} ${this.outcome()?.damageType} Damage${this.outcome()?.halfDamage ? ' [HALF]' : ''}${this.outcome()?.critDamage ? ' [CRIT]' : ''}`;
+    return `Deal ${this.outcome()?.expression} ${this.outcome()?.damageType} Damage${this.outcome()?.halfDamage ? ' [HALF]' : ''}${this.outcome()?.critDamage ? ' [CRIT]' : ''}`;
   }
 
   get healText(): string {
-    return `Heal ${this.outcome()?.healExpression}${this.outcome()?.healThp ? ' [THP]' : ' [HP]'}`;
+    if (this.outcome()?.healThp) {
+      return `Gain ${this.outcome()?.expression} [THP]${this.getDurationText()}`;
+    } else {
+      return `Heal ${this.outcome()?.expression} [HP]`;
+    }
   }
 
   get statusEffectText(): string {
-    if (this.outcome()?.statusEffectDurationUnit === StatusEffectDurationUnit.INDEFINATE) {
-      return `Apply [${this.outcome()?.statusEffect}]`;
+    return `Apply [${this.outcome()?.statusEffect}]${this.getDurationText()}`;
+  }
+
+  private getDurationText(): string {
+    if (this.outcome()?.durationUnit === DurationUnit.INDEFINATE) {
+      return '';
     } else {
-      return `Apply [${this.outcome()?.statusEffect}] for ${this.outcome()?.statusEffectDuration} ${this.outcome()?.statusEffectDurationUnit}`;
+      return ` for ${this.outcome()?.duration} ${this.outcome()?.durationUnit}`;
     }
   }
 }
