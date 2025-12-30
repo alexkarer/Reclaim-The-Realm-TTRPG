@@ -2,7 +2,7 @@
     {
         "name": "Prepared Position",
         "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
-        "tags": [ "Technique (Tactical, Basic)", "Move" ],
+        "tags": [ "Technique (Tactical, Basic)" ],
         "meta": { "iconPath": "icons/environment/traps/trap-jaw-tan.webp", "colour": "BLUE" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
@@ -36,6 +36,66 @@
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [],
                 "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Analyze Weakpoint",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Technique (Tactical, Advanced)" ],
+        "meta": { "iconPath": "icons/environment/traps/trap-jaw-tan.webp", "colour": "BLUE" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customCondition": null,
+                "attribute": "INT",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 8,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 2,
+                "opposingSave": "TOUGHNESS",
+                "outcomesAlways": [ ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                                { "regularText": "The next time you target the creature with an Ability, any [D20 TEST] will result in an unmodified 20.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                                { "regularText": "The next time you target the creature with an Ability, you recieve [INT] bonus to your next [D20 TEST].", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
                 "outcomesOnCritFail": []
             }
         ],

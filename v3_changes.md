@@ -132,6 +132,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - Anticipate (❌)
     - Tag Team (❌)
     - Bodyguard (❌)
+    - Cut of the Retreat (❌)
 
 #### Spells
 

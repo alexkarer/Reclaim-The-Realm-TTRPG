@@ -1,7 +1,27 @@
 <h1>Standard Abilities</h1>
 
 <div class="my-4">
-  <p>Content coming soon.</p>
+  <span class="text-danger">Add missing explanations that every creature has access to these abilities</span>
+  <h3>Movement Abilities</h3>
+  <div class="container">
+    <div class="row row-cols-lg-2 g-3">
+        @for (abilitiy of movementAbilities; track $index) {
+          <div class="col" style="min-width: 400px;">
+            <app-ability [ability]="abilitiy"></app-ability>
+          </div>
+        }
+    </div>
+  </div>
+  <h3>Other Abilities</h3>
+  <div class="container">
+    <div class="row row-cols-lg-2 g-3">
+        @for (abilitiy of otherAbilities; track $index) {
+          <div class="col" style="min-width: 400px;">
+            <app-ability [ability]="abilitiy"></app-ability>
+          </div>
+        }
+    </div>
+  </div>
 </div>
 
 <app-page-navigation [currentPageId]="pageId"></app-page-navigation>

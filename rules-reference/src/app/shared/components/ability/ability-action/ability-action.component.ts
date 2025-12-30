@@ -64,7 +64,8 @@ export class AbilityActionComponent {
 
     switch(targetType) {
       case AbilityTargetType.SELF: text = '[SELF]'; break;
-      case AbilityTargetType.INDIVIDUAL: text = `${this.action()?.targets}`; break;
+      case AbilityTargetType.CREATURE: text = `${this.action()?.targets} ${this.areMultipleTargets() ? 'Creatures' : 'Creature'}`; break;
+      case AbilityTargetType.ALLY: text = `${this.action()?.targets} ${this.areMultipleTargets() ? 'Allies' : 'Ally'}`; break;
       case AbilityTargetType.SPHERE: text = `[SPHERE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
       case AbilityTargetType.LINE: text = `[LINE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
       case AbilityTargetType.CONE: text = `[CONE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
@@ -107,5 +108,9 @@ export class AbilityActionComponent {
       return 'unspecified';
     }
     return text;
+  }
+
+  private areMultipleTargets(): boolean {
+    return (this.action()?.targets ?? 0) > 0
   }
 }

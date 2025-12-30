@@ -9,11 +9,14 @@ export enum DamageType {
     PSYCHIC = "Psychic",
     COSMIC = "Cosmic",
     HOLY = "Holy",
-    UNHOLY = "Unholy"
+    UNHOLY = "Unholy",
+    UNKNOWN = ""
 }
 
-export function stringToDamageType(stringDamageType: string): DamageType | undefined {
-    switch(stringDamageType.toLowerCase()) {
+export function parseDamageType(s: string): DamageType {
+    switch(s.toLowerCase()) {
+        case "":
+            return DamageType.UNKNOWN;
         case DamageType.PHYSICAL.toLowerCase():
             return DamageType.PHYSICAL;
         case DamageType.FIRE.toLowerCase():
@@ -33,7 +36,7 @@ export function stringToDamageType(stringDamageType: string): DamageType | undef
         case DamageType.UNHOLY.toLowerCase():
             return DamageType.UNHOLY;
         default:
-            console.error('Unkown Damage Type: ' + stringDamageType)
-            return undefined;
+            console.warn('Unkown Damage Type: ' + s)
+            return DamageType.UNKNOWN;
     }
 }

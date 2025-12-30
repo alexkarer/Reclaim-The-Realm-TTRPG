@@ -1,4 +1,4 @@
-import { Ability, AbilityAction, AbilityActionOutcome, parseAbilityActionOutcomeType, parseAbilityActionType, parseAbilityAttribute, parseAbilityColour, parseAbilityOpposingSave, parseAbilityRangeType, parseAbilityTargetType, parseDurationUnit as parseDurationUnit } from "../../shared/Ability";
+import { Ability, mapAction, mapIconPath, parseAbilityColour } from "../../shared/Ability";
 import agilityTechniquesJson from "./agile_techniques.json";
 import brawlTechniquesJson from "./brawl_techniques.json";
 import fortitudeTechniquesJson from "./fortitude_techniques.json";
@@ -42,62 +42,4 @@ function mapTechnique(jsonTechnique: JsonTechnique): Technique {
         };
     }
     return technique;
-}
-
-function mapIconPath(s: string) {
-    // needed for foundryvtt compability
-    if (s.startsWith('icon')) {
-        return '/assets/' + s 
-    }
-    return s;
-}
-
-const agileSampleAction = agilityTechniquesJson[0].actions[0];
-const brawlSampleAction = brawlTechniquesJson[0].actions[0];
-const fortitudeSampleAction = fortitudeTechniquesJson[0].actions[0];
-const leaderSampleAction = leaderTechniquesJson[0].actions[0];
-const tacticalSampleAction = tacticalTechniquesJson[0].actions[0];
-type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction;
-
-function mapAction(jsonAction: JsonAction): AbilityAction {
-    return {
-        type: parseAbilityActionType(jsonAction.actionType),
-        customCondition: jsonAction.customCondition,
-        attribute: parseAbilityAttribute(jsonAction.attribute),
-        rangeType: parseAbilityRangeType(jsonAction.rangeType),
-        rangeDistanceFields: jsonAction.rangeDistanceFields,
-        targetType: parseAbilityTargetType(jsonAction.targetType),
-        customTargeting: jsonAction.customTargeting,
-        targets: jsonAction.targets,
-        targetAreaSizeFields: jsonAction.targetAreaSizeFields,
-        opposingSave: parseAbilityOpposingSave(jsonAction.opposingSave),
-        outcomesAlways: jsonAction.outcomesAlways.map(jsonOutcome => mapOutcome(jsonOutcome)),
-        outcomesOnCritSuccess: jsonAction.outcomesOnCritSuccess.map(jsonOutcome => mapOutcome(jsonOutcome)),
-        outcomesOnSuccess: jsonAction.outcomesOnSuccess.map(jsonOutcome => mapOutcome(jsonOutcome)),
-        outcomesOnFail: jsonAction.outcomesOnFail.map(jsonOutcome => mapOutcome(jsonOutcome)),
-        outcomesOnCritFail: jsonAction.outcomesOnCritFail.map(jsonOutcome => mapOutcome(jsonOutcome))
-    };
-}
-
-const agileSampleOutcome1 = agileSampleAction.outcomesAlways[0];
-const agileSampleOutcome2 = agilityTechniquesJson[2].actions[0].outcomesOnSuccess[0];
-const brawlSampleOutcome = brawlSampleAction.outcomesOnSuccess[0];
-const fortitudeSampleOutcome = fortitudeSampleAction.outcomesOnSuccess[0];
-const leaderSampleOutcome = leaderSampleAction.outcomesOnSuccess[0];
-const tacticalSampleOutcome = tacticalSampleAction.outcomesOnSuccess[0];
-type JsonOutcome = typeof agileSampleOutcome1 | typeof agileSampleOutcome2 | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome | typeof tacticalSampleOutcome;
-
-function mapOutcome(jsonOutcome: JsonOutcome): AbilityActionOutcome {
-    return {
-        outcomeType: parseAbilityActionOutcomeType(jsonOutcome.outcomeType),
-        expression: jsonOutcome.expression,
-        damageType: jsonOutcome.damageType,
-        critDamage: jsonOutcome.critDamage,
-        halfDamage: jsonOutcome.halfDamage,
-        healThp: jsonOutcome.healThp,
-        statusEffect: jsonOutcome.statusEffect,
-        duration: jsonOutcome.duration,
-        durationUnit: parseDurationUnit(jsonOutcome.durationUnit),
-        freeText: jsonOutcome.freeText
-    };
 }

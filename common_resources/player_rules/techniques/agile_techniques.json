@@ -153,9 +153,9 @@
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NONE",
+                "actionType": "NO_ACTION",
                 "customCondition": null,
-                "attribute": "",
+                "attribute": "NONE",
                 "rangeType": "NONE",
                 "rangeDistanceFields": 0,
                 "targetType": "SELF",
@@ -201,9 +201,9 @@
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NONE",
+                "actionType": "NO_ACTION",
                 "customCondition": null,
-                "attribute": "",
+                "attribute": "NONE",
                 "rangeType": "NONE",
                 "rangeDistanceFields": 0,
                 "targetType": "SELF",
@@ -294,7 +294,7 @@
         "requirements": { "requiredLevels": [ { "amount": 8, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ { "amount": 6, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NONE",
+                "actionType": "NO_ACTION",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -342,7 +342,7 @@
         "requirements": { "requiredLevels": [ { "amount": 12, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ { "amount": 10, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NONE",
+                "actionType": "NO_ACTION",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",

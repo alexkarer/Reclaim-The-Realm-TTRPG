@@ -1,4 +1,4 @@
-import { DamageType, stringToDamageType } from "../../shared/DamageType";
+import { DamageType, parseDamageType } from "../../shared/DamageType";
 import { Cost, Equipment } from "../equipment";
 
 export class Armour extends Equipment {
@@ -29,14 +29,8 @@ function map(jsonArmor: typeof armorJson[0]): Armour {
 
 function parseDamageBlock(rawDamageBlock: string): {amount: number, type: DamageType} | undefined {
     let amountAndDamageType = rawDamageBlock.split(" ");
-    let damageBlockAmount = Number.parseInt(amountAndDamageType[0]);
-    let damageBlockDamageType = stringToDamageType(amountAndDamageType[1]);
-    if (!damageBlockDamageType) {
-        return undefined;
-    }
-
     return {
-        amount: damageBlockAmount,
-        type: damageBlockDamageType
+        amount: Number.parseInt(amountAndDamageType[0]),
+        type: parseDamageType(amountAndDamageType[1])
     }
 }

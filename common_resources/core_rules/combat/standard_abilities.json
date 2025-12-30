@@ -1,104 +1,13 @@
 [
     {
-        "name": "Battle Recovery",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
-        "tags": [ "Technique (Fortitude, Basic)" ],
-        "meta": { "iconPath": "icons/magic/life/heart-cross-purple-orange.webp", "colour": "BROWN" },
+        "name": "Normal Move",
+        "cost": { "ap": 0, "mp": 1, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Move" ],
+        "meta": { "iconPath": "/assets/icons/abilities/walk.svg", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "SIMPLE",
-                "customCondition": "You are below half your maximum [HP].",
-                "attribute": "NONE",
-                "rangeType": "NONE",
-                "rangeDistanceFields": 0,
-                "targetType": "SELF",
-                "customTargeting": "",
-                "targets": 0,
-                "targetAreaSizeFields": 0,
-                "opposingSave": "NONE",
-                "outcomesAlways": [
-                    {
-                        "outcomeType": "HEAL",
-                        "expression": "1d6 + ([CON]/3) * d6",
-                        "damageType": "",
-                        "critDamage": false,
-                        "halfDamage": false,
-                        "healThp": false,
-                        "statusEffect": "",
-                        "duration": 0,
-                        "durationUnit": "NONE",
-                        "freeText": [ ]
-                    }
-                ],
-                "outcomesOnCritSuccess": [],
-                "outcomesOnSuccess": [],
-                "outcomesOnFail": [],
-                "outcomesOnCritFail": []
-            }
-        ],
-        "flavorText": [
-            { "regularText": "", "headerLine": null, "bulletPoints": null}
-        ],
-        "push": null
-    },
-    {
-        "name": "Pushing the Limit",
-        "cost": { "ap": 0, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
-        "tags": [ "[REACTION]", "Technique (Fortitude, Basic)" ],
-        "meta": { "iconPath": "icons/magic/control/buff-strength-muscle-damage-orange.webp", "colour": "BROWN" },
-        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-        "actions": [
-            {
-                "actionType": "SIMPLE",
-                "customCondition": "You fail a [D20 TEST]",
-                "attribute": "NONE",
-                "rangeType": "NONE",
-                "rangeDistanceFields": 0,
-                "targetType": "SELF",
-                "customTargeting": "",
-                "targets": 0,
-                "targetAreaSizeFields": 0,
-                "opposingSave": "NONE",
-                "outcomesAlways": [
-                    {
-                        "outcomeType": "FREETEXT",
-                        "expression": "",
-                        "damageType": "",
-                        "critDamage": false,
-                        "halfDamage": false,
-                        "healThp": false,
-                        "statusEffect": "",
-                        "duration": 0,
-                        "durationUnit": "NONE",
-                        "freeText": [
-                                { "regularText": "You can add 2 to the failed [D20 TEST] potentially turning it into a success.", "headerLine": null, "bulletPoints": null } 
-                        ]
-                    }
-                ],
-                "outcomesOnCritSuccess": [],
-                "outcomesOnSuccess": [],
-                "outcomesOnFail": [],
-                "outcomesOnCritFail": []
-            }
-        ],
-        "flavorText": [
-            { "regularText": "", "headerLine": null, "bulletPoints": null}
-        ],
-        "push": {
-            "cost": "1 [STAMINA]",
-            "effect": "You can add an additional 2 to the [D20 TEST]. This Ability can be pushed multiple times."
-        }
-    },
-    {
-        "name": "Overextend",
-        "cost": { "ap": 0, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
-        "tags": [ "Technique (Fortitude, Advanced)" ],
-        "meta": { "iconPath": "icons/skills/wounds/injury-face-impact-orange.webp", "colour": "BROWN" },
-        "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-        "actions": [
-            {
-                "actionType": "SIMPLE",
+                "actionType": "NO_ACTION",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -120,7 +29,7 @@
                         "duration": 0,
                         "durationUnit": "NONE",
                         "freeText": [
-                                { "regularText": "Gain 2 extra [AP] this [ROUND] but start the following [ROUND] with 2 less. Can only be used once per [ROUND].", "headerLine": null, "bulletPoints": null } 
+                                { "regularText": "You move 1 [FIELD] (1.5m). Every second time you move diagonally during a [ROUND], this ability costs 1 extra [MP]. Depending on your [SIZE] and other factors you might move more distance.", "headerLine": null, "bulletPoints": null } 
                         ]
                     }
                 ],
@@ -132,19 +41,18 @@
         ],
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}
-        ],
-        "push": null
+        ]
     },
     {
-        "name": "Keep Going",
-        "cost": { "ap": 0, "mp": 0, "arcana": 0, "stamina": 3, "life": 0, "other": "" },
-        "tags": [ "[REACTION]", "Technique (Fortitude, Master)" ],
-        "meta": { "iconPath": "icons/skills/wounds/anatomy-organ-heart-red.webp", "colour": "BROWN" },
-        "requirements": { "requiredLevels": [ { "amount": 8, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ { "amount": 6, "attribute": "[CON]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "name": "Jump",
+        "cost": { "ap": 0, "mp": 4, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Move" ],
+        "meta": { "iconPath": "/assets/icons/abilities/jump-across.svg", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "SIMPLE",
-                "customCondition": "You would be reduced to 0 [HP].",
+                "actionType": "NO_ACTION",
+                "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
                 "rangeDistanceFields": 0,
@@ -165,7 +73,7 @@
                         "duration": 0,
                         "durationUnit": "NONE",
                         "freeText": [
-                                { "regularText": "You are at 1 [HP] instead.", "headerLine": null, "bulletPoints": null } 
+                                { "regularText": "You can jump 2 + ([STR]/2) [FIELD] horizontaly or 1 + ([STR]/3) [FIELD] vertically", "headerLine": null, "bulletPoints": null } 
                         ]
                     }
                 ],
@@ -177,7 +85,144 @@
         ],
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Stand up",
+        "cost": { "ap": 0, "mp": 5, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Move" ],
+        "meta": { "iconPath": "/assets/icons/abilities/falling.svg", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "NO_ACTION",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                                { "regularText": "You stand up from being [PRONE].", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
         ],
-        "push": null
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Dash",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Move" ],
+        "meta": { "iconPath": "/assets/icons/abilities/sprint.svg", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "NO_ACTION",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                                { "regularText": "You gain 2 + [AGI]/3 (rounded down) extra [MP] this [ROUND].", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Running",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Move" ],
+        "meta": { "iconPath": "/assets/icons/abilities/sprint.svg", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "NO_ACTION",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "You can engage or sustain a Run which lasts until the start of the next [ROUND] and brings the following changes:", "headerLine": null, "bulletPoints": null},
+                            { "regularText": null, "headerLine": null, "bulletPoints": [
+                                "Every time you use the Normal Move Ability you can move an additional 2 [FIELD] which must be in a straight line.",
+                                "Every consecetive move can only alter the direction by 45°.",
+                                "2 [MP] can be spent to change direction by 90°",
+                                "During a Run [AP] can only be used for Dash, any other actions allow permissions by the GM"
+                            ]} 
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
     }
 ]

@@ -231,7 +231,7 @@
                 "attribute": "STR",
                 "rangeType": "MELEE",
                 "rangeDistanceFields": 0,
-                "targetType": "INDIVIDUAL",
+                "targetType": "CREATURE",
                 "customTargeting": "",
                 "targets": 1,
                 "targetAreaSizeFields": 0,
@@ -241,7 +241,7 @@
                     {
                         "outcomeType": "DAMAGE",
                         "expression": "Medium [MARTIAL DAMAGE] + 1 for every [FIELD] moved with this Ability.",
-                        "damageType": "pyhsical",
+                        "damageType": "Physical",
                         "critDamage": true,
                         "halfDamage": false,
                         "healThp": false,
@@ -255,7 +255,7 @@
                     {
                         "outcomeType": "DAMAGE",
                         "expression": "Medium [MARTIAL DAMAGE] + 1 for every [FIELD] moved with this Ability",
-                        "damageType": "pyhsical",
+                        "damageType": "Physical",
                         "critDamage": false,
                         "halfDamage": false,
                         "healThp": false,
@@ -269,7 +269,7 @@
                     {
                         "outcomeType": "DAMAGE",
                         "expression": "Medium [MARTIAL DAMAGE] + 1 for every [FIELD] moved with this Ability",
-                        "damageType": "pyhsical",
+                        "damageType": "Physical",
                         "critDamage": false,
                         "halfDamage": true,
                         "healThp": false,
@@ -313,7 +313,7 @@
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NONE",
+                "actionType": "NO_ACTION",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
