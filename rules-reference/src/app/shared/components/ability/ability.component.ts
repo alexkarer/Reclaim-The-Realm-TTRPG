@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, forwardRef, input } from '@angular/core';
 import { Ability, AbilityColour } from '../../../../../../common_resources/shared/Ability';
 import { RequirementsPrettierPipe } from '../../utils/to-pretty-string';
 import { DynamicContentComponent } from '../../text-utils/dynamic-component-rendering/dynamic-content.component';
@@ -9,7 +9,7 @@ import { AbilityActionComponent } from "./ability-action/ability-action.componen
 
 @Component({
   selector: 'app-ability',
-  imports: [RequirementsPrettierPipe, DynamicContentComponent, TextProcessorPipe, TextElementsWithoutAbilityComponent, AbilityActionComponent],
+  imports: [RequirementsPrettierPipe, forwardRef(() => DynamicContentComponent), TextProcessorPipe, TextElementsWithoutAbilityComponent, AbilityActionComponent],
   templateUrl: './ability.component.html',
   styleUrl: './ability.component.scss',
 })

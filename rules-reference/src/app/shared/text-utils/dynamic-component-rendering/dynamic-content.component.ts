@@ -1,12 +1,17 @@
 
-import { Component, input } from '@angular/core';
+import { Component, input, forwardRef } from '@angular/core';
 import { KeywordComponent } from '../keyword/keyword.component';
 import { ContentPart } from '../text-utils';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { AbilityComponent } from '../../components/ability/ability.component';
 
 @Component({
     selector: 'app-dynamic-content',
-    imports: [KeywordComponent, NgbTooltipModule],
+    imports: [
+        KeywordComponent,
+        NgbTooltipModule,
+        forwardRef(() => AbilityComponent)
+    ],
     templateUrl: './dynamic-content.component.html',
     styleUrl: './dynamic-content.component.scss'
 })

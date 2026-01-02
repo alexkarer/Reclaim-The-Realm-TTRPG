@@ -32,6 +32,7 @@ export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, COLOURLESS 
 
 export type AbilityAction = {
     type: AbilityActionType,
+    customAction: string,
     customCondition: string | null,
     attribute: AbilityAttribute,
     rangeType: AbilityRangeType,
@@ -48,7 +49,7 @@ export type AbilityAction = {
     outcomesOnCritFail: AbilityActionOutcome[]
 }
 
-export enum AbilityActionType { NO_ACTION, SIMPLE, MARTIAL_TEST, SPELL_TEST, D20_TEST }
+export enum AbilityActionType { NO_ACTION, SIMPLE, MARTIAL_TEST, SPELL_TEST, CUSTOM }
 export enum AbilityRangeType { NONE, MELEE, FIELDS }
 export enum AbilityTargetType { NONE, SELF, CREATURE, ALLY, SPHERE, LINE, CONE, SQUARE, AURA, ALL, CUSTOM }
 export enum AbilityOpposingSave { NONE, STABILITY = 'STABILITY', DODGE = 'DODGE', TOUGHNESS = 'TOUGHNESS', WILLPOWER = 'WILLPOWER' }
@@ -121,6 +122,7 @@ type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof f
 export function mapAction(jsonAction: JsonAction): AbilityAction {
     return {
         type: parseAbilityActionType(jsonAction.actionType),
+        customAction: jsonAction.customAction,
         customCondition: jsonAction.customCondition,
         attribute: parseAbilityAttribute(jsonAction.attribute),
         rangeType: parseAbilityRangeType(jsonAction.rangeType),
@@ -191,8 +193,8 @@ export function parseAbilityActionType(s?: string): AbilityActionType {
         console.error("AbilityActionType not defined! Setting NO_ACTION");
         return AbilityActionType.NO_ACTION;
     }
-    if (s.startsWith("D20_TEST")) {
-        return AbilityActionType.D20_TEST;
+    if (s.startsWith("CUSTOM")) {
+        return AbilityActionType.CUSTOM;
     } else if (s.startsWith("MARTIAL_TEST")) {
         return AbilityActionType.MARTIAL_TEST;
     } else if (s.startsWith("SPELL_TEST")) {

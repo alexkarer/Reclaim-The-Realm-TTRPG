@@ -8,6 +8,7 @@
         "actions": [
             {
                 "actionType": "MARTIAL_TEST",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "STR",
                 "rangeType": "MELEE",
@@ -51,6 +52,7 @@
         "actions": [
             {
                 "actionType": "MARTIAL_TEST",
+                "customAction": "",
                 "customCondition": "You are targeted by an [TAG;Attack] Ability.",
                 "attribute": "STR",
                 "rangeType": "MELEE",
@@ -96,6 +98,7 @@
         "actions": [
             {
                 "actionType": "MARTIAL_TEST",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "STR",
                 "rangeType": "MELEE",
@@ -152,6 +155,7 @@
             },
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": "Target of previous Action collides with another creature",
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -195,6 +199,7 @@
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -216,7 +221,7 @@
                         "duration": 0,
                         "durationUnit": "NONE",
                         "freeText": [
-                            { "regularText": "You can use the Move Ability 6 times, but each move must end closer to an enemy.", "headerLine": null, "bulletPoints": null } 
+                            { "regularText": "You can use the [ABILITY;Normal Move] Ability 6 times, but each move must end closer to an enemy.", "headerLine": null, "bulletPoints": null } 
                         ]
                     }
                 ],
@@ -227,6 +232,7 @@
             },
             {
                 "actionType": "MARTIAL_TEST",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "STR",
                 "rangeType": "MELEE",
@@ -302,7 +308,7 @@
         ],
         "push": {
             "cost": "1 [STAMINA]",
-            "effect": "You can use the move ability 6 additional times in the first Action."
+            "effect": "You can use the [ABILITY;Normal Move] Ability 6 additional times in the first Action."
         }
     },
     {
@@ -314,6 +320,7 @@
         "actions": [
             {
                 "actionType": "NO_ACTION",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -362,6 +369,7 @@
         "actions": [
             {
                 "actionType": "MARTIAL_TEST",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "STR",
                 "rangeType": "MELEE",

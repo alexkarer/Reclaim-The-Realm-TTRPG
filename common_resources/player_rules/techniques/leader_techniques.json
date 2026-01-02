@@ -8,6 +8,7 @@
         "actions": [
             {
                 "actionType": "MARTIAL_TEST",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "CHA",
                 "rangeType": "NONE",
@@ -51,6 +52,7 @@
         "actions": [
             {
                 "actionType": "MARTIAL_TEST",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "CHA",
                 "rangeType": "FIELDS",
@@ -88,12 +90,13 @@
     {
         "name": "Keep on Going!",
         "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
-        "tags": [ "[REACTION]", "Technique (Leader, Basic)" ],
+        "tags": [ "[REACTION]", "Technique (Leader, Basic)", "Heal" ],
         "meta": { "iconPath": "icons/skills/social/thumbsup-approval-like.webp", "colour": "YELLOW" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": "Your target has recieved Damage this or the last [ROUND].",
                 "attribute": "NONE",
                 "rangeType": "FIELDS",
@@ -137,6 +140,7 @@
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "FIELDS",
@@ -176,12 +180,13 @@
     {
         "name": "Rallying Cry",
         "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
-        "tags": [ "Technique (Leader, Advanced)" ],
+        "tags": [ "Technique (Leader, Advanced)", "Heal" ],
         "meta": { "iconPath": "icons/environment/people/charge.webp", "colour": "YELLOW" },
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "FIELDS",
@@ -219,12 +224,13 @@
     {
         "name": "Get Back in the Fight!",
         "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
-        "tags": [ "Technique (Leader, Advanced)" ],
+        "tags": [ "Technique (Leader, Advanced)", "Heal" ],
         "meta": { "iconPath": "icons/magic/life/heart-hand-gold-green.webp", "colour": "YELLOW" },
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ { "amount":4, "attribute": "[CHA]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "FIELDS",

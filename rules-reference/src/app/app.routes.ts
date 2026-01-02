@@ -12,7 +12,6 @@ import { ClassesPageComponent } from './player-rules/pages/classes-page/classes-
 import { AttributesSkillsPageComponent } from './player-rules/pages/attributes-skills-page/attributes-skills-page.component';
 import { CharacterValuesPageComponent } from './player-rules/pages/character-values-page/character-values-page.component';
 import { PerksAbilitiesPageComponent } from './player-rules/pages/perks-abilities-page/perks-abilities-page.component';
-import { FinishCharacterPageComponent } from './player-rules/pages/finish-character-page/finish-character-page.component';
 import { EquipmentPageComponent } from './player-rules/pages/equipment-page/equipment-page.component';
 import { PartyOriginPageComponent } from './player-rules/pages/party-origin-page/party-origin-page.component';
 import { GettingStrongerPageComponent } from './player-rules/pages/getting-stronger-page/getting-stronger-page.component';
@@ -90,11 +89,6 @@ export const routes: Routes = [
                 path: 'perks-abilities',
                 component: PerksAbilitiesPageComponent,
                 title: 'Perks and Abilities - Player Rules'
-            },
-            {
-                path: 'finish-character',
-                component: FinishCharacterPageComponent,
-                title: 'Finish up your Character - Player Rules'
             },
             {
                 path: 'equipment',

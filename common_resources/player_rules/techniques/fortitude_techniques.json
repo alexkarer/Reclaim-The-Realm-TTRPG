@@ -8,6 +8,7 @@
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": "You are below half your maximum [HP].",
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -51,6 +52,7 @@
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": "You fail a [D20 TEST]",
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -99,6 +101,7 @@
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -144,6 +147,7 @@
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": "You would be reduced to 0 [HP].",
                 "attribute": "NONE",
                 "rangeType": "NONE",

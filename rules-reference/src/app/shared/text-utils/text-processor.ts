@@ -2,6 +2,9 @@ import { Pipe, PipeTransform } from "@angular/core";
 import { ContentPart, generateGenericKeyword } from "./text-utils";
 import statusEffectsJson from '../../../../../common_resources/combat/status_effects.json';
 import keywordsJson from '../../../../../common_resources/keywords.json';
+import { Ability } from "../../../../../common_resources/shared/Ability";
+import { STANDARD_ABILITIES } from "../../../../../common_resources/core_rules/combat/standard_abilities";
+import { ALL_TECHNIQUES } from "../../../../../common_resources/player_rules/techniques/technique";
 
 const statusEffectMap = [
     ...statusEffectsJson.tierOneBeneficialStatusEffects,
@@ -13,6 +16,12 @@ const statusEffectMap = [
 ].reduce((map, v) => map.set(v.keyword, v), new Map<string, typeof statusEffectsJson.tierOneBeneficialStatusEffects[0]>());
 
 const keywordMap = keywordsJson.reduce((map, v) => map.set(v.name, v), new Map<string, typeof keywordsJson[0]>());
+
+const allAbilities: Ability[] = [
+    ...STANDARD_ABILITIES,
+    ...ALL_TECHNIQUES
+];
+const abilitiesMap = allAbilities.reduce((map, a) => map.set(a.name, a), new Map<string, Ability>);
 
 @Pipe({
     name: 'textProcessor',
@@ -58,6 +67,11 @@ function keywordToContentPart(keyword: string): ContentPart {
         return tagContentPart;
     }
 
+    const abilityContentPart = generateAbilityontentPart(keyword);
+    if (abilityContentPart) {
+        return abilityContentPart;
+    }
+
     const rulesKeyword = generateRulesContentPart(keyword);
     if (rulesKeyword) {
         return rulesKeyword;
@@ -78,6 +92,23 @@ function generateTagContentPart(keyword: string): ContentPart | undefined {
             type: 'tag',
             text: keyword.substring(4)
         };
+    }
+    return undefined;
+}
+
+function generateAbilityontentPart(keyword: string): ContentPart | undefined {
+    if (keyword.startsWith('ABILITY')) {
+        const abilityName = keyword.substring(8);
+        const ability = abilitiesMap.get(abilityName);
+        if (ability) {
+            return { 
+                type: 'ability',
+                text: `${keyword.substring(8)}`,
+                ability: ability
+            };
+        } else {
+            console.error(`Ability "${abilityName}" not found`);
+        }
     }
     return undefined;
 }

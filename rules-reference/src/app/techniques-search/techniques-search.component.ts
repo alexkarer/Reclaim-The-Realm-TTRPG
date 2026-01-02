@@ -11,22 +11,24 @@ import { AbilityComponent } from "../shared/components/ability/ability.component
     styleUrl: './techniques-search.component.scss'
 })
 export class TechniquesSearchComponent {
-  public filteredTechniques: Technique[] = ALL_TECHNIQUES;
-  public readonly TechniqueLevel = TechniqueLevel;
-  public readonly TechniqueType = TechniqueType;
-  public readonly TechniqueCost = TechniqueCost;
-  public currentFilterText: string = "";
+  filteredTechniques: Technique[] = ALL_TECHNIQUES;
+  readonly TechniqueLevel = TechniqueLevel;
+  readonly TechniqueType = TechniqueType;
+  readonly TechniqueCost = TechniqueCost;
+  currentFilterText: string = "";
+  readonly filterTags = [ "Attack", "Move", "Heal" ];
+  currentFilterTags: string[] = [];
 
   private currentSelectedTechniqueLevel = TechniqueLevel.ALL;
   private currentSelectedTechniqueType = TechniqueType.ALL;
   private currentSelectedTechniqueCost = TechniqueCost.ANY;
 
-  public onTechniqueLevelFilterChange(techniqueLevel: TechniqueLevel): void {
+  onTechniqueLevelFilterChange(techniqueLevel: TechniqueLevel): void {
     this.currentSelectedTechniqueLevel = techniqueLevel;
     this.applyCurrentFilters();
   }
 
-  public getCurrentlySelectedLevelText(): string  {
+  getCurrentlySelectedLevelText(): string  {
     switch(this.currentSelectedTechniqueLevel) {
       case TechniqueLevel.ALL: return 'All Technique Levels';
       case TechniqueLevel.BASIC: return 'Basic Techniques';
@@ -37,12 +39,12 @@ export class TechniquesSearchComponent {
     }
   }
 
-  public onTechniqueTypeFilterChange(martialTechniqueType: TechniqueType): void {
+  onTechniqueTypeFilterChange(martialTechniqueType: TechniqueType): void {
     this.currentSelectedTechniqueType = martialTechniqueType;
     this.applyCurrentFilters();
   }
 
-  public getCurrentlySelectedTypeText(): string  {
+  getCurrentlySelectedTypeText(): string  {
     switch(this.currentSelectedTechniqueType) {
       case TechniqueType.ALL: return 'All Technique Types';
       case TechniqueType.AGILE: return 'Agile Techniques';
@@ -54,12 +56,12 @@ export class TechniquesSearchComponent {
     }
   }
 
-  public onTechniqueCostChange(maneuverCost: TechniqueCost): void {
+  onTechniqueCostChange(maneuverCost: TechniqueCost): void {
     this.currentSelectedTechniqueCost = maneuverCost;
     this.applyCurrentFilters();
   }
 
-  public getCurrentlySelectedTechniqueCostText(): string  {
+  getCurrentlySelectedTechniqueCostText(): string  {
     switch(this.currentSelectedTechniqueCost) {
       case TechniqueCost.ANY: return 'Any Ability Cost';
       case TechniqueCost.MP: return 'Techniques with [MP] Cost';
@@ -73,17 +75,29 @@ export class TechniquesSearchComponent {
     }
   }
 
-  public onFreeTextFilterChange() {
+  handleAbilityTagCheckBoxUpdate(event: Event, tag: string): void {
+    let target = event.target as HTMLInputElement;
+    let active = target.checked;
+    if (active) {
+      this.currentFilterTags.push(tag);
+    } else {
+      this.currentFilterTags = this.currentFilterTags.filter(t => t !== tag);
+    }
+    this.applyCurrentFilters();
+  }
+
+  onFreeTextFilterChange() {
     this.applyCurrentFilters();
   }
 
   private applyCurrentFilters() {
     this.filteredTechniques = ALL_TECHNIQUES
-      .filter(m => this.filterForTechniqueLevel(m))
-      .filter(m => this.filterForTechniqueType(m))
-      .filter(m => this.filterForTechniqueCost(m))
-      .filter(m => this.filterforFreeText(m))
-      .filter(m => m.name.length !== 0)
+      .filter(t => this.filterForTechniqueLevel(t))
+      .filter(t => this.filterForTechniqueType(t))
+      .filter(t => this.filterForTechniqueCost(t))
+      .filter(t => this.filterforFreeText(t))
+      .filter(t => this.filterForTag(t))
+      .filter(t => t.name.length !== 0)
   }
 
   private filterForTechniqueLevel(technique: Technique): boolean {
@@ -124,6 +138,14 @@ export class TechniquesSearchComponent {
     return technique.name.toLocaleLowerCase().includes(text) || 
       technique.tags.find(tag => tag.toLocaleLowerCase().includes(text)) !== undefined;
   }
+
+  private filterForTag(technique: Technique): boolean | undefined {
+    if (this.currentFilterTags.length === 0) {
+      return true;
+    }
+    return technique.tags.find(tag => this.currentFilterTags.includes(tag)) !== undefined;
+  }
+
 }
 
 enum TechniqueLevel {

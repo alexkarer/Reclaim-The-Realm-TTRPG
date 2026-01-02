@@ -37,13 +37,24 @@
         <button ngbDropdownItem (click)="onTechniqueCostChange(TechniqueCost.AP6)">Techniques with 6 [AP] Cost</button>
 			</div>
 		</div>
+    <div ngbDropdown class="d-inline-block me-5">
+      <button type="button" class="btn btn-outline-primary" id="dropdown-technique-ability-tag" ngbDropdownToggle>Tag Filters</button>
+      <div ngbDropdownMenu aria-labelledby="dropdown-technique-ability-tag">
+        <div class="d-flex justify-content-center flex-column mx-2">
+          @for (tag of filterTags; track $index) {
+            <input type="checkbox" class="btn-check" [id]="'btncheck' + tag" autocomplete="off" (change)="handleAbilityTagCheckBoxUpdate($event, tag)">
+            <label class="btn btn-outline-primary my-1" [for]="'btncheck' + tag">{{ tag }}</label>
+          }
+        </div>
+      </div>
+    </div>
     <input class="form-control me-2" type="search" placeholder="Search in name and tags" aria-label="Search" (input)="onFreeTextFilterChange()" [(ngModel)]="currentFilterText">
   </div>
 </nav>
 <div class="container">
   <div class="row row-cols-lg-3 g-3">
       @for (technique of filteredTechniques; track $index) {
-        <div class="col" style="min-width: 400px;">
+        <div class="col technique-wrapper">
           <app-ability [ability]="technique"></app-ability>
         </div>
       }

@@ -8,6 +8,7 @@
         "actions": [
             {
                 "actionType": "NO_ACTION",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -52,6 +53,7 @@
         "actions": [
             {
                 "actionType": "NO_ACTION",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -96,6 +98,7 @@
         "actions": [
             {
                 "actionType": "NO_ACTION",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -140,6 +143,7 @@
         "actions": [
             {
                 "actionType": "NO_ACTION",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -176,6 +180,51 @@
         ]
     },
     {
+        "name": "Escape",
+        "cost": { "ap": 0, "mp": 5, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Move" ],
+        "meta": { "iconPath": "icons/magic/control/debuff-chains-shackles-movement-purple.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "CUSTOM",
+                "customAction": "[DODGE] or [STABILITY] (your choice) vs. [STABILITY] of creature that is restraining you.",
+                "customCondition": "",
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [ ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                                { "regularText": "You end all [RESTRAINED I] or [RESTRAINED II] Conditions that were afflicted to you by the traget.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
         "name": "Running",
         "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Move" ],
@@ -184,6 +233,7 @@
         "actions": [
             {
                 "actionType": "NO_ACTION",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -207,7 +257,7 @@
                         "freeText": [
                             { "regularText": "You can engage or sustain a Run which lasts until the start of the next [ROUND] and brings the following changes:", "headerLine": null, "bulletPoints": null},
                             { "regularText": null, "headerLine": null, "bulletPoints": [
-                                "Every time you use the Normal Move Ability you can move an additional 2 [FIELD] which must be in a straight line.",
+                                "Every time you use the [ABILITY;Normal Move] Ability you can move an additional 2 [FIELD] which must be in a straight line.",
                                 "Every consecetive move can only alter the direction by 45°.",
                                 "2 [MP] can be spent to change direction by 90°",
                                 "During a Run [AP] can only be used for Dash, any other actions allow permissions by the GM"

@@ -8,6 +8,7 @@
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "FIELDS",
@@ -53,6 +54,7 @@
         "actions": [
             {
                 "actionType": "MARTIAL_TEST",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "INT",
                 "rangeType": "FIELDS",

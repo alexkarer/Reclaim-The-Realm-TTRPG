@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, forwardRef } from '@angular/core';
 import { AbilityAction, AbilityActionType, AbilityRangeType, AbilityTargetType } from '../../../../../../../common_resources/shared/Ability';
 import { DynamicContentComponent } from "../../../text-utils/dynamic-component-rendering/dynamic-content.component";
 import { TextProcessorPipe } from "../../../text-utils/text-processor";
@@ -6,7 +6,7 @@ import { AbilityOutcomeComponent } from "./ability-outcome/ability-outcome.compo
 
 @Component({
   selector: 'app-ability-action',
-  imports: [DynamicContentComponent, TextProcessorPipe, AbilityOutcomeComponent],
+  imports: [forwardRef(() => DynamicContentComponent), TextProcessorPipe, AbilityOutcomeComponent],
   templateUrl: './ability-action.component.html',
   styleUrl: './ability-action.component.scss',
 })
@@ -40,7 +40,7 @@ export class AbilityActionComponent {
     switch(at) {
       case AbilityActionType.MARTIAL_TEST: text = `[${this.action()?.attribute}] [MARTIAL TEST] vs. [${this.action()?.opposingSave}]`; break;
       case AbilityActionType.SPELL_TEST: text = `[${this.action()?.attribute}] [SPELL TEST] vs. [${this.action()?.opposingSave}]`; break;
-      case AbilityActionType.D20_TEST: text = `[${this.action()?.attribute}] [D20 TEST] vs. [${this.action()?.opposingSave}]`; break;
+      case AbilityActionType.CUSTOM: text = `${this.action()?.customAction}`; break;
     }
 
     if (!text) {

@@ -1,8 +1,13 @@
 <h1>Standard Abilities</h1>
 
 <div class="my-4">
+  <h3>Ability</h3>
+  <span class="text-danger">Explain structure of an Ability, Tag/Requirment/Cost, Then Action: Condition,Targets,Range, Then: Outcomes and how crit outcomes only trigger when they are specifically overriden</span>
+
+  <h3>Standard Abilities</h3>
   <span class="text-danger">Add missing explanations that every creature has access to these abilities</span>
-  <h3>Movement Abilities</h3>
+  <h4>Movement Abilities</h4>
+  <span class="text-danger">Maybe add this all together in the movement page</span>
   <div class="container">
     <div class="row row-cols-lg-2 g-3">
         @for (abilitiy of movementAbilities; track $index) {
@@ -12,7 +17,7 @@
         }
     </div>
   </div>
-  <h3>Other Abilities</h3>
+  <h4>Other Abilities</h4>
   <div class="container">
     <div class="row row-cols-lg-2 g-3">
         @for (abilitiy of otherAbilities; track $index) {

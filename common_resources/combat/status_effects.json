@@ -5,14 +5,14 @@
         {
             "keyword": "[STUNNED I]",
             "link": "stunned-i",
-            "summary":  "Can't use any [REACTION], [AP] are reduced by 1.",
-            "description": "The affected creature is dazed and can't function properly being unable to use any [REACTION] and has their max [AP] reduced by 1."
+            "summary":  "Can't use any [REACTION] Abilities outside their Turn, [AP] are reduced by 1.",
+            "description": "The affected creature is dazed and can't function properly being unable to use any [REACTION] Abilities otuside their Turn and has their max [AP] reduced by 1."
         },
         {
             "keyword": "[FRIGHTENED I]",
             "link": "frightened-i",
-            "summary":  "[DISADVANTAGE] on any [ATTACK], [SPELL TEST] or [MARTIAL TEST] against the source of fear and can't move closer to it.",
-            "description": "The affected creature is shaken by an event or creature and has [DISADVANTAGE] on any [ATTACK], [SPELL TEST] or[MARTIAL TEST] and can't move closer to the source of their fear."
+            "summary":  "[DISADVANTAGE] on [D20 TEST] against the source of fear and can't move closer to it.",
+            "description": "The affected creature is shaken by an event or creature and when they target their source of fear with an Ability they have [DISADVANTAGE] on any [D20 TEST] and can't move closer to it."
         },
         {
             "keyword": "[BURNING I]",
@@ -47,8 +47,8 @@
         {
             "keyword": "[CURSED I]",
             "link": "cursed-i",
-            "summary":  "-1d4 on any [ATTACK] [MARTIAL TEST] or [SPELL TEST].",
-            "description": "A lightly cursed creature recieves a 1d4 penalty to any [ATTACK] [MARTIAL TEST] or [SPELL TEST] it makes."
+            "summary":  "-1d4 on any [D20 TEST].",
+            "description": "A lightly cursed creature recieves a 1d4 penalty to any [D20 TEST] it makes."
         },
         {
             "keyword": "[WEAKENED I]",
@@ -65,7 +65,7 @@
         {
             "keyword": "[RESTRAINED I]",
             "link": "restrained-i",
-            "summary":  "Can't use [MP] other than escaping, [DISADVANTAGE] on any [ATTACK] that does not target the grappler",
+            "summary":  "Can't use [MP] other than escaping, [DISADVANTAGE] that does not target the grappler",
             "description": "A grappled creature can’t use it’s [MP] for anything other than making an escape attempt by spending 5 [MP] and making a [DODGE] [SAVE] or [STABILITY] [SAVE] (grappled creature's choice) against the grappler’s Grapple [DT] and escaping on a success.<br>The creature has [DISADVANTAGE] on any [ATTACK] against Targets other than the grappler."
         },
         {
@@ -97,8 +97,8 @@
         {
             "keyword": "[STUNNED II]",
             "link": "stunned-ii",
-            "summary":  "Can't use any [REACTION], [MP] and [AP] are reduced by 2.",
-            "description": "The affected creature is heavily stunned and can bearly act. They can't use any [REACTION], their [MP] and [AP] are reduced by 2."
+            "summary":  "Can't use any [REACTION] Abilities outside their Turn, [MP] and [AP] are reduced by 2.",
+            "description": "The affected creature is heavily stunned and can bearly act. They can't use any [REACTION] Abilities outside their Turn, their [MP] and [AP] are reduced by 2."
         },
         {
             "keyword": "[FRIGHTENED II]",
@@ -183,8 +183,8 @@
         {
             "keyword": "[STUNNED III]",
             "link": "stunned-iii",
-            "summary":  "Can't use any [REACTION], [MP] or [AP]. [DODGE] and [STABILITY] are 0.",
-            "description": "The affected creature is paralyzed and unable to act anymore. They can't use any [REACTION], [MP] or [AP]<br>Additionally they are unable to properly defend themselves as such they can't use shields, their [DODGE] and [STABILITY] are 0 and they automatically fail any [DODGE] or [STABILITY] [SAVE]."
+            "summary":  "Can't use any [REACTION] Abilities outside their Turn, [MP] or [AP]. [DODGE] and [STABILITY] are 0.",
+            "description": "The affected creature is paralyzed and unable to act anymore. They can't use any [REACTION] Abilities outside their Turn, [MP] or [AP]<br>Additionally they are unable to properly defend themselves as such they can't use shields, their [DODGE] and [STABILITY] are 0 and they automatically fail any [DODGE] or [STABILITY] [SAVE]."
         },
         {
             "keyword": "[FRIGHTENED III]",
@@ -214,13 +214,13 @@
             "keyword": "[CHARMED III]",
             "link": "charmed-iii",
             "summary":  "Is completely mind controlled by the charmer and can only perform Actions commanded by the charmer.",
-            "description": "The affected creature is completely mind-controlled and has to obay any commands issued by the charmer which requires no [AP] or [REACTION] from the charmer and can be done at any time.<br>If the charmer orders a suicidal command or one that strongly goes against their strongest beliefs and principles they can repeat the [SAVE] that caused them to be charmed and on a success they don't have to obey that command, the charmer then can't repeat that same command again. If there was no [SAVE] involved, the charmed creature has to make a [WILLPOWER] [SAVE]  with a [DT] determined by the GM."
+            "description": "The affected creature is completely mind-controlled and has to obey any commands issued by the charmer which requires no [AP] from the charmer and can be done as if it was a [REACTION] Ability.<br>If the charmer orders a suicidal command or one that strongly goes against their strongest beliefs and principles they can repeat the [SAVE] that caused them to be charmed and on a success they don't have to obey that command, the charmer then can't repeat that same command again. If there was no [SAVE] involved, the charmed creature has to make a [WILLPOWER] [SAVE]  with a [DT] determined by the GM."
         },
         {
             "keyword": "[UNCONCIOUS]",
             "link": "unconcious",
-            "summary":  "Can't use any [REACTION], [MP] or [AP], s unnaware of their sourroundings and unable to defend themselves.",
-            "description": "An [UNCONCIOUS] creature can't use any [REACTION], [MP] or [AP] and is not aware of it's sourroundings as such they can't use shields, their [DODGE] and [STABILITY] are 0 and they automatically fail any [DODGE] or [STABILITY] [SAVE]<br>A creature that is sleeping is also [UNCONCIOUS] however a Sleeping creature will wake up as soon as it receives damage or is distrubed in other ways."
+            "summary":  "Can't use any Abilities unnaware of their sourroundings and unable to defend themselves.",
+            "description": "An [UNCONCIOUS] creature can't use any Abilities and is not aware of it's sourroundings as such they can't use shields, their [DODGE] and [STABILITY] are 0 and they automatically fail any [DODGE] or [STABILITY] [SAVE]<br>A creature that is sleeping is also [UNCONCIOUS] however a Sleeping creature will wake up as soon as it receives damage or is distrubed in other ways."
         },
         {
             "keyword": "[CURSED III]",

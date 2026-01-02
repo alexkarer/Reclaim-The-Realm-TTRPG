@@ -11,7 +11,15 @@
             ></app-keyword>
         }
         @if (contentPart.type === 'tag') {
-            <em style="color: white;" [innerHTML]="contentPart.text" [ngbTooltip]="getTagTooltipText(contentPart.text)" ></em>
+            <em class="text-body-emphasis" [innerHTML]="contentPart.text" [ngbTooltip]="getTagTooltipText(contentPart.text)" ></em>
+        }
+        @if (contentPart.type === 'ability') {
+            <em class="text-body-emphasis fw-bold" [innerHTML]="contentPart.text" [ngbTooltip]="abilityTooltip" triggers="mouseenter:mouseleave"></em>
+            <ng-template #abilityTooltip>
+                @if (contentPart.ability) {
+                    <app-ability [ability]="contentPart.ability"></app-ability>
+                }
+            </ng-template>
         }
     }
 </ng-container>

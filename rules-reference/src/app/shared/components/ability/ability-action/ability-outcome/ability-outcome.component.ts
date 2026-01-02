@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, forwardRef } from '@angular/core';
 import { AbilityActionOutcome, AbilityActionOutcomeType, DurationUnit } from '../../../../../../../../common_resources/shared/Ability';
 import { DynamicContentComponent } from "../../../../text-utils/dynamic-component-rendering/dynamic-content.component";
 import { TextProcessorPipe } from "../../../../text-utils/text-processor";
@@ -7,7 +7,7 @@ import { TextElementsWithoutAbilityComponent } from "../../../../text-utils/text
 
 @Component({
   selector: 'app-ability-outcome',
-  imports: [DynamicContentComponent, TextProcessorPipe, TextElementsWithoutAbilityComponent],
+  imports: [forwardRef(() => DynamicContentComponent), TextProcessorPipe, forwardRef(() => TextElementsWithoutAbilityComponent)],
   templateUrl: './ability-outcome.component.html',
   styleUrl: './ability-outcome.component.scss',
 })

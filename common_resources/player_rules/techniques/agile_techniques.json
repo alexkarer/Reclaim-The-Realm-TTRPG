@@ -8,6 +8,7 @@
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": "When coming in contact with a vertical surface",
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -29,7 +30,7 @@
                         "duration": 0,
                         "durationUnit": "NONE",
                         "freeText": [
-                                { "regularText": "You can immedatly use a the Jump Ability at no additional cost but halve the distance jumped. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. Depending on surface conditions the GM might require you to perform a [AGI] Athletics [D20 TEST].", "headerLine": null, "bulletPoints": null } 
+                                { "regularText": "You can immedatly use the [ABILITY;Jump] Ability at no additional cost but halve the distance jumped. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. Depending on surface conditions the GM might require you to perform a [AGI] Athletics [D20 TEST].", "headerLine": null, "bulletPoints": null } 
                         ]
                     }
                 ],
@@ -56,6 +57,7 @@
         "actions": [
             {
                 "actionType": "SIMPLE",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -104,6 +106,7 @@
         "actions": [
             {
                 "actionType": "MARTIAL_TEST",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "AGI",
                 "rangeType": "MELEE",
@@ -154,6 +157,7 @@
         "actions": [
             {
                 "actionType": "NO_ACTION",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -175,7 +179,7 @@
                         "duration": 0,
                         "durationUnit": "NONE",
                         "freeText": [
-                            { "regularText": "You can immediatly use the Normal Move Ability at no additional Cost.", "headerLine": null, "bulletPoints": null}
+                            { "regularText": "You can immediatly use the [ABILITY;Normal Move] Ability at no additional Cost.", "headerLine": null, "bulletPoints": null}
                         ]
                     }
                  ],
@@ -190,7 +194,7 @@
         ],
         "push": {
             "cost": "2 [MP]",
-            "effect": "You can use the Normal Move Ability an additional time. This Ability can be pushed multiple times."
+            "effect": "You can use the [ABILITY;Normal Move] Ability an additional time. This Ability can be pushed multiple times."
         }
     },
     {
@@ -202,6 +206,7 @@
         "actions": [
             {
                 "actionType": "NO_ACTION",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -247,6 +252,7 @@
         "actions": [
             {
                 "actionType": "MARTIAL_TEST",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "AGI",
                 "rangeType": "NONE",
@@ -295,6 +301,7 @@
         "actions": [
             {
                 "actionType": "NO_ACTION",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -343,6 +350,7 @@
         "actions": [
             {
                 "actionType": "NO_ACTION",
+                "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",

@@ -1,3 +1,5 @@
+import { Ability } from "../../../../../common_resources/shared/Ability";
+
 export function generateGenericKeyword(keyword: string, toolTipText: string, link: string): ContentPart {
     return { 
         type: 'keyword', 
@@ -10,9 +12,10 @@ export function generateGenericKeyword(keyword: string, toolTipText: string, lin
 }
 
 export type ContentPart = {
-    type: 'text' | 'keyword' | 'tag';
+    type: 'text' | 'keyword' | 'tag' | 'ability';
     text?: string; 
     component?: KeywordContent;
+    ability?: Ability
 }
 
 type KeywordContent = {

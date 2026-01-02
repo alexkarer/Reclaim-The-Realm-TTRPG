@@ -2,17 +2,18 @@
 
 <div class="my-4">
   <h3>Perks</h3>
-
-  <h3>Ability</h3>
-
-  <!-- Explain structure of an Ability, Tag/Requirment/Cost, Then Action: Condition,Targets,Range, Then: Outcomes and how crit outcomes only trigger when they are specifically overriden -->
+  <app-dynamic-content [content]="'perks_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
 
   <h3>Techniques</h3>
-
   <!-- Explain different types, how they matter with Types -->
+  <app-dynamic-content [content]="'techniques_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  <h5>Pushing Techniques</h5>
+
   <!-- Explain Pushing and that you can do it After the Action but before any outcome is decided-->
   
   <h3>Spells</h3>
+  <app-dynamic-content [content]="'spells_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
 
   <!-- Explain only enough on how to select spells -->
   <!-- State since spells are more complicated they get their own page-->

@@ -98,7 +98,7 @@
         "description": "These are abilities every character and NPC can use.",
         "standardAbilities": [
             {
-                "name": "Unarmored Attack",
+                "name": "Unarmed Attack",
                 "tags": [ "Basic", "Attack", "Melee" ],
                 "requirements": {
                     "requiredLevels": [], "requiredAttributes": [], "requiredPerks": [ ],"otherRequirements": [ ]

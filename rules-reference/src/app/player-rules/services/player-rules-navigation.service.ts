@@ -18,12 +18,11 @@ export class PlayerRulesNavigationService extends NavigationService {
       { id: 'attributes-skills', title: 'Attributes and Skills', route: '/player-rules/attributes-skills', parent: 'character-creation', order: 5 },
       { id: 'character-values', title: 'Set Character Values', route: '/player-rules/character-values', parent: 'character-creation', order: 6 },
       { id: 'perks-abilities', title: 'Perks and Abilities', route: '/player-rules/perks-abilities', parent: 'character-creation', order: 7 },
-      { id: 'finish-character', title: 'Finish up your Character', route: '/player-rules/finish-character', parent: 'character-creation', order: 8 },
-      { id: 'equipment', title: 'Equipment', route: '/player-rules/equipment', parent: 'character-creation', order: 9 },
-      { id: 'party-origin', title: 'Optional: Party Origin', route: '/player-rules/party-origin', parent: 'character-creation', order: 10 },
-      { id: 'getting-stronger', title: 'Getting Stronger', route: '/player-rules/getting-stronger', order: 11 },
-      { id: 'exhaustion-resting', title: 'Exhaustion and Resting', route: '/player-rules/exhaustion-resting', order: 12 },
-      { id: 'casting-spells', title: 'Casting Spells', route: '/player-rules/casting-spells', order: 13 }
+      { id: 'equipment', title: 'Equipment', route: '/player-rules/equipment', parent: 'character-creation', order: 8 },
+      { id: 'party-origin', title: 'Optional: Party Origin', route: '/player-rules/party-origin', parent: 'character-creation', order: 9 },
+      { id: 'getting-stronger', title: 'Getting Stronger', route: '/player-rules/getting-stronger', order: 10 },
+      { id: 'exhaustion-resting', title: 'Exhaustion and Resting', route: '/player-rules/exhaustion-resting', order: 11 },
+      { id: 'casting-spells', title: 'Casting Spells', route: '/player-rules/casting-spells', order: 12 }
     ]);
   }
 }

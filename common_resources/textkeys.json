@@ -137,7 +137,9 @@
         "size_description": "Most humanoids are medium [SIZE] , however certain species have different ones and certain effects might change your [SIZE] . Changing your [SIZE] affects some of your physical characteristics"
     },
     "perks_and_abilities": {
-        "perks_description": "Perks are improvements that make your character better in various ways. Your Character starts with 4 Perk Points they can choose to spend on various Perks. Any Perk can be choosen as long as the Character meets all the requirements of the Perk and has enough Perk Points."
+        "perks_overview": "Perks are improvements that make your character better in various ways. Your Character starts with 3 Perk Points they can choose to spend on various Perks. Any Perk can be choosen as long as the Character meets all the requirements of the Perk and has enough Perk Points.",
+        "techniques_overview": "TODO",
+        "spells_overview": "TODO"
     },
     "character_progression": {
         "level_up_description": "After you meet the required [XP] your [LEVEL] increases. When this happens you gain the following benefits:",
