@@ -365,5 +365,134 @@
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}
         ]
+    },
+    {
+        "name": "Shoot - Crossbow",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Ranged" ],
+        "meta": { "iconPath": "icons/skills/ranged/target-bullseye-archer-orange.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": "Loaded Crossbow",
+                "attribute": "PER",
+                "rangeType": "RANGE_DROPOFF",
+                "rangeDistanceFields": 15,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d6",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d6",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d6",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Reload - Crossbow",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 crossbow Bolt" },
+        "tags": [ ],
+        "meta": { "iconPath": "icons/weapons/crossbows/crossbow-blue.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "You load a crossbow bolt into your Crossbow.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [ ],
+                "outcomesOnSuccess": [ ],
+                "outcomesOnFail": [ ],
+                "outcomesOnCritFail": [ ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
     }
 ]

@@ -84,5 +84,175 @@
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null }
         ]
+    },
+    {
+        "name": "Shield Block - Buckler",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "[REACTION]" ],
+        "meta": { "iconPath": "icons/skills/melee/shield-block-gray-orange.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "CUSTOM",
+                "customAction": "[AGI] [MARTIAL_TEST] vs. [TAG;Attack] Ability [D20 TEST]",
+                "customCondition": "[TAG;Attack] Ability would deal damage to you",
+                "attribute": "",
+                "rangeType": "SELF",
+                "rangeDistanceFields": 0,
+                "targetType": "NONE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "Reduce incoming damage from the [TAG;Attack] Ability to 0. If incoming damage exceeded 15, the shield is destroyed and has to be repaired.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null }
+        ]
+    },
+    {
+        "name": "Shield Block - Regular Shield",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "[REACTION]" ],
+        "meta": { "iconPath": "icons/skills/melee/shield-block-gray-orange.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "CUSTOM",
+                "customAction": "[AGI] [MARTIAL_TEST] vs. [TAG;Attack] Ability [D20 TEST]",
+                "customCondition": "[TAG;Attack] Ability would deal damage to you",
+                "attribute": "",
+                "rangeType": "SELF",
+                "rangeDistanceFields": 0,
+                "targetType": "NONE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "Reduce incoming damage from the [TAG;Attack] Ability to 0. If incoming damage exceeded 25, the shield is destroyed and has to be repaired.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "Reduce incoming damage from the [TAG;Attack] Ability by half. If incoming damage exceeded 25, the shield is destroyed and has to be repaired.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null }
+        ]
+    },
+    {
+        "name": "Shield Block - Tower Shield",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "[REACTION]" ],
+        "meta": { "iconPath": "icons/skills/melee/shield-block-gray-orange.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "CUSTOM",
+                "customAction": "[AGI] [MARTIAL_TEST] vs. [TAG;Attack] Ability [D20 TEST]",
+                "customCondition": "[TAG;Attack] Ability would deal damage to you",
+                "attribute": "",
+                "rangeType": "SELF",
+                "rangeDistanceFields": 0,
+                "targetType": "NONE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "Reduce incoming damage from the [TAG;Attack] Ability to 0. If incoming damage exceeded 40, the shield is destroyed and has to be repaired.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "Reduce incoming damage from the [TAG;Attack] Ability by half. If incoming damage exceeded 40, the shield is destroyed and has to be repaired.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null }
+        ]
     }
 ]

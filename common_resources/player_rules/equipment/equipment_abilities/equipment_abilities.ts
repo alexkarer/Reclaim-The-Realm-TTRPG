@@ -10,7 +10,7 @@ export const EQUIPMENT_ABILITIES: Ability[] = [
     ...consumableAbilitiesJson.map(a => mapAbilitiy(a))
 ];
 
-type JsonAbility = typeof weaponAbilitiesJson[0] | typeof otherEquipmentAbilitiesJson[0]  | typeof consumableAbilitiesJson[0];
+type JsonAbility = typeof weaponAbilitiesJson[0] | typeof otherEquipmentAbilitiesJson[0]  | typeof otherEquipmentAbilitiesJson[3] | typeof consumableAbilitiesJson[0];
 function mapAbilitiy(jsonAbilitiy: JsonAbility): Ability {
     let abilitiy = new Ability();
     abilitiy.name = jsonAbilitiy.name;

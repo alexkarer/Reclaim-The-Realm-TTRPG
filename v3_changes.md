@@ -149,16 +149,16 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 - Rebalance Weapons to have Maneuvers (❌)
     - More Maneuvers should be unlocked with Martial Level so spellcasters have not immediate access to them. (❌)
-
 - Don't roll randomly for starting equipment, also figure out what good prices should be and starting gold/equipment (❌)
 
 - maneuvrepenalty should only nerf dodge (✅)
 
 - Add Staffs: each staff has 1 ability that has charges with max charges that need arcana too charge (❌)
-
 - Add Robes: that do cool stuff, worst case just +1 to spell cast test (❌)
 
 - Instead of Rations just have a supplies count/item (✅)
+
+- rework Shields (✅)
 
 - re-evaluate set bonus (❌)
     - maybe let those items just be cosmetic at first (❌)

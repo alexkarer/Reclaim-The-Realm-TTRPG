@@ -5,6 +5,8 @@ import brawlTechniquesJson from "../player_rules/techniques/brawl_techniques.jso
 import fortitudeTechniquesJson from "../player_rules/techniques/fortitude_techniques.json";
 import leaderTechniquesJson from "../player_rules/techniques/leader_techniques.json";
 import tacticalTechniquesJson from "../player_rules/techniques/tactical_techniques.json";
+import weaponAbilitiesJson from "../player_rules/equipment/equipment_abilities/weapon_abilities.json";
+import otherEquipmentAbilitiesJson from "../player_rules/equipment/equipment_abilities/other_equipment_abilities.json";
 import consumableAbilitiesJson from "../player_rules/equipment/equipment_abilities/consumables_abilities.json";
 
 export class Ability {
@@ -110,8 +112,10 @@ const brawlSampleAction = brawlTechniquesJson[0].actions[0];
 const fortitudeSampleAction = fortitudeTechniquesJson[0].actions[0];
 const leaderSampleAction = leaderTechniquesJson[0].actions[0];
 const tacticalSampleAction = tacticalTechniquesJson[0].actions[0];
+const weaponAbilitiesSampleAction = weaponAbilitiesJson[4].actions[0];
+const otherEquipmentAbilitiesSampleAction = otherEquipmentAbilitiesJson[3].actions[0];
 const consumableSampleAction = consumableAbilitiesJson[0].actions[0];
-type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction | typeof consumableSampleAction;
+type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction | typeof weaponAbilitiesSampleAction | typeof otherEquipmentAbilitiesSampleAction | typeof consumableSampleAction;
 
 export function mapAction(jsonAction: JsonAction): AbilityAction {
     return {

@@ -1,3 +1,59 @@
 [
-    
+    {
+        "name": "Buckler",
+        "tags": ["Shield"],
+        "meta": {
+            "iconPath": "icons/equipment/shield/buckler-wooden-boss.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith's Tools or Carpenter's Tools",
+        "cost": {
+            "amount": 2,
+            "currency": "GC"
+        },
+        "weightInGram": 1000,
+        "description": [
+            { "regularText": "This Shield can be wielded without occupiyng a hand.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Shield Block - Buckler" ]
+    },
+    {
+        "name": "Regular Shield",
+        "tags": ["Shield"],
+        "meta": {
+            "iconPath": "icons/equipment/shield/kite-wooden-boss-steel-red.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith's Tools or Carpenter's Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 2500,
+        "description": [
+            { "regularText": "Requires one hand to wield. Can be in form of a round-, heater or kiteshield.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Shield Block - Regular Shield" ]
+    },
+    {
+        "name": "Tower Shield",
+        "tags": ["Shield"],
+        "meta": {
+            "iconPath": "icons/equipment/shield/wardoor-wooden-boss-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith's Tools or Carpenter's Tools",
+        "cost": {
+            "amount": 10,
+            "currency": "GC"
+        },
+        "weightInGram": 6000,
+        "description": [
+            { "regularText": "While wearing this Shield you always have the benefit of [MEDIUM COVER] but your [MP] are reduced by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Shield Block - Tower Shield" ]
+    }
 ]

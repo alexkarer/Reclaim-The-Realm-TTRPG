@@ -14,8 +14,27 @@
         },
         "weightInGram": 500,
         "description": [
-            { "regularText": "[TAG;Attack] Abilities made with this Weapon have their requirement for critical hits lowerd by 2.", "headerLine": null, "bulletPoints": null, "ability": null }
+            { "regularText": "Requires one hand to wield. [TAG;Attack] Abilities made with this Weapon have their requirement for critical hits lowerd by 2.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "grantedAbilities": [ "Attack - Dagger", "Throw - Dagger", "Deep Cut - Dagger", "Backstab - Dagger" ]
+    },
+    {
+        "name": "Crossbow",
+        "tags": ["Weapon", "Ranged Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/crossbows/crossbow-blue.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Carpenter’s Tool",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 3000,
+        "description": [
+            { "regularText": "Requires two hands to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Shoot - Crossbow", "Reload - Crossbow" ]
     }
 ]

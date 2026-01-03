@@ -150,7 +150,7 @@
     },
     {
         "name": "Reactive Move",
-        "cost": { "ap": 0, "mp": 3, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 0, "mp": 5, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "[REACTION]", "Technique (Agile, Advanced)", "Move" ],
         "meta": { "iconPath": "icons/magic/movement/trail-streak-zigzag-teal.webp", "colour": "GREEN" },
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
