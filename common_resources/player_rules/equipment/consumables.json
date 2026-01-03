@@ -1,3 +1,135 @@
 [
-    
+    {
+        "name": "Healing Potion",
+        "tags": [ "Consumable", "Potion"],
+        "meta": {
+            "iconPath": "icons/consumables/potions/vial-cork-red.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Alchemy Kit",
+        "cost": {
+            "amount": 25,
+            "currency": "GC"
+        },
+        "weightInGram": 250,
+        "description": [
+            { "regularText": "Once the \"Consume - Healing Potion\" Ability was used only an empty vial is left over.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Consume - Healing Potion" ]
+    },
+    {
+        "name": "Arcana Potion",
+        "tags": [ "Consumable", "Potion"],
+        "meta": {
+            "iconPath": "icons/consumables/potions/vial-cork-blue.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Alchemy Kit",
+        "cost": {
+            "amount": 50,
+            "currency": "GC"
+        },
+        "weightInGram": 250,
+        "description": [
+            { "regularText": "Once the \"Consume - Arcana Potion\" Ability was used only an empty vial is left over.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Consume - Arcana Potion" ]
+    },
+    {
+        "name": "Antidote",
+        "tags": [ "Consumable", "Potion"],
+        "meta": {
+            "iconPath": "icons/consumables/potions/potion-bottle-labeled-medicine-capped-red-black.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Alchemy Kit",
+        "cost": {
+            "amount": 30,
+            "currency": "GC"
+        },
+        "weightInGram": 250,
+        "description": [
+            { "regularText": "Once the \"Consume - Antidote Potion\" Ability was used only an empty vial is left over.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Consume - Antidote Potion" ]
+    },
+    {
+        "name": "Bandage",
+        "tags": [ "Consumable"],
+        "meta": {
+            "iconPath": "icons/commodities/cloth/cloth-scraps-plain.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set, Medicine",
+        "cost": {
+            "amount": 5,
+            "currency": "SC"
+        },
+        "weightInGram": 100,
+        "description": [
+            { "regularText": "A small piece of decently sterile cloth used to staunch wounds. Once the \"Apply Bandage\" Ability is used it can't be used again.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Apply Bandage" ]
+    },
+    {
+        "name": "Acid vial",
+        "tags": [ "Consumable"],
+        "meta": {
+            "iconPath": "icons/consumables/potions/bottle-corked-green.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Alchemy Kit",
+        "cost": {
+            "amount": 15,
+            "currency": "GC"
+        },
+        "weightInGram": 250,
+        "description": [
+            { "regularText": "A corrosive fluid. Once the \"Consume - Antidote Potion\" Ability is used this Equipmnent is destroyed.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Throw - Acid Vial" ]
+    },
+    {
+        "name": "Oil flask",
+        "tags": [ "Consumable"],
+        "meta": {
+            "iconPath": "icons/consumables/potions/flask-corked-yellow-glow.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Alchemy Kit",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 500,
+        "description": [
+            { "regularText": "A highly flammable fluid. Once the \"Throw - Oil Flask\" Ability is used this Equipmnent is destroyed.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Throw - Oil Flask" ]
+    },
+    {
+        "name": "Holy Water",
+        "tags": [ "Consumable"],
+        "meta": {
+            "iconPath": "icons/magic/holy/chalice-glowing-gold-water.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Lore (Supernatural)",
+        "cost": {
+            "amount": 15,
+            "currency": "GC"
+        },
+        "weightInGram": 250,
+        "description": [
+            { "regularText": "This water was blessed Good Etheral energy. Once either of the Granted Abilities are used, either a vial is left over or it the equipment is destroyed.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Throw - Holy Water", "Consume - Holy Water" ]
+    }
 ]

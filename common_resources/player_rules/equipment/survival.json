@@ -1,3 +1,173 @@
 [
-    
+    {
+        "name": "Field Tent",
+        "tags": [ "Survival" ],
+        "meta": {
+            "iconPath": "icons/environment/settlement/tent.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set or Carptenter's Tools",
+        "cost": {
+            "amount": 1,
+            "currency": "GC"
+        },
+        "weightInGram": 5000,
+        "description": [
+            { "regularText": "A small tent that can be set up within 10 minutes and has comfortable space for 1 person and 2 persons if need be.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Bedroll",
+        "tags": [ "Survival" ],
+        "meta": {
+            "iconPath": "icons/sundries/survival/bedroll-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 2,
+            "currency": "SC"
+        },
+        "weightInGram": 2000,
+        "description": [
+            { "regularText": "Durable and portable bedding consisting of sewn together leather and wool. Not the most comfortable, but good enough for travel.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Waterskin",
+        "tags": [ "Survival" ],
+        "meta": {
+            "iconPath": "icons/sundries/survival/wetskin-leather-tan.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 5,
+            "currency": "BC"
+        },
+        "weightInGram": 2500,
+        "description": [
+            { "regularText": "This is a durable container for water made out of leather that is able to hold 2 liters of liquid.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Supplies",
+        "tags": [ "Survival" ],
+        "meta": {
+            "iconPath": "icons/containers/boxes/crate-worn-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Survival or Lore(Nature)",
+        "cost": {
+            "amount": 3,
+            "currency": "BC"
+        },
+        "weightInGram": 500,
+        "description": [
+            { "regularText": "Food as well as various necessaties during to get you through your Travels. A medium creature consumes on avarage 1 set of supplies for 1 travel day. Double/half that amount for each size higher/lower than medium.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Flintstone and Tinder",
+        "tags": [ "Survival" ],
+        "meta": {
+            "iconPath": "icons/commodities/stone/geode-raw-black.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 3,
+            "currency": "SC"
+        },
+        "weightInGram": 1000,
+        "description": [
+            { "regularText": "This set contains flintstone, steel to ignite spark and easily flammable tinder.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Torch",
+        "tags": [ "Survival" ],
+        "meta": {
+            "iconPath": "icons/sundries/lights/torch-black.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Carpenter's Tools",
+        "cost": {
+            "amount": 2,
+            "currency": "BC"
+        },
+        "weightInGram": 250,
+        "description": [
+            { "regularText": "When a torch is lit, it can shine light(6m/12m) for 1 hour.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Backpack",
+        "tags": [ "Survival" ],
+        "meta": {
+            "iconPath": "icons/containers/bags/pack-leather-white-tan.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 1,
+            "currency": "GC"
+        },
+        "weightInGram": 3000,
+        "description": [
+            { "regularText": "A sturdy backpack with room for your essentials", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Pouch",
+        "tags": [ "Survival" ],
+        "meta": {
+            "iconPath": "icons/containers/bags/coinpouch-simple-leather-silver-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 8,
+            "currency": "BC"
+        },
+        "weightInGram": 250,
+        "description": [
+            { "regularText": "A small leather pouch where you can store your valuables.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Rope (10m)",
+        "tags": [ "Survival" ],
+        "meta": {
+            "iconPath": "icons/sundries/survival/rope-wrapped-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 2,
+            "currency": "SC"
+        },
+        "weightInGram": 5000,
+        "description": [
+            { "regularText": "A 10m long heavy rope that can reliably hold 500 kg of weight.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    }
 ]

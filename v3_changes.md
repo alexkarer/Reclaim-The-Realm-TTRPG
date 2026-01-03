@@ -110,22 +110,18 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - add foundry icon to each ability in JSON (✅)
     - also find way to include icon in webpage (✅)
     - define icons at a single place in global resourecs and add npm step to copy it to other repos (❌)
-    - also define colour for each ability and define it in JSON (❌)
+    - also define colour for each ability and define it in JSON (✅)
 - Ability amount should increase instead with 1 + LEVEL + (int/2) (❌)
 - All abilities are now MARTIAL or SPELL Test (❌)
 - Remove Hybrid Abilities for now (❌)
     - Should just be spells
 - REwork abilities to use the clear formating from foundryVTT (❌)
     - For ongoing effects label Concentartion clearly and rework how mechanics are displayed (❌)
-    - Each Ability should have their own crit effect.
-
 
 #### Martial Maneuvers (Techniques)
 
 - rename Martial Maneuvers to Techniques as there are no more Class Techniques (❌)
-- Incoperate all Weapon MAneuvers in Weapons (❌)
-- Rework Parry (❌)
-    - maybe fine if part of a weapon
+- Incoperate all Weapon Maneuvers in Weapons (❌)
 - More abilities that have non-combat users (❌)
 
 - Abilities that have not been Kept for now and need a rework (❌)
@@ -133,6 +129,10 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - Tag Team (❌)
     - Bodyguard (❌)
     - Cut of the Retreat (❌)
+
+- Ensure all there are enough Maneuvers for next campaign (❌)
+    - 4 basic for each type (❌)
+    - 2 advanced for each type (❌)
 
 #### Spells
 
@@ -152,16 +152,16 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 - Don't roll randomly for starting equipment, also figure out what good prices should be and starting gold/equipment (❌)
 
-- Medi-kit requires at least 3 Ranks in Medicine to use abilities (❌)
-    - split up into multiple abilities that you can access at higher level.
-
-- maneuvrepenalty should only nerf dodge (❌)
+- maneuvrepenalty should only nerf dodge (✅)
 
 - Add Staffs: each staff has 1 ability that has charges with max charges that need arcana too charge (❌)
 
 - Add Robes: that do cool stuff, worst case just +1 to spell cast test (❌)
 
-- Instead of Rations just have a supplies count/item (❌)
+- Instead of Rations just have a supplies count/item (✅)
+
+- re-evaluate set bonus (❌)
+    - maybe let those items just be cosmetic at first (❌)
 
 - Add a Trinket Table (❌)
 
@@ -208,6 +208,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - Proper travel mechanic that includes the following: (❌)
     - One day Travel mechanic, should be similar to Delve from Heart (❌)
         - Only needed in the followign circumstances: Really dangerous environment, tracking something, running away from someting
+        - Bad events can have consequences that they loose supplies
         - They have to achieve a number of success
         - Events that can happen 
         - Traveling can reduce stamina/hp depending on events 

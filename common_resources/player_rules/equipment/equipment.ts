@@ -3,6 +3,11 @@ import { TextElementWithoutAbility } from "../../shared/TextElements";
 import { mapIconPath } from "../../shared/icons";
 import weaponsJson from "./weapons.json";
 import armourJson from "./armour.json";
+import wearablesJson from "./wearables.json";
+import survivalJson from "./survival.json";
+import commoditiesJson from "./commodities.json";
+import toolsJson from "./tools.json";
+import consumablesJson from "./consumables.json";
 
 export class Equipment {
     name!: string;
@@ -49,10 +54,15 @@ export type DamageBlock = {
 
 export const EQUIPMENT: Equipment[] = [
     ...weaponsJson.map(w => map(w)),
-    ...armourJson.map(a => mapArmour(a))
+    ...armourJson.map(a => mapArmour(a)),
+    ...wearablesJson.map(w => map(w)),
+    ...survivalJson.map(w => map(w)),
+    ...commoditiesJson.map(w => map(w)),
+    ...toolsJson.map(w => map(w)),
+    ...consumablesJson.map(w => map(w))
 ]
 
-type JsonEquipment = typeof weaponsJson[0];
+type JsonEquipment = typeof weaponsJson[0] | typeof wearablesJson[2];
 function map(jsonEquipment: JsonEquipment): Equipment {
     let equipment = new Equipment();
     equipment.name = jsonEquipment.name;

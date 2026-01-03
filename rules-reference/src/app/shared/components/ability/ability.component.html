@@ -18,8 +18,7 @@
             <p class="description my-0"><span class="fw-bold">Cost: </span><app-dynamic-content [content]="pushingCost | textProcessor"></app-dynamic-content></p>
             <p class="description my-0"><span class="fw-bold">Effect on push: </span><app-dynamic-content [content]="pushingEffect | textProcessor"></app-dynamic-content></p>
         }
-        @if (ability()?.flavorText) {
-            <br>
+        @if ((ability()?.flavorText?.length ?? 0) > 0) {
             <span class="fst-italic text-body-secondary"><app-text-elements-without-ability [textElements]="ability()?.flavorText"></app-text-elements-without-ability></span>
         }
     </div>

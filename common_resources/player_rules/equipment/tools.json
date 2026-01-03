@@ -1,0 +1,230 @@
+[
+    {
+        "name": "Crowbar",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/hand/wrench-iron-grey.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "SC"
+        },
+        "weightInGram": 2000,
+        "description": [
+            { "regularText": "A brute alternative to Thieves Tools. Using a crowbar grants a +2 to bonus any [STR] [D20 TEST] used to force open doors or other similiar objects.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Shovel",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/hand/shovel-spade-steel-blue.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Smith's Tools or Carpenter's Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "SC"
+        },
+        "weightInGram": 2000,
+        "description": [
+            { "regularText": "Useful for digging up graves.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Pickaxe",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/hand/pickaxe-steel-white.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Smith's Tools or Carpenter's Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "SC"
+        },
+        "weightInGram": 2000,
+        "description": [
+            { "regularText": "Rock and Stone!", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Axe",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/hand/hatchet-steel-grey.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Smith's Tools or Carpenter's Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "SC"
+        },
+        "weightInGram": 2000,
+        "description": [
+            { "regularText": "Alternative to punching Trees.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Thieves Tools",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/hand/lockpicks-steel-grey.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 500,
+        "description": [
+            { "regularText": "Thieves Tools contain various lockpicks, small files, oil and other fine instruments. These tools can be used to lock and unlock doors and disarm traps.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Medi-kit",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/cooking/mortar-herbs-yellow.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Medicine",
+        "cost": {
+            "amount": 10,
+            "currency": "GC"
+        },
+        "weightInGram": 3000,
+        "description": [
+            { "regularText": "This Medi-kit contains various herbs, potions and bandages to treat wounded creatures. It has 10 uses and one use can be replenished at most towns at an apothacary for the price of 3 sc.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Emergency Treatment - Medi-kit", "Field Treatment - Medi-kit" ]
+    },
+    {
+        "name": "Smith's Tools",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/smithing/pincers.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 7000,
+        "description": [
+            { "regularText": "Smith's Tools contains a set of prongs, hammers, files, used for shaping and manipulating metals.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Alchemy Kit",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/laboratory/vials-blue-pink.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 20,
+            "currency": "GC"
+        },
+        "weightInGram": 5000,
+        "description": [
+            { "regularText": "Alchemy Kit contains various vials and measurement instruments and various reagents and catalysts for creating potions.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Jeweller's Tools",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/scribal/lens-blue.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 10,
+            "currency": "GC"
+        },
+        "weightInGram": 3000,
+        "description": [
+            { "regularText": "Jeweller's Tools contain variour fine tools of analyzing, cutting and polishing fine gemstones and crystals.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Tailor's Set",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/hand/needle-grey.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 1000,
+        "description": [
+            { "regularText": "Tailor's Set contains scissors, measurement tools, needles and other sewing tools to create and repair clothing.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Carpenter's Tools",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/hand/hammer-simple-stone.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 5000,
+        "description": [
+            { "regularText": "Carpenter's Tools contain hammers, saws, planes, axes and other tools for woodworking.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Field Cooking set",
+        "tags": [ "Tool" ],
+        "meta": {
+            "iconPath": "icons/tools/cooking/can.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 2,
+            "currency": "SC"
+        },
+        "weightInGram": 1000,
+        "description": [
+            { "regularText": "This set contains a small cylinder where food can be prepared and eaten out of and additional small cooking tools and cutlery.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    }
+]

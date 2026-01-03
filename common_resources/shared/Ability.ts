@@ -5,6 +5,7 @@ import brawlTechniquesJson from "../player_rules/techniques/brawl_techniques.jso
 import fortitudeTechniquesJson from "../player_rules/techniques/fortitude_techniques.json";
 import leaderTechniquesJson from "../player_rules/techniques/leader_techniques.json";
 import tacticalTechniquesJson from "../player_rules/techniques/tactical_techniques.json";
+import consumableAbilitiesJson from "../player_rules/equipment/equipment_abilities/consumables_abilities.json";
 
 export class Ability {
     name!: string;
@@ -109,7 +110,8 @@ const brawlSampleAction = brawlTechniquesJson[0].actions[0];
 const fortitudeSampleAction = fortitudeTechniquesJson[0].actions[0];
 const leaderSampleAction = leaderTechniquesJson[0].actions[0];
 const tacticalSampleAction = tacticalTechniquesJson[0].actions[0];
-type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction;
+const consumableSampleAction = consumableAbilitiesJson[0].actions[0];
+type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction | typeof consumableSampleAction;
 
 export function mapAction(jsonAction: JsonAction): AbilityAction {
     return {
@@ -138,7 +140,8 @@ const brawlSampleOutcome = brawlSampleAction.outcomesOnSuccess[0];
 const fortitudeSampleOutcome = fortitudeSampleAction.outcomesOnSuccess[0];
 const leaderSampleOutcome = leaderSampleAction.outcomesOnSuccess[0];
 const tacticalSampleOutcome = tacticalSampleAction.outcomesOnSuccess[0];
-type JsonOutcome = typeof agileSampleOutcome1 | typeof agileSampleOutcome2 | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome | typeof tacticalSampleOutcome;
+const consumableSampleOutcome = consumableSampleAction.outcomesAlways[0];
+type JsonOutcome = typeof agileSampleOutcome1 | typeof agileSampleOutcome2 | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome | typeof tacticalSampleOutcome | typeof consumableSampleOutcome;
 
 function mapOutcome(jsonOutcome: JsonOutcome): AbilityActionOutcome {
     return {

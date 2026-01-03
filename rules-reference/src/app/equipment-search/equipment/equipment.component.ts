@@ -2,7 +2,7 @@ import { Component, input } from '@angular/core';
 import { Armour, Currency, DamageBlock, Equipment, EquipmentColour } from '../../../../../common_resources/player_rules/equipment/equipment';
 import { TextElementsWithoutAbilityComponent } from "../../shared/text-utils/text-elements-without-ability/text-elements-without-ability.component";
 import { Ability } from '../../../../../common_resources/shared/Ability';
-import { EQUIPMENT_ABILITIES } from '../../../../../common_resources/player_rules/equipment/equipment_abilities';
+import { EQUIPMENT_ABILITIES } from '../../../../../common_resources/player_rules/equipment/equipment_abilities/equipment_abilities';
 import { AbilityComponent } from "../../shared/components/ability/ability.component";
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap/tooltip';
 import { DynamicContentComponent } from "../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";

@@ -1,0 +1,358 @@
+[
+    {
+        "name": "Consume - Healing Potion",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Healing Potion" },
+        "tags": [ "Heal" ],
+        "meta": { "iconPath": "icons/consumables/potions/vial-cork-red.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "HEAL",
+                        "expression": "2d6+3",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [ ]
+    },
+    {
+        "name": "Consume - Arcana Potion",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Arcana Potion" },
+        "tags": [  ],
+        "meta": { "iconPath": "icons/consumables/potions/vial-cork-blue.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "You regain 1 [ARCANA].", "headerLine": null, "bulletPoints": null } ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [ ]
+    },
+    {
+        "name": "Consume - Antidote Potion",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Antidote" },
+        "tags": [ ],
+        "meta": { "iconPath": "icons/consumables/potions/potion-bottle-labeled-medicine-capped-red-black.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "You end a [POISON I] Status Effect affecting you.", "headerLine": null, "bulletPoints": null } ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [ ]
+    },
+    {
+        "name": "Apply Bandage",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Bandage" },
+        "tags": [ "Heal" ],
+        "meta": { "iconPath": "icons/commodities/cloth/cloth-scraps-plain.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "ALLY",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "You remove a [BLEEDING I] Status Effect affecting the target.", "headerLine": null, "bulletPoints": null } ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [ ]
+    },
+    {
+        "name": "Throw - Acid Vial",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Acid vial" },
+        "tags": [ "Attack", "Ranged" ],
+        "meta": { "iconPath": "icons/consumables/potions/bottle-corked-green.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "RANGE",
+                "rangeDistanceFields": 6,
+                "targetType": "SPHERE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 1,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d6",
+                        "damageType": "Corrosive",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d6",
+                        "damageType": "Corrosive",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [ ]
+    },
+    {
+        "name": "Throw - Oil Flask",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Oil flask" },
+        "tags": [ "Attack", "Ranged" ],
+        "meta": { "iconPath": "icons/consumables/potions/flask-corked-yellow-glow.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "RANGE",
+                "rangeDistanceFields": 6,
+                "targetType": "SPHERE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 1,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "The area is drenched in oil, if ignited with fire it will burn for 10 [ROUND] and every creature within the Area at the start of the [ROUND] or that enter the area for the first time this [ROUND] recieve 1d6 fire damage.", "headerLine": null, "bulletPoints": null } ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [ ]
+    },
+    {
+        "name": "Throw - Holy Water",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Holy Water" },
+        "tags": [ "Attack", "Ranged" ],
+        "meta": { "iconPath": "icons/magic/holy/chalice-glowing-gold-water.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": "Only affects undead and evil cosmic creatures.",
+                "attribute": "AGI",
+                "rangeType": "RANGE",
+                "rangeDistanceFields": 6,
+                "targetType": "SPHERE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 1,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d6",
+                        "damageType": "Holy",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d6",
+                        "damageType": "Holy",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [ ]
+    },
+    {
+        "name": "Consume - Holy Water",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Holy Water" },
+        "tags": [ "Heal" ],
+        "meta": { "iconPath": "icons/magic/holy/chalice-glowing-gold-water.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "You end one [CURSED I], [WEAKENED I] or [VULNURABLE I] Status effect affecing you.", "headerLine": null, "bulletPoints": null } ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "Don't drink it you fool! -John the Paladin towards Malagorth", "headerLine": null, "bulletPoints": null }
+         ]
+    }
+]

@@ -7,7 +7,6 @@ export enum DamageType {
     ELECTRIC = "Electric",
     POISON = "Poison",
     PSYCHIC = "Psychic",
-    COSMIC = "Cosmic",
     HOLY = "Holy",
     UNHOLY = "Unholy",
     UNKNOWN = ""
@@ -29,8 +28,6 @@ export function parseDamageType(s: string): DamageType {
             return DamageType.ELECTRIC;
         case DamageType.PSYCHIC.toLowerCase():
             return DamageType.PSYCHIC;
-        case DamageType.COSMIC.toLowerCase():
-            return DamageType.COSMIC;
         case DamageType.HOLY.toLowerCase():
             return DamageType.HOLY;
         case DamageType.UNHOLY.toLowerCase():

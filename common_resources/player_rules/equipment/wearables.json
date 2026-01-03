@@ -1,3 +1,322 @@
 [
-    
+    {
+        "name": "Common Shoes",
+        "tags": [ "Wearable", "Boots" ],
+        "meta": {
+            "iconPath": "icons/equipment/feet/boots-collared-rounded-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 2,
+            "currency": "SC"
+        },
+        "weightInGram": 500,
+        "description": [
+            { "regularText": "Common shoes.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Sturdy Travel Boots",
+        "tags": [ "Wearable", "Boots" ],
+        "meta": {
+            "iconPath": "icons/equipment/feet/boots-collared-leather-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 2,
+            "currency": "GC"
+        },
+        "weightInGram": 1000,
+        "description": [
+            { "regularText": "The first time you need to use [STAMINA] during Travel, you can use 1 less.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Fancy Town Shoes",
+        "tags": [ "Wearable", "Boots" ],
+        "meta": {
+            "iconPath": "icons/equipment/feet/boots-collared-pink.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 3,
+            "currency": "GC"
+        },
+        "weightInGram": 500,
+        "description": [
+            { "regularText": "Fancy Shoes crafted of the finest Leather and decorations.", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": "Fancy Armor Set Bonus",
+                "bulletPoints": null,
+                "ability": null
+            },
+            { "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [D20 TEST] when interacting with people of high station or law-abiding people in Settlements..", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Sabatons",
+        "tags": [ "Wearable", "Boots" ],
+        "meta": {
+            "iconPath": "icons/equipment/feet/boots-armored-grey.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 10,
+            "currency": "GC"
+        },
+        "weightInGram": 2000,
+        "description": [
+            { "regularText": "Sabaton is a metal boot part of Armor.", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": "Metal Armor Set Bonus",
+                "bulletPoints": null,
+                "ability": null
+            },
+            { "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase your [DR] against physical by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Common Clothes",
+        "tags": [ "Wearable", "Clothes" ],
+        "meta": {
+            "iconPath": "icons/equipment/chest/shirt-collared-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 3,
+            "currency": "SC"
+        },
+        "weightInGram": 1000,
+        "description": [
+            { "regularText": "Common Clothes", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Fancy Clothes",
+        "tags": [ "Wearable", "Clothes" ],
+        "meta": {
+            "iconPath": "icons/equipment/chest/robe-layered-red.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 10,
+            "currency": "GC"
+        },
+        "weightInGram": 2000,
+        "description": [
+            { "regularText": "You gain a +1 bonus to any [CHA] [D20 TEST] when in Settlements, assuming no armor is worn over these clothes.", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": "Fancy Armor Set Bonus",
+                "bulletPoints": null,
+                "ability": null
+            },
+            { "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [D20 TEST] when interacting with people of high station or law-abiding people in Settlements..", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Travel Clothes",
+        "tags": [ "Wearable", "Clothes" ],
+        "meta": {
+            "iconPath": "icons/equipment/chest/shirt-simple-white.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 1,
+            "currency": "GC"
+        },
+        "weightInGram": 1500,
+        "description": [
+            { "regularText": "Comfortable Clothes designed for long journeys.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Thick Winter clothes",
+        "tags": [ "Wearable", "Clothes" ],
+        "meta": {
+            "iconPath": "icons/equipment/head/hood-leather-fur-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 4,
+            "currency": "GC"
+        },
+        "weightInGram": 4000,
+        "description": [
+            { "regularText": "These winter clothes will keep you comfortable in Cold Temperatures and come with a cloak that can be woarn over armor. While wearing these clothes you gain Frost Resistance 1, but you cannot wear these clothes in Temperatures over 15°.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Leather Gloves",
+        "tags": [ "Wearable", "Gloves" ],
+        "meta": {
+            "iconPath": "icons/equipment/hand/gauntlet-tooled-leather-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 2,
+            "currency": "SC"
+        },
+        "weightInGram": 250,
+        "description": [
+            { "regularText": "Comfortable Leather Gloves", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Silk Gloves",
+        "tags": [ "Wearable", "Gloves" ],
+        "meta": {
+            "iconPath": "icons/equipment/hand/glove-leather-blue-gold.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 100,
+        "description": [
+            { "regularText": "You gain a +1 bonus to any [CHA] [D20 TEST] when in Settlements.", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": "Fancy Armor Set Bonus",
+                "bulletPoints": null,
+                "ability": null
+            },
+            { "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [D20 TEST] when interacting with people of high station or law-abiding people in Settlements..", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Metal Gauntlets",
+        "tags": [ "Wearable", "Gloves" ],
+        "meta": {
+            "iconPath": "icons/equipment/hand/gauntlet-armored-heavy-steel.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 10,
+            "currency": "GC"
+        },
+        "weightInGram": 1000,
+        "description": [
+            { "regularText": "Sturdy Metal Gauntlets.", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": "Metal Armor Set Bonus",
+                "bulletPoints": null,
+                "ability": null
+            },
+            { "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase your [DR] against physical by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Hood",
+        "tags": [ "Wearable", "Helmet" ],
+        "meta": {
+            "iconPath": "icons/equipment/head/hood-leather-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 1,
+            "currency": "SC"
+        },
+        "weightInGram": 100,
+        "description": [
+            {
+                "regularText": "For those who whish not to be seen.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Fancy Hat",
+        "tags": [ "Wearable", "Helmet" ],
+        "meta": {
+            "iconPath": "icons/equipment/head/crown-fur-red-white.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 250,
+        "description": [
+            {
+                "regularText": "A finely crafted and extravagant hat.", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": "Fancy Armor Set Bonus",
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": "If you wear Fancy Town Shoes, Silk Gloves a Fancy Hat and Fancy Clothes together you gain [ADVANTAGE] on any [CHA] [D20 TEST] when interacting with people of high station or law-abiding people in Settlements..", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Steel Helmet",
+        "tags": [ "Wearable", "Helmet" ],
+        "meta": {
+            "iconPath": "icons/equipment/head/helm-barbute-rounded-steel.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 10,
+            "currency": "GC"
+        },
+        "weightInGram": 1000,
+        "description": [
+            {
+                "regularText": "A steel helmet comes with a Visor which still allows you to retain Vision when outside of combat.", "headerLine": null, "bulletPoints": null, "ability": null },
+            {
+                "regularText": null,
+                "headerLine": "Metal Armor Set Bonus",
+                "bulletPoints": null,
+                "ability": null
+            },
+            {
+                "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase your [DR] against physical by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    }
 ]

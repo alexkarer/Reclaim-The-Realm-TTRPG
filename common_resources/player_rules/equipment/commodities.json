@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Empty Vial",
+        "tags": [ "Commodity" ],
+        "meta": {
+            "iconPath": "icons/consumables/potions/vial-cork-empty.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Smith's Tools",
+        "cost": {
+            "amount": 1,
+            "currency": "GC"
+        },
+        "weightInGram": 100,
+        "description": [
+            { "regularText": "Empty Vial.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    }
+]

@@ -14,7 +14,7 @@ export class EquipmentSearchComponent {
 
     filteredEquipment: Equipment[] = EQUIPMENT;
     currentFilterText = '';
-    readonly filterTags = [ 'Weapon', 'Armour' ];
+    readonly filterTags = [ 'Weapon', 'Armour', 'Wearable', 'Boots', 'Clothes', 'Gloves', 'Helmet', 'Survival', 'Tool', 'Commodity' ];
     currentFilterTags: string[] = [];
     selectedEquipment: Equipment = EQUIPMENT[0];
 

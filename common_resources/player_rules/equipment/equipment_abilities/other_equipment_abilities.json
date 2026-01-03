@@ -1,0 +1,88 @@
+[
+    {
+        "name": "Emergency Treatment - Medi-kit",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Medi-kit Use" },
+        "tags": [ "Heal" ],
+        "meta": { "iconPath": "icons/magic/life/cross-worn-green.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "CUSTOM",
+                "customAction": "[INT] Medicine [D20 TEST] vs. [DT] 15/20/25",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "ALLY",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [ ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "You can end one [POISON I] or [BLEEDING I] Status Effect affecting the target. For [DT] 20: [POISON II] or [BLEEDING II]. For [DT] 20: [POISON III] or [BLEEDING III].", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null }
+        ]
+    },
+    {
+        "name": "Field Treatment - Medi-kit",
+        "cost": { "ap": 150, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "(5 minutes) 1 Medi-kit Use" },
+        "tags": [ "Heal" ],
+        "meta": { "iconPath": "icons/magic/life/cross-worn-green.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "CUSTOM",
+                "customAction": "[INT] Medicine [D20 TEST]",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "ALLY",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "If your result is 10 or above you heal the target for 1d6 [HP]. For every further 5 your result is higher than 10 the target heals by an additional 1d6. A creature can only benefit be targeted by this Ability once per long rest.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null }
+        ]
+    }
+]

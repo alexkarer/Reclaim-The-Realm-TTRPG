@@ -93,6 +93,6 @@ export class AbilityActionComponent {
   }
 
   private areMultipleTargets(): boolean {
-    return (this.action()?.targets ?? 0) > 0
+    return (this.action()?.targets ?? 0) > 1
   }
 }
