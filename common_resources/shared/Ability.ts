@@ -50,7 +50,7 @@ export type AbilityAction = {
 }
 
 export enum AbilityActionType { NO_ACTION, SIMPLE, MARTIAL_TEST, SPELL_TEST, CUSTOM }
-export enum AbilityRangeType { NONE, MELEE, FIELDS }
+export enum AbilityRangeType { NONE, MELEE, FIELDS, RANGE_DROPOFF }
 export enum AbilityTargetType { NONE, SELF, CREATURE, ALLY, SPHERE, LINE, CONE, SQUARE, AURA, ALL, CUSTOM }
 export enum AbilityOpposingSave { NONE, STABILITY = 'STABILITY', DODGE = 'DODGE', TOUGHNESS = 'TOUGHNESS', WILLPOWER = 'WILLPOWER' }
 export enum AbilityAttribute { NONE, STR = 'STR', AGI = 'AGI', CON = 'CON', INT = 'INT', SPI = 'SPI', PER = 'PER', CHA = 'CHA' }
@@ -103,14 +103,6 @@ export type LevelRequirement = {
 /*
  * COMMON MAPPING METHODS 
  */
-
-export function mapIconPath(s: string) {
-    // needed for foundryvtt compability
-    if (s.startsWith('icon')) {
-        return '/assets/' + s 
-    }
-    return s;
-}
 
 const agileSampleAction = agilityTechniquesJson[0].actions[0];
 const brawlSampleAction = brawlTechniquesJson[0].actions[0];
@@ -168,23 +160,15 @@ export function parseAbilityColour(s?: string): AbilityColour {
         console.error("Ability colour not defined! Setting colourless");
         return AbilityColour.COLOURLESS;
     }
-    if (s.startsWith("BLUE")) {
-        return AbilityColour.BLUE;
-    } else if (s.startsWith("RED")) {
-        return AbilityColour.RED;
-    } else if (s.startsWith("GREEN")) {
-        return AbilityColour.GREEN;
-    } else if (s.startsWith("YELLOW")) {
-        return AbilityColour.YELLOW;
-    } else if (s.startsWith("ORANGE")) {
-        return AbilityColour.ORANGE;
-    } else if (s.startsWith("BROWN")) {
-        return AbilityColour.BROWN;
-    } else if (s.startsWith("COLOURLESS")) {
-        return AbilityColour.COLOURLESS;
-    } else {
-        console.error(`Ability colour ${s} not recognized! Setting colourless`);
-        return AbilityColour.COLOURLESS;
+    switch (s) {
+        case "BLUE": return AbilityColour.BLUE;
+        case "RED": return AbilityColour.RED;
+        case "GREEN": return AbilityColour.GREEN;
+        case "YELLOW": return AbilityColour.YELLOW;
+        case "ORANGE": return AbilityColour.ORANGE;
+        case "BROWN": return AbilityColour.BROWN;
+        case "COLOURLESS": return AbilityColour.COLOURLESS;
+        default: console.error(`Ability colour ${s} not recognized! Setting colourless`); return AbilityColour.COLOURLESS;
     }
 }
 
@@ -193,19 +177,13 @@ export function parseAbilityActionType(s?: string): AbilityActionType {
         console.error("AbilityActionType not defined! Setting NO_ACTION");
         return AbilityActionType.NO_ACTION;
     }
-    if (s.startsWith("CUSTOM")) {
-        return AbilityActionType.CUSTOM;
-    } else if (s.startsWith("MARTIAL_TEST")) {
-        return AbilityActionType.MARTIAL_TEST;
-    } else if (s.startsWith("SPELL_TEST")) {
-        return AbilityActionType.SPELL_TEST;
-    } else if (s.startsWith("SIMPLE")) {
-        return AbilityActionType.SIMPLE;
-    } else if (s.startsWith("NO_ACTION")) {
-        return AbilityActionType.NO_ACTION;
-    }  else {
-        console.error(`AbilityActionType ${s} not recognized! Setting NO_ACTION`);
-        return AbilityActionType.NO_ACTION;
+    switch (s) {
+        case "CUSTOM": return AbilityActionType.CUSTOM;
+        case "MARTIAL_TEST": return AbilityActionType.MARTIAL_TEST;
+        case "SPELL_TEST": return AbilityActionType.SPELL_TEST;
+        case "SIMPLE": return AbilityActionType.SIMPLE;
+        case "NO_ACTION": return AbilityActionType.NO_ACTION;
+        default: console.error(`AbilityActionType ${s} not recognized! Setting NO_ACTION`); return AbilityActionType.NO_ACTION;
     }
 }
 
@@ -214,25 +192,16 @@ export function parseAbilityAttribute(s?: string): AbilityAttribute {
         console.error("AbilityAttribute not defined! Setting NONE");
         return AbilityAttribute.NONE;
     }
-    if (s.startsWith("STR")) {
-        return AbilityAttribute.STR;
-    } else if (s.startsWith("AGI")) {
-        return AbilityAttribute.AGI;
-    } else if (s.startsWith("CON")) {
-        return AbilityAttribute.CON;
-    } else if (s.startsWith("INT")) {
-        return AbilityAttribute.INT;
-    } else if (s.startsWith("SPI")) {
-        return AbilityAttribute.SPI;
-    }else if (s.startsWith("PER")) {
-        return AbilityAttribute.PER;
-    }else if (s.startsWith("CHA")) {
-        return AbilityAttribute.CHA;
-    } else if (s.startsWith("NONE")) {
-        return AbilityAttribute.NONE;
-    } else {
-        console.error(`AbilityAttribute ${s} not recognized! Setting NONE`);
-        return AbilityAttribute.NONE;
+    switch (s) {
+        case "STR": return AbilityAttribute.STR;
+        case "AGI": return AbilityAttribute.AGI;
+        case "CON": return AbilityAttribute.CON;
+        case "INT": return AbilityAttribute.INT;
+        case "SPI": return AbilityAttribute.SPI;
+        case "PER": return AbilityAttribute.PER;
+        case "CHA": return AbilityAttribute.CHA;
+        case "NONE": return AbilityAttribute.NONE;
+        default: console.error(`AbilityAttribute ${s} not recognized! Setting NONE`); return AbilityAttribute.NONE;
     }
 }
 
@@ -241,15 +210,12 @@ export function parseAbilityRangeType(s?: string): AbilityRangeType {
         console.error("AbilityRangeType not defined! Setting NONE");
         return AbilityRangeType.NONE;
     }
-    if (s.startsWith("MELEE")) {
-        return AbilityRangeType.MELEE;
-    } else if (s.startsWith("FIELDS")) {
-        return AbilityRangeType.FIELDS;
-    } else if (s.startsWith("NONE")) {
-        return AbilityRangeType.NONE;
-    } else {
-        console.error(`AbilityRangeType ${s} not recognized! Setting NONE`);
-        return AbilityRangeType.NONE;
+    switch (s) {
+        case "MELEE": return AbilityRangeType.MELEE;
+        case "FIELDS": return AbilityRangeType.FIELDS;
+        case "RANGE_DROPOFF": return AbilityRangeType.RANGE_DROPOFF;
+        case "NONE": return AbilityRangeType.NONE;
+        default: console.error(`AbilityRangeType ${s} not recognized! Setting NONE`); return AbilityRangeType.NONE;
     }
 }
 
@@ -258,31 +224,19 @@ export function parseAbilityTargetType(s?: string): AbilityTargetType {
         console.error("AbilityTargetType not defined! Setting NONE");
         return AbilityTargetType.NONE;
     }
-    if (s.startsWith("SELF")) {
-        return AbilityTargetType.SELF;
-    } else if (s.startsWith("CREATURE")) {
-        return AbilityTargetType.CREATURE;
-    } else if (s.startsWith("ALLY")) {
-        return AbilityTargetType.ALLY;
-    } else if (s.startsWith("CUSTOM")) {
-        return AbilityTargetType.CUSTOM;
-    } else if (s.startsWith("CONE")) {
-        return AbilityTargetType.CONE;
-    } else if (s.startsWith("SPHERE")) {
-        return AbilityTargetType.SPHERE;
-    } else if (s.startsWith("LINE")) {
-        return AbilityTargetType.LINE;
-    } else if (s.startsWith("SQUARE")) {
-        return AbilityTargetType.SQUARE;
-    } else if (s.startsWith("AURA")) {
-        return AbilityTargetType.AURA;
-    } else if (s.startsWith("ALL")) {
-        return AbilityTargetType.ALL;
-    } else if (s.startsWith("NONE")) {
-        return AbilityTargetType.NONE;
-    }else {
-        console.error(`AbilityTargetType ${s} not recognized! Setting NONE`);
-        return AbilityTargetType.NONE;
+    switch (s) {
+        case "SELF": return AbilityTargetType.SELF;
+        case "CREATURE": return AbilityTargetType.CREATURE;
+        case "ALLY": return AbilityTargetType.ALLY;
+        case "CUSTOM": return AbilityTargetType.CUSTOM;
+        case "CONE": return AbilityTargetType.CONE;
+        case "SPHERE": return AbilityTargetType.SPHERE;
+        case "LINE": return AbilityTargetType.LINE;
+        case "SQUARE": return AbilityTargetType.SQUARE;
+        case "AURA": return AbilityTargetType.AURA;
+        case "ALL": return AbilityTargetType.ALL;
+        case "NONE": return AbilityTargetType.NONE;
+        default: console.error(`AbilityTargetType ${s} not recognized! Setting NONE`); return AbilityTargetType.NONE;
     }
 }
 
@@ -291,19 +245,13 @@ export function parseAbilityOpposingSave(s?: string): AbilityOpposingSave {
         console.error("AbilityOpposingSave not defined! Setting NONE");
         return AbilityOpposingSave.NONE;
     }
-    if (s.startsWith("STABILITY")) {
-        return AbilityOpposingSave.STABILITY
-    } else if (s.startsWith("DODGE")) {
-        return AbilityOpposingSave.DODGE;
-    } else if (s.startsWith("TOUGHNESS")) {
-        return AbilityOpposingSave.TOUGHNESS;
-    } else if (s.startsWith("WILLPOWER")) {
-        return AbilityOpposingSave.WILLPOWER;
-    } else if (s.startsWith("NONE")) {
-        return AbilityOpposingSave.NONE;
-    } else {
-        console.error(`AbilityOpposingSave ${s} not recognized! Setting NONE`);
-        return AbilityOpposingSave.NONE;
+    switch (s) {
+        case "STABILITY": return AbilityOpposingSave.STABILITY;
+        case "DODGE": return AbilityOpposingSave.DODGE;
+        case "TOUGHNESS": return AbilityOpposingSave.TOUGHNESS;
+        case "WILLPOWER": return AbilityOpposingSave.WILLPOWER;
+        case "NONE": return AbilityOpposingSave.NONE;
+        default: console.error(`AbilityOpposingSave ${s} not recognized! Setting NONE`); return AbilityOpposingSave.NONE;
     }
 }
 
@@ -312,17 +260,12 @@ export function parseAbilityActionOutcomeType(s?: string): AbilityActionOutcomeT
         console.error("AbilityActionOutcomeType not defined! Setting FREETEXT");
         return AbilityActionOutcomeType.FREETEXT;
     }
-    if (s.startsWith("DAMAGE")) {
-        return AbilityActionOutcomeType.DAMAGE
-    } else if (s.startsWith("HEAL")) {
-        return AbilityActionOutcomeType.HEAL;
-    } else if (s.startsWith("STATUS_EFFECT")) {
-        return AbilityActionOutcomeType.STATUS_EFFECT;
-    } else if (s.startsWith("FREETEXT")) {
-        return AbilityActionOutcomeType.FREETEXT;
-    } else {
-        console.error(`AbilityActionOutcomeType ${s} not recognized! Setting FREETEXT`);
-        return AbilityActionOutcomeType.FREETEXT;
+    switch (s) {
+        case "DAMAGE": return AbilityActionOutcomeType.DAMAGE;
+        case "HEAL": return AbilityActionOutcomeType.HEAL;
+        case "STATUS_EFFECT": return AbilityActionOutcomeType.STATUS_EFFECT;
+        case "FREETEXT": return AbilityActionOutcomeType.FREETEXT;
+        default: console.error(`AbilityActionOutcomeType ${s} not recognized! Setting FREETEXT`); return AbilityActionOutcomeType.FREETEXT;
     }
 }
 
@@ -331,18 +274,12 @@ export function parseDurationUnit(s?: string): DurationUnit {
         console.error("durationUnit not defined! Setting NONE");
         return DurationUnit.NONE;
     }
-    if (s.startsWith("ROUND")) {
-        return DurationUnit.ROUND
-    } else if (s.startsWith("MINUTE")) {
-        return DurationUnit.MINUTE;
-    } else if (s.startsWith("HOUR")) {
-        return DurationUnit.HOUR;
-    } else if (s.startsWith("INDEFINATE")) {
-        return DurationUnit.INDEFINATE;
-    } else if (s.startsWith("NONE")) {
-        return DurationUnit.NONE;
-    } else {
-        console.error(`durationUnit ${s} not recognized! Setting NONE`);
-        return DurationUnit.NONE;
+    switch (s) {
+        case "ROUND": return DurationUnit.ROUND;
+        case "MINUTE": return DurationUnit.MINUTE;
+        case "HOUR": return DurationUnit.HOUR;
+        case "INDEFINATE": return DurationUnit.INDEFINATE;
+        case "NONE": return DurationUnit.NONE;
+        default: console.error(`DurationUnit ${s} not recognized! Setting NONE`); return DurationUnit.NONE;
     }
 }

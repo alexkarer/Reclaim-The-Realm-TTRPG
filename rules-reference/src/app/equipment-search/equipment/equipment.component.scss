@@ -1,0 +1,35 @@
+.equipment-image {
+    height: 48px;
+    width: 48px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15%;
+}
+
+.currency {
+    height: 28px;
+    width: 28px;
+    border-style: none;
+    border-radius: 15%;
+}
+
+.equipment-yellow {
+    border-color: yellow;
+
+    .header {
+        background-color: rgb(100, 100, 0);
+    }
+    .body {
+        background-color: rgb(50, 50, 0);
+    }
+}
+
+.equipment-colourless {
+    .header {
+        background-color: var(--bs-body-bg);
+    }
+    .body {
+        background-color: var(--bs-tertiary-bg);
+    }
+}

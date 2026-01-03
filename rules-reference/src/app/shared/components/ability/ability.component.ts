@@ -6,29 +6,30 @@ import { TextProcessorPipe } from '../../text-utils/text-processor';
 import { TextElementsWithoutAbilityComponent } from '../../text-utils/text-elements-without-ability/text-elements-without-ability.component';
 import { Technique } from '../../../../../../common_resources/player_rules/techniques/technique';
 import { AbilityActionComponent } from "./ability-action/ability-action.component";
+import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-ability',
-  imports: [RequirementsPrettierPipe, forwardRef(() => DynamicContentComponent), TextProcessorPipe, TextElementsWithoutAbilityComponent, AbilityActionComponent],
+  imports: [RequirementsPrettierPipe, forwardRef(() => DynamicContentComponent), TextProcessorPipe, TextElementsWithoutAbilityComponent, AbilityActionComponent, NgbCollapse],
   templateUrl: './ability.component.html',
   styleUrl: './ability.component.scss',
 })
 export class AbilityComponent {
   ability = input<Ability>();
+  collapsable = input<boolean>(false);
+  isCollapsed = true;
 
   get colourClass(): string {
     const colour = this.ability()?.meta.colour ?? AbilityColour.COLOURLESS;
-    let colourText = '';
     switch (colour) {
-      case AbilityColour.GREEN: colourText = 'ability-green'; break;
-      case AbilityColour.RED: colourText = 'ability-red'; break;
-      case AbilityColour.BLUE: colourText = 'ability-blue'; break;
-      case AbilityColour.YELLOW: colourText = 'ability-yellow'; break;
-      case AbilityColour.ORANGE: colourText = 'ability-orange'; break;
-      case AbilityColour.BROWN: colourText = 'ability-brown'; break;
-      case AbilityColour.COLOURLESS: colourText = 'ability-colourless'; break;
+      case AbilityColour.GREEN: return 'ability-green';
+      case AbilityColour.RED: return'ability-red';
+      case AbilityColour.BLUE: return'ability-blue';
+      case AbilityColour.YELLOW: return'ability-yellow';
+      case AbilityColour.ORANGE: return'ability-orange';
+      case AbilityColour.BROWN: return'ability-brown'; 
+      case AbilityColour.COLOURLESS: return'ability-colourless';
     }
-    return colourText;
   }
 
   get abilityCost(): string {

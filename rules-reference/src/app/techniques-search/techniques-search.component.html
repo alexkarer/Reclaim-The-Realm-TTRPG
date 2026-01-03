@@ -38,7 +38,7 @@
 			</div>
 		</div>
     <div ngbDropdown class="d-inline-block me-5">
-      <button type="button" class="btn btn-outline-primary" id="dropdown-technique-ability-tag" ngbDropdownToggle>Tag Filters</button>
+      <button type="button" class="btn btn-outline-primary" id="dropdown-technique-ability-tag" ngbDropdownToggle>Tag Filters {{ `(${currentFilterTags.length})` }}</button>
       <div ngbDropdownMenu aria-labelledby="dropdown-technique-ability-tag">
         <div class="d-flex justify-content-center flex-column mx-2">
           @for (tag of filterTags; track $index) {

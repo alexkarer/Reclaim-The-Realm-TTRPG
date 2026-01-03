@@ -1,12 +1,12 @@
 <div [class]="colourClass + ' card'">
-    <div class="card-header btn header">
+    <div class="card-header btn header" (click)="isCollapsed = !isCollapsed">
         <div class="d-flex flex-row align-items-center">
-            <img class="image-wrapper" [src]="ability()?.meta?.iconPath">
+            <img class="ability-image" [src]="ability()?.meta?.iconPath">
             <h4 class="ms-2">{{ ability()?.name }}</h4>
             <p class="fst-italic text-body-secondary ms-3"><span class="text-body">Tags: </span><app-dynamic-content [content]="ability()?.tags?.join('; ') | textProcessor"></app-dynamic-content></p>
         </div>
     </div>
-    <div class="card-body body">
+    <div class="card-body body" #collapse="ngbCollapse" [ngbCollapse]="isCollapsed && collapsable()">
         <p class="description my-0"><span class="fw-bold">Requirements: </span><app-dynamic-content [content]="ability()?.requirements | requirementsPrettier | textProcessor"></app-dynamic-content></p>
         <p class="description mt-0 mb-1"><span class="fw-bold">Cost: </span><app-dynamic-content [content]="abilityCost | textProcessor"></app-dynamic-content></p>
         <h5 class="mt-0 mb-2">Actions</h5>

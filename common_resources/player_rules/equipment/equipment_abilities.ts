@@ -1,10 +1,10 @@
 import { Ability, mapAction, parseAbilityColour } from "../../shared/Ability";
 import { mapIconPath } from "../../shared/icons";
-import standardAbilitiesJson from "./standard_abilities.json";
+import weaponAbilitiesJson from "./weapon_abilities.json";
 
-type JsonAbility = typeof standardAbilitiesJson[0]
+type JsonAbility = typeof weaponAbilitiesJson[0]
 
-export const STANDARD_ABILITIES: Ability[] = standardAbilitiesJson.map(a => mapAbilitiy(a));
+export const EQUIPMENT_ABILITIES: Ability[] = weaponAbilitiesJson.map(a => mapAbilitiy(a));
 
 function mapAbilitiy(jsonAbilitiy: JsonAbility): Ability {
     let abilitiy = new Ability();

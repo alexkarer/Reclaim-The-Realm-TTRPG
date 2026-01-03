@@ -1,0 +1,25 @@
+.equipment-image {
+    height: 8vh;
+    width: 8vh;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 15%;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        border-color: var(--bs-light);
+    }
+
+    &:active {
+        border-style: groove;
+    }
+}
+
+.not-selected {
+    border-color: var(--bs-secondary-border-subtle);
+}
+
+.selected {
+    border-color: var(--bs-primary);
+}

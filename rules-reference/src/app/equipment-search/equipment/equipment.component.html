@@ -1,0 +1,41 @@
+<div [class]="colourClass + ' card'">
+    <div class="card-header btn header">
+        <div class="d-flex flex-row align-items-center justify-content-between">
+            <img class="equipment-image" [src]="equipment()?.meta?.iconPath">
+            <h4 class="ms-2">{{ equipment()?.name }}</h4>
+            <span class="fst-italic text-body-secondary ms-3"><span class="text-body">Tags: </span>{{ equipment()?.tags?.join(', ') }}</span>
+            <div class="d-flex flex-row">
+                <h5 class="me-1">{{equipment()?.cost?.amount}}</h5>
+                @switch (equipment()?.cost?.currency) {
+                    @case (Currency.BC) {
+                        <img class="currency" src="/assets/icons/commodities/currency/coins-wheat-stack-copper.webp" ngbTooltip="Bronze Coins">
+                    }
+                    @case (Currency.SC) {
+                        <img class="currency" src="/assets/icons/commodities/currency/coins-shield-sword-stack-silver.webp" ngbTooltip="Silver Coins">
+                    }
+                    @case (Currency.GC) {
+                        <img class="currency" src="/assets/icons/commodities/currency/coins-crown-stack-gold.webp" ngbTooltip="Gold Coins">
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <div class="card-body body">
+        <p class="description my-0"><span class="fw-bold">Tier: </span> {{ equipment()?.tier }}</p>
+        <p class="description my-0"><span class="fw-bold">Weight: </span> {{ equipment()?.getPrettyWeightString() }}</p>
+        <p class="description my-0"><span class="fw-bold">Crafting Skills: </span> {{ equipment()?.craftingSkill }}</p>
+        @if (isArmour) {
+            <p class="description mt-1 my-0"><span class="fw-bold">Damage Block: </span> {{ getDamageBlock }}</p>
+            <p class="description my-0"><app-dynamic-content [content]="'[DODGE]' | textProcessor"></app-dynamic-content><span class="fw-bold"> Penalty: </span>{{dodgePenalty}}</p>
+            <p class="description my-0"><app-dynamic-content [content]="'[MP]' | textProcessor"></app-dynamic-content><span class="fw-bold"> Penalty: </span>{{mpPenalty}}</p>
+        }
+        <h6 class="mt-2 my-0">Description</h6>
+        <span class="fst-italic text-body-secondary"><app-text-elements-without-ability [textElements]="equipment()?.description"></app-text-elements-without-ability></span>
+        @if (equipment()?.grantedAbilities?.length !== 0) {
+            <h5 class="mt-2 mb-2">Granted Abilities</h5>
+            @for (ability of grantedAbilities; track $index) {
+                <app-ability [ability]="ability" [collapsable]="true"></app-ability>
+            }
+        }
+    </div>
+</div>

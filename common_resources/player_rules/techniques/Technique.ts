@@ -1,4 +1,5 @@
-import { Ability, mapAction, mapIconPath, parseAbilityColour } from "../../shared/Ability";
+import { Ability, mapAction, parseAbilityColour } from "../../shared/Ability";
+import { mapIconPath } from "../../shared/icons";
 import agilityTechniquesJson from "./agile_techniques.json";
 import brawlTechniquesJson from "./brawl_techniques.json";
 import fortitudeTechniquesJson from "./fortitude_techniques.json";

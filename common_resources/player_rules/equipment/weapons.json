@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Dagger",
+        "tags": ["Weapon", "Melee Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/daggers/dagger-straight-blue.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools",
+        "cost": {
+            "amount": 2,
+            "currency": "GC"
+        },
+        "weightInGram": 500,
+        "description": [
+            { "regularText": "[TAG;Attack] Abilities made with this Weapon have their requirement for critical hits lowerd by 2.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Attack - Dagger", "Throw - Dagger", "Deep Cut - Dagger", "Backstab - Dagger" ]
+    }
+]

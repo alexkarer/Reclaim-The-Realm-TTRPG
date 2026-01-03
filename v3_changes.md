@@ -148,17 +148,29 @@ Remove class techniques as they make more provbelms as they solve and include ab
 ### Equipment
 
 - Rebalance Weapons to have Maneuvers (❌)
-    - More Maneuvers should be unlocked with Martial Level so spellcasters have not immediate access to them. 
+    - More Maneuvers should be unlocked with Martial Level so spellcasters have not immediate access to them. (❌)
+
 - Don't roll randomly for starting equipment, also figure out what good prices should be and starting gold/equipment (❌)
+
 - Medi-kit requires at least 3 Ranks in Medicine to use abilities (❌)
     - split up into multiple abilities that you can access at higher level.
-- Shields should just give extra physical damage resistance (❌)
-- Each Item should have listed what higher item tiers give you (❌)
+
 - maneuvrepenalty should only nerf dodge (❌)
+
 - Add Staffs: each staff has 1 ability that has charges with max charges that need arcana too charge (❌)
+
 - Add Robes: that do cool stuff, worst case just +1 to spell cast test (❌)
+
 - Instead of Rations just have a supplies count/item (❌)
+
 - Add a Trinket Table (❌)
+
+- masterwork/higher tier should be separate items instead of just upgrades somewhere in rules (❌)
+    - what to do with crude (❌)
+
+- Overview changes (❌)
+    - Add cost filter (numeric) for equipment overview (❌)
+    - add tier filter (❌)
 
 ### Combat Mechanics
 
@@ -178,7 +190,9 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - You can wake up from unconcious during combat (❌) 
 
 - Rework Status Effects so they work with changes to remove Attacks (❌)
-    - remove reduntant status effect
+    - remove reduntant status effect (❌)
+    - clean up restrained text and make escape it's own ability (❌)
+    - damage/heal status effects apply at the end of each ROUND (❌)
 
 ### Adventure Mechanics
 
@@ -230,9 +244,9 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - Move Player Character creation to separate page from Rules (✅)
 
 - Allow more filter options for Abilities (❌)
-    - Filter for Tags: Reaction, Attack, Move (❌)
-    - add more tags: Heal?
-    - Add sorting
+    - Filter for Tags: Reaction, Attack, Move (✅)
+    - add more tags: Heal? (✅)
+    - Add sorting (✅)
 
 - Remove initial page and keywords since ATTACK is getting removed (❌)
     - remove degree of success/failure part (❌)

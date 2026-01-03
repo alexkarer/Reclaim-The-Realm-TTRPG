@@ -16,7 +16,7 @@ export class TechniquesSearchComponent {
   readonly TechniqueType = TechniqueType;
   readonly TechniqueCost = TechniqueCost;
   currentFilterText: string = "";
-  readonly filterTags = [ "Attack", "Move", "Heal" ];
+  readonly filterTags = [ "[REACTION]", "Attack", "Move", "Heal" ];
   currentFilterTags: string[] = [];
 
   private currentSelectedTechniqueLevel = TechniqueLevel.ALL;
@@ -143,7 +143,13 @@ export class TechniquesSearchComponent {
     if (this.currentFilterTags.length === 0) {
       return true;
     }
-    return technique.tags.find(tag => this.currentFilterTags.includes(tag)) !== undefined;
+
+    for (let tag of this.currentFilterTags) {
+      if (!technique.tags.includes(tag)) {
+        return false;
+      }
+    }
+    return true;
   }
 
 }

@@ -1,0 +1,118 @@
+[
+    {
+        "name": "Light Armour",
+        "tags": [ "Armour" ],
+        "meta": {
+            "iconPath": "icons/equipment/chest/breastplate-quilted-brown.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Tailor’s Set",
+        "cost": {
+            "amount": 15,
+            "currency": "GC"
+        },
+        "weightInGram": 8000,
+        "description": [
+            { "regularText": "Padded cloth with small mail elements at critical areas.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ],
+        "armourStats": {
+            "damageBlock": [
+                {
+                    "amount": 1,
+                    "type": "Physical"
+                }
+            ],
+            "dodgePenalty": -1,
+            "mpPenalty": 0
+        }
+    },
+    {
+        "name": "Medium Armour",
+        "tags": [ "Armour" ],
+        "meta": {
+            "iconPath": "icons/equipment/chest/breastplate-rivited-red.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Smith’s Tools",
+        "cost": {
+            "amount": 50,
+            "currency": "GC"
+        },
+        "weightInGram": 15000,
+        "description": [
+            { "regularText": "Chain mail with additional cloth padding and light metal plates at critical areas, or some type of lamellar armour.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ],
+        "armourStats": {
+            "damageBlock": [
+                {
+                    "amount": 2,
+                    "type": "Physical"
+                }
+            ],
+            "dodgePenalty": -3,
+            "mpPenalty": 0
+        }
+    },
+    {
+        "name": "Heavy Armour",
+        "tags": [ "Armour" ],
+        "meta": {
+            "iconPath": "icons/equipment/chest/breastplate-cuirass-steel-grey.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 5,
+        "craftingSkill": "Smith’s Tools",
+        "cost": {
+            "amount": 200,
+            "currency": "GC"
+        },
+        "weightInGram": 30000,
+        "description": [
+            { "regularText": "Steel Plates which protect the body all around with a chain mail vest underneath.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ],
+        "armourStats": {
+            "damageBlock": [
+                {
+                    "amount": 4,
+                    "type": "Physical"
+                }
+            ],
+            "dodgePenalty": -5,
+            "mpPenalty": -1
+        }
+    },
+    {
+        "name": "Super Heavy Armour",
+        "tags": [ "Armour" ],
+        "meta": {
+            "iconPath": "icons/equipment/chest/breastplate-layered-gilded-orange.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 7,
+        "craftingSkill": "Smith’s Tools",
+        "cost": {
+            "amount": 1000,
+            "currency": "GC"
+        },
+        "weightInGram": 60000,
+        "description": [
+            { "regularText": "Very similar to Heavy Armor, except the steel plates used are much thicker and the protection around the joints is much more elaborate and complex.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ],
+        "armourStats": {
+            "damageBlock": [
+                {
+                    "amount": 6,
+                    "type": "Physical"
+                }
+            ],
+            "dodgePenalty": -7,
+            "mpPenalty": -2
+        }
+    }
+]

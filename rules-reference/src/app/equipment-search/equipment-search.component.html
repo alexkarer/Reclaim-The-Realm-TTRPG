@@ -1,29 +1,41 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <div ngbDropdown class="d-inline-block me-4">
-            <h6 style="white-space: nowrap;">{{ filteredEquipment.length + ' Items' }}</h6>
-        </div>
-        <div ngbDropdown class="d-inline-block me-5">
-            <button type="button" class="btn btn-outline-primary" id="dropdown-equipment-tag" ngbDropdownToggle>{{ slectedEquipmentType }}</button>
+        <div ngbDropdown class="d-inline-block ms-5 me-5">
+            <button type="button" class="btn btn-outline-primary" id="dropdown-equipment-tag" ngbDropdownToggle>Tag Filters {{ `(${currentFilterTags.length})` }}</button>
             <div ngbDropdownMenu aria-labelledby="dropdown-equipment-tag">
-                <button ngbDropdownItem (click)="onEquipmenTypeFilterChange(EquipmentType.ALL)">{{ EquipmentType.ALL }}</button>
-                <button ngbDropdownItem (click)="onEquipmenTypeFilterChange(EquipmentType.WEAPON)">{{ EquipmentType.WEAPON }}</button>
-                <button ngbDropdownItem (click)="onEquipmenTypeFilterChange(EquipmentType.AMMUNATION)">{{ EquipmentType.AMMUNATION }}</button>
-                <button ngbDropdownItem (click)="onEquipmenTypeFilterChange(EquipmentType.ARMOUR)">{{ EquipmentType.ARMOUR }}</button>
-                <button ngbDropdownItem (click)="onEquipmenTypeFilterChange(EquipmentType.SHIELDS)">{{ EquipmentType.SHIELDS }}</button>
-                <button ngbDropdownItem (click)="onEquipmenTypeFilterChange(EquipmentType.WEARABLES)">{{ EquipmentType.WEARABLES }}</button>
-                <button ngbDropdownItem (click)="onEquipmenTypeFilterChange(EquipmentType.CONSUMBABLES)">{{ EquipmentType.CONSUMBABLES }}</button>
-                <button ngbDropdownItem (click)="onEquipmenTypeFilterChange(EquipmentType.TOOLS_AND_GADGETS)">{{ EquipmentType.TOOLS_AND_GADGETS }}</button>
-                <button ngbDropdownItem (click)="onEquipmenTypeFilterChange(EquipmentType.SURVIVAL)">{{ EquipmentType.SURVIVAL }}</button>
-                <button ngbDropdownItem (click)="onEquipmenTypeFilterChange(EquipmentType.COMMODITY)">{{ EquipmentType.COMMODITY }}</button>
+                <div class="d-flex justify-content-center flex-column mx-2">
+                @for (tag of filterTags; track $index) {
+                    <input type="checkbox" class="btn-check" [id]="'btncheck' + tag" autocomplete="off" (change)="onEquipmentTagCheckboxToggle($event, tag)">
+                    <label class="btn btn-outline-primary my-1" [for]="'btncheck' + tag">{{ tag }}</label>
+                }
+                </div>
             </div>
         </div>
-        <input class="form-control me-2" type="search" placeholder="Search in name and description"
+        <input class="form-control me-2" type="search" placeholder="Search in name, tags and description"
             aria-label="Search" (input)="onFreeTextFilterChange()" [(ngModel)]="currentFilterText">
     </div>
 </nav>
-<div class="d-flex justify-content-center">
-    <div class="desktop-width-50 mt-3">
-        <app-equipment-list [equipmentList]="filteredEquipment"></app-equipment-list>
+<div class="container g-5 mx-3">
+    <div class="row">
+        <div class="col">
+            <div class="mt-5">
+                <app-equipment [equipment]="selectedEquipment"></app-equipment>
+            </div>
+        </div>
+        <div class="col">
+            <div ngbDropdown class="d-inline-block">
+                <h5 style="white-space: nowrap;">{{ filteredEquipment.length + ' Item(s)' }}</h5>
+            </div>
+            <div class="row row-cols-lg-auto g-3">
+                @for (equipment of filteredEquipment; track $index) {
+                    <div class="col">
+                        <img [class]="'equipment-image' + ((selectedEquipment.name === equipment.name) ? ' selected' : ' not-selected')" 
+                        [src]="equipment.meta.iconPath" 
+                        [ngbTooltip]="equipment.name"
+                        (click)="onSelectEquipment(equipment.name)">
+                    </div>
+                }
+            </div>
+        </div>
     </div>
 </div>

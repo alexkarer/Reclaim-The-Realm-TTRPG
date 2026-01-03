@@ -96,6 +96,12 @@
         "link": ""
     },
     {
+        "name": "RANGE_DROPOFF",
+        "displayName": "DROPOFF",
+        "description": "This ability gets less precise at higher ranges in following ways: no penalty/-2 to [D20 TEST]/-5 to [D20 TEST]",
+        "link": ""
+    },
+    {
         "name": "AURA",
         "displayName": "AURA",
         "description": "Listed with a radius, effects every creature that is within range of that radius. The effect is applied at the start of the ROUND or the first time they enter but only once per [ROUND].",

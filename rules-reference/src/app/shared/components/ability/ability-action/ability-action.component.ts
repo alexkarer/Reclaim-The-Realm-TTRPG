@@ -31,23 +31,17 @@ export class AbilityActionComponent {
 
   get actionText(): string {
     const at = this.action()?.type;
-    let text: string | undefined;
     if (!at) {
       console.error('unable to determine action type', this.action());
       return 'unspecified';
     }
 
     switch(at) {
-      case AbilityActionType.MARTIAL_TEST: text = `[${this.action()?.attribute}] [MARTIAL TEST] vs. [${this.action()?.opposingSave}]`; break;
-      case AbilityActionType.SPELL_TEST: text = `[${this.action()?.attribute}] [SPELL TEST] vs. [${this.action()?.opposingSave}]`; break;
-      case AbilityActionType.CUSTOM: text = `${this.action()?.customAction}`; break;
+      case AbilityActionType.SIMPLE: return '';
+      case AbilityActionType.MARTIAL_TEST: return `[${this.action()?.attribute}] [MARTIAL TEST] vs. [${this.action()?.opposingSave}]`;
+      case AbilityActionType.SPELL_TEST: return `[${this.action()?.attribute}] [SPELL TEST] vs. [${this.action()?.opposingSave}]`;
+      case AbilityActionType.CUSTOM: return`${this.action()?.customAction}`;
     }
-
-    if (!text) {
-      console.error('unable to determine action text', this.action());
-      return 'unspecified';
-    }
-    return text;
   }
 
   get hasTargets(): boolean {
@@ -56,34 +50,28 @@ export class AbilityActionComponent {
 
   get targetText(): string {
     const targetType = this.action()?.targetType;
-    let text: string | undefined;
     if (!targetType) {
       console.error('unable to determine traget type', this.action());
       return 'unspecified';
     }
 
     switch(targetType) {
-      case AbilityTargetType.SELF: text = '[SELF]'; break;
-      case AbilityTargetType.CREATURE: text = `${this.action()?.targets} ${this.areMultipleTargets() ? 'Creatures' : 'Creature'}`; break;
-      case AbilityTargetType.ALLY: text = `${this.action()?.targets} ${this.areMultipleTargets() ? 'Allies' : 'Ally'}`; break;
-      case AbilityTargetType.SPHERE: text = `[SPHERE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
-      case AbilityTargetType.LINE: text = `[LINE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
-      case AbilityTargetType.CONE: text = `[CONE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
-      case AbilityTargetType.SQUARE: text = `[SQUARE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
-      case AbilityTargetType.AURA: text = `[AURA] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`; break;
+      case AbilityTargetType.SELF: return'[SELF]';
+      case AbilityTargetType.CREATURE: return`${this.action()?.targets} ${this.areMultipleTargets() ? 'Creatures' : 'Creature'}`;
+      case AbilityTargetType.ALLY: return`${this.action()?.targets} ${this.areMultipleTargets() ? 'Allies' : 'Ally'}`;
+      case AbilityTargetType.SPHERE: return`[SPHERE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
+      case AbilityTargetType.LINE: return`[LINE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
+      case AbilityTargetType.CONE: return`[CONE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
+      case AbilityTargetType.SQUARE: return`[SQUARE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
+      case AbilityTargetType.AURA: return`[AURA] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
       case AbilityTargetType.ALL: 
+        let text = '';
         this.action()?.targetAreaSizeFields == 0 ? 
           text = `All creatures` :
           text = `All creatures within ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
-        break;
-      case AbilityTargetType.CUSTOM: text = `${this.action()?.customTargeting}`; break;
+        return text;
+      case AbilityTargetType.CUSTOM: return`${this.action()?.customTargeting}`;
     }
-
-    if (!text) {
-      console.error('unable to determine target text', this.action());
-      return 'unspecified';
-    }
-    return text;
   }
 
   get hasRange(): boolean {
@@ -92,22 +80,16 @@ export class AbilityActionComponent {
 
   get rangeText(): string {
     const rangeType = this.action()?.rangeType;
-    let text = '';
     if (!rangeType) {
       console.error('unable to determine range type', this.action());
       return 'unspecified';
     }
     
     switch (rangeType) {
-      case AbilityRangeType.MELEE: text = '[MELEE]'; break;
-      case AbilityRangeType.FIELDS: text = `${this.action()?.rangeDistanceFields}[FIELD] (${(this.action()?.rangeDistanceFields ?? 0) * 1.5}m);`; break;
+      case AbilityRangeType.MELEE: return '[MELEE]';
+      case AbilityRangeType.FIELDS: return `${this.action()?.rangeDistanceFields}[FIELD] (${(this.action()?.rangeDistanceFields ?? 0) * 1.5}m);`;
+      case AbilityRangeType.RANGE_DROPOFF: return `[RANGE_DROPOFF] ${this.action()?.rangeDistanceFields}[FIELD]/${(this.action()?.rangeDistanceFields ?? 0) * 2}[FIELD]/${(this.action()?.rangeDistanceFields ?? 0) * 4}[FIELD];`;;
     }
-
-    if (text === '') {
-      console.error('unable to determine range text', this.action());
-      return 'unspecified';
-    }
-    return text;
   }
 
   private areMultipleTargets(): boolean {
