@@ -108,6 +108,12 @@
         "link": ""
     },
     {
+        "name": "CLEAVE",
+        "displayName": "CLEAVE",
+        "description": "You can target a number of creatures up to the ability target limit as long as they fulfill two conditions: They are within Range and within 1 [FIELD] of 1 other creature you are targeting.",
+        "link": ""
+    },
+    {
         "name": "SPHERE",
         "displayName": "SPHERE",
         "description": "Listed with a radius, the center of a sphere needs to be within range of the ability and the center is always in between fields.",

@@ -14,7 +14,7 @@
         },
         "weightInGram": 500,
         "description": [
-            { "regularText": "Requires one hand to wield. [TAG;Attack] Abilities made with this Weapon have their requirement for critical hits lowerd by 2.", "headerLine": null, "bulletPoints": null, "ability": null }
+            { "regularText": "Requires only one hand to wield. [TAG;Attack] Abilities made with this Weapon have their requirement for critical hits lowerd by 2.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "grantedAbilities": [ "Attack - Dagger", "Throw - Dagger", "Deep Cut - Dagger", "Backstab - Dagger" ]
     },
@@ -36,5 +36,43 @@
             { "regularText": "Requires two hands to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "grantedAbilities": [ "Shoot - Crossbow", "Reload - Crossbow" ]
+    },
+    {
+        "name": "Arming Sword",
+        "tags": ["Weapon", "Melee Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/swords/shortsword-guard-brass.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Smith’s Tools, Carpenter's Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 2000,
+        "description": [
+            { "regularText": "Requires one hand to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Attack - Arming Sword", "Cleave - Arming Sword", "Crippling Strike - Arming Sword" ]
+    },
+    {
+        "name": "Spear",
+        "tags": ["Weapon", "Melee Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/polearms/spear-flared-worn.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Smith’s Tools, Carpenter's Tools",
+        "cost": {
+            "amount": 8,
+            "currency": "SC"
+        },
+        "weightInGram": 1500,
+        "description": [
+            { "regularText": "Requires one or two hands to wield. The abilities that require two hands will have it stated in their ability name in parenthesis.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Attack - Spear", "Attack - Spear (two-handed)", "Throw - Spear", "Pushing Attack - Spear (two-handed)", "Running Throw - Spear" ]
     }
 ]

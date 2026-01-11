@@ -63,6 +63,7 @@ export class AbilityActionComponent {
       case AbilityTargetType.LINE: return`[LINE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
       case AbilityTargetType.CONE: return`[CONE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
       case AbilityTargetType.SQUARE: return`[SQUARE] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
+      case AbilityTargetType.CLEAVE: return`[CLEAVE] ${this.action()?.targets}`;
       case AbilityTargetType.AURA: return`[AURA] ${this.action()?.targetAreaSizeFields}[FIELD] (${(this.action()?.targetAreaSizeFields ?? 0) * 1.5}m)`;
       case AbilityTargetType.ALL: 
         let text = '';

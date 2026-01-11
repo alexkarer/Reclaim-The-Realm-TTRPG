@@ -54,7 +54,7 @@ export type AbilityAction = {
 
 export enum AbilityActionType { NO_ACTION, SIMPLE, MARTIAL_TEST, SPELL_TEST, CUSTOM }
 export enum AbilityRangeType { NONE, MELEE, FIELDS, RANGE_DROPOFF }
-export enum AbilityTargetType { NONE, SELF, CREATURE, ALLY, SPHERE, LINE, CONE, SQUARE, AURA, ALL, CUSTOM }
+export enum AbilityTargetType { NONE, SELF, CREATURE, ALLY, SPHERE, LINE, CONE, SQUARE, AURA, CLEAVE, ALL, CUSTOM }
 export enum AbilityOpposingSave { NONE, STABILITY = 'STABILITY', DODGE = 'DODGE', TOUGHNESS = 'TOUGHNESS', WILLPOWER = 'WILLPOWER' }
 export enum AbilityAttribute { NONE, STR = 'STR', AGI = 'AGI', CON = 'CON', INT = 'INT', SPI = 'SPI', PER = 'PER', CHA = 'CHA' }
 
@@ -241,6 +241,7 @@ export function parseAbilityTargetType(s?: string): AbilityTargetType {
         case "LINE": return AbilityTargetType.LINE;
         case "SQUARE": return AbilityTargetType.SQUARE;
         case "AURA": return AbilityTargetType.AURA;
+        case "CLEAVE": return AbilityTargetType.CLEAVE;
         case "ALL": return AbilityTargetType.ALL;
         case "NONE": return AbilityTargetType.NONE;
         default: console.error(`AbilityTargetType ${s} not recognized! Setting NONE`); return AbilityTargetType.NONE;
