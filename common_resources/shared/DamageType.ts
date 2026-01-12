@@ -22,6 +22,8 @@ export function parseDamageType(s: string): DamageType {
             return DamageType.FIRE;
         case DamageType.FROST.toLowerCase():
             return DamageType.FROST;
+        case DamageType.CORROSIVE.toLowerCase():
+            return DamageType.CORROSIVE;
         case DamageType.SONIC.toLowerCase():
             return DamageType.SONIC;
         case DamageType.ELECTRIC.toLowerCase():

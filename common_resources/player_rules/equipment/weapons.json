@@ -74,5 +74,62 @@
             { "regularText": "Requires one or two hands to wield. The abilities that require two hands will have it stated in their ability name in parenthesis.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "grantedAbilities": [ "Attack - Spear", "Attack - Spear (two-handed)", "Throw - Spear", "Pushing Attack - Spear (two-handed)", "Running Throw - Spear" ]
+    },
+    {
+        "name": "Greatsword",
+        "tags": ["Weapon", "Melee Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/swords/greatsword-crossguard-engraved-green.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools",
+        "cost": {
+            "amount": 15,
+            "currency": "GC"
+        },
+        "weightInGram": 3000,
+        "description": [
+            { "regularText": "Requires two hands to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Attack - Greatsword", "Heavy Attack - Greatsword", "Parry - Greatsword", "Cleave - Greatsword" ]
+    },
+    {
+        "name": "Greataxe",
+        "tags": ["Weapon", "Melee Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/axes/axe-double-jagged-black.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools",
+        "cost": {
+            "amount": 10,
+            "currency": "GC"
+        },
+        "weightInGram": 3000,
+        "description": [
+            { "regularText": "Requires two hands to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Attack - Greataxe", "Heavy Attack - Greataxe", "Deep Cut - Greataxe", "Cleave - Greataxe" ]
+    },
+    {
+        "name": "Maul",
+        "tags": ["Weapon", "Melee Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/hammers/hammer-double-engraved.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools",
+        "cost": {
+            "amount": 10,
+            "currency": "GC"
+        },
+        "weightInGram": 5000,
+        "description": [
+            { "regularText": "Requires two hands to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Attack - Maul", "Heavy Attack - Maul", "Bash - Maul", "Crippling Strike - Maul" ]
     }
 ]
