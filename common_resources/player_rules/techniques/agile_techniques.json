@@ -156,7 +156,7 @@
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NO_ACTION",
+                "actionType": "SIMPLE",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
@@ -205,7 +205,7 @@
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NO_ACTION",
+                "actionType": "SIMPLE",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
@@ -300,7 +300,7 @@
         "requirements": { "requiredLevels": [ { "amount": 8, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ { "amount": 6, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NO_ACTION",
+                "actionType": "SIMPLE",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
@@ -349,13 +349,13 @@
         "requirements": { "requiredLevels": [ { "amount": 12, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ { "amount": 10, "attribute": "[AGI]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NO_ACTION",
+                "actionType": "SIMPLE",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
                 "rangeDistanceFields": 0,
-                "targetType": "ALL",
+                "targetType": "SELF",
                 "customTargeting": "",
                 "targets": 0,
                 "targetAreaSizeFields": 0,

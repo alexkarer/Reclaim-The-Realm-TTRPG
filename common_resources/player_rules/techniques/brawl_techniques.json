@@ -319,13 +319,13 @@
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NO_ACTION",
+                "actionType": "SIMPLE",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
                 "rangeType": "NONE",
                 "rangeDistanceFields": 0,
-                "targetType": "NONE",
+                "targetType": "SELF",
                 "customTargeting": "",
                 "targets": 1,
                 "targetAreaSizeFields": 0,

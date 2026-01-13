@@ -4,6 +4,8 @@ import { DynamicContentComponent } from "../../../shared/text-utils/dynamic-comp
 import { ResolveTextKeyPipe } from "../../../shared/text-utils/resolve-text-key";
 import { TextProcessorPipe } from "../../../shared/text-utils/text-processor";
 
+import abilitiesJson from "../../../../../../common_resources/player_rules/character/abilities.json";
+
 @Component({
   selector: 'app-perks-abilities-page',
   imports: [PlayerRulesPageNavigationComponent, DynamicContentComponent, ResolveTextKeyPipe, TextProcessorPipe],
@@ -12,4 +14,5 @@ import { TextProcessorPipe } from "../../../shared/text-utils/text-processor";
 })
 export class PerksAbilitiesPageComponent {
   public readonly pageId = 'perks-abilities';
+  public readonly abilitiesJson = abilitiesJson;
 }

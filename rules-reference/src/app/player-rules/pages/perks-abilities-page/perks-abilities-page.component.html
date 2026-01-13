@@ -4,7 +4,34 @@
   <h3>Perks</h3>
   <app-dynamic-content [content]="'perks_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-  <h3>Techniques</h3>
+  <h3 class="mt-3">Abilities</h3>
+  <app-dynamic-content [content]="'abilities_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+  
+  <h4>Ability Structure</h4>
+  <app-dynamic-content [content]="'abilities_structure_explanation' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  <ul>
+    @for (element of abilitiesJson.abilityElements; track $index) {
+      <li>
+        <span class="fw-bold">{{ element.name }}: </span><app-dynamic-content [content]="element.textkey | resolveTextKey | textProcessor"></app-dynamic-content>
+      </li>
+    }
+  </ul>
+
+  <h5>Ability Action</h5>
+  <app-dynamic-content [content]="'ability_action_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  <ul>
+    @for (element of abilitiesJson.abilityActionElements; track $index) {
+      <li>
+        <span class="fw-bold">{{ element.name }}: </span><app-dynamic-content [content]="element.textkey | resolveTextKey | textProcessor"></app-dynamic-content>
+      </li>
+    }
+  </ul>
+
+  <app-dynamic-content [content]="'ability_further_details' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  <h3 class="mt-3class="mt-3>Techniques</h3>
   <!-- Explain different types, how they matter with Types -->
   <app-dynamic-content [content]="'techniques_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
 
@@ -12,7 +39,7 @@
 
   <!-- Explain Pushing and that you can do it After the Action but before any outcome is decided-->
   
-  <h3>Spells</h3>
+  <h3 class="mt-3">Spells</h3>
   <app-dynamic-content [content]="'spells_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
 
   <!-- Explain only enough on how to select spells -->

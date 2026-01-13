@@ -2,6 +2,7 @@ import { DamageType, parseDamageType } from "../../shared/DamageType";
 import { TextElementWithoutAbility } from "../../shared/TextElements";
 import { mapIconPath } from "../../shared/icons";
 import weaponsJson from "./weapons.json";
+import ammunitionsJson from "./ammunitions.json";
 import armourJson from "./armour.json";
 import shieldsJson from "./shields.json";
 import wearablesJson from "./wearables.json";
@@ -55,6 +56,7 @@ export type DamageBlock = {
 
 export const EQUIPMENT: Equipment[] = [
     ...weaponsJson.map(w => map(w)),
+    ...ammunitionsJson.map(w => map(w)),
     ...armourJson.map(a => mapArmour(a)),
     ...shieldsJson.map(w => map(w)),
     ...wearablesJson.map(w => map(w)),

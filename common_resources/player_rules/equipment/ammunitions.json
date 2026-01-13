@@ -1,3 +1,78 @@
 [
-    
+    {
+        "name": "Arrow",
+        "tags": [ "Ammunition" ],
+        "meta": {
+            "iconPath": "icons/weapons/ammunition/arrow-simple.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Carpenter’s Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "BC"
+        },
+        "weightInGram": 20,
+        "description": [
+            { "regularText": "Arrow required by Bows, can be recovered after firing if the shot was not a critical miss.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Flaming Arrow",
+        "tags": [ "Ammunition" ],
+        "meta": {
+            "iconPath": "icons/weapons/ammunition/arrow-broadhead-glowing-orange.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Carpenter’s Tools",
+        "cost": {
+            "amount": 2,
+            "currency": "GC"
+        },
+        "weightInGram": 50,
+        "description": [
+            { "regularText": "Arrow required by Bows, before firing the user must spent 1 [AP] to light the arrow on fire. On a hit the target receives [BURNING I] and [DISTRACTED]. The target can remove these conditions by making a [DT] (10+Item Tier) [TOUGHNESS] [SAVE] for 1 [AP] to remove the arrow. The arrow can not be recovered after firing.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Bolt",
+        "tags": [ "Ammunition" ],
+        "meta": {
+            "iconPath": "icons/weapons/ammunition/arrow-simple-grey.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Carpenter’s Tools",
+        "cost": {
+            "amount": 5,
+            "currency": "BC"
+        },
+        "weightInGram": 20,
+        "description": [
+            { "regularText": "Bolt required by Crossbows, can be recovered after firing if the shot was not a critical miss.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    },
+    {
+        "name": "Flaming Bolt",
+        "tags": [ "Ammunition" ],
+        "meta": {
+            "iconPath": "icons/weapons/ammunition/arrowhead-glowing-blue.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 3,
+        "craftingSkill": "Carpenter’s Tools",
+        "cost": {
+            "amount": 2,
+            "currency": "GC"
+        },
+        "weightInGram": 50,
+        "description": [
+            { "regularText": "Bolt required by Crossbows, before firing the user must spent 1 [AP] to light the bolt on fire. On a hit the target receives [BURNING I] and [DISTRACTED]. The target can remove these conditions by making a [DT] (10+Item Tier) [TOUGHNESS] [SAVE] for 1 [AP] to remove the bolt. The bolt can not be recovered after firing.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
+    }
 ]

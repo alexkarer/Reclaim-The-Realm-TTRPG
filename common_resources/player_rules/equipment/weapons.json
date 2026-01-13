@@ -19,42 +19,42 @@
         "grantedAbilities": [ "Attack - Dagger", "Throw - Dagger", "Deep Cut - Dagger", "Backstab - Dagger" ]
     },
     {
-        "name": "Crossbow",
-        "tags": ["Weapon", "Ranged Weapon"],
-        "meta": {
-            "iconPath": "icons/weapons/crossbows/crossbow-blue.webp",
-            "colour": "COLOURLESS"
-        },
-        "tier": 2,
-        "craftingSkill": "Carpenter’s Tool",
-        "cost": {
-            "amount": 5,
-            "currency": "GC"
-        },
-        "weightInGram": 3000,
-        "description": [
-            { "regularText": "Requires two hands to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
-        ],
-        "grantedAbilities": [ "Shoot - Crossbow", "Reload - Crossbow" ]
-    },
-    {
         "name": "Arming Sword",
         "tags": ["Weapon", "Melee Weapon"],
         "meta": {
             "iconPath": "icons/weapons/swords/shortsword-guard-brass.webp",
             "colour": "COLOURLESS"
         },
-        "tier": 1,
+        "tier": 2,
         "craftingSkill": "Smith’s Tools, Carpenter's Tools",
         "cost": {
             "amount": 5,
             "currency": "GC"
         },
-        "weightInGram": 2000,
+        "weightInGram": 1500,
         "description": [
             { "regularText": "Requires one hand to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "grantedAbilities": [ "Attack - Arming Sword", "Cleave - Arming Sword", "Crippling Strike - Arming Sword" ]
+    },
+    {
+        "name": "Mace",
+        "tags": ["Weapon", "Melee Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/maces/mace-spiked-cube-wood.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools",
+        "cost": {
+            "amount": 2,
+            "currency": "GC"
+        },
+        "weightInGram": 2000,
+        "description": [
+            { "regularText": "Requires one hand to wield. TODO: missing one level 1 ability", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Attack - Mace", "Bash - Mace", "???" ]
     },
     {
         "name": "Spear",
@@ -130,6 +130,82 @@
         "description": [
             { "regularText": "Requires two hands to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
-        "grantedAbilities": [ "Attack - Maul", "Heavy Attack - Maul", "Bash - Maul", "Crippling Strike - Maul" ]
+        "grantedAbilities": [ "Attack - Maul", "Heavy Attack - Maul", "Bash - Maul", "Pushing Attack - Maul" ]
+    },
+    {
+        "name": "Longbow",
+        "tags": ["Weapon", "Ranged Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/bows/longbow-leather-green.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Carpenter's Tools",
+        "cost": {
+            "amount": 10,
+            "currency": "GC"
+        },
+        "weightInGram": 1000,
+        "description": [
+            { "regularText": "Requires two hands to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Attack - Longbow", "Powershot - Longbow", "Multishot - Longbow", "Crippling Strike - Longbow" ]
+    },
+    {
+        "name": "Crossbow",
+        "tags": ["Weapon", "Ranged Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/crossbows/crossbow-blue.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Carpenter’s Tool",
+        "cost": {
+            "amount": 5,
+            "currency": "GC"
+        },
+        "weightInGram": 3000,
+        "description": [
+            { "regularText": "Requires two hands to wield.", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Shoot - Crossbow", "Reload - Crossbow" ]
+    },
+    {
+        "name": "Polearm",
+        "tags": ["Weapon", "Melee Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/polearms/halberd-crescent-small-spiked.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools, Carpenter’s Tool",
+        "cost": {
+            "amount": 15,
+            "currency": "GC"
+        },
+        "weightInGram": 4000,
+        "description": [
+            { "regularText": "Requires two hands to wield.  [TAG;Attack] Abilities made with this Weapon have their [MELEE] Range is increased by 1 [FIELD].", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Attack - Polearm", "Heavy Attack - Polearm", "Pushing Attack - Polearm", "Cleave - Polearm" ]
+    },
+    {
+        "name": "Paired Blades",
+        "tags": ["Weapon", "Melee Weapon"],
+        "meta": {
+            "iconPath": "icons/weapons/swords/swords-short.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 2,
+        "craftingSkill": "Smith’s Tools",
+        "cost": {
+            "amount": 15,
+            "currency": "GC"
+        },
+        "weightInGram": 3000,
+        "description": [
+            { "regularText": "Both Blades need to be wielded simultaneously to use any Ability except the \"Single Strike - Paired Blades\" Ability", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ "Single Strike - Paired Blades", "Dual Strike - Paired Blades", "Parry - Paired Blades", "Flurry - Paired Blades" ]
     }
 ]

@@ -237,6 +237,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - Make items collapsable/hidden for easier navigation (❌)
 
 - Rework keyword processor logic to use the new json (✅)
+    - Clear up if TOUGHNESS TEST or SAVE should be used for keywords.
 
 - when referencing abilities, have a small preview of the ability (❌)
 

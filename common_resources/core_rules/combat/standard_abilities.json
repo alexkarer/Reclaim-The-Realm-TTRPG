@@ -7,7 +7,7 @@
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NO_ACTION",
+                "actionType": "SIMPLE",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
@@ -52,7 +52,7 @@
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NO_ACTION",
+                "actionType": "SIMPLE",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
@@ -97,7 +97,7 @@
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NO_ACTION",
+                "actionType": "SIMPLE",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
@@ -142,7 +142,7 @@
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NO_ACTION",
+                "actionType": "SIMPLE",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
@@ -232,7 +232,7 @@
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "actions": [
             {
-                "actionType": "NO_ACTION",
+                "actionType": "SIMPLE",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",

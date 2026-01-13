@@ -137,7 +137,25 @@
         "size_description": "Most humanoids are medium [SIZE] , however certain species have different ones and certain effects might change your [SIZE] . Changing your [SIZE] affects some of your physical characteristics"
     },
     "perks_and_abilities": {
-        "perks_overview": "Perks are improvements that make your character better in various ways. Your Character starts with 3 Perk Points they can choose to spend on various Perks. Any Perk can be choosen as long as the Character meets all the requirements of the Perk and has enough Perk Points.",
+        "perks_overview": "Perks are improvements that make your character better in various ways. Your Character starts with 3 Perk Points they can choose to spend on various Perks. Any Perk can be choosen as long as the Character meets all the requirements of the Perk and has enough Perk Points.<br>The availible Perks you can choose depend on your Class. ",
+        "abilities_overview": "Each time your character acts during combat they do so by using Abilities. This attempts to ensure that combat is happening in a structured manner with clear interactions. This does however not exclude Abilities from being used outside combat/unstructured play.<br>A Character can only use abilities that they know. All characters have a set of Standard Abilities <span class=\"text-danger\">TODO add link to Standard Abilities</span> and can learn additional via Perks or means explained below.",
+
+        "abilities_structure_explanation": "All Abilities consist of the following:",
+        "ability_name": "The name of Ability, this is a unique Identification for the Relevant Ability and used when something else directly references this Ability.",
+        "ability_tags": "Each Ability has a certain set of Tags which contains meta-information and also can impact how certain abilities interact with each other. For example an Ability might give a bonus if a [TAG;Attack] Ability is used afterwards, in this case any Ability that contains the \"Attack\" Tag is eligable for the bonus.",
+        "ability_cost": "The Cost that has to be paid when using the Ability. Most Abilities Cost are related to time such as [AP] or [MP] but sometimes they can also cost Resources in the form of [STAMINA], [ARCANA] or something else entirely. If the Ability Cost can't be paid then it can not be used.",
+        "ability_requirements": "The Requirements that have to be met to be able to learn the Ability,",
+        "ability_action": "The main Part of the Ability which actually explains what it does. Abilities can consist of multiple actions",
+
+        "ability_action_overview": "An Ability Action itself consists of multiple parts which describe what it does and what constraints it has:",
+        "ability_action_condition" : "Certain Actions have conditions that have to be met the moment they are used. In case the condition can't be met, the action immediatly resolves but no outcome goes in effect. Omitted if no Conditions are present.",
+        "ability_action_targets" : "The target(s) that are affected by the outcomes of the ability. Can be individual targets, areas such as [SPHERE] or other",
+        "ability_action_range" : "The Range of the Ability. Specifically the distance from you to the target Usually measured in [FIELD]. Omitted if not relevant",
+        "ability_action_action_type" : "Listed as just \"Action\" This specifies most of the time the kind of [D20 TEST] that needs to be made to determine how successful the Action is performed and additionally to what [DT] it is compared to. If Omitted the Ability will resolve and the default Outcome happens.",
+        "ability_action_outcomes" : "An Ability Action can have many different outcomes, ranging from Damage, Healing, Applying Status Effects or something else completely. There also can be many different Outcomes depending on how well the Action was performed. If no outcome type is specified then that is the default Outcome that always happens any time the Action is preformed.",
+
+        "ability_further_details": "For more details on how Abilities interact with each other and the Syntax Works see: <span class=\"text-danger\">TODO add link to eventual Abilities Page that explains interactions in more detail</span>",
+
         "techniques_overview": "TODO",
         "spells_overview": "TODO"
     },

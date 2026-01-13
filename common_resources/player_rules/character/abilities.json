@@ -1,0 +1,16 @@
+{
+    "abilityElements": [
+        { "name": "Name", "textkey": "ability_name" },
+        { "name": "Tags", "textkey": "ability_tags" },
+        { "name": "Cost", "textkey": "ability_cost" },
+        { "name": "Requirements", "textkey": "ability_requirements" },
+        { "name": "Action", "textkey": "ability_action" }
+    ],
+    "abilityActionElements": [
+        { "name": "Condition", "textkey": "ability_action_condition" },
+        { "name": "Target(s)", "textkey": "ability_action_targets" },
+        { "name": "Range", "textkey": "ability_action_range" },
+        { "name": "Action (Type)", "textkey": "ability_action_action_type" },
+        { "name": "Outcomes", "textkey": "ability_action_outcomes" }
+    ]
+}

@@ -253,10 +253,10 @@
                 "customAction": "",
                 "customCondition": "Previous Action was not a Crit Fail.",
                 "attribute": "STR",
-                "rangeType": "MELEE",
+                "rangeType": "NONE",
                 "rangeDistanceFields": 0,
-                "targetType": "CREATURE",
-                "customTargeting": "",
+                "targetType": "CUSTOM",
+                "customTargeting": "Same target as previous action",
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "TOUGHNESS",
@@ -375,137 +375,6 @@
             "cost": "1 [STAMINA]",
             "effect": "Deal 3 * light [MARTIAL DAMAGE] instead."
         }
-    },
-    {
-        "name": "Shoot - Crossbow",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
-        "tags": [ "Attack", "Ranged" ],
-        "meta": { "iconPath": "icons/skills/ranged/target-bullseye-archer-orange.webp", "colour": "COLOURLESS" },
-        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-        "actions": [
-            {
-                "actionType": "MARTIAL_TEST",
-                "customAction": "",
-                "customCondition": "Loaded Crossbow",
-                "attribute": "PER",
-                "rangeType": "RANGE_DROPOFF",
-                "rangeDistanceFields": 15,
-                "targetType": "CREATURE",
-                "customTargeting": "",
-                "targets": 1,
-                "targetAreaSizeFields": 0,
-                "opposingSave": "DODGE",
-                "outcomesAlways": [],
-                "outcomesOnCritSuccess": [
-                    {
-                        "outcomeType": "DAMAGE",
-                        "expression": "2d6",
-                        "damageType": "Physical",
-                        "critDamage": true,
-                        "halfDamage": false,
-                        "healThp": false,
-                        "statusEffect": "NONE",
-                        "duration": 0,
-                        "durationUnit": "NONE",
-                        "freeText": [ ]
-                    }
-                ],
-                "outcomesOnSuccess": [
-                    {
-                        "outcomeType": "DAMAGE",
-                        "expression": "2d6",
-                        "damageType": "Physical",
-                        "critDamage": false,
-                        "halfDamage": false,
-                        "healThp": false,
-                        "statusEffect": "NONE",
-                        "duration": 0,
-                        "durationUnit": "NONE",
-                        "freeText": [ ]
-                    }
-                ],
-                "outcomesOnFail": [
-                    {
-                        "outcomeType": "DAMAGE",
-                        "expression": "2d6",
-                        "damageType": "Physical",
-                        "critDamage": false,
-                        "halfDamage": true,
-                        "healThp": false,
-                        "statusEffect": "NONE",
-                        "duration": 0,
-                        "durationUnit": "NONE",
-                        "freeText": [ ]
-                    }
-                ],
-                "outcomesOnCritFail": [
-                    {
-                        "outcomeType": "FREETEXT",
-                        "expression": "",
-                        "damageType": "",
-                        "critDamage": false,
-                        "halfDamage": false,
-                        "healThp": false,
-                        "statusEffect": "NONE",
-                        "duration": 0,
-                        "durationUnit": "NONE",
-                        "freeText": [
-                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
-                        ]
-                    }
-                ]
-            }
-        ],
-        "flavorText": [
-            { "regularText": "", "headerLine": null, "bulletPoints": null}
-        ],
-        "push": null
-    },
-    {
-        "name": "Reload - Crossbow",
-        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 crossbow Bolt" },
-        "tags": [ ],
-        "meta": { "iconPath": "icons/weapons/crossbows/crossbow-blue.webp", "colour": "COLOURLESS" },
-        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
-        "actions": [
-            {
-                "actionType": "SIMPLE",
-                "customAction": "",
-                "customCondition": null,
-                "attribute": "AGI",
-                "rangeType": "NONE",
-                "rangeDistanceFields": 0,
-                "targetType": "SELF",
-                "customTargeting": "",
-                "targets": 1,
-                "targetAreaSizeFields": 0,
-                "opposingSave": "DODGE",
-                "outcomesAlways": [
-                    {
-                        "outcomeType": "FREETEXT",
-                        "expression": "",
-                        "damageType": "",
-                        "critDamage": false,
-                        "halfDamage": false,
-                        "healThp": false,
-                        "statusEffect": "NONE",
-                        "duration": 0,
-                        "durationUnit": "NONE",
-                        "freeText": [
-                            { "regularText": "You load a crossbow bolt into your Crossbow.", "headerLine": null, "bulletPoints": null } 
-                        ]
-                    }
-                ],
-                "outcomesOnCritSuccess": [ ],
-                "outcomesOnSuccess": [ ],
-                "outcomesOnFail": [ ],
-                "outcomesOnCritFail": [ ]
-            }
-        ],
-        "flavorText": [
-            { "regularText": "", "headerLine": null, "bulletPoints": null}
-        ],
-        "push": null
     },
     {
         "name": "Attack - Arming Sword",
@@ -764,10 +633,10 @@
                 "customAction": "",
                 "customCondition": "Previous Action was not a Crit Fail.",
                 "attribute": "STR",
-                "rangeType": "MELEE",
+                "rangeType": "NONE",
                 "rangeDistanceFields": 0,
-                "targetType": "CREATURE",
-                "customTargeting": "",
+                "targetType": "CUSTOM",
+                "customTargeting": "Same target as previous action",
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
@@ -797,6 +666,210 @@
         "push": {
             "cost": "1 [STAMINA]",
             "effect": "Inflict [CRIPPLING II] instead."
+        }
+    },
+    {
+        "name": "Attack - Mace",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Melee" ],
+        "meta": { "iconPath": "icons/skills/melee/hand-grip-hammer-spiked-blue.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Bash - Mace",
+        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Melee" ],
+        "meta": { "iconPath": "icons/skills/melee/strike-hammer-destructive-orange.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ { "amount": 1, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            },
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": "Previous Action was not a Crit Fail.",
+                "attribute": "STR",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "CUSTOM",
+                "customTargeting": "Same target as previous action",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "TOUGHNESS",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [ ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "STUNNED I",
+                        "duration": 2,
+                        "durationUnit": "ROUND",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [ ],
+                "outcomesOnCritFail": [ ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "Inflict [STUNNED II] instead."
         }
     },
     {
@@ -1138,10 +1211,10 @@
                 "customAction": "",
                 "customCondition": "Previous Action was not a Crit Fail.",
                 "attribute": "STR",
-                "rangeType": "MELEE",
+                "rangeType": "NONE",
                 "rangeDistanceFields": 0,
-                "targetType": "CREATURE",
-                "customTargeting": "",
+                "targetType": "CUSTOM",
+                "customTargeting": "Same target as previous action",
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
@@ -1159,7 +1232,7 @@
                         "duration": 0,
                         "durationUnit": "NONE",
                         "freeText": [
-                            { "regularText": "Push target up to [STR]/2 (min 1) [FIELD] away.", "headerLine": null, "bulletPoints": null } 
+                            { "regularText": "Push target up to [STR]/2 (min 1) [FIELD] away or alternativly knock it [PRONE].", "headerLine": null, "bulletPoints": null } 
                         ]
                     }
                 ],
@@ -1344,7 +1417,7 @@
     },
     {
         "name": "Heavy Attack - Greatsword",
-        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Attack", "Melee" ],
         "meta": { "iconPath": "icons/skills/melee/hand-grip-sword-orange.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -1365,7 +1438,7 @@
                 "outcomesOnCritSuccess": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "3 * light [MARTIAL DAMAGE]",
+                        "expression": "2 * medium [MARTIAL DAMAGE]",
                         "damageType": "Physical",
                         "critDamage": true,
                         "halfDamage": false,
@@ -1379,7 +1452,7 @@
                 "outcomesOnSuccess": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "3 * light [MARTIAL DAMAGE]",
+                        "expression": "2 * medium [MARTIAL DAMAGE]",
                         "damageType": "Physical",
                         "critDamage": false,
                         "halfDamage": false,
@@ -1393,7 +1466,7 @@
                 "outcomesOnFail": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "3 * light [MARTIAL DAMAGE]",
+                        "expression": "2 * medium [MARTIAL DAMAGE]",
                         "damageType": "Physical",
                         "critDamage": false,
                         "halfDamage": true,
@@ -1425,7 +1498,10 @@
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}
         ],
-        "push": null
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "Deal 3 * medium [MARTIAL DAMAGE] instead."
+        }
     },
     {
         "name": "Parry - Greatsword",
@@ -1649,7 +1725,7 @@
     },
     {
         "name": "Heavy Attack - Greataxe",
-        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Attack", "Melee" ],
         "meta": { "iconPath": "icons/skills/melee/hand-grip-axe-strike-orange.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -1670,7 +1746,7 @@
                 "outcomesOnCritSuccess": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "3 * light [MARTIAL DAMAGE]",
+                        "expression": "2 * medium [MARTIAL DAMAGE]",
                         "damageType": "Physical",
                         "critDamage": true,
                         "halfDamage": false,
@@ -1684,7 +1760,7 @@
                 "outcomesOnSuccess": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "3 * light [MARTIAL DAMAGE]",
+                        "expression": "2 * medium [MARTIAL DAMAGE]",
                         "damageType": "Physical",
                         "critDamage": false,
                         "halfDamage": false,
@@ -1698,7 +1774,7 @@
                 "outcomesOnFail": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "3 * light [MARTIAL DAMAGE]",
+                        "expression": "2 * medium [MARTIAL DAMAGE]",
                         "damageType": "Physical",
                         "critDamage": false,
                         "halfDamage": true,
@@ -1730,7 +1806,10 @@
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}
         ],
-        "push": null
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "Deal 3 * medium [MARTIAL DAMAGE] instead."
+        }
     },
     {
         "name": "Deep Cut - Greataxe",
@@ -1816,10 +1895,10 @@
                 "customAction": "",
                 "customCondition": "Previous Action was not a Crit Fail.",
                 "attribute": "STR",
-                "rangeType": "MELEE",
+                "rangeType": "NONE",
                 "rangeDistanceFields": 0,
-                "targetType": "CREATURE",
-                "customTargeting": "",
+                "targetType": "CUSTOM",
+                "customTargeting": "Same target as previous action",
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "TOUGHNESS",
@@ -2026,7 +2105,7 @@
     },
     {
         "name": "Heavy Attack - Maul",
-        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Attack", "Melee" ],
         "meta": { "iconPath": "icons/skills/melee/strike-hammer-destructive-orange.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -2047,7 +2126,7 @@
                 "outcomesOnCritSuccess": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "3 * light [MARTIAL DAMAGE]",
+                        "expression": "2 * medium [MARTIAL DAMAGE]",
                         "damageType": "Physical",
                         "critDamage": true,
                         "halfDamage": false,
@@ -2061,7 +2140,7 @@
                 "outcomesOnSuccess": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "3 * light [MARTIAL DAMAGE]",
+                        "expression": "2 * medium [MARTIAL DAMAGE]",
                         "damageType": "Physical",
                         "critDamage": false,
                         "halfDamage": false,
@@ -2075,7 +2154,7 @@
                 "outcomesOnFail": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "3 * light [MARTIAL DAMAGE]",
+                        "expression": "2 * medium [MARTIAL DAMAGE]",
                         "damageType": "Physical",
                         "critDamage": false,
                         "halfDamage": true,
@@ -2107,7 +2186,10 @@
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}
         ],
-        "push": null
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "Deal 3 * medium [MARTIAL DAMAGE] instead."
+        }
     },
     {
         "name": "Bash - Maul",
@@ -2193,10 +2275,10 @@
                 "customAction": "",
                 "customCondition": "Previous Action was not a Crit Fail.",
                 "attribute": "STR",
-                "rangeType": "MELEE",
+                "rangeType": "NONE",
                 "rangeDistanceFields": 0,
-                "targetType": "CREATURE",
-                "customTargeting": "",
+                "targetType": "CUSTOM",
+                "customTargeting": "Same target as previous action",
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "TOUGHNESS",
@@ -2229,7 +2311,7 @@
         }
     },
     {
-        "name": "Crippling Strike - Maul",
+        "name": "Pushing Attack - Maul",
         "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Attack", "Melee" ],
         "meta": { "iconPath": "icons/skills/melee/strike-hammer-destructive-blue.webp", "colour": "COLOURLESS" },
@@ -2312,10 +2394,389 @@
                 "customAction": "",
                 "customCondition": "Previous Action was not a Crit Fail.",
                 "attribute": "STR",
-                "rangeType": "MELEE",
+                "rangeType": "NONE",
                 "rangeDistanceFields": 0,
+                "targetType": "CUSTOM",
+                "customTargeting": "Same target as previous action",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "STABILITY",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [ ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Push target up to 1 + ([STR]/2) (min 1) [FIELD] away or alternativly knock it [PRONE].", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnFail": [ ],
+                "outcomesOnCritFail": [ ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Attack - Longbow",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Ranged" ],
+        "meta": { "iconPath": "icons/skills/ranged/arrow-barbed-flying-gray.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "PER",
+                "rangeType": "RANGE_DROPOFF",
+                "rangeDistanceFields": 20,
                 "targetType": "CREATURE",
                 "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Powershot - Longbow",
+        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Ranged" ],
+        "meta": { "iconPath": "icons/skills/ranged/arrow-flying-broadhead-metal.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "PER",
+                "rangeType": "RANGE_DROPOFF",
+                "rangeDistanceFields": 10,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2 * light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2 * light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2 * light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "Deal 3 * light [MARTIAL DAMAGE] instead."
+        }
+    },
+    {
+        "name": "Multishot - Longbow",
+        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Ranged" ],
+        "meta": { "iconPath": "icons/skills/ranged/bow-arrows-blue.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ { "amount": 1, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "PER",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 20,
+                "targetType": "CUSTOM",
+                "customTargeting": "2 Creatures that are within 2 [FIELD] of each other",
+                "targets": 2,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [AP]",
+            "effect": "You can target 1 additional creatue as long as it is within 2 [FIELD] of 1 other target. You can push this ability multiple times."
+        }
+    },
+    {
+        "name": "Crippling Strike - Longbow",
+        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Melee" ],
+        "meta": { "iconPath": "icons/skills/ranged/arrow-barbed-flying-gray.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ { "amount": 1, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "PER",
+                "rangeType": "RANGE_DROPOFF",
+                "rangeDistanceFields": 20,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            },
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": "Previous Action was not a Crit Fail.",
+                "attribute": "PER",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "CUSTOM",
+                "customTargeting": "Same target as previous action",
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
@@ -2345,6 +2806,824 @@
         "push": {
             "cost": "1 [STAMINA]",
             "effect": "Inflict [CRIPPLED II] instead."
+        }
+    },
+    {
+        "name": "Shoot - Crossbow",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Ranged" ],
+        "meta": { "iconPath": "icons/skills/ranged/target-bullseye-archer-orange.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": "Loaded Crossbow",
+                "attribute": "PER",
+                "rangeType": "RANGE_DROPOFF",
+                "rangeDistanceFields": 15,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "3d6",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "3d6",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "3d6",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Reload - Crossbow",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 crossbow Bolt" },
+        "tags": [ ],
+        "meta": { "iconPath": "icons/weapons/crossbows/crossbow-blue.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "You load a crossbow bolt into your Crossbow.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [ ],
+                "outcomesOnSuccess": [ ],
+                "outcomesOnFail": [ ],
+                "outcomesOnCritFail": [ ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Attack - Polearm",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Melee" ],
+        "meta": { "iconPath": "icons/skills/melee/strike-polearm-light-orange.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Heavy Attack - Polearm",
+        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Melee" ],
+        "meta": { "iconPath": "icons/skills/melee/strike-polearm-light-orange.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2 * light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2 * light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2 * light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "Deal 3 * light [MARTIAL DAMAGE] instead."
+        }
+    },
+    {
+        "name": "Pushing Attack - Polearm",
+        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Melee" ],
+        "meta": { "iconPath": "icons/skills/melee/strike-polearm-light-orange.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ { "amount": 1, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            },
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": "Previous Action was not a Crit Fail.",
+                "attribute": "STR",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "CUSTOM",
+                "customTargeting": "Same target as previous action",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "STABILITY",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [ ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Push target up to [STR]/2 (min 1) [FIELD] away or alternativly knock it [PRONE].", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ],
+                "outcomesOnFail": [ ],
+                "outcomesOnCritFail": [ ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Cleave - Polearm",
+        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Melee" ],
+        "meta": { "iconPath": "icons/skills/melee/spear-tips-three-purple.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ { "amount": 1, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CLEAVE",
+                "customTargeting": "",
+                "targets": 2,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "Target up to 3 creatures instead."
+        }
+    },
+    {
+        "name": "Single Strike - Paired Blades",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Melee" ],
+        "meta": { "iconPath": "icons/skills/melee/strike-sword-gray.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "medium [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": null
+    },
+    {
+        "name": "Dual Strike - Paired Blades",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Melee" ],
+        "meta": { "iconPath": "icons/skills/melee/weapons-crossed-swords-black-gray.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2 * light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2 * light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2 * light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "Deal 3 * light [MARTIAL DAMAGE] instead."
+        }
+    },
+    {
+        "name": "Parry - Paired Blades",
+        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "[REACTION]" ],
+        "meta": { "iconPath": "icons/skills/melee/swords-parry-block-blue.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ { "amount": 1, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "You recieve damage from a [TAG;Melee,Attack] Ability",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [ {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Reduce incoming damage by medium [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null } 
+                        ]
+                } ],
+                "outcomesOnCritSuccess": [ ],
+                "outcomesOnSuccess": [ ],
+                "outcomesOnFail": [ ],
+                "outcomesOnCritFail": [ ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [STAMINA]",
+            "effect": "Reduce by 2 * medium [MARTIAL DAMAGE] instead."
+        }
+    },
+    {
+        "name": "Flurry - Paired Blades",
+        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Attack", "Melee" ],
+        "meta": { "iconPath": "icons/skills/melee/strikes-sword-triple-gray.webp", "colour": "COLOURLESS" },
+        "requirements": { "requiredLevels": [ { "amount": 1, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "actions": [
+            {
+                "actionType": "MARTIAL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "light [MARTIAL DAMAGE]",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ],
+        "push": {
+            "cost": "1 [AP]",
+            "effect": "Repeat the Action, can be pushed multiple times."
         }
     }
 ]
