@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { ALL_TECHNIQUES, Technique } from '../../../../common_resources/player_rules/techniques/technique'
-import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { AbilityComponent } from "../shared/components/ability/ability.component";
+import { AbilityColour } from '../../../../common_resources/shared/Ability';
 
 @Component({
     selector: 'app-techniques-search',
-    imports: [NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule, AbilityComponent],
+    imports: [NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule, NgbTooltipModule, AbilityComponent],
     templateUrl: './techniques-search.component.html',
     styleUrl: './techniques-search.component.scss'
 })
@@ -18,6 +19,7 @@ export class TechniquesSearchComponent {
   currentFilterText: string = "";
   readonly filterTags = [ "[REACTION]", "Attack", "Move", "Heal" ];
   currentFilterTags: string[] = [];
+  selectedTechnique: Technique = ALL_TECHNIQUES[0];
 
   private currentSelectedTechniqueLevel = TechniqueLevel.ALL;
   private currentSelectedTechniqueType = TechniqueType.ALL;
@@ -88,6 +90,23 @@ export class TechniquesSearchComponent {
 
   onFreeTextFilterChange() {
     this.applyCurrentFilters();
+  }
+
+  onSelectTechnique(name: string): void {
+      this.selectedTechnique = ALL_TECHNIQUES.find(e => e.name === name) ?? ALL_TECHNIQUES[0];
+  }
+
+  getColourClass(technique: Technique): string {
+    const colour = technique?.meta.colour ?? AbilityColour.COLOURLESS;
+    switch (colour) {
+      case AbilityColour.GREEN: return 'green';
+      case AbilityColour.RED: return'red';
+      case AbilityColour.BLUE: return'blue';
+      case AbilityColour.YELLOW: return'yellow';
+      case AbilityColour.ORANGE: return'orange';
+      case AbilityColour.BROWN: return'brown'; 
+      case AbilityColour.COLOURLESS: return'';
+    }
   }
 
   private applyCurrentFilters() {

@@ -136,6 +136,8 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 #### Spells
 
+- rename ARCANA to MANA, not ideal but better name (❌)
+
 - Split up disciplines differently (❌)
     - Elemental (Pyrmoancy, Hydromancy, Aeromancy, Geomancy) should be unchanged, the incompability works quite well. Maybe certain elements should emphazise certain Attributes more. (❌)
     - Psychic(Telekinesis, Telepathy, Divintation), These are abilities that also manifest biologically in the brain, should emphasis INT (telekin), PER (divin) and CHA (telepath). (❌)

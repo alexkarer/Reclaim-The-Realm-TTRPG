@@ -5,6 +5,7 @@ import { ResolveTextKeyPipe } from "../../../shared/text-utils/resolve-text-key"
 import { TextProcessorPipe } from "../../../shared/text-utils/text-processor";
 
 import abilitiesJson from "../../../../../../common_resources/player_rules/character/abilities.json";
+import techniqueRulesJson from "../../../../../../common_resources/player_rules/techniques/technique_rules.json";
 
 @Component({
   selector: 'app-perks-abilities-page',
@@ -15,4 +16,5 @@ import abilitiesJson from "../../../../../../common_resources/player_rules/chara
 export class PerksAbilitiesPageComponent {
   public readonly pageId = 'perks-abilities';
   public readonly abilitiesJson = abilitiesJson;
+  public readonly techniqueRulesJson = techniqueRulesJson;
 }

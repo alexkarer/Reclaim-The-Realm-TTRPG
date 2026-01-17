@@ -1,8 +1,5 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <div ngbDropdown class="d-inline-block me-4">
-      <h6 style="white-space: nowrap;">{{ filteredTechniques.length + ' Techniques' }}</h6>
-    </div>
     <div ngbDropdown class="d-inline-block me-5">
 			<button type="button" class="btn btn-outline-primary" id="dropdown-marital-level" ngbDropdownToggle [innerHTML]="getCurrentlySelectedLevelText()"></button>
 			<div ngbDropdownMenu aria-labelledby="dropdown-marital-level">
@@ -51,12 +48,29 @@
     <input class="form-control me-2" type="search" placeholder="Search in name and tags" aria-label="Search" (input)="onFreeTextFilterChange()" [(ngModel)]="currentFilterText">
   </div>
 </nav>
-<div class="container">
-  <div class="row row-cols-lg-3 g-3">
-      @for (technique of filteredTechniques; track $index) {
-        <div class="col technique-wrapper">
-          <app-ability [ability]="technique"></app-ability>
+<div class="container g-5">
+    <div class="row">
+        <div class="col">
+            <div class="mt-5">
+              <app-ability [ability]="selectedTechnique"></app-ability>
+            </div>
         </div>
-      }
-  </div>
+        <div class="col">
+            <div ngbDropdown class="d-inline-block">
+                <h5 style="white-space: nowrap;">{{ filteredTechniques.length + ' Technique(s)' }}</h5>
+            </div>
+            <div class="row row-cols-lg-auto g-3">
+                @for (technique of filteredTechniques; track $index) {
+                  <div class="col">
+                    <div [class]="'technique-wrapper background-' + getColourClass(technique) + ((selectedTechnique.name === technique.name) ? ' border-selected' : ' border-' + getColourClass(technique))">
+                        <img class="technique-image" 
+                        [src]="technique.meta.iconPath" 
+                        [ngbTooltip]="technique.name"
+                        (click)="onSelectTechnique(technique.name)">
+                    </div>
+                  </div>
+                }
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,29 @@
+{
+    "types": [
+        {
+            "name": "Agile",
+            "textkey": "technique_agile_description"
+        },
+        {
+            "name": "Brawl",
+            "textkey": "technique_brawl_description"
+        },
+        {
+            "name": "Fortitude",
+            "textkey": "technique_fortitude_description"
+        },
+        {
+            "name": "Leader",
+            "textkey": "technique_leader_description"
+        },
+        {
+            "name": "Tactical",
+            "textkey": "technique_tactical_description"
+        }
+    ],
+    "learningRequirments": [
+        "learning_techniques_maximum",
+        "learning_techniques_type",
+        "learning_techniques_requirements"
+    ]
+}
