@@ -60,25 +60,42 @@
   </ul>
 
   <div class="info-box">
-    <h6 class="mb-0 mt-1">Replacing Techniques:</h6>
-    <app-dynamic-content [content]="'replacing_techniques' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <h6 class="mb-0 mt-1">Pushing Techniques</h6>
+    <app-dynamic-content [content]="'pushing_techniques' | resolveTextKey | textProcessor"></app-dynamic-content>
   </div>
-
-  <h5>Pushing Techniques</h5>
-  <app-dynamic-content [content]="'pushing_techniques' | resolveTextKey | textProcessor"></app-dynamic-content>
   
   <hr>
   <h3 class="mt-3">Spells</h3>
   <app-dynamic-content [content]="'spells_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-  <h5 class="mt-3 mb-1">Spell Disciplines</h5>
-  <app-dynamic-content [content]="'TODO' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <h4 class="mt-3 mb-1">Spell Disciplines</h4>
+  <app-dynamic-content [content]="'spells_disciplines_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  <div class="mt-2 d-flex flex-column">
+    @for (majorDiscipline of spellsRulesJson.spellDisciplines; track $index) {
+      <div class="p-1 border bg-body-secondary">
+        <h4 class="mb-0">{{ majorDiscipline.name }}</h4>
+        <app-dynamic-content [content]="majorDiscipline.textkey | resolveTextKey | textProcessor"></app-dynamic-content>
+        @for (subDiscipline of majorDiscipline.subdisciplines; track $index) {
+          <div [class]="'mt-1 p-2 discipline-wrapper discipline-' + subDiscipline.color">
+            <h5 class="mb-0">{{ subDiscipline.name }}</h5>
+            <app-dynamic-content [content]="subDiscipline.textkey | resolveTextKey | textProcessor"></app-dynamic-content>
+          </div>
+        }
+      </div>
+    }
+  </div>
 
   <h5 class="mt-3 mb-1">Learning Spells</h5>
   <app-dynamic-content [content]="'TODO' | resolveTextKey | textProcessor"></app-dynamic-content>
 
   <!-- Explain only enough on how to select spells -->
-  <!-- State since spells are more complicated they get their own page-->
+  <!-- Move Replacing Info Box at the bottom -->
+   <!-- State since spells are more complicated they get their own page-->
+  <div class="info-box">
+    <h6 class="mb-0 mt-1">Replacing Spells and Abilities:</h6>
+    <app-dynamic-content [content]="'replacing_abilities' | resolveTextKey | textProcessor"></app-dynamic-content>
+  </div>
 </div>
 
 <app-player-rules-page-navigation [currentPageId]="pageId"></app-player-rules-page-navigation>

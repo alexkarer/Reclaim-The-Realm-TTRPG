@@ -1,3 +1,5 @@
+@use "../../../../_colors.scss";
+
 .ability-image {
     height: 48px;
     width: 48px;
@@ -12,68 +14,68 @@
 }
 
 .ability-red {
-    border-color: lightcoral;
+    border-color: colors.$rtr-red-border;
 
     .header {
-        background-color: rgb(75, 0, 0);
+        background-color: colors.$rtr-red-background-light;
     }
     .body {
-        background-color: rgb(30, 0, 0);
+        background-color: colors.$rtr-red-background-dark;
     }
 }
 
 .ability-orange {
-    border-color: lightsalmon;
+    border-color: colors.$rtr-orange-border;
 
     .header {
-        background-color: rgb(100, 50, 0);
+        background-color: colors.$rtr-orange-background-light;
     }
     .body {
-        background-color: rgb(50, 25, 0);
+        background-color: colors.$rtr-orange-background-dark;
     }
 }
 
 .ability-brown {
-    border-color: burlywood;
+    border-color: colors.$rtr-brown-border;
 
     .header {
-        background-color: rgb(85, 40, 40);
+        background-color: colors.$rtr-brown-background-light;
     }
     .body {
-        background-color: rgb(42, 20, 20);
+        background-color: colors.$rtr-brown-background-dark;
     }
 }
 
 .ability-green {
-    border-color: lightgreen;
+    border-color: colors.$rtr-green-border;
 
     .header {
-        background-color: rgb(0, 75, 0);
+        background-color: colors.$rtr-green-background-light;
     }
     .body {
-        background-color: rgb(0, 30, 0);
+        background-color: colors.$rtr-green-background-dark;
     }
 }
 
 .ability-blue {
-    border-color: lightskyblue;
+    border-color: colors.$rtr-blue-border;
 
     .header {
-        background-color: rgb(0, 0, 75);
+        background-color: colors.$rtr-blue-background-light;
     }
     .body {
-        background-color: rgb(0, 0, 30);
+        background-color: colors.$rtr-blue-background-dark;
     }
 }
 
 .ability-yellow {
-    border-color: yellow;
+    border-color: colors.$rtr-yellow-border;
 
     .header {
-        background-color: rgb(100, 100, 0);
+        background-color: colors.$rtr-yellow-background-light;
     }
     .body {
-        background-color: rgb(50, 50, 0);
+        background-color: colors.$rtr-yellow-background-dark;
     }
 }
 

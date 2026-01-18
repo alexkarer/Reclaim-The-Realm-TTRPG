@@ -167,10 +167,37 @@
         "learning_techniques_maximum": "The number of techniques you know does not exceed your maximum which is 1 + [MARTIAL LEVEL] + ([INT] / 2)",
         "learning_techniques_type": "You are able to learn technqiues of it's type. Your Class and Perks can grant you access to certain technique Types.",
         "learning_techniques_requirements": "You meet all other requirements the Technique has listed.",
-        "replacing_techniques": "After a Long Rest you can switch out one technique you currently know for a different one you are able to learn. After an extended Long Rest you may switch all your techniques.",
         "pushing_techniques": "You can also push certain techniques. Pushing a Technique involves paying an additional Cost to improve the ability in some way. A push can be declared just before any of the outcomes are applied and don't have to be done when the ability is used.",
 
-        "spells_overview": "TODO"
+        "spells_overview": "Spells are abilities that harness elemental or cosmic energy to manifest it or manipulate other the real world. Almost all living beings have some sort of connection to these energies but few are able to effectively harness it and even less can do so safely. Those who master spellcasting can wield tremendous power with which they can shape and destroy reality.",
+        "spells_disciplines_overview": "Spells are categorized by disciplines that describe roughly the effect of the spell and the origin of the magical power. Characters can only learn spells of disciplines they know and certain spells can also have multiple disciplines.<br>Spells are split across 5 major disciplines with subdisciplines each.",
+
+        "elemental_description": "Spells from the Elemental Discipline draw their power from the Elemental Planes. They generally deal acid, fire, cold, or lightning damage or otherwise manipulate the elements",
+        "pyromancy_description": "The summoning and manipulation of fire/heat and their elementals.",
+        "hydromancy_description": "The summoning and manipulation of water/cold/acid and their elementals..",
+        "geomancy_description": "The summoning and manipulation of air/lightnning and their elementals.",
+        "aeromancy_description": "The summoning and manipulation of earth/stone/poison and their elementals.",
+
+        "light_description": "TODO",
+        "restoration_description": "TODO",
+        "holy_description": "TODO",
+
+        "dark_description": "TODO",
+        "necromancy_description": "TODO",
+        "unholy_description": "TODO",
+
+        "psychic_description": "TODO",
+        "telekinesis_description": "TODO",
+        "telepathy_description": "TODO",
+        "divination_description": "TODO",
+
+        "arcane_description": "Spells that interact with raw aether energy to manipulate things in realspace.",
+        "transmutation_description": "TODO",
+        "teleportation_description": "TODO",
+        "conjuration_description": "TODO",
+        "illusion_description": "TODO",
+
+        "replacing_abilities": "After a Long Rest you can switch out one Spell or Technique you currently know for a different one you are able to learn. After an extended Long Rest you may switch all your spells or techniques."
     },
     "character_progression": {
         "level_up_description": "After you meet the required [XP] your [LEVEL] increases. When this happens you gain the following benefits:",

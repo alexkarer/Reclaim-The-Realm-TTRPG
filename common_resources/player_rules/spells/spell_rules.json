@@ -1,0 +1,49 @@
+{
+    "spellDisciplines": [
+        {
+            "name": "Elemental",
+            "textkey": "elemental_description",
+            "subdisciplines": [
+                { "name": "Pyromancy", "textkey": "pyromancy_description", "color": "red" },
+                { "name": "Hydromancy", "textkey": "hydromancy_description", "color": "blue" },
+                { "name": "Aeromancy", "textkey": "aeromancy_description", "color": "white" },
+                { "name": "Geomancy", "textkey": "geomancy_description", "color": "green" }
+            ]
+        },
+        {
+            "name": "Light",
+            "textkey": "light_description",
+            "subdisciplines": [
+                { "name": "Restoration", "textkey": "restoration_description", "color": "" },
+                { "name": "Holy", "textkey": "holy_description", "color": "yellow" }
+            ]
+        },
+        {
+            "name": "Dark",
+            "textkey": "dark_description",
+            "subdisciplines": [
+                { "name": "Necromancy", "textkey": "necromancy_description", "color": "" },
+                { "name": "Unholy", "textkey": "unholy_description", "color": "" }
+            ]
+        },
+        {
+            "name": "Psychic",
+            "textkey": "psychic_description",
+            "subdisciplines": [
+                { "name": "Telekinesis", "textkey": "telekinesis_description", "color": "" },
+                { "name": "Telepathy", "textkey": "telepathy_description", "color": "" },
+                { "name": "Divination", "textkey": "divination_description", "color": "" }
+            ]
+        },
+        {
+            "name": "Arcane",
+            "textkey": "arcane_description",
+            "subdisciplines": [
+                { "name": "Transmutation", "textkey": "transmutation_description", "color": "" },
+                { "name": "Teleporation", "textkey": "teleportation_description", "color": "" },
+                { "name": "Conjuration", "textkey": "conjuration_description", "color": "" },
+                { "name": "Illusion", "textkey": "illusion_description", "color": "" }
+            ]
+        }
+    ]
+}

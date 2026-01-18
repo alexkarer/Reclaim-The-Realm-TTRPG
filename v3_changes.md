@@ -142,7 +142,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - Elemental (Pyrmoancy, Hydromancy, Aeromancy, Geomancy) should be unchanged, the incompability works quite well. Maybe certain elements should emphazise certain Attributes more. (❌)
     - Psychic(Telekinesis, Telepathy, Divintation), These are abilities that also manifest biologically in the brain, should emphasis INT (telekin), PER (divin) and CHA (telepath). (❌)
     - Light (Restoration, Holy), Only possible for good chars, mostly need SPI (❌)
-    - Dark (Necromancy, Shadow), Only possible for evil chars, mostly need SPI (❌)
+    - Dark (Necromancy, Unholy), Only possible for evil chars, mostly need SPI (❌)
     - Arcane (Transmutation, Teleporation, Conjuration, Illusion) there are ones that can be learned by most people, should mostly emphasize SPI and INT (❌)
 - Create Level requirement for spells and give them names (4,8,12) (❌)
 - Add full Arcane Mishap Table/Rework for new spell discipline (❌)

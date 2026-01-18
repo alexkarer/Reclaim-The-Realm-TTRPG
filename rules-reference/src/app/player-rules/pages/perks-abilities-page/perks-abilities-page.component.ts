@@ -6,6 +6,7 @@ import { TextProcessorPipe } from "../../../shared/text-utils/text-processor";
 
 import abilitiesJson from "../../../../../../common_resources/player_rules/character/abilities.json";
 import techniqueRulesJson from "../../../../../../common_resources/player_rules/techniques/technique_rules.json";
+import spellsRulesJson from "../../../../../../common_resources/player_rules/spells/spell_rules.json";
 
 @Component({
   selector: 'app-perks-abilities-page',
@@ -17,4 +18,5 @@ export class PerksAbilitiesPageComponent {
   public readonly pageId = 'perks-abilities';
   public readonly abilitiesJson = abilitiesJson;
   public readonly techniqueRulesJson = techniqueRulesJson;
+  public readonly spellsRulesJson = spellsRulesJson;
 }

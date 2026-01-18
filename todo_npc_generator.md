@@ -12,6 +12,7 @@ rethink the +3 system as it kind of breaks aroudn 6 STR
 - concealment values
 
 **Abilities**
+- Most Spell/Magiucal Abilities should have a chance to fail even for NPCs or have a downside instead.
 - add functionlity to replace dedicated status effects in description
 - add possiblity for status effects to decrease in tier on successful saves, introduce new keyword [SAVE LOWERS]
 - properly add functionality to differentiate between attack and single target save. (just add extra targeting options)
