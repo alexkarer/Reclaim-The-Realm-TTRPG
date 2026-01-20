@@ -157,12 +157,14 @@
         "ability_further_details": "For more details on how Abilities interact with each other and the Syntax Works see: <span class=\"text-danger\">TODO add link to eventual Abilities Page that explains interactions in more detail</span>",
 
         "techniques_overview": "Techniques are Abilities where characters can perform extraordinary martial feats which depending on the characters power will eventually reach superhuman levels. These can be used like regular Abilities, the only difference is how they are learned and their ability to be pushed.",
+        
         "technique_types_overview": "There are different types of Techniques that focuses on different aspects of Martial Arts or fighting in general. In order to learn a technique you need to be able to learn techniques of it’s type. The type of the Technique can be found in it's Tags.",
         "technique_agile_description": "Agile Techniques enable a character to show of their supernatural speed and agility. These techniques usually require a character to have a higher [AGI] Attribute.",
         "technique_brawl_description": "Brawl Techniques enable characters to get in close combat with other people and are just relying on their body to perform techniques.",
         "technique_fortitude_description": "Fortitude Techniques rely on the characters physical body to shrug of injuries or push themselves beyond their usual limits.",
         "technique_leader_description": "Leader Techniques leverage the characters ability to command and empower alies or decieve enemies with their words and expressions. These Techniques techniques leverage the characters [CHA] Attribute.",
         "technique_tactical_description": "Tactical techniques represents the characters knowledge, expierience and situational awareness of battlefield situations and how to best resolve them and gain advantages.",
+        
         "learning_techniques": "You can learn any technique as long as you fulfill all the requirements:",
         "learning_techniques_maximum": "The number of techniques you know does not exceed your maximum which is 1 + [MARTIAL LEVEL] + ([INT] / 2)",
         "learning_techniques_type": "You are able to learn technqiues of it's type. Your Class and Perks can grant you access to certain technique Types.",
@@ -197,11 +199,17 @@
         "conjuration_description": "TODO",
         "illusion_description": "TODO",
 
+        "learning_spells": "You can learn any spell as long as you fulfill all the requirements:",
+        "learning_spells_maximum": "The number of spells you know does not exceed your maximum which is 1 + [SPELL LEVEL] + ([INT] / 2)",
+        "learning_spells_discipline": "You are able to learn spells of it's type, if the spell has multiple types you must be able to learn all of them. Your Class and Perks can grant you access to certain technique Types.",
+        "^learning_spells_requirements": "You meet all other requirements the Spell has listed.",
+        "spells_additional_information": "Since spell abilities are more complicated there is a sperate section which explains the intricies of casting spells.",
+
         "replacing_abilities": "After a Long Rest you can switch out one Spell or Technique you currently know for a different one you are able to learn. After an extended Long Rest you may switch all your spells or techniques."
     },
     "character_progression": {
         "level_up_description": "After you meet the required [XP] your [LEVEL] increases. When this happens you gain the following benefits:",
-        "level_up_level_increase_and_dependent_values": "Your [LEVEL] increases which means all other values dependent on your [LEVEL] increase as well.",
+        "level_up_level_increase_and_dependent_values": "Your [LEVEL] increases which mseans all other values dependent on your [LEVEL] increase as well.",
         "level_up_table": "Based on the Table below your [AP] or Attribute Limit might increase as well.",
         "level_up_gain_2_attribute_points": "You gain 2 Attribute Points you can increase your Attributes with.",
         "level_up_gain_2_perk_points": "You gain 2 Perk Points to select new Perks.",

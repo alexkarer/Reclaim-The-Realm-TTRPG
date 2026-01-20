@@ -87,11 +87,12 @@
   </div>
 
   <h5 class="mt-3 mb-1">Learning Spells</h5>
-  <app-dynamic-content [content]="'TODO' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <app-dynamic-content [content]="'learning_spells' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-  <!-- Explain only enough on how to select spells -->
-  <!-- Move Replacing Info Box at the bottom -->
-   <!-- State since spells are more complicated they get their own page-->
+  <br>
+  <app-dynamic-content [content]="'spells_additional_information' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <p class="text-danger">ADD LINK TO MORE SPELL INFO</p>
+
   <div class="info-box">
     <h6 class="mb-0 mt-1">Replacing Spells and Abilities:</h6>
     <app-dynamic-content [content]="'replacing_abilities' | resolveTextKey | textProcessor"></app-dynamic-content>
