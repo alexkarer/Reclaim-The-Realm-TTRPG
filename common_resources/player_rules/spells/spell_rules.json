@@ -1,4 +1,9 @@
 {
+    "learningRequirments": [
+        "learning_spells_maximum",
+        "learning_spells_discipline",
+        "learning_spells_requirements"
+    ],
     "spellDisciplines": [
         {
             "name": "Elemental",
@@ -14,7 +19,7 @@
             "name": "Light",
             "textkey": "light_description",
             "subdisciplines": [
-                { "name": "Restoration", "textkey": "restoration_description", "color": "" },
+                { "name": "Restoration", "textkey": "restoration_description", "color": "light-green" },
                 { "name": "Holy", "textkey": "holy_description", "color": "yellow" }
             ]
         },
@@ -22,27 +27,26 @@
             "name": "Dark",
             "textkey": "dark_description",
             "subdisciplines": [
-                { "name": "Necromancy", "textkey": "necromancy_description", "color": "" },
-                { "name": "Unholy", "textkey": "unholy_description", "color": "" }
+                { "name": "Necromancy", "textkey": "necromancy_description", "color": "dark-purple" },
+                { "name": "Unholy", "textkey": "unholy_description", "color": "black" }
             ]
         },
         {
             "name": "Psychic",
             "textkey": "psychic_description",
             "subdisciplines": [
-                { "name": "Telekinesis", "textkey": "telekinesis_description", "color": "" },
-                { "name": "Telepathy", "textkey": "telepathy_description", "color": "" },
-                { "name": "Divination", "textkey": "divination_description", "color": "" }
+                { "name": "Telekinesis", "textkey": "telekinesis_description", "color": "brown" },
+                { "name": "Telepathy", "textkey": "telepathy_description", "color": "pink" },
+                { "name": "Divination", "textkey": "divination_description", "color": "light-blue" }
             ]
         },
         {
             "name": "Arcane",
             "textkey": "arcane_description",
             "subdisciplines": [
-                { "name": "Transmutation", "textkey": "transmutation_description", "color": "" },
-                { "name": "Teleporation", "textkey": "teleportation_description", "color": "" },
-                { "name": "Conjuration", "textkey": "conjuration_description", "color": "" },
-                { "name": "Illusion", "textkey": "illusion_description", "color": "" }
+                { "name": "Teleporation", "textkey": "teleportation_description", "color": "light-purple" },
+                { "name": "Conjuration", "textkey": "conjuration_description", "color": "orange" },
+                { "name": "Illusion", "textkey": "illusion_description", "color": "teal" }
             ]
         }
     ]

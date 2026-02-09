@@ -115,8 +115,9 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - All abilities are now MARTIAL or SPELL Test (❌)
 - Remove Hybrid Abilities for now (❌)
     - Should just be spells
-- REwork abilities to use the clear formating from foundryVTT (❌)
+- REwork abilities to use the clear formating from foundryVTT (✅)
     - For ongoing effects label Concentartion clearly and rework how mechanics are displayed (❌)
+- Make Evading Attacks a Standard Ability.
 
 #### Martial Maneuvers (Techniques)
 
@@ -143,7 +144,8 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - Psychic(Telekinesis, Telepathy, Divintation), These are abilities that also manifest biologically in the brain, should emphasis INT (telekin), PER (divin) and CHA (telepath). (❌)
     - Light (Restoration, Holy), Only possible for good chars, mostly need SPI (❌)
     - Dark (Necromancy, Unholy), Only possible for evil chars, mostly need SPI (❌)
-    - Arcane (Transmutation, Teleporation, Conjuration, Illusion) there are ones that can be learned by most people, should mostly emphasize SPI and INT (❌)
+    - Arcane (Teleporation, Conjuration, Illusion) there are ones that can be learned by most people, should mostly emphasize SPI and INT (❌)
+        - Transmutation was remoced, check if it is actually needed. 
 - Create Level requirement for spells and give them names (4,8,12) (❌)
 - Add full Arcane Mishap Table/Rework for new spell discipline (❌)
 

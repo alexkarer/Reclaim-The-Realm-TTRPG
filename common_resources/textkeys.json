@@ -30,9 +30,9 @@
     },
     "species": {
         "species_description": "Your species represents your biological make and your ancestry. Species also have certain traits that make them unique to others.",
-        "species_human_decription": "Humans are the unique since they only started to emerge during the unification of the elemental planes in the material plane and did not form during or before the elemental turmoil. They are a very communal species and require social interaction in their lives. They are the most versatile of all people and also have a strong drive to make a name for themselves and achieve something in their lives.",
-        "species_dwarf_description": "Dwarves originally formed in the Elemental Plane of Earth as an evolution of advanced earth elementals. A sizeable amount of dwarves still remain there, however most of them migrated to the Material Plane eventually. Their connections still remain strong and they mostly reside in mountanous regions where the connection the their native plane is the strongest. They have a very strict society and strongly adhere to the codes of their clan or society. Thus they are very suspecious of people outside their communities, however once you earn they trust they will welcome you as their own.",
-        "species_elf_description": "Elves originate form the Elemental Plane of Air after evolving from the advanced AIr Elementals. Their ability to live there was limited since they are not able to fly innatly and thus most of them migrated towards the Material Plane when it formed. They are remarkable for their slender and tall physique and are the first people to master the ethereal plane and have built a strong connection. Which has evolved them to the point everytime a new elf is born instead of creating a new soul, a soul of a previous dead elf inhabits them and merges with their."
+        "species_human_decription": "Humans are the unique since they only started to emerge during the unification of the Elemental planes in the Prime Elemental and did not form during or before the elemental turmoil. They are a very communal species and require social interaction in their lives. They are the most versatile of all people and also have a strong drive to make a name for themselves and achieve something in their lives.",
+        "species_dwarf_description": "Dwarves originally formed in the Elemental Plane of Earth as an evolution of advanced earth elementals. A sizeable amount of dwarves still remain there, however most of them migrated to the Prime Elemental eventually. Their connections still remain strong and they mostly reside in mountanous regions where the connection the their native plane is the strongest. They have a very strict society and strongly adhere to the codes of their clan or society. Thus they are very suspecious of people outside their communities, however once you earn they trust they will welcome you as their own.",
+        "species_elf_description": "Elves originate form the Elemental Plane of Air after evolving from the advanced AIr Elementals. Their ability to live there was limited since they are not able to fly innatly and thus most of them migrated towards the Prime Elemental when it formed. They are remarkable for their slender and tall physique and are the first people to master the ethereal plane and have built a strong connection. Which has evolved them to the point everytime a new elf is born instead of creating a new soul, a soul of a previous dead elf inhabits them and merges with their."
     },
     "origin": {
         "origin_description": "Your origin defines the place you grew up and your early childhood, while this also slightly impacts your character’s abilities and skills, most importantly, it adds a lot of flavour and depth to your character. In the following steps you are presented with tables which you can roll, this however is optional. It merely represents the likelihood of where people are usually born, and can of course also be chosen freely.",
@@ -174,36 +174,11 @@
         "spells_overview": "Spells are abilities that harness elemental or cosmic energy to manifest it or manipulate other the real world. Almost all living beings have some sort of connection to these energies but few are able to effectively harness it and even less can do so safely. Those who master spellcasting can wield tremendous power with which they can shape and destroy reality.",
         "spells_disciplines_overview": "Spells are categorized by disciplines that describe roughly the effect of the spell and the origin of the magical power. Characters can only learn spells of disciplines they know and certain spells can also have multiple disciplines.<br>Spells are split across 5 major disciplines with subdisciplines each.",
 
-        "elemental_description": "Spells from the Elemental Discipline draw their power from the Elemental Planes. They generally deal acid, fire, cold, or lightning damage or otherwise manipulate the elements",
-        "pyromancy_description": "The summoning and manipulation of fire/heat and their elementals.",
-        "hydromancy_description": "The summoning and manipulation of water/cold/acid and their elementals..",
-        "geomancy_description": "The summoning and manipulation of air/lightnning and their elementals.",
-        "aeromancy_description": "The summoning and manipulation of earth/stone/poison and their elementals.",
-
-        "light_description": "TODO",
-        "restoration_description": "TODO",
-        "holy_description": "TODO",
-
-        "dark_description": "TODO",
-        "necromancy_description": "TODO",
-        "unholy_description": "TODO",
-
-        "psychic_description": "TODO",
-        "telekinesis_description": "TODO",
-        "telepathy_description": "TODO",
-        "divination_description": "TODO",
-
-        "arcane_description": "Spells that interact with raw aether energy to manipulate things in realspace.",
-        "transmutation_description": "TODO",
-        "teleportation_description": "TODO",
-        "conjuration_description": "TODO",
-        "illusion_description": "TODO",
-
         "learning_spells": "You can learn any spell as long as you fulfill all the requirements:",
         "learning_spells_maximum": "The number of spells you know does not exceed your maximum which is 1 + [SPELL LEVEL] + ([INT] / 2)",
         "learning_spells_discipline": "You are able to learn spells of it's type, if the spell has multiple types you must be able to learn all of them. Your Class and Perks can grant you access to certain technique Types.",
-        "^learning_spells_requirements": "You meet all other requirements the Spell has listed.",
-        "spells_additional_information": "Since spell abilities are more complicated there is a sperate section which explains the intricies of casting spells.",
+        "learning_spells_requirements": "You meet all other requirements the Spell has listed.",
+        "spells_additional_information": "Since spell abilities are more complicated there is a dedicated section which explains the rules of casting spells.",
 
         "replacing_abilities": "After a Long Rest you can switch out one Spell or Technique you currently know for a different one you are able to learn. After an extended Long Rest you may switch all your spells or techniques."
     },
@@ -213,7 +188,32 @@
         "level_up_table": "Based on the Table below your [AP] or Attribute Limit might increase as well.",
         "level_up_gain_2_attribute_points": "You gain 2 Attribute Points you can increase your Attributes with.",
         "level_up_gain_2_perk_points": "You gain 2 Perk Points to select new Perks.",
-        "after_level_12": "After you have reached [LEVEL] 12 for every 30 000 [XP] past [LEVEL] 12, you gain an additional Attribute Point and Perk Point. However, your [LEVEL] does not increase."
+        "after_level_12": "After you have reached [LEVEL] 12 for every 3000 [XP] past [LEVEL] 12, you gain an additional Attribute Point and Perk Point. However, your [LEVEL] does not increase."
+    },
+    "spell_casting_rules": {
+        "elemental_description": "Spells from the Elemental Discipline draw their power from the Elemental Planes. They generally deal acid, fire, cold, or lightning damage or otherwise manipulate the elements",
+        "pyromancy_description": "The summoning and manipulation of fire/heat and their elementals.",
+        "hydromancy_description": "The summoning and manipulation of water/cold/acid and their elementals..",
+        "geomancy_description": "The summoning and manipulation of air/lightnning and their elementals.",
+        "aeromancy_description": "The summoning and manipulation of earth/stone/poison and their elementals.",
+
+        "light_description": "Spells from the Light Discipline draw their power from the Positive/Good Energy from the Cosmic Planes.",
+        "restoration_description": "Magic that revitalizes other biving beings. Able to mend wounds, empower the living and can even return people alive.",
+        "holy_description": "The purest and most virtious power, able to summon light and searing pillars of gold that burn the evil and the ability to summon angles and other good spirits.",
+
+        "dark_description": "Spells from the Dark Discipline draw their power from the Negative/Evil Energy from the Cosmic Planes.",
+        "necromancy_description": "The most wicked and ambitious power, able to interact with souls directly, summon the dead and bind their souls to your will.",
+        "unholy_description": "The cruelest and darkest power, able to summon impenitrable darkness and create shadowfire that hurts the living.",
+
+        "psychic_description": "Psychic spells are formed in the mind of the caster harnessing cosmic energy to fuel the spell.",
+        "telekinesis_description": "Channeling cosmic energy to apply physical force in the Prime Elemental.",
+        "telepathy_description": "Using your mind to directly interact with other living creatures. From harmless effects such as communicating to harmful effects like causing pain or mind-control.",
+        "divination_description": "Using your mind topPierce into the combined conciousness of all to find out what is, what has been or what could yet be.",
+
+        "arcane_description": "Spells that interact with raw cosmic energy to manipulate things in the Prime Elemental.",
+        "teleportation_description": "Open pathways and travel to other places in the Prime Elemental or other realities through the Cosmic Plane.",
+        "conjuration_description": "Use Energy from the Comsic Place to manifest as physical objects in the Prime Elemental temporarily or permanently.",
+        "illusion_description": "Blend the Cosmic Plane into reality to trick sentient beings into percieving something that is not there."
     },
     "barbarian_class": {
         "barbarian_description": "This description is not yet complete. Thankfully Barbarian Players can't read."

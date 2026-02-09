@@ -1,0 +1,77 @@
+@use "../../../../colors";
+
+.discipline-wrapper {
+    border-style: solid;
+    border-width: 2px;
+}
+
+.discipline-red {
+    background-color: colors.$rtr-red-background-dark;
+    border-color: colors.$rtr-red-border;
+}
+
+.discipline-blue {
+    background-color: colors.$rtr-blue-background-dark;
+    border-color: colors.$rtr-blue-border;
+}
+
+.discipline-teal {
+    background-color: colors.$rtr-teal-background-dark;
+    border-color: colors.$rtr-teal-border;
+}
+
+.discipline-orange {
+    background-color: colors.$rtr-orange-background-dark;
+    border-color: colors.$rtr-orange-border;
+}
+
+.discipline-brown {
+    background-color: colors.$rtr-brown-background-dark;
+    border-color: colors.$rtr-brown-border;
+}
+
+.discipline-white {
+    background-color: colors.$rtr-white-background-dark;
+    border-color: colors.$rtr-white-border;
+}
+
+.discipline-green {
+    background-color: colors.$rtr-green-background-dark;
+    border-color: colors.$rtr-green-border;
+}
+
+.discipline-light-green {
+    background-color: colors.$rtr-light-green-background-dark;
+    border-color: colors.$rtr-light-green-border;
+}
+
+.discipline-light-blue {
+    background-color: colors.$rtr-light-blue-background-dark;
+    border-color: colors.$rtr-light-blue-border;
+}
+
+.discipline-yellow {
+    background-color: colors.$rtr-yellow-background-dark;
+    border-color: colors.$rtr-yellow-border;
+}
+
+.discipline-dark-purple {
+    background-color: colors.$rtr-dark-purple-background-dark;
+    border-color: colors.$rtr-dark-purple-border;
+}
+
+.discipline-light-purple {
+    background-color: colors.$rtr-light-purple-background-dark;
+    border-color: colors.$rtr-light-purple-border;
+}
+
+.discipline-pink {
+    background-color: colors.$rtr-pink-background-dark;
+    border-color: colors.$rtr-pink-border;
+}
+
+.discipline-black {
+    background-color: colors.$rtr-black-background-dark;
+    border-color: colors.$rtr-black-border;
+}
+
