@@ -151,7 +151,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 ### Equipment
 
-- Rebalance Weapons to have Maneuvers (❌)
+- Rebalance Weapons to have Maneuvers (✅)
     - More Maneuvers should be unlocked with Martial Level so spellcasters have not immediate access to them. (❌)
 - Don't roll randomly for starting equipment, also figure out what good prices should be and starting gold/equipment (❌)
 
@@ -232,6 +232,8 @@ Remove class techniques as they make more provbelms as they solve and include ab
         - arcana mishaps are more common here
         - specific locations are hard to get too and maybe need some sort of keys or instructions or clues with many smaller expeditions.
         - teleporation is special in riftlands
+
+- Add various Loot Tables
 
 ### Other
 

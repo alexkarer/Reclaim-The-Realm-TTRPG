@@ -72,6 +72,11 @@ function keywordToContentPart(keyword: string): ContentPart {
         return abilityContentPart;
     }
 
+    const currencyContentPart = generateCurrencyContentPart(keyword);
+    if (currencyContentPart) {
+        return currencyContentPart;
+    }
+
     const rulesKeyword = generateRulesContentPart(keyword);
     if (rulesKeyword) {
         return rulesKeyword;
@@ -109,6 +114,27 @@ function generateAbilityontentPart(keyword: string): ContentPart | undefined {
         } else {
             console.error(`Ability "${abilityName}" not found`);
         }
+    }
+    return undefined;
+}
+
+function generateCurrencyContentPart(keyword: string): ContentPart | undefined {
+    switch (keyword) {
+        case 'GC':
+            return { 
+                type: 'currency',
+                text: 'gc'
+            };
+        case 'SC':
+            return { 
+                type: 'currency',
+                text: 'sc'
+            };
+        case 'BC':
+            return { 
+                type: 'currency',
+                text: 'bc'
+            };
     }
     return undefined;
 }

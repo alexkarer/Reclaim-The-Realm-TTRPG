@@ -1,25 +1,43 @@
 <ng-container>
     @for (contentPart of content(); track $index) {
-        @if (contentPart.type === 'text') {
-            <span class="description" [innerHTML]="contentPart.text"></span>
-        }
-        @if (contentPart.type === 'keyword') {
-            <app-keyword 
-                [keyword]="contentPart.component?.keyword" 
-                [link]="contentPart.component?.link ?? ''"
-                [toolTip]="contentPart.component?.toolTipText"
-            ></app-keyword>
-        }
-        @if (contentPart.type === 'tag') {
-            <em class="text-body-emphasis" [innerHTML]="contentPart.text" [ngbTooltip]="getTagTooltipText(contentPart.text)" ></em>
-        }
-        @if (contentPart.type === 'ability') {
-            <em class="text-body-emphasis fw-bold" [innerHTML]="contentPart.text" [ngbTooltip]="abilityTooltip"></em>
-            <ng-template #abilityTooltip>
-                @if (contentPart.ability) {
-                    <app-ability [ability]="contentPart.ability"></app-ability>
+        @switch (contentPart.type) {
+            @case ('text') {
+                <span class="description" [innerHTML]="contentPart.text"></span>
+            }
+            @case ('keyword') {
+                <app-keyword 
+                    [keyword]="contentPart.component?.keyword" 
+                    [link]="contentPart.component?.link ?? ''"
+                    [toolTip]="contentPart.component?.toolTipText"
+                ></app-keyword>
+            }
+            @case ('tag') {
+                <em class="text-body-emphasis" [innerHTML]="contentPart.text" [ngbTooltip]="getTagTooltipText(contentPart.text)" ></em>
+            }
+            @case ('ability') {
+                <em class="text-body-emphasis fw-bold" [innerHTML]="contentPart.text" [ngbTooltip]="abilityTooltip"></em>
+                <ng-template #abilityTooltip>
+                    @if (contentPart.ability) {
+                        <app-ability [ability]="contentPart.ability"></app-ability>
+                    }
+                </ng-template>
+            }
+            @case ('currency') {
+                @switch (contentPart.text) {
+                    @case ('gc') {
+                        <img class="currency" src="/assets/icons/commodities/currency/coins-crown-stack-gold.webp" ngbTooltip="Gold Coins">
+                    }
+                    @case ('sc') {
+                        <img class="currency" src="/assets/icons/commodities/currency/coins-shield-sword-stack-silver.webp" ngbTooltip="Silver Coins">
+                    }
+                    @case ('bc') {
+                        <img class="currency" src="/assets/icons/commodities/currency/coins-wheat-stack-copper.webp" ngbTooltip="Bronze Coins">
+                    }
+                    @default {
+                        <span class="text-danger">Error rendering Coin</span>
+                    }
                 }
-            </ng-template>
+            }
         }
     }
 </ng-container>

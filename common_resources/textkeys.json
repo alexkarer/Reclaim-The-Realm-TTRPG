@@ -182,6 +182,35 @@
 
         "replacing_abilities": "After a Long Rest you can switch out one Spell or Technique you currently know for a different one you are able to learn. After an extended Long Rest you may switch all your spells or techniques."
     },
+    "equipment": {
+        "equipment_overview": "Equipment is a general term for objects in the world, it most specifically refers to items characters can carry, use and trade in the World of RtR.",
+        "choose_your_starting_equipment": "When you are creating a character you gain 30 [GC] in addition to any other currency you recieved during your origin. You can spend this on any Equipment up to Tier 3. Any excess currency you keep to start your adventure with.",
+        "currency_description": "The Currency used in the Realms are small metal coins consisting of bronze, silver, and gold. The value of a coin is also equal to the intrinsic value of the metal itself. This results in different currencies being widely accepted across civilization, although the coinage might be different. The following coins are commonly found.",
+        "coin_bronze": "The lowest currency mostly made out of copper. Mostly used for buying food or basic necessities.",
+        "coin_silver": "Worth 10 [BC], used for the larger purchases in daily live such as tools or trade goods.",
+        "coin_gold": "Worth 100 [BC] or 10 [SC], mostly used by merchants, nobles and adventurers.",
+        
+        "equipment_characteristics": "Equipment has the following Characteristics:",
+        "equipment_tags": "Shows what type of equipment it is and contains other relevant meta information.",
+        "equipment_cost": "The typical cost expected to pay for this Equipment. This can vary depending on location and circumstances.",
+        "equipment_tier": "Describes how difficult it is to craft the item. The higher the tier of an item is, the more difficult it is to find.",
+        "equipment_weight": "How heavy the items is, relevant for your carrying capacity.",
+        "equipment_crafting_skills": "What necesarry Skills you require for crafting this item, more details in the crafting section.",
+        "equipment_description": "Describes the Item. Also can have Gameplay effects.",
+        "equipment_granted_abilities": "A set of Abilities that the Equipment grants you. Unless otherwise specified you have to wield or use the Equipment.",
+
+        "equipment_types": "This is an overview of the most common Equipment Types:",
+        "equipment_type_weapon": "Weapons are equipment that allow you to physically attack your foes. They come in ranged and melee variants",
+        "equipment_type_ammunition": "Ammunition is required for firing most Ranged Weapons. The Ammunition will state for what Weapons it applies and the Weapon what it requires.",
+        "equipment_type_armour": "",
+        "equipment_type_wearable": "",
+        "equipment_type_survival": "",
+        "equipment_type_commodity": "",
+        "equipment_type_tool": "",
+        "equipment_type_consumable": "",
+
+        "equipment_carrying_wielding_overview": ""
+    },
     "character_progression": {
         "level_up_description": "After you meet the required [XP] your [LEVEL] increases. When this happens you gain the following benefits:",
         "level_up_level_increase_and_dependent_values": "Your [LEVEL] increases which mseans all other values dependent on your [LEVEL] increase as well.",

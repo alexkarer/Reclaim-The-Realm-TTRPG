@@ -1,0 +1,26 @@
+{
+    "coin_types": [
+        { "name": "Bronze Coin", "shortCut": "BC", "textkey": "coin_bronze" },
+        { "name": "Silver Coin", "shortCut": "SC",  "textkey": "coin_silver" },
+        { "name": "Gold Coin", "shortCut": "GC", "textkey": "coin_gold" }
+    ],
+    "equipment_characteristics": [
+        { "title": "Tags", "textkey": "equipment_tags" },
+        { "title": "Cost", "textkey": "equipment_cost" },
+        { "title": "Tier", "textkey": "equipment_tier" },
+        { "title": "Weight", "textkey": "equipment_weight" },
+        { "title": "Crafting Skills", "textkey": "equipment_crafting_skills" },
+        { "title": "Description", "textkey": "equipment_description" },
+        { "title": "Granted Abilities", "textkey": "equipment_granted_abilities" }
+    ],
+    "equipment_types": [
+        { "title": "Weapon", "textkey": "equipment_type_weapon" },
+        { "title": "Ammunition", "textkey": "equipment_type_ammunition" },
+        { "title": "Armour", "textkey": "equipment_type_armour" },
+        { "title": "Wearable", "textkey": "equipment_type_wearable" },
+        { "title": "Survival", "textkey": "equipment_type_survival" },
+        { "title": "Commoditiy", "textkey": "equipment_type_commodity" },
+        { "title": "Tool", "textkey": "equipment_type_tool" },
+        { "title": "Consumable", "textkey": "equipment_type_consumable" }
+    ]
+}

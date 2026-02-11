@@ -63,61 +63,61 @@
             "d10": "1",
             "trainingType": "Wildman",
             "benefits": "Surivival and Intimidation become class skills for you.",
-            "extraStartingMoney": "0 gc"
+            "extraStartingMoney": "0"
         },
         {
             "d10": "2",
             "trainingType": "Farmhand",
             "benefits": "Animal Handling and Nature become class skills for you.",
-            "extraStartingMoney": "3 gc"
+            "extraStartingMoney": "3 [GC]"
         },
         {
             "d10": "3",
             "trainingType": "Assistant Hunter",
             "benefits": "Survival and Nature become class skills for you",
-            "extraStartingMoney": "5 gc"
+            "extraStartingMoney": "5 [GC]"
         },
         {
             "d10": "4",
             "trainingType": "Militia Training",
             "benefits": "Athletics becomes class skill for you and your",
-            "extraStartingMoney": "5 gc"
+            "extraStartingMoney": "5 [GC]"
         },
         {
             "d10": "5",
             "trainingType": "Artisan Training",
             "benefits": "one tool skill of your choice becomes a class skill for you and it's rank is increased by 1. Additionally you start with one tier 3 item of your choice that can be crafted with your chosen tool.",
-            "extraStartingMoney": "10 gc"
+            "extraStartingMoney": "10 [GC]"
         },
         {
             "d10": "6",
             "trainingType": "Entertainer",
             "benefits": "Persuasion and Deception become Class skills for you.",
-            "extraStartingMoney": "10 gc"
+            "extraStartingMoney": "10 [GC]"
         },
         {
             "d10": "7",
             "trainingType": "Scholar",
             "benefits": "Either Medicine or 2 lore skills of your choice become a class skill for you. Additionally you learn an extra language and start the game with a book about your subject.",
-            "extraStartingMoney": "3 gc"
+            "extraStartingMoney": "3 [GC]"
         },
         {
             "d10": "8",
             "trainingType": "Merchant Apprentice",
             "benefits": "Persuasion and Culture become a class skills for you and you learn an extra language",
-            "extraStartingMoney": "20 gc"
+            "extraStartingMoney": "20 [GC]"
         },
         {
             "d10": "9",
             "trainingType": "Criminal",
             "benefits": "Stealth and Thievery become class skills fro you and you become a wanted criminal in a location of your choice.",
-            "extraStartingMoney": "25 gc"
+            "extraStartingMoney": "25 [GC]"
         },
         {
             "d10": "10",
             "trainingType": "Young Noble",
             "benefits": "1 regular skill and one lore skill of your choice become class skills for you and you learn an extra language.",
-            "extraStartingMoney": "50 gc"
+            "extraStartingMoney": "50 [GC]"
         }
     ],
     "lifeEvents": {
@@ -168,7 +168,7 @@
             },
             {
                 "d4": "2",
-                "description": "You have a gambling problem, you lose 10 gc starting money and you can't complete an extended long rest unless you spend one evening gambling"
+                "description": "You have a gambling problem, you lose 10 [GC] starting money and you can't complete an extended long rest unless you spend one evening gambling"
             },
             {
                 "d4": "3",
@@ -194,7 +194,7 @@
             },
             {
                 "d4": "4",
-                "description": "You found some treasure in an abandoned ruin/dungeon, start the game with extra 8d6 gc."
+                "description": "You found some treasure in an abandoned ruin/dungeon, start the game with extra 8d6 [GC]."
             }
         ],
         "martialEvents": [
@@ -204,7 +204,7 @@
             },
             {
                 "d4": "2",
-                "description": "You performed mercanery work, start the game with extra 4d6 gc."
+                "description": "You performed mercanery work, start the game with extra 4d6 [GC]."
             },
             {
                 "d4": "3",

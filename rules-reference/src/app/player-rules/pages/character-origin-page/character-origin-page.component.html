@@ -60,10 +60,10 @@
         <tbody>
             @for (trainingType of characterOrigin.earlyTraining ; track $index) {
             <tr>
-                <td>{{ trainingType.d10 }}</td>
-                <td>{{ trainingType.trainingType }}</td>
-                <td>{{ trainingType.benefits }}</td>
-                <td>{{ trainingType.extraStartingMoney }}</td>
+                <td><app-dynamic-content [content]="trainingType.d10 | textProcessor"></app-dynamic-content></td>
+                <td><app-dynamic-content [content]="trainingType.trainingType | textProcessor"></app-dynamic-content></td>
+                <td><app-dynamic-content [content]="trainingType.benefits | textProcessor"></app-dynamic-content></td>
+                <td><app-dynamic-content [content]="trainingType.extraStartingMoney | textProcessor"></app-dynamic-content></td>
             </tr>
             }
         </tbody>
@@ -84,7 +84,7 @@
             @for (lifeEventType of characterOrigin.lifeEvents.lifeEventTypes ; track $index) {
             <tr>
                 <td>{{ lifeEventType.d8 }}</td>
-                <td>{{ lifeEventType.lifeEventType }}</td>
+                <td><app-dynamic-content [content]="lifeEventType.lifeEventType | textProcessor"></app-dynamic-content></td>
             </tr>
             }
         </tbody>
@@ -104,7 +104,7 @@
                     @for (moment of characterOrigin.lifeEvents.happyMoments ; track $index) {
                     <tr>
                         <td>{{ moment.d4 }}</td>
-                        <td>{{ moment.description }}</td>
+                        <td><app-dynamic-content [content]="moment.description | textProcessor"></app-dynamic-content></td>
                     </tr>
                     }
                 </tbody>
@@ -122,7 +122,7 @@
                     @for (moment of characterOrigin.lifeEvents.tragedies ; track $index) {
                     <tr>
                         <td>{{ moment.d4 }}</td>
-                        <td>{{ moment.description }}</td>
+                        <td><app-dynamic-content [content]="moment.description | textProcessor"></app-dynamic-content></td>
                     </tr>
                     }
                 </tbody>
@@ -140,7 +140,7 @@
                     @for (moment of characterOrigin.lifeEvents.earlyAdventuringMoment ; track $index) {
                     <tr>
                         <td>{{ moment.d4 }}</td>
-                        <td>{{ moment.description }}</td>
+                        <td><app-dynamic-content [content]="moment.description | textProcessor"></app-dynamic-content></td>
                     </tr>
                     }
                 </tbody>
@@ -159,7 +159,7 @@
                     @for (moment of characterOrigin.lifeEvents.martialEvents ; track $index) {
                     <tr>
                         <td>{{ moment.d4 }}</td>
-                        <td>{{ moment.description }}</td>
+                        <td><app-dynamic-content [content]="moment.description | textProcessor"></app-dynamic-content></td>
                     </tr>
                     }
                 </tbody>
@@ -177,7 +177,7 @@
                     @for (moment of characterOrigin.lifeEvents.supernaturalEvents ; track $index) {
                     <tr>
                         <td>{{ moment.d4 }}</td>
-                        <td>{{ moment.description }}</td>
+                        <td><app-dynamic-content [content]="moment.description | textProcessor"></app-dynamic-content></td>
                     </tr>
                     }
                 </tbody>
