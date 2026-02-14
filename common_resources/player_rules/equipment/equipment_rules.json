@@ -19,8 +19,74 @@
         { "title": "Armour", "textkey": "equipment_type_armour" },
         { "title": "Wearable", "textkey": "equipment_type_wearable" },
         { "title": "Survival", "textkey": "equipment_type_survival" },
-        { "title": "Commoditiy", "textkey": "equipment_type_commodity" },
         { "title": "Tool", "textkey": "equipment_type_tool" },
-        { "title": "Consumable", "textkey": "equipment_type_consumable" }
+        { "title": "Consumable", "textkey": "equipment_type_consumable" },
+        { "title": "Commoditiy", "textkey": "equipment_type_commodity" }
+    ],
+    "equipped_equipment_restrictions": [
+        "equipping_hand_restriction",
+        "armour_restriction",
+        "wearable_restriction",
+        "consumables_restriction"
+    ],
+    "carrying_capacity_penalties": [
+        "-1 [MP]",
+        "-2 [DODGE]",
+        "+2 [STABILITY]",
+        "1 [STAMINA] is expended for each hour travelled."
+    ],
+    "example_goods": [
+        {"name": "Sack of Grain/Flour (25 kg)", "price": "2 [SC]"},
+        {"name": "A Chicken", "price": "15 [BC]"},
+        {"name": "A cow", "price": "5 [GC]"},
+        {"name": "A Horse (riding horse, basic training)", "price": "30 [GC]"},
+        {"name": "A Warhorse (well-trained steed)", "price": "100 [GC]"},
+        {"name": "A barrel of beer (50 liters)", "price": "5 [SC]"},
+        {"name": "Buying a House in a Town (small home, poor area)", "price": "100 [GC]"},
+        {"name": "Buying a House in a Town (medium home in a good district)", "price": "500 [GC]"},
+        {"name": "Building a Castle", "price": "25000 [GC]"}
+    ],
+    "example_services": [
+        {"name": "A Stay at an Inn (Common Room, One Night)", "price": "1 [SC]"},
+        {"name": "A Stay at an Inn (Private Room, One Night)", "price": "5 [SC]"},
+        {"name": "A Meal at a Tavern (Simple Stew & Bread)", "price": "5 [BC]"},
+        {"name": "A Meal at a Tavern (Hearty Meal with Meat)", "price": "2 [SC]"},
+        {"name": "A mug of Beer", "price": "2 [BC]"},
+        {"name": "A bottle of wine (common)", "price": "5 [SC]"},
+        {"name": "A Week of Unskilled Labor", "price": "7 [SC]"},
+        {"name": "A Week of Skilled Labor (e.g., blacksmith, mason, carpenter)", "price": "2 [GC]"},
+        {"name": "Courier Services (per 10 km, basic messenger)", "price": "3 [SC]"},
+        {"name": "Transportation of 100 kg of Goods (by Sea, per 10 km)", "price": "2 [SC]"},
+        {"name": "Transportation of 100 kg of Goods (by Land, per 10 km)", "price": "5 [SC]"}
+    ],
+    "carryingCapacityTable": [
+        { "str": -7, "carryingCapacityKg": 1, "liftPushDragKg": 2},
+        { "str": -6, "carryingCapacityKg": 3, "liftPushDragKg": 6},
+        { "str": -5, "carryingCapacityKg": 5, "liftPushDragKg": 10},
+        { "str": -4, "carryingCapacityKg": 10, "liftPushDragKg": 20},
+        { "str": -3, "carryingCapacityKg": 15, "liftPushDragKg": 30},
+        { "str": -2, "carryingCapacityKg": 20, "liftPushDragKg": 50},
+        { "str": -1, "carryingCapacityKg": 25, "liftPushDragKg": 70},
+        { "str": 0, "carryingCapacityKg": 30, "liftPushDragKg": 100},
+        { "str": 1, "carryingCapacityKg": 40, "liftPushDragKg": 150},
+        { "str": 2, "carryingCapacityKg": 50, "liftPushDragKg": 250},
+        { "str": 3, "carryingCapacityKg": 65, "liftPushDragKg": 400},
+        { "str": 4, "carryingCapacityKg": 80, "liftPushDragKg": 650},
+        { "str": 5, "carryingCapacityKg": 100, "liftPushDragKg": 1000},
+        { "str": 6, "carryingCapacityKg": 150, "liftPushDragKg": 1500},
+        { "str": 7, "carryingCapacityKg": 250, "liftPushDragKg": 2500},
+        { "str": 8, "carryingCapacityKg": 400, "liftPushDragKg": 4000},
+        { "str": 9, "carryingCapacityKg": 650, "liftPushDragKg": 6500},
+        { "str": 10, "carryingCapacityKg": 1000, "liftPushDragKg": 10000},
+        { "str": 11, "carryingCapacityKg": 2000, "liftPushDragKg": 20000},
+        { "str": 12, "carryingCapacityKg": 3000, "liftPushDragKg": 35000},
+        { "str": 13, "carryingCapacityKg": 5000, "liftPushDragKg": 60000},
+        { "str": 14, "carryingCapacityKg": 7500, "liftPushDragKg": 100000},
+        { "str": 15, "carryingCapacityKg": 10000, "liftPushDragKg": 200000},
+        { "str": 16, "carryingCapacityKg": 15000, "liftPushDragKg": 350000},
+        { "str": 17, "carryingCapacityKg": 20000, "liftPushDragKg": 600000},
+        { "str": 18, "carryingCapacityKg": 30000, "liftPushDragKg": 1000000},
+        { "str": 19, "carryingCapacityKg": 50000, "liftPushDragKg": 2500000},
+        { "str": 20, "carryingCapacityKg": 75000, "liftPushDragKg": 5000000}
     ]
 }

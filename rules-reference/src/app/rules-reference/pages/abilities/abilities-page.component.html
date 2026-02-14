@@ -1,25 +1,13 @@
-<h1>Standard Abilities</h1>
+<h1>Abilities</h1>
 
 <div class="my-4">
-  <h3>Ability</h3>
+  <h3>Ability Breakdown</h3>
   <span class="text-danger">Explain structure of an Ability, Tag/Requirment/Cost, Then Action: Condition,Targets (How target selection works in detail),Range, Then: Outcomes and how crit outcomes only trigger when they are specifically overriden.</span>
 
   <span class="text-danger">Explain how Reactions interact and when triggers can happen.</span>
 
   <h3>Standard Abilities</h3>
   <span class="text-danger">Add missing explanations that every creature has access to these abilities</span>
-  <h4>Movement Abilities</h4>
-  <span class="text-danger">Maybe add this all together in the movement page</span>
-  <div class="container">
-    <div class="row row-cols-lg-2 g-3">
-        @for (abilitiy of movementAbilities; track $index) {
-          <div class="col" style="min-width: 400px;">
-            <app-ability [ability]="abilitiy"></app-ability>
-          </div>
-        }
-    </div>
-  </div>
-  <h4>Other Abilities</h4>
   <div class="container">
     <div class="row row-cols-lg-2 g-3">
         @for (abilitiy of otherAbilities; track $index) {

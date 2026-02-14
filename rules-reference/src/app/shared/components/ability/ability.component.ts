@@ -1,6 +1,6 @@
 import { Component, forwardRef, input } from '@angular/core';
 import { Ability, AbilityColour } from '../../../../../../common_resources/shared/Ability';
-import { RequirementsPrettierPipe } from '../../utils/to-pretty-string';
+import { RequirementsPrettierPipe } from '../../pipes/to-pretty-string';
 import { DynamicContentComponent } from '../../text-utils/dynamic-component-rendering/dynamic-content.component';
 import { TextProcessorPipe } from '../../text-utils/text-processor';
 import { TextElementsWithoutAbilityComponent } from '../../text-utils/text-elements-without-ability/text-elements-without-ability.component';

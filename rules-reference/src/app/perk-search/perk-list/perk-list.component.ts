@@ -1,6 +1,6 @@
 import { Component, input, OnInit } from '@angular/core';
 import { Perk } from '../../../../../common_resources/perks/perk';
-import { RequirementsPrettierPipe } from "../../shared/utils/to-pretty-string";
+import { RequirementsPrettierPipe } from "../../shared/pipes/to-pretty-string";
 import { TextElementsComponent } from "../../shared/text-utils/text-elements/text-elements.component";
 
 @Component({

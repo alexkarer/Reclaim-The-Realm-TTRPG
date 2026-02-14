@@ -31,8 +31,9 @@ import { AppendixPageComponent } from './rules-reference/pages/appendix-page/app
 import { UsefulTablesPageComponent } from './rules-reference/pages/useful-tables-page/useful-tables-page.component';
 import { ChaseRulesPageComponent } from './rules-reference/pages/chase-rules-page/chase-rules-page.component';
 import { MovementPageComponent } from './rules-reference/pages/movement-page/movement-page.component';
-import { StandardAbilitiesPageComponent } from './rules-reference/pages/standard-abilities/standard-abilities-page.component';
+import { AbilitiesPageComponent } from './rules-reference/pages/abilities/abilities-page.component';
 import { TechniquesSearchComponent } from './techniques-search/techniques-search.component';
+import { InjuriesDeathPageComponent } from './player-rules/pages/injuries-death-page/injuries-death-page.component';
 
 export const routes: Routes = [
     {
@@ -111,6 +112,11 @@ export const routes: Routes = [
                 title: 'Exhaustion and Resting - Player Rules'
             },
             {
+                path: 'injuries-death',
+                component: InjuriesDeathPageComponent,
+                title: 'Injuries and Death - Player Rules'
+            },
+            {
                 path: 'casting-spells',
                 component: SpellsPageComponent,
                 title: 'Casting Spells - Player Rules'
@@ -168,9 +174,9 @@ export const routes: Routes = [
                 title: 'Combat Round - Rules Reference'
             },
             {
-                path: 'standard-abilities',
-                component: StandardAbilitiesPageComponent,
-                title: 'Standard Abilities - Rules Reference'
+                path: 'abilities',
+                component: AbilitiesPageComponent,
+                title: 'Abilities - Rules Reference'
             },
             {
                 path: 'movement',

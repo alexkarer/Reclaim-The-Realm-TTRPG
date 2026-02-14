@@ -1,75 +1,177 @@
 <h1>Equipment</h1>
 
 <div class="my-4">
-  <app-dynamic-content [content]="'equipment_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <app-dynamic-content [content]="'equipment_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-  <h3>Choose your Starting Equipment</h3>
-  <app-dynamic-content [content]="'choose_your_starting_equipment' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <h3>Choose your Starting Equipment</h3>
+    <app-dynamic-content
+        [content]="'choose_your_starting_equipment' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-  <h4 class="mt-2 mb-0">Currency</h4>
-  <app-dynamic-content [content]="'currency_description' | resolveTextKey | textProcessor"></app-dynamic-content>
-  <ul>
-    @for (coin of equipmentRules.coin_types; track $index) {
-      <li>
-        <span class="fw-bold">{{ coin.name }}</span><app-dynamic-content [content]="' [' + coin.shortCut + ']: ' + (coin.textkey | resolveTextKey) | textProcessor"></app-dynamic-content>
-      </li>
-    }
-  </ul>
+    <h4 class="mt-2 mb-0">Currency</h4>
+    <app-dynamic-content [content]="'currency_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <ul>
+        @for (coin of equipmentRules.coin_types; track $index) {
+        <li>
+            <span class="fw-bold">{{ coin.name }}</span><app-dynamic-content
+                [content]="' [' + coin.shortCut + ']: ' + (coin.textkey | resolveTextKey) | textProcessor"></app-dynamic-content>
+        </li>
+        }
+    </ul>
 
-  <h4 class="mt-2 mb-0">Equipment Characteristics</h4>
-  <app-dynamic-content [content]="'equipment_characteristics' | resolveTextKey | textProcessor"></app-dynamic-content>
-  <table class="rules-table">
-      <thead>
-          <tr>
-              <th scope="col">Characteristic</th>
-              <th scope="col">Description</th>
-          </tr>
-      </thead>
-      <tbody>
-          @for (characteristic of equipmentRules.equipment_characteristics; track $index) {
-          <tr>
-              <td>{{ characteristic.title }}</td>
-              <td><app-dynamic-content [content]="characteristic.textkey | resolveTextKey | textProcessor"></app-dynamic-content></td>
-          </tr>
-          }
-      </tbody>
-  </table>
+    <h4 class="mt-2 mb-0">Equipment Characteristics</h4>
+    <app-dynamic-content [content]="'equipment_characteristics' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <ul>
+        @for (characteristic of equipmentRules.equipment_characteristics; track $index) {
+        <li>
+            <span class="fw-bold">{{ characteristic.title }}: </span><app-dynamic-content
+                [content]="characteristic.textkey | resolveTextKey | textProcessor"></app-dynamic-content>
+        </li>
+        }
+    </ul>
 
-  <h4 class="mb-0">Equipment Types</h4>
-  <app-dynamic-content [content]="'equipment_types' | resolveTextKey | textProcessor"></app-dynamic-content>
-  <table class="rules-table">
-      <thead>
-          <tr>
-              <th scope="col">Characteristic</th>
-              <th scope="col">Description</th>
-          </tr>
-      </thead>
-      <tbody>
-          @for (type of equipmentRules.equipment_types; track $index) {
-          <tr>
-              <td>{{ type.title }}</td>
-              <td><app-dynamic-content [content]="type.textkey | resolveTextKey | textProcessor"></app-dynamic-content></td>
-          </tr>
-          }
-      </tbody>
-  </table>
+    <h4 class="mb-0">Equipment Types</h4>
+    <app-dynamic-content [content]="'equipment_types' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <table class="rules-table">
+        <thead>
+            <tr>
+                <th scope="col">Characteristic</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (type of equipmentRules.equipment_types; track $index) {
+            <tr>
+                <td>{{ type.title }}</td>
+                <td><app-dynamic-content
+                        [content]="type.textkey | resolveTextKey | textProcessor"></app-dynamic-content></td>
+            </tr>
+            }
+        </tbody>
+    </table>
 
-  <h3 class="mb-0">Equipping and Carrying Items</h3>
-  <app-dynamic-content [content]="'equipment_carrying_wielding_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <hr>
+    <h3 class="mb-0">Equipping and Carrying Items</h3>
+    <app-dynamic-content
+        [content]="'equipment_carrying_wielding_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-  <h4 class="mt-2 mb-0">Wielding Equipment</h4>
+    <h4 class="mt-2 mb-0">Equipping Equipment</h4>
+    <app-dynamic-content [content]="'equipping_equipment' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <ul>
+        @for (restriction of equipmentRules.equipped_equipment_restrictions; track $index) {
+        <li>
+            <app-dynamic-content [content]="restriction | resolveTextKey | textProcessor"></app-dynamic-content>
+        </li>
+        }
+    </ul>
 
-  <h4 class="mt-2 mb-0">Carrying Equipment</h4>
 
-  <h4 class="mt-2 mb-0">Carrying Capacity</h4>
+    <h4 class="mt-2 mb-0">Carrying Equipment</h4>
+    <app-dynamic-content [content]="'carrying_equipment' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <br>
+    <h5 class="mt-1 mb-0">Exceeding Carrying Capacity</h5>
+    <app-dynamic-content
+        [content]="'exceeding_carrying_capacity' | resolveTextKey | textProcessor"></app-dynamic-content>
+    <ul>
+        @for (penalty of equipmentRules.carrying_capacity_penalties; track $index) {
+        <li>
+            <app-dynamic-content [content]="penalty | textProcessor"></app-dynamic-content>
+        </li>
+        }
+    </ul>
 
-  <h4 class="mt-2 mb-0">Lift/Push/Drag</h4>
+    <h5 class="mt-2 mb-0">Lift/Push/Drag</h5>
+    <app-dynamic-content [content]="'lift_push_drag' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-  <h3 class="mb-0">Goods And Services</h3>
+    <h5 class="mb-1 mt-3">Carrying Capacity + Lift/Push/Drag Table</h5>
+    <div class="row g-4">
+        <div class="col">
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">[STR]</th>
+                        <th scope="col">Carrying Capacity</th>
+                        <th scope="col">Lift/Push/Drag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (tableEntry of carryingCapacityTable1; track $index) {
+                    <tr>
+                        <td>{{ tableEntry.str }}</td>
+                        <td>{{ tableEntry.carryingCapacityKg | formatWeight }}</td>
+                        <td>{{ tableEntry.liftPushDragKg | formatWeight }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <table class="rules-table">
+                <thead>
+                    <tr>
+                        <th scope="col">[STR]</th>
+                        <th scope="col">Carrying Capacity</th>
+                        <th scope="col">Lift/Push/Drag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (tableEntry of carryingCapacityTable2; track $index) {
+                    <tr>
+                        <td>{{ tableEntry.str }}</td>
+                        <td>{{ tableEntry.carryingCapacityKg | formatWeight }}</td>
+                        <td>{{ tableEntry.liftPushDragKg | formatWeight }}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-  <h3 class="mb-0">Magic Items</h3>
+    <hr>
+    <h3 class="mb-0">Goods And Services</h3>
+    <app-dynamic-content [content]="'goods_and_services' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-  <h3 class="mb-0">Crafting</h3>
+    <h4 class="mt-2 mb-0">Example Goods</h4>
+    <table class="rules-table">
+        <thead>
+            <tr>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (good of equipmentRules.example_goods; track $index) {
+            <tr>
+                <td>{{ good.name }}</td>
+                <td><app-dynamic-content [content]="good.price | textProcessor"></app-dynamic-content></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4 class="mb-0">Example Services</h4>
+    <table class="rules-table">
+        <thead>
+            <tr>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (service of equipmentRules.example_services; track $index) {
+            <tr>
+                <td>{{ service.name }}</td>
+                <td><app-dynamic-content [content]="service.price | textProcessor"></app-dynamic-content></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <hr>
+    <h3 class="mb-0">Crafting</h3>
+    <p class="text-danger">TODO</p>
+
+    <h4 class="mt-2 mb-0">Magic Items</h4>
+    <p class="text-danger">TODO</p>
 </div>
 
 <app-player-rules-page-navigation [currentPageId]="pageId"></app-player-rules-page-navigation>

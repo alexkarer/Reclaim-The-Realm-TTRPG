@@ -4,14 +4,13 @@ import { AbilityComponent } from "../../../shared/components/ability/ability.com
 import { STANDARD_ABILITIES } from "../../../../../../common_resources/core_rules/combat/standard_abilities";
 
 @Component({
-  selector: 'app-standard-abilities-page',
+  selector: 'app-abilities-page',
   imports: [RulesReferencePageNavigationComponent, AbilityComponent],
-  templateUrl: './standard-abilities-page.component.html',
-  styleUrl: './standard-abilities-page.component.scss'
+  templateUrl: './abilities-page.component.html',
+  styleUrl: './abilities-page.component.scss'
 })
-export class StandardAbilitiesPageComponent {
-  public readonly pageId = 'standard-abilities';
+export class AbilitiesPageComponent {
+  public readonly pageId = 'abilities';
   
-  readonly movementAbilities = STANDARD_ABILITIES.filter(a => a.tags.includes('Move'));
   readonly otherAbilities = STANDARD_ABILITIES.filter(a => !a.tags.includes('Move'));
 }

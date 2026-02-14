@@ -43,16 +43,23 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
     - Potentially have a limit of fate that can be used per extended long rest (✅)
     - Non Spellcasting Characters should have more fate as they are less relient on the cosmic plane. (❌)
     - Warlock should not have any Fate at all but a substitude ability where they can essentially gate fate abilities/bonus by gaining corruption. (❌)
+
 - Make Origin a bit more interactive, let the Players have a bit more agency or empower them to do something with it. (❌)
     - Each character should have a goal upon completion they get extra Fate (✅)
+    - Try to get each living to 6 possibilities for more variance (❌)
+    - for the party origin maybe make a goal? (❌)
+
 - Try creating some sort of party/combo mechanic if possible or maybe general party upgrades like a synergy stat (❌)
     - maybe some combo abilities that gain benefits when used at the same time. (❌)
+
 - Add complete Injury Table, with different Damage Type categories (❌)
     - Should only happen at Deaths Door, maybe need to continuesly count how much damage recieved and at the end of the round needs some injury test (❌)
     - Injury also should maybe instead be something that increases and accumulates with the last level being death (❌)
 
+
 #### Species
 - Create at least 3 more Species (❌)
+    - 
 - Rework traits, should just be 1 thing and  be something way more unique (❌)
 
 #### Skills
@@ -111,13 +118,20 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - also find way to include icon in webpage (✅)
     - define icons at a single place in global resourecs and add npm step to copy it to other repos (❌)
     - also define colour for each ability and define it in JSON (✅)
+
 - Ability amount should increase instead with 1 + LEVEL + (int/2) (❌)
+
 - All abilities are now MARTIAL or SPELL Test (❌)
+
 - Remove Hybrid Abilities for now (❌)
     - Should just be spells
+
 - REwork abilities to use the clear formating from foundryVTT (✅)
     - For ongoing effects label Concentartion clearly and rework how mechanics are displayed (❌)
-- Make Evading Attacks a Standard Ability.
+
+- Add Standard Abilties: (❌)
+    - Evading Attacks (no AP) (❌)
+    - rename environment interactions to: Interction - Quick and Interction - Regular
 
 #### Martial Maneuvers (Techniques)
 
@@ -137,7 +151,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 #### Spells
 
-- rename ARCANA to MANA, not ideal but better name (❌)
+- rename ARCANA to MANA, not ideal but better name (✅)
 
 - Split up disciplines differently (❌)
     - Elemental (Pyrmoancy, Hydromancy, Aeromancy, Geomancy) should be unchanged, the incompability works quite well. Maybe certain elements should emphazise certain Attributes more. (❌)
@@ -157,8 +171,10 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 - maneuvrepenalty should only nerf dodge (✅)
 
-- Add Staffs: each staff has 1 ability that has charges with max charges that need arcana too charge (❌)
-- Add Robes: that do cool stuff, worst case just +1 to spell cast test (❌)
+- Add Staffs:
+    - each staff has 1 ability that has charges with max charges that need arcana too charge (❌)
+- Add Robes, they do not work while waring armour (❌)
+    - Common starting robes, +1 to Spell cast test for the relevant spell discipline (❌)
 
 - Instead of Rations just have a supplies count/item (✅)
 
@@ -175,6 +191,20 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - Overview changes (❌)
     - Add cost filter (numeric) for equipment overview (❌)
     - add tier filter (❌)
+
+- Add missing Items: (❌)
+    - Candle
+    - Lantern
+    - Spyglass
+    - Ink and Pen
+    - Paper/Parchment
+    - Book with various variants
+    - Ring
+    - Everything from Goods and services that makes sense
+    - Tea Leaves
+
+Add various Loot Items (❌)
+    - Various broad category that can represent loot from Monsters (e.g. Nature/Death/Hides, Tier should be equal to npc level)
 
 ### Combat Mechanics
 
@@ -197,7 +227,8 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - remove reduntant status effect (❌)
     - clean up restrained text and make escape it's own ability (❌)
     - damage/heal status effects apply at the end of each ROUND (❌)
-
+    - Check that status effects interact properly with the Evade Ability, e.g. Daze should still allow that reaction. (❌)
+    
 ### Adventure Mechanics
 
 - Are the climbing, swimming, fyling rules really necesarry? (❌)
@@ -276,5 +307,6 @@ Remove class techniques as they make more provbelms as they solve and include ab
  - add certain key values and formulas as a sidebar. (❌)
  - instead of range in meters use [FIELD] to designate ranges (❌)
  - add feature to reference Abilities directly (❌)
+ - replace/add keywords with icons to make it more clear (HP: red heart, THP: blue heart, DR: shield)
 
 - Verify all console errors are gone (❌)

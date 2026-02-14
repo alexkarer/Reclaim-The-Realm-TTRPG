@@ -4,14 +4,19 @@ import { DynamicContentComponent } from "../../../shared/text-utils/dynamic-comp
 import { ResolveTextKeyPipe } from "../../../shared/text-utils/resolve-text-key";
 import { TextProcessorPipe } from "../../../shared/text-utils/text-processor";
 import equipmentRulesJson from "../../../../../../common_resources/player_rules/equipment/equipment_rules.json"
+import { halveArray } from '../../../shared/utils/array-utils';
+import { FormatWeightPipe } from "../../../shared/pipes/format-weight";
 
 @Component({
   selector: 'app-equipment-page',
-  imports: [PlayerRulesPageNavigationComponent, DynamicContentComponent, ResolveTextKeyPipe, TextProcessorPipe],
+  imports: [PlayerRulesPageNavigationComponent, DynamicContentComponent, ResolveTextKeyPipe, TextProcessorPipe, FormatWeightPipe],
   templateUrl: './equipment-page.component.html',
   styleUrl: './equipment-page.component.scss'
 })
 export class EquipmentPageComponent {
   public readonly pageId = 'equipment';
   public readonly equipmentRules = equipmentRulesJson;
+
+  public readonly carryingCapacityTable1 = halveArray(equipmentRulesJson.carryingCapacityTable)[0];
+  public readonly carryingCapacityTable2 = halveArray(equipmentRulesJson.carryingCapacityTable)[1];
 }

@@ -1,6 +1,17 @@
 <h1>Movement</h1>
 
 <div class="my-4">
+ <span class="text-danger">State that abilities will later be explained in more details.</span>
+  <h3>Standard Movement Abilities</h3>
+  <div class="container">
+    <div class="row row-cols-lg-2 g-3">
+        @for (abilitiy of movementAbilities; track $index) {
+          <div class="col" style="min-width: 400px;">
+            <app-ability [ability]="abilitiy"></app-ability>
+          </div>
+        }
+    </div>
+  </div>
   <h3 class="mb-0 mt-3">Special Movement</h3>
     <app-dynamic-content
         [content]="'special_movement_description' | resolveTextKey | textProcessor"></app-dynamic-content>

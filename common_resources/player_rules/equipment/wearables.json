@@ -318,5 +318,24 @@
                 "regularText": "If you wear Sabatons, Metal Gauntlets a Steel Helmet and medium Armour or better together you can increase your [DR] against physical by 1.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
         "grantedAbilities": [ ]
+    },
+    {
+        "name": "Quiver",
+        "tags": [ "Wearable", "Misc" ],
+        "meta": {
+            "iconPath": "icons/containers/ammunition/arrows-quiver-brown-grey.webp",
+            "colour": "COLOURLESS"
+        },
+        "tier": 1,
+        "craftingSkill": "Tailor's Set",
+        "cost": {
+            "amount": 1,
+            "currency": "GC"
+        },
+        "weightInGram": 500,
+        "description": [
+            { "regularText": "Quiver that can store 20 Arrows or Bolts", "headerLine": null, "bulletPoints": null, "ability": null }
+        ],
+        "grantedAbilities": [ ]
     }
 ]

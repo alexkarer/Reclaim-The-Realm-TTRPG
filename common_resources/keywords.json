@@ -230,13 +230,13 @@
     {
         "name": "STAMINA",
         "displayName": "STAMINA",
-        "description": "STAMINA is your energy reserve with which you can replenish your Resources like HP and Aether and is used up when performing physically demanding tasks.",
+        "description": "STAMINA is your energy reserve with which you can replenish your Resources like HP and Mana and is used up when performing physically demanding tasks.",
         "link": ""
     },
     {
-        "name": "ARCANA",
-        "displayName": "ARCANA",
-        "description": "Your ARCANA represents an energy reserve you expend when drawing power from the elemental planes and the aether to cast spells.",
+        "name": "MANA",
+        "displayName": "MANA",
+        "description": "Your MANA represents an energy reserve you expend when drawing power from the elemental and cosmic planes to cast spells.",
         "link": ""
     },
     {

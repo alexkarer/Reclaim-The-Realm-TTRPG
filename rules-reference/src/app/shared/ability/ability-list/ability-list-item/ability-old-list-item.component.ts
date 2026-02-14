@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { AbilityOld } from '../../../../../../../common_resources/shared/Ability';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
-import { RequirementsPrettierPipe } from "../../../utils/to-pretty-string";
+import { RequirementsPrettierPipe } from "../../../pipes/to-pretty-string";
 import { MartialManeuver } from '../../../../../../../common_resources/martial_maneuvers/martial-maneuvers';
 import { Spell } from '../../../../../../../common_resources/spells/spells';
 import { HybridAbility } from '../../../../../../../common_resources/hybrid_abilities/hybrid_abilities';
