@@ -104,7 +104,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
 ### NPCs
 
 - Tune down damage (❌)
-- Create more templates too createinterresting NPCs and have dedicated sub-types (❌)
+- Create more templates too create interresting NPCs and have dedicated sub-types (❌)
 - Boss NPC type, grants double XP, they gain a second turn before the end of the battle round. Also access to special boss abilities depending on their Level, but only 1 Boss can exist at the same time. (❌)
     - Second Life after dropping to 0 HP with then maybe to access to extra ability. (❌)
     - Spawning More Enemies each Round. (❌)
@@ -153,14 +153,16 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 - rename ARCANA to MANA, not ideal but better name (✅)
 
-- Split up disciplines differently (❌)
-    - Elemental (Pyrmoancy, Hydromancy, Aeromancy, Geomancy) should be unchanged, the incompability works quite well. Maybe certain elements should emphazise certain Attributes more. (❌)
-    - Psychic(Telekinesis, Telepathy, Divintation), These are abilities that also manifest biologically in the brain, should emphasis INT (telekin), PER (divin) and CHA (telepath). (❌)
-    - Light (Restoration, Holy), Only possible for good chars, mostly need SPI (❌)
-    - Dark (Necromancy, Unholy), Only possible for evil chars, mostly need SPI (❌)
-    - Arcane (Teleporation, Conjuration, Illusion) there are ones that can be learned by most people, should mostly emphasize SPI and INT (❌)
-        - Transmutation was remoced, check if it is actually needed. 
-- Create Level requirement for spells and give them names (4,8,12) (❌)
+- Split up disciplines differently (✅)
+    - Elemental (Pyrmoancy, Hydromancy, Aeromancy, Geomancy) should be unchanged, the incompability works quite well. Maybe certain elements should emphazise certain Attributes more. (✅)
+    - Psychic(Telekinesis, Telepathy, Divintation), These are abilities that also manifest biologically in the brain, should emphasis INT (telekin), PER (divin) and CHA (telepath). (✅)
+    - Light (Restoration, Holy), Only possible for good chars, mostly need SPI (✅)
+    - Dark (Necromancy, Unholy), Only possible for evil chars, mostly need SPI (✅)
+    - Arcane (Teleporation, Conjuration, Illusion) there are ones that can be learned by most people, should mostly emphasize SPI and INT (✅)
+        - Transmutation was remoced, check if it is actually needed.  (❌)
+
+- Also reuse basic (6), advanced (9), master (15), transcendet (25) for spell differential (❌)
+
 - Add full Arcane Mishap Table/Rework for new spell discipline (❌)
 
 ### Equipment
@@ -237,8 +239,23 @@ Add various Loot Items (❌)
 
 - For Long Rests in dangerous area, generate a table that is communicated to the players for long rest dangers (❌)
     - should also include a non-combat or distrubt option, just maybe something went wrong
-- Extended Long Rest should be 1 week minimum (❌)
+
+- Extended Long Rest should be 1 week minimum (✅)
+    - one activity can be choosen each week (✅)
+    - complications should be a thing (❌)
+    - each table should have an outcome depending on a d20 test. (✅)
     - add possibilities for stuff to do which the players can pick and choose (❌)
+        - crafting  (❌)
+        - research (❌)
+        - community service (❌) 
+        - spend time with loved ones (❌)
+        - Work (Tool, Medicine or smth else) (✅)
+        - go undercover (❌)
+        - improve relations with faction (❌)
+        - religous service (❌)
+        - carousing (❌)
+        - entertainment (❌)
+        - medical servies that speed up healing (❌)
 
 - Proper travel mechanic that includes the following: (❌)
     - One day Travel mechanic, should be similar to Delve from Heart (❌)

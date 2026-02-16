@@ -1,0 +1,45 @@
+{
+    "exhaustion_limits": [
+        { "limit_textkey": "exhaustion_limit_1", "penalty_textkey": "exhaustion_penalty_1" },
+        { "limit_textkey": "exhaustion_limit_2", "penalty_textkey": "exhaustion_penalty_2" },
+        { "limit_textkey": "exhaustion_limit_3", "penalty_textkey": "exhaustion_penalty_3" }
+    ] ,
+    "short_rest_options_texkeys": [
+        "short_rest_option_1",
+        "short_rest_option_2",
+        "short_rest_option_3"
+    ],
+    "long_rest_benefits_textkeys": [
+        "long_rest_benefit_1",
+        "long_rest_benefit_2",
+        "long_rest_benefit_3"
+    ],
+    "extended_long_rest_benefits": [
+        "extended_long_rest_benefit_1",
+        "extended_long_rest_benefit_2",
+        "extended_long_rest_benefit_3"
+    ],
+    "extended_long_rest_activities": [
+        {
+            "name": "Work",
+            "description_textkey": "work_activity",
+            "outcomes": [
+                { "dt": "<10", "result": "Earn enough for meals and a place to stay." },
+                { "dt": "10-14", "result": "Earn 5d6 [SC]" },
+                { "dt": "15-19", "result": "Earn 2d6 [GC]" },
+                { "dt": "20-24", "result": "Earn 4d6 [GC]" },
+                { "dt": "25-29", "result": "Earn 4d6 [GC], you delevop a positive relationship with the village or a specific person/group of the town." },
+                { "dt": ">29", "result": "Earn 8d6 [GC], you delevop a positive relationship with the village or a specific person/group of the town." }
+            ],
+            "complicationsDice": "d6",
+            "complications": [
+                { "dice": "1", "complication": "TODO" },
+                { "dice": "2", "complication": "TODO" },
+                { "dice": "3", "complication": "TODO" },
+                { "dice": "4", "complication": "TODO" },
+                { "dice": "5", "complication": "TODO" },
+                { "dice": "6", "complication": "TODO" }
+            ]
+        }
+    ]
+}

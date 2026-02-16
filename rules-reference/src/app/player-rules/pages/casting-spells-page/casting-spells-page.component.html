@@ -9,6 +9,9 @@
   <h4>Spell Cast Test</h4>
   <app-dynamic-content [content]="'spell_cast_test' | resolveTextKey | textProcessor"></app-dynamic-content>
 
+  <h5>Spell Difficulty</h5>
+  <app-dynamic-content [content]="'TODO: can be found at the top right of an ability' | resolveTextKey | textProcessor"></app-dynamic-content>
+
   <h4>Spell Components</h4>
   <app-dynamic-content [content]="'spell_component' | resolveTextKey | textProcessor"></app-dynamic-content>
 
@@ -38,6 +41,9 @@
     </div>
     }
   </div>
+
+  <h4 class="mt-2 mb-0">Spell List</h4>
+  <p class="mt-3">The list of all Spells can be found <a class="fw-bold text-body-emphasis" href="/spells">here</a>.</p>
 
 </div>
 

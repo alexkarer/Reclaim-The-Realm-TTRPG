@@ -82,7 +82,7 @@
     <h5 class="mt-2 mb-0">Lift/Push/Drag</h5>
     <app-dynamic-content [content]="'lift_push_drag' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-    <h5 class="mb-1 mt-3">Carrying Capacity + Lift/Push/Drag Table</h5>
+    <h5 class="mb-1 mt-3 text-center">Carrying Capacity + Lift/Push/Drag Table</h5>
     <div class="row g-4">
         <div class="col">
             <table class="rules-table">
@@ -130,41 +130,45 @@
     <h3 class="mb-0">Goods And Services</h3>
     <app-dynamic-content [content]="'goods_and_services' | resolveTextKey | textProcessor"></app-dynamic-content>
 
-    <h4 class="mt-2 mb-0">Example Goods</h4>
-    <table class="rules-table">
-        <thead>
-            <tr>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for (good of equipmentRules.example_goods; track $index) {
-            <tr>
-                <td>{{ good.name }}</td>
-                <td><app-dynamic-content [content]="good.price | textProcessor"></app-dynamic-content></td>
-            </tr>
-            }
-        </tbody>
-    </table>
+    <h4 class="mt-2 mb-0 text-center">Example Goods</h4>
+    <div class="d-flex justify-content-center">
+        <table class="rules-table-75">
+            <thead>
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (good of equipmentRules.example_goods; track $index) {
+                <tr>
+                    <td>{{ good.name }}</td>
+                    <td><app-dynamic-content [content]="good.price | textProcessor"></app-dynamic-content></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
-    <h4 class="mb-0">Example Services</h4>
-    <table class="rules-table">
-        <thead>
-            <tr>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for (service of equipmentRules.example_services; track $index) {
-            <tr>
-                <td>{{ service.name }}</td>
-                <td><app-dynamic-content [content]="service.price | textProcessor"></app-dynamic-content></td>
-            </tr>
-            }
-        </tbody>
-    </table>
+    <h4 class="mb-0 text-center">Example Services</h4>
+    <div class="d-flex justify-content-center">
+        <table class="rules-table-75">
+            <thead>
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (service of equipmentRules.example_services; track $index) {
+                <tr>
+                    <td>{{ service.name }}</td>
+                    <td><app-dynamic-content [content]="service.price | textProcessor"></app-dynamic-content></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
     <hr>
     <h3 class="mb-0">Crafting</h3>

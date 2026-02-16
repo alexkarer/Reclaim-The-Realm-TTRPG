@@ -231,6 +231,38 @@
         "level_up_gain_2_perk_points": "You gain 2 Perk Points to select new Perks.",
         "after_level_12": "After you have reached [LEVEL] 12 for every 3000 [XP] past [LEVEL] 12, you gain an additional Attribute Point and Perk Point. However, your [LEVEL] does not increase."
     },
+    "exhaustion_resting": {
+        "exhaustion_resting_overview": "During your adventures you will accumulate damage and exhaustion. In order to recover you can rest to replenish your resources, recover from damage and remove exhaustion.",
+
+        "exhaustion_overview": "When characters push themselves beyond their physical Limits they suffer points of [EXHAUSTION]. For each Point of [EXHAUSTION] your character has, you gain a -1 penalty to all your [D20 TEST]",
+        "exhaustion_limit": "A character can not gain [EXHAUSTION] indefinitely, if the limits are <span class=\"fw-bold\">exceeded</span> you will suffer the penalties below as seen below:",
+        "exhaustion_limit_1": "([LEVEL] + [CON]) / 2 (min 1, rounded up)",
+        "exhaustion_limit_2": "[LEVEL] + [CON] (min 2)",
+        "exhaustion_limit_3": "2 * ([LEVEL] + [CON]) (min 3)",
+        "exhaustion_penalty_1": "Your [AP] and [MP] are halved (rounded up).",
+        "exhaustion_penalty_2": "Your [AP] and [MP] are reduced to 1.",
+        "exhaustion_penalty_3": "You are unconscious.",
+
+        "resting_overview": "There are many different options for resting which are covered below:",
+
+        "short_rest_overview": "A short rest is when you quickly take your time to catch your breath. During a short rest, you can use your [STAMINA] to recover [HP], [MANA] and other class specific resources. A short rest takes 1 minute per [STAMINA] used.",
+        "short_rest_option_1": "You can spend 1 [STAMINA] and recover ([CON] / 3, (rounded up)) * d6 + [LEVEL] [HP]",
+        "short_rest_option_2": "You can spend 1 [STAMINA] and recover [MANA] equal to [SPELL LEVEL] / 3 (rounded up).",
+        "short_rest_option_3": "You can spend 2 [STAMINA] to remove one point of [EXHAUSTION]",
+
+        "long_rest_overview": "During a Long Rest you take time to lie down and sleep and recuperate your strength. A long rest takes an 8 hours and requires you to have consumed enough food and drank enough water for this day. A long rest can only be completed once within 24 hours. Upon completion of a Long rest, you recover the following Things:",
+        "long_rest_benefit_1": "You recover a third of your [STAMINA], [MANA] and [HP] (rounded up)",
+        "long_rest_benefit_2": "All your [THP] are removed",
+        "long_rest_benefit_3": "You remove one point of [EXHAUSTION]",
+
+        "extended_rest_overview": "A extended Long Rest has to happen in a settlement in a comfortable bed with food and drink. An extended Long Rest takes at least 1 week and you gain the following benefits upon completion",
+        "extended_long_rest_benefit_1": "You recover all of your [HP], [STAMINA] and [MANA] and all your [THP] are removed.",
+        "extended_long_rest_benefit_2": "You remove all your points of [EXHAUSTION].", 
+        "extended_long_rest_benefit_3": "You can recover from injuries see <a href=\"/player-rules/injuries-death\">Injuries and Death</a>",
+
+        "extended_long_rest_activities": "For each week you spend doing on an extended long rest you can spend it on an actiivity of your choice. Work with your DM when working out how the activity unfolds and where and with whom it will take place. For most activities you will be required to make a [D20 TEST] and in cast you roll a natural 1. You will have to roll on the complication table in addition to any other result of the outcome table. Below you see example activities you can perform:",
+        "work_activity": "Help out at a farm, tavern, smithy or else. Perform a [D20 TEST] using a relevant Skill and Attribute."
+    },
     "spell_casting_rules": {
         "spells_overview": "Spells are magical phenomena that are a result of harnessing from the Cosmic and the Elemental Planes and manifesting it. Almost all living beings have a connection to the Outer Planes, but few are able to effectively and safely harness it. Those who are able to master spellcasting wield tremendous power with which they can shape and destroy reality.",
         "spell_disciplines_overview": "Spells are categorized by disciplines that describe roughly the effect of the spell and the origin of the magical power. Characters usually can not learn spells from all disciplines, and certain features or perks might change how you interact with spells from a certain discipline. Certain spells can also have multiple disciplines, to be able to learn this spell the character must be able to learn spells of all disciplines listed in the spell.<br> Spells are split into 3 major disciplines, which are again split into different subdisciplines. If you can learn spells of a major discipline, you can then also learn spells of the corresponding subdisciplines. The same goes for effects/perks that interact with major disciplines, they also affect spells of the corresponding subdisciplines.",

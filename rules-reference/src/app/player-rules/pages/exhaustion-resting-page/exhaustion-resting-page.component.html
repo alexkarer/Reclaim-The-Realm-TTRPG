@@ -1,7 +1,120 @@
 <h1>Exhaustion and Resting</h1>
 
 <div class="my-4">
-  <p>Content coming soon</p>
+  <app-dynamic-content [content]="'exhaustion_resting_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  <h3>Exhaustion</h3>
+  <app-dynamic-content [content]="'exhaustion_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  <h4 class="mb-0 mt-1">Exhaustion Limit</h4>
+  <app-dynamic-content [content]="'exhaustion_limit' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <table class="rules-table">
+    <thead>
+      <tr>
+        <th scope="col">Limit</th>
+        <th scope="col">Penalty</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (exhaustionLimit of exhaustionResting.exhaustion_limits; track $index) {
+      <tr>
+        <td><app-dynamic-content
+            [content]="exhaustionLimit.limit_textkey | resolveTextKey | textProcessor"></app-dynamic-content></td>
+        <td><app-dynamic-content
+            [content]="exhaustionLimit.penalty_textkey | resolveTextKey | textProcessor"></app-dynamic-content></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+
+  <hr>
+  <h3>Resting</h3>
+  <app-dynamic-content [content]="'resting_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  <h4 class="mb-0 mt-2">Short Rest</h4>
+  <app-dynamic-content [content]="'short_rest_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <ul>
+    @for (option of exhaustionResting.short_rest_options_texkeys; track $index) {
+    <li>
+      <app-dynamic-content [content]="option | resolveTextKey | textProcessor"></app-dynamic-content>
+    </li>
+    }
+  </ul>
+
+  <h4 class="mb-0 mt-2">Long Rest</h4>
+  <app-dynamic-content [content]="'long_rest_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <ul>
+    @for (benefit of exhaustionResting.long_rest_benefits_textkeys; track $index) {
+    <li>
+      <app-dynamic-content [content]="benefit | resolveTextKey | textProcessor"></app-dynamic-content>
+    </li>
+    }
+  </ul>
+
+  <h4 class="mb-0 mt-2">Extended Rest</h4>
+  <app-dynamic-content [content]="'extended_rest_overview' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <ul>
+    @for (benefit of exhaustionResting.extended_long_rest_benefits; track $index) {
+    <li>
+      <app-dynamic-content [content]="benefit | resolveTextKey | textProcessor"></app-dynamic-content>
+    </li>
+    }
+  </ul>
+
+  <hr>
+  <h4 class="mb-0">Extended Long Rest Activities</h4>
+  <app-dynamic-content
+    [content]="'extended_long_rest_activities' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  @for (activity of exhaustionResting.extended_long_rest_activities; track $index) {
+  <h5 class="mb-0 mt-2">Example Acitivity: {{ activity.name }}</h5>
+  <app-dynamic-content [content]="activity.description_textkey | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  <h6>Outcomes</h6>
+  <div class="d-flex justify-content-center">
+    <table class="rules-table-75">
+      <thead>
+        <tr>
+          <th scope="col">Result</th>
+          <th scope="col">Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (outcome of activity.outcomes; track $index) {
+        <tr>
+          <td>{{ outcome.dt }}</td>
+          <td>
+            <app-dynamic-content [content]="outcome.result | textProcessor"></app-dynamic-content>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <h6>Complications</h6>
+  <div class="d-flex justify-content-center">
+    <table class="rules-table-75">
+      <thead>
+        <tr>
+          <th scope="col">{{ activity.complicationsDice }}</th>
+          <th scope="col">Complication</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (complication of activity.complications; track $index) {
+        <tr>
+          <td>{{ complication.dice }}</td>
+          <td>
+            <app-dynamic-content [content]="complication.complication| textProcessor"></app-dynamic-content>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  }
+
 </div>
 
 <app-player-rules-page-navigation [currentPageId]="pageId"></app-player-rules-page-navigation>
