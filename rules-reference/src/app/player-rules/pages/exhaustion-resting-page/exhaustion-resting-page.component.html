@@ -65,6 +65,10 @@
   <h4 class="mb-0">Extended Long Rest Activities</h4>
   <app-dynamic-content
     [content]="'extended_long_rest_activities' | resolveTextKey | textProcessor"></app-dynamic-content>
+  
+  <h6 class="mt-2 mb-0">Complications</h6>
+  <app-dynamic-content
+    [content]="'extended_long_rest_complication' | resolveTextKey | textProcessor"></app-dynamic-content>
 
   @for (activity of exhaustionResting.extended_long_rest_activities; track $index) {
   <h5 class="mb-0 mt-2">Example Acitivity: {{ activity.name }}</h5>

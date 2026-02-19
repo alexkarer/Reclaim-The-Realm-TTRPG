@@ -1,7 +1,48 @@
 <h1>Injuries and Death</h1>
 
 <div class="my-4">
-  <p>Explain Deaths Door and injuries Table</p>
+  <h3>Being reduced to 0 HP</h3>
+  <app-dynamic-content [content]="'being_reduced_to_0_hp' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <ul>
+    @for (choice of injuryDeath.drop0hpChoices; track $index) {
+      <li>
+        <app-dynamic-content [content]="choice | resolveTextKey | textProcessor"></app-dynamic-content>
+      </li>
+    }
+  </ul>
+
+  <h4 class="mt-2 mb-0">Unconcious</h4>
+  <app-dynamic-content [content]="'dropping_unconcious' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <ul>
+    @for (recover of injuryDeath.recover_from_unconscious; track $index) {
+      <li>
+        <app-dynamic-content [content]="recover | resolveTextKey | textProcessor"></app-dynamic-content>
+      </li>
+    }
+  </ul>
+
+
+  <h4 class="mt-2 mb-0">Death's Door</h4>
+  <app-dynamic-content [content]="'deaths_door' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <ul>
+    @for (penalty of injuryDeath.deaths_door_penalties; track $index) {
+      <li>
+        <app-dynamic-content [content]="penalty | resolveTextKey | textProcessor"></app-dynamic-content>
+      </li>
+    }
+  </ul>
+
+  <hr>
+  <h3>Injuries</h3>
+  <app-dynamic-content [content]="'injuries' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+
+  <h4>Injury Table</h4>
+
+  <hr>
+  <h3>Death and Resurrection</h3>
+  <app-dynamic-content [content]="'death_resurrection' | resolveTextKey | textProcessor"></app-dynamic-content>
+
 </div>
 
 <app-player-rules-page-navigation [currentPageId]="pageId"></app-player-rules-page-navigation>

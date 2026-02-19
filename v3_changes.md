@@ -35,6 +35,7 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 ## Progress Tracker
 
 ❌ -> when not yet done
+ℹ️ -> considered but not done
 ✅ -> when done
 
 ### Character
@@ -53,8 +54,9 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
     - maybe some combo abilities that gain benefits when used at the same time. (❌)
 
 - Add complete Injury Table, with different Damage Type categories (❌)
-    - Should only happen at Deaths Door, maybe need to continuesly count how much damage recieved and at the end of the round needs some injury test (❌)
-    - Injury also should maybe instead be something that increases and accumulates with the last level being death (❌)
+    - Should only happen at Deaths Door, maybe need to continuesly count how much damage recieved and at the end of the round needs some injury test (ℹ️, a bit too tideous and not dramatic enough)
+    - at least 5 outcomes for each damage type (❌)
+        + physical can have more
 
 
 #### Species
@@ -149,6 +151,9 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - 4 basic for each type (❌)
     - 2 advanced for each type (❌)
 
+Maneuver Ideas:
+    - Catch/Deflect Missiles/Projectiles (❌)
+
 #### Spells
 
 - rename ARCANA to MANA, not ideal but better name (✅)
@@ -164,6 +169,10 @@ Remove class techniques as they make more provbelms as they solve and include ab
 - Also reuse basic (6), advanced (9), master (15), transcendet (25) for spell differential (❌)
 
 - Add full Arcane Mishap Table/Rework for new spell discipline (❌)
+
+- Properly define Spell mechanics: (❌)
+    - Concentration, works fine but define it (❌)
+    - Charge X, similar to concentration has to spend X AP to cast the spell but it can be done over multiple turns and during it concentrate (❌)
 
 ### Equipment
 
@@ -208,6 +217,19 @@ Remove class techniques as they make more provbelms as they solve and include ab
 Add various Loot Items (❌)
     - Various broad category that can represent loot from Monsters (e.g. Nature/Death/Hides, Tier should be equal to npc level)
 
+Add Crafting Rules: (❌)
+    - Extended Long Rest Activity: (❌)
+        1. Start of Acitivity Choose Item which requires an amount of crafting points (a time unit) and materials and maybe additional special requirements, Additional requirement: relevant skill needs to at least equal item tier.
+        2. Each Activiy Cycle a [D20 TEST] has to be made with Attribute + relevant Skill, the result yields a number of crafting points and maybe potentially reduce cost and/or additional benefits for the item.
+        3. When enough crafting points have been accumulated the item is crafted
+    - Simple Item crafting (❌)
+        Tier 1 Items can be crafted within a single day.
+    - Time Units should be based on Item Tier
+        Base cost Item Tier = Time Units.
+
+Magic Items:
+    - various enchantments and bonuses whcih basically
+
 ### Combat Mechanics
 
 - Try out different Initiative mechanics, mainly copy a version of the shadow of the demon lord system (❌)
@@ -216,7 +238,9 @@ Add various Loot Items (❌)
     - also requires all turn based ability to change so that they last until end of a round. (❌)
     - Also all Status Efffects trigger at the start of the round (❌).
     - Suprised Creatures: can't use Reaction Abilities and their AP is reduced by 1. Also can't use Seize the Initiative (❌)
-- Rework Reactions (❌), these are now special Abilities with a special Tag. (❌)
+- Rework Reactions, these are now special Abilities with a special Tag. (❌)
+    - consider a character only being able to use one reaction at a time (i.e. if they are using a reaction and someone responds they can't use another reaction)  (❌)
+
 - Remove cosmic damage type (❌)
 - Deaths Door should have more tension (❌)
 - Rework all circumstancial bonuses so it works with ther not being any attacks (only give DODGE bonus) (❌)
@@ -242,20 +266,22 @@ Add various Loot Items (❌)
 
 - Extended Long Rest should be 1 week minimum (✅)
     - one activity can be choosen each week (✅)
-    - complications should be a thing (❌)
+    - complications should be a thing (✅)
     - each table should have an outcome depending on a d20 test. (✅)
     - add possibilities for stuff to do which the players can pick and choose (❌)
         - crafting  (❌)
-        - research (❌)
+        - creating a work of art (❌)
+        - research/study (❌)
         - community service (❌) 
         - spend time with loved ones (❌)
-        - Work (Tool, Medicine or smth else) (✅)
+        - Work (Tool, Medicine or smth else) (❌)
         - go undercover (❌)
         - improve relations with faction (❌)
         - religous service (❌)
         - carousing (❌)
         - entertainment (❌)
         - medical servies that speed up healing (❌)
+        - magical experiments (❌)
 
 - Proper travel mechanic that includes the following: (❌)
     - One day Travel mechanic, should be similar to Delve from Heart (❌)
@@ -295,7 +321,7 @@ Add various Loot Items (❌)
 
 - when referencing abilities, have a small preview of the ability (❌)
 
-- Cosmic Mutations should maybe be fleshed out more. (❌)
+- Cosmic Mutations should be fleshed out more. (❌)
 
 - Move Player Character creation to separate page from Rules (✅)
 

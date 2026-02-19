@@ -260,8 +260,27 @@
         "extended_long_rest_benefit_2": "You remove all your points of [EXHAUSTION].", 
         "extended_long_rest_benefit_3": "You can recover from injuries see <a href=\"/player-rules/injuries-death\">Injuries and Death</a>",
 
-        "extended_long_rest_activities": "For each week you spend doing on an extended long rest you can spend it on an actiivity of your choice. Work with your DM when working out how the activity unfolds and where and with whom it will take place. For most activities you will be required to make a [D20 TEST] and in cast you roll a natural 1. You will have to roll on the complication table in addition to any other result of the outcome table. Below you see example activities you can perform:",
+        "extended_long_rest_activities": "For each week you spend doing on an extended long rest you can spend it on an actiivity of your choice. Work with your DM when working out how the activity unfolds and where and with whom it will take place. For most activities you will be required to make a [D20 TEST] which will effect the outcome of your rest. You will have to roll on the complication table in addition to any other result of the outcome table. Below you see example activities you can perform:",
+        "extended_long_rest_complication": "When you roll a natural 1 on your [D20 TEST] you will face a complication during your Activity for this roll on the associated complication Table of the Activity.",
         "work_activity": "Help out at a farm, tavern, smithy or else. Perform a [D20 TEST] using a relevant Skill and Attribute."
+    },
+    "injury_death": {
+        "being_reduced_to_0_hp": "Being reduced to 0 [HP] does not mean your character is dead. First you have to test if you are recieving an injury (see below) and you then face a choice:",
+        "drop_unconcious": "You can choose to drop [UNCONCIOUS] and conserve your strength",
+        "enter_deaths_door": "You can try to keep on fighting and enter [DEATHS DOOR] at a risk of injuring youself and accumulating [EXHAUSTION].",
+
+        "dropping_unconcious": "While [UNCONCIOUS] a character can not use any abilities or act in any other way unless the GM allows it. A character can recover from being unconscious in the following ways:",
+        "recover_unconscious_hp_restored": "Any time they receive healing and some of their [HP] are restored, receiving [THP] does not restore consciousness.",
+        "recover_unconscious_care": "If someone is taking care of you (water, comfortable position) you regain 1 [HP] after 10 - [CON] (min 1) minutes.",
+        "recover_unconscious_time": "After 1d12 − [CON] Hours (minimum 30 minutes) you regain 1 [HP]",
+
+        "deaths_door": "[DEATHS DOOR] is a mechanic that allows you to keep on fighting even when you are reduced to 0 [HP] however at great risks to yourself. You can only enter [DEATHS DOOR] when you are reduced to 0 [HP]. You can only end [DEATHS DOOR] voluntary at the start of a [ROUND]. While you are at [DEATHS DOOR] the following rules apply:",
+        "deaths_door_penalty_exhaustion": "At the end of a [ROUND] you gain 1 point of [EXHAUSTION]",
+        "deaths_door_penalty_damage": "Any time you recieve damage you have to suceed on a [TOUGHNESS] [SAVE] with a [DT] equal to 5 + damage recieved. On a success if this was the first time your recieved damage during [DEATHS DOOR] you gain 1 point of [EXHAUSTION]. On a failure you suffer an injury (see below).",
+
+        "injuries": "During your adventures you can accumulate injuries which unlike regular damage are more long-term afflication and can usually only be removed via extended a long rest or powerful magic.",
+
+        "death_resurrection": "Death is not necesarry the end."
     },
     "spell_casting_rules": {
         "spells_overview": "Spells are magical phenomena that are a result of harnessing from the Cosmic and the Elemental Planes and manifesting it. Almost all living beings have a connection to the Outer Planes, but few are able to effectively and safely harness it. Those who are able to master spellcasting wield tremendous power with which they can shape and destroy reality.",

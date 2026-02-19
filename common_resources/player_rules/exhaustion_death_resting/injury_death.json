@@ -1,0 +1,15 @@
+ {
+    "drop0hpChoices": [
+        "drop_unconcious",
+        "enter_deaths_door"
+    ],
+    "recover_from_unconscious": [
+        "recover_unconscious_hp_restored",
+        "recover_unconscious_care",
+        "recover_unconscious_time"
+    ],
+    "deaths_door_penalties": [
+        "deaths_door_penalty_exhaustion",
+        "deaths_door_penalty_damage"
+    ]
+ }
