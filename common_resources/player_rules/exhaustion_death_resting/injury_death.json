@@ -1,4 +1,4 @@
- {
+{
     "drop0hpChoices": [
         "drop_unconcious",
         "enter_deaths_door"
@@ -10,6 +10,199 @@
     ],
     "deaths_door_penalties": [
         "deaths_door_penalty_exhaustion",
+        "deaths_door_penalty_damage_first_instance",
         "deaths_door_penalty_damage"
+    ],
+    "injuryTriggers": [
+        "injury_when_dropping_0hp",
+        "injury_deaths_door",
+        "other_injury_triggers"
+    ],
+    "injuryTables": [
+        {
+            "name": "physical",
+            "entries": [
+                {
+                    "result": "1-30",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_physical_cosmetic"
+                },
+                {
+                    "result": "131-150",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_physical_death"
+                },
+                {
+                    "result": "151+",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_physical_extreme_death"
+                }
+            ]
+        },
+        {
+            "name": "fire",
+            "entries": [
+                {
+                    "result": "1-30",
+                    "injuryTitle": "Burn Scar",
+                    "injuryTextKey": "injury_fire_cosmetic"
+                },
+                {
+                    "result": "31-50",
+                    "injuryTitle": "Charred Lungs",
+                    "injuryTextKey": "injury_fire_charred_lungs"
+                },
+                {
+                    "result": "51-70",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_fire_"
+                },
+                {
+                    "result": "71-90",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_fire_"
+                },
+                {
+                    "result": "91-110",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_fire_"
+                },
+                {
+                    "result": "111-130",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_fire_"
+                },
+                {
+                    "result": "131-150",
+                    "injuryTitle": "Death",
+                    "injuryTextKey": "injury_fire_death"
+                },
+                {
+                    "result": "151+",
+                    "injuryTitle": "Extreme Death",
+                    "injuryTextKey": "injury_fire_extreme_death"
+                }
+            ]
+        },
+        {
+            "name": "frost",
+            "entries": [
+                {
+                    "result": "1-30",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_frost_cosmetic"
+                },
+                {
+                    "result": "131-150",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_frost_death"
+                }
+            ]
+        },
+        {
+            "name": "corrosive",
+            "entries": [
+                {
+                    "result": "1-30",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_corrosive_cosmetic"
+                },
+                {
+                    "result": "131-150",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_corrosive_death"
+                }
+            ]
+        },
+        {
+            "name": "sonic",
+            "entries": [
+                {
+                    "result": "1-30",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_sonic_cosmetic"
+                },
+                {
+                    "result": "131-150",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_sonic_death"
+                }
+            ]
+        },
+        {
+            "name": "electric",
+            "entries": [
+                {
+                    "result": "1-30",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_electric_cosmetic"
+                },
+                {
+                    "result": "131-150",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_electric_death"
+                }
+            ]
+        },
+        {
+            "name": "poison",
+            "entries": [
+                {
+                    "result": "1-30",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_poison_cosmetic"
+                },
+                {
+                    "result": "131-150",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_poison_death"
+                }
+            ]
+        },
+        {
+            "name": "psychic",
+            "entries": [
+                {
+                    "result": "1-30",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_psychic_cosmetic"
+                },
+                {
+                    "result": "131-150",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_psychic_death"
+                }
+            ]
+        },
+        {
+            "name": "holy",
+            "entries": [
+                {
+                    "result": "1-30",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_holy_cosmetic"
+                },
+                {
+                    "result": "131-150",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_holy_death"
+                }
+            ]
+        },
+        {
+            "name": "unholy",
+            "entries": [
+                {
+                    "result": "1-30",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_unholy_cosmetic"
+                },
+                {
+                    "result": "131-150",
+                    "injuryTitle": "",
+                    "injuryTextKey": "injury_unholy_death"
+                }
+            ]
+        }
     ]
- }
+}

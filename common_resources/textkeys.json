@@ -276,9 +276,19 @@
 
         "deaths_door": "[DEATHS DOOR] is a mechanic that allows you to keep on fighting even when you are reduced to 0 [HP] however at great risks to yourself. You can only enter [DEATHS DOOR] when you are reduced to 0 [HP]. You can only end [DEATHS DOOR] voluntary at the start of a [ROUND]. While you are at [DEATHS DOOR] the following rules apply:",
         "deaths_door_penalty_exhaustion": "At the end of a [ROUND] you gain 1 point of [EXHAUSTION]",
-        "deaths_door_penalty_damage": "Any time you recieve damage you have to suceed on a [TOUGHNESS] [SAVE] with a [DT] equal to 5 + damage recieved. On a success if this was the first time your recieved damage during [DEATHS DOOR] you gain 1 point of [EXHAUSTION]. On a failure you suffer an injury (see below).",
+        "deaths_door_penalty_damage_first_instance": "The first time each [ROUND] you recieve damage during [DEATHS DOOR] you gain 1 point of [EXHAUSTION].",
+        "deaths_door_penalty_damage": "You also risk suffering an Injury each time you take damage (see below).",
 
-        "injuries": "During your adventures you can accumulate injuries which unlike regular damage are more long-term afflication and can usually only be removed via extended a long rest or powerful magic.",
+        "injuries": "During your adventures you can accumulate injuries which unlike regular damage are more long-term afflication and can usually only be removed via extended a long rest or powerful magic. Injuries can happen the following ways:",
+        "injury_when_dropping_0hp": "When you are reduced to 0 [HP]. Make a [TOUGHNESS] [SAVE] with a [DT] equal to 5 + excess damage your recieved beyond 0 [HP]. On a failure you recieve an Injury.",
+        "injury_deaths_door": "Each time you recieve damage while at [DEATHS DOOR] make a [TOUGHNESS] [SAVE] with a [DT] equal to 5 + damage recieved. On a failure your recieve an Injury",
+        "other_injury_triggers": "The dangers in the Wilds, certain abilities of advesaries or GM calls might cause injuries to trigger.",
+        "reciving_injuries": "TODO: roll injury test: d100 + [DT] that was made for injury test and compare with the table of the corresponding damage type causing the injury",
+
+        "injury_fire_cosmetic": "You recieve a severe burn disfiguring your skin and it itches.",
+        "injury_fire_charred_lungs": "You inhaled superheated air damaging your lungs. Your maximum [STAMINA] is halved (rounded up). Recovers after 1 week of extended long rest.",
+        "injury_fire_death": "Your body is lit aflame and severe burns melt your damage your essential organs and you die leaving behind a charred corpse that is barely recognizable.",
+        "injury_fire_extreme_death": "The fire was absolute. Your body collapses into a pile of white ash and charred bone including everything you carried with you.",
 
         "death_resurrection": "Death is not necesarry the end."
     },

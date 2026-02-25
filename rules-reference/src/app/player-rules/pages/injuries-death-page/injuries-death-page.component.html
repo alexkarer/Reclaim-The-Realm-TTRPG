@@ -5,9 +5,9 @@
   <app-dynamic-content [content]="'being_reduced_to_0_hp' | resolveTextKey | textProcessor"></app-dynamic-content>
   <ul>
     @for (choice of injuryDeath.drop0hpChoices; track $index) {
-      <li>
-        <app-dynamic-content [content]="choice | resolveTextKey | textProcessor"></app-dynamic-content>
-      </li>
+    <li>
+      <app-dynamic-content [content]="choice | resolveTextKey | textProcessor"></app-dynamic-content>
+    </li>
     }
   </ul>
 
@@ -15,9 +15,9 @@
   <app-dynamic-content [content]="'dropping_unconcious' | resolveTextKey | textProcessor"></app-dynamic-content>
   <ul>
     @for (recover of injuryDeath.recover_from_unconscious; track $index) {
-      <li>
-        <app-dynamic-content [content]="recover | resolveTextKey | textProcessor"></app-dynamic-content>
-      </li>
+    <li>
+      <app-dynamic-content [content]="recover | resolveTextKey | textProcessor"></app-dynamic-content>
+    </li>
     }
   </ul>
 
@@ -26,18 +26,54 @@
   <app-dynamic-content [content]="'deaths_door' | resolveTextKey | textProcessor"></app-dynamic-content>
   <ul>
     @for (penalty of injuryDeath.deaths_door_penalties; track $index) {
-      <li>
-        <app-dynamic-content [content]="penalty | resolveTextKey | textProcessor"></app-dynamic-content>
-      </li>
+    <li>
+      <app-dynamic-content [content]="penalty | resolveTextKey | textProcessor"></app-dynamic-content>
+    </li>
     }
   </ul>
 
   <hr>
   <h3>Injuries</h3>
   <app-dynamic-content [content]="'injuries' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <ul>
+    @for (injuryTrigger of injuryDeath.injuryTriggers; track $index) {
+    <li>
+      <app-dynamic-content [content]="injuryTrigger | resolveTextKey | textProcessor"></app-dynamic-content>
+    </li>
+    }
+  </ul>
 
 
-  <h4>Injury Table</h4>
+  <h4>Recieving Injuries</h4>
+  <app-dynamic-content [content]="'reciving_injuries' | resolveTextKey | textProcessor"></app-dynamic-content>
+
+  <h4>Injury Tables</h4>
+  <div class="row row-cols-lg-2 g-3">
+    @for (injuryTable of injuryDeath.injuryTables; track $index) {
+      <div class="col">
+        <h5>{{ injuryTable.name }}</h5>
+        <table [class]="'rules-table table-' + injuryTable.name">
+        <thead>
+          <tr>
+            <th scope="col">D100</th>
+            <th scope="col">Injury</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (entry of injuryTable.entries; track $index) {
+          <tr>
+            <td>{{ entry.result }}</td>
+            <td>
+              <span class="fw-bold">{{ entry.injuryTitle }}: </span>
+              <app-dynamic-content [content]="entry.injuryTextKey | resolveTextKey  | textProcessor"></app-dynamic-content>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+      </div>
+    }
+  </div>
 
   <hr>
   <h3>Death and Resurrection</h3>

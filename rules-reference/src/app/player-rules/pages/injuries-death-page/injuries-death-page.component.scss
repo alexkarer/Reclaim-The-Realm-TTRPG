@@ -1,0 +1,98 @@
+@use "../../../../colors";
+
+.base-colour-table {
+    --bs-table-color: #fff;
+    --bs-table-striped-color: #fff;
+    --bs-table-hover-color: #fff;
+    --bs-table-active-color: #fff;
+}
+
+.table-physical {
+    @extend .base-colour-table;
+    --bs-table-bg: #{colors.$rtr-white-background-dark};
+    --bs-table-border-color: #{colors.$rtr-white-border};
+    --bs-table-striped-bg: #{colors.$rtr-white-background-light};
+    --bs-table-hover-bg: #{colors.$rtr-white-background-light};
+    --bs-table-active-bg: #{colors.$rtr-white-background-light};
+}
+
+.table-fire {
+    @extend .base-colour-table;
+    --bs-table-bg: #{colors.$rtr-red-background-dark};
+    --bs-table-border-color: #{colors.$rtr-red-border};
+    --bs-table-striped-bg: #{colors.$rtr-red-background-light};
+    --bs-table-hover-bg: #{colors.$rtr-red-background-light};
+    --bs-table-active-bg: #{colors.$rtr-red-background-light};
+}
+
+.table-frost {
+    @extend .base-colour-table;
+    --bs-table-bg: #{colors.$rtr-teal-background-dark};
+    --bs-table-border-color: #{colors.$rtr-teal-border};
+    --bs-table-striped-bg: #{colors.$rtr-teal-background-light};
+    --bs-table-hover-bg: #{colors.$rtr-teal-background-light};
+    --bs-table-active-bg: #{colors.$rtr-teal-background-light};
+}
+
+.table-corrosive {
+    @extend .base-colour-table;
+    --bs-table-bg: #{colors.$rtr-light-green-background-dark};
+    --bs-table-border-color: #{colors.$rtr-light-green-border};
+    --bs-table-striped-bg: #{colors.$rtr-light-green-background-light};
+    --bs-table-hover-bg: #{colors.$rtr-light-green-background-light};
+    --bs-table-active-bg: #{colors.$rtr-light-green-background-light};
+}
+
+.table-sonic {
+    @extend .base-colour-table;
+    --bs-table-bg: #{colors.$rtr-dark-purple-background-dark};
+    --bs-table-border-color: #{colors.$rtr-dark-purple-border};
+    --bs-table-striped-bg: #{colors.$rtr-dark-purple-background-light};
+    --bs-table-hover-bg: #{colors.$rtr-dark-purple-background-light};
+    --bs-table-active-bg: #{colors.$rtr-dark-purple-background-light};
+}
+
+.table-electric {
+    @extend .base-colour-table;
+    --bs-table-bg: #{colors.$rtr-light-blue-background-dark};
+    --bs-table-border-color: #{colors.$rtr-light-blue-border};
+    --bs-table-striped-bg: #{colors.$rtr-light-blue-background-light};
+    --bs-table-hover-bg: #{colors.$rtr-light-blue-background-light};
+    --bs-table-active-bg: #{colors.$rtr-light-blue-background-light};
+}
+
+.table-poison {
+    @extend .base-colour-table;
+    --bs-table-bg: #{colors.$rtr-green-background-dark};
+    --bs-table-border-color: #{colors.$rtr-green-border};
+    --bs-table-striped-bg: #{colors.$rtr-green-background-light};
+    --bs-table-hover-bg: #{colors.$rtr-green-background-light};
+    --bs-table-active-bg: #{colors.$rtr-green-background-light};
+}
+
+.table-psychic {
+    @extend .base-colour-table;
+    --bs-table-bg: #{colors.$rtr-pink-background-dark};
+    --bs-table-border-color: #{colors.$rtr-pink-border};
+    --bs-table-striped-bg: #{colors.$rtr-pink-background-light};
+    --bs-table-hover-bg: #{colors.$rtr-pink-background-light};
+    --bs-table-active-bg: #{colors.$rtr-pink-background-light};
+}
+
+.table-holy {
+    @extend .base-colour-table;
+    --bs-table-bg: #{colors.$rtr-yellow-background-dark};
+    --bs-table-border-color: #{colors.$rtr-yellow-border};
+    --bs-table-striped-bg: #{colors.$rtr-yellow-background-light};
+    --bs-table-hover-bg: #{colors.$rtr-yellow-background-light};
+    --bs-table-active-bg: #{colors.$rtr-yellow-background-light};
+}
+
+.table-unholy {
+    @extend .base-colour-table;
+    --bs-table-bg: #{colors.$rtr-black-background-dark};
+    --bs-table-border-color: #{colors.$rtr-black-border};
+    --bs-table-striped-bg: #{colors.$rtr-black-background-light};
+    --bs-table-hover-bg: #{colors.$rtr-black-background-light};
+    --bs-table-active-bg: #{colors.$rtr-black-background-light};
+}
