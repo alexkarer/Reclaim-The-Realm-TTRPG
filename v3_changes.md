@@ -54,15 +54,14 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
     - maybe some combo abilities that gain benefits when used at the same time. (❌)
 
 - Add complete Injury Table, with different Damage Type categories (❌)
-    - Should only happen at Deaths Door or when Unconscious or recieving damage (❌)
+    - Should only happen at Deaths Door or when Unconscious or recieving damage (✅)
     - at least 5 outcomes for each damage type (❌)
-        + physical can have more
-    -
 
 
 #### Species
 - Create at least 3 more Species (❌)
-    - 
+    - Species from the Water Plane? Merfolk or Turtle Creature definitfly some kind of Amphibian creature
+    - Species from the Fire Plane? Maybe some kind of Lizard creature
 - Rework traits, should just be 1 thing and  be something way more unique (❌)
 
 #### Skills

@@ -283,7 +283,7 @@
         "injury_when_dropping_0hp": "When you are reduced to 0 [HP]. Make a [TOUGHNESS] [SAVE] with a [DT] equal to 5 + excess damage your recieved beyond 0 [HP]. On a failure you recieve an Injury.",
         "injury_deaths_door": "Each time you recieve damage while at [DEATHS DOOR] make a [TOUGHNESS] [SAVE] with a [DT] equal to 5 + damage recieved. On a failure your recieve an Injury",
         "other_injury_triggers": "The dangers in the Wilds, certain abilities of advesaries or GM calls might cause injuries to trigger.",
-        "reciving_injuries": "TODO: roll injury test: d100 + [DT] that was made for injury test and compare with the table of the corresponding damage type causing the injury",
+        "reciving_injuries": "When recieving an injury roll a d100 + [DT] made to resist the injury + 10 for each additional Injury you currently have. Compare the Result with a Table Entry of the corresponding Damage Type that triggered the Injury.",
 
         "injury_fire_cosmetic": "You recieve a severe burn disfiguring your skin and it itches.",
         "injury_fire_charred_lungs": "You inhaled superheated air damaging your lungs. Your maximum [STAMINA] is halved (rounded up). Recovers after 1 week of extended long rest.",
