@@ -165,6 +165,11 @@ Maneuver Ideas:
     - Dark (Necromancy, Unholy), Only possible for evil chars, mostly need SPI (✅)
     - Arcane (Teleporation, Conjuration, Illusion) there are ones that can be learned by most people, should mostly emphasize SPI and INT (✅)
         - Transmutation was remoced, check if it is actually needed.  (❌)
+            + possible Transmutation Spell List:
+                * Enhance (Change physically to enhance differnt things: senses or body)
+                * Polymorph
+                * 
+
 
 - Also reuse basic (6), advanced (9), master (15), transcendet (25) for spell differential (❌)
 
