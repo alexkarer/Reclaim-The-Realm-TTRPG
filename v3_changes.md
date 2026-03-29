@@ -86,17 +86,26 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - Regeneration Mutation is a bit too strong (❌)
   - Corrutpion Limit should be changed a bit also with how it interacts with Mutations (❌)
   - Rework Warlock Perk Tree (❌)
+  - Core Ability: (❌)
+    + Stays corruption, basically a way to gain useful bonuses at the cost of gaining corruption
+    + Corruption Limit with Mutations works the same, however should find etter way to word it.
 - Priest: (❌)
  - Rework Tides of the Aether to work without Class Techniques (❌)
  - Simplify Aether Dice notation: AD(=) -> matching AD, AD(!) -> unique AD  (❌)
  - Think whether to change it to a more flavourful Faith mechanic, where when you perform/show faith you get Dice (❌)
  - Priest should also interact the most with the Fate mechanic. (❌)
+ - Core Ability (❌)
+    + Works similiar to now, perform beneficial actions to gain aether dice.
+    + Abilities for use should interact with alignment
+    + When meeting vertain amount of aether dice, potentially gain a minor passive buff.
  Rework Priest Perk Tree (❌)
 - Barbarian (❌)
-     Rework Rage to work without Class Techniques (❌)
     - new maneuvers: Unspent Rage(When going unconcious can take a turn, costs lot of rage), (Reckless Abandon)  can'T dodge but gain bonuses
     - Think if Rage can be improved to be more flavourful without being too complicated. (❌)
     - Rework Barbarian Perk Tree (❌)
+    - Core Ability (❌)
+        + Gain Rage for similar to now
+        + Can use it to reduce damage or increase melee/thrown damage.
 
 - Possibly havbe every class have the same number of class skills per level (❌)
 - Only have Class Perks and fold all other Perks in there and have Perks be part of Classes (❌)
@@ -130,6 +139,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
 
 - REwork abilities to use the clear formating from foundryVTT (✅)
     - For ongoing effects label Concentartion clearly and rework how mechanics are displayed (❌)
+    - Add LOS Keyword to relevant abilites, add boolean field to ability
 
 - Add Standard Abilties: (❌)
     - Evading Attacks (no AP) (❌)
@@ -168,16 +178,16 @@ Maneuver Ideas:
             + possible Transmutation Spell List:
                 * Enhance (Change physically to enhance differnt things: senses or body)
                 * Polymorph
-                * 
 
-
-- Also reuse basic (6), advanced (9), master (15), transcendet (25) for spell differential (❌)
+- Also reuse basic (16), advanced (3), master (10), transcendet (25) for spell differential (❌)
 
 - Add full Arcane Mishap Table/Rework for new spell discipline (❌)
 
 - Properly define Spell mechanics: (❌)
     - Concentration, works fine but define it (❌)
     - Charge X, similar to concentration has to spend X AP to cast the spell but it can be done over multiple turns and during it concentrate (❌)
+    - Upcasting: define in the upcasting in the incremental mana cost required (❌)
+    - Ritual: Mechanic that allows multiple people to cast the spell. (❌)
 
 ### Equipment
 

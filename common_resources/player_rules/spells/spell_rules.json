@@ -49,5 +49,32 @@
                 { "name": "Illusion", "textkey": "illusion_description", "color": "teal" }
             ]
         }
+    ],
+    "spellCastTestResults": [
+        "spell_test_cast_result_success",
+        "spell_test_cast_result_failure",
+        "spell_test_cast_result_catastrophic_failure"
+    ],
+    "spellComponents": [
+        { "title": "Verbal", "textKey": "component_verbal" },
+        { "title": "Somatic", "textKey": "component_somatic" },
+        { "title": "Material", "textKey": "component_material" }
+    ],
+    "spellFailureTable": [
+        { "roll": "2-4", "title": "Psychic Feedback", "effect": "spell_failure_2_4" },
+        { "roll": "5-7", "title": "Drain Energy", "effect": "spell_failure_5_7" },
+        { "roll": "9-10", "title": "", "effect": "spell_failure_8_10" },
+        { "roll": "11-13", "title": "", "effect": "spell_failure_11_13" },
+        { "roll": "14-16", "title": "", "effect": "spell_failure_14_16" },
+        { "roll": "17-19", "title": "", "effect": "spell_failure_17_19" },
+        { "roll": "20-22", "title": "", "effect": "spell_failure_20_22" },
+        { "roll": "23-25", "title": "", "effect": "spell_failure_23_25" },
+        { "roll": "26-28", "title": "", "effect": "spell_failure_26_28" },
+        { "roll": "29-31", "title": "", "effect": "spell_failure_29_31" },
+        { "roll": "32-34", "title": "", "effect": "spell_failure_32_34" },
+        { "roll": "35-37", "title": "", "effect": "spell_failure_35_37" },
+        { "roll": "38-40", "title": "Temporary Rift", "effect": "spell_failure_38_40" },
+        { "roll": "41-43", "title": "", "effect": "spell_failure_41_43" },
+        { "roll": "44+", "title": "", "effect": "spell_failure_44+" }
     ]
 }

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { PlayerRulesPageNavigationComponent } from '../../shared/page-navigation/player-rules-page-navigation.component';
-import spellsRulesJson from "../../../../../../common_resources/player_rules/spells/spell_rules.json";
 import { DynamicContentComponent } from "../../../shared/text-utils/dynamic-component-rendering/dynamic-content.component";
 import { ResolveTextKeyPipe } from "../../../shared/text-utils/resolve-text-key";
 import { TextProcessorPipe } from "../../../shared/text-utils/text-processor";
+import spellsRulesJson from "../../../../../../common_resources/player_rules/spells/spell_rules.json";
 
 @Component({
   selector: 'app-casting-spells-page',

@@ -30,12 +30,27 @@
 
   <h4 class="mb-0 mt-2">Spell Cast Test</h4>
   <app-dynamic-content [content]="'spell_cast_test' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <ul>
+    @for (result of spellsRulesJson.spellCastTestResults; track $index) {
+      <li>
+        <app-dynamic-content [content]="result | resolveTextKey | textProcessor"></app-dynamic-content>
+      </li>
+    }
+  </ul>
 
   <h5 class="mb-0 mt-2">Spell Difficulty</h5>
-  <app-dynamic-content [content]="'TODO: can be found at the top right of an ability' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <app-dynamic-content [content]="'spell_difficulty' | resolveTextKey | textProcessor"></app-dynamic-content>
 
   <h4 class="mb-0 mt-2">Spell Components</h4>
-  <app-dynamic-content [content]="'spell_component' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <app-dynamic-content [content]="'spell_components' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <ul>
+    @for (component of spellsRulesJson.spellComponents; track $index) {
+      <li>
+        <span class="fw-bold">{{ component.title }}: </span>
+        <app-dynamic-content [content]="component.textKey | resolveTextKey | textProcessor"></app-dynamic-content>
+      </li>
+    }
+  </ul>
 
   <h4 class="mb-0 mt-2">Upcasting Spells</h4>
   <app-dynamic-content [content]="'upcasting_spells' | resolveTextKey | textProcessor"></app-dynamic-content>
@@ -46,8 +61,32 @@
   <h4 class="mb-0 mt-2">Charge Spells</h4>
   <app-dynamic-content [content]="'charge_spells' | resolveTextKey | textProcessor"></app-dynamic-content>
 
+  <h4 class="mb-0 mt-2">Ritual Spells</h4>
+  <app-dynamic-content [content]="'ritual_spells' | resolveTextKey | textProcessor"></app-dynamic-content>
+
   <hr>
-  <h4>Magical Misshaps</h4>
+  <h4>Spell Failure</h4>
+  <app-dynamic-content [content]="'spell_failure_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <table class="rules-table">
+    <thead>
+        <tr>
+            <th scope="col">Roll</th>
+            <th scope="col">Title</th>
+            <th scope="col">Effect</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (tableEntry of spellsRulesJson.spellFailureTable; track $index) {
+            <tr>
+                <td>{{ tableEntry.roll }}</td>
+                <td><span class="fw-bold">{{ tableEntry.title }}</span></td>
+                <td>
+                  <app-dynamic-content [content]="tableEntry.effect | resolveTextKey | textProcessor"></app-dynamic-content>
+                </td>
+            </tr>
+        }
+    </tbody>
+  </table>
 
   <hr>
   <h4 class="mt-2 mb-0">Spell List</h4>
