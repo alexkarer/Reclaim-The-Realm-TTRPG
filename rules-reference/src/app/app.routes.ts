@@ -34,6 +34,7 @@ import { MovementPageComponent } from './rules-reference/pages/movement-page/mov
 import { AbilitiesPageComponent } from './rules-reference/pages/abilities/abilities-page.component';
 import { TechniquesSearchComponent } from './techniques-search/techniques-search.component';
 import { InjuriesDeathPageComponent } from './player-rules/pages/injuries-death-page/injuries-death-page.component';
+import { SpellFailurePageComponent } from './player-rules/pages/spell-failure-page/spell-failure-page.component';
 
 export const routes: Routes = [
     {
@@ -120,6 +121,11 @@ export const routes: Routes = [
                 path: 'casting-spells',
                 component: SpellsPageComponent,
                 title: 'Casting Spells - Player Rules'
+            },
+            {
+                path: 'spell-failure',
+                component: SpellFailurePageComponent,
+                title: 'Spell Failures - Player Rules'
             }
         ]
     },

@@ -1,7 +1,7 @@
 [
     {
         "name": "Emergency Treatment - Medi-kit",
-        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Medi-kit Use" },
+        "cost": { "ap": 2, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Medi-kit Use" },
         "tags": [ "Heal" ],
         "meta": { "iconPath": "icons/magic/life/cross-worn-green.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -44,7 +44,7 @@
     },
     {
         "name": "Field Treatment - Medi-kit",
-        "cost": { "ap": 150, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "(5 minutes) 1 Medi-kit Use" },
+        "cost": { "ap": 150, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "(5 minutes) 1 Medi-kit Use" },
         "tags": [ "Heal" ],
         "meta": { "iconPath": "icons/magic/life/cross-worn-green.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -87,7 +87,7 @@
     },
     {
         "name": "Shield Block - Buckler",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "[REACTION]" ],
         "meta": { "iconPath": "icons/skills/melee/shield-block-gray-orange.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -130,7 +130,7 @@
     },
     {
         "name": "Shield Block - Regular Shield",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "[REACTION]" ],
         "meta": { "iconPath": "icons/skills/melee/shield-block-gray-orange.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -201,7 +201,7 @@
     },
     {
         "name": "Shield Block - Tower Shield",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "[REACTION]" ],
         "meta": { "iconPath": "icons/skills/melee/shield-block-gray-orange.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },

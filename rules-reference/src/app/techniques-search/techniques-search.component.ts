@@ -138,13 +138,13 @@ export class TechniquesSearchComponent {
     switch (this.currentSelectedTechniqueCost) {
       case TechniqueCost.ANY: keep = true; break;
       case TechniqueCost.MP: keep = (technique.cost.mp > 0); break;
-      case TechniqueCost.AP0: keep = (technique.cost.ap == 0); break;
-      case TechniqueCost.AP1: keep = (technique.cost.ap == 1); break;
-      case TechniqueCost.AP2: keep = (technique.cost.ap == 2); break;
-      case TechniqueCost.AP3: keep = (technique.cost.ap == 3); break;
-      case TechniqueCost.AP4: keep = (technique.cost.ap == 4); break;
-      case TechniqueCost.AP5: keep = (technique.cost.ap == 5); break;
-      case TechniqueCost.AP6: keep = (technique.cost.ap == 6); break;
+      case TechniqueCost.AP0: keep = (technique.cost.ap === 0); break;
+      case TechniqueCost.AP1: keep = (technique.cost.ap === 1); break;
+      case TechniqueCost.AP2: keep = (technique.cost.ap === 2); break;
+      case TechniqueCost.AP3: keep = (technique.cost.ap === 3); break;
+      case TechniqueCost.AP4: keep = (technique.cost.ap === 4); break;
+      case TechniqueCost.AP5: keep = (technique.cost.ap === 5); break;
+      case TechniqueCost.AP6: keep = (technique.cost.ap === 6); break;
     }
     return keep;
   }

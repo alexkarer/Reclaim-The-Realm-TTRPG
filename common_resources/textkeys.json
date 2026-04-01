@@ -328,31 +328,36 @@
 
         "spell_difficulty": "The [SPELL DIFFICULTY] of a spell can be found at the top right of a spell. More advanced spells or upcasting spells (see below) come with a higher difficutly and more risk when casting.",
         "spell_components": "Spell components are additional requirements for casting the spell. It can be as simple as speaking an invocation, performing a gesture or a material component such as a specific natural environment or precious gems.",
-        "component_verbal": "Verbal components require specific words are incantations uttered and heard. Being deafened, unable to talk or under the effect of the Silence Spell are example which prevent you from using Verbal components. The most common Verbal components are (Incantations) which are specific words uttered in the origin language and leave no doubt that a spell is being cast. The other common verbal component are (Prayers) in which the caster beseeches the cosmos for aid.",
+        "component_verbal": "Verbal components require specific words that are uttered and heard. Being deafened, unable to talk or under the effect of the Silence Spell are example which prevent you from using Verbal components. The most common Verbal components are (Invocations) which are specific words uttered in the origin language and leave no doubt that a spell is being cast. The other common verbal component are (Prayers) in which the caster beseeches the cosmos for aid.",
         "component_somatic": "Somatic components are gestures that need to be performed to cast a spell. They require at least one free hand that is free to do gestures, but it can hold small items or weapons, but not shields. Being restrained or not having a free hand for example when climbing prevents you from performing somatic components.",
         "component_material": "Material components are physical objects that need to be either held or somewhere present for the spell to be cast. Certain spell consume their physical components, which will be marked in brackets. Other spells require objects which have a certain value which will be stated in [GC].",
 
         "upcasting_spells": "Similar to how manuevers can be pushed, Spells can be cast as more powerful versions of the normal version. When done so the spells [MANA] Cost and [SPELL DIFFICULTY] increase as described and the spell’s effect changes as stated in the spell itself. However this increase makes the spell more costly, difficult and dangerous when a magical mishap occurs.",
         "concentration_spells": "",
         "charge_spells": "",
-        "ritual_spells": "",
-
+        "ritual_spells": ""
+    },
+    "spellFailureTable": {
         "spell_failure_description": "When a Spell Failure occurs the caster is not able to tame the cosmic or elemental energies and recieves violent feedback, the strength of it depends on the failure and power of the spell. Roll a d20 and add the [MANA] Cost of the Spell. If the [MANA] cost was lowered by some other ability does not reduce the bonus here.",
         "spell_failure_2_4": "You recieve the [STUNNED III] Condition. [SAVE LOWERS] [DT] 15 [WILLPOWER] [D20 TEST].",
         "spell_failure_5_7": "You gain 1 point of [EXHAUSTION] and you lose 1 [STAMINA].",
-        "spell_failure_8_10": "",
-        "spell_failure_11_13": "",
+        "spell_failure_8_10": "You recieve 4d6 damage depending on spell discipline (holy/elemental/cosmic).",
+        "spell_failure_11_13": "Weak Effect depending on spell discipline.",
         "spell_failure_14_16": "",
-        "spell_failure_17_19": "",
-        "spell_failure_20_22": "",
-        "spell_failure_23_25": "",
+        "spell_failure_17_19": "You summon a [LEVEL] 3 Extraplanar Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests.",
+        "spell_failure_20_22": "You cast a random Spell that shares at least one Spell Discipline at the same [MANA] Cost with you being the target, or the center of the area effect.",
+        "spell_failure_23_25": "Medium Effect depending on spell discipline.",
         "spell_failure_26_28": "",
-        "spell_failure_29_31": "",
-        "spell_failure_32_34": "",
-        "spell_failure_35_37": "",
-        "spell_failure_38_40": "A temporary Rift opens up right next to you in a free [FIELD] for 1d4 [ROUNDS]. It leads to another Plane depending on your Spell Discipline. Every creature or object within 2 [FIELD] of the Rift has to succeed on a [DT] 30 [STABILITY] [D20 TEST] or be sucked in. The [DT] decreases the farther you go in the following way: 3 [FIELD] ([DT] 25), 5 [FIELD] ([DT] 20), 7 [FIELD] ([DT] 15), 10 [FIELD] ([DT] 10).",
-        "spell_failure_41_43": "",
-        "spell_failure_44+": ""
+        "spell_failure_29_31": "You summon a [LEVEL] 8 Extraplanar Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests.",
+        "spell_failure_32_34": "Make a [DT] 25 [WILLPOWER] or [TOUGHNESS] (your choice) [D20 TEST]. On success: Receive 20d6 damage depending on your spell discipline. On Failure: you are reduced to 0 [HP].",
+        "spell_failure_35_37": "Strong Effect depending on spell discipline.",
+        "spell_failure_38_40": "A temporary Rift opens up right next to you in a free [FIELD] for 1d4 [ROUNDS]. It leads to another Plane depending on your Spell Discipline. Every creature or object within 2 [FIELD] of the Rift has to succeed on a [DT] 30 [STABILITY] [D20 TEST] or be sucked in. The [DT] decreases the farther you go in the following way: 3 [FIELD] ([DT] 25), 5 [FIELD] ([DT] 20), 7 [FIELD] ([DT] 15), 10 [FIELD] ([DT] 10). The Rift additionally causes harmful environmental effects while active depending on the Plane.",
+        "spell_failure_41_43": "You summon a [LEVEL] 15 Entity depending on you Spell Discipline (Elemental/Angel/Demon/Cosmic Horror). This Entity will act in it's own interrests. Additionally this Entity may as it's first act summon additional reinforcements determined by the GM.",
+        "spell_failure_44+": "You create a stable Rift having similar effect as the temporary Rift while it is active and in addition harmful environmental effects caused by the Rift rage rampant in the area. If the Rift is not closed within 1 hour, the area within 1d4 km will be permanently transformed by the Rift. Extraplanar Entities are also able now to freely emerge here as long as the Rift remains active.",
+
+        "pyromancy_weak_effect": "You gain [BURNING I]. Every creature and object within 3 [FIELD] of you have to make a [DT] 15 [DODGE] [D20 TEST]. On Failure: They gain [BURNING I].",
+        "pyromancy_medium_effect": "You gain [BURNING II]. Every creature and object within 5 [FIELD] of you have to make a [DT] 20 [DODGE] [D20 TEST]. On Failure: They gain [BURNING II]. On success: They gain [BURNING I]",
+        "pyromancy_strong_effect": "You gain [BURNING III]. Every creature and object within 7 [FIELD] of you have to make a [DT] 25 [DODGE] [D20 TEST]. On Failure: They gain [BURNING III]. On success: They gain [BURNING II]"
     },
     "barbarian_class": {
         "barbarian_description": "This description is not yet complete. Thankfully Barbarian Players can't read."

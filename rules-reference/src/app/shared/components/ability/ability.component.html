@@ -1,15 +1,26 @@
 <div [class]="colourClass + ' card'">
     <div class="card-header btn header" (click)="isCollapsed = !isCollapsed">
-        <div class="d-flex flex-row align-items-center">
+        <div class="d-flex flex-row align-items-center justify-content-between">
             <img class="ability-image" [src]="ability()?.meta?.iconPath">
             <h4 class="ms-2">{{ ability()?.name }}</h4>
             <p class="fst-italic text-body-secondary ms-3"><span class="text-body">Tags: </span><app-dynamic-content [content]="ability()?.tags?.join('; ') | textProcessor"></app-dynamic-content></p>
+            @if (isSpell) {
+                <span class="badge rounded-pill casting-difficulty">{{ castingDifficulty }}</span>
+            }
         </div>
     </div>
     <div class="card-body body" #collapse="ngbCollapse" [ngbCollapse]="isCollapsed && collapsable()">
         <p class="description my-0"><span class="fw-bold">Requirements: </span><app-dynamic-content [content]="ability()?.requirements | requirementsPrettier | textProcessor"></app-dynamic-content></p>
-        <p class="description mt-0 mb-1"><span class="fw-bold">Cost: </span><app-dynamic-content [content]="abilityCost | textProcessor"></app-dynamic-content></p>
-        <h5 class="mt-0 mb-2">Actions</h5>
+        <p class="description my-0"><span class="fw-bold">Cost: </span><app-dynamic-content [content]="abilityCost | textProcessor"></app-dynamic-content></p>
+        @if (isSpell) {
+            <p class="description my-0">
+                <span class="fw-bold">Components: </span>
+                @if (spellComponents.verbal) {<app-dynamic-content [content]="'Verbal (' + spellComponents.verbal + '); ' | textProcessor"></app-dynamic-content>}
+                @if (spellComponents.somatic) {<app-dynamic-content [content]="'Somatic (' + spellComponents.somatic + '); ' | textProcessor"></app-dynamic-content>}
+                @if (spellComponents.material) {<app-dynamic-content [content]="'Material (' + spellComponents.material + ') ' | textProcessor"></app-dynamic-content>}
+            </p>
+        }
+        <h5 class="mt-1 mb-2">Actions</h5>
         @for (action of ability()?.actions; track $index) {
             <app-ability-action [action]="action"></app-ability-action>
         }
@@ -17,6 +28,13 @@
             <h5 class="mb-0 mt-2">Push</h5>
             <p class="description my-0"><span class="fw-bold">Cost: </span><app-dynamic-content [content]="pushingCost | textProcessor"></app-dynamic-content></p>
             <p class="description my-0"><span class="fw-bold">Effect on push: </span><app-dynamic-content [content]="pushingEffect | textProcessor"></app-dynamic-content></p>
+        }
+        @if (isSpell) {
+            <h5 class="mb-0 mt-2">Upcast</h5>
+            <p class="description my-0">
+                <app-dynamic-content [content]="'For every ' + spellUpcast.mana + ' additional [MANA] spent to cast this spell ' | textProcessor"></app-dynamic-content>
+                <app-dynamic-content [content]="spellUpcast.effect | textProcessor"></app-dynamic-content>
+            </p>
         }
         @if ((ability()?.flavorText?.length ?? 0) > 0) {
             <span class="fst-italic text-body-secondary"><app-text-elements-without-ability [textElements]="ability()?.flavorText"></app-text-elements-without-ability></span>

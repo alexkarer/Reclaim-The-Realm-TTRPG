@@ -23,7 +23,8 @@ export class PlayerRulesNavigationService extends NavigationService {
       { id: 'getting-stronger', title: 'Getting Stronger', route: '/player-rules/getting-stronger', order: 10 },
       { id: 'exhaustion-resting', title: 'Exhaustion and Resting', route: '/player-rules/exhaustion-resting', order: 11 },
       { id: 'injuries-death', title: 'Injuries and Death', route: '/player-rules/injuries-death', order: 12 },
-      { id: 'casting-spells', title: 'Casting Spells', route: '/player-rules/casting-spells', order: 13 }
+      { id: 'casting-spells', title: 'Casting Spells', route: '/player-rules/casting-spells', order: 13 },
+      { id: 'spell-failure', title: 'Spell Failures', route: '/player-rules/spell-failure', parent: 'casting-spells', order: 14 }
     ]);
   }
 }

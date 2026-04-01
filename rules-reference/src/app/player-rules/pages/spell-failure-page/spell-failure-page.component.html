@@ -1,0 +1,56 @@
+<h1>Spell Failures</h1>
+
+<div class="my-4">
+  <app-dynamic-content [content]="'spell_failure_description' | resolveTextKey | textProcessor"></app-dynamic-content>
+  <table class="rules-table">
+    <thead>
+        <tr>
+            <th scope="col" class="col-roll">Roll</th>
+            <th scope="col" class="col-title">Title</th>
+            <th scope="col">Effect</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for (tableEntry of spellsRulesJson.spellFailureTable; track $index) {
+            <tr>
+                <th scope="row">{{ tableEntry.roll }}</th>
+                <td [innerHtml]="tableEntry.title"></td>
+                <td>
+                  <app-dynamic-content [content]="tableEntry.effect | resolveTextKey | textProcessor"></app-dynamic-content>
+                </td>
+            </tr>
+        }
+    </tbody>
+  </table>
+
+  <h3>Spell Discipline Specific Effects</h3>
+
+  <table class="rules-table">
+    <thead>
+        <tr>
+            <th scope="col">Discipline</th>
+            <th scope="col">Weak Effect</th>
+            <th scope="col">Medium Effect</th>
+            <th scope="col">Strong Effect</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @for (tableEntry of spellsRulesJson.spellFailureByDiscipline; track $index) {
+            <tr>
+                <th scope="row">{{ tableEntry.discipline }}</th>
+                <td>
+                  <app-dynamic-content [content]="tableEntry.weakEffect | resolveTextKey | textProcessor"></app-dynamic-content>
+                </td>
+                <td>
+                  <app-dynamic-content [content]="tableEntry.mediumEffect | resolveTextKey | textProcessor"></app-dynamic-content>
+                </td>
+                <td>
+                  <app-dynamic-content [content]="tableEntry.strongEffect | resolveTextKey | textProcessor"></app-dynamic-content>
+                </td>
+            </tr>
+        }
+    </tbody>
+  </table>
+</div>
+
+<app-player-rules-page-navigation [currentPageId]="pageId"></app-player-rules-page-navigation>

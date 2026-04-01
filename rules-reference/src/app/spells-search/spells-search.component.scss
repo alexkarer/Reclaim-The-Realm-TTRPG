@@ -1,0 +1,79 @@
+@use "../../_colors.scss";
+
+.spell-wrapper {
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 15%;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        border-color: var(--bs-secondary-border-subtle);
+    }
+
+    &:active {
+        border-style: groove;
+    }
+}
+
+.spell-image {
+    height: 7vh;
+    width: 7vh;
+    margin: 1vh;
+    border-style: hidden;
+    border-radius: 15%;
+}
+
+.border-selected {
+    border-color: var(--bs-light);
+}
+
+.border-red {
+    border-color: colors.$rtr-red-border;
+}
+
+.border-orange {
+    border-color: colors.$rtr-orange-border;
+}
+
+.border-brown {
+    border-color: colors.$rtr-brown-border;
+}
+
+.border-green {
+    border-color: colors.$rtr-green-border;
+}
+
+.border-blue {
+    border-color: colors.$rtr-blue-border;
+}
+
+.border-yellow {
+    border-color: colors.$rtr-yellow-border;
+}
+
+
+.background-red {
+    background-color: colors.$rtr-red-background-light;
+}
+
+.background-orange {
+    background-color: colors.$rtr-orange-background-light;
+}
+
+.background-brown {
+    background-color: colors.$rtr-brown-background-light;
+}
+
+.background-green {
+    background-color: colors.$rtr-green-background-light;
+}
+
+.background-blue {
+    background-color: colors.$rtr-blue-background-light;
+}
+
+.background-yellow {
+    background-color: colors.$rtr-yellow-background-light;
+}
+

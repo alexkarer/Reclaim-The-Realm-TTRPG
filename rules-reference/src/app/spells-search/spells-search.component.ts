@@ -1,63 +1,96 @@
 import { Component } from '@angular/core';
-import { AbilityListComponent } from '../shared/ability/ability-list/ability-old-list.component';
-import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { allSpells, Spell } from '../../../../common_resources/spells/spells';
+import { Spell, ALL_SPELLS } from '../../../../common_resources/player_rules/spells/spell';
+import { AbilityComponent } from "../shared/components/ability/ability.component";
+import { AbilityColour } from '../../../../common_resources/shared/Ability';
 
 @Component({
     selector: 'app-spells-search',
-    imports: [AbilityListComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule],
+    imports: [NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, FormsModule, NgbTooltipModule, AbilityComponent],
     templateUrl: './spells-search.component.html',
     styleUrl: './spells-search.component.scss'
 })
 export class SpellsSearchComponent {
-  public filteredSpells: Spell[] = allSpells;
+  filteredSpells: Spell[] = ALL_SPELLS;
 
-  public readonly SpellDifficulty = SpellDifficulty;
-  public readonly SpellDiscipline = SpellDiscipline;
-  public readonly SpellCost = SpellCost;
+  readonly SpellDifficulty = SpellDifficulty;
+  readonly SpellDiscipline = SpellDiscipline;
+  readonly SpellCost = SpellCost;
 
-  public selectedSpellPower = SpellDifficulty.ANY;
-  public selectedSpellDiscipline = SpellDiscipline.ANY;
-  public selectedSpellCost = SpellCost.ANY;
-  public currentFilterText: string = "";
+  selectedCastingDifficulty = SpellDifficulty.ANY;
+  selectedSpellDiscipline = SpellDiscipline.ANY;
+  selectedSpellCost = SpellCost.ANY;
+  currentFilterText: string = "";
+  readonly filterTags = [ "[REACTION]" ];
+  currentFilterTags: string[] = [];
+  selectedSpell: Spell = ALL_SPELLS[0];
 
-  public onSpellPowerFilterChange(spellPower: SpellDifficulty): void {
-    this.selectedSpellPower = spellPower;
+  onSpellPowerFilterChange(spellPower: SpellDifficulty): void {
+    this.selectedCastingDifficulty = spellPower;
     this.applyCurrentFilters();
   }
 
-  public onSpellDisciplineFilterChange(spellDiscipline: SpellDiscipline): void {
+  onSpellDisciplineFilterChange(spellDiscipline: SpellDiscipline): void {
     this.selectedSpellDiscipline = spellDiscipline;
     this.applyCurrentFilters();
   }
 
-  public onSpellCostFilterChange(spellCost: SpellCost): void {
+  onSpellCostFilterChange(spellCost: SpellCost): void {
     this.selectedSpellCost = spellCost;
     this.applyCurrentFilters();
   }
 
-  public onFreeTextFilterChange() {
+  handleAbilityTagCheckBoxUpdate(event: Event, tag: string): void {
+    let target = event.target as HTMLInputElement;
+    let active = target.checked;
+    if (active) {
+      this.currentFilterTags.push(tag);
+    } else {
+      this.currentFilterTags = this.currentFilterTags.filter(t => t !== tag);
+    }
     this.applyCurrentFilters();
   }
 
+  onFreeTextFilterChange() {
+    this.applyCurrentFilters();
+  }
+
+  onSelectTechnique(name: string): void {
+    this.selectedSpell = ALL_SPELLS.find(e => e.name === name) ?? ALL_SPELLS[0];
+  }
+
+  getColourClass(spell: Spell): string {
+    const colour = spell?.meta.colour ?? AbilityColour.COLOURLESS;
+    switch (colour) {
+      case AbilityColour.GREEN: return 'green';
+      case AbilityColour.RED: return'red';
+      case AbilityColour.BLUE: return'blue';
+      case AbilityColour.YELLOW: return'yellow';
+      case AbilityColour.ORANGE: return'orange';
+      case AbilityColour.BROWN: return'brown'; 
+      case AbilityColour.COLOURLESS: return'';
+    }
+  }
+
   private applyCurrentFilters() {
-    this.filteredSpells = [...allSpells
-      .filter(m => this.filterForSpellPower(m))
+    this.filteredSpells = [...ALL_SPELLS
+      .filter(m => this.filterForCastingDifficulty(m))
       .filter(m => this.filterForSpellDiscipline(m))
       .filter(m => this.filterForSpellCost(m))
       .filter(m => this.filterforFreeText(m))
+      .filter(t => this.filterForTag(t))
       .filter(m => m.name.length !== 0)
     ];
   }
 
-  private filterForSpellPower(spell:  Spell): boolean {
-    switch(this.selectedSpellPower) {
+  private filterForCastingDifficulty(spell:  Spell): boolean {
+    switch(this.selectedCastingDifficulty) {
       case SpellDifficulty.ANY: return true;
-      case SpellDifficulty.SD_6: return spell.spellDifficulty === 6;
-      case SpellDifficulty.SD_9: return spell.spellDifficulty === 9;
-      case SpellDifficulty.SD_15: return spell.spellDifficulty === 15;
-      case SpellDifficulty.SD_25: return spell.spellDifficulty === 25;
+      case SpellDifficulty.SD_6: return spell.castingDifficulty === 6;
+      case SpellDifficulty.SD_9: return spell.castingDifficulty === 9;
+      case SpellDifficulty.SD_15: return spell.castingDifficulty === 15;
+      case SpellDifficulty.SD_25: return spell.castingDifficulty === 25;
     }
   }
 
@@ -88,13 +121,12 @@ export class SpellsSearchComponent {
   private filterForSpellCost(spell:  Spell): boolean {
     switch (this.selectedSpellCost) {
       case SpellCost.ANY: return true;
-      case SpellCost.REACTION: return spell.cost.includes('[REACTION]')
-      case SpellCost.AP1: return spell.cost.includes('1 [AP]')
-      case SpellCost.AP2: return spell.cost.includes('2 [AP]')
-      case SpellCost.AP3: return spell.cost.includes('3 [AP]')
-      case SpellCost.AP4: return spell.cost.includes('4 [AP]')
-      case SpellCost.AP5: return spell.cost.includes('5 [AP]')
-      case SpellCost.AP6: return spell.cost.includes('6 [AP]')
+      case SpellCost.AP1: return spell.cost.ap === 1;
+      case SpellCost.AP2: return spell.cost.ap === 2;
+      case SpellCost.AP3: return spell.cost.ap === 3;
+      case SpellCost.AP4: return spell.cost.ap === 4;
+      case SpellCost.AP5: return spell.cost.ap === 5;
+      case SpellCost.AP6: return spell.cost.ap === 6;
     }
   }
 
@@ -104,11 +136,20 @@ export class SpellsSearchComponent {
     }
     let text = this.currentFilterText.toLocaleLowerCase();
     return spell.name.toLocaleLowerCase().includes(text) || 
-      spell.tags.find(tag => tag.toLocaleLowerCase().includes(text)) !== undefined ||
-      spell.description.find(desc => desc.regularText !== null && desc.regularText.toLocaleLowerCase().includes(text)) !== undefined ||
-      spell.description.find(desc => desc.headerLine !== null && desc.headerLine.toLocaleLowerCase().includes(text)) !== undefined ||
-      spell.description.find(desc => desc.bulletPoints !== null && desc.bulletPoints.find(bp => bp.toLocaleLowerCase().includes(text))) !== undefined ||
-      spell.upCastingTheSpell?.toLowerCase().includes(text);
+      spell.tags.find(tag => tag.toLocaleLowerCase().includes(text)) !== undefined;
+  }
+
+  private filterForTag(spell: Spell): boolean | undefined {
+    if (this.currentFilterTags.length === 0) {
+      return true;
+    }
+
+    for (let tag of this.currentFilterTags) {
+      if (!spell.tags.includes(tag)) {
+        return false;
+      }
+    }
+    return true;
   }
 }
 
@@ -143,5 +184,5 @@ enum SpellDiscipline {
 }
 
 enum SpellCost {
-  ANY = 'Any Spell Cost', REACTION = '[REACTION] Spells', AP1 = '1 [AP] Spells', AP2 = '2 [AP] Spells', AP3 = '3 [AP] Spells', AP4 = '4 [AP] Spells', AP5 = '5 [AP] Spells', AP6 = '6 [AP] Spells'
+  ANY = 'Any Spell Cost', AP1 = '1 [AP] Spells', AP2 = '2 [AP] Spells', AP3 = '3 [AP] Spells', AP4 = '4 [AP] Spells', AP5 = '5 [AP] Spells', AP6 = '6 [AP] Spells'
 }

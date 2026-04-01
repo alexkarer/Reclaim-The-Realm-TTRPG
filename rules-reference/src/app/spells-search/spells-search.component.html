@@ -1,21 +1,18 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <div ngbDropdown class="d-inline-block me-4">
-            <h6 style="white-space: nowrap;">{{ filteredSpells.length + ' Spells' }}</h6>
-        </div>
-        <div ngbDropdown class="d-inline-block me-5">
-            <button type="button" class="btn btn-outline-primary" id="dropdown-spell-power" ngbDropdownToggle>{{ selectedSpellPower }}</button>
-            <div ngbDropdownMenu aria-labelledby="dropdown-spell-power">
+  <div class="container-fluid">
+    <div ngbDropdown class="d-inline-block me-5">
+			<button type="button" class="btn btn-outline-primary" id="dropdown-casting-difficulty" ngbDropdownToggle [innerHTML]="selectedCastingDifficulty"></button>
+			<div ngbDropdownMenu aria-labelledby="dropdown-casting-difficulty">
                 <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellDifficulty.ANY)">{{ SpellDifficulty.ANY }}</button>
                 <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellDifficulty.SD_6)">{{ SpellDifficulty.SD_6 }}</button>
                 <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellDifficulty.SD_9)">{{ SpellDifficulty.SD_9 }}</button>
                 <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellDifficulty.SD_15)">{{ SpellDifficulty.SD_15 }}</button>
                 <button ngbDropdownItem (click)="onSpellPowerFilterChange(SpellDifficulty.SD_25)">{{ SpellDifficulty.SD_25 }}</button>
-            </div>
-        </div>
-        <div ngbDropdown class="d-inline-block me-5">
-            <button type="button" class="btn btn-outline-primary" id="dropdown-spell-discipline" ngbDropdownToggle>{{ selectedSpellDiscipline }}</button>
-            <div ngbDropdownMenu aria-labelledby="dropdown-spell-discipline">
+			</div>
+		</div>
+    <div ngbDropdown class="d-inline-block me-5">
+			<button type="button" class="btn btn-outline-primary" id="dropdown-spell-discipline" ngbDropdownToggle [innerHTML]="selectedSpellDiscipline"></button>
+			<div ngbDropdownMenu aria-labelledby="dropdown-spell-discipline" >
                 <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ANY)">{{ SpellDiscipline.ANY }}</button>
                 <button ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ELEMENTAL)">{{ SpellDiscipline.ELEMENTAL }}</button>
                 <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.PYROMANCY)">{{ SpellDiscipline.PYROMANCY }}</button>
@@ -35,27 +32,57 @@
                 <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.ILLUSION)">{{ SpellDiscipline.ILLUSION }}</button>
                 <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEPORTATION)">{{ SpellDiscipline.TELEPORTATION }}</button>
                 <button class="ms-2" ngbDropdownItem (click)="onSpellDisciplineFilterChange(SpellDiscipline.TELEPATHY)">{{ SpellDiscipline.TELEPATHY }}</button>
-            </div>
-        </div>
-        <div ngbDropdown class="d-inline-block me-5">
-            <button type="button" class="btn btn-outline-primary" id="dropdown-spell-ability-cost" ngbDropdownToggle>{{ selectedSpellCost }}</button>
-            <div ngbDropdownMenu aria-labelledby="dropdown-spell-ability-cost">
+			</div>
+		</div>
+    <div ngbDropdown class="d-inline-block me-5">
+			<button type="button" class="btn btn-outline-primary" id="dropdown-spell-cost" ngbDropdownToggle [innerHTML]="selectedSpellCost"></button>
+			<div ngbDropdownMenu aria-labelledby="dropdown-spell-cost" >
                 <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.ANY)">{{ SpellCost.ANY }}</button>
-                <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.REACTION)">{{ SpellCost.REACTION }}</button>
                 <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP1)">{{ SpellCost.AP1 }}</button>
                 <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP2)">{{ SpellCost.AP2 }}</button>
                 <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP3)">{{ SpellCost.AP3 }}</button>
                 <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP4)">{{ SpellCost.AP4 }}</button>
                 <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP5)">{{ SpellCost.AP5 }}</button>
                 <button ngbDropdownItem (click)="onSpellCostFilterChange(SpellCost.AP6)">{{ SpellCost.AP6 }}</button>
+			</div>
+		</div>
+    <div ngbDropdown class="d-inline-block me-5">
+      <button type="button" class="btn btn-outline-primary" id="dropdown-technique-ability-tag" ngbDropdownToggle>Tag Filters {{ `(${currentFilterTags.length})` }}</button>
+      <div ngbDropdownMenu aria-labelledby="dropdown-technique-ability-tag">
+        <div class="d-flex justify-content-center flex-column mx-2">
+          @for (tag of filterTags; track $index) {
+            <input type="checkbox" class="btn-check" [id]="'btncheck' + tag" autocomplete="off" (change)="handleAbilityTagCheckBoxUpdate($event, tag)">
+            <label class="btn btn-outline-primary my-1" [for]="'btncheck' + tag">{{ tag }}</label>
+          }
+        </div>
+      </div>
+    </div>
+    <input class="form-control me-2" type="search" placeholder="Search in name and tags" aria-label="Search" (input)="onFreeTextFilterChange()" [(ngModel)]="currentFilterText">
+  </div>
+</nav>
+<div class="container g-5">
+    <div class="row">
+        <div class="col">
+            <div class="mt-5">
+              <app-ability [ability]="selectedSpell"></app-ability>
             </div>
         </div>
-        <input class="form-control me-2" type="search" placeholder="Search in name, tags and description"
-            aria-label="Search" (input)="onFreeTextFilterChange()" [(ngModel)]="currentFilterText">
-    </div>
-</nav>
-<div class="d-flex justify-content-center">
-    <div class="desktop-width-50 mt-3">
-        <app-ability-list [abilities]="filteredSpells"></app-ability-list>
+        <div class="col">
+            <div ngbDropdown class="d-inline-block">
+                <h5 style="white-space: nowrap;">{{ filteredSpells.length + ' Spell(s)' }}</h5>
+            </div>
+            <div class="row row-cols-lg-auto g-3">
+                @for (spell of filteredSpells; track $index) {
+                  <div class="col">
+                    <div [class]="'spell-wrapper background-' + getColourClass(spell) + ((spell.name === spell.name) ? ' border-selected' : ' border-' + getColourClass(spell))">
+                        <img class="spell-image" 
+                        [src]="spell.meta.iconPath" 
+                        [ngbTooltip]="spell.name"
+                        (click)="onSelectTechnique(spell.name)">
+                    </div>
+                  </div>
+                }
+            </div>
+        </div>
     </div>
 </div>

@@ -1,1 +1,64 @@
-[]
+[
+    {
+        "name": "Fire Breath",
+        "cost": { "ap": 3, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Pyromancy)" ],
+        "meta": { "iconPath": "icons/creatures/abilities/dragon-fire-breath-orange.webp", "colour": "RED" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "Breathe Fire out of Mouth or Nostrils", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "CON",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "CONE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 3,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d8 + ([SPI] / 3) * d8",
+                        "damageType": "Fire",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d8 + ([SPI] / 3) * d8",
+                        "damageType": "Fire",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "Increase Area by 1 [FIELD] and Damage by ([SPI] / 3) * d8."
+        },
+        "flavorText": [
+            { "regularText": "Like a Fire Dragon you breath fire upon your foes", "headerLine": null, "bulletPoints": null}
+        ]
+    }
+]

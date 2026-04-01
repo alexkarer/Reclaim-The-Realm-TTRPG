@@ -1,7 +1,7 @@
 [
     {
         "name": "Battle Recovery",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 1, "life": 0, "other": "" },
         "tags": [ "Technique (Fortitude, Basic)" ],
         "meta": { "iconPath": "icons/magic/life/heart-cross-purple-orange.webp", "colour": "BROWN" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -45,7 +45,7 @@
     },
     {
         "name": "Pushing the Limit",
-        "cost": { "ap": 0, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "cost": { "ap": 0, "mp": 0, "mana": 0, "stamina": 1, "life": 0, "other": "" },
         "tags": [ "[REACTION]", "Technique (Fortitude, Basic)" ],
         "meta": { "iconPath": "icons/magic/control/buff-strength-muscle-damage-orange.webp", "colour": "BROWN" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -94,7 +94,7 @@
     },
     {
         "name": "Overextend",
-        "cost": { "ap": 0, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "cost": { "ap": 0, "mp": 0, "mana": 0, "stamina": 1, "life": 0, "other": "" },
         "tags": [ "Technique (Fortitude, Advanced)" ],
         "meta": { "iconPath": "icons/skills/wounds/injury-face-impact-orange.webp", "colour": "BROWN" },
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -140,7 +140,7 @@
     },
     {
         "name": "Keep Going",
-        "cost": { "ap": 0, "mp": 0, "arcana": 0, "stamina": 3, "life": 0, "other": "" },
+        "cost": { "ap": 0, "mp": 0, "mana": 0, "stamina": 3, "life": 0, "other": "" },
         "tags": [ "[REACTION]", "Technique (Fortitude, Master)" ],
         "meta": { "iconPath": "icons/skills/wounds/anatomy-organ-heart-red.webp", "colour": "BROWN" },
         "requirements": { "requiredLevels": [ { "amount": 8, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ { "amount": 6, "attribute": "[CON]" } ], "requiredPerks": [ ], "otherRequirements": [ ] },

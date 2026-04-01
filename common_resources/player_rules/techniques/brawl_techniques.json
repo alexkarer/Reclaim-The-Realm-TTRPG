@@ -1,7 +1,7 @@
 [
     {
         "name": "Pin Down",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Technique (Brawl, Basic)" ],
         "meta": { "iconPath": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp", "colour": "ORANGE" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -45,7 +45,7 @@
     },
     {
         "name": "Meat Shield",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "[REACTION]", "Technique (Brawl, Basic)" ],
         "meta": { "iconPath": "icons/skills/melee/shield-block-bash-blue.webp", "colour": "ORANGE" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -91,7 +91,7 @@
     },
     {
         "name": "Throw",
-        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 2, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Technique (Brawl, Basic)" ],
         "meta": { "iconPath": "icons/skills/targeting/target-strike-gray.webp", "colour": "ORANGE" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -192,7 +192,7 @@
     },
     {
         "name": "Charge",
-        "cost": { "ap": 3, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 3, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Technique (Brawl, Basic)", "Melee", "Attack", "Move" ],
         "meta": { "iconPath": "icons/creatures/mammals/ox-bull-horned-glowing-orange.webp", "colour": "ORANGE" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -313,7 +313,7 @@
     },
     {
         "name": "Giant Leap",
-        "cost": { "ap": 0, "mp": 6, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 0, "mp": 6, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Technique (Brawl, Advanced)" ],
         "meta": { "iconPath": "/assets/icons/abilities/mountain-climbing.svg", "colour": "ORANGE" },
         "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -362,7 +362,7 @@
     },
     {
         "name": "Dismember",
-        "cost": { "ap": 4, "mp": 0, "arcana": 0, "stamina": 1, "life": 0, "other": "" },
+        "cost": { "ap": 4, "mp": 0, "mana": 0, "stamina": 1, "life": 0, "other": "" },
         "tags": [ "Technique (Brawl, Master)" ],
         "meta": { "iconPath": "icons/skills/wounds/bone-broken-knee-beam.webp", "colour": "ORANGE" },
         "requirements": { "requiredLevels": [ { "amount": 8, "levelType": "[MARTIAL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },

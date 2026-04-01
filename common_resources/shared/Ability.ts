@@ -25,7 +25,7 @@ export class Ability {
 export type AbilityCost = {
     ap: number,
     mp: number,
-    arcana: number,
+    mana: number,
     stamina: number,
     life: number,
     other: string

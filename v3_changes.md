@@ -181,7 +181,8 @@ Maneuver Ideas:
 
 - Also reuse basic (16), advanced (3), master (10), transcendet (25) for spell differential (❌)
 
-- Add full Arcane Mishap Table/Rework for new spell discipline (❌)
+- Add full Spell Failure (Magical Mishap) Table/Rework for new spell discipline (❌)
+    - add at least the level 3 entities that can appear on failure (❌)
 
 - Properly define Spell mechanics: (❌)
     - Concentration, works fine but define it (❌)

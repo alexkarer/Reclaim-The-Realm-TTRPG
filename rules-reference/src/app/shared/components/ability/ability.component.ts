@@ -1,4 +1,4 @@
-import { Component, forwardRef, input } from '@angular/core';
+import { Component, effect, forwardRef, input } from '@angular/core';
 import { Ability, AbilityColour } from '../../../../../../common_resources/shared/Ability';
 import { RequirementsPrettierPipe } from '../../pipes/to-pretty-string';
 import { DynamicContentComponent } from '../../text-utils/dynamic-component-rendering/dynamic-content.component';
@@ -7,6 +7,8 @@ import { TextElementsWithoutAbilityComponent } from '../../text-utils/text-eleme
 import { Technique } from '../../../../../../common_resources/player_rules/techniques/technique';
 import { AbilityActionComponent } from "./ability-action/ability-action.component";
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
+import { Spell } from '../../../../../../common_resources/player_rules/spells/spell';
+import { StmtModifier } from '@angular/compiler';
 
 @Component({
   selector: 'app-ability',
@@ -43,8 +45,8 @@ export class AbilityComponent {
       costText.push(`${cost.ap} [AP]`);
     } if (cost.mp > 0) {
       costText.push(`${cost.mp} [MP]`);
-    } if (cost.arcana > 0) {
-      costText.push(`${cost.arcana} [ARCANA]`);
+    } if (cost.mana > 0) {
+      costText.push(`${cost.mana} [MANA]`);
     } if (cost.stamina > 0) {
       costText.push(`${cost.stamina} [STAMINA]`);
     } if (cost.other && cost.other.trim() !== '') {
@@ -79,5 +81,41 @@ export class AbilityComponent {
       return ability.push?.effect ?? '';
     }
     return '';
+  }
+
+  get isSpell(): boolean {
+    let ability = this.ability();
+    if (ability instanceof Spell) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  get castingDifficulty(): number {
+    let ability = this.ability();
+    if (ability instanceof Spell) {
+      return ability.castingDifficulty;
+    } else {
+      return 0;
+    }
+  }
+
+  get spellComponents() {
+    let ability = this.ability();
+    if (ability instanceof Spell) {
+      return ability.components;
+    } else {
+      return {verbal: '', somatic: '', material: ''};
+    }
+  }
+
+  get spellUpcast() {
+    let ability = this.ability();
+    if (ability instanceof Spell) {
+      return ability.upcast;
+    } else {
+      return {mana: 0, effect: ''};
+    }
   }
 }

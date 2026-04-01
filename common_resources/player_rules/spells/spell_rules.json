@@ -61,20 +61,24 @@
         { "title": "Material", "textKey": "component_material" }
     ],
     "spellFailureTable": [
-        { "roll": "2-4", "title": "Psychic Feedback", "effect": "spell_failure_2_4" },
+        { "roll": "2-4", "title": "Mental Feedback", "effect": "spell_failure_2_4" },
         { "roll": "5-7", "title": "Drain Energy", "effect": "spell_failure_5_7" },
-        { "roll": "9-10", "title": "", "effect": "spell_failure_8_10" },
-        { "roll": "11-13", "title": "", "effect": "spell_failure_11_13" },
-        { "roll": "14-16", "title": "", "effect": "spell_failure_14_16" },
-        { "roll": "17-19", "title": "", "effect": "spell_failure_17_19" },
-        { "roll": "20-22", "title": "", "effect": "spell_failure_20_22" },
-        { "roll": "23-25", "title": "", "effect": "spell_failure_23_25" },
-        { "roll": "26-28", "title": "", "effect": "spell_failure_26_28" },
-        { "roll": "29-31", "title": "", "effect": "spell_failure_29_31" },
-        { "roll": "32-34", "title": "", "effect": "spell_failure_32_34" },
-        { "roll": "35-37", "title": "", "effect": "spell_failure_35_37" },
+        { "roll": "8-10", "title": "Painful Feedback", "effect": "spell_failure_8_10" },
+        { "roll": "11-13", "title": "Weak Discipline Effect", "effect": "spell_failure_11_13" },
+        { "roll": "14-16", "title": "<span class=\"fw-bold text-danger\">TODO</span>", "effect": "spell_failure_14_16" },
+        { "roll": "17-19", "title": "Summon Lesser Entity", "effect": "spell_failure_17_19" },
+        { "roll": "20-22", "title": "Spell Echo", "effect": "spell_failure_20_22" },
+        { "roll": "23-25", "title": "Medium Discipline Effect", "effect": "spell_failure_23_25" },
+        { "roll": "26-28", "title": "<span class=\"fw-bold text-danger\">TODO</span>", "effect": "spell_failure_26_28" },
+        { "roll": "29-31", "title": "Summon Entity", "effect": "spell_failure_29_31" },
+        { "roll": "32-34", "title": "Violent Feedback", "effect": "spell_failure_32_34" },
+        { "roll": "35-37", "title": "Strong Discipline Effect", "effect": "spell_failure_35_37" },
         { "roll": "38-40", "title": "Temporary Rift", "effect": "spell_failure_38_40" },
-        { "roll": "41-43", "title": "", "effect": "spell_failure_41_43" },
-        { "roll": "44+", "title": "", "effect": "spell_failure_44+" }
+        { "roll": "41-43", "title": "Summon Greater Entity", "effect": "spell_failure_41_43" },
+        { "roll": "44+", "title": "Cataclysm", "effect": "spell_failure_44+" }
+    ],
+    "spellFailureByDiscipline": [
+        { "discipline": "Pyromancy", "weakEffect": "pyromancy_weak_effect", "mediumEffect": "pyromancy_medium_effect", "strongEffect": "pyromancy_strong_effect" },
+        { "discipline": "Hydromancy", "weakEffect": "hydromancy_weak_effect", "mediumEffect": "hydromancy_medium_effect", "strongEffect": "hydromancy_strong_effect" }
     ]
 }

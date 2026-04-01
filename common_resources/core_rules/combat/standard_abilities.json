@@ -1,7 +1,7 @@
 [
     {
         "name": "Normal Move",
-        "cost": { "ap": 0, "mp": 1, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 0, "mp": 1, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Move" ],
         "meta": { "iconPath": "/assets/icons/abilities/walk.svg", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -46,7 +46,7 @@
     },
     {
         "name": "Jump",
-        "cost": { "ap": 0, "mp": 4, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 0, "mp": 4, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Move" ],
         "meta": { "iconPath": "/assets/icons/abilities/jump-across.svg", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -91,7 +91,7 @@
     },
     {
         "name": "Stand up",
-        "cost": { "ap": 0, "mp": 5, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 0, "mp": 5, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Move" ],
         "meta": { "iconPath": "/assets/icons/abilities/falling.svg", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -136,7 +136,7 @@
     },
     {
         "name": "Dash",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Move" ],
         "meta": { "iconPath": "/assets/icons/abilities/sprint.svg", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -181,7 +181,7 @@
     },
     {
         "name": "Escape",
-        "cost": { "ap": 0, "mp": 5, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 0, "mp": 5, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Move" ],
         "meta": { "iconPath": "icons/magic/control/debuff-chains-shackles-movement-purple.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -226,7 +226,7 @@
     },
     {
         "name": "Running",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Move" ],
         "meta": { "iconPath": "/assets/icons/abilities/sprint.svg", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },

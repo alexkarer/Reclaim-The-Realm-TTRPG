@@ -1,7 +1,7 @@
 [
     {
         "name": "Consume - Healing Potion",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Healing Potion" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Healing Potion" },
         "tags": [ "Heal" ],
         "meta": { "iconPath": "icons/consumables/potions/vial-cork-red.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -42,7 +42,7 @@
     },
     {
         "name": "Consume - Arcana Potion",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Arcana Potion" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Arcana Potion" },
         "tags": [  ],
         "meta": { "iconPath": "icons/consumables/potions/vial-cork-blue.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -83,7 +83,7 @@
     },
     {
         "name": "Consume - Antidote Potion",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Antidote" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Antidote" },
         "tags": [ ],
         "meta": { "iconPath": "icons/consumables/potions/potion-bottle-labeled-medicine-capped-red-black.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -124,7 +124,7 @@
     },
     {
         "name": "Apply Bandage",
-        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Bandage" },
+        "cost": { "ap": 2, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Bandage" },
         "tags": [ "Heal" ],
         "meta": { "iconPath": "icons/commodities/cloth/cloth-scraps-plain.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -165,7 +165,7 @@
     },
     {
         "name": "Throw - Acid Vial",
-        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Acid vial" },
+        "cost": { "ap": 2, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Acid vial" },
         "tags": [ "Attack", "Ranged" ],
         "meta": { "iconPath": "icons/consumables/potions/bottle-corked-green.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -219,7 +219,7 @@
     },
     {
         "name": "Throw - Oil Flask",
-        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Oil flask" },
+        "cost": { "ap": 2, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Oil flask" },
         "tags": [ "Attack", "Ranged" ],
         "meta": { "iconPath": "icons/consumables/potions/flask-corked-yellow-glow.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -260,7 +260,7 @@
     },
     {
         "name": "Throw - Holy Water",
-        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Holy Water" },
+        "cost": { "ap": 2, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Holy Water" },
         "tags": [ "Attack", "Ranged" ],
         "meta": { "iconPath": "icons/magic/holy/chalice-glowing-gold-water.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -314,7 +314,7 @@
     },
     {
         "name": "Consume - Holy Water",
-        "cost": { "ap": 1, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "1 Holy Water" },
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Holy Water" },
         "tags": [ "Heal" ],
         "meta": { "iconPath": "icons/magic/holy/chalice-glowing-gold-water.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },

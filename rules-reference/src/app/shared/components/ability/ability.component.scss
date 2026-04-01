@@ -9,6 +9,10 @@
     border-radius: 15%;
 }
 
+.casting-difficulty {
+    font-size: 1.5rem;
+}
+
 .ability-divider {
     border-top: solid;
 }
@@ -20,6 +24,9 @@
         background-color: colors.$rtr-red-background-light;
     }
     .body {
+        background-color: colors.$rtr-red-background-dark;
+    }
+    .casting-difficulty {
         background-color: colors.$rtr-red-background-dark;
     }
 }

@@ -1,7 +1,7 @@
 [
     {
         "name": "Prepared Position",
-        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 2, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Technique (Tactical, Basic)" ],
         "meta": { "iconPath": "icons/environment/traps/trap-jaw-tan.webp", "colour": "BLUE" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -47,7 +47,7 @@
     },
     {
         "name": "Analyze Weakpoint",
-        "cost": { "ap": 2, "mp": 0, "arcana": 0, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 2, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Technique (Tactical, Advanced)" ],
         "meta": { "iconPath": "icons/environment/traps/trap-jaw-tan.webp", "colour": "BLUE" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
