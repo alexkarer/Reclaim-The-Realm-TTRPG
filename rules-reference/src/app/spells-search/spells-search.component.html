@@ -74,7 +74,7 @@
             <div class="row row-cols-lg-auto g-3">
                 @for (spell of filteredSpells; track $index) {
                   <div class="col">
-                    <div [class]="'spell-wrapper background-' + getColourClass(spell) + ((spell.name === spell.name) ? ' border-selected' : ' border-' + getColourClass(spell))">
+                    <div [class]="'spell-wrapper background-' + getColourClass(spell) + ((selectedSpell.name === spell.name) ? ' border-selected' : ' border-notselected')">
                         <img class="spell-image" 
                         [src]="spell.meta.iconPath" 
                         [ngbTooltip]="spell.name"

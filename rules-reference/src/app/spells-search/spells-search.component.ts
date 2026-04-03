@@ -22,7 +22,7 @@ export class SpellsSearchComponent {
   selectedSpellDiscipline = SpellDiscipline.ANY;
   selectedSpellCost = SpellCost.ANY;
   currentFilterText: string = "";
-  readonly filterTags = [ "[REACTION]" ];
+  readonly filterTags = [ "[REACTION]", "Attack" ];
   currentFilterTags: string[] = [];
   selectedSpell: Spell = ALL_SPELLS[0];
 
@@ -70,6 +70,7 @@ export class SpellsSearchComponent {
       case AbilityColour.ORANGE: return'orange';
       case AbilityColour.BROWN: return'brown'; 
       case AbilityColour.COLOURLESS: return'';
+      case AbilityColour.REDGREEN: return 'redgreen'
     }
   }
 
@@ -155,10 +156,10 @@ export class SpellsSearchComponent {
 
 enum SpellDifficulty {
   ANY = 'Any Spell Difficulty',
-  SD_6 = 'Spell Difficulty 6',
-  SD_9 = 'Spell Difficulty 9',
-  SD_15 = 'Spell Difficulty 15',
-  SD_25 = 'Spell Difficulty 25',
+  SD_6 = 'Basic - Spell Difficulty 6',
+  SD_9 = 'Advanced - Spell Difficulty 9',
+  SD_15 = 'Master - Spell Difficulty 15',
+  SD_25 = 'Transcendent - Spell Difficulty 25',
 }
 
 enum SpellDiscipline {

@@ -62,7 +62,7 @@
             <div class="row row-cols-lg-auto g-3">
                 @for (technique of filteredTechniques; track $index) {
                   <div class="col">
-                    <div [class]="'technique-wrapper background-' + getColourClass(technique) + ((selectedTechnique.name === technique.name) ? ' border-selected' : ' border-' + getColourClass(technique))">
+                    <div [class]="'technique-wrapper background-' + getColourClass(technique) + ((selectedTechnique.name === technique.name) ? ' border-selected' : ' border-notselected')">
                         <img class="technique-image" 
                         [src]="technique.meta.iconPath" 
                         [ngbTooltip]="technique.name"

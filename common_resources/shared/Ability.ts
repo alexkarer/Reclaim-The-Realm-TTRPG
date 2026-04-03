@@ -31,7 +31,7 @@ export type AbilityCost = {
     other: string
 }
 
-export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, COLOURLESS }
+export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, COLOURLESS, REDGREEN }
 
 export type AbilityAction = {
     type: AbilityActionType,
@@ -175,6 +175,7 @@ export function parseAbilityColour(s?: string): AbilityColour {
         case "ORANGE": return AbilityColour.ORANGE;
         case "BROWN": return AbilityColour.BROWN;
         case "COLOURLESS": return AbilityColour.COLOURLESS;
+        case "REDGREEN": return AbilityColour.REDGREEN;
         default: console.error(`Ability colour ${s} not recognized! Setting colourless`); return AbilityColour.COLOURLESS;
     }
 }

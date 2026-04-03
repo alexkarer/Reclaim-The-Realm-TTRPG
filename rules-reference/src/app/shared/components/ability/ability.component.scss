@@ -26,9 +26,6 @@
     .body {
         background-color: colors.$rtr-red-background-dark;
     }
-    .casting-difficulty {
-        background-color: colors.$rtr-red-background-dark;
-    }
 }
 
 .ability-orange {
@@ -92,5 +89,14 @@
     }
     .body {
         background-color: var(--bs-tertiary-bg);
+    }
+}
+
+.ability-redgreen {
+    .header {
+        background: linear-gradient(0.25turn, colors.$rtr-red-background-light, colors.$rtr-green-background-light);
+    }
+    .body {
+        background: linear-gradient(0.25turn, colors.$rtr-red-background-dark, colors.$rtr-green-background-dark);
     }
 }

@@ -44,7 +44,18 @@ export class AbilityOutcomeComponent {
     if (this.outcome()?.durationUnit === DurationUnit.INDEFINATE) {
       return '';
     } else {
-      return ` for ${this.outcome()?.duration} ${this.outcome()?.durationUnit}`;
+      return ` for ${this.outcome()?.duration} ${this.parseDurationUnit(this.outcome()?.durationUnit, this.outcome()?.duration)}`;
     }
+  }
+
+  private parseDurationUnit(unit?: DurationUnit, durationAmount?: number): string {
+    switch(unit) {
+      case DurationUnit.ROUND: return ((durationAmount ?? 0) > 1 ? '[ROUNDS]' : '[ROUND]');
+      case DurationUnit.HOUR: return ((durationAmount ?? 0) > 1 ? 'Hours' : 'Hour');
+      case DurationUnit.MINUTE: return ((durationAmount ?? 0) > 1 ? 'Minutes' : 'Minutes');
+      case DurationUnit.INDEFINATE: return '';
+      case DurationUnit.NONE: return '';
+    }
+    return '';
   }
 }

@@ -8,7 +8,7 @@
     &:hover,
     &:focus {
         cursor: pointer;
-        border-color: var(--bs-secondary-border-subtle);
+        border-color: var(--bs-secondary-color);
     }
 
     &:active {
@@ -25,31 +25,10 @@
 }
 
 .border-selected {
-    border-color: var(--bs-light);
+    border-color: var(--bs-body-color);
 }
-
-.border-red {
-    border-color: colors.$rtr-red-border;
-}
-
-.border-orange {
-    border-color: colors.$rtr-orange-border;
-}
-
-.border-brown {
-    border-color: colors.$rtr-brown-border;
-}
-
-.border-green {
-    border-color: colors.$rtr-green-border;
-}
-
-.border-blue {
-    border-color: colors.$rtr-blue-border;
-}
-
-.border-yellow {
-    border-color: colors.$rtr-yellow-border;
+.border-notselected {
+    border-color: var(--bs-tertiary-bg);
 }
 
 

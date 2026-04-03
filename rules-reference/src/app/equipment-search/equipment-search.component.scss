@@ -8,7 +8,7 @@
     &:hover,
     &:focus {
         cursor: pointer;
-        border-color: var(--bs-light);
+        border-color: var(--bs-secondary-color);
     }
 
     &:active {
@@ -16,10 +16,9 @@
     }
 }
 
-.not-selected {
-    border-color: var(--bs-secondary-border-subtle);
-}
-
 .selected {
-    border-color: var(--bs-primary);
+    border-color: var(--bs-body-color);
+}
+.not-selected {
+    border-color: var(--bs-tertiary-bg);
 }

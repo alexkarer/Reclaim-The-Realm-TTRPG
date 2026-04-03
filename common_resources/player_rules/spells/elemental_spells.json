@@ -60,5 +60,465 @@
         "flavorText": [
             { "regularText": "Like a Fire Dragon you breath fire upon your foes", "headerLine": null, "bulletPoints": null}
         ]
+    },
+    {
+        "name": "Ignite",
+        "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Pyromancy)" ],
+        "meta": { "iconPath": "icons/magic/fire/flame-burning-earth-yellow.webp", "colour": "RED" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 6,
+                "targetType": "CUSTOM",
+                "customTargeting": "Up to ([SPI] / 3) Targets",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "BURNING I",
+                        "duration": 0,
+                        "durationUnit": "INDEFINATE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 3,
+            "effect": "Instead of [BURNING I] afflict [BURNING II] and instead of [BURNING II] afflict [BURNING III]."
+        },
+        "flavorText": [
+            { "regularText": "The Fire Element is always eager to show itself.", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Fireball",
+        "cost": { "ap": 4, "mp": 0, "mana": 4, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Pyromancy)" ],
+        "meta": { "iconPath": "icons/magic/fire/projectile-fireball-smoke-orange.webp", "colour": "RED" },
+        "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[SPELL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 9,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "INT",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 20,
+                "targetType": "SPHERE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 2,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "20 + [SPI] * d6",
+                        "damageType": "Fire",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "20 + [SPI] * d6",
+                        "damageType": "Fire",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "Increase Area by 1 [FIELD] and Damage by ([SPI] / 3) * d6."
+        },
+        "flavorText": [
+            { "regularText": "A sphere of Fire errupts engulfing all within.", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Erruption",
+        "cost": { "ap": 5, "mp": 0, "mana": 10, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Pyromancy, Geomancy)" ],
+        "meta": { "iconPath": "icons/magic/earth/volcano-explosion-lava-yellow.webp", "colour": "REDGREEN" },
+        "requirements": { "requiredLevels": [ { "amount": 8, "levelType": "[SPELL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 15,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "Rocky or Earthen Ground" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "INT",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 8,
+                "targetType": "SPHERE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 5,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "40 + [SPI] * d6 Fire and 20 + ([SPI] / 2) * d6",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "40 + [SPI] * d6 Fire and 20 + ([SPI] / 2) * d6",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            },
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 8,
+                "targetType": "CUSTOM",
+                "customTargeting": "Area just targeted by previous Action",
+                "targets": 0,
+                "targetAreaSizeFields": 3,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 3,
+                        "durationUnit": "ROUND",
+                        "freeText": [ { "regularText": "For 3 [ROUNDS]: [AREA EFFECT] creatures within recieve 5d6 + [SPI]/2 *d6 fire damage and area counts as difficult Terrain.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 3,
+            "effect": "Increase Area by 1 [FIELD] and Duration by 2 [ROUNDS]."
+        },
+        "flavorText": [
+            { "regularText": "The Land always carries tremendous energy just waiting to errupt.", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Stone Barrier",
+        "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Geomancy)", "[REACTION]" ],
+        "meta": { "iconPath": "icons/magic/earth/barrier-stone-explosion-spiked.webp", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "", "somatic": "Gesture", "material": "nearby earth or stone" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "NONE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "",
+                        "freeText": [
+                            { "regularText": "Create a Wall of Stone that appears at the edge of 1 [FIELD] (that field can be occupied). The Wall has 5 + 2*[SPI] [HP] and if this spell was cast in response to an [TAG;Attack] Ability, that Ability instead hits the Wall.", "headerLine": null, "bulletPoints": null},
+                            { "regularText": "The Wall crumbles away after 10 [ROUNDS].", "headerLine": null, "bulletPoints": null}
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": "Increase the length of the Wall by 1 [FIELD] and the Wall [HP] by 5+[SPI]."
+        },
+        "flavorText": [
+            { "regularText": "You call upon the nearby stone/earth to protect you.", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Poison Touch",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Geomancy)", "Attack" ],
+        "meta": { "iconPath": "icons/magic/acid/dissolve-arm-flesh.webp", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "Gesture (Touch)", "material": "" },
+        "actions": [
+            {
+                "actionType": "ATTACK",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "TOUGHNESS",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d12 + ([SPI] / 3) * d12 poison damage",
+                        "damageType": "Poison",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "VULNURABLE I",
+                        "duration": 2,
+                        "durationUnit": "ROUND",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "10 + ([SPI] / 3) * d12 poison damage",
+                        "damageType": "Poison",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "VULNURABLE I",
+                        "duration": 2,
+                        "durationUnit": "ROUND",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "10 + ([SPI] / 3) * d12 poison damage",
+                        "damageType": "Poison",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "upcast": {
+            "mana": 3,
+            "effect": "Increase damage by 10 + ([SPI] / 3) * d12 and instead of [VULNURABLE I] afflict [VULNURABLE II] and instead of [VULNURABLE II] afflict [VULNURABLE III]."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Rock Throw",
+        "cost": { "ap": 3, "mp": 0, "mana": 4, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Geomancy)", "Attack" ],
+        "meta": { "iconPath": "icons/magic/earth/projectile-stone-boulder-green.webp", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[SPELL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 9,
+        "components": { "verbal": "Invocation", "somatic": "Gesture (Touch)", "material": "nearby earth or stone" },
+        "actions": [
+            {
+                "actionType": "ATTACK",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "AGI",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 8,
+                "targetType": "SPHERE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 1,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "25 + ([SPI] / 2) * d12",
+                        "damageType": "Physical",
+                        "critDamage": true,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "25 + ([SPI] / 2) * d12",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "25 + ([SPI] / 2) * d12",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [
+                            { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
+                        ]
+                    }
+                ]
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "Increase Area by 1 [FIELD] and Damage by 5 + ([SPI] / 5) * d12."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
     }
 ]

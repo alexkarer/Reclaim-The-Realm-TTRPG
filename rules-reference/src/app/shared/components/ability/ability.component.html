@@ -5,7 +5,7 @@
             <h4 class="ms-2">{{ ability()?.name }}</h4>
             <p class="fst-italic text-body-secondary ms-3"><span class="text-body">Tags: </span><app-dynamic-content [content]="ability()?.tags?.join('; ') | textProcessor"></app-dynamic-content></p>
             @if (isSpell) {
-                <span class="badge rounded-pill casting-difficulty">{{ castingDifficulty }}</span>
+                <span class="badge rounded-pill body casting-difficulty">{{ castingDifficulty }}</span>
             }
         </div>
     </div>

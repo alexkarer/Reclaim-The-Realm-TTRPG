@@ -100,12 +100,13 @@ export class TechniquesSearchComponent {
     const colour = technique?.meta.colour ?? AbilityColour.COLOURLESS;
     switch (colour) {
       case AbilityColour.GREEN: return 'green';
-      case AbilityColour.RED: return'red';
-      case AbilityColour.BLUE: return'blue';
-      case AbilityColour.YELLOW: return'yellow';
-      case AbilityColour.ORANGE: return'orange';
-      case AbilityColour.BROWN: return'brown'; 
-      case AbilityColour.COLOURLESS: return'';
+      case AbilityColour.RED: return 'red';
+      case AbilityColour.BLUE: return 'blue';
+      case AbilityColour.YELLOW: return 'yellow';
+      case AbilityColour.ORANGE: return 'orange';
+      case AbilityColour.BROWN: return 'brown'; 
+      case AbilityColour.COLOURLESS: return '';
+      case AbilityColour.REDGREEN: return 'redgreen'
     }
   }
 
