@@ -105,8 +105,10 @@ export class TechniquesSearchComponent {
       case AbilityColour.YELLOW: return 'yellow';
       case AbilityColour.ORANGE: return 'orange';
       case AbilityColour.BROWN: return 'brown'; 
+      case AbilityColour.WHITE: return 'white'; 
       case AbilityColour.COLOURLESS: return '';
-      case AbilityColour.REDGREEN: return 'redgreen'
+      case AbilityColour.REDGREEN: return 'redgreen';
+      case AbilityColour.BLUEWHITE: return 'bluewhite';
     }
   }
 

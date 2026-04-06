@@ -83,6 +83,17 @@
     }
 }
 
+.ability-white {
+    border-color: colors.$rtr-white-border;
+
+    .header {
+        background-color: colors.$rtr-white-background-light;
+    }
+    .body {
+        background-color: colors.$rtr-white-background-dark;
+    }
+}
+
 .ability-colourless {
     .header {
         background-color: var(--bs-body-bg);
@@ -98,5 +109,14 @@
     }
     .body {
         background: linear-gradient(0.25turn, colors.$rtr-red-background-dark, colors.$rtr-green-background-dark);
+    }
+}
+
+.ability-bluewhite {
+    .header {
+        background: linear-gradient(0.25turn, colors.$rtr-blue-background-light, colors.$rtr-white-background-light);
+    }
+    .body {
+        background: linear-gradient(0.25turn, colors.$rtr-blue-background-dark, colors.$rtr-white-background-dark);
     }
 }

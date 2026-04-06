@@ -296,7 +296,7 @@
                         "healThp": false,
                         "statusEffect": "",
                         "duration": 0,
-                        "durationUnit": "",
+                        "durationUnit": "NONE",
                         "freeText": [
                             { "regularText": "Create a Wall of Stone that appears at the edge of 1 [FIELD] (that field can be occupied). The Wall has 5 + 2*[SPI] [HP] and if this spell was cast in response to an [TAG;Attack] Ability, that Ability instead hits the Wall.", "headerLine": null, "bulletPoints": null},
                             { "regularText": "The Wall crumbles away after 10 [ROUNDS].", "headerLine": null, "bulletPoints": null}
@@ -327,7 +327,7 @@
         "components": { "verbal": "Invocation", "somatic": "Gesture (Touch)", "material": "" },
         "actions": [
             {
-                "actionType": "ATTACK",
+                "actionType": "SPELL_TEST",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "AGI",
@@ -441,7 +441,7 @@
         "components": { "verbal": "Invocation", "somatic": "Gesture (Touch)", "material": "nearby earth or stone" },
         "actions": [
             {
-                "actionType": "ATTACK",
+                "actionType": "SPELL_TEST",
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "AGI",
@@ -516,6 +516,412 @@
         "upcast": {
             "mana": 2,
             "effect": "Increase Area by 1 [FIELD] and Damage by 5 + ([SPI] / 5) * d12."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Earthquake",
+        "cost": { "ap": 6, "mp": 0, "mana": 20, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Geomancy)" ],
+        "meta": { "iconPath": "icons/magic/earth/explosion-lava-stone-yellow.webp", "colour": "GREEN" },
+        "requirements": { "requiredLevels": [ { "amount": 12, "levelType": "[SPELL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 25,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "TODO: something" },
+        "actions": [
+            {
+                "actionType": "NO_ACTION",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "NONE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 0,
+            "effect": ""
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Acid Stream",
+        "cost": { "ap": 3, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Hydromancy)" ],
+        "meta": { "iconPath": "icons/magic/acid/projectile-stream-bubbles.webp", "colour": "BLUE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "INT",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "LINE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 9,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d8 + ([SPI] / 3) * d8",
+                        "damageType": "Corrosive",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d8 + ([SPI] / 3) * d8",
+                        "damageType": "Corrosive",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 3,
+            "effect": "Create an additional Stream (Each target is still only hit once by this spell) increase and Damage by ([SPI] / 3) * d8."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Icy Floor",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Hydromancy)" ],
+        "meta": { "iconPath": "icons/magic/water/snowflake-ice-blue.webp", "colour": "BLUE" },
+        "requirements": { "requiredLevels": [  ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "INT",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 8,
+                "targetType": "SPHERE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 2,
+                "opposingSave": "DODGE",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "PRONE",
+                        "duration": 0,
+                        "durationUnit": "INDEFINATE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            },
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 8,
+                "targetType": "CUSTOM",
+                "customTargeting": "Area just targeted by previous Action",
+                "targets": 0,
+                "targetAreaSizeFields": 3,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 3,
+                        "durationUnit": "ROUND",
+                        "freeText": [ { "regularText": "For [SPI] [ROUNDS]: [AREA EFFECT] creatures within recieve d6 Frost damage and area counts as difficult Terrain.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 3,
+            "effect": "Increase Area by 1 [FIELD] and damage by 1d6."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Blizzard",
+        "cost": { "ap": 4, "mp": 0, "mana": 4, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Hydromancy, Aeromancy)" ],
+        "meta": { "iconPath": "icons/magic/air/wind-weather-snow-gusts.webp", "colour": "BLUEWHITE" },
+        "requirements": { "requiredLevels": [ { "amount": 4, "levelType": "[SPELL LEVEL]" } ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 9,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "M (Clouds in the sky, or fog in the air)" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "INT",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 10,
+                "targetType": "SPHERE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 4,
+                "opposingSave": "TOUGHNESS",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "15 + [SPI]/2 * d6",
+                        "damageType": "Frost",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "CRIPPLED I",
+                        "duration": 2,
+                        "durationUnit": "ROUND",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "15 + [SPI]/2 * d6",
+                        "damageType": "Poison",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "NONE",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": [ ]
+            },
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "CUSTOM",
+                "customTargeting": "Area just targeted by previous Action",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 3,
+                        "durationUnit": "ROUND",
+                        "freeText": [ { "regularText": "For [SPI] [ROUNDS]: [AREA EFFECT] creatures within recieve 2d6 Frost damage and area counts as difficult Terrain and gives [PARTIAL CONCEALMENT].", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "Improve Range by 2 [FIELD], Area by 1 [FIELD] and initial damage by 5 + [SPI]/4 * d6"
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Gust of Wind",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Aeromancy)" ],
+        "meta": { "iconPath": "icons/magic/air/air-wave-gust-blue.webp", "colour": "WHITE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "", "somatic": "Blowing Air", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "CON",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "CONE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 4,
+                "opposingSave": "STABILITY",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "push creatures and objects up to [SPI] [FIELD] away.", "headerLine": null, "bulletPoints": null} ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "PRONE",
+                        "duration": 0,
+                        "durationUnit": "INDEFINATE",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "push creatures and objects up to [SPI]/2 [FIELD] away.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": ""
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Favourable Winds",
+        "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Aeromancy)", "[CONCENTRATION] 1" ],
+        "meta": { "iconPath": "", "colour": "WHITE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ { "regularText": "TODO:", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": ""
         },
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}

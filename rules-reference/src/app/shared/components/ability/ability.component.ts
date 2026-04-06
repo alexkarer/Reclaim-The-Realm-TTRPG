@@ -30,8 +30,10 @@ export class AbilityComponent {
       case AbilityColour.YELLOW: return'ability-yellow';
       case AbilityColour.ORANGE: return'ability-orange';
       case AbilityColour.BROWN: return'ability-brown'; 
+      case AbilityColour.WHITE: return'ability-white'; 
       case AbilityColour.COLOURLESS: return'ability-colourless';
       case AbilityColour.REDGREEN: return 'ability-redgreen';
+      case AbilityColour.BLUEWHITE: return 'ability-bluewhite';
     }
   }
 

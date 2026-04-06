@@ -171,13 +171,19 @@ Maneuver Ideas:
 - Split up disciplines differently (✅)
     - Elemental (Pyrmoancy, Hydromancy, Aeromancy, Geomancy) should be unchanged, the incompability works quite well. Maybe certain elements should emphazise certain Attributes more. (✅)
     - Psychic(Telekinesis, Telepathy, Divintation), These are abilities that also manifest biologically in the brain, should emphasis INT (telekin), PER (divin) and CHA (telepath). (✅)
+        - Add Biomancy to psychic as replacement for transmutation? (❌)
     - Light (Restoration, Holy), Only possible for good chars, mostly need SPI (✅)
     - Dark (Necromancy, Unholy), Only possible for evil chars, mostly need SPI (✅)
-    - Arcane (Teleporation, Conjuration, Illusion) there are ones that can be learned by most people, should mostly emphasize SPI and INT (✅)
-        - Transmutation was remoced, check if it is actually needed.  (❌)
-            + possible Transmutation Spell List:
-                * Enhance (Change physically to enhance differnt things: senses or body)
-                * Polymorph
+    - Arcane is a bit too akward and doesn't really fit in there:
+        - THink if it is possible to remove it?  (❌)
+            - Teleporation is akward but needed
+            - Illusion is akward.
+            - Conjuration as well.
+        - Arcane (Teleporation, Conjuration, Illusion) there are ones that can be learned by most people, should mostly emphasize SPI and INT (✅)
+            - Transmutation was remoced, check if it is actually needed.  (❌)
+                + possible Transmutation Spell List:
+                    * Enhance (Change physically to enhance differnt things: senses or body)
+                    * Polymorph
 
 - Also reuse basic (16), advanced (3), master (10), transcendet (25) for spell differential (❌)
 

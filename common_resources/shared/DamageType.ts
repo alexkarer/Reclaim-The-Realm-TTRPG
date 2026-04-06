@@ -28,6 +28,8 @@ export function parseDamageType(s: string): DamageType {
             return DamageType.SONIC;
         case DamageType.ELECTRIC.toLowerCase():
             return DamageType.ELECTRIC;
+        case DamageType.POISON.toLowerCase():
+            return DamageType.POISON;
         case DamageType.PSYCHIC.toLowerCase():
             return DamageType.PSYCHIC;
         case DamageType.HOLY.toLowerCase():
