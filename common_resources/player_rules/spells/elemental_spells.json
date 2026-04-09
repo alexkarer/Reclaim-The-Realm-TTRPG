@@ -882,7 +882,7 @@
         "name": "Favourable Winds",
         "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Spell(Elemental, Aeromancy)", "[CONCENTRATION] 1" ],
-        "meta": { "iconPath": "", "colour": "WHITE" },
+        "meta": { "iconPath": "icons/magic/air/wind-stream-blue-gray.webp", "colour": "WHITE" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "castingDifficulty": 6,
         "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "" },
@@ -892,11 +892,11 @@
                 "customAction": "",
                 "customCondition": null,
                 "attribute": "NONE",
-                "rangeType": "NONE",
-                "rangeDistanceFields": 0,
-                "targetType": "SELF",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 3,
+                "targetType": "ALLY",
                 "customTargeting": "",
-                "targets": 0,
+                "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
                 "outcomesAlways": [
@@ -910,7 +910,14 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
-                        "freeText": [ { "regularText": "TODO:", "headerLine": null, "bulletPoints": null} ]
+                        "freeText": [ 
+                            { "regularText": "For [SPI] [ROUNDS]: target gains the following Effects:", "headerLine": null, "bulletPoints": null},
+                            { "regularText": null, "headerLine": null, "bulletPoints": [
+                                "+([SPI]/2) [MP]",
+                                "+([SPI]/2) [DODGE]",
+                                "Each time the [ABILITY;Dash] Ability is used, gain an additional [MP]"
+                            ]}
+                        ]
                     }
                 ],
                 "outcomesOnCritSuccess": [],
@@ -920,8 +927,64 @@
             }
         ],
         "upcast": {
-            "mana": 1,
-            "effect": ""
+            "mana": 2,
+            "effect": "You can target an additional ally."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Fly TODO",
+        "cost": { "ap": 1, "mp": 0, "mana": 4, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Elemental, Aeromancy)", "[CONCENTRATION] 1" ],
+        "meta": { "iconPath": "icons/creatures/abilities/wings-birdlike-blue.webp", "colour": "WHITE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 9,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 3,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "freeText": [ 
+                            { "regularText": "For [SPI] [ROUNDS]: target gains the following Effects:", "headerLine": null, "bulletPoints": null},
+                            { "regularText": null, "headerLine": null, "bulletPoints": [
+                                "+([SPI]/2) [MP]",
+                                "+([SPI]/2) [DODGE]",
+                                "Each time the [ABILITY;Dash] Ability is used, gain an additional [MP]"
+                            ]}
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "You can target an additional ally."
         },
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}
