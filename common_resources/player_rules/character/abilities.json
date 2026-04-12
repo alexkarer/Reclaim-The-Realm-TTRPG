@@ -10,6 +10,7 @@
         { "name": "Condition", "textkey": "ability_action_condition" },
         { "name": "Target(s)", "textkey": "ability_action_targets" },
         { "name": "Range", "textkey": "ability_action_range" },
+        { "name": "Duration", "textkey": "ability_action_duration" },
         { "name": "Action (Type)", "textkey": "ability_action_action_type" },
         { "name": "Outcomes", "textkey": "ability_action_outcomes" }
     ]

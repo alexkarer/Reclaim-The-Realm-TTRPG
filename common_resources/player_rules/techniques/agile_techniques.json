@@ -18,6 +18,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -29,6 +32,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "You can immedatly use the [ABILITY;Jump] Ability at no additional cost but halve the distance jumped. If you don’t have at least 3 [MP] or a reaction availible in your current turn you can’t perform another wall jump. Depending on surface conditions the GM might require you to perform a [AGI] Athletics [D20 TEST].", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -67,6 +71,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -78,6 +85,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "You can move 2[FIELD] (3m). During this movement you can move through opposing creatures but can't end your movement in fields occupied by them.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -116,6 +124,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -129,6 +140,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "You are now mounted on top of the creature which has the following effects:", "headerLine": null, "bulletPoints": null},
                             { "regularText": null, "headerLine": null, "bulletPoints": [
@@ -167,6 +179,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [ 
                     {
                         "outcomeType": "FREETEXT",
@@ -178,6 +193,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "You can immediatly use the [ABILITY;Normal Move] Ability at no additional Cost.", "headerLine": null, "bulletPoints": null}
                         ]
@@ -216,6 +232,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [ 
                     {
                         "outcomeType": "FREETEXT",
@@ -227,6 +246,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "You can move 1 [FIELD] (1.5m), this movement can be made vertically along walls. If at the end of the [ROUND] you are not standing or holding on to anything, you are falling down.", "headerLine": null, "bulletPoints": null}
                         ]
@@ -262,6 +282,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [ ],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [ 
@@ -275,6 +298,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Target creature's can't use [REACTION] Abilities in response to your Abilities for the remaining [ROUND].", "headerLine": null, "bulletPoints": null}
                         ]
@@ -311,6 +335,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -322,6 +349,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "The next [TAG;Attack] Ability against you automatically results in a critical fail.", "headerLine": null, "bulletPoints": null}
                         ]
@@ -360,6 +388,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -371,6 +402,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "The gain the following benefits for the current [ROUND]:", "headerLine": null, "bulletPoints": null},
                             { "regularText": null, "headerLine": null, "bulletPoints": [

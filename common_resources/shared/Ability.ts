@@ -8,6 +8,8 @@ import tacticalTechniquesJson from "../player_rules/techniques/tactical_techniqu
 import weaponAbilitiesJson from "../player_rules/equipment/equipment_abilities/weapon_abilities.json";
 import otherEquipmentAbilitiesJson from "../player_rules/equipment/equipment_abilities/other_equipment_abilities.json";
 import consumableAbilitiesJson from "../player_rules/equipment/equipment_abilities/consumables_abilities.json";
+import lightSpellsJson from "../player_rules/spells/light_spells.json";
+import elementalSpellsJson from "../player_rules/spells/elemental_spells.json";
 
 export class Ability {
     name!: string;
@@ -45,6 +47,9 @@ export type AbilityAction = {
     targets: number,
     targetAreaSizeFields: number,
     opposingSave: AbilityOpposingSave,
+    duration: number,
+    durationUnit: DurationUnit,
+    customDuration: string | null,
     outcomesAlways: AbilityActionOutcome[];
     outcomesOnCritSuccess: AbilityActionOutcome[],
     outcomesOnSuccess: AbilityActionOutcome[],
@@ -68,11 +73,12 @@ export type AbilityActionOutcome = {
     statusEffect: string,
     duration: number,
     durationUnit: DurationUnit,
+    customDuration: string | null,
     freeText: TextElementWithoutAbility[];
 }
 
 export enum AbilityActionOutcomeType { FREETEXT, DAMAGE, HEAL, STATUS_EFFECT }
-export enum DurationUnit { NONE, INDEFINATE, ROUND = '[ROUND]', MINUTE = 'Minute(s)', HOUR = 'Hour(s)' }
+export enum DurationUnit { NONE, INDEFINATE, CUSTOM, ROUND = '[ROUND]', MINUTE = 'Minute(s)', HOUR = 'Hour(s)' }
 
 export class AbilityOld {
     name!: string;
@@ -115,7 +121,9 @@ const tacticalSampleAction = tacticalTechniquesJson[0].actions[0];
 const weaponAbilitiesSampleAction = weaponAbilitiesJson[4].actions[0];
 const otherEquipmentAbilitiesSampleAction = otherEquipmentAbilitiesJson[3].actions[0];
 const consumableSampleAction = consumableAbilitiesJson[0].actions[0];
-type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction | typeof weaponAbilitiesSampleAction | typeof otherEquipmentAbilitiesSampleAction | typeof consumableSampleAction;
+const lightSpellSampleAction = lightSpellsJson[1].actions[1];
+const elementalSpellSampleAction = elementalSpellsJson[10].actions[0];
+type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction | typeof weaponAbilitiesSampleAction | typeof otherEquipmentAbilitiesSampleAction | typeof consumableSampleAction | typeof lightSpellSampleAction | typeof elementalSpellSampleAction;
 
 export function mapAction(jsonAction: JsonAction): AbilityAction {
     return {
@@ -130,6 +138,9 @@ export function mapAction(jsonAction: JsonAction): AbilityAction {
         targets: jsonAction.targets,
         targetAreaSizeFields: jsonAction.targetAreaSizeFields,
         opposingSave: parseAbilityOpposingSave(jsonAction.opposingSave),
+        duration: jsonAction.duration,
+        durationUnit: parseDurationUnit(jsonAction.durationUnit),
+        customDuration: jsonAction.customDuration,
         outcomesAlways: jsonAction.outcomesAlways.map(jsonOutcome => mapOutcome(jsonOutcome)),
         outcomesOnCritSuccess: jsonAction.outcomesOnCritSuccess.map(jsonOutcome => mapOutcome(jsonOutcome)),
         outcomesOnSuccess: jsonAction.outcomesOnSuccess.map(jsonOutcome => mapOutcome(jsonOutcome)),
@@ -158,6 +169,7 @@ function mapOutcome(jsonOutcome: JsonOutcome): AbilityActionOutcome {
         statusEffect: jsonOutcome.statusEffect,
         duration: jsonOutcome.duration,
         durationUnit: parseDurationUnit(jsonOutcome.durationUnit),
+        customDuration: jsonOutcome.customDuration,
         freeText: jsonOutcome.freeText
     };
 }
@@ -290,6 +302,7 @@ export function parseDurationUnit(s?: string): DurationUnit {
         case "MINUTE": return DurationUnit.MINUTE;
         case "HOUR": return DurationUnit.HOUR;
         case "INDEFINATE": return DurationUnit.INDEFINATE;
+        case "CUSTOM": return DurationUnit.CUSTOM;
         case "NONE": return DurationUnit.NONE;
         default: console.error(`DurationUnit ${s} not recognized! Setting NONE`); return DurationUnit.NONE;
     }

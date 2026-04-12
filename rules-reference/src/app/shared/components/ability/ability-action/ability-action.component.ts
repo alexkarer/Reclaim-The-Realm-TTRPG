@@ -1,8 +1,9 @@
 import { Component, input, forwardRef } from '@angular/core';
-import { AbilityAction, AbilityActionType, AbilityRangeType, AbilityTargetType } from '../../../../../../../common_resources/shared/Ability';
+import { AbilityAction, AbilityActionType, AbilityRangeType, AbilityTargetType, DurationUnit } from '../../../../../../../common_resources/shared/Ability';
 import { DynamicContentComponent } from "../../../text-utils/dynamic-component-rendering/dynamic-content.component";
 import { TextProcessorPipe } from "../../../text-utils/text-processor";
 import { AbilityOutcomeComponent } from "./ability-outcome/ability-outcome.component";
+import { formatDurationUnit } from '../../../utils/ability-utils';
 
 @Component({
   selector: 'app-ability-action',
@@ -92,6 +93,20 @@ export class AbilityActionComponent {
       case AbilityRangeType.RANGE_DROPOFF: return `[RANGE_DROPOFF] ${this.action()?.rangeDistanceFields}[FIELD]/${(this.action()?.rangeDistanceFields ?? 0) * 2}[FIELD]/${(this.action()?.rangeDistanceFields ?? 0) * 4}[FIELD];`;;
     }
   }
+
+  get hasDuration(): boolean {
+    return this.action()?.durationUnit !== DurationUnit.NONE;
+  }
+
+  get durationText(): string {
+      if (this.action()?.durationUnit === DurationUnit.INDEFINATE) {
+        return '';
+      } else if (this.action()?.durationUnit === DurationUnit.CUSTOM) {
+        return this.action()?.customDuration ?? '';
+      } else {
+        return `${this.action()?.duration} ${formatDurationUnit(this.action()?.durationUnit, this.action()?.duration)}`;
+      }
+    }
 
   private areMultipleTargets(): boolean {
     return (this.action()?.targets ?? 0) > 1

@@ -18,6 +18,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 2,
                 "opposingSave": "WILLPOWER",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -31,6 +34,7 @@
                         "statusEffect": "TAUNTED",
                         "duration": 2,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -62,6 +66,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "WILLPOWER",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -75,6 +82,7 @@
                         "statusEffect": "TAUNTED",
                         "duration": 2,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -106,6 +114,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "WILLPOWER",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "HEAL",
@@ -117,6 +128,7 @@
                         "statusEffect": "",
                         "duration": 2,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -150,6 +162,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "WILLPOWER",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -161,6 +176,7 @@
                         "statusEffect": "",
                         "duration": 1,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Target gains [CHA] extra [MP] for this [ROUND]. Additionally it gains a bonus equal to [CHA]/2 towards their next [D20 TEST] they make this [ROUND].", "headerLine": null, "bulletPoints": null}
                         ]
@@ -196,6 +212,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "HEAL",
@@ -207,6 +226,7 @@
                         "statusEffect": "",
                         "duration": 2,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": []
                     }
                 ],
@@ -240,6 +260,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -251,6 +274,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Target creature regains 1 [HP].", "headerLine": null, "bulletPoints": null}
                         ]

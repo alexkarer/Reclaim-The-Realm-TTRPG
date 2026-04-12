@@ -18,6 +18,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -30,6 +33,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -44,6 +48,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -58,6 +63,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -72,6 +78,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -103,6 +110,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -115,6 +125,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -129,6 +140,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -143,6 +155,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -157,6 +170,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -188,6 +202,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -200,6 +217,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -214,6 +232,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -228,6 +247,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -242,6 +262,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -260,6 +281,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "TOUGHNESS",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [ ],
                 "outcomesOnSuccess": [
@@ -273,6 +297,7 @@
                         "statusEffect": "BLEEDING I",
                         "duration": 2,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -307,6 +332,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -319,6 +347,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -333,6 +362,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -347,6 +377,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -361,6 +392,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -395,6 +427,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -407,6 +442,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -421,6 +457,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -435,6 +472,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -449,6 +487,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -480,6 +519,9 @@
                 "targets": 2,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -492,6 +534,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -506,6 +549,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -520,6 +564,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -534,6 +579,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -568,6 +614,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -580,6 +629,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -594,6 +644,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -608,6 +659,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -622,6 +674,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -640,6 +693,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [ ],
                 "outcomesOnSuccess": [
@@ -653,6 +709,7 @@
                         "statusEffect": "CRIPPLED I",
                         "duration": 2,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -687,6 +744,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -699,6 +759,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -713,6 +774,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -727,6 +789,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -741,6 +804,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -772,6 +836,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -784,6 +851,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -798,6 +866,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -812,6 +881,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -826,6 +896,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -844,6 +915,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "TOUGHNESS",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [ ],
                 "outcomesOnSuccess": [
@@ -857,6 +931,7 @@
                         "statusEffect": "STUNNED I",
                         "duration": 2,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -891,6 +966,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -903,6 +981,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -917,6 +996,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -931,6 +1011,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -945,6 +1026,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -976,6 +1058,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -988,6 +1073,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1002,6 +1088,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1016,6 +1103,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1030,6 +1118,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1061,6 +1150,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -1073,6 +1165,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1087,6 +1180,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1101,6 +1195,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1115,6 +1210,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1146,6 +1242,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -1158,6 +1257,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1172,6 +1272,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1186,6 +1287,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1200,6 +1302,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1218,6 +1321,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [ ],
                 "outcomesOnSuccess": [
@@ -1231,6 +1337,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Push target up to [STR]/2 (min 1) [FIELD] away or alternativly knock it [PRONE].", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1264,6 +1371,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -1276,6 +1386,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1290,6 +1401,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1304,6 +1416,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1318,6 +1431,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1349,6 +1463,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -1361,6 +1478,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1375,6 +1493,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1389,6 +1508,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1403,6 +1523,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1434,6 +1555,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -1446,6 +1570,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1460,6 +1585,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1474,6 +1600,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1488,6 +1615,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1522,6 +1650,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [ {
                         "outcomeType": "FREETEXT",
                         "expression": "",
@@ -1532,6 +1663,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Reduce incoming damage by medium [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1569,6 +1701,9 @@
                 "targets": 2,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -1581,6 +1716,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1595,6 +1731,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1609,6 +1746,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1623,6 +1761,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1657,6 +1796,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -1669,6 +1811,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1683,6 +1826,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1697,6 +1841,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1711,6 +1856,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1742,6 +1888,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -1754,6 +1903,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1768,6 +1918,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1782,6 +1933,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1796,6 +1948,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1830,6 +1983,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -1842,6 +1998,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1856,6 +2013,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1870,6 +2028,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1884,6 +2043,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -1902,6 +2062,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "TOUGHNESS",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [ ],
                 "outcomesOnSuccess": [
@@ -1915,6 +2078,7 @@
                         "statusEffect": "BLEEDING I",
                         "duration": 2,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1949,6 +2113,9 @@
                 "targets": 2,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -1961,6 +2128,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1975,6 +2143,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -1989,6 +2158,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2003,6 +2173,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2037,6 +2208,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -2049,6 +2223,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2063,6 +2238,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2077,6 +2253,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2091,6 +2268,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2122,6 +2300,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -2134,6 +2315,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2148,6 +2330,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2162,6 +2345,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2176,6 +2360,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2210,6 +2395,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -2222,6 +2410,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2236,6 +2425,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2250,6 +2440,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2264,6 +2455,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2282,6 +2474,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "TOUGHNESS",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [ ],
                 "outcomesOnSuccess": [
@@ -2295,6 +2490,7 @@
                         "statusEffect": "STUNNED I",
                         "duration": 2,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2329,6 +2525,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -2341,6 +2540,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2355,6 +2555,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2369,6 +2570,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2383,6 +2585,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2401,6 +2604,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [ ],
                 "outcomesOnSuccess": [
@@ -2414,6 +2620,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Push target up to 1 + ([STR]/2) (min 1) [FIELD] away or alternativly knock it [PRONE].", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2447,6 +2654,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -2459,6 +2669,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2473,6 +2684,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2487,6 +2699,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2501,6 +2714,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2532,6 +2746,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -2544,6 +2761,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2558,6 +2776,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2572,6 +2791,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2586,6 +2806,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2620,6 +2841,9 @@
                 "targets": 2,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -2632,6 +2856,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2646,6 +2871,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2660,6 +2886,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2674,6 +2901,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2708,6 +2936,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -2720,6 +2951,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2734,6 +2966,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2748,6 +2981,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2762,6 +2996,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2780,6 +3015,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [ ],
                 "outcomesOnSuccess": [
@@ -2793,6 +3031,7 @@
                         "statusEffect": "CRIPPLED I",
                         "duration": 2,
                         "durationUnit": "ROUND",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2827,6 +3066,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -2839,6 +3081,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2853,6 +3096,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2867,6 +3111,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2881,6 +3126,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2912,6 +3158,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -2923,6 +3172,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "You load a crossbow bolt into your Crossbow.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -2958,6 +3208,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -2970,6 +3223,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2984,6 +3238,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -2998,6 +3253,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3012,6 +3268,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -3043,6 +3300,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -3055,6 +3315,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3069,6 +3330,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3083,6 +3345,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3097,6 +3360,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -3131,6 +3395,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -3143,6 +3410,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3157,6 +3425,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3171,6 +3440,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3185,6 +3455,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -3203,6 +3474,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [ ],
                 "outcomesOnSuccess": [
@@ -3216,6 +3490,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Push target up to [STR]/2 (min 1) [FIELD] away or alternativly knock it [PRONE].", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -3249,6 +3524,9 @@
                 "targets": 2,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -3261,6 +3539,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3275,6 +3554,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3289,6 +3569,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3303,6 +3584,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -3337,6 +3619,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -3349,6 +3634,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3363,6 +3649,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3377,6 +3664,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3391,6 +3679,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -3422,6 +3711,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -3434,6 +3726,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3448,6 +3741,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3462,6 +3756,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3476,6 +3771,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -3510,6 +3806,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [ {
                         "outcomeType": "FREETEXT",
                         "expression": "",
@@ -3520,6 +3819,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Reduce incoming damage by medium [MARTIAL DAMAGE].", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -3557,6 +3857,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -3569,6 +3872,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3583,6 +3887,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3597,6 +3902,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -3611,6 +3917,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]

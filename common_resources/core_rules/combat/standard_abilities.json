@@ -18,6 +18,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -29,6 +32,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "You move 1 [FIELD] (1.5m). Every second time you move diagonally during a [ROUND], this ability costs 1 extra [MP]. Depending on your [SIZE] and other factors you might move more distance.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -63,6 +67,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -74,6 +81,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "You can jump 2 + ([STR]/2) [FIELD] horizontaly or 1 + ([STR]/3) [FIELD] vertically", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -108,6 +116,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -119,6 +130,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "You stand up from being [PRONE].", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -153,6 +165,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -164,6 +179,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "You gain 2 + [AGI]/3 (rounded down) extra [MP] this [ROUND].", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -198,6 +214,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [ ],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -211,6 +230,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "You end all [RESTRAINED I] or [RESTRAINED II] Conditions that were afflicted to you by the traget.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -243,6 +263,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -254,6 +277,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "You can engage or sustain a Run which lasts until the start of the next [ROUND] and brings the following changes:", "headerLine": null, "bulletPoints": null},
                             { "regularText": null, "headerLine": null, "bulletPoints": [

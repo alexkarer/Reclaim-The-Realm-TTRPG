@@ -18,6 +18,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [ ],
                 "outcomesOnSuccess": [
@@ -31,6 +34,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "You can end one [POISON I] or [BLEEDING I] Status Effect affecting the target. For [DT] 20: [POISON II] or [BLEEDING II]. For [DT] 20: [POISON III] or [BLEEDING III].", "headerLine": null, "bulletPoints": null} ]
                     }
                 ],
@@ -61,6 +65,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -72,6 +79,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "If your result is 10 or above you heal the target for 1d6 [HP]. For every further 5 your result is higher than 10 the target heals by an additional 1d6. A creature can only benefit be targeted by this Ability once per long rest.", "headerLine": null, "bulletPoints": null} ]
                     }
                 ],
@@ -104,6 +112,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -117,6 +128,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "Reduce incoming damage from the [TAG;Attack] Ability to 0. If incoming damage exceeded 15, the shield is destroyed and has to be repaired.", "headerLine": null, "bulletPoints": null} ]
                     }
                 ],
@@ -147,6 +159,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -160,6 +175,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "Reduce incoming damage from the [TAG;Attack] Ability to 0. If incoming damage exceeded 25, the shield is destroyed and has to be repaired.", "headerLine": null, "bulletPoints": null} ]
                     }
                 ],
@@ -174,6 +190,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "Reduce incoming damage from the [TAG;Attack] Ability by half. If incoming damage exceeded 25, the shield is destroyed and has to be repaired.", "headerLine": null, "bulletPoints": null} ]
                     }
                 ],
@@ -188,6 +205,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -218,6 +236,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -231,6 +252,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "Reduce incoming damage from the [TAG;Attack] Ability to 0. If incoming damage exceeded 40, the shield is destroyed and has to be repaired.", "headerLine": null, "bulletPoints": null} ]
                     }
                 ],
@@ -245,6 +267,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "Reduce incoming damage from the [TAG;Attack] Ability by half. If incoming damage exceeded 40, the shield is destroyed and has to be repaired.", "headerLine": null, "bulletPoints": null} ]
                     }
                 ],

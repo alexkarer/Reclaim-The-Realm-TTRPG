@@ -18,6 +18,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "HEAL",
@@ -29,6 +32,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -62,6 +66,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -73,6 +80,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "You can add 2 to the failed [D20 TEST] potentially turning it into a success.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -111,6 +119,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -122,6 +133,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "Gain 2 extra [AP] this [ROUND] but start the following [ROUND] with 2 less. Can only be used once per [ROUND].", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -157,6 +169,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -168,6 +183,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "You are at 1 [HP] instead.", "headerLine": null, "bulletPoints": null } 
                         ]

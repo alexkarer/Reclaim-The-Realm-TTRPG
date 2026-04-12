@@ -18,6 +18,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 2,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -29,6 +32,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "For this and the following [ROUND] anytime an enemy creatures enters the target area you or an ally can use an [TAG;Attack] Ability targeting that creature as if it was a [REACTION] Ability.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -64,6 +68,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 2,
                 "opposingSave": "TOUGHNESS",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [ ],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -77,6 +84,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "The next time you target the creature with an Ability, any [D20 TEST] will result in an unmodified 20.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -93,6 +101,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                                 { "regularText": "The next time you target the creature with an Ability, you recieve [INT] bonus to your next [D20 TEST].", "headerLine": null, "bulletPoints": null } 
                         ]

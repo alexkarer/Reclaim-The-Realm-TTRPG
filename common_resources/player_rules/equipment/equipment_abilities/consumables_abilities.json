@@ -18,6 +18,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "HEAL",
@@ -29,6 +32,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -59,6 +63,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -70,6 +77,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "You regain 1 [ARCANA].", "headerLine": null, "bulletPoints": null } ]
                     }
                 ],
@@ -100,6 +108,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -111,6 +122,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "You end a [POISON I] Status Effect affecting you.", "headerLine": null, "bulletPoints": null } ]
                     }
                 ],
@@ -141,6 +153,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -152,6 +167,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "You remove a [BLEEDING I] Status Effect affecting the target.", "headerLine": null, "bulletPoints": null } ]
                     }
                 ],
@@ -182,6 +198,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 1,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -195,6 +214,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -209,6 +229,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -236,6 +257,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 1,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -247,6 +271,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "The area is drenched in oil, if ignited with fire it will burn for 10 [ROUND] and every creature within the Area at the start of the [ROUND] or that enter the area for the first time this [ROUND] recieve 1d6 fire damage.", "headerLine": null, "bulletPoints": null } ]
                     }
                 ],
@@ -277,6 +302,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 1,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -290,6 +318,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -304,6 +333,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -331,6 +361,9 @@
                 "targets": 0,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -342,6 +375,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ { "regularText": "You end one [CURSED I], [WEAKENED I] or [VULNURABLE I] Status effect affecing you.", "headerLine": null, "bulletPoints": null } ]
                     }
                 ],

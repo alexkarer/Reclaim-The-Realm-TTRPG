@@ -18,6 +18,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -31,6 +34,7 @@
                         "statusEffect": "RESTRAINED II",
                         "duration": 0,
                         "durationUnit": "INDEFINATE",
+                        "customDuration": null,
                         "freeText": []
                     }
                 ],
@@ -62,6 +66,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -75,6 +82,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "The target of this Ability becomes the target of the [TAG;Attack] Ability instead.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -108,6 +116,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "STABILITY",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -121,6 +132,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "The target is moved up to 2 + [STR] [FIELD].", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -135,6 +147,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": []
                     },
                     {
@@ -147,6 +160,7 @@
                         "statusEffect": "PRONE",
                         "duration": 0,
                         "durationUnit": "INDEFINATE",
+                        "customDuration": null,
                         "freeText": []
                     }
                 ],
@@ -165,6 +179,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -178,6 +195,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": []
                     }
                 ],
@@ -209,6 +227,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -220,6 +241,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "You can use the [ABILITY;Normal Move] Ability 6 times, but each move must end closer to an enemy.", "headerLine": null, "bulletPoints": null } 
                         ]
@@ -242,6 +264,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [],
                 "outcomesOnCritSuccess": [
                     {
@@ -254,6 +279,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -268,6 +294,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -282,6 +309,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -296,6 +324,7 @@
                         "statusEffect": "NONE",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "Nothing.", "headerLine": null, "bulletPoints": null } 
                             ]
@@ -330,6 +359,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [
                     {
                         "outcomeType": "FREETEXT",
@@ -341,6 +373,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [
                             { "regularText": "You can immedatly use a the Jump Ability at no additional cost and increase the jumping distance by an additional [STR]/2 [FIELD] for a long jump or [STR]/3 [FIELD] for a high jump.", "headerLine": null, "bulletPoints": null}
                         ]
@@ -379,6 +412,9 @@
                 "targets": 1,
                 "targetAreaSizeFields": 0,
                 "opposingSave": "TOUGHNESS",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
                 "outcomesAlways": [ ],
                 "outcomesOnCritSuccess": [],
                 "outcomesOnSuccess": [
@@ -392,6 +428,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],
@@ -406,6 +443,7 @@
                         "statusEffect": "",
                         "duration": 0,
                         "durationUnit": "NONE",
+                        "customDuration": null,
                         "freeText": [ ]
                     }
                 ],

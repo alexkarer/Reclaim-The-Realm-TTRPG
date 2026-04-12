@@ -151,6 +151,7 @@
         "ability_action_condition" : "Certain Actions have conditions that have to be met the moment they are used. In case the condition can't be met, the action immediatly resolves but no outcome goes in effect. Omitted if no Conditions are present.",
         "ability_action_targets" : "The target(s) that are affected by the outcomes of the ability. Can be individual targets, areas such as [SPHERE] or other",
         "ability_action_range" : "The Range of the Ability. Specifically the distance from you to the target Usually measured in [FIELD]. Omitted if not relevant",
+        "ability_action_duration": "Most abilities resolve immedietly however some Abilities have ongoing effects that can last for multiple [ROUNDS] or even longer, in such cases the duration is listed here.",
         "ability_action_action_type" : "Listed as just \"Action\" This specifies most of the time the kind of [D20 TEST] that needs to be made to determine how successful the Action is performed and additionally to what [DT] it is compared to. If Omitted the Ability will resolve and the default Outcome happens.",
         "ability_action_outcomes" : "An Ability Action can have many different outcomes, ranging from Damage, Healing, Applying Status Effects or something else completely. There also can be many different Outcomes depending on how well the Action was performed. If no outcome type is specified then that is the default Outcome that always happens any time the Action is preformed.",
 

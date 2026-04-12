@@ -4,6 +4,7 @@ import { DynamicContentComponent } from "../../../../text-utils/dynamic-componen
 import { TextProcessorPipe } from "../../../../text-utils/text-processor";
 import { TextElementWithoutAbility } from '../../../../../../../../common_resources/shared/TextElements';
 import { TextElementsWithoutAbilityComponent } from "../../../../text-utils/text-elements-without-ability/text-elements-without-ability.component";
+import { formatDurationUnit } from '../../../../utils/ability-utils';
 
 @Component({
   selector: 'app-ability-outcome',
@@ -43,19 +44,10 @@ export class AbilityOutcomeComponent {
   private getDurationText(): string {
     if (this.outcome()?.durationUnit === DurationUnit.INDEFINATE) {
       return '';
+    } else if (this.outcome()?.durationUnit === DurationUnit.CUSTOM) {
+      return this.outcome()?.customDuration ?? '';
     } else {
-      return ` for ${this.outcome()?.duration} ${this.parseDurationUnit(this.outcome()?.durationUnit, this.outcome()?.duration)}`;
+      return ` for ${this.outcome()?.duration} ${formatDurationUnit(this.outcome()?.durationUnit, this.outcome()?.duration)}`;
     }
-  }
-
-  private parseDurationUnit(unit?: DurationUnit, durationAmount?: number): string {
-    switch(unit) {
-      case DurationUnit.ROUND: return ((durationAmount ?? 0) > 1 ? '[ROUNDS]' : '[ROUND]');
-      case DurationUnit.HOUR: return ((durationAmount ?? 0) > 1 ? 'Hours' : 'Hour');
-      case DurationUnit.MINUTE: return ((durationAmount ?? 0) > 1 ? 'Minutes' : 'Minutes');
-      case DurationUnit.INDEFINATE: return '';
-      case DurationUnit.NONE: return '';
-    }
-    return '';
   }
 }

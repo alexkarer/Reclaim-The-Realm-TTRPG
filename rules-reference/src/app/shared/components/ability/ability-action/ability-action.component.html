@@ -9,6 +9,9 @@
         @if (hasRange) {
         <p class="description my-0"><span class="fw-bold">Range: </span><app-dynamic-content [content]="rangeText | textProcessor"></app-dynamic-content></p>
         }
+        @if (hasDuration) {
+        <p class="description my-0"><span class="fw-bold">Duration: </span><app-dynamic-content [content]="durationText | textProcessor"></app-dynamic-content></p>
+        }
         @if (noSimpleAction) {
         <p class="description my-0"><span class="fw-bold">Action: </span><app-dynamic-content [content]="actionText | textProcessor"></app-dynamic-content></p>
         }
