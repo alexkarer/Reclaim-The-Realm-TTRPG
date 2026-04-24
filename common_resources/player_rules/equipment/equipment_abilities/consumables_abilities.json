@@ -45,8 +45,8 @@
         "flavorText": [ ]
     },
     {
-        "name": "Consume - Arcana Potion",
-        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Arcana Potion" },
+        "name": "Consume - Mana Potion",
+        "cost": { "ap": 1, "mp": 0, "mana": 0, "stamina": 0, "life": 0, "other": "1 Mana Potion" },
         "tags": [  ],
         "meta": { "iconPath": "icons/consumables/potions/vial-cork-blue.webp", "colour": "COLOURLESS" },
         "requirements": { "requiredLevels": [], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -78,7 +78,7 @@
                         "duration": 0,
                         "durationUnit": "NONE",
                         "customDuration": null,
-                        "freeText": [ { "regularText": "You regain 1 [ARCANA].", "headerLine": null, "bulletPoints": null } ]
+                        "freeText": [ { "regularText": "You regain 1 [MANA].", "headerLine": null, "bulletPoints": null } ]
                     }
                 ],
                 "outcomesOnCritSuccess": [],

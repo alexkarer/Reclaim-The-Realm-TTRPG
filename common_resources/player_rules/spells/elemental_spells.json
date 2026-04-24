@@ -86,7 +86,7 @@
                 "customTargeting": "Up to ([SPI] / 3) Targets",
                 "targets": 1,
                 "targetAreaSizeFields": 0,
-                "opposingSave": "DODGE",
+                "opposingSave": "NONE",
                 "duration": 0,
                 "durationUnit": "NONE",
                 "customDuration": null,

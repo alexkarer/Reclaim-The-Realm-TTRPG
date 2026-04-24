@@ -156,7 +156,8 @@ const fortitudeSampleOutcome = fortitudeSampleAction.outcomesOnSuccess[0];
 const leaderSampleOutcome = leaderSampleAction.outcomesOnSuccess[0];
 const tacticalSampleOutcome = tacticalSampleAction.outcomesOnSuccess[0];
 const consumableSampleOutcome = consumableSampleAction.outcomesAlways[0];
-type JsonOutcome = typeof agileSampleOutcome1 | typeof agileSampleOutcome2 | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome | typeof tacticalSampleOutcome | typeof consumableSampleOutcome;
+const lightSpellSampleOutcome = lightSpellsJson[2].actions[0].outcomesAlways[0];
+type JsonOutcome = typeof agileSampleOutcome1 | typeof agileSampleOutcome2 | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome | typeof tacticalSampleOutcome | typeof consumableSampleOutcome | typeof lightSpellSampleOutcome;
 
 function mapOutcome(jsonOutcome: JsonOutcome): AbilityActionOutcome {
     return {

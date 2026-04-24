@@ -19,7 +19,7 @@
         "grantedAbilities": [ "Consume - Healing Potion" ]
     },
     {
-        "name": "Arcana Potion",
+        "name": "Mana Potion",
         "tags": [ "Consumable", "Potion"],
         "meta": {
             "iconPath": "icons/consumables/potions/vial-cork-blue.webp",
@@ -33,9 +33,9 @@
         },
         "weightInGram": 250,
         "description": [
-            { "regularText": "Once the \"Consume - Arcana Potion\" Ability was used only an empty vial is left over.", "headerLine": null, "bulletPoints": null, "ability": null }
+            { "regularText": "Once the \"Consume - Mana Potion\" Ability was used only an empty vial is left over.", "headerLine": null, "bulletPoints": null, "ability": null }
         ],
-        "grantedAbilities": [ "Consume - Arcana Potion" ]
+        "grantedAbilities": [ "Consume - Mana Potion" ]
     },
     {
         "name": "Antidote",

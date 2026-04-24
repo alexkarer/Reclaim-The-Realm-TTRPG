@@ -45,7 +45,7 @@ export class AbilityOutcomeComponent {
     if (this.outcome()?.durationUnit === DurationUnit.INDEFINATE) {
       return '';
     } else if (this.outcome()?.durationUnit === DurationUnit.CUSTOM) {
-      return this.outcome()?.customDuration ?? '';
+      return ` for ${this.outcome()?.customDuration ?? ''}`;
     } else {
       return ` for ${this.outcome()?.duration} ${formatDurationUnit(this.outcome()?.durationUnit, this.outcome()?.duration)}`;
     }

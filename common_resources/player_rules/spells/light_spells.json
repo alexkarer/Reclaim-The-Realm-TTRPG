@@ -124,7 +124,7 @@
     },
     {
         "name": "Holy Light",
-        "cost": { "ap": 3, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Spell(Light, Holy)" ],
         "meta": { "iconPath": "icons/magic/light/explosion-star-glow-yellow.webp", "colour": "YELLOW" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
@@ -138,10 +138,10 @@
                 "attribute": "CHA",
                 "rangeType": "NONE",
                 "rangeDistanceFields": 0,
-                "targetType": "AURA",
-                "customTargeting": "",
+                "targetType": "CUSTOM",
+                "customTargeting": "All Hostiles within 4[FIELD]",
                 "targets": 0,
-                "targetAreaSizeFields": 4,
+                "targetAreaSizeFields": 0,
                 "opposingSave": "TOUGHNESS",
                 "duration": 0,
                 "durationUnit": "NONE",
@@ -221,7 +221,7 @@
                         "durationUnit": "NONE",
                         "customDuration": null,
                         "freeText": [
-                            { "regularText": "Your material components emits light(6m/12m) for the duration", "headerLine": null, "bulletPoints": null } 
+                            { "regularText": "Your material component emits light(4[FIELD]/8[FIELD]) for the duration", "headerLine": null, "bulletPoints": null } 
                         ]
                     }
                 ],
@@ -232,8 +232,61 @@
             }
         ],
         "upcast": {
+            "mana": 1,
+            "effect": "Increase Initial damage by ([SPI] / 2) * d6, range by 1 [FIELD] light by 1[FIELD]/2[FIELD] respectively."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Divine Shield",
+        "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Light, Holy)" ],
+        "meta": { "iconPath": "icons/magic/holy/barrier-shield-winged-blue.webp", "colour": "YELLOW" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 4,
+                "targetType": "ALLY",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "PROTECTION I",
+                        "duration": 0,
+                        "durationUnit": "CUSTOM",
+                        "customDuration": "[SPI] [ROUNDS]",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
             "mana": 3,
-            "effect": "Increase damage by 10 + ([SPI] / 3) * d8 and instead of [STUNNED I] afflict [STUNNED II] and instead of [STUNNED II] afflict [STUNNED III]."
+            "effect": "Instead of [PROTECTION I] apply [PROTECTION II] and instead of [PROTECTION II] apply [PROTECTION III]."
         },
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}
