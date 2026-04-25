@@ -1,5 +1,5 @@
 import { Requirements } from '../shared/AbilityRequirements';
-import { TextElement } from '../shared/TextElements';
+import { TextElement } from '../shared/textElements';
 import craftingPerksJson from './crafting_perks.json'
 import defensivePerksJson from './defensive_perks.json'
 import martialPerksJson from './martial_perks.json'

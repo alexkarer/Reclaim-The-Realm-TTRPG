@@ -1,4 +1,4 @@
-import { DurationUnit } from "../../../../../common_resources/shared/Ability";
+import { DurationUnit } from "../../../../../common_resources/shared/ability";
 
 export function formatDurationUnit(unit?: DurationUnit, durationAmount?: number): string {
     switch(unit) {

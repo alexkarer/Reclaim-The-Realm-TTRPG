@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { AttributeRequirement, LevelRequirement, Requirements } from '../../../../../common_resources/shared/Ability';
+import { AttributeRequirement, LevelRequirement, Requirements } from '../../../../../common_resources/shared/ability';
 
 @Pipe({
     name: 'requirementsPrettier',

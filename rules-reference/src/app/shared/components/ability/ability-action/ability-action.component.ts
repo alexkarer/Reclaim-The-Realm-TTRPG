@@ -1,5 +1,5 @@
 import { Component, input, forwardRef } from '@angular/core';
-import { AbilityAction, AbilityActionType, AbilityRangeType, AbilityTargetType, DurationUnit } from '../../../../../../../common_resources/shared/Ability';
+import { AbilityAction, AbilityActionType, AbilityRangeType, AbilityTargetType, DurationUnit } from '../../../../../../../common_resources/shared/ability';
 import { DynamicContentComponent } from "../../../text-utils/dynamic-component-rendering/dynamic-content.component";
 import { TextProcessorPipe } from "../../../text-utils/text-processor";
 import { AbilityOutcomeComponent } from "./ability-outcome/ability-outcome.component";

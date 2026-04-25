@@ -1,5 +1,5 @@
-import { DamageType, parseDamageType } from "./DamageType";
-import { TextElementWithoutAbility } from "./TextElements";
+import { DamageType, parseDamageType } from "./damageType";
+import { TextElementWithoutAbility } from "./textElements";
 import agilityTechniquesJson from "../player_rules/techniques/agile_techniques.json";
 import brawlTechniquesJson from "../player_rules/techniques/brawl_techniques.json";
 import fortitudeTechniquesJson from "../player_rules/techniques/fortitude_techniques.json";
@@ -33,7 +33,7 @@ export type AbilityCost = {
     other: string
 }
 
-export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, WHITE, COLOURLESS, REDGREEN, BLUEWHITE }
+export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, WHITE, COLOURLESS, REDGREEN, BLUEWHITE, LIGHTGREEN }
 
 export type AbilityAction = {
     type: AbilityActionType,
@@ -191,6 +191,7 @@ export function parseAbilityColour(s?: string): AbilityColour {
         case "COLOURLESS": return AbilityColour.COLOURLESS;
         case "REDGREEN": return AbilityColour.REDGREEN;
         case "BLUEWHITE": return AbilityColour.BLUEWHITE;
+        case "LIGHTGREEN": return AbilityColour.LIGHTGREEN;
         default: console.error(`Ability colour ${s} not recognized! Setting colourless`); return AbilityColour.COLOURLESS;
     }
 }

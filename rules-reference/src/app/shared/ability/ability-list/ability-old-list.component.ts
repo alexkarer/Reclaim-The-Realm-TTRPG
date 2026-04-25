@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import {  AbilityOld } from '../../../../../../common_resources/shared/Ability';
+import {  AbilityOld } from '../../../../../../common_resources/shared/ability';
 import { AbilityListItemComponent } from "./ability-list-item/ability-old-list-item.component";
 
 @Component({

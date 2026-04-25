@@ -1,4 +1,4 @@
-import { TextElement } from "../shared/TextElements";
+import { TextElement } from "../shared/textElements";
 
 export class Equipment {
     name!: string;

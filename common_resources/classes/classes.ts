@@ -1,5 +1,5 @@
-import { AbilityOld } from '../shared/Ability';
-import { TextElement } from '../shared/TextElements';
+import { AbilityOld } from '../shared/ability';
+import { TextElement } from '../shared/textElements';
 import barbarianJson from './barbarian.json';
 import priestJson from './priest.json';
 import fighterJson from './fighter.json';

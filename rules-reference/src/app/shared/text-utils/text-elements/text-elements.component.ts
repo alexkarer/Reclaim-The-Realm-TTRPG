@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { TextElement } from '../../../../../../common_resources/shared/TextElements';
+import { TextElement } from '../../../../../../common_resources/shared/textElements';
 import { DynamicContentComponent } from "../dynamic-component-rendering/dynamic-content.component";
 import { TextProcessorPipe } from "../text-processor";
 import { AbilityListItemComponent } from "../../ability/ability-list/ability-list-item/ability-old-list-item.component";

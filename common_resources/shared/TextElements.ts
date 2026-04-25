@@ -1,4 +1,4 @@
-import { AbilityOld } from "./Ability";
+import { AbilityOld } from "./ability";
 
 export type TextElement = 
 {

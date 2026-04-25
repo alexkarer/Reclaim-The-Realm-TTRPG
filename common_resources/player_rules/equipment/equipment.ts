@@ -1,5 +1,5 @@
-import { DamageType, parseDamageType } from "../../shared/DamageType";
-import { TextElementWithoutAbility } from "../../shared/TextElements";
+import { DamageType, parseDamageType } from "../../shared/damageType";
+import { TextElementWithoutAbility } from "../../shared/textElements";
 import { mapIconPath } from "../../shared/icons";
 import weaponsJson from "./weapons.json";
 import ammunitionsJson from "./ammunitions.json";

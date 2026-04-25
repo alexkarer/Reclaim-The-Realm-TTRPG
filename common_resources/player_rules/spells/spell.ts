@@ -1,4 +1,4 @@
-import { Ability, mapAction, parseAbilityColour } from "../../shared/Ability";
+import { Ability, mapAction, parseAbilityColour } from "../../shared/ability";
 import { mapIconPath } from "../../shared/icons";
 import elementalSpellsJson from "./elemental_spells.json";
 import lightSpellsJson from "./light_spells.json";

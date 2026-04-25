@@ -1,8 +1,8 @@
 import { Component, input, forwardRef } from '@angular/core';
-import { AbilityActionOutcome, AbilityActionOutcomeType, DurationUnit } from '../../../../../../../../common_resources/shared/Ability';
+import { AbilityActionOutcome, AbilityActionOutcomeType, DurationUnit } from '../../../../../../../../common_resources/shared/ability';
 import { DynamicContentComponent } from "../../../../text-utils/dynamic-component-rendering/dynamic-content.component";
 import { TextProcessorPipe } from "../../../../text-utils/text-processor";
-import { TextElementWithoutAbility } from '../../../../../../../../common_resources/shared/TextElements';
+import { TextElementWithoutAbility } from '../../../../../../../../common_resources/shared/textElements';
 import { TextElementsWithoutAbilityComponent } from "../../../../text-utils/text-elements-without-ability/text-elements-without-ability.component";
 import { formatDurationUnit } from '../../../../utils/ability-utils';
 

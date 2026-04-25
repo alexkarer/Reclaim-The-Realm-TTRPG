@@ -1,4 +1,4 @@
-import { AbilityOld } from "../shared/Ability";
+import { AbilityOld } from "../shared/ability";
 
 import hybridAbilitiesJson from "./hybrid_abilities.json";
 

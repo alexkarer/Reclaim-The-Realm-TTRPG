@@ -3,7 +3,7 @@ import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle, NgbTo
 import { FormsModule } from '@angular/forms';
 import { Spell, ALL_SPELLS } from '../../../../common_resources/player_rules/spells/spell';
 import { AbilityComponent } from "../shared/components/ability/ability.component";
-import { AbilityColour } from '../../../../common_resources/shared/Ability';
+import { AbilityColour } from '../../../../common_resources/shared/ability';
 
 @Component({
     selector: 'app-spells-search',
@@ -73,6 +73,7 @@ export class SpellsSearchComponent {
       case AbilityColour.COLOURLESS: return'';
       case AbilityColour.REDGREEN: return 'redgreen';
       case AbilityColour.BLUEWHITE: return 'bluewhite';
+      case AbilityColour.LIGHTGREEN: return 'light-green';
     }
   }
 

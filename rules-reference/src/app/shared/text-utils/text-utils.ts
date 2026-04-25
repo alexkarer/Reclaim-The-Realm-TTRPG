@@ -1,4 +1,4 @@
-import { Ability } from "../../../../../common_resources/shared/Ability";
+import { Ability } from "../../../../../common_resources/shared/ability";
 
 export function generateGenericKeyword(keyword: string, toolTipText: string, link: string): ContentPart {
     return { 

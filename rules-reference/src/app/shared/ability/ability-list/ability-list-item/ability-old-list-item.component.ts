@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { AbilityOld } from '../../../../../../../common_resources/shared/Ability';
+import { AbilityOld } from '../../../../../../../common_resources/shared/ability';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 import { RequirementsPrettierPipe } from "../../../pipes/to-pretty-string";
 import { MartialManeuver } from '../../../../../../../common_resources/martial_maneuvers/martial-maneuvers';

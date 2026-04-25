@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 import { ContentPart, generateGenericKeyword } from "./text-utils";
 import statusEffectsJson from '../../../../../common_resources/combat/status_effects.json';
 import keywordsJson from '../../../../../common_resources/keywords.json';
-import { Ability } from "../../../../../common_resources/shared/Ability";
+import { Ability } from "../../../../../common_resources/shared/ability";
 import { STANDARD_ABILITIES } from "../../../../../common_resources/core_rules/combat/standard_abilities";
 import { ALL_TECHNIQUES } from "../../../../../common_resources/player_rules/techniques/technique";
 

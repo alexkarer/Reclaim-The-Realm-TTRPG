@@ -3,7 +3,7 @@ import { ALL_TECHNIQUES, Technique } from '../../../../common_resources/player_r
 import { NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { AbilityComponent } from "../shared/components/ability/ability.component";
-import { AbilityColour } from '../../../../common_resources/shared/Ability';
+import { AbilityColour } from '../../../../common_resources/shared/ability';
 
 @Component({
     selector: 'app-techniques-search',
@@ -109,6 +109,7 @@ export class TechniquesSearchComponent {
       case AbilityColour.COLOURLESS: return '';
       case AbilityColour.REDGREEN: return 'redgreen';
       case AbilityColour.BLUEWHITE: return 'bluewhite';
+      case AbilityColour.LIGHTGREEN: return 'lightgreen';
     }
   }
 

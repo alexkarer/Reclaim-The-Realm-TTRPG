@@ -1,4 +1,4 @@
-import { Ability, mapAction, parseAbilityColour } from "../../shared/Ability";
+import { Ability, mapAction, parseAbilityColour } from "../../shared/ability";
 import { mapIconPath } from "../../shared/icons";
 import standardAbilitiesJson from "./standard_abilities.json";
 

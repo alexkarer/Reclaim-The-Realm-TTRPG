@@ -270,7 +270,7 @@
                 "outcomesOnCritSuccess": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "2d12 + ([SPI] / 3) * d12 poison damage",
+                        "expression": "10 + ([SPI] / 3) * d12 poison damage",
                         "damageType": "Poison",
                         "critDamage": true,
                         "halfDamage": false,

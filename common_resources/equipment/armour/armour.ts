@@ -1,4 +1,4 @@
-import { DamageType, parseDamageType } from "../../shared/DamageType";
+import { DamageType, parseDamageType } from "../../shared/damageType";
 import { Cost, Equipment } from "../equipment";
 
 export class Armour extends Equipment {

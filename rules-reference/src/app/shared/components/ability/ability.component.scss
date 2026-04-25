@@ -61,6 +61,17 @@
     }
 }
 
+.ability-light-green {
+    border-color: colors.$rtr-light-green-border;
+
+    .header {
+        background-color: colors.$rtr-light-green-background-light;
+    }
+    .body {
+        background-color: colors.$rtr-light-green-background-dark;
+    }
+}
+
 .ability-blue {
     border-color: colors.$rtr-blue-border;
 

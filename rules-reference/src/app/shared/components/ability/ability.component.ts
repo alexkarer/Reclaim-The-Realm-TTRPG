@@ -1,5 +1,5 @@
 import { Component, effect, forwardRef, input } from '@angular/core';
-import { Ability, AbilityColour } from '../../../../../../common_resources/shared/Ability';
+import { Ability, AbilityColour } from '../../../../../../common_resources/shared/ability';
 import { RequirementsPrettierPipe } from '../../pipes/to-pretty-string';
 import { DynamicContentComponent } from '../../text-utils/dynamic-component-rendering/dynamic-content.component';
 import { TextProcessorPipe } from '../../text-utils/text-processor';
@@ -34,6 +34,7 @@ export class AbilityComponent {
       case AbilityColour.COLOURLESS: return'ability-colourless';
       case AbilityColour.REDGREEN: return 'ability-redgreen';
       case AbilityColour.BLUEWHITE: return 'ability-bluewhite';
+      case AbilityColour.LIGHTGREEN: return 'ability-light-green';
     }
   }
 
