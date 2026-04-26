@@ -1,1 +1,398 @@
-[]
+[
+    {
+        "name": "Unholy Pyre",
+        "cost": { "ap": 3, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Dark, Unholy)" ],
+        "meta": { "iconPath": "icons/magic/unholy/projectile-smoke-trail-pink.webp", "colour": "BLACK" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "INT",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 6,
+                "targetType": "SPHERE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 1,
+                "opposingSave": "DODGE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d8 + ([SPI] / 3) * d8",
+                        "damageType": "Unholy",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "2d8 + ([SPI] / 3) * d8",
+                        "damageType": "Unholy",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "Increase Area by 1 [FIELD] and Damage by ([SPI] / 3) * d8."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Darkness",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Dark, Unholy)", "[CONCENTRATION] 0" ],
+        "meta": { "iconPath": "icons/creatures/magical/humanoid-silhouette-dashing-blue.webp", "colour": "BLACK" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 10,
+                "targetType": "SPHERE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 3,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "CUSTOM",
+                "customDuration": "[SPI] [ROUNDS]",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "Target Area is engulfed in complete Darkness. Only magical light of a higher spell power than this can illuminate this area.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": "Increase Area by 1 [FIELD] and Duration by 5 Minutes. If Ability is upcast at least 5 times Duration increases by 1 Day for each upcast (including the 5th). If Ability is upcast at least 10 times Duration becomes permanent."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Create Undead  Servant",
+        "cost": { "ap": 0, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "10 Minute casting time" },
+        "tags": [ "Spell(Dark, Necromancy)" ],
+        "meta": { "iconPath": "icons/magic/death/undead-skeleton-deformed-red.webp", "colour": "DARKPURPLE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "Corpse or Bones to reanimate" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CUSTOM",
+                "customTargeting": "Corpse/Bones of a creature up to [LEVEL] 1",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 24,
+                "durationUnit": "HOUR",
+                "customDuration": "",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "The corpse is animated imprisoning the soul of the former inhabitant. The corpse is an undead creature with [SPI] [HP]. It obeys your commands and can perform simple tasks. You can control up to [INT] Undead Servants at the same time.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "You can target a corpse of one [LEVEL] higher and increase the duration by 24 hours and increase the [HP] by [SPI]."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Curse",
+        "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Dark, Necromancy)" ],
+        "meta": { "iconPath": "icons/magic/death/skull-horned-goat-pentagram-red.webp", "colour": "DARKPURPLE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Curse", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "CHA",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 6,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 0,
+                "targetAreaSizeFields": 1,
+                "opposingSave": "WILLPOWER",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "Apply one of the following Status Effects on the target.", "headerLine": null, "bulletPoints": null} ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "CURSED I",
+                        "duration": 0,
+                        "durationUnit": "CUSTOM",
+                        "customDuration": "[SPI]+1 [ROUNDS]",
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "FRIGHTENED I",
+                        "duration": 0,
+                        "durationUnit": "CUSTOM",
+                        "customDuration": "[SPI]+1 [ROUNDS]",
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "WEAKENED I",
+                        "duration": 0,
+                        "durationUnit": "CUSTOM",
+                        "customDuration": "[SPI]+1 [ROUNDS]",
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "VULNURABLE I",
+                        "duration": 0,
+                        "durationUnit": "CUSTOM",
+                        "customDuration": "[SPI]+1 [ROUNDS]",
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "DEAFENED",
+                        "duration": 0,
+                        "durationUnit": "CUSTOM",
+                        "customDuration": "[SPI]+1 [ROUNDS]",
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "SILENCED",
+                        "duration": 0,
+                        "durationUnit": "CUSTOM",
+                        "customDuration": "[SPI]+1 [ROUNDS]",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "Apply one of the following Status Effects on the target.", "headerLine": null, "bulletPoints": null} ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "CURSED I",
+                        "duration": 1,
+                        "durationUnit": "ROUND",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "FRIGHTENED I",
+                        "duration": 1,
+                        "durationUnit": "ROUND",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "WEAKENED I",
+                        "duration": 1,
+                        "durationUnit": "ROUND",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "VULNURABLE I",
+                        "duration": 1,
+                        "durationUnit": "ROUND",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "DEAFENED",
+                        "duration": 1,
+                        "durationUnit": "ROUND",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "SILENCED",
+                        "duration": 1,
+                        "durationUnit": "ROUND",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": "Increase range by 1 [FIELD] and can target an additional creature."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    }
+]

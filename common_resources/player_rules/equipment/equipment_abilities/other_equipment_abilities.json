@@ -102,7 +102,7 @@
         "actions": [
             {
                 "actionType": "CUSTOM",
-                "customAction": "[AGI] [MARTIAL_TEST] vs. [TAG;Attack] Ability [D20 TEST]",
+                "customAction": "[AGI] [MARTIAL TEST] vs. [TAG;Attack] Ability [D20 TEST]",
                 "customCondition": "[TAG;Attack] Ability would deal damage to you",
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -149,7 +149,7 @@
         "actions": [
             {
                 "actionType": "CUSTOM",
-                "customAction": "[AGI] [MARTIAL_TEST] vs. [TAG;Attack] Ability [D20 TEST]",
+                "customAction": "[AGI] [MARTIAL TEST] vs. [TAG;Attack] Ability [D20 TEST]",
                 "customCondition": "[TAG;Attack] Ability would deal damage to you",
                 "attribute": "NONE",
                 "rangeType": "NONE",
@@ -226,7 +226,7 @@
         "actions": [
             {
                 "actionType": "CUSTOM",
-                "customAction": "[AGI] [MARTIAL_TEST] vs. [TAG;Attack] Ability [D20 TEST]",
+                "customAction": "[AGI] [MARTIAL TEST] vs. [TAG;Attack] Ability [D20 TEST]",
                 "customCondition": "[TAG;Attack] Ability would deal damage to you",
                 "attribute": "NONE",
                 "rangeType": "NONE",

@@ -1,1 +1,498 @@
-[]
+[
+    {
+        "name": "Telekinetic move",
+        "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Psychic, Telekinesis)", "[CONCENTRATION] 1" ],
+        "meta": { "iconPath": "icons/magic/unholy/strike-hand-glow-pink.webp", "colour": "BROWN" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "INT",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 6,
+                "targetType": "CUSTOM",
+                "customTargeting": "1 Medium Creature or Object weighing up to [SPI] * 20 kg",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "STABILITY",
+                "duration": 0,
+                "durationUnit": "CUSTOM",
+                "customDuration": "[SPI] [ROUNDS]",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "Choose one of the following Outcomes:", "headerLine": null, "bulletPoints": null} ]
+                    },
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "Move the target 2 * [SPI] [FIELD] in any direction. Spell Ends", "headerLine": null, "bulletPoints": null} ]
+                    },
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "The target hovers in the air and when the spell is cast or any time during your turn the target is moved [SPI] / 2 [FIELD] in any direction. [SAVE ENDS].", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "The target is moved [SPI] / 2 [FIELD] in any direction. Spell Ends.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "Double the maximum object weight or increase the target creature size, increase range by 2 [FIELD], and you can choose an additional target. However the total targets can't exceed the maximum weight or size criterea combined (1 large creature counts for 2 medium, etc.)"
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Telekinetic crush",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Psychic, Telekinesis)", "[CONCENTRATION] 1" ],
+        "meta": { "iconPath": "icons/magic/control/debuff-energy-hold-yellow.webp", "colour": "BROWN" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "INT",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 6,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "STABILITY",
+                "duration": 0,
+                "durationUnit": "CUSTOM",
+                "customDuration": "([SPI] / 2) [ROUNDS]",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "RESTRAINED II",
+                        "duration": 0,
+                        "durationUnit": "CUSTOM",
+                        "customDuration": "([SPI] / 2) [ROUNDS]",
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "As the spell was cast and while the target is affected by the status effect it takes [SPI]/2 Physical damage at the start of every [ROUND].", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "([SPI] / 2) * d6",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "Double the maximum object weight or increase the target creature size, increase range by 2 [FIELD], and you can choose an additional target. However the total targets can't exceed the maximum weight or size criterea combined (1 large creature counts for 2 medium, etc.)"
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Mind Assault",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Psychic, Telepathy)" ],
+        "meta": { "iconPath": "icons/magic/control/energy-stream-link-teal.webp", "colour": "PINK" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Scream", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "INT",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 8,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "WILLPOWER",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "10 + ([SPI] / 3) * d8",
+                        "damageType": "Psychic",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "STUNNED I",
+                        "duration": 2,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "10 + ([SPI] / 3) * d8",
+                        "damageType": "Psychic",
+                        "critDamage": false,
+                        "halfDamage": true,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 3,
+            "effect": "Increase damage by 10 + ([SPI] / 3) * d8 and instead of [STUNNED I] afflict [STUNNED II] and instead of [STUNNED II] afflict [STUNNED III]."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Suggestion",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Psychic, Telepathy)" ],
+        "meta": { "iconPath": "icons/magic/control/mouth-smile-deception-purple.webp", "colour": "PINK" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Suggestion", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "SPELL_TEST",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "CHA",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 2,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "WILLPOWER",
+                "duration": 0,
+                "durationUnit": "CUSTOM",
+                "customDuration": "[SPI] [ROUNDS]",
+                "outcomesAlways": [],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "Target creature carries out given task. If completed early spell ends. Target is not aware of Mind Control.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnFail": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "Creature refuses Command. Target is not aware of Mind Control.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "Range increases by 1 [FIELD] and you can target one additional creature."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Hindsight",
+        "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Psychic, Divination)", "[REACTION]" ],
+        "meta": { "iconPath": "icons/magic/control/hypnosis-mesmerism-eye.webp", "colour": "LIGHTBLUE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Warning", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 3,
+                "targetType": "ALLY",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "If a friendly creature fails an [D20 TEST] you can use this Ability. Increase the failed [D20 TEST] by [SPI]/2 potentially turning it, into a success.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": "Increase the bonus to the [D20 TEST] by 1."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Detect Magic",
+        "cost": { "ap": 3, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Psychic, Divination)" ],
+        "meta": { "iconPath": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp", "colour": "LIGHTBLUE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "", "somatic": "Gesture", "material": "transperant or reflective object" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CUSTOM",
+                "customTargeting": "The material component",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "CUSTOM",
+                "customDuration": "[SPI] Minutes",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "For Duration: when looking through the object you will notice magical residue which inluds the following:", "headerLine": null, "bulletPoints": null} ]
+                    },
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": null, "headerLine": null, "bulletPoints": [
+                            "Magical creatures (Elemental, Cosmic, Undead) or Magical Items.",
+                            "You know if a spell is currently affecting a creature or object, you don't know the exact spell, but you know the discipline",
+                            "You see if a spell was cast or other magical phenomena on this location recently. Spells linger for a number of days equal to their [MANA] Cost, you don't what exact spell, but you know the discipline."
+                        ]} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 3,
+            "effect": "If upcast at least once you know if Magical Creatures or Items have been here in the last 24 hours. If upcast at least twice you know what the spell target and vague description of the caster of the spell."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "The Die is Cast",
+        "cost": { "ap": 0, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "1 Minute" },
+        "tags": [ "Spell(Psychic, Divination)" ],
+        "meta": { "iconPath": "icons/magic/time/day-night-sunset-sunrise.webp", "colour": "LIGHTBLUE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Invocation", "somatic": "Gesture", "material": "Dice" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "CUSTOM",
+                "customDuration": "24 Hours",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "Roll a d20 and remember the result, at any point during the duration of the spell when you have to make a [D20 TEST] you can use this result instead. You can only benefit from one instance of this spell at a time.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 3,
+            "effect": "You can roll one additional d20."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    }
+]

@@ -83,6 +83,17 @@
     }
 }
 
+.ability-black {
+    border-color: colors.$rtr-black-border;
+
+    .header {
+        background-color: colors.$rtr-black-background-light;
+    }
+    .body {
+        background-color: colors.$rtr-black-background-dark;
+    }
+}
+
 .ability-yellow {
     border-color: colors.$rtr-yellow-border;
 
@@ -102,6 +113,39 @@
     }
     .body {
         background-color: colors.$rtr-white-background-dark;
+    }
+}
+
+.ability-dark-purple {
+    border-color: colors.$rtr-dark-purple-border;
+
+    .header {
+        background-color: colors.$rtr-dark-purple-background-light;
+    }
+    .body {
+        background-color: colors.$rtr-dark-purple-background-dark;
+    }
+}
+
+.ability-pink {
+    border-color: colors.$rtr-pink-border;
+
+    .header {
+        background-color: colors.$rtr-pink-background-light;
+    }
+    .body {
+        background-color: colors.$rtr-pink-background-dark;
+    }
+}
+
+.ability-light-blue {
+    border-color: colors.$rtr-light-blue-border;
+
+    .header {
+        background-color: colors.$rtr-light-blue-background-light;
+    }
+    .body {
+        background-color: colors.$rtr-light-blue-background-dark;
     }
 }
 

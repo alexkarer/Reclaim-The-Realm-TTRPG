@@ -27,7 +27,7 @@
                 "outcomesOnCritSuccess": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "2d8 + ([SPI] / 3) * d8",
+                        "expression": "10 + ([SPI] / 3) * d8",
                         "damageType": "Holy",
                         "critDamage": true,
                         "halfDamage": false,
@@ -55,7 +55,7 @@
                 "outcomesOnSuccess": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "2d8 + ([SPI] / 3) * d8",
+                        "expression": "10 + ([SPI] / 3) * d8",
                         "damageType": "Holy",
                         "critDamage": false,
                         "halfDamage": false,
@@ -83,7 +83,7 @@
                 "outcomesOnFail": [
                     {
                         "outcomeType": "DAMAGE",
-                        "expression": "2d8 + ([SPI] / 3) * d8",
+                        "expression": "10 + ([SPI] / 3) * d8",
                         "damageType": "Holy",
                         "critDamage": false,
                         "halfDamage": true,
@@ -296,7 +296,7 @@
         "name": "Bless",
         "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Spell(Light, Holy)" ],
-        "meta": { "iconPath": "", "colour": "YELLOW" },
+        "meta": { "iconPath": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp", "colour": "YELLOW" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "castingDifficulty": 6,
         "components": { "verbal": "Prayer", "somatic": "Gesture", "material": "A sprinkling of holy water" },
@@ -349,7 +349,7 @@
         "name": "Heal",
         "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Spell(Light, Restoration)" ],
-        "meta": { "iconPath": "", "colour": "LIGHTGREEN" },
+        "meta": { "iconPath": "icons/magic/life/heart-cross-green.webp", "colour": "LIGHTGREEN" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "castingDifficulty": 6,
         "components": { "verbal": "Prayer", "somatic": "Touch", "material": "" },
@@ -480,8 +480,8 @@
     {
         "name": "Cleanse",
         "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
-        "tags": [ "Spell(Light, Holy)" ],
-        "meta": { "iconPath": "", "colour": "LIGHTGREEN" },
+        "tags": [ "Spell(Light, Restoration)" ],
+        "meta": { "iconPath": "icons/magic/life/ankh-gold-blue.webp", "colour": "LIGHTGREEN" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "castingDifficulty": 6,
         "components": { "verbal": "Prayer", "somatic": "", "material": "" },
@@ -535,8 +535,8 @@
     {
         "name": "Sanctuary",
         "cost": { "ap": 4, "mp": 0, "mana": 4, "stamina": 0, "life": 0, "other": "" },
-        "tags": [ "Spell(Light, Holy)", "[CONCENTRATION] 1" ],
-        "meta": { "iconPath": "", "colour": "LIGHTGREEN" },
+        "tags": [ "Spell(Light, Restoration)", "[CONCENTRATION] 1" ],
+        "meta": { "iconPath": "icons/magic/life/cross-area-circle-green-white.webp", "colour": "LIGHTGREEN" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "castingDifficulty": 6,
         "components": { "verbal": "Prayer", "somatic": "Gesture", "material": "Holy water sprinkled on the ground" },
@@ -569,7 +569,7 @@
                         "durationUnit": "NONE",
                         "customDuration": null,
                         "freeText": [
-                            { "regularText": "[AREA EFFECT]: TODO", "headerLine": null, "bulletPoints": null } 
+                            { "regularText": "[AREA EFFECT]: Allies regain 5 + ([SPI]/3)*d6 [HP] and undead recieve 5 + ([SPI]/3)*d6 Holy Damage.", "headerLine": null, "bulletPoints": null } 
                         ]
                     }
                 ],
@@ -581,7 +581,7 @@
         ],
         "upcast": {
             "mana": 2,
-            "effect": ""
+            "effect": "Increase damage/heal by 5 + ([SPI]/3)*d6"
         },
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}

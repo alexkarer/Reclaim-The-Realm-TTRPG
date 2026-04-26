@@ -2,6 +2,8 @@ import { Ability, mapAction, parseAbilityColour } from "../../shared/ability";
 import { mapIconPath } from "../../shared/icons";
 import elementalSpellsJson from "./elemental_spells.json";
 import lightSpellsJson from "./light_spells.json";
+import darkSpellsJson from "./dark_spells.json";
+import psychicSpellsJson from "./psychic_spells.json";
 
 export class Spell extends Ability {
     components!: {
@@ -16,11 +18,13 @@ export class Spell extends Ability {
     };
 }
 
-type JsonSpell = typeof elementalSpellsJson[0] | typeof lightSpellsJson[0];
+type JsonSpell = typeof elementalSpellsJson[0] | typeof lightSpellsJson[0] | typeof darkSpellsJson[0] | typeof psychicSpellsJson[0];
 
 export const ALL_SPELLS = [
     ...elementalSpellsJson.map(s => mapSpell(s)),
     ...lightSpellsJson.map(s => mapSpell(s)),
+    ...darkSpellsJson.map(s => mapSpell(s)),
+    ...psychicSpellsJson.map(s => mapSpell(s)),
 ];
 
 function mapSpell(jsonSpell: JsonSpell): Spell {

@@ -411,7 +411,7 @@
                     { "regularText": null, "headerLine": null, "bulletPoints": [
                         "Magical creatures (Elemental, Cosmic, Undead) or Magical Items.",
                         "You know if a spell is currently affecting a creature or object, you don't know the exact spell, but you know the discipline",
-                        "ou see if a spell was cast ther recently. Spells linger for a number of days equal to their Arcana Cost, you don't what exact spell, but you know the discipline."
+                        "You see if a spell was cast ther recently. Spells linger for a number of days equal to their Arcana Cost, you don't what exact spell, but you know the discipline."
                     ]}
                 ],
                 "flavorText": [ { "regularText": "You enchant your object and see magical traces in bright shimmering colors.", "headerLine": null, "bulletPoints": null} ],

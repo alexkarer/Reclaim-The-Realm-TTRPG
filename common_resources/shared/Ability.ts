@@ -10,6 +10,8 @@ import otherEquipmentAbilitiesJson from "../player_rules/equipment/equipment_abi
 import consumableAbilitiesJson from "../player_rules/equipment/equipment_abilities/consumables_abilities.json";
 import lightSpellsJson from "../player_rules/spells/light_spells.json";
 import elementalSpellsJson from "../player_rules/spells/elemental_spells.json";
+import darkSpellsJson from "../player_rules/spells/dark_spells.json";
+import psychicSpellsJson from "../player_rules/spells/psychic_spells.json";
 
 export class Ability {
     name!: string;
@@ -33,7 +35,7 @@ export type AbilityCost = {
     other: string
 }
 
-export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, WHITE, COLOURLESS, REDGREEN, BLUEWHITE, LIGHTGREEN }
+export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, WHITE, COLOURLESS, REDGREEN, BLUEWHITE, LIGHTGREEN, BLACK, DARKPURPLE, PINK, LIGHTBLUE }
 
 export type AbilityAction = {
     type: AbilityActionType,
@@ -123,7 +125,9 @@ const otherEquipmentAbilitiesSampleAction = otherEquipmentAbilitiesJson[3].actio
 const consumableSampleAction = consumableAbilitiesJson[0].actions[0];
 const lightSpellSampleAction = lightSpellsJson[1].actions[1];
 const elementalSpellSampleAction = elementalSpellsJson[10].actions[0];
-type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction | typeof weaponAbilitiesSampleAction | typeof otherEquipmentAbilitiesSampleAction | typeof consumableSampleAction | typeof lightSpellSampleAction | typeof elementalSpellSampleAction;
+const darkSpellsJsonSampleAction = darkSpellsJson[3].actions[0];
+const psychicSpellsJsonSampleAction = psychicSpellsJson[0].actions[0];
+type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction | typeof weaponAbilitiesSampleAction | typeof otherEquipmentAbilitiesSampleAction | typeof consumableSampleAction | typeof lightSpellSampleAction | typeof elementalSpellSampleAction | typeof darkSpellsJsonSampleAction | typeof psychicSpellsJsonSampleAction;
 
 export function mapAction(jsonAction: JsonAction): AbilityAction {
     return {
@@ -157,7 +161,8 @@ const leaderSampleOutcome = leaderSampleAction.outcomesOnSuccess[0];
 const tacticalSampleOutcome = tacticalSampleAction.outcomesOnSuccess[0];
 const consumableSampleOutcome = consumableSampleAction.outcomesAlways[0];
 const lightSpellSampleOutcome = lightSpellsJson[2].actions[0].outcomesAlways[0];
-type JsonOutcome = typeof agileSampleOutcome1 | typeof agileSampleOutcome2 | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome | typeof tacticalSampleOutcome | typeof consumableSampleOutcome | typeof lightSpellSampleOutcome;
+const darkSpellSampleOutcome = darkSpellsJsonSampleAction.outcomesOnSuccess[0];
+type JsonOutcome = typeof agileSampleOutcome1 | typeof agileSampleOutcome2 | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome | typeof tacticalSampleOutcome | typeof consumableSampleOutcome | typeof lightSpellSampleOutcome | typeof darkSpellSampleOutcome;
 
 function mapOutcome(jsonOutcome: JsonOutcome): AbilityActionOutcome {
     return {
@@ -171,7 +176,7 @@ function mapOutcome(jsonOutcome: JsonOutcome): AbilityActionOutcome {
         duration: jsonOutcome.duration,
         durationUnit: parseDurationUnit(jsonOutcome.durationUnit),
         customDuration: jsonOutcome.customDuration,
-        freeText: jsonOutcome.freeText
+        freeText: jsonOutcome.freeText,
     };
 }
 
@@ -192,6 +197,10 @@ export function parseAbilityColour(s?: string): AbilityColour {
         case "REDGREEN": return AbilityColour.REDGREEN;
         case "BLUEWHITE": return AbilityColour.BLUEWHITE;
         case "LIGHTGREEN": return AbilityColour.LIGHTGREEN;
+        case "BLACK": return AbilityColour.BLACK;
+        case "DARKPURPLE": return AbilityColour.DARKPURPLE;
+        case "PINK": return AbilityColour.PINK;
+        case "LIGHTBLUE": return AbilityColour.LIGHTBLUE;
         default: console.error(`Ability colour ${s} not recognized! Setting colourless`); return AbilityColour.COLOURLESS;
     }
 }

@@ -171,7 +171,6 @@ Maneuver Ideas:
 - Split up disciplines differently (✅)
     - Elemental (Pyrmoancy, Hydromancy, Aeromancy, Geomancy) should be unchanged, the incompability works quite well. Maybe certain elements should emphazise certain Attributes more. (✅)
     - Psychic(Telekinesis, Telepathy, Divintation), These are abilities that also manifest biologically in the brain, should emphasis INT (telekin), PER (divin) and CHA (telepath). (✅)
-        - Add Biomancy to psychic as replacement for transmutation? (❌)
     - Light (Restoration, Holy), Only possible for good chars, mostly need SPI (✅)
     - Dark (Necromancy, Unholy), Only possible for evil chars, mostly need SPI (✅)
     - Arcane is a bit too akward and doesn't really fit in there:
@@ -181,9 +180,11 @@ Maneuver Ideas:
             - Conjuration as well.
         - Arcane (Teleporation, Conjuration, Illusion) there are ones that can be learned by most people, should mostly emphasize SPI and INT (✅)
             - Transmutation was remoced, check if it is actually needed.  (❌)
+            - Maybe swith Transmutation with Biomancy (❌)
                 + possible Transmutation Spell List:
                     * Enhance (Change physically to enhance differnt things: senses or body)
                     * Polymorph
+                    * Dispel Magic?
 
 - Also reuse basic (16), advanced (3), master (10), transcendet (25) for spell differential (❌)
 
@@ -195,6 +196,8 @@ Maneuver Ideas:
     - Charge X, similar to concentration has to spend X AP to cast the spell but it can be done over multiple turns and during it concentrate (❌)
     - Upcasting: define in the upcasting in the incremental mana cost required (❌)
     - Ritual: Mechanic that allows multiple people to cast the spell. (❌)
+
+- Think if possible to introduce Spell Power, to compare the strength of spells.
 
 ### Equipment
 
