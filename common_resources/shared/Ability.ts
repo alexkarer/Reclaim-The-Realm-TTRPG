@@ -1,17 +1,5 @@
 import { DamageType, parseDamageType } from "./damageType";
 import { TextElementWithoutAbility } from "./textElements";
-import agilityTechniquesJson from "../player_rules/techniques/agile_techniques.json";
-import brawlTechniquesJson from "../player_rules/techniques/brawl_techniques.json";
-import fortitudeTechniquesJson from "../player_rules/techniques/fortitude_techniques.json";
-import leaderTechniquesJson from "../player_rules/techniques/leader_techniques.json";
-import tacticalTechniquesJson from "../player_rules/techniques/tactical_techniques.json";
-import weaponAbilitiesJson from "../player_rules/equipment/equipment_abilities/weapon_abilities.json";
-import otherEquipmentAbilitiesJson from "../player_rules/equipment/equipment_abilities/other_equipment_abilities.json";
-import consumableAbilitiesJson from "../player_rules/equipment/equipment_abilities/consumables_abilities.json";
-import lightSpellsJson from "../player_rules/spells/light_spells.json";
-import elementalSpellsJson from "../player_rules/spells/elemental_spells.json";
-import darkSpellsJson from "../player_rules/spells/dark_spells.json";
-import psychicSpellsJson from "../player_rules/spells/psychic_spells.json";
 
 export class Ability {
     name!: string;
@@ -35,7 +23,7 @@ export type AbilityCost = {
     other: string
 }
 
-export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, WHITE, COLOURLESS, REDGREEN, BLUEWHITE, LIGHTGREEN, BLACK, DARKPURPLE, PINK, LIGHTBLUE }
+export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, WHITE, COLOURLESS, REDGREEN, BLUEWHITE, LIGHTGREEN, BLACK, DARKPURPLE, PINK, LIGHTBLUE, LIGHTPURPLE, TEAL }
 
 export type AbilityAction = {
     type: AbilityActionType,
@@ -115,23 +103,9 @@ export type LevelRequirement = {
  * COMMON MAPPING METHODS 
  */
 
-const agileSampleAction = agilityTechniquesJson[0].actions[0];
-const brawlSampleAction = brawlTechniquesJson[0].actions[0];
-const fortitudeSampleAction = fortitudeTechniquesJson[0].actions[0];
-const leaderSampleAction = leaderTechniquesJson[0].actions[0];
-const tacticalSampleAction = tacticalTechniquesJson[0].actions[0];
-const weaponAbilitiesSampleAction = weaponAbilitiesJson[4].actions[0];
-const otherEquipmentAbilitiesSampleAction = otherEquipmentAbilitiesJson[3].actions[0];
-const consumableSampleAction = consumableAbilitiesJson[0].actions[0];
-const lightSpellSampleAction = lightSpellsJson[1].actions[1];
-const elementalSpellSampleAction = elementalSpellsJson[10].actions[0];
-const darkSpellsJsonSampleAction = darkSpellsJson[3].actions[0];
-const psychicSpellsJsonSampleAction = psychicSpellsJson[0].actions[0];
-type JsonAction = typeof agileSampleAction | typeof brawlSampleAction | typeof fortitudeSampleAction | typeof leaderSampleAction | typeof tacticalSampleAction | typeof weaponAbilitiesSampleAction | typeof otherEquipmentAbilitiesSampleAction | typeof consumableSampleAction | typeof lightSpellSampleAction | typeof elementalSpellSampleAction | typeof darkSpellsJsonSampleAction | typeof psychicSpellsJsonSampleAction;
-
-export function mapAction(jsonAction: JsonAction): AbilityAction {
+export function mapAction(jsonAction: any): AbilityAction {
     return {
-        type: parseAbilityActionType(jsonAction.actionType),
+        type: parseAbilityActionType(jsonAction.actionType ?? ''),
         customAction: jsonAction.customAction,
         customCondition: jsonAction.customCondition,
         attribute: parseAbilityAttribute(jsonAction.attribute),
@@ -145,26 +119,15 @@ export function mapAction(jsonAction: JsonAction): AbilityAction {
         duration: jsonAction.duration,
         durationUnit: parseDurationUnit(jsonAction.durationUnit),
         customDuration: jsonAction.customDuration,
-        outcomesAlways: jsonAction.outcomesAlways.map(jsonOutcome => mapOutcome(jsonOutcome)),
-        outcomesOnCritSuccess: jsonAction.outcomesOnCritSuccess.map(jsonOutcome => mapOutcome(jsonOutcome)),
-        outcomesOnSuccess: jsonAction.outcomesOnSuccess.map(jsonOutcome => mapOutcome(jsonOutcome)),
-        outcomesOnFail: jsonAction.outcomesOnFail.map(jsonOutcome => mapOutcome(jsonOutcome)),
-        outcomesOnCritFail: jsonAction.outcomesOnCritFail.map(jsonOutcome => mapOutcome(jsonOutcome))
+        outcomesAlways: [...jsonAction.outcomesAlways].map(jsonOutcome => mapOutcome(jsonOutcome)),
+        outcomesOnCritSuccess: [...jsonAction.outcomesOnCritSuccess].map(jsonOutcome => mapOutcome(jsonOutcome)),
+        outcomesOnSuccess: [...jsonAction.outcomesOnSuccess].map(jsonOutcome => mapOutcome(jsonOutcome)),
+        outcomesOnFail: [...jsonAction.outcomesOnFail].map(jsonOutcome => mapOutcome(jsonOutcome)),
+        outcomesOnCritFail: [...jsonAction.outcomesOnCritFail].map(jsonOutcome => mapOutcome(jsonOutcome))
     };
 }
 
-const agileSampleOutcome1 = agileSampleAction.outcomesAlways[0];
-const agileSampleOutcome2 = agilityTechniquesJson[2].actions[0].outcomesOnSuccess[0];
-const brawlSampleOutcome = brawlSampleAction.outcomesOnSuccess[0];
-const fortitudeSampleOutcome = fortitudeSampleAction.outcomesOnSuccess[0];
-const leaderSampleOutcome = leaderSampleAction.outcomesOnSuccess[0];
-const tacticalSampleOutcome = tacticalSampleAction.outcomesOnSuccess[0];
-const consumableSampleOutcome = consumableSampleAction.outcomesAlways[0];
-const lightSpellSampleOutcome = lightSpellsJson[2].actions[0].outcomesAlways[0];
-const darkSpellSampleOutcome = darkSpellsJsonSampleAction.outcomesOnSuccess[0];
-type JsonOutcome = typeof agileSampleOutcome1 | typeof agileSampleOutcome2 | typeof brawlSampleOutcome | typeof fortitudeSampleOutcome | typeof leaderSampleOutcome | typeof tacticalSampleOutcome | typeof consumableSampleOutcome | typeof lightSpellSampleOutcome | typeof darkSpellSampleOutcome;
-
-function mapOutcome(jsonOutcome: JsonOutcome): AbilityActionOutcome {
+function mapOutcome(jsonOutcome: any): AbilityActionOutcome {
     return {
         outcomeType: parseAbilityActionOutcomeType(jsonOutcome.outcomeType),
         expression: jsonOutcome.expression,
@@ -201,6 +164,8 @@ export function parseAbilityColour(s?: string): AbilityColour {
         case "DARKPURPLE": return AbilityColour.DARKPURPLE;
         case "PINK": return AbilityColour.PINK;
         case "LIGHTBLUE": return AbilityColour.LIGHTBLUE;
+        case "LIGHTPURPLE": return AbilityColour.LIGHTPURPLE;
+        case "TEAL": return AbilityColour.TEAL;
         default: console.error(`Ability colour ${s} not recognized! Setting colourless`); return AbilityColour.COLOURLESS;
     }
 }

@@ -173,7 +173,7 @@ Maneuver Ideas:
     - Psychic(Telekinesis, Telepathy, Divintation), These are abilities that also manifest biologically in the brain, should emphasis INT (telekin), PER (divin) and CHA (telepath). (✅)
     - Light (Restoration, Holy), Only possible for good chars, mostly need SPI (✅)
     - Dark (Necromancy, Unholy), Only possible for evil chars, mostly need SPI (✅)
-    - Arcane is a bit too akward and doesn't really fit in there:
+    - Arcane is a bit too akward and doesn't really fit in there but has to exist.
         - THink if it is possible to remove it?  (❌)
             - Teleporation is akward but needed
             - Illusion is akward.
@@ -184,7 +184,8 @@ Maneuver Ideas:
                 + possible Transmutation Spell List:
                     * Enhance (Change physically to enhance differnt things: senses or body)
                     * Polymorph
-                    * Dispel Magic?
+                    * Dispel Magic (no other space)?
+                    * Defensive Spells such as Barrier
 
 - Also reuse basic (16), advanced (3), master (10), transcendet (25) for spell differential (❌)
 

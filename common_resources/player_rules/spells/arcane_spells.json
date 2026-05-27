@@ -1,1 +1,235 @@
-[]
+[
+    {
+        "name": "Magic Missiles",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Arcane, Conjuration)" ],
+        "meta": { "iconPath": "icons/magic/light/projectiles-trio-pink.webp", "colour": "ORANGE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Incantation", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 8,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "DAMAGE",
+                        "expression": "1 + ([SPI] / 4) * 1d6",
+                        "damageType": "Physical",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ ]
+                    },
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "Repeat the Action 2 additional times, you may select different targets for each action.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": "Repeat the Action an additional time."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Create Object",
+        "cost": { "ap": 3, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Arcane, Conjuration)" ],
+        "meta": { "iconPath": "icons/magic/symbols/question-stone-yellow.webp", "colour": "ORANGE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Incantation", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 3,
+                "targetType": "NONE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "CUSTOM",
+                "customDuration": "[SPI] minutes",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ 
+                            { "regularText": "You can create one tier 1 item of your choice with the following restrictions:", "headerLine": null, "bulletPoints": null},
+                            { "regularText": null, "headerLine": null, "bulletPoints": [
+                                "It can't be a consumable or something similar to food.",
+                                "The item has to fit in a ([SPI] / 4) m Cube.",
+                                "The item lasts for the duration and has a faint shimmer of cosmic energy to it making it appear as an obvious fake otherwise it shares the same properties",
+                                "If a complicated item is created like a specific key for a keyhole or a inticrite mechanical device. The GM might call for a [INT] [SPELL TEST] depending on the difficulty and the casters knowledge."
+                            ]}
+                         ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": "The item tier can be 1 higher, the duration is doubled and the length of the cube is increased by 1m."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Shroud",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Arcane, Illusion)", "[CONCENTRATION] 1" ],
+        "meta": { "iconPath": "icons/magic/perception/shadow-stealth-eyes-purple.webp", "colour": "TEAL" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Incantation", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CREATURE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "CUSTOM",
+                "customDuration": "[SPI] minutes",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "STATUS_EFFECT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "INVISIBLE I",
+                        "duration": 0,
+                        "durationUnit": "CUSTOM",
+                        "customDuration": "Spell Duration",
+                        "freeText": [ ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "You can target an additional creature."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Illusary Image",
+        "cost": { "ap": 3, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Arcane, Illusion)", "[CONCENTRATION] 1" ],
+        "meta": { "iconPath": "icons/magic/symbols/triangle-glow-purple.webp", "colour": "TEAL" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Incantation", "somatic": "Gesture", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 6,
+                "targetType": "NONE",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "CUSTOM",
+                "customDuration": "[SPI] minutes",
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "You create a silent unmoving illusary image of your choice that fits in a ([SPI] / 3) m Cube. Make a [INT] [SPELL TEST] if other creatures are present, if your test is higher than the other creatures passive [INT] Investigation than they percieve the Illusion as real. If they later examine the Illusion and find obvious flaws in it, then they also stop percieving the Illusion as real.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 2,
+            "effect": "You can make the image move up to [SPI] [FIELDS] at the start of a [ROUND]. If upcast a second time you can add sound and smell to the illusion."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    }
+]

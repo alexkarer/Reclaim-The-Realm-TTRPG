@@ -149,6 +149,30 @@
     }
 }
 
+.ability-light-purple {
+    border-color: colors.$rtr-light-purple-border;
+
+    .header {
+        background-color: colors.$rtr-light-purple-background-light;
+    }
+    .body {
+        background-color: colors.$rtr-light-purple-background-dark;
+    }
+}
+
+
+.ability-teal {
+    border-color: colors.$rtr-teal-border;
+
+    .header {
+        background-color: colors.$rtr-teal-background-light;
+    }
+    .body {
+        background-color: colors.$rtr-teal-background-dark;
+    }
+}
+
+
 .ability-colourless {
     .header {
         background-color: var(--bs-body-bg);

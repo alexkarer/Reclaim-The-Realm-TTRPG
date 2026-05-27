@@ -4,6 +4,7 @@ import elementalSpellsJson from "./elemental_spells.json";
 import lightSpellsJson from "./light_spells.json";
 import darkSpellsJson from "./dark_spells.json";
 import psychicSpellsJson from "./psychic_spells.json";
+import arcaneSpellsJson from "./arcane_spells.json";
 
 export class Spell extends Ability {
     components!: {
@@ -18,16 +19,15 @@ export class Spell extends Ability {
     };
 }
 
-type JsonSpell = typeof elementalSpellsJson[0] | typeof lightSpellsJson[0] | typeof darkSpellsJson[0] | typeof psychicSpellsJson[0];
-
 export const ALL_SPELLS = [
     ...elementalSpellsJson.map(s => mapSpell(s)),
     ...lightSpellsJson.map(s => mapSpell(s)),
     ...darkSpellsJson.map(s => mapSpell(s)),
     ...psychicSpellsJson.map(s => mapSpell(s)),
+    ...arcaneSpellsJson.map(s => mapSpell(s))
 ];
 
-function mapSpell(jsonSpell: JsonSpell): Spell {
+function mapSpell(jsonSpell: any): Spell {
     let spell = new Spell();
     spell.name = jsonSpell.name;
     spell.cost = jsonSpell.cost;
@@ -38,7 +38,7 @@ function mapSpell(jsonSpell: JsonSpell): Spell {
     };
     spell.components = jsonSpell.components;
     spell.castingDifficulty = jsonSpell.castingDifficulty;
-    spell.actions = jsonSpell.actions.map(jsonAction => mapAction(jsonAction));
+    spell.actions = [...jsonSpell.actions].map(jsonAction => mapAction(jsonAction));
     spell.requirements = jsonSpell.requirements;
     spell.upcast = jsonSpell.upcast;
     spell.flavorText = jsonSpell.flavorText;
