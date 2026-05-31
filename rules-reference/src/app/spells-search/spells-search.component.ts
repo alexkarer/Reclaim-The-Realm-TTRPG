@@ -112,19 +112,25 @@ export class SpellsSearchComponent {
       case SpellDiscipline.HYDROMANCY: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('hydromancy')) !== undefined;
       case SpellDiscipline.AEROMANCY: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('aeromancy')) !== undefined;
       case SpellDiscipline.GEOMANCY: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('geomancy')) !== undefined;
-      case SpellDiscipline.COSMIC: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('cosmic')) !== undefined;
+
       case SpellDiscipline.LIGHT: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('light')) !== undefined;
+      case SpellDiscipline.HOLY: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('holy')) !== undefined;
       case SpellDiscipline.RESTORATION: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('restoration')) !== undefined;
+
+      case SpellDiscipline.DARK: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('dark')) !== undefined;
       case SpellDiscipline.SHADOW: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('shadow')) !== undefined;
       case SpellDiscipline.NECROMANCY: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('necromancy')) !== undefined;
-      case SpellDiscipline.DIVINATION: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('divination')) !== undefined;
-      case SpellDiscipline.MANIPULATION: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('manipulation')) !== undefined;
+
+      case SpellDiscipline.PSYCHIC: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('psychic')) !== undefined;
       case SpellDiscipline.TELEKINESIS: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('telekinesis')) !== undefined;
+      case SpellDiscipline.TELEPATHY: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('telepathy')) !== undefined;
+      case SpellDiscipline.DIVINATION: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('divination')) !== undefined;
+
+      case SpellDiscipline.ARCANE: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('arcane')) !== undefined;
       case SpellDiscipline.TRANSMUTATION: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('transmutation')) !== undefined;
       case SpellDiscipline.CONJURATION: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('conjuration')) !== undefined;
       case SpellDiscipline.ILLUSION: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('illusion')) !== undefined;
       case SpellDiscipline.TELEPORTATION: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('teleporation')) !== undefined;
-      case SpellDiscipline.TELEPATHY: return spell.tags.find(tag => tag.toLocaleLowerCase().includes('telepathy')) !== undefined;
     }
   }
 
@@ -178,19 +184,21 @@ enum SpellDiscipline {
   HYDROMANCY = 'Elemental(Hydromancy) Spells',
   AEROMANCY = 'Elemental(Aeromancy) Spells',
   GEOMANCY = 'Elemental(Geomancy) Spells',
-  COSMIC = 'Cosmic Spells',
-  LIGHT = 'Cosmic(Light) Spells',
-  RESTORATION = 'Cosmic(Restoration) Spells',
-  SHADOW = 'Cosmic(Shadow) Spells',
-  NECROMANCY = 'Cosmic(Necromancy) Spells',
-  DIVINATION = 'Cosmic(Divination) Spells',
-  MANIPULATION = 'Manipulation Spells',
-  TELEKINESIS = 'Manipulation(Telekinesis) Spells',
-  TRANSMUTATION = 'Manipulation(Transmutation) Spells',
-  CONJURATION = 'Manipulation(Conjuration) Spells',
-  ILLUSION = 'Manipulation(Illusion) Spells',
-  TELEPORTATION = 'Manipulation(Teleportation) Spells',
-  TELEPATHY = 'Manipulation(Telepathy) Spells'
+  LIGHT = 'Light Spells',
+  HOLY = 'Light(Holy) Spells',
+  RESTORATION = 'Light(Restoration) Spells',
+  DARK = 'Dark Spells',
+  SHADOW = 'Dark(Shadow) Spells',
+  NECROMANCY = 'Dark(Necromancy) Spells',
+  PSYCHIC = 'Psychic Spells',
+  TELEKINESIS = 'Psychic(Telekinesis) Spells',
+  TELEPATHY = 'Psychic(Telepathy) Spells',
+  DIVINATION = 'Psychic(Divination) Spells',
+  ARCANE = 'Arcane Spells',
+  TRANSMUTATION = 'Arcane(Transmutation) Spells',
+  CONJURATION = 'Arcane(Conjuration) Spells',
+  ILLUSION = 'Arcane(Illusion) Spells',
+  TELEPORTATION = 'Arcane(Teleportation) Spells',
 }
 
 enum SpellCost {

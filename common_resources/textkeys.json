@@ -320,6 +320,7 @@
         "teleportation_description": "Open pathways and travel to other places in the Prime Elemental or other realities through the Cosmic Plane.",
         "conjuration_description": "Use Energy from the Comsic Place to manifest as physical objects in the Prime Elemental temporarily or permanently.",
         "illusion_description": "Blend the Cosmic Plane into reality to trick sentient beings into percieving something that is not there.",
+        "transmutation_description": "TODO",
 
         "casting_spells": "Casting spells is the term for using Spell Abilities, which is a process of taking energy from the elemental or cosmic planes and manefesting it. However different to other abilities spells carry inherant risk, failing to properly contain and handle the energy can result in devastating consequences. Which is why magic is feared throughout the realms and spellcasters are treated with extreme caution.",
         "spell_cast_test": "When casting a spell first a [SPELL CAST TEST] has to be made. This is done by rolling 2d6 and adding your [SPELL LEVEL] and comparing it to the spell's [SPELL DIFFICULTY] the following way:",

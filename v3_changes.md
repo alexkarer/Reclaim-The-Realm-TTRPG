@@ -173,21 +173,13 @@ Maneuver Ideas:
     - Psychic(Telekinesis, Telepathy, Divintation), These are abilities that also manifest biologically in the brain, should emphasis INT (telekin), PER (divin) and CHA (telepath). (✅)
     - Light (Restoration, Holy), Only possible for good chars, mostly need SPI (✅)
     - Dark (Necromancy, Unholy), Only possible for evil chars, mostly need SPI (✅)
-    - Arcane is a bit too akward and doesn't really fit in there but has to exist.
-        - THink if it is possible to remove it?  (❌)
-            - Teleporation is akward but needed
-            - Illusion is akward.
-            - Conjuration as well.
-        - Arcane (Teleporation, Conjuration, Illusion) there are ones that can be learned by most people, should mostly emphasize SPI and INT (✅)
-            - Transmutation was remoced, check if it is actually needed.  (❌)
-            - Maybe swith Transmutation with Biomancy (❌)
-                + possible Transmutation Spell List:
-                    * Enhance (Change physically to enhance differnt things: senses or body)
-                    * Polymorph
-                    * Dispel Magic (no other space)?
-                    * Defensive Spells such as Barrier
+    - Arcane is a bit too akward and doesn't really fit in there but has to exist. (✅)
+        - Transmutation will also be needed for a way to interact with magic (❌)
+            * Enhance (Change physically to enhance differnt things: senses or body)
+            * Polymorph
+            * Dispel Magic (make int roll, DT deterimed by mana spent to cast spell trying to dispell)
 
-- Also reuse basic (16), advanced (3), master (10), transcendet (25) for spell differential (❌)
+- Also reuse basic (16), advanced (3), master (10), transcendet (25) for spell differential (✅)
 
 - Add full Spell Failure (Magical Mishap) Table/Rework for new spell discipline (❌)
     - add at least the level 3 entities that can appear on failure (❌)
@@ -198,12 +190,13 @@ Maneuver Ideas:
     - Upcasting: define in the upcasting in the incremental mana cost required (❌)
     - Ritual: Mechanic that allows multiple people to cast the spell. (❌)
 
-- Think if possible to introduce Spell Power, to compare the strength of spells.
+- Think if possible to introduce Spell Power, to compare the strength of spells. (❌)
+    - Ideally just use MANA spent and have NPCs have an mana equivalent on their data sheet
 
 ### Equipment
 
 - Rebalance Weapons to have Maneuvers (✅)
-    - More Maneuvers should be unlocked with Martial Level so spellcasters have not immediate access to them. (❌)
+    - More Maneuvers should be unlocked with Martial Level so spellcasters have not immediate access to them. (✅)
 - Don't roll randomly for starting equipment, also figure out what good prices should be and starting gold/equipment (❌)
 
 - maneuvrepenalty should only nerf dodge (✅)

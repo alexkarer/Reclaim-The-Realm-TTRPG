@@ -231,5 +231,164 @@
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}
         ]
+    },
+    {
+        "name": "Cosmic Jump",
+        "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Arcane, Teleporation)" ],
+        "meta": { "iconPath": "", "colour": "LIGHTPURPLE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Incantation", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "Teleport to an unoccupied space up to 2 + [SPI] [FIELD] away.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": "double the distance you can teleport."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Extradimensional Pocket",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Arcane, Teleporation)" ],
+        "meta": { "iconPath": "", "colour": "LIGHTPURPLE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Incantation", "somatic": "touching/retrieving the object", "material": "Pocket or Container" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "MELEE",
+                "rangeDistanceFields": 0,
+                "targetType": "CUSTOM",
+                "customTargeting": "non living object, weighing up to 10 * [SPI] kg",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "You can make target object vanish into an extradimensional space. At any point you can cast this spell again and retrieve an item you have previously stored in your extradimensional pocket. Objects in the extradimensional space are perserved indefinete and do not wither or rot.", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": "double the maximum target object weight."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Emergency Teleport",
+        "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Arcane, Teleporation)", "[REACTION]" ],
+        "meta": { "iconPath": "", "colour": "LIGHTPURPLE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Incantation", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": "You are targeted by an Ability",
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ { "regularText": "You teleport [SPI] [FIELDS] in a random direction (roll d8). If the space where you would land is occupied or within a wall you land in the closest free space instead", "headerLine": null, "bulletPoints": null} ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": "you can roll an additional d8 and choose one of them for the random direction."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
     }
 ]

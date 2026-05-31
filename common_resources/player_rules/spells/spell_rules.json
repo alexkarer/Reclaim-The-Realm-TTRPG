@@ -46,7 +46,8 @@
             "subdisciplines": [
                 { "name": "Teleporation", "textkey": "teleportation_description", "color": "light-purple" },
                 { "name": "Conjuration", "textkey": "conjuration_description", "color": "orange" },
-                { "name": "Illusion", "textkey": "illusion_description", "color": "teal" }
+                { "name": "Illusion", "textkey": "illusion_description", "color": "teal" },
+                { "name": "Transmutation", "textkey": "transmutation_description", "color": "" }
             ]
         }
     ],
