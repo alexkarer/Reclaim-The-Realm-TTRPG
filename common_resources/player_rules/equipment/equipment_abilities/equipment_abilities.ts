@@ -19,7 +19,8 @@ function mapAbilitiy(jsonAbilitiy: JsonAbility): Ability {
     abilitiy.tags = jsonAbilitiy.tags;
     abilitiy.meta = {
         iconPath: mapIconPath(jsonAbilitiy.meta.iconPath),
-        colour: parseAbilityColour(jsonAbilitiy.meta.colour)
+        colour: parseAbilityColour(jsonAbilitiy.meta.colour),
+        darkText: false
     },
     abilitiy.actions = jsonAbilitiy.actions.map(jsonAction => mapAction(jsonAction));
     abilitiy.requirements = jsonAbilitiy.requirements;
@@ -35,7 +36,8 @@ function mapTechnique(jsonTechnique: JsonTechnique): Technique {
     technique.tags = jsonTechnique.tags;
     technique.meta = {
         iconPath: mapIconPath(jsonTechnique.meta.iconPath),
-        colour: parseAbilityColour(jsonTechnique.meta.colour)
+        colour: parseAbilityColour(jsonTechnique.meta.colour),
+        darkText: false
     },
     technique.actions = jsonTechnique.actions.map(jsonAction => mapAction(jsonAction));
     technique.requirements = jsonTechnique.requirements;

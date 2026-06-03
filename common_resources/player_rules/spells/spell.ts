@@ -34,7 +34,8 @@ function mapSpell(jsonSpell: any): Spell {
     spell.tags = jsonSpell.tags;
     spell.meta = {
         iconPath: mapIconPath(jsonSpell.meta.iconPath),
-        colour: parseAbilityColour(jsonSpell.meta.colour)
+        colour: parseAbilityColour(jsonSpell.meta.colour),
+        darkText: jsonSpell.meta.darkText ?? false
     };
     spell.components = jsonSpell.components;
     spell.castingDifficulty = jsonSpell.castingDifficulty;

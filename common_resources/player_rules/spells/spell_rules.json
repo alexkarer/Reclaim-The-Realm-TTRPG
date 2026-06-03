@@ -45,9 +45,9 @@
             "textkey": "arcane_description",
             "subdisciplines": [
                 { "name": "Teleporation", "textkey": "teleportation_description", "color": "light-purple" },
-                { "name": "Conjuration", "textkey": "conjuration_description", "color": "orange" },
+                { "name": "Conjuration", "textkey": "conjuration_description", "color": "dark-yellow" },
                 { "name": "Illusion", "textkey": "illusion_description", "color": "teal" },
-                { "name": "Transmutation", "textkey": "transmutation_description", "color": "" }
+                { "name": "Transmutation", "textkey": "transmutation_description", "color": "orange" }
             ]
         }
     ],

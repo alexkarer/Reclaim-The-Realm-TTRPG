@@ -13,7 +13,8 @@ function mapAbilitiy(jsonAbilitiy: JsonAbility): Ability {
     abilitiy.tags = jsonAbilitiy.tags;
     abilitiy.meta = {
         iconPath: mapIconPath(jsonAbilitiy.meta.iconPath),
-        colour: parseAbilityColour(jsonAbilitiy.meta.colour)
+        colour: parseAbilityColour(jsonAbilitiy.meta.colour),
+        darkText: false
     },
     abilitiy.actions = jsonAbilitiy.actions.map(jsonAction => mapAction(jsonAction));
     abilitiy.requirements = jsonAbilitiy.requirements;

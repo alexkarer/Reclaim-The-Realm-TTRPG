@@ -3,7 +3,7 @@
         "name": "Magic Missiles",
         "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Spell(Arcane, Conjuration)" ],
-        "meta": { "iconPath": "icons/magic/light/projectiles-trio-pink.webp", "colour": "ORANGE" },
+        "meta": { "iconPath": "icons/magic/light/projectiles-trio-pink.webp", "colour": "DARKYELLOW" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "castingDifficulty": 6,
         "components": { "verbal": "Incantation", "somatic": "Gesture", "material": "" },
@@ -69,7 +69,7 @@
         "name": "Create Object",
         "cost": { "ap": 3, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Spell(Arcane, Conjuration)" ],
-        "meta": { "iconPath": "icons/magic/symbols/question-stone-yellow.webp", "colour": "ORANGE" },
+        "meta": { "iconPath": "icons/magic/symbols/question-stone-yellow.webp", "colour": "DARKYELLOW" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "castingDifficulty": 6,
         "components": { "verbal": "Incantation", "somatic": "Gesture", "material": "" },
@@ -236,7 +236,7 @@
         "name": "Cosmic Jump",
         "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Spell(Arcane, Teleporation)" ],
-        "meta": { "iconPath": "", "colour": "LIGHTPURPLE" },
+        "meta": { "iconPath": "icons/magic/movement/trail-streak-zigzag-teal.webp", "colour": "LIGHTPURPLE" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "castingDifficulty": 6,
         "components": { "verbal": "Incantation", "somatic": "", "material": "" },
@@ -289,7 +289,7 @@
         "name": "Extradimensional Pocket",
         "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Spell(Arcane, Teleporation)" ],
-        "meta": { "iconPath": "", "colour": "LIGHTPURPLE" },
+        "meta": { "iconPath": "icons/magic/symbols/triangle-glow-purple.webp", "colour": "LIGHTPURPLE" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "castingDifficulty": 6,
         "components": { "verbal": "Incantation", "somatic": "touching/retrieving the object", "material": "Pocket or Container" },
@@ -342,7 +342,7 @@
         "name": "Emergency Teleport",
         "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
         "tags": [ "Spell(Arcane, Teleporation)", "[REACTION]" ],
-        "meta": { "iconPath": "", "colour": "LIGHTPURPLE" },
+        "meta": { "iconPath": "icons/magic/movement/abstract-ribbons-red-orange.webp", "colour": "LIGHTPURPLE" },
         "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
         "castingDifficulty": 6,
         "components": { "verbal": "Incantation", "somatic": "", "material": "" },
@@ -386,6 +386,121 @@
         "upcast": {
             "mana": 1,
             "effect": "you can roll an additional d8 and choose one of them for the random direction."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Enhance",
+        "cost": { "ap": 1, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Arcane, Transmutation)"],
+        "meta": { "iconPath": "icons/magic/control/buff-strength-muscle-damage-red.webp", "colour": "ORANGE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Incantation", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "SIMPLE",
+                "customAction": "",
+                "customCondition": null,
+                "attribute": "NONE",
+                "rangeType": "NONE",
+                "rangeDistanceFields": 0,
+                "targetType": "SELF",
+                "customTargeting": "",
+                "targets": 1,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 1,
+                "durationUnit": "MINUTE",
+                "customDuration": null,
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ 
+                            { "regularText": "For the Spell Duration you gain one of the following:", "headerLine": null, "bulletPoints": null},
+                            { "regularText": null, "headerLine": null, "bulletPoints":  [
+                                "Quicken: +([SPI] / 2) [MP].",
+                                "Natural armor: ([SPI] / 2) [DR] physical. Does not stack with armour.",
+                                "Enhanced Senses: Darkvision([SPI] m) and [ADVANTAGE] on any [D20 TEST] that uses your [PER]."
+                            ]}
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 3,
+            "effect": "Increase the Duration by 1 Hour and treat your [SPI] 1 greater for the purposes of resolving this Ability."
+        },
+        "flavorText": [
+            { "regularText": "", "headerLine": null, "bulletPoints": null}
+        ]
+    },
+    {
+        "name": "Dispel Magic",
+        "cost": { "ap": 2, "mp": 0, "mana": 1, "stamina": 0, "life": 0, "other": "" },
+        "tags": [ "Spell(Arcane, Transmutation)"],
+        "meta": { "iconPath": "icons/magic/symbols/runes-triangle-orange.webp", "colour": "ORANGE" },
+        "requirements": { "requiredLevels": [ ], "requiredAttributes": [ ], "requiredPerks": [ ], "otherRequirements": [ ] },
+        "castingDifficulty": 6,
+        "components": { "verbal": "Incantation", "somatic": "", "material": "" },
+        "actions": [
+            {
+                "actionType": "CUSTOM",
+                "customAction": "[SPI] [SPELL TEST] vs. Special (see below)",
+                "customCondition": null,
+                "attribute": "SPI",
+                "rangeType": "FIELDS",
+                "rangeDistanceFields": 1,
+                "targetType": "CUSTOM",
+                "customTargeting": "1 Spell or Creature/Object affected by a Spell",
+                "targets": 0,
+                "targetAreaSizeFields": 0,
+                "opposingSave": "NONE",
+                "duration": 0,
+                "durationUnit": "NONE",
+                "customDuration": null,
+                "outcomesAlways": [
+                    {
+                        "outcomeType": "FREETEXT",
+                        "expression": "",
+                        "damageType": "",
+                        "critDamage": false,
+                        "halfDamage": false,
+                        "healThp": false,
+                        "statusEffect": "",
+                        "duration": 0,
+                        "durationUnit": "NONE",
+                        "customDuration": null,
+                        "freeText": [ 
+                            { "regularText": "TODO:", "headerLine": null, "bulletPoints": null}
+                        ]
+                    }
+                ],
+                "outcomesOnCritSuccess": [],
+                "outcomesOnSuccess": [],
+                "outcomesOnFail": [],
+                "outcomesOnCritFail": []
+            }
+        ],
+        "upcast": {
+            "mana": 1,
+            "effect": ""
         },
         "flavorText": [
             { "regularText": "", "headerLine": null, "bulletPoints": null}

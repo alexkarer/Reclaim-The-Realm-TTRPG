@@ -2,9 +2,9 @@ $rtr-red-border: lightcoral;
 $rtr-red-background-light: rgb(85, 0, 0);
 $rtr-red-background-dark: rgb(50, 0, 0);
 
-$rtr-orange-border: lightsalmon;;
-$rtr-orange-background-light: rgb(100, 50, 0);
-$rtr-orange-background-dark: rgb(50, 25, 0);
+$rtr-orange-border: rgb(255, 128, 0);;
+$rtr-orange-background-light: rgb(150, 75, 0);
+$rtr-orange-background-dark: rgb(100, 50, 0);
 
 $rtr-brown-border: burlywood;
 $rtr-brown-background-light: rgb(85, 40, 40);
@@ -30,9 +30,13 @@ $rtr-light-blue-border: rgb(200, 230, 255);
 $rtr-light-blue-background-light: rgb(50, 50, 180);
 $rtr-light-blue-background-dark: rgb(30, 30, 100);
 
-$rtr-yellow-border: yellow;
-$rtr-yellow-background-light: rgb(100, 100, 0);
-$rtr-yellow-background-dark: rgb(50, 50, 0);
+$rtr-yellow-border: rgb(255, 255, 100);
+$rtr-yellow-background-light: rgb(200, 200, 100);
+$rtr-yellow-background-dark: rgb(150, 150, 100);
+
+$rtr-dark-yellow-border: rgb(150, 150, 0);
+$rtr-dark-yellow-background-light: rgb(100, 100, 0);
+$rtr-dark-yellow-background-dark: rgb(50, 50, 0);
 
 $rtr-dark-purple-border: purple;
 $rtr-dark-purple-background-light: rgb(75,0,75);
@@ -47,8 +51,8 @@ $rtr-pink-background-light: rgb(130, 90, 100);
 $rtr-pink-background-dark: rgb(80, 45, 50);
 
 $rtr-white-border: rgb(255,255,255);
-$rtr-white-background-light: rgb(150,150,150);
-$rtr-white-background-dark: rgb(100,100,100);
+$rtr-white-background-light: rgb(200,200,200);
+$rtr-white-background-dark: rgb(150,150,150);
 
 $rtr-black-border: rgb(75, 75, 75);
 $rtr-black-background-light: rgb(25,25,25);

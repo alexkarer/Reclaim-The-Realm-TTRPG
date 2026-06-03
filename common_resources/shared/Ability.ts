@@ -7,7 +7,8 @@ export class Ability {
     tags!: string[];
     meta!: {
         iconPath: string,
-        colour: AbilityColour
+        colour: AbilityColour,
+        darkText: boolean
     }
     requirements!: Requirements;
     actions!: AbilityAction[];
@@ -23,7 +24,7 @@ export type AbilityCost = {
     other: string
 }
 
-export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, WHITE, COLOURLESS, REDGREEN, BLUEWHITE, LIGHTGREEN, BLACK, DARKPURPLE, PINK, LIGHTBLUE, LIGHTPURPLE, TEAL }
+export enum AbilityColour { GREEN, RED, BLUE, YELLOW, ORANGE, BROWN, WHITE, COLOURLESS, REDGREEN, BLUEWHITE, LIGHTGREEN, BLACK, DARKPURPLE, PINK, LIGHTBLUE, LIGHTPURPLE, TEAL, DARKYELLOW }
 
 export type AbilityAction = {
     type: AbilityActionType,
@@ -166,6 +167,7 @@ export function parseAbilityColour(s?: string): AbilityColour {
         case "LIGHTBLUE": return AbilityColour.LIGHTBLUE;
         case "LIGHTPURPLE": return AbilityColour.LIGHTPURPLE;
         case "TEAL": return AbilityColour.TEAL;
+        case "DARKYELLOW": return AbilityColour.DARKYELLOW;
         default: console.error(`Ability colour ${s} not recognized! Setting colourless`); return AbilityColour.COLOURLESS;
     }
 }

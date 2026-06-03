@@ -5,12 +5,13 @@
     width: 48px;
     border-width: 3px;
     border-style: solid;
-    border-color: black;
+    border-color: var(--bs-border-dark);
     border-radius: 15%;
 }
 
 .casting-difficulty {
     font-size: 1.5rem;
+    border-color: var(--bs-border-dark);
 }
 
 .ability-divider {
@@ -172,6 +173,16 @@
     }
 }
 
+.ability-dark-yellow {
+    border-color: colors.$rtr-dark-yellow-border;
+
+    .header {
+        background-color: colors.$rtr-dark-yellow-background-light;
+    }
+    .body {
+        background-color: colors.$rtr-dark-yellow-background-dark;
+    }
+}
 
 .ability-colourless {
     .header {

@@ -30,7 +30,8 @@ function mapTechnique(jsonTechnique: JsonTechnique): Technique {
     technique.tags = jsonTechnique.tags;
     technique.meta = {
         iconPath: mapIconPath(jsonTechnique.meta.iconPath),
-        colour: parseAbilityColour(jsonTechnique.meta.colour)
+        colour: parseAbilityColour(jsonTechnique.meta.colour),
+        darkText: false
     },
     technique.actions = jsonTechnique.actions.map(jsonAction => mapAction(jsonAction));
     technique.requirements = jsonTechnique.requirements;

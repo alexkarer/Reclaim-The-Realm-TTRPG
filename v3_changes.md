@@ -115,6 +115,7 @@ Remove class techniques as they make more provbelms as they solve and include ab
 ### NPCs
 
 - Tune down damage (❌)
+- Every Martial NPC should get access to an opportunity Attack (regular attack with REACTION that can only be used if opponent leaves melee range (with a non reaction ability)) ❌)
 - Create more templates too create interresting NPCs and have dedicated sub-types (❌)
 - Boss NPC type, grants double XP, they gain a second turn before the end of the battle round. Also access to special boss abilities depending on their Level, but only 1 Boss can exist at the same time. (❌)
     - Second Life after dropping to 0 HP with then maybe to access to extra ability. (❌)
@@ -175,8 +176,7 @@ Maneuver Ideas:
     - Dark (Necromancy, Unholy), Only possible for evil chars, mostly need SPI (✅)
     - Arcane is a bit too akward and doesn't really fit in there but has to exist. (✅)
         - Transmutation will also be needed for a way to interact with magic (❌)
-            * Enhance (Change physically to enhance differnt things: senses or body)
-            * Polymorph
+            * Polymorph (INT vs CON, target can fail willingly. On Success: turn into creature for duration, On Fail: turn into creature for 1 ROUND or temporary debuffs.)
             * Dispel Magic (make int roll, DT deterimed by mana spent to cast spell trying to dispell)
 
 - Also reuse basic (16), advanced (3), master (10), transcendet (25) for spell differential (✅)
@@ -197,6 +197,7 @@ Maneuver Ideas:
 
 - Rebalance Weapons to have Maneuvers (✅)
     - More Maneuvers should be unlocked with Martial Level so spellcasters have not immediate access to them. (✅)
+    - Add Opportunity Attacks to Weapons, just regular attacks that can be used as reaction only if an enemy leaves melee (❌)
 - Don't roll randomly for starting equipment, also figure out what good prices should be and starting gold/equipment (❌)
 
 - maneuvrepenalty should only nerf dodge (✅)

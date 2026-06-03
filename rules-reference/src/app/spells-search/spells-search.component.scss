@@ -91,6 +91,10 @@
     background-color: colors.$rtr-teal-background-light;
 }
 
+.background-dark-yellow {
+    background: colors.$rtr-dark-yellow-background-light;
+}
+
 .background-redgreen {
     background: linear-gradient(colors.$rtr-red-background-light, colors.$rtr-green-background-light);
 }
@@ -98,4 +102,3 @@
 .background-bluewhite {
     background: linear-gradient(colors.$rtr-blue-background-light, colors.$rtr-white-background-light);
 }
-

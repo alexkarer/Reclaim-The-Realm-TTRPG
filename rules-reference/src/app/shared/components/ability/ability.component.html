@@ -1,11 +1,11 @@
-<div [class]="colourClass + ' card'">
+<div [class]="colourClass + ' card'" [attr.data-bs-theme]="isDarkText ? 'light' : ''">
     <div class="card-header btn header" (click)="isCollapsed = !isCollapsed">
         <div class="d-flex flex-row align-items-center justify-content-between">
             <img class="ability-image" [src]="ability()?.meta?.iconPath">
             <h4 class="ms-2">{{ ability()?.name }}</h4>
             <p class="fst-italic text-body-secondary ms-3"><span class="text-body">Tags: </span><app-dynamic-content [content]="ability()?.tags?.join('; ') | textProcessor"></app-dynamic-content></p>
             @if (isSpell) {
-                <span class="badge rounded-pill body casting-difficulty">{{ castingDifficulty }}</span>
+                <span class="badge rounded-pill body casting-difficulty text-body">{{ castingDifficulty }}</span>
             }
         </div>
     </div>

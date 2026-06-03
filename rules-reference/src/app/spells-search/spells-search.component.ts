@@ -80,6 +80,7 @@ export class SpellsSearchComponent {
       case AbilityColour.LIGHTBLUE: return 'light-blue';
       case AbilityColour.LIGHTPURPLE: return 'light-purple';
       case AbilityColour.TEAL: return 'teal';
+      case AbilityColour.DARKYELLOW: return 'dark-yellow';
     }
   }
 

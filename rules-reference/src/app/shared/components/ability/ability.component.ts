@@ -1,4 +1,4 @@
-import { Component, effect, forwardRef, input } from '@angular/core';
+import { Component, forwardRef, input } from '@angular/core';
 import { Ability, AbilityColour } from '../../../../../../common_resources/shared/ability';
 import { RequirementsPrettierPipe } from '../../pipes/to-pretty-string';
 import { DynamicContentComponent } from '../../text-utils/dynamic-component-rendering/dynamic-content.component';
@@ -8,7 +8,6 @@ import { Technique } from '../../../../../../common_resources/player_rules/techn
 import { AbilityActionComponent } from "./ability-action/ability-action.component";
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 import { Spell } from '../../../../../../common_resources/player_rules/spells/spell';
-import { StmtModifier } from '@angular/compiler';
 
 @Component({
   selector: 'app-ability',
@@ -41,7 +40,12 @@ export class AbilityComponent {
       case AbilityColour.LIGHTBLUE: return 'ability-light-blue';
       case AbilityColour.LIGHTPURPLE: return 'ability-light-purple';
       case AbilityColour.TEAL: return 'ability-teal';
+      case AbilityColour.DARKYELLOW: return 'ability-dark-yellow';
     }
+  }
+
+  get isDarkText(): boolean {
+    return this.ability()?.meta.darkText ?? false;
   }
 
   get abilityCost(): string {
