@@ -38,6 +38,14 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
 ℹ️ -> considered but not done
 ✅ -> when done
 
+### Big Picture
+
+What is the Big Picture Theme
+    - It should be versus the encroaching Riftlands/Chaos/Cosmos
+        - Simplify The spells to reflect that Just Light/Darkness
+        - Add Spells that work specificly to "reclaim Areas" (Call it Saints Reclemation or smth
+    - Also determine how far the world is in danger.
+
 ### Character
 
 - Add fate mechanic, potential options: reroll, gain extra 2 AP during turn, reduce damage (✅)
@@ -49,6 +57,9 @@ After the first ~10 Session of the RtR Playtest, big changes are incoming
     - Each character should have a goal upon completion they get extra Fate (✅)
     - Try to get each living to 6 possibilities for more variance (❌)
     - for the party origin maybe make a goal? (❌)
+    - Origin Ideas
+        * Heavily Indebted
+        * Cursed
 
 - Try creating some sort of party/combo mechanic if possible or maybe general party upgrades like a synergy stat (❌)
     - maybe some combo abilities that gain benefits when used at the same time. (❌)
@@ -131,8 +142,23 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - define icons at a single place in global resourecs and add npm step to copy it to other repos (❌)
     - also define colour for each ability and define it in JSON (✅)
 
-- Ability amount should increase instead with 1 + LEVEL + (int/2) (❌)
+- Consider Rework Attack/Evade with degrees of success(❌)
+    - 1 Degree of Success: DT+0-9, 2 Degree of Sucess: DT+10-19
+    - 1 Degree of Failure: DT-1-10, 2 Degree of Failure: DT-11-20
+    - Attack:  
+        * CritFail: Nothing.
+        * Fail: Halve damage for every Degree of Failure (2 Degrees=1/4).
+        * Success: Regular Damage + (Dice depending on Weapon) for every additional degree past the first one.
+        * CritSuccess: Every damage dice is rolled twice (degrees of success still apply)
+    - Evade:
+        * CritFail: Take Crit damage
+        * Fail: Take Full Damage
+        * Success: Halve damage and reduce Damage by ([DODGE]seems reasonable?) for every additional degree of success past the first one.
+        * CritSuccess: Take no Damage
+    - Armour needs to be possibly buffed a bit.
 
+- Ability amount should increase instead with 1 + LEVEL + (int/2) (❌)
+12
 - All abilities are now MARTIAL or SPELL Test (❌)
 
 - Remove Hybrid Abilities for now (❌)
@@ -143,7 +169,6 @@ Remove class techniques as they make more provbelms as they solve and include ab
     - Add LOS Keyword to relevant abilites, add boolean field to ability
 
 - Add Standard Abilties: (❌)
-    - Evading Attacks (no AP) (❌)
     - rename environment interactions to: Interction - Quick and Interction - Regular
 
 #### Martial Maneuvers (Techniques)
